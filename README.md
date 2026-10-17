@@ -8,7 +8,7 @@
 
 ## 安装
 
-1. 下载 `TauriChinese-v0.1.0.zip`，将其中的 `TauriChinese` 文件夹放到游戏的 `Interface\AddOns\`。
+1. 下载 [最新版 TauriChinese-latest.zip](https://github.com/zzz1999/TauriChinese/releases/latest/download/TauriChinese-latest.zip)，将其中的 `TauriChinese` 文件夹放到游戏的 `Interface\AddOns\`。
 2. 确认最终路径为 `Interface\AddOns\TauriChinese\TauriChinese.toc`。
 3. 在角色选择界面启用 TauriChinese，并停用 TauriHun 等同类文本替换插件，避免它们互相覆盖。
 4. 进入游戏或 `/reload`。`/tcn off` 关闭，`/tcn on` 开启；重新打开相关窗口生效。
@@ -55,6 +55,18 @@ npm run check
 ```
 
 抓取脚本校验哈希；构建器只解析 SQL 数据，不执行 SQL。安装包仅含 `AddOns/TauriChinese`，不包含 npm 依赖、原始 SQL 或测试夹具。
+
+## 自动发布
+
+每次推送到 `main`，GitHub Actions 先执行测试及资源检查，通过后生成独立的 `build-编号` Release，上传安装包和 SHA-256 校验文件，并更新[最新版入口](https://github.com/zzz1999/TauriChinese/releases/latest)。其他分支和 PR 只运行检查；也可以在 Actions 中手动运行此工作流。
+
+历史版本保留；重跑已发布的构建不会覆盖其文件。发布任务排队执行，较早的构建不会把较新的成功版本降为旧版。检查或上传失败时不会发布不完整的安装包。工作流使用 GitHub 自动提供的 `GITHUB_TOKEN`，无需配置额外密钥。
+
+安装包内的版本号带构建编号和提交缩写，例如 `0.1.0+build.2.abcdef0`；仓库中的基础版本不因自动构建产生额外提交。要在本地生成同样命名的包，可执行：
+
+```powershell
+./scripts/package.ps1 -Version 0.1.0+build.local -ArchiveName TauriChinese-latest.zip
+```
 
 ## 验证状态
 

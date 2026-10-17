@@ -1,7 +1,10 @@
-name: Check addon
+name: Check and release addon
 on:
   push:
+    branches:
+      - '**'
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -16,3 +19,39 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm test
       - run: npm run check
+  release:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: addon-releases
+      cancel-in-progress: false
+      queue: max
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Package addon
+        id: package
+        shell: pwsh
+        run: |
+          $baseVersion = (Get-Content -LiteralPath package.json -Raw | ConvertFrom-Json).version
+          $version = '{0}+build.{1}.{2}' -f $baseVersion, $env:GITHUB_RUN_NUMBER, $env:GITHUB_SHA.Substring(0, 7)
+          ./scripts/package.ps1 -Version $version -ArchiveName TauriChinese-latest.zip
+          "version=$version" >> $env:GITHUB_OUTPUT
+      - name: Publish release
+        uses: actions/github-script@v9
+        env:
+          PACKAGE_VERSION: ${{ steps.package.outputs.version }}
+        with:
+          script: |
+            const { readFile } = require('node:fs/promises');
+            const { pathToFileURL } = require('node:url');
+            const { publishRelease } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release.mjs`).href);
+            const assets = await Promise.all(['TauriChinese-latest.zip', 'TauriChinese-latest.zip.sha256'].map(async name => ({
+              name, data: await readFile(`dist/${name}`)
+            })));
+            const release = await publishRelease({ github, context, version: process.env.PACKAGE_VERSION, assets });
+            await core.summary.addHeading('Release').addLink(release.tag_name, release.html_url).write();
