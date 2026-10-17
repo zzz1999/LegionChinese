@@ -9,13 +9,24 @@
 ## 任务、对话与书籍
 
 - [TrinityCore TDB 735.00](https://github.com/TrinityCore/TrinityCore/releases/tag/TDB735.00)：2018-02-19 world 与 hotfixes 数据。使用任务 zhCN 文本、广播 zhCN 文本及匹配所需的其他语言信息。基础库大量文本的 VerifiedBuild 为 25549；数据库发行版本不等于每条记录最后采集版本。
+- [The Legion Preservation Project TDB735.25051](https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/tag/TDB735.25051)：使用 `TDB_full_735.26972_2025_05_11.7z` 中的 hotfixes 广播文本和 world 书页、NPC 对话选项。该库的 zhCN 广播记录标记为 7.3.5.26365；**中文书页的 VerifiedBuild 均为 0，不能据此证实是未经修改的官方译文**。world 库还混有后续版本记录，导入时排除标记高于 7.3.5 最终构建 26972 的条目；不从该库覆盖现有任务库。
 - [TrinityCore 中文任务补丁](https://github.com/TrinityCore/TrinityCore/blob/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_19_world.sql)：中文记录标记为 26365。
-- [MagicStorm 历史 SQL](https://github.com/welder1976/MagicStorm/tree/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world)：导入 `2018_04_28_99_03_quest_objectives_locale_zhCN.sql`、`2018_05_29_99_02_mage.sql`、`2018_09_16_99_01_druid.sql` 中选定的中文任务字段和书页；忽略其服务器脚本和其他 SQL。法师文件标有 WowPacketParser、7.3.5.26365、zhCN 的采集来源；部分德鲁伊记录标记更早版本。
+- [MagicStorm 历史 SQL](https://github.com/welder1976/MagicStorm/tree/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql)：固定在提交 `e941af4df2f394e7d0e0753ca15c0677271698c1`。从 world 与 hotfixes 补丁导入选定的中文任务字段、广播文本、NPC 选项和 8 个书页。多数相关文件含 WowPacketParser 的 zhCN、客户端版本采集头；没有采集头的补丁单独标记为 `community-capture`。法师书页来自 7.3.5.26365；德鲁伊书页标记为更早的军团再临版本 22594。不执行其 SQL、服务器脚本或程序。
 - [TrinityCore 书页原文补丁](https://github.com/TrinityCore/TrinityCore/blob/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_09_24_00_world.sql)：通过稳定的页面 ID 配对上述军团再临书页，生成原文指纹。该补丁部分原文记录标记为后续版本 27843；只有客户端实际全文匹配才替换。原文不随 AddOns 分发。
+- [AzerothCore 历史书页](https://github.com/azerothcore/azerothcore-wotlk/blob/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/page_text_locale.sql)：固定在提交 `add9cadc2d4eeafdd53288570efd3fa5c5768b43`，同时读取 `page_text.sql` 和 `page_text_locale.sql`。这是 3.3.5 社区库，**仅当军团再临库缺少中文，且页面 ID 与规范化英文全文均与军团再临记录一致时**，补入相同旧世界书页的 zhCN 文本。本次得到 29 个补充候选；标记为 `legacy-compatible-unverified`，不当作已核实的官中。
 
-感谢 TrinityCore、其数据库贡献者和 MagicStorm 维护者。相关仓库包含 GNU GPL 许可。游戏名称、故事、人物与原始文本的权利归各自权利人；本项目不将社区数据库等同于暴雪发布或授权的完整官方译文库。
+感谢 TrinityCore、The Legion Preservation Project、MagicStorm、AzerothCore 的维护者和数据库贡献者。相关仓库包含 GNU GPL 许可。游戏名称、故事、人物与原始文本的权利归各自权利人；本项目不将社区数据库等同于暴雪发布或授权的完整官方译文库。
 
-未导入来源含糊的 3.3.5 中文合集，未把繁体中文机械转换后冒充简体官中。数据不齐全是保留原文的正常原因。
+### 选择与核验规则
+
+- 广播译文必须有不高于 26972 的正数 VerifiedBuild，优先采用军团再临较新的记录；同版本优先 hotfixes 客户端数据表，其次采集补丁。同等优先级有冲突的广播 ID 不导入。VerifiedBuild 是上游记录的来源证据，不是本项目逐条核实官方原文的证明。
+- 导入完整广播库中能配对的文本，不再只按旧 world 数据库中不完整的 NPC 引用筛选。构建时读取原文语言以生成指纹，发布资源只保留中文正文。
+- 书页优先保留有采集标记的军团再临译文，再用军团再临社区库；最后才用 ID 和英文均核对一致的旧世界补充。低优先级译文不会覆盖或使高优先级译文失效。
+- 相同全文对应同等级的不同译文时保留原文；指纹碰撞一律排除。页面候选数、最终有效指纹数和可匹配页面数分别统计，不能互相替代。
+- 未导入截断的 `2018_05_17_99_01_hostfixes_agus1.sql`，也未导入标记为 27326、27547 的后续资料片广播补丁。原始 SQL 只解析选定的数据表，不执行其中语句。
+- 不调用机器翻译，不把繁体中文转换后冒充简体官中。缺少可信来源或匹配不确定时保留原文。
+
+[docs/book-provenance.json](docs/book-provenance.json) 逐页记录来源、VerifiedBuild、证据类别和最终英文匹配结果；[docs/data-audit.json](docs/data-audit.json) 记录统计、被版本过滤的数量和全部源文件哈希。安装包中的本文件保留署名，完整审计记录可在 [GitHub 仓库](https://github.com/zzz1999/TauriChinese/tree/main/docs) 查阅。
 
 ## 字体
 

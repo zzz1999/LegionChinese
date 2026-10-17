@@ -87,6 +87,17 @@ test('NPC substitutions and objective counters are preserved',()=>{
     playerName="Ann";assert(A.Normalize("cannot",true)=="cannot")`);
 });
 
+test('book signatures keep their underscores while matching player-name and gender tokens',()=>{
+  const key=fingerprint(normalize('The pilot accepts his risk. Signed, X:___$n'));
+  runLua(`local A,D=TauriChinese,TauriChineseDB
+    D.Strings[1]="试飞员承担$g他:她;的风险。签名：___$n"
+    D.Books[${luaString(key)}]=1
+    local text,changed=A.Translate("Books","The pilot accepts his risk. Signed, X:___Alice")
+    assert(changed and text=="试飞员承担他的风险。签名：___Alice")
+    playerName="Ann"; assert(A.Normalize("cannot",true)=="cannot")
+    assert(A.Normalize("X:___Ann",true)=="x:___~n~")`);
+});
+
 test('UI hooks respect Chinese fields, task switching, books with multiple pages, and the disabled setting',()=>{
   runLua(fs.readFileSync(new URL('./ui-cases.lua',import.meta.url),'utf8'),true);
 });

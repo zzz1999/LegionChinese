@@ -22,8 +22,16 @@ foreach ($taskSource in $taskManifest.sql) {
     if (Test-Checksum $taskTarget $taskSource.sha256) { continue }
     if ($taskSource.member) {
         if (-not (Test-Path -LiteralPath $SevenZip)) { throw '请安装 7-Zip，或通过 -SevenZip 指定 7z.exe。' }
-        $taskArchive = Join-Path $taskCache 'TDB_full_735.00_2018_02_19.7z'
-        Get-VerifiedFile $taskManifest.archive.url $taskArchive $taskManifest.archive.sha256
+        $taskArchiveSpec = $taskManifest.archive
+        $taskArchiveName = 'TDB_full_735.00_2018_02_19.7z'
+        if ($taskSource.archive) {
+            $taskArchiveSpec = $taskManifest.archives.($taskSource.archive)
+            if (-not $taskArchiveSpec) { throw "未定义的压缩包：$($taskSource.archive)" }
+            $taskArchiveName = $taskArchiveSpec.file
+        }
+        if ([IO.Path]::GetFileName($taskArchiveName) -ne $taskArchiveName) { throw '无效的压缩包文件名' }
+        $taskArchive = Join-Path $taskCache $taskArchiveName
+        Get-VerifiedFile $taskArchiveSpec.url $taskArchive $taskArchiveSpec.sha256
         & $SevenZip e $taskArchive ('-o' + $taskCache) $taskSource.member -y | Out-Host
         if ($LASTEXITCODE -ne 0 -or -not (Test-Checksum $taskTarget $taskSource.sha256)) { throw "解压校验失败：$($taskSource.file)" }
     } else {

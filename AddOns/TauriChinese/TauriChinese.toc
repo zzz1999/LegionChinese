@@ -2,7 +2,7 @@
 ## Title: TauriChinese 简体中文
 ## Notes: 离线任务、NPC 对话与书籍汉化；已有中文保持不变。
 ## Author: zzz1999
-## Version: 0.1.0
+## Version: 0.1.1
 ## SavedVariables: TauriChineseSettings
 
 Bootstrap.lua
@@ -19,6 +19,15 @@ Data\Strings_01.lua
 Data\Strings_02.lua
 Data\Strings_03.lua
 Data\Strings_04.lua
+Data\Strings_05.lua
+Data\Strings_06.lua
+Data\Strings_07.lua
+Data\Strings_08.lua
+Data\Strings_09.lua
+Data\Strings_10.lua
+Data\Strings_11.lua
+Data\Strings_12.lua
+Data\Strings_13.lua
 Data\Gossip_01.lua
 Data\Gossip_02.lua
 Data\Gossip_03.lua
@@ -28,6 +37,40 @@ Data\Gossip_06.lua
 Data\Gossip_07.lua
 Data\Gossip_08.lua
 Data\Gossip_09.lua
+Data\Gossip_10.lua
+Data\Gossip_11.lua
+Data\Gossip_12.lua
+Data\Gossip_13.lua
+Data\Gossip_14.lua
+Data\Gossip_15.lua
+Data\Gossip_16.lua
+Data\Gossip_17.lua
+Data\Gossip_18.lua
+Data\Gossip_19.lua
+Data\Gossip_20.lua
+Data\Gossip_21.lua
+Data\Gossip_22.lua
+Data\Gossip_23.lua
+Data\Gossip_24.lua
+Data\Gossip_25.lua
+Data\Gossip_26.lua
+Data\Gossip_27.lua
+Data\Gossip_28.lua
+Data\Gossip_29.lua
+Data\Gossip_30.lua
+Data\Gossip_31.lua
+Data\Gossip_32.lua
+Data\Gossip_33.lua
+Data\Gossip_34.lua
+Data\Gossip_35.lua
+Data\Gossip_36.lua
+Data\Gossip_37.lua
+Data\Gossip_38.lua
+Data\Gossip_39.lua
+Data\Gossip_40.lua
+Data\Gossip_41.lua
+Data\Gossip_42.lua
+Data\Gossip_43.lua
 Data\Books_01.lua
 Data\Titles_01.lua
 Data\Titles_02.lua

@@ -20,19 +20,33 @@ export function variants(text) {
   }
   return [...forms].filter(Boolean);
 }
+export const supportsTokens = text => variants(text).every(form=>!/\$[a-z]/i.test(form));
 export class TextIndex {
-  constructor(){this.entries=new Map();this.ambiguous=new Set();this.normalized=new Map();}
-  add(source,chinese){
-    if(!hasChinese(chinese)||hasChinese(source))return;
+  constructor(){this.entries=new Map();this.ambiguous=new Set();this.normalized=new Map();this.priorities=new Map();this.collisions=new Set();}
+  add(source,chinese,priority=0){
+    if(!hasChinese(chinese)||hasChinese(source)||!supportsTokens(chinese))return;
+    let accepted=false;
     for(const form of variants(source)){
       if(form.length<2||/\$[a-z]/i.test(form))continue;
       const key=fingerprint(form);
-      if(this.ambiguous.has(key))continue;
+      if(this.collisions.has(key))continue;
+      const seen=this.normalized.has(key),previousPriority=this.priorities.get(key)??0;
+      // A hash collision is unsafe regardless of source priority.
+      if(seen&&this.normalized.get(key)!==form){
+        this.entries.delete(key);this.ambiguous.add(key);this.collisions.add(key);continue;
+      }
+      if(seen&&priority<previousPriority)continue;
+      if(this.ambiguous.has(key)&&priority===previousPriority)continue;
       const existing=this.entries.get(key);
-      if(existing!==undefined&&(existing!==chinese||this.normalized.get(key)!==form)){
-        this.entries.delete(key);this.normalized.delete(key);this.ambiguous.add(key);
-      }else{this.entries.set(key,chinese);this.normalized.set(key,form);}
+      if(existing!==undefined&&priority===previousPriority&&existing!==chinese){
+        this.entries.delete(key);this.ambiguous.add(key);
+      }else{
+        this.entries.set(key,chinese);this.normalized.set(key,form);this.ambiguous.delete(key);
+        if(priority!==0)this.priorities.set(key,priority);else this.priorities.delete(key);
+        accepted=true;
+      }
     }
+    return accepted;
   }
 }
 export function luaString(value){

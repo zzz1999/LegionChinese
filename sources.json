@@ -12,7 +12,29 @@
       "kind": "hotfixes",
       "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
       "file": "TDB_hotfixes_735.00_2018_02_19.sql",
-      "sha256": "e8fd012f24f818c355b034fa39d39951e1e77209fc660e96bd7a8ebe43cd2a6c"
+      "sha256": "e8fd012f24f818c355b034fa39d39951e1e77209fc660e96bd7a8ebe43cd2a6c",
+      "provenance": "client-extract",
+      "priority": 2
+    },
+    {
+      "file": "TDB_world_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_world_735.26972_2025_05_11.sql",
+      "archive": "tdb735_2025",
+      "kind": "dialogue-world",
+      "provenance": "community-mixed",
+      "priority": 2,
+      "sha256": "9ddbe8f048c8f40fc886e243f474ba35cdd080d503600fdf4385459523360df5"
+    },
+    {
+      "file": "TDB_hotfixes_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_hotfixes_735.26972_2025_05_11.sql",
+      "archive": "tdb735_2025",
+      "kind": "hotfixes",
+      "provenance": "client-extract",
+      "priority": 2,
+      "sha256": "8e9bec886797d5db6df2a8df6ba06e1f34343d5118aeb5fd5a9792878fda19b8"
     },
     {
       "sha256": "806c6f86704e9a007bb829c82ed376fb40c17b2b8ddf5bd9b525f2da3280f9b7",
@@ -30,19 +52,441 @@
       "sha256": "bfd37a04f1328d2e023615b39a1eae65f12673f7ffe3522c02b530b1aa0e5645",
       "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_29_99_02_mage.sql",
       "kind": "patch",
-      "file": "2018_05_29_99_02_mage.sql"
+      "file": "2018_05_29_99_02_mage.sql",
+      "provenance": "client-sniff"
     },
     {
       "sha256": "75c8f5568b1ffb7e0b0d88e65ac7bc1c546f85b9b1ddf517280df7c474273a90",
       "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_09_16_99_01_druid.sql",
       "kind": "patch",
-      "file": "2018_09_16_99_01_druid.sql"
+      "file": "2018_09_16_99_01_druid.sql",
+      "provenance": "client-sniff"
     },
     {
       "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_09_24_00_world.sql",
       "kind": "pages",
       "file": "2018_09_24_00_world.sql",
       "sha256": "d76cae02c8e8fba6aa52b4a7abefe20341d21814e67e73f7ae5b1c25b3ad5f90"
+    },
+    {
+      "file": "2018_04_26_99_01_worldquest_warsala.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_04_26_99_01_worldquest_warsala.sql",
+      "captureBuild": 26365,
+      "sha256": "aa21b0fe1f70e8e8dac25c7c73d8ce7e2e42525a314b05cd17c3a0852b7728e9"
+    },
+    {
+      "file": "2018_05_03_99_02_druid_spawn.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_03_99_02_druid_spawn.sql",
+      "captureBuild": 26365,
+      "sha256": "3a248a4e09dbd1c2408a2e5c498eeb3475055353350d32e5d5c8ec9318837ee9"
+    },
+    {
+      "file": "2018_05_03_99_03_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_03_99_03_world.sql",
+      "captureBuild": 26365,
+      "sha256": "a279f823aaff139359acf9e7f201150e370e488cecc7174473f87521ed198281"
+    },
+    {
+      "file": "2018_05_03_99_04_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_03_99_04_world.sql",
+      "captureBuild": 26365,
+      "sha256": "c24848e18158f2562b5caf1f6daf83e49c3366a8ef8b44191193ef35315c3b53"
+    },
+    {
+      "file": "2018_05_05_99_01_brokenisland.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_05_99_01_brokenisland.sql",
+      "captureBuild": 26365,
+      "sha256": "25ca3fcb98c7732ee4ef94a9ff4541ac785a5575e2f4711e1aaaa0d78ea48240"
+    },
+    {
+      "file": "2018_05_12_99_01_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_12_99_01_world.sql",
+      "captureBuild": 26365,
+      "sha256": "964a076e5f7b589e55fa7058d8d66ac6ffdb3c9cde5d342d582a71c939719b06"
+    },
+    {
+      "file": "2018_05_29_99_03_xilisusi.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_29_99_03_xilisusi.sql",
+      "captureBuild": 26654,
+      "sha256": "14cf630b4562e1cbae1249a6861f6bf1e8679320378ca26c0df8173f589f3178"
+    },
+    {
+      "file": "2018_06_06_99_01_dk.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_06_99_01_dk.sql",
+      "captureBuild": 26654,
+      "sha256": "06978045c34d01a128208d3c408849950255ab336685679f928a34e475e51a17"
+    },
+    {
+      "file": "2018_06_07_99_01_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_07_99_01_world.sql",
+      "sha256": "b7b8ebc4af76874c584087c4f9d93f687b8717a2cf42ba11c0ee88de1846c3fc"
+    },
+    {
+      "file": "2018_06_08_99_01_druid.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_08_99_01_druid.sql",
+      "captureBuild": 22566,
+      "sha256": "9212e495619b2b8150d7c0a14e0a67322149c34b7598e53dcea9d1116ed71597"
+    },
+    {
+      "file": "2018_06_11_99_01_hunter.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_11_99_01_hunter.sql",
+      "captureBuild": 26124,
+      "sha256": "69bc77918473d2a9c108cd45e586b3b59663948f7654656ea3b2d4592f15469d"
+    },
+    {
+      "file": "2018_06_13_99_05_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_13_99_05_world.sql",
+      "captureBuild": 26124,
+      "sha256": "c76b23e525e059598c52d55268c538681b4e7b8317777c4c32d5c77b9b58b95e"
+    },
+    {
+      "file": "2018_06_15_99_01_world.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_15_99_01_world.sql",
+      "captureBuild": 26822,
+      "sha256": "200633ba9bb6099ce9aff55ea277f3ec180a0ac2bff125dc3141f80f374f0c1b"
+    },
+    {
+      "file": "2018_09_04_99_01_druid.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_09_04_99_01_druid.sql",
+      "captureBuild": 22566,
+      "sha256": "ab8dfab4abef3d2da9bf7619fba5f8e1fc5106c0aed9f3b1493604b7e3ff881a"
+    },
+    {
+      "file": "2018_09_14_99_01_druid.sql",
+      "kind": "gossip-patch",
+      "provenance": "client-sniff",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_09_14_99_01_druid.sql",
+      "captureBuild": 22566,
+      "sha256": "8bb49fb860f07899415f6e009f55b0da6635a84ce1566def632556f25bae2201"
+    },
+    {
+      "file": "2018_02_25_99_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_02_25_99_hotfixes.sql",
+      "sha256": "a8d9647a48816432b524930fa0b4434e881b161415614942ddd49ceac01911c9"
+    },
+    {
+      "file": "2018_02_25_99_hotfixes_02.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_02_25_99_hotfixes_02.sql",
+      "sha256": "1cfee244a90760b1430bc95ce3782443adada990a4a94304b1aab67012e96678"
+    },
+    {
+      "file": "2018_02_25_99_hotfixes_03.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_02_25_99_hotfixes_03.sql",
+      "sha256": "800e889a829fa8fc5f5c9e7aa486bef5d3582f231b9ccade73e7e32aefd8261d"
+    },
+    {
+      "file": "2018_02_25_99_hotfixes_05.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_02_25_99_hotfixes_05.sql",
+      "sha256": "3a88a7cb94569c407595ca3dbba165bdb43cfedd8b62c86db93337c209b0c736"
+    },
+    {
+      "file": "2018_02_25_99_hotfixes_06.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_02_25_99_hotfixes_06.sql",
+      "sha256": "9c3cdaf768a8465f863f88f823dae53267275530e659103823cd19118cecdfeb"
+    },
+    {
+      "file": "2018_03_11_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_03_11_99_01_hotfixes.sql",
+      "sha256": "738bafd875344ae7a6bc8311e30e58c5a41b3f870532053a0e482b7fea52086b"
+    },
+    {
+      "file": "2018_03_12_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_03_12_99_01_hotfixes.sql",
+      "sha256": "01d29a4639befb1f7cc6f33ee0bb4a41d28b4096a3bf0c2393c5b2bfab55a3ba"
+    },
+    {
+      "file": "2018_03_13_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_03_13_99_01_hotfixes.sql",
+      "sha256": "1e8b7d272c06cb0fc8375d6a183eebc302fb205c5212719a218accf9cf9ad09d"
+    },
+    {
+      "file": "2018_03_15_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_03_15_99_01_hotfixes.sql",
+      "sha256": "3bc42568bdbd638821360be57f426c823c6c08ba4710e0500cad54734e8e28b0"
+    },
+    {
+      "file": "2018_03_31_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_03_31_99_01_hotfixes.sql",
+      "sha256": "c3f76dda2f1a84627c7a4a57046d5e80fe779162bd651126f27eb9bb9b7a7d43"
+    },
+    {
+      "file": "2018_04_13_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_13_99_01_hotfixes.sql",
+      "sha256": "03b1f592856ffe9e9e19a264f649b60fbc1bea7d149d6a8743316bdb126f05b3"
+    },
+    {
+      "file": "2018_04_14_99_01_hotfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_14_99_01_hotfixes.sql",
+      "sha256": "b39bff481c6882b24b102988306c55c87f3eec636ac7fcedbbffb6f07a172aa1"
+    },
+    {
+      "file": "2018_04_19_99_01_hotfixes_broadcast.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_19_99_01_hotfixes_broadcast.sql",
+      "sha256": "1f028a3419d7f3dca0074763855880d389b05044652e0f7dd10aa634203ee2ec"
+    },
+    {
+      "file": "2018_04_25_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_25_99_01_hostfixes.sql",
+      "sha256": "e93b5d9e840c6f3ffb4afa7765a411c715407bc0bbd0544e4d7a27480231fa6e"
+    },
+    {
+      "file": "2018_04_26_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_26_99_01_hostfixes.sql",
+      "sha256": "24689321ff1f375e187c9ee340130c161121ed6fd79f68c25087f1a74c1f8d87"
+    },
+    {
+      "file": "2018_04_27_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_27_99_01_hostfixes.sql",
+      "sha256": "0d02f551e98acd347dacbc41eb1dc6e814789f49f08f60d85f9384aa603ffcf8"
+    },
+    {
+      "file": "2018_04_30_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_04_30_99_01_hostfixes.sql",
+      "sha256": "ff9c06c7f194037ab4147c2bba0a96b7bff51b43f4799d041e59041748cfe629"
+    },
+    {
+      "file": "2018_05_03_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_03_99_01_hostfixes.sql",
+      "sha256": "19fca0b4df0665a3947eb55316933847369eef6e5261f725e30889986a2c0114"
+    },
+    {
+      "file": "2018_05_03_99_02_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_03_99_02_hostfixes.sql",
+      "sha256": "87c93ea13fa40f0f6188c9362be4438768519653a0665689545186c7694b6d0e"
+    },
+    {
+      "file": "2018_05_04_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_04_99_01_hostfixes.sql",
+      "sha256": "8938517123533299f4a73f84af49f5f09e17e1e376166e7d63fe1b97cab6fef4"
+    },
+    {
+      "file": "2018_05_05_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_05_99_01_hostfixes.sql",
+      "sha256": "b7d7dbe0783502a0d4ac16fbbb80aa98be2d408337ba46cd81b5c8ef211e8f4c"
+    },
+    {
+      "file": "2018_05_06_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_06_99_01_hostfixes.sql",
+      "sha256": "053e4634efc6de2c1939de0c556c46dd8073453cc67363896acecc3a8ffebb0a"
+    },
+    {
+      "file": "2018_05_06_99_02_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_06_99_02_hostfixes.sql",
+      "sha256": "e9d59d3f7db4f0a8efc70308284552304f699de62e45e3cf8c464570599be3f0"
+    },
+    {
+      "file": "2018_05_12_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_12_99_01_hostfixes.sql",
+      "sha256": "c70f038c17e4b3a5b3d1f1298c34de2d2a1e33d3a73c6b5c36032f2aad93cad5"
+    },
+    {
+      "file": "2018_05_15_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_15_99_01_hostfixes.sql",
+      "sha256": "88e9084c25fbee16399306485028d18c61e24b7dde0dffb54d1aa0f6897229b1"
+    },
+    {
+      "file": "2018_05_27_99_01_hostfixes_xilisusi.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_27_99_01_hostfixes_xilisusi.sql",
+      "sha256": "7a4c507fb2ee7a33057adaaa823680ca12574be27ae466be230cd38e2eb9f6a4"
+    },
+    {
+      "file": "2018_05_29_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_29_99_01_hostfixes.sql",
+      "sha256": "59d22dfa5cc916a64636aa06a368cdee197edaa23a53f4a230dd35f84166f0f9"
+    },
+    {
+      "file": "2018_05_30_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_05_30_99_01_hostfixes.sql",
+      "sha256": "c0b6d0dda20f08525647b5ef3b16c2dc651d95c6da4f524c3842aa695a89a242"
+    },
+    {
+      "file": "2018_06_04_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_04_99_01_hostfixes.sql",
+      "sha256": "c50d710d96c0f830be189b200a941dd23e72eb32d9260fe315be8bfc3941d8ea"
+    },
+    {
+      "file": "2018_06_06_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_06_99_01_hostfixes.sql",
+      "sha256": "09595bc57280a3289c95374d863fc22457c5d4915a7980d6aff72f6a31ba5902"
+    },
+    {
+      "file": "2018_06_07_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_07_99_01_hostfixes.sql",
+      "sha256": "1eb8db52b59c3d7f5a6a80f7daacf60133ab7ba6b9d5e819971469cbc568342a"
+    },
+    {
+      "file": "2018_06_08_99_01_hostfixes_druid.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_08_99_01_hostfixes_druid.sql",
+      "sha256": "36134c16cb0375a878034a3120472adb8028ff98c423c465ac7a129fc0f3222c"
+    },
+    {
+      "file": "2018_06_10_99_01_hostfixes_hunter.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_10_99_01_hostfixes_hunter.sql",
+      "sha256": "2a393b97dec620b195a68f1fc525535e9396fe541c3a3286d179f703cc030bb0"
+    },
+    {
+      "file": "2018_06_15_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_06_15_99_01_hostfixes.sql",
+      "sha256": "1d0faf5073dc5960dfc5d7d67675ee2a183659e0759e951c7886326ce2543e51"
+    },
+    {
+      "file": "2018_07_03_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_07_03_99_01_hostfixes.sql",
+      "sha256": "d2f38a4fb1c4eb4e3a4b00b99ff6336d83b4a916559a3e42599e5e24f953626a"
+    },
+    {
+      "file": "2018_07_08_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_07_08_99_01_hostfixes.sql",
+      "sha256": "44ed5e5db55fa6b1a46f138f33897f784bac69ad0f486348c2cd1204fc753803"
+    },
+    {
+      "file": "2018_07_16_99_01_hostfixes.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_07_16_99_01_hostfixes.sql",
+      "sha256": "3038094a41342aec38b38aba9d82e531ceb962df42263cd68adad26215f9d44f"
+    },
+    {
+      "file": "2018_09_04_99_01_hostfixes_druid.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_09_04_99_01_hostfixes_druid.sql",
+      "sha256": "cb8012e92ad4eb8ac97fade6ccc009b79b6f41fe2b64e74b129ba4924ecf58fc"
+    },
+    {
+      "file": "2018_09_14_99_01_hostfixes_druid.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_09_14_99_01_hostfixes_druid.sql",
+      "sha256": "fc870416109100503de830c4656bb0f19fc9379e05dcc3a54541cf46d4aaa358"
+    },
+    {
+      "file": "2018_09_16_99_01_hostfixes_druid.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_09_16_99_01_hostfixes_druid.sql",
+      "sha256": "f60504fc9f131d65ec3c11508b3ffc52b85928b305e6241b82c1b7a2183973bc"
+    },
+    {
+      "file": "2018_09_20_99_01_hostfixes_zs.sql",
+      "kind": "broadcast-patch",
+      "provenance": "community-capture",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/hotfixes/2018_09_20_99_01_hostfixes_zs.sql",
+      "sha256": "a85e5d8c77287d16c480ff698bb632bb80ba984c25d0263403326bb85318fd55"
+    },
+    {
+      "file": "ac-page_text.sql",
+      "kind": "legacy-pages",
+      "provenance": "community-unverified",
+      "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/page_text.sql",
+      "sha256": "2289f808fe3b3a2aa16ddcbd7cbee9e66349a8bd0f6eb0f206b5b1029623dc08"
+    },
+    {
+      "file": "ac-page_text_locale.sql",
+      "kind": "legacy-page-locales",
+      "provenance": "community-unverified",
+      "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/page_text_locale.sql",
+      "sha256": "216df75444babd0e0278c96d034cab6ddc3a33c51c0bc95485c96b63b3094534"
     }
   ],
   "archive": {
@@ -54,5 +498,12 @@
     "sha256": "9737d7efe43e6a49ede3c563fe4d436f763db9be1e403a37b9613c2ab30e8cfb",
     "licenseSha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
     "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8/fonts/TTF/LXGWWenKaiLite-Regular.ttf"
+  },
+  "archives": {
+    "tdb735_2025": {
+      "file": "TDB_full_735.26972_2025_05_11.7z",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "sha256": "cdc0b9c725d9e712c2d28bce4dec76d1008678bb8b02c74afd7ef2d1a9df9df2"
+    }
   }
 }

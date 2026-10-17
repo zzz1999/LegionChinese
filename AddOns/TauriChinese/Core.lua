@@ -19,6 +19,7 @@ end
 
 -- Literal matching prevents player names containing pattern metacharacters from
 -- being interpreted as Lua patterns. ASCII word boundaries avoid replacing Ann in cannot.
+-- Underscores are separators: book signatures commonly render as ___Alice.
 local function replaceLiteral(text, needle, replacement)
     if not needle or needle == "" then return text end
     local result, pos = {}, 1
@@ -27,8 +28,8 @@ local function replaceLiteral(text, needle, replacement)
         if not first then result[#result+1] = text:sub(pos); break end
         local left = first > 1 and text:sub(first-1,first-1) or ""
         local right = text:sub(last+1,last+1)
-        local boundary = not (needle:sub(1,1):match("[%w_]") and left:match("[%w_]"))
-            and not (needle:sub(-1):match("[%w_]") and right:match("[%w_]"))
+        local boundary = not (needle:sub(1,1):match("%w") and left:match("%w"))
+            and not (needle:sub(-1):match("%w") and right:match("%w"))
         result[#result+1] = text:sub(pos,first-1)
         result[#result+1] = boundary and replacement or text:sub(first,last)
         pos = last+1
