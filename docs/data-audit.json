@@ -1,54 +1,87 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.2",
   "counts": {
-    "quests": 17270,
+    "quests": 17321,
     "questFields": {
-      "Title": 17259,
-      "Objectives": 15510,
-      "Description": 15507,
+      "Title": 17306,
+      "Objectives": 15509,
+      "Description": 15456,
       "CompletionLog": 840,
       "Completion": 19,
       "Progress": 5
     },
-    "npcBroadcastRecords": 124388,
+    "npcBroadcastRecords": 125416,
     "broadcastChineseRecords": 125929,
     "broadcastConflictingRecords": 11,
-    "bookPages": 1654,
-    "bookPageCandidates": 1831,
+    "bookPages": 1705,
+    "bookPageCandidates": 1830,
     "bookPagesWithoutSource": 0,
+    "questTraditionalFields": {
+      "Title": 47,
+      "Description": 30,
+      "Objectives": 31
+    },
+    "broadcastLocales": {
+      "zhCN": 125929,
+      "zhTW": 125859
+    },
+    "bookLocaleCandidates": {
+      "zhCN": 1830,
+      "zhTW": 1793
+    },
+    "bookPagesByLocale": {
+      "zhCN": 1654,
+      "zhTW": 51
+    },
     "bookSources": {
       "clientSniff": 8,
-      "legionCommunity": 1794,
-      "legacyCompatible": 29
+      "legionCommunity": 3587,
+      "legacyCompatible": 28
     },
     "bookMatchedSources": {
       "clientSniff": 8,
-      "legionCommunity": 1622,
+      "legionCommunity": 1673,
       "legacyCompatible": 24
     },
     "legacyBooksSkipped": {
-      "missingLegionPage": 45,
+      "missingLegionPage": 44,
       "changedOriginal": 6,
-      "preferredTranslation": 1794
+      "preferredTranslation": 1792
     },
-    "gossipOptions": 4007,
-    "gossipOptionsWithoutSource": 57,
-    "npcReferencedBroadcastRecords": 24227,
+    "gossipOptions": 4288,
+    "gossipOptionsWithoutSource": 58,
+    "npcReferencedBroadcastRecords": 24339,
     "Gossip": {
-      "fingerprints": 997033,
-      "ambiguousSkipped": 18333
+      "fingerprints": 1005001,
+      "ambiguousSkipped": 13846,
+      "locales": {
+        "zhCN": 997033,
+        "zhTW": 7968
+      }
     },
     "Books": {
-      "fingerprints": 1662,
-      "ambiguousSkipped": 73
+      "fingerprints": 1685,
+      "ambiguousSkipped": 50,
+      "locales": {
+        "zhCN": 1662,
+        "zhTW": 23
+      }
     },
     "Titles": {
-      "fingerprints": 108410,
-      "ambiguousSkipped": 1790
+      "fingerprints": 109402,
+      "ambiguousSkipped": 1039,
+      "locales": {
+        "zhCN": 108410,
+        "zhTW": 992
+      }
     },
     "Objectives": {
-      "fingerprints": 7206,
-      "ambiguousSkipped": 75
+      "fingerprints": 7312,
+      "ambiguousSkipped": 24,
+      "locales": {
+        "zhCN": 7206,
+        "zhTW": 106
+      }
     }
   },
   "sources": [
@@ -608,6 +641,7 @@
     "Data\\Strings_11.lua",
     "Data\\Strings_12.lua",
     "Data\\Strings_13.lua",
+    "Data\\Strings_14.lua",
     "Data\\Gossip_01.lua",
     "Data\\Gossip_02.lua",
     "Data\\Gossip_03.lua",

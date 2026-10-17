@@ -3,8 +3,9 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {readSQL} from './sql.mjs';
-import {hasChinese,TextIndex,luaString,variants,fingerprint} from './text.mjs';
+import {hasChinese,luaString,variants,fingerprint} from './text.mjs';
 import {LEGION_BUILD,localeOf,idOf,menuKey,broadcastText,selectBroadcast,compatibleLegacyPage} from './dialogue.mjs';
+import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from './fallback.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -28,14 +29,14 @@ function collect(table,record,update,source){
     const id=idOf(record);if(record.LogTitle&&!hasChinese(record.LogTitle)){
       if(!questTitles.has(id))questTitles.set(id,new Set());questTitles.get(id).add(record.LogTitle);
     }
-    if(table==='quest_template'||locale!=='zhCN')return;
+    if(table==='quest_template'||!CHINESE_LOCALES.includes(locale))return;
   }
-  if(locale&&locale!=='zhCN'&&!['gossip_menu_option_locale','page_text_locale'].includes(table))return;
+  if(locale&&!CHINESE_LOCALES.includes(locale)&&!['gossip_menu_option_locale','page_text_locale'].includes(table))return;
   const key=(idOf(record)??menuKey(record))+':'+(locale??'enUS');
   if(!tables.has(table))tables.set(table,new Map());
   const rows=tables.get(table);
   const previous=rows.get(key);
-  if(previous && +previous.VerifiedBuild > +record.VerifiedBuild && locale==='zhCN')return;
+  if(previous && +previous.VerifiedBuild > +record.VerifiedBuild && CHINESE_LOCALES.includes(locale))return;
   rows.set(key,update?{...rows.get(key),...record}:record);
 }
 const sourceAudit=[];
@@ -64,101 +65,130 @@ for(const source of manifest.sql){
     collect(table,r,update,source);
   },schemas);
 }
-const byBroadcast=new Map();
+const byBroadcast={zhCN:new Map(),zhTW:new Map()};
 const broadcastSources=manifest.sql.filter(s=>['hotfixes','broadcast-patch'].includes(s.kind));
 for(const source of broadcastSources){
   await readSQL(path.join(input,source.file),new Set(['broadcast_text_locale']),(table,r)=>{
     if(Number(r.VerifiedBuild)>LEGION_BUILD)sourceAudit.find(s=>s.file===source.file).afterLegionSkipped++;
-    selectBroadcast(byBroadcast,r,source.file,source.priority??0);
+    const locale=localeOf(r);
+    if(CHINESE_LOCALES.includes(locale))selectBroadcast(byBroadcast[locale],r,source.file,source.priority??0,locale);
   });
 }
-const questData=new Map(),gossip=new TextIndex(),books=new TextIndex(),titles=new TextIndex(),objectives=new TextIndex();
+const questData=new Map(),questVariants=new Map();
+const gossip=new ChineseTextIndex(),books=new ChineseTextIndex(),titles=new ChineseTextIndex(),objectives=new ChineseTextIndex();
 const counts={quests:0,questFields:{},npcBroadcastRecords:0,broadcastChineseRecords:0,broadcastConflictingRecords:0,
   bookPages:0,bookPageCandidates:0,bookPagesWithoutSource:0,
+  questTraditionalFields:{},broadcastLocales:{zhCN:0,zhTW:0},bookLocaleCandidates:{zhCN:0,zhTW:0},bookPagesByLocale:{zhCN:0,zhTW:0},
   bookSources:{clientSniff:0,legionCommunity:0,legacyCompatible:0},
   bookMatchedSources:{clientSniff:0,legionCommunity:0,legacyCompatible:0},
   legacyBooksSkipped:{missingLegionPage:0,changedOriginal:0,preferredTranslation:0},gossipOptions:0,gossipOptionsWithoutSource:0};
 const questFields={LogTitle:'Title',LogDescription:'Objectives',QuestDescription:'Description',QuestCompletionLog:'CompletionLog'};
+function questLocaleEntry(row){
+  const id=idOf(row),locale=localeOf(row);
+  if(!questVariants.has(id))questVariants.set(id,{});
+  const localized=questVariants.get(id);return localized[locale]??={};
+}
 for(const r of tables.get('quest_template_locale')?.values()??[]){
-  const entry={};for(const [col,field] of Object.entries(questFields))if(hasChinese(r[col]))entry[field]=r[col];
-  if(Object.keys(entry).length)questData.set(idOf(r),entry);
+  const entry=questLocaleEntry(r);for(const [col,field] of Object.entries(questFields))entry[field]=r[col];
 }
 for(const [table,col,field] of [['quest_offer_reward_locale','RewardText','Completion'],['quest_request_items_locale','CompletionText','Progress']]){
-  for(const r of tables.get(table)?.values()??[]){if(!hasChinese(r[col]))continue;const id=idOf(r),entry=questData.get(id)??{};entry[field]=r[col];questData.set(id,entry);}
+  for(const r of tables.get(table)?.values()??[])questLocaleEntry(r)[field]=r[col];
 }
-for(const [id,entry] of questData){
-  for(const field of Object.keys(entry))counts.questFields[field]=(counts.questFields[field]??0)+1;
-  for(const source of questTitles.get(id)??[])titles.add(source,entry.Title);
+for(const [id,localized] of questVariants){
+  const {values,locales}=chooseChineseFields(localized.zhCN,localized.zhTW);
+  if(!Object.keys(values).length)continue;
+  questData.set(id,values);
+  for(const field of Object.keys(values)){
+    counts.questFields[field]=(counts.questFields[field]??0)+1;
+    if(locales[field]==='zhTW')counts.questTraditionalFields[field]=(counts.questTraditionalFields[field]??0)+1;
+  }
+  for(const source of questTitles.get(id)??[])for(const locale of CHINESE_LOCALES)titles.add(locale,source,localized[locale]?.Title);
 }
 counts.quests=questData.size;
-for(const row of byBroadcast.values()){
-  if(row.ambiguous)counts.broadcastConflictingRecords++;else counts.broadcastChineseRecords++;
+titles.finish();
+for(const locale of CHINESE_LOCALES)for(const row of byBroadcast[locale].values()){
+  if(row.ambiguous)counts.broadcastConflictingRecords++;else counts.broadcastLocales[locale]++;
 }
+counts.broadcastChineseRecords=counts.broadcastLocales.zhCN;
 const matchedBroadcasts=new Set();
 // Stream every source language after choosing the Chinese revision. Do not
 // restrict the library to the incomplete NPC references in the old world DB.
 for(const source of broadcastSources){
   await readSQL(path.join(input,source.file),new Set(['broadcast_text','broadcast_text_locale']),(table,r)=>{
     if(['zhCN','zhTW'].includes(localeOf(r))||Number(r.VerifiedBuild)>LEGION_BUILD)return;
-    const zh=byBroadcast.get(idOf(r));if(!zh||zh.ambiguous)return;
     const original=broadcastText(r);
-    const male=hasChinese(zh.male)?zh.male:zh.female,female=hasChinese(zh.female)?zh.female:zh.male;
-    const a=gossip.add(original.male,male),b=gossip.add(original.female,female);
-    if(a||b)matchedBroadcasts.add(idOf(r));
+    for(const locale of CHINESE_LOCALES){
+      const zh=byBroadcast[locale].get(idOf(r));if(!zh||zh.ambiguous)continue;
+      const male=usableChinese(zh.male)?zh.male:zh.female,female=usableChinese(zh.female)?zh.female:zh.male;
+      const a=gossip.add(locale,original.male,male),b=gossip.add(locale,original.female,female);
+      if(a||b)matchedBroadcasts.add(idOf(r));
+    }
   });
 }
 counts.npcBroadcastRecords=matchedBroadcasts.size;
 counts.npcReferencedBroadcastRecords=[...matchedBroadcasts].filter(id=>broadcastIDs.has(id)).length;
 for(const r of tables.get('gossip_menu_option')?.values()??[]){
-  const key=menuKey(r)+':zhCN';
-  const zh=tables.get('gossip_menu_option_locale')?.get(key);
-  const br=byBroadcast.get(r.OptionBroadcastTextId);
-  const translated=hasChinese(zh?.OptionText)?zh.OptionText:(!br?.ambiguous&&(br?.male||br?.female));
-  if(gossip.add(r.OptionText,translated))counts.gossipOptions++;
-  if(zh)for(const candidate of tables.get('gossip_menu_option_locale')?.values()??[]){
-    if(menuKey(candidate)===menuKey(r)&&!['zhCN','zhTW'].includes(localeOf(candidate)))gossip.add(candidate.OptionText,zh.OptionText);
+  let matched=false;
+  for(const locale of CHINESE_LOCALES){
+    const zh=tables.get('gossip_menu_option_locale')?.get(menuKey(r)+':'+locale);
+    const br=byBroadcast[locale].get(r.OptionBroadcastTextId);
+    const translated=usableChinese(zh?.OptionText)?zh.OptionText:(!br?.ambiguous&&(usableChinese(br?.male)?br.male:br?.female));
+    if(gossip.add(locale,r.OptionText,translated))matched=true;
+    if(zh)for(const candidate of tables.get('gossip_menu_option_locale')?.values()??[]){
+      if(menuKey(candidate)===menuKey(r)&&!CHINESE_LOCALES.includes(localeOf(candidate)))gossip.add(locale,candidate.OptionText,zh.OptionText);
+    }
   }
+  if(matched)counts.gossipOptions++;
 }
 for(const r of tables.get('gossip_menu_option_locale')?.values()??[]){
-  if(localeOf(r)==='zhCN'&&!tables.get('gossip_menu_option')?.has(menuKey(r)+':enUS'))counts.gossipOptionsWithoutSource++;
+  if(CHINESE_LOCALES.includes(localeOf(r))&&!tables.get('gossip_menu_option')?.has(menuKey(r)+':enUS'))counts.gossipOptionsWithoutSource++;
 }
-const bookPageAudit=[],bookCandidates=[];
+gossip.finish();
+const bookPageAudit=[],bookCandidates=[],bookIDs=new Set();
 for(const r of tables.get('page_text_locale')?.values()??[]){
-  if(localeOf(r)!=='zhCN'||!hasChinese(r.Text))continue;
+  const locale=localeOf(r);
+  if(!CHINESE_LOCALES.includes(locale)||!hasChinese(r.Text))continue;
   const original=tables.get('page_text')?.get(idOf(r)+':enUS');
   if(!original?.Text||hasChinese(original.Text)){counts.bookPagesWithoutSource++;continue;}
   const captured=r._provenance==='client-sniff'&&Number(r.VerifiedBuild)>0;
   const priority=captured?1:0;
-  books.add(original.Text,r.Text,priority);counts.bookPageCandidates++;
+  books.add(locale,original.Text,r.Text,priority);bookIDs.add(idOf(r));counts.bookLocaleCandidates[locale]++;
   const group=captured?'clientSniff':'legionCommunity';counts.bookSources[group]++;
-  const audit={id:Number(idOf(r)),source:r._source,verifiedBuild:Number(r.VerifiedBuild)||0,quality:captured?'client-sniff':'community-unverified'};
+  const audit={id:Number(idOf(r)),locale,source:r._source,verifiedBuild:Number(r.VerifiedBuild)||0,quality:captured?'client-sniff':'community-unverified'};
   bookPageAudit.push(audit);bookCandidates.push({audit,original:original.Text,chinese:r.Text,group});
   for(const candidate of tables.get('page_text_locale').values()){
-    if(candidate.ID===r.ID&&!['zhCN','zhTW'].includes(localeOf(candidate)))books.add(candidate.Text,r.Text,priority);
+    if(candidate.ID===r.ID&&!CHINESE_LOCALES.includes(localeOf(candidate)))books.add(locale,candidate.Text,r.Text,priority);
   }
 }
-for(const [id,locales] of legacyLocales){
-  const zh=locales.find(r=>localeOf(r)==='zhCN'&&hasChinese(r.Text));if(!zh)continue;
-  if(hasChinese(tables.get('page_text_locale')?.get(id+':zhCN')?.Text)){counts.legacyBooksSkipped.preferredTranslation++;continue;}
+for(const [id,locales] of legacyLocales)for(const locale of CHINESE_LOCALES){
+  const zh=locales.find(r=>localeOf(r)===locale&&usableChinese(r.Text));if(!zh)continue;
+  if(usableChinese(tables.get('page_text_locale')?.get(id+':'+locale)?.Text)){counts.legacyBooksSkipped.preferredTranslation++;continue;}
   const original=legionPages.get(id);
   if(!original){counts.legacyBooksSkipped.missingLegionPage++;continue;}
   if(!compatibleLegacyPage(original,legacyPages.get(id))){counts.legacyBooksSkipped.changedOriginal++;continue;}
-  books.add(original.Text,zh.Text,-1);
-  for(const candidate of locales)if(!['zhCN','zhTW'].includes(localeOf(candidate)))books.add(candidate.Text,zh.Text,-1);
-  counts.bookPageCandidates++;counts.bookSources.legacyCompatible++;
-  const audit={id:Number(id),source:zh._source,verifiedBuild:Number(zh.VerifiedBuild)||0,quality:'legacy-compatible-unverified'};
+  books.add(locale,original.Text,zh.Text,-1);
+  for(const candidate of locales)if(!CHINESE_LOCALES.includes(localeOf(candidate)))books.add(locale,candidate.Text,zh.Text,-1);
+  bookIDs.add(id);counts.bookLocaleCandidates[locale]++;counts.bookSources.legacyCompatible++;
+  const audit={id:Number(id),locale,source:zh._source,verifiedBuild:Number(zh.VerifiedBuild)||0,quality:'legacy-compatible-unverified'};
   bookPageAudit.push(audit);bookCandidates.push({audit,original:original.Text,chinese:zh.Text,group:'legacyCompatible'});
 }
 // Count only pages whose English key survived all ambiguity/priority decisions.
 // Multiple page IDs can share the same text; fingerprint counts are not page counts.
+books.finish();
+const matchedPages=new Map();
 for(const {audit,original,chinese,group} of bookCandidates){
-  audit.englishMatched=variants(original).some(form=>books.entries.get(fingerprint(form))===chinese);
-  if(audit.englishMatched){counts.bookPages++;counts.bookMatchedSources[group]++;}
+  audit.englishMatched=variants(original).some(form=>{
+    const key=fingerprint(form);return books.entries.get(key)===chinese&&books.localeFor(key)===audit.locale;
+  });
+  if(audit.englishMatched&&(!matchedPages.has(audit.id)||audit.locale==='zhCN'))matchedPages.set(audit.id,{locale:audit.locale,group});
 }
+counts.bookPageCandidates=bookIDs.size;counts.bookPages=matchedPages.size;
+for(const {locale,group} of matchedPages.values()){counts.bookPagesByLocale[locale]++;counts.bookMatchedSources[group]++;}
 for(const r of tables.get('quest_objectives_locale')?.values()??[]){
   const original=tables.get('quest_objectives')?.get(idOf(r)+':enUS');
-  if(original)objectives.add(original.Description,r.Description);
+  if(original)objectives.add(localeOf(r),original.Description,r.Description);
 }
+objectives.finish();
 fs.mkdirSync(output,{recursive:true});
 const generated=[];
 function writeChunks(name,rows,make){
@@ -172,9 +202,9 @@ for(const index of [gossip,books,titles,objectives])for(const text of index.entr
 writeChunks('Strings',strings.map((s,i)=>[i+1,s]),([id,s])=>'D.Strings['+id+']='+luaString(s));
 for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:titles,Objectives:objectives})){
   writeChunks(name,[...index.entries].sort((a,b)=>a[0].localeCompare(b[0],'en')),([key,s])=>'D.'+name+'['+luaString(key)+']='+stringIDs.get(s));
-  counts[name]={fingerprints:index.entries.size,ambiguousSkipped:index.ambiguous.size};
+  counts[name]={fingerprints:index.entries.size,ambiguousSkipped:index.ambiguous.size,locales:index.localeCounts};
 }
-const toc=['## Interface: 70300','## Title: TauriChinese 简体中文','## Notes: 离线任务、NPC 对话与书籍汉化；已有中文保持不变。','## Author: zzz1999','## Version: '+version,'## SavedVariables: TauriChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','UI.lua',''];
+const toc=['## Interface: 70300','## Title: TauriChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: TauriChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','TauriChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.
@@ -182,5 +212,5 @@ for(const file of fs.readdirSync(output))if(/^(Quests|Strings|Gossip|Books|Title
 const audit={version,counts,sources:sourceAudit,generatedFiles:generated};
 fs.mkdirSync(path.join(root,'docs'),{recursive:true});
 fs.writeFileSync(path.join(root,'docs','data-audit.json'),JSON.stringify(audit,null,2)+'\n');
-fs.writeFileSync(path.join(root,'docs','book-provenance.json'),JSON.stringify(bookPageAudit.sort((a,b)=>a.id-b.id),null,2)+'\n');
+fs.writeFileSync(path.join(root,'docs','book-provenance.json'),JSON.stringify(bookPageAudit.sort((a,b)=>a.id-b.id||a.locale.localeCompare(b.locale)),null,2)+'\n');
 console.log(JSON.stringify(counts,null,2));

@@ -93,15 +93,18 @@ end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("PLAYER_LOGIN")
-frame:SetScript("OnEvent",function()
-    TauriChineseSettings=TauriChineseSettings or {enabled=true}
+frame:SetScript("OnEvent",function(_,event,addonName)
+    if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="TauriChinese") then
+        A.InitializeSettings()
+    end
     install()
+    if event=="PLAYER_LOGIN" and not TauriChineseSettings.welcomeSeen then A.ShowWelcome() end
 end)
 install()
 
 SLASH_TAURICHINESE1="/tcn"
 SlashCmdList.TAURICHINESE=function(command)
-    TauriChineseSettings=TauriChineseSettings or {enabled=true}
+    A.InitializeSettings()
     command=(command or ""):lower():gsub("%s","")
     if command=="off" or command=="关" then
         TauriChineseSettings.enabled=false
@@ -109,7 +112,9 @@ SlashCmdList.TAURICHINESE=function(command)
     elseif command=="on" or command=="开" then
         TauriChineseSettings.enabled=true
         print("TauriChinese：已开启，已有中文保持不变，缺失译文保留原文。")
+    elseif command=="about" or command=="关于" then
+        A.ShowWelcome()
     else
-        print("TauriChinese："..(A.Enabled() and "已开启" or "已关闭").."。/tcn on 开启，/tcn off 关闭。")
+        print("TauriChinese："..(A.Enabled() and "已开启" or "已关闭").."。/tcn on 开启，/tcn off 关闭，/tcn about 关于与反馈。")
     end
 end

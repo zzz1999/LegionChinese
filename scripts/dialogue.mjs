@@ -14,9 +14,9 @@ export function broadcastText(row) {
   };
 }
 
-export function selectBroadcast(records,row,source,priority=0) {
+export function selectBroadcast(records,row,source,priority=0,targetLocale='zhCN') {
   const build=Number(row.VerifiedBuild);
-  if(localeOf(row)!=='zhCN'||!Number.isInteger(build)||build<=0||build>LEGION_BUILD)return false;
+  if(localeOf(row)!==targetLocale||!Number.isInteger(build)||build<=0||build>LEGION_BUILD)return false;
   const text=broadcastText(row);
   if(!hasChinese(text.male)&&!hasChinese(text.female))return false;
   const candidate={...text,build,source,priority};

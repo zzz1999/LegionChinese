@@ -181,3 +181,9 @@ end
 function A.Enabled()
     return not TauriChineseSettings or TauriChineseSettings.enabled~=false
 end
+
+function A.InitializeSettings()
+    if type(TauriChineseSettings)~="table" then TauriChineseSettings={} end
+    if TauriChineseSettings.enabled==nil then TauriChineseSettings.enabled=true end
+    return TauriChineseSettings
+end
