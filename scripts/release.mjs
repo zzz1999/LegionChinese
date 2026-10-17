@@ -7,68 +7,146 @@ async function optionalRelease(request) {
   }
 }
 
-async function normalizeLegacyTitles(github, repo) {
-  const api = github.rest.repos;
-  const changes = [];
-  // Read every page before updating titles so changes cannot shift pagination.
-  for await (const {data} of github.paginate.iterator(api.listReleases, {...repo, per_page: 100})) {
-    for (const release of data) {
-      const build = /^(?:TauriChinese|LegionChinese) 自动构建 #(\d+)$/.exec(release.name ?? '');
-      if (!build || release.draft || release.tag_name !== `build-${build[1]}`) continue;
-      const version = /^- 插件版本：`(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)(?:\+[0-9A-Za-z.-]+)?`\s*$/m.exec(release.body ?? '');
-      if (version) changes.push({id: release.id, name: `v${version[1]}`});
-    }
-  }
-  if (!changes.length) return;
-  const latest = await optionalRelease(() => api.getLatestRelease(repo));
-  for (const change of changes) {
-    await api.updateRelease({
-      ...repo, release_id: change.id, name: change.name,
-      make_latest: change.id === latest?.id ? 'true' : 'false',
-    });
-  }
+async function collect(github, method, repo) {
+  const items = [];
+  for await (const {data} of github.paginate.iterator(method, {...repo, per_page: 100})) items.push(...data);
+  return items;
 }
 
-export async function publishRelease({github, context, version, assets}) {
+function stableVersion(value) {
+  const match = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.exec(value);
+  if (!match) throw new Error(`Expected a stable major.minor.patch version, got ${value}`);
+  const parts = match.slice(1).map(Number);
+  if (!parts.every(Number.isSafeInteger)) throw new Error(`Version is too large: ${value}`);
+  return parts;
+}
+
+function compareVersions(left, right) {
+  const a = stableVersion(left), b = stableVersion(right);
+  return a[0] - b[0] || a[1] - b[1] || a[2] - b[2];
+}
+
+// Run inside the serialized release job, before packaging. New pushes get a
+// unique patch version; retries reuse the version already reserved for this SHA.
+export async function resolveReleaseVersion({github, context, baseVersion}) {
+  stableVersion(baseVersion);
+  const api = github.rest.repos;
+  const releases = await collect(github, api.listReleases, context.repo);
+  const tags = await collect(github, api.listTags, context.repo);
+  const versions = tags.filter(tag => /^v\d+\.\d+\.\d+$/.test(tag.name));
+  const sameCommit = releases.find(release =>
+    release.target_commitish === context.sha && /^v\d+\.\d+\.\d+$/.test(release.tag_name));
+  if (sameCommit) {
+    const tag = tags.find(item => item.name === sameCommit.tag_name);
+    if (tag && tag.commit.sha !== context.sha) throw new Error(`${tag.name} points to another commit.`);
+    return sameCommit.tag_name.slice(1);
+  }
+  const reserved = versions.filter(tag => tag.commit.sha === context.sha);
+  if (reserved.length > 1) throw new Error('Multiple version tags point to this commit; refusing to guess.');
+  if (reserved.length === 1) return reserved[0].name.slice(1);
+
+  // Draft releases may not have a visible tag yet, but still reserve a version.
+  const used = new Set([
+    ...versions.map(tag => tag.name.slice(1)),
+    ...releases.filter(release => /^v\d+\.\d+\.\d+$/.test(release.tag_name)).map(release => release.tag_name.slice(1)),
+  ]);
+  let version = baseVersion;
+  for (const usedVersion of used) {
+    if (compareVersions(usedVersion, version) >= 0) {
+      const parts = stableVersion(usedVersion);
+      parts[2]++;
+      version = parts.join('.');
+    }
+  }
+  stableVersion(version);
+  return version;
+}
+
+export function notesForVersion(changelog, version) {
+  const sections = changelog.replaceAll('\r\n', '\n').split(/^## /m);
+  const section = sections.find(text => text.split('\n', 1)[0].trim() === `v${version}`);
+  return section ? section.slice(section.indexOf('\n') + 1).trim() : '';
+}
+
+async function describeChanges({github, context, version, changelog, previous}) {
+  const curated = notesForVersion(changelog, version);
+  if (curated) return curated;
+  const api = github.rest.repos;
+  let commits;
+  if (previous) {
+    commits = [];
+    let status;
+    for (let page = 1; ; page++) {
+      const {data} = await api.compareCommitsWithBasehead({
+        ...context.repo, basehead: `${previous.target_commitish}...${context.sha}`, per_page: 100, page,
+      });
+      status ??= data.status;
+      commits.push(...data.commits);
+      if (data.commits.length < 100) break;
+    }
+    // A slow older job may finish after a newer release. Describe its own
+    // commit instead of comparing an ancestor against a newer Latest commit.
+    if (!commits.length && status === 'behind') {
+      commits = [(await api.getCommit({...context.repo, ref: context.sha})).data];
+    }
+  } else {
+    commits = [(await api.getCommit({...context.repo, ref: context.sha})).data];
+  }
+  if (!commits.length) throw new Error('No release notes or new commits found; refusing to publish empty notes.');
+  const base = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}`;
+  // Fallback uses actual commits, not a repeated generic "automatic build" body.
+  return commits.map(commit => {
+    const subject = commit.commit.message.split(/\r?\n/, 1)[0].replace(/[\\`*_{}\[\]<>!#|]/g, '\\$&');
+    return `- ${subject} ([${commit.sha.slice(0, 7)}](${base}/commit/${commit.sha}))`;
+  }).join('\n');
+}
+
+function buildNumber(release) {
+  return Number(/^build-(\d+)$/.exec(release?.tag_name ?? '')?.[1]
+    ?? /^- 构建记录：\[#(\d+)\]/m.exec(release?.body ?? '')?.[1] ?? 0);
+}
+
+export async function publishRelease({github, context, version, assets, changelog = ''}) {
+  stableVersion(version);
   const repo = context.repo;
   const api = github.rest.repos;
-  const tag = `build-${context.runNumber}`;
-  const title = `v${version.split('+')[0]}`;
+  const tag = `v${version}`;
   let release = await optionalRelease(() => api.getReleaseByTag({...repo, tag}));
-  // The tag endpoint only promises published releases. Recover interrupted
-  // drafts through the authenticated release listing, including older pages.
   if (!release) {
-    for await (const {data} of github.paginate.iterator(api.listReleases, {...repo, per_page: 100})) {
-      release = data.find(item => item.tag_name === tag);
-      if (release) break;
-    }
+    const releases = await collect(github, api.listReleases, repo);
+    release = releases.find(item => item.tag_name === tag);
   }
   if (release && release.target_commitish !== context.sha) {
     throw new Error(`${tag} already belongs to another commit; refusing to replace it.`);
   }
-  await normalizeLegacyTitles(github, repo);
+  const tags = await collect(github, api.listTags, repo);
+  const existingTag = tags.find(item => item.name === tag);
+  if (existingTag && existingTag.commit.sha !== context.sha) {
+    throw new Error(`${tag} points to another commit; refusing to publish mismatched assets.`);
+  }
   // Rerunning a successful build must not overwrite an already published package.
   if (release && !release.draft) return release;
 
   if (!release) {
+    const previous = await optionalRelease(() => api.getLatestRelease(repo));
+    const notes = await describeChanges({github, context, version, changelog, previous});
     const base = `${context.serverUrl}/${repo.owner}/${repo.repo}`;
     release = (await api.createRelease({
       ...repo,
       tag_name: tag,
       target_commitish: context.sha,
-      name: title,
+      name: tag,
       draft: true,
       prerelease: false,
       body: [
-        '由 main 分支自动构建，检查通过后发布。',
-        '',
+        '## 本次更新', '', notes, '',
+        '## 安装与更新', '',
+        '下载 **LegionChinese-latest.zip**，将其中的 LegionChinese 文件夹解压到游戏的 Interface/AddOns/。',
+        '更新时覆盖原文件；同名 .sha256 文件可用于校验下载完整性。', '',
+        '## 版本信息', '',
         `- 插件版本：\`${version}\``,
         `- 源码：[${context.sha.slice(0, 7)}](${base}/commit/${context.sha})`,
-        `- 构建记录：[#${context.runNumber}](${base}/actions/runs/${context.runId})`,
-        '',
-        '下载 **LegionChinese-latest.zip**，将其中的 LegionChinese 文件夹解压到游戏的 Interface/AddOns/。',
-        '同名 .sha256 文件可用于校验下载完整性。',
-        '',
+        `- 构建记录：[#${context.runNumber}](${base}/actions/runs/${context.runId})`, '',
         '**适用于保留原版接口的 7.3.5 客户端；不同服务器的显示效果和实际命中率仍需实机验证。**',
       ].join('\n'),
     })).data;
@@ -90,15 +168,13 @@ export async function publishRelease({github, context, version, assets}) {
     });
   }
 
-  // The workflow serializes release jobs. An older queued build must not take
-  // Latest away from a newer successful build, even if checks finish out of order.
+  // Compare the recorded workflow number, since tags now contain versions.
   const latest = await optionalRelease(() => api.getLatestRelease(repo));
-  const latestBuild = /^build-(\d+)$/.exec(latest?.tag_name ?? '');
   return (await api.updateRelease({
     ...repo,
     release_id: release.id,
-    name: title,
+    name: tag,
     draft: false,
-    make_latest: latestBuild && Number(latestBuild[1]) > context.runNumber ? 'false' : 'true',
+    make_latest: buildNumber(latest) > context.runNumber ? 'false' : 'true',
   })).data;
 }
