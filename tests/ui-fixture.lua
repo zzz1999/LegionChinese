@@ -1,8 +1,13 @@
 hooks={};frames={};SlashCmdList={};questID=1;bookText="Page one";bookCreator=nil
-function hooksecurefunc(name,callback)
-    hooks[name]=callback
-    local original=_G[name]
-    _G[name]=function(...) original(...);callback(...) end
+function hooksecurefunc(object,name,callback)
+    if type(object)=="string" then callback=name;name=object;object=_G end
+    if object==_G then hooks[name]=callback end
+    local original=object[name]
+    local function pack(...) return {n=select("#",...),...} end
+    object[name]=function(...)
+        local result=pack(original(...));callback(...)
+        return (unpack or table.unpack)(result,1,result.n)
+    end
 end
 function ScriptFrame()
     local frame={scripts={},scriptHooks={}}

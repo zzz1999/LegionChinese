@@ -6,7 +6,7 @@ local races = { Human="人类", Orc="兽人", Dwarf="矮人", NightElf="暗夜�
 -- Server text can contain English substitutions even on a Chinese client.
 local englishClasses = { WARRIOR="Warrior", PALADIN="Paladin", HUNTER="Hunter", ROGUE="Rogue", PRIEST="Priest", DEATHKNIGHT="Death Knight", SHAMAN="Shaman", MAGE="Mage", WARLOCK="Warlock", MONK="Monk", DRUID="Druid", DEMONHUNTER="Demon Hunter" }
 local englishRaces = { Human="Human", Orc="Orc", Dwarf="Dwarf", NightElf="Night Elf", Scourge="Undead", Tauren="Tauren", Gnome="Gnome", Troll="Troll", Goblin="Goblin", BloodElf="Blood Elf", Draenei="Draenei", Worgen="Worgen", Pandaren="Pandaren", Nightborne="Nightborne", HighmountainTauren="Highmountain Tauren", VoidElf="Void Elf", LightforgedDraenei="Lightforged Draenei" }
-A.font = "Interface\\AddOns\\TauriChinese\\Media\\LXGWWenKai-Regular.ttf"
+A.fallbackFont = "Interface\\AddOns\\TauriChinese\\Media\\LXGWWenKai-Regular.ttf"
 
 local function strip(text)
     text = text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
@@ -255,6 +255,7 @@ function A.Translate(category, original, questID, field)
         local record=D.Quests[tonumber(questID)]
         replacement=record and record[field]
         if not replacement and field=="Title" then replacement=A.Find("Titles",original) end
+        if not replacement and field=="CompletionLog" then replacement=A.Find("Completions",original) end
         if not replacement and (field=="Progress" or field=="Completion") then replacement=A.Find("Gossip",original) end
     else
         replacement=A.Find(category,original)
@@ -265,18 +266,42 @@ function A.Translate(category, original, questID, field)
     return replacement..(suffix or ""),true
 end
 
-function A.SetFont(widget, html)
+function A.SetFont(widget, html, requestedSize)
+    if not widget then return end
     if widget.GetFontString then widget=widget:GetFontString() end
     if not widget or not widget.SetFont then return end
-    if html then
-        for _,tag in ipairs({"P","H1","H2","H3"}) do
-            local _,size,flags=widget:GetFont(tag)
-            widget:SetFont(tag,A.font,size or 14,flags or "")
+    local locale=GetLocale and GetLocale()
+    local native=locale=="zhCN" or locale=="zhTW"
+    local function apply(tag)
+        local font,size,flags
+        if widget.GetFont then
+            if html then font,size,flags=widget:GetFont(tag) else font,size,flags=widget:GetFont() end
         end
-    else
-        local _,size,flags=widget:GetFont()
-        widget:SetFont(A.font,size or 14,flags or "")
+        -- A Chinese client already supplies the right face for each widget and
+        -- HTML heading. Do not replace its font family or styling to mark translations.
+        if native and font and not requestedSize then return end
+        local target
+        if native then
+            target=font or STANDARD_TEXT_FONT or (locale=="zhTW" and "Fonts\\blei00d.TTF" or "Fonts\\ARKai_T.ttf")
+        else
+            target="Fonts\\ARKai_T.ttf"
+            local lower=font and font:lower() or ""
+            if lower:find("arkai",1,true) or lower:find("arhei",1,true) or lower:find("bkai",1,true)
+                or lower:find("bhei",1,true) or lower:find("blei",1,true) or font==A.fallbackFont then target=font end
+        end
+        local height=requestedSize or size or 14
+        if target==font and height==size then return end
+        local success
+        if html then success=widget:SetFont(tag,target,height,flags or "")
+        else success=widget:SetFont(target,height,flags or "") end
+        -- Some non-Chinese installations do not contain Blizzard's Chinese
+        -- font files. Keep the licensed fallback solely for those installations.
+        if not success and not native and target~=A.fallbackFont then
+            if html then widget:SetFont(tag,A.fallbackFont,height,flags or "")
+            else widget:SetFont(A.fallbackFont,height,flags or "") end
+        end
     end
+    if html then for _,tag in ipairs({"P","H1","H2","H3"}) do apply(tag) end else apply() end
 end
 
 function A.Apply(widget, category, questID, field, sourceText)

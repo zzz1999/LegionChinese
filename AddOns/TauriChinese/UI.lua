@@ -2,11 +2,21 @@
 local A = TauriChinese
 local installed = {}
 local installedScripts = {}
+local installedMethods = {}
 local function hook(name, callback)
     if not installed[name] and type(_G[name])=="function" then
         hooksecurefunc(name,function(...) if A.Enabled() then callback(...) end end)
         installed[name]=true
     end
+end
+
+local function hookMethod(object, name, callback)
+    if not object or type(object[name])~="function" then return end
+    local methods=installedMethods[object]
+    if not methods then methods={};installedMethods[object]=methods end
+    if methods[name] then return end
+    hooksecurefunc(object,name,function(...) if A.Enabled() then callback(...) end end)
+    methods[name]=true
 end
 
 local function hookScript(widget, event, callback)
@@ -114,6 +124,42 @@ function A.UpdateQuestList()
     if changed and QuestScrollFrame and QuestScrollFrame.UpdateScrollChildRect then QuestScrollFrame:UpdateScrollChildRect() end
 end
 
+-- Run inside the quest module's layout, before the next line/block is anchored.
+-- Updating text after ObjectiveTracker_Update would leave stale heights and can
+-- overlap later objectives, timers, item buttons and the next quest.
+function A.UpdateTrackerHeader(module, block, text, _, _, questID)
+    if not block or not block.HeaderText then return end
+    local widget=block.HeaderText
+    if A.Apply(widget,"Quests",questID or block.id,"Title",text) then
+        block.height=module:SetStringText(widget,widget:GetText(),nil,OBJECTIVE_TRACKER_COLOR["Header"])
+    end
+end
+
+function A.UpdateTrackerObjective(module, block, key, text, _, useFullHeight, _, colorStyle)
+    local line=block and block.lines and block.lines[key]
+    if not line or not line.Text or line.Text:GetText()~=text then return end
+    local oldHeight=line:GetHeight()
+    local changed
+    if type(key)=="number" then
+        changed=A.Apply(line.Text,"Objectives")
+    elseif key=="QuestComplete" then
+        local index=GetQuestLogIndexByID and GetQuestLogIndexByID(block.id)
+        local completion=index and index>0 and GetQuestLogCompletionText and GetQuestLogCompletionText(index)
+        if completion and completion==text then changed=A.Apply(line.Text,"Quests",block.id,"CompletionLog",completion) end
+    end
+    if changed then
+        local height=module:SetStringText(line.Text,line.Text:GetText(),useFullHeight,colorStyle,block.isHighlighted)
+        line:SetHeight(height)
+        block.height=block.height+height-oldHeight
+    end
+end
+
+function A.RefreshTracker()
+    if QUEST_TRACKER_MODULE and ObjectiveTrackerFrame and ObjectiveTrackerFrame.initialized and ObjectiveTracker_Update then
+        ObjectiveTracker_Update(OBJECTIVE_TRACKER_UPDATE_MODULE_QUEST)
+    end
+end
+
 function A.UpdateBook(_,event)
     if event~="ITEM_TEXT_READY" or not ItemTextGetText or not ItemTextPageText then return end
     local original=ItemTextGetText()
@@ -143,6 +189,8 @@ local function install()
     hook("GossipFrameUpdate",A.UpdateGossip)
     hookScript(ItemTextFrame,"OnEvent",A.UpdateBook)
     hook("QuestLogQuests_Update",A.UpdateQuestList)
+    hookMethod(QUEST_TRACKER_MODULE,"SetBlockHeader",A.UpdateTrackerHeader)
+    hookMethod(QUEST_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -152,6 +200,7 @@ frame:SetScript("OnEvent",function(_,event,addonName)
         A.InitializeSettings()
     end
     install()
+    if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="Blizzard_ObjectiveTracker") then A.RefreshTracker() end
     if event=="PLAYER_LOGIN" and not TauriChineseSettings.welcomeSeen then A.ShowWelcome() end
 end)
 install()
@@ -162,9 +211,11 @@ SlashCmdList.TAURICHINESE=function(command)
     command=(command or ""):lower():gsub("%s","")
     if command=="off" or command=="关" then
         TauriChineseSettings.enabled=false
+        A.RefreshTracker()
         print("TauriChinese：已关闭，重新打开窗口后生效。")
     elseif command=="on" or command=="开" then
         TauriChineseSettings.enabled=true
+        A.RefreshTracker()
         print("TauriChinese：已开启，已有中文保持不变，缺失译文保留原文。")
     elseif command=="about" or command=="关于" then
         A.ShowWelcome()

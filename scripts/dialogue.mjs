@@ -35,3 +35,15 @@ export function compatibleLegacyPage(legion,legacy) {
     &&!hasChinese(legion.Text)&&!hasChinese(legacy.Text)
     &&normalize(legion.Text)===normalize(legacy.Text));
 }
+
+// Old return instructions are eligible only for an unchanged quest. The runtime
+// also requires the full completion text to match, never just the quest ID.
+export function compatibleLegacyQuest(legion,legacy) {
+  if(!legion||!legacy||idOf(legion)!==idOf(legacy)||!legacy.QuestCompletionLog||hasChinese(legacy.QuestCompletionLog))return false;
+  if(Number(legion.VerifiedBuild)>LEGION_BUILD||Number(legacy.VerifiedBuild)>LEGION_BUILD)return false;
+  for(const field of ['LogTitle','LogDescription','QuestDescription']){
+    if(!legion[field]||!legacy[field]||hasChinese(legion[field])||hasChinese(legacy[field])
+      ||normalize(legion[field])!==normalize(legacy[field]))return false;
+  }
+  return !legion.QuestCompletionLog||normalize(legion.QuestCompletionLog)===normalize(legacy.QuestCompletionLog);
+}

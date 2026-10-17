@@ -8,7 +8,8 @@ local function region()
         if self.scripts.OnTextChanged then self.scripts.OnTextChanged(self) end
     end
     function r:GetText() return self.text end
-    function r:SetFont(font,size) self.font=font;self.fontSize=size end
+    function r:GetFont() return self.font or STANDARD_TEXT_FONT or "OriginalFont",self.fontSize or 14,self.flags or "" end
+    function r:SetFont(font,size,flags) self.font=font;self.fontSize=size;self.flags=flags;return true end
     function r:SetTextColor(...) self.color={...} end
     function r:SetJustifyH() end
     function r:SetJustifyV() end
@@ -18,7 +19,7 @@ local function region()
     function r:SetPoint(...) self.point={...} end
     function r:GetStringHeight() return 32 end
     function r:GetFontString() self.fontString=self.fontString or region();return self.fontString end
-    function r:CreateFontString() return region() end
+    function r:CreateFontString(_,_,template) local child=region();child.template=template;return child end
     function r:Show() self.shown=true;self.shows=(self.shows or 0)+1 end
     function r:Hide() self.shown=false;if self.scripts.OnHide then self.scripts.OnHide(self) end end
     function r:IsShown() return self.shown end

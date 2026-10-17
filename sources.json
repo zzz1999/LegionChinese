@@ -487,6 +487,20 @@
       "provenance": "community-unverified",
       "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/page_text_locale.sql",
       "sha256": "216df75444babd0e0278c96d034cab6ddc3a33c51c0bc95485c96b63b3094534"
+    },
+    {
+      "file": "ac-quest_template.sql",
+      "kind": "legacy-quests",
+      "provenance": "community-unverified",
+      "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/4d9d1d4b5723e819c5c390f6ca1177283dbfb8e3/data/sql/base/db_world/quest_template.sql",
+      "sha256": "5dc7e6c92ea6875a5fc68cf5d3e33150e86cda5819a11af0c59217b24c63a37f"
+    },
+    {
+      "file": "ac-quest_template_locale.sql",
+      "kind": "legacy-quest-locales",
+      "provenance": "community-unverified",
+      "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/4d9d1d4b5723e819c5c390f6ca1177283dbfb8e3/data/sql/base/db_world/quest_template_locale.sql",
+      "sha256": "d4c7705fecc34f329416364daf23384060069a48af43aa2362bbc235d634d577"
     }
   ],
   "archive": {
