@@ -32,7 +32,7 @@ export async function publishRelease({github, context, version, assets}) {
       ...repo,
       tag_name: tag,
       target_commitish: context.sha,
-      name: `TauriChinese 自动构建 #${context.runNumber}`,
+      name: `LegionChinese 自动构建 #${context.runNumber}`,
       draft: true,
       prerelease: false,
       body: [
@@ -42,10 +42,10 @@ export async function publishRelease({github, context, version, assets}) {
         `- 源码：[${context.sha.slice(0, 7)}](${base}/commit/${context.sha})`,
         `- 构建记录：[#${context.runNumber}](${base}/actions/runs/${context.runId})`,
         '',
-        '下载 **TauriChinese-latest.zip**，将其中的 TauriChinese 文件夹解压到游戏的 Interface/AddOns/。',
+        '下载 **LegionChinese-latest.zip**，将其中的 LegionChinese 文件夹解压到游戏的 Interface/AddOns/。',
         '同名 .sha256 文件可用于校验下载完整性。',
         '',
-        '**自动构建仍需实机验证：尚未在真实 Tauri 7.3.5 客户端确认显示和实际命中率。**',
+        '**适用于保留原版接口的 7.3.5 客户端；不同服务器的显示效果和实际命中率仍需实机验证。**',
       ].join('\n'),
     })).data;
   }

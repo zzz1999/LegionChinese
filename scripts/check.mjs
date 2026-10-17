@@ -7,8 +7,8 @@ import {hasChinese,supportsTokens} from './text.mjs';
 import {fontCodepoints} from './font.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const addon=path.join(root,'AddOns','TauriChinese');
-const toc=fs.readFileSync(path.join(addon,'TauriChinese.toc'),'utf8');
+const addon=path.join(root,'AddOns','LegionChinese');
+const toc=fs.readFileSync(path.join(addon,'LegionChinese.toc'),'utf8');
 const files=toc.split(/\r?\n/).filter(line=>line&&!line.startsWith('#')).map(line=>line.replaceAll('\\','/'));
 let strings=0;
 const han=new Set();

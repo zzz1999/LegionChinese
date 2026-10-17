@@ -38,7 +38,7 @@ foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables)) {
         Get-VerifiedFile $taskSource.url $taskTarget $taskSource.sha256
     }
 }
-$taskMedia = Join-Path $taskRoot 'AddOns/TauriChinese/Media'
+$taskMedia = Join-Path $taskRoot 'AddOns/LegionChinese/Media'
 New-Item -ItemType Directory -Path $taskMedia -Force | Out-Null
 if ([IO.Path]::GetFileName($taskManifest.font.file) -ne $taskManifest.font.file) { throw '无效的字体文件名' }
 Get-VerifiedFile $taskManifest.font.url (Join-Path $taskMedia $taskManifest.font.file) $taskManifest.font.sha256

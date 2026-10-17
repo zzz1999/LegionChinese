@@ -62,12 +62,12 @@ test('generated locale choice round-trips through Lua and preserves original Chi
     const status=lauxlib.luaL_dostring(L,to_luastring(code));
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
-  for(const file of ['Bootstrap.lua','Core.lua'])execute(fs.readFileSync(new URL('../AddOns/TauriChinese/'+file,import.meta.url),'utf8'));
+  for(const file of ['Bootstrap.lua','Core.lua'])execute(fs.readFileSync(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
   let id=0;
   for(const [key,text] of index.entries){
-    id++;execute(`TauriChineseDB.Strings[${id}]=${luaString(text)}; TauriChineseDB.Gossip[${luaString(key)}]=${id}`);
+    id++;execute(`LegionChineseDB.Strings[${id}]=${luaString(text)}; LegionChineseDB.Gossip[${luaString(key)}]=${id}`);
   }
-  execute(`local A=TauriChinese
+  execute(`local A=LegionChinese
     local text,changed=A.Translate("Gossip","Simplified exists"); assert(changed and text=="简体译文")
     text,changed=A.Translate("Gossip","Only Traditional"); assert(changed and text=="只有繁體譯文")
     for _,original in ipairs({"Missing translation","原有简体中文","原有繁體中文"}) do

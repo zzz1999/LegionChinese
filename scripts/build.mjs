@@ -10,7 +10,7 @@ import {buildClientNames} from './client-names.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
-const output=path.join(root,'AddOns','TauriChinese','Data');
+const output=path.join(root,'AddOns','LegionChinese','Data');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'sources.json'),'utf8'));
 const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;
 const tables=new Map(),schemas=new Map(),questTitles=new Map(),broadcastIDs=new Set();
@@ -222,7 +222,7 @@ fs.mkdirSync(output,{recursive:true});
 const generated=[];
 function writeChunks(name,rows,make){
   let part=0,lines=[],size=0;
-  const flush=()=>{if(!lines.length)return;const file=`${name}_${String(++part).padStart(2,'0')}.lua`;const content='-- 自动生成：仅含中文译文与匹配指纹。来源见 SOURCES.md。\nlocal D = TauriChineseDB\n'+lines.join('\n')+'\n';fs.writeFileSync(path.join(output,file),content,'utf8');generated.push('Data\\'+file);lines=[];size=0;};
+  const flush=()=>{if(!lines.length)return;const file=`${name}_${String(++part).padStart(2,'0')}.lua`;const content='-- 自动生成：仅含中文译文与匹配指纹。来源见 SOURCES.md。\nlocal D = LegionChineseDB\n'+lines.join('\n')+'\n';fs.writeFileSync(path.join(output,file),content,'utf8');generated.push('Data\\'+file);lines=[];size=0;};
   for(const row of rows){const line=make(row);if(size+Buffer.byteLength(line)>900000)flush();lines.push(line);size+=Buffer.byteLength(line)+1;}flush();
 }
 writeChunks('Quests',[...questData].sort((a,b)=>+a[0]-b[0]),([id,r])=>'D.Quests['+id+']={'+Object.entries(r).map(([k,v])=>k+'='+luaString(v)).join(',')+'}');
@@ -236,8 +236,8 @@ for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:title
 const clientNames=buildClientNames({root,input,manifest,version});
 generated.push(...clientNames.generated);
 counts.clientNames=clientNames.audit.counts;
-const toc=['## Interface: 70300','## Title: TauriChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: TauriChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','Welcome.lua','UI.lua',''];
-fs.writeFileSync(path.join(output,'..','TauriChinese.toc'),toc.join('\n'));
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','Welcome.lua','UI.lua',''];
+fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.
 for(const file of fs.readdirSync(output))if(/^(Quests|Strings|Gossip|Books|Titles|Objectives|Completions)_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));

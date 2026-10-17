@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {fingerprint,normalize,luaString} from '../scripts/text.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
 const files=fs.readdirSync(data);
 const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
@@ -25,7 +25,7 @@ test('reported death knight book and quest progress translate through XML-bound 
   };
   try {
     execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
-    execute(`local D=TauriChineseDB\n${bookRow}\n${stringRow}\n${questRow}`);
+    execute(`local D=LegionChineseDB\n${bookRow}\n${stringRow}\n${questRow}`);
     execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
     execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
@@ -37,7 +37,7 @@ test('reported death knight book and quest progress translate through XML-bound 
       QuestFrameProgressPanel:Fire("OnShow")
       assert(QuestProgressTitleText.text==progressTitle,"Chinese title stays unchanged")
       assert(QuestProgressText.text=="你不想一直徒步行走，对吧?","reported quest progress")
-      TauriChineseSettings={enabled=false}
+      LegionChineseSettings={enabled=false}
       QuestFrameProgressPanel:Fire("OnShow");ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
       assert(QuestProgressText.text==progressText and ItemTextPageText.text==bookText)
     `);

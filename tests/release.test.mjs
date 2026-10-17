@@ -7,7 +7,7 @@ const context = {
   sha: 'a'.repeat(40), runNumber: 2, runId: 123,
   serverUrl: 'https://github.com',
 };
-const assets = ['TauriChinese-latest.zip', 'TauriChinese-latest.zip.sha256']
+const assets = ['LegionChinese-latest.zip', 'LegionChinese-latest.zip.sha256']
   .map(name => ({name, data: Buffer.from('fixture')}));
 
 function fixture({existing = null, latest = null, failUpload = null, readError = null} = {}) {

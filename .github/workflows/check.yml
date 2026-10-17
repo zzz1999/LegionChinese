@@ -39,7 +39,7 @@ jobs:
         run: |
           $baseVersion = (Get-Content -LiteralPath package.json -Raw | ConvertFrom-Json).version
           $version = '{0}+build.{1}.{2}' -f $baseVersion, $env:GITHUB_RUN_NUMBER, $env:GITHUB_SHA.Substring(0, 7)
-          ./scripts/package.ps1 -Version $version -ArchiveName TauriChinese-latest.zip
+          ./scripts/package.ps1 -Version $version -ArchiveName LegionChinese-latest.zip
           "version=$version" >> $env:GITHUB_OUTPUT
       - name: Publish release
         uses: actions/github-script@v9
@@ -50,7 +50,7 @@ jobs:
             const { readFile } = require('node:fs/promises');
             const { pathToFileURL } = require('node:url');
             const { publishRelease } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release.mjs`).href);
-            const assets = await Promise.all(['TauriChinese-latest.zip', 'TauriChinese-latest.zip.sha256'].map(async name => ({
+            const assets = await Promise.all(['LegionChinese-latest.zip', 'LegionChinese-latest.zip.sha256'].map(async name => ({
               name, data: await readFile(`dist/${name}`)
             })));
             const release = await publishRelease({ github, context, version: process.env.PACKAGE_VERSION, assets });

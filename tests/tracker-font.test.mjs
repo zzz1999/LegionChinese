@@ -5,7 +5,7 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {fingerprint,normalize} from '../scripts/text.mjs';
 import {compatibleLegacyQuest} from '../scripts/dialogue.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
 const files=fs.readdirSync(data);
 const lines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
@@ -25,13 +25,13 @@ function run(code,{tracker=false,welcome=false,rows=''}={}){
   const read=url=>fs.readFileSync(url,'utf8');
   try{
     execute(read(new URL('Bootstrap.lua',addon)));
-    execute('local D=TauriChineseDB\n'+rows);
+    execute('local D=LegionChineseDB\n'+rows);
     execute(read(new URL('Core.lua',addon)));
     execute(read(new URL('./ui-fixture.lua',import.meta.url)));
     if(tracker)execute(read(new URL('./tracker-fixture.lua',import.meta.url)));
     if(welcome){execute(read(new URL('./welcome-fixture.lua',import.meta.url)));execute(read(new URL('Welcome.lua',addon)));}
     execute(read(new URL('UI.lua',addon)));
-    execute('local A,D=TauriChinese,TauriChineseDB\n'+code);
+    execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -103,9 +103,9 @@ test('tracker handles auto-completion, unknown quests, toggles and late-loaded m
     module:SetBlockHeader(block,"阿彻鲁斯战马",1,true,12680)
     module:AddObjective(block,"QuestComplete",trackerCompletion,nil,true)
   end
-  SlashCmdList.TAURICHINESE("off")
+  SlashCmdList.LEGIONCHINESE("off")
   assert(block.lines.QuestComplete.Text.text==trackerCompletion and trackerRefreshes==1)
-  SlashCmdList.TAURICHINESE("on")
+  SlashCmdList.LEGIONCHINESE("on")
   assert(A.IsChinese(block.lines.QuestComplete.Text.text) and trackerRefreshes==2)
   local installed=module.AddObjective
   frames[1]:Fire("OnEvent","ADDON_LOADED","OtherAddon")
@@ -162,7 +162,7 @@ test('welcome window uses game font templates and the client face for all its co
   function GetLocale() return "zhCN" end
   STANDARD_TEXT_FONT="Fonts\\\\ARKai_T.ttf"
   A.ShowWelcome()
-  local window=TauriChineseWelcomeFrame
+  local window=LegionChineseWelcomeFrame
   for _,widget in ipairs(window.content) do
     assert(widget.template=="GameFontNormal" and widget:GetFont()==STANDARD_TEXT_FONT)
   end

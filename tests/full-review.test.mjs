@@ -5,7 +5,7 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {normalize,fingerprint,luaString,supportsTokens,TextIndex} from '../scripts/text.mjs';
 import {chooseChinese,chooseChineseFields} from '../scripts/fallback.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url),data=new URL('Data/',addon);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url),data=new URL('Data/',addon);
 const files=fs.readdirSync(data);
 function shippedRow(category,key){
   const prefix=`D.${category}[${typeof key==='number'?key:luaString(key)}]=`;
@@ -31,11 +31,11 @@ function runLua(code,rows=''){
       function UnitName() return playerName end
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end`);
-    execute('local D=TauriChineseDB\n'+rows);
+    execute('local D=LegionChineseDB\n'+rows);
     execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
     execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
-    execute('local A,D=TauriChinese,TauriChineseDB\n'+code);
+    execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -167,7 +167,7 @@ test('quest log translates objective and completion rows, preserves metadata and
     assert(QuestScrollFrame.updates==1 and selected==0)
     hooks.QuestLogQuests_Update()
     assert(first.height==112 and second.height==84 and QuestScrollFrame.updates==1,"idempotent refresh")
-    TauriChineseSettings={enabled=false}
+    LegionChineseSettings={enabled=false}
     QLOF1.Text.text="Bring Mina Mudclaw home to her father: 0/1"
     hooks.QuestLogQuests_Update();assert(QLOF1.Text.text=="Bring Mina Mudclaw home to her father: 0/1")
   `,[shippedRow('Quests',12680),shippedRow('Quests',47202),shippedText('Objectives',objective)].join('\n'));

@@ -7,7 +7,7 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {normalize,fingerprint,TextIndex,luaString} from '../scripts/text.mjs';
 import {parseValues,readSQL} from '../scripts/sql.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 function runLua(code,ui=false){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
@@ -50,11 +50,11 @@ test('ambiguous dialogue and fingerprint collisions never choose an arbitrary tr
 test('Lua 5.1 normalization and UTF-8 fingerprints match the build tool',()=>{
   const vectors=['Hello, $N!$BWelcome, $c.','|cffffffffHello|r  world','<HTML><BODY><P align="center">A &amp; B</P></BODY></HTML>',
     '|Hitem:1|h[Book]|h','The mage\'s note\r\nPage 2','<The stranger nods.>','Bonjour, élève!','Привет, друг!','안녕하세요!','書頁𠀀'];
-  runLua(vectors.map(value=>`assert(TauriChinese.Normalize(${luaString(value)})==${luaString(normalize(value))}); assert(TauriChinese.Fingerprint(TauriChinese.Normalize(${luaString(value)}))==${luaString(fingerprint(normalize(value)))})`).join('\n'));
+  runLua(vectors.map(value=>`assert(LegionChinese.Normalize(${luaString(value)})==${luaString(normalize(value))}); assert(LegionChinese.Fingerprint(LegionChinese.Normalize(${luaString(value)}))==${luaString(fingerprint(normalize(value)))})`).join('\n'));
 });
 
 test('Chinese text stays byte-identical in every category; Chinese player names alone do not suppress translation',()=>{
-  runLua(`local A=TauriChinese
+  runLua(`local A=LegionChinese
     for _,kind in ipairs({"Quests","Gossip","Books","Titles","Objectives"}) do
       local s="|cffffffff你好，Alice。|r";local value,changed=A.Translate(kind,s,1,"Title");assert(value==s and not changed)
     end
@@ -66,8 +66,8 @@ test('Chinese text stays byte-identical in every category; Chinese player names 
 });
 
 test('quest fields have independent fallback, numeric IDs work, and missing text stays intact',()=>{
-  runLua(`local A=TauriChinese
-    TauriChineseDB.Quests[42]={Title="任务标题",Description="你好，$n。你是一名$c。"}
+  runLua(`local A=LegionChinese
+    LegionChineseDB.Quests[42]={Title="任务标题",Description="你好，$n。你是一名$c。"}
     local t,c=A.Translate("Quests","English title","42","Title");assert(t=="任务标题" and c)
     t,c=A.Translate("Quests","Original",42,"Description");assert(t=="你好，Alice。你是一名法师。" and c)
     t,c=A.Translate("Quests","Untranslated reward",42,"Completion");assert(t=="Untranslated reward" and not c)
@@ -78,7 +78,7 @@ test('quest fields have independent fallback, numeric IDs work, and missing text
 });
 
 test('NPC substitutions and objective counters are preserved',()=>{
-  runLua(`local A,D=TauriChinese,TauriChineseDB
+  runLua(`local A,D=LegionChinese,LegionChineseDB
     D.Strings[1]="欢迎，$n。";D.Gossip[A.Fingerprint(A.Normalize("Welcome, $N!"))]=1
     local t,c=A.Translate("Gossip","Welcome, Alice!");assert(t=="欢迎，Alice。" and c)
     playerName="小明";t,c=A.Translate("Gossip","Welcome, 小明!");assert(t=="欢迎，小明。" and c)
@@ -89,7 +89,7 @@ test('NPC substitutions and objective counters are preserved',()=>{
 
 test('book signatures keep their underscores while matching player-name and gender tokens',()=>{
   const key=fingerprint(normalize('The pilot accepts his risk. Signed, X:___$n'));
-  runLua(`local A,D=TauriChinese,TauriChineseDB
+  runLua(`local A,D=LegionChinese,LegionChineseDB
     D.Strings[1]="试飞员承担$g他:她;的风险。签名：___$n"
     D.Books[${luaString(key)}]=1
     local text,changed=A.Translate("Books","The pilot accepts his risk. Signed, X:___Alice")

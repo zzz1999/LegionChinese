@@ -31,13 +31,13 @@
 - 不调用机器翻译，不把繁体中文转换后冒充简体官中。缺少可信来源或匹配不确定时保留原文。
 - 不分发无法解析的数字占位符字段（如任务数量、物品或世界状态变量）；简体字段不可用时仍尝试繁体，再保留原文。运行时也拦截残留变量，不用数据库中的旧数量猜测服务器当前要求。
 
-[docs/book-provenance.json](docs/book-provenance.json) 按页面 ID 和语言记录来源、VerifiedBuild、证据类别和最终英文匹配结果；[docs/data-audit.json](docs/data-audit.json) 记录简繁覆盖统计、被版本过滤的数量和全部源文件哈希。安装包中的本文件保留署名，完整审计记录可在 [GitHub 仓库](https://github.com/zzz1999/TauriChinese/tree/main/docs) 查阅。
+[docs/book-provenance.json](docs/book-provenance.json) 按页面 ID 和语言记录来源、VerifiedBuild、证据类别和最终英文匹配结果；[docs/data-audit.json](docs/data-audit.json) 记录简繁覆盖统计、被版本过滤的数量和全部源文件哈希。安装包中的本文件保留署名，完整审计记录可在 [GitHub 仓库](https://github.com/zzz1999/LegionChinese/tree/main/docs) 查阅。
 
 ## 法术与宠物默认名称
 
 1.1.8 起使用 Wago.Tools 保存的 **7.3.5.26972** 客户端 DB2 表，分别获取 enUS、zhCN 和 zhTW 的 CSV 导出。来源是该版本客户端中的名称字段，优先采用其简体译名；这是社区维护的客户端资料存档，不是暴雪发布或背书的插件数据库。
 
-- [Spell](https://wago.tools/db2/Spell?build=7.3.5.26972)：只导入 `Name_lang`，不导入法术描述、光环说明或数值。最终收录 160,721 个法术 ID，其中简体 141,175 个、繁体补充 19,546 个。包含 NPC 技能和历史记录，不能当作玩家技能数量或 Tauri 实测覆盖率。
+- [Spell](https://wago.tools/db2/Spell?build=7.3.5.26972)：只导入 `Name_lang`，不导入法术描述、光环说明或数值。最终收录 160,721 个法术 ID，其中简体 141,175 个、繁体补充 19,546 个。包含 NPC 技能和历史记录，不能当作玩家技能数量或任一服务器的实测覆盖率。
 - [Creature](https://wago.tools/db2/Creature?build=7.3.5.26972)：按生物 ID 配对客户端名称，保存中文名称和原名指纹；仅在运行时确认是自己的宠物或召唤物，且当前名字与该记录的默认原名一致时使用。它不等同于完整的服务器生物库。
 - [CreatureFamily](https://wago.tools/db2/CreatureFamily?build=7.3.5.26972)：用于核对狼、食尸鬼等默认种类名。猎人仅处理当前仍可改名且名字与默认种类匹配的宠物，其他名字保留。
 
@@ -50,7 +50,7 @@
 - 1.1.6 起中文客户端沿用每个原版控件自身的字体、字号和描边，包括书籍正文及各级标题；介绍窗口使用游戏字体。其他语言客户端先尝试游戏自带 `Fonts\ARKai_T.ttf`，加载失败才使用以下后备字体。只引用客户端中的游戏字体，不将其复制或随插件分发。
 - [霞鹜文楷](https://github.com/lxgw/LxgwWenKai)，作者 LXGW，OFL-1.1。1.1.5 起使用完整版，补足 Lite 字库缺少的「抷」字。
 - 固定版本：`00279e1e74e582eb42dc8891d05cf6becb783a9e` 的 `LXGWWenKai-Regular.ttf`。构建检查逐字核验现有 Lua 文本中的汉字覆盖。
-- 字体未修改；完整许可证随字体保存在 `AddOns/TauriChinese/Media/OFL.txt`。
+- 字体未修改；完整许可证随字体保存在 `AddOns/LegionChinese/Media/OFL.txt`。
 
 ## 界面接口依据
 
@@ -61,3 +61,7 @@
 读条对照 `FrameXML/CastingBarFrame.lua`、XML 及 `PetFrame.lua`。`UnitFrame.lua` 的施法消耗预测明确读取 `UnitCastingInfo` 的第 10 个返回值作为法术 ID；若客户端未提供，则核对起始事件中的第 5 个参数，不能把第 4 个参数的施法执行编号当作法术 ID。宠物名称对照 `UnitFrame.lua`、`CompactUnitFrame.lua`、`UnitPopup.lua` 和 `AddOns/Blizzard_NamePlates/Blizzard_NamePlates.lua`，只后置更新现有控件，跳过禁止插件访问的姓名板，不替换 `UnitName` 或更改名字、姓名板设置。
 
 所有参与构建的数据文件与字体的固定 URL、SHA-256 均列于 `sources.json`。生成产物只保留中文值与匹配指纹。
+
+## 客户端语言设置
+
+README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户端已有的语言配置项；变量含义可在 [AdvancedInterfaceOptions 保存的客户端 CVar 描述](https://github.com/Stanzilla/AdvancedInterfaceOptions/blob/03fa08ea8bca354f7009e477ea2fd202cd5a5569/cvars.dump#L4-L5) 中核对。暴雪的[文字语言设置说明](https://tw.support.blizzard.com/zh/article/11417)也区分文字与语音语言，但其当前安装器操作不能作为旧版 7.3.5 配套登录器行为的保证。语言资源需与所用客户端版本匹配，修改配置并不会提供缺失的语言文件，也不能替代服务器未下发的中文文本。

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {normalize,fingerprint,luaString,supportsTokens} from '../scripts/text.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
 const files=fs.readdirSync(data);
 function shippedRow(category,key){
@@ -34,11 +34,11 @@ function runLua(code,rows=''){
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end
       function UnitSex() return playerSex end`);
-    execute('local D=TauriChineseDB\n'+rows);
+    execute('local D=LegionChineseDB\n'+rows);
     execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
     execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
-    execute('local A,D=TauriChinese,TauriChineseDB\n'+code);
+    execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -177,7 +177,7 @@ test('greeting quest rows resize after translation and refresh scrolling without
     assert(QuestTitleButton3.height==16 and QuestTitleButton3.text=="Unknown title")
     assert(QuestGreetingScrollFrame.updates>0)
     A.UpdateGreeting();assert(QuestTitleButton1.heightWrites==1 and QuestTitleButton2.heightWrites==1)
-    TauriChineseSettings={enabled=false};QuestTitleButton1.text="A title";QuestTitleButton1.height=16
+    LegionChineseSettings={enabled=false};QuestTitleButton1.text="A title";QuestTitleButton1.height=16
     QuestFrameGreetingPanel:Fire("OnShow");assert(QuestTitleButton1.text=="A title" and QuestTitleButton1.height==16)
   `);
 });

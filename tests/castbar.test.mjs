@@ -10,11 +10,11 @@ function run(code){
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    for(const file of ['../AddOns/TauriChinese/Bootstrap.lua','../AddOns/TauriChinese/Core.lua',
-      './ui-fixture.lua','./castbar-fixture.lua','../AddOns/TauriChinese/UI.lua']){
+    for(const file of ['../AddOns/LegionChinese/Bootstrap.lua','../AddOns/LegionChinese/Core.lua',
+      './ui-fixture.lua','./castbar-fixture.lua','../AddOns/LegionChinese/UI.lua']){
       execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
     }
-    execute('local A=TauriChinese\n'+code);
+    execute('local A=LegionChinese\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -34,9 +34,9 @@ test('Legion event spell ID resolves the Chinese name without confusing the cast
   spellNames[133]="火球术";spellNames[77]="另一个法术"
   StartCast(bar,{name="Fireball",text="Fireball",id=77,spellID=133})
   assert(bar.Text:GetText()=="火球术" and #spellLookups==1 and spellLookups[1]==133)
-  SlashCmdList.TAURICHINESE("off")
+  SlashCmdList.LEGIONCHINESE("off")
   assert(bar.Text:GetText()=="Fireball" and bar.casting and bar.value==1 and bar.maxValue==5)
-  SlashCmdList.TAURICHINESE("on")
+  SlashCmdList.LEGIONCHINESE("on")
   assert(bar.Text:GetText()=="火球术","same active cast can reuse its confirmed translation")
   StartCast(bar,{name="Fireball",text="Fireball",id=78,start=2000})
   assert(bar.Text:GetText()=="Fireball","a new cast must not inherit an old event's spell ID")
@@ -75,10 +75,10 @@ test('existing Simplified/Traditional, unknown spells, disabled addon and other 
   assert(CastingBarFrame.Text:GetText()=="採礦","use the available official Traditional name")
   StartCast(TargetCastBar,{name="火球术",text="Fireball"})
   assert(TargetCastBar.Text:GetText()=="Fireball","shared native handler must not extend scope")
-  SlashCmdList.TAURICHINESE("off")
+  SlashCmdList.LEGIONCHINESE("off")
   StartCast(CastingBarFrame,{name="采矿",text="Mining"})
   assert(CastingBarFrame.Text:GetText()=="Mining")
-  SlashCmdList.TAURICHINESE("on")
+  SlashCmdList.LEGIONCHINESE("on")
   assert(CastingBarFrame.Text:GetText()=="采矿")
 `));
 
@@ -109,7 +109,7 @@ test('resuming by name is bounded, hidden or third-party-decorated text stays un
   CastingBarFrame_OnEvent(bar,"PLAYER_ENTERING_WORLD")
   assert(bar.Text:GetText()=="采矿" and #spellLookups==1)
   bar.Text:SetText("Other addon: Mining (2/5)")
-  SlashCmdList.TAURICHINESE("off");SlashCmdList.TAURICHINESE("on")
+  SlashCmdList.LEGIONCHINESE("off");SlashCmdList.LEGIONCHINESE("on")
   assert(bar.Text:GetText()=="Other addon: Mining (2/5)")
   bar.Text:SetText("Mining");bar.shown=false
   A.RefreshCastBars();assert(bar.Text:GetText()=="Mining")

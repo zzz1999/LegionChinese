@@ -1,4 +1,4 @@
-local A,D=TauriChinese,TauriChineseDB
+local A,D=LegionChinese,LegionChineseDB
 D.Quests[1]={Title="第一任务",Description="替代正文",Objectives="第一目标"}
 D.Quests[2]={Title="第二任务",Description="第二正文"}
 hooks.QuestInfo_Display()
@@ -32,7 +32,7 @@ ItemTextFrame:Fire("OnEvent","ITEM_TEXT_BEGIN");assert(ItemTextPageText.text==pr
 
 -- Reinstalling hooks after other addons load must not multiply handlers.
 frames[1]:Fire("OnEvent","ADDON_LOADED","AnotherAddon")
-frames[1]:Fire("OnEvent","ADDON_LOADED","TauriChinese")
+frames[1]:Fire("OnEvent","ADDON_LOADED","LegionChinese")
 assert(#ItemTextFrame.scriptHooks.OnEvent==1)
 assert(#QuestFrameProgressPanel.scriptHooks.OnShow==1)
 questID=1;D.Quests[1].Progress="尚未完成。"
@@ -52,7 +52,7 @@ frames[1]:Fire("OnEvent","ADDON_LOADED","LateFrames")
 bookText="Page two";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
 assert(ItemTextPageText.text=="第二页" and #ItemTextFrame.scriptHooks.OnEvent==1)
 
-TauriChineseSettings={enabled=false};bookText="Page two"
+LegionChineseSettings={enabled=false};bookText="Page two"
 ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
 progressText="Progress body";QuestFrameProgressPanel:Fire("OnShow");assert(QuestProgressText.text==progressText)
 QuestFrameGreetingPanel:Fire("OnShow");assert(GreetingText.text==greetingText)

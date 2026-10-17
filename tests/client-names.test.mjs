@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {csvRows,parseNameTable,selectNames,nameKey,CLIENT_BUILD} from '../scripts/client-names.mjs';
 
-const addon=new URL('../AddOns/TauriChinese/',import.meta.url),data=new URL('Data/',addon);
+const addon=new URL('../AddOns/LegionChinese/',import.meta.url),data=new URL('Data/',addon);
 const generated=fs.readdirSync(data).filter(f=>/^(NameStrings|Spells|SpellNames|Creatures|CreatureFamilies|CreatureFamilyNames)_/.test(f));
 const rows=generated.flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n')).filter(l=>l.startsWith('D.'));
 const byPrefix=new Map(rows.map(row=>[row.slice(0,row.indexOf('=')),row]));
@@ -27,12 +27,12 @@ function run(code,{pets=false,imported='',before=''}={}){
   const execute=source=>{const s=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(s,lua.LUA_OK,s===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   const read=url=>fs.readFileSync(url,'utf8');
   try{
-    execute(read(new URL('Bootstrap.lua',addon)));execute('local D=TauriChineseDB\n'+imported);
+    execute(read(new URL('Bootstrap.lua',addon)));execute('local D=LegionChineseDB\n'+imported);
     execute(read(new URL('Core.lua',addon)));execute(read(new URL('ClientNames.lua',addon)));
     execute(read(new URL('./ui-fixture.lua',import.meta.url)));execute(read(new URL('./castbar-fixture.lua',import.meta.url)));
     if(pets)execute(read(new URL('./pet-fixture.lua',import.meta.url)));
     execute(before);execute(read(new URL('UI.lua',addon)));
-    execute('local A,D=TauriChinese,TauriChineseDB\n'+code);
+    execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -88,8 +88,8 @@ test('English client uses real 7.3.5 spell IDs for casting, gathering and item u
     StartCast(bar,{name=case[2],text=case[2],apiSpellID=case[1],id=77})
     assert(bar.Text:GetText()==case[3],case[2])
     assert(bar.Text.appliedFont=="Fonts\\\\ARKai_T.ttf" and bar.value==1 and bar.maxValue==5)
-    SlashCmdList.TAURICHINESE("off");assert(bar.Text:GetText()==case[2])
-    SlashCmdList.TAURICHINESE("on");assert(bar.Text:GetText()==case[3])
+    SlashCmdList.LEGIONCHINESE("off");assert(bar.Text:GetText()==case[2])
+    SlashCmdList.LEGIONCHINESE("on");assert(bar.Text:GetText()==case[3])
   end
   assert(#spellLookups==0,"offline data requires no client localized response")
 `,{imported:spellRows()}));
@@ -143,9 +143,9 @@ test('own default pet names translate in frames and tooltip without changing nat
       assert(frame.name:GetText()==case[4]);assert(frame.name.fontChanges==0)
     end
     assert(GameTooltipTextLeft1:GetText()==case[4] and UnitName("pet")==case[2])
-    SlashCmdList.TAURICHINESE("off")
+    SlashCmdList.LEGIONCHINESE("off")
     assert(PetFrame.name:GetText()==case[2] and GameTooltipTextLeft1:GetText()==case[2])
-    SlashCmdList.TAURICHINESE("on");assert(PetFrame.name:GetText()==case[4])
+    SlashCmdList.LEGIONCHINESE("on");assert(PetFrame.name:GetText()==case[4])
   end
 `,{pets:true,imported:petRows()}));
 
@@ -175,8 +175,8 @@ test('only own tracked summons translate; other pets, players, ordinary NPCs and
   units.nameplate1=units.target;local plate=NewUnitFrame("nameplate1")
   CompactUnitFrame_UpdateName(plate);assert(plate.name:GetText()=="小鬼")
   clockTime=4000
-  SlashCmdList.TAURICHINESE("off");assert(plate.name:GetText()=="Imp","off restores even an expired ownership record")
-  SlashCmdList.TAURICHINESE("on");UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
+  SlashCmdList.LEGIONCHINESE("off");assert(plate.name:GetText()=="Imp","off restores even an expired ownership record")
+  SlashCmdList.LEGIONCHINESE("on");UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
   CombatEvent("SPELL_SUMMON",UnitGUID("player"),guid);CombatEvent("UNIT_DIED",nil,guid)
   UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
   units.target={guid="Player-1-000002",name="Imp",family="Imp"}

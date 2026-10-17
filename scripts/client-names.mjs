@@ -88,14 +88,14 @@ export function buildClientNames({root,input,manifest,version}){
     for(const locale of ['enUS','zhCN','zhTW'])if(!tables[table]?.[locale])throw Error(`Missing ${table}/${locale}`);
     chosen[table]=selectNames(tables[table]);
   }
-  const output=path.join(root,'AddOns/TauriChinese/Data'),generated=[],strings=[],ids=new Map();
+  const output=path.join(root,'AddOns/LegionChinese/Data'),generated=[],strings=[],ids=new Map();
   const stringID=text=>{if(!ids.has(text)){strings.push(text);ids.set(text,strings.length);}return ids.get(text);};
   const write=(name,rows)=>{
     let part=0,lines=[],size=0;
     const flush=()=>{
       if(!lines.length)return;
       const file=`${name}_${String(++part).padStart(2,'0')}.lua`;
-      fs.writeFileSync(path.join(output,file),'-- 自动生成：7.3.5.26972 客户端名称，仅含中文与匹配指纹。来源见 SOURCES.md。\nlocal D = TauriChineseDB\n'+lines.join('\n')+'\n');
+      fs.writeFileSync(path.join(output,file),'-- 自动生成：7.3.5.26972 客户端名称，仅含中文与匹配指纹。来源见 SOURCES.md。\nlocal D = LegionChineseDB\n'+lines.join('\n')+'\n');
       generated.push('Data\\'+file);lines=[];size=0;
     };
     for(const line of rows){if(size+Buffer.byteLength(line)>900000)flush();lines.push(line);size+=Buffer.byteLength(line)+1;}flush();

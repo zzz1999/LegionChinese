@@ -20,7 +20,7 @@ function TrackerText(text)
     function widget:SetFont(font,size,flags)
         self.font=font;self.size=size;self.flags=flags;self.fontChanges=self.fontChanges+1;return true
     end
-    function widget:GetStringHeight() return TauriChinese.IsChinese(self.text) and 42 or 14 end
+    function widget:GetStringHeight() return LegionChinese.IsChinese(self.text) and 42 or 14 end
     function widget:GetHeight() return self.height or self:GetStringHeight() end
     return widget
 end
