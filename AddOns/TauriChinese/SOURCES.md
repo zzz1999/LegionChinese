@@ -9,7 +9,7 @@
 ## 任务、对话与书籍
 
 - [TrinityCore TDB 735.00](https://github.com/TrinityCore/TrinityCore/releases/tag/TDB735.00)：2018-02-19 world 与 hotfixes 数据。使用任务、广播等表的 zhCN 和 zhTW 文本及匹配所需的其他语言信息。基础库大量文本的 VerifiedBuild 为 25549；数据库发行版本不等于每条记录最后采集版本。
-- [The Legion Preservation Project TDB735.25051](https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/tag/TDB735.25051)：使用 `TDB_full_735.26972_2025_05_11.7z` 中的 hotfixes 广播文本和 world 书页、NPC 对话选项。该库的 zhCN、zhTW 广播记录标记为 7.3.5.26365；**简繁中文书页的 VerifiedBuild 均为 0，不能据此证实是未经修改的官方译文**。world 库还混有后续版本记录，导入时排除标记高于 7.3.5 最终构建 26972 的条目；不从该库覆盖现有任务库。
+- [The Legion Preservation Project TDB735.25051](https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/tag/TDB735.25051)：使用 `TDB_full_735.26972_2025_05_11.7z` 中的 hotfixes 广播文本和 world 书页、NPC 对话选项、任务进行中及交任务对话。该库的 zhCN、zhTW 广播记录标记为 7.3.5.26365；**简繁中文书页及多数补充任务对话的 VerifiedBuild 为 0，不能据此证实是未经修改的官方译文**。world 库还混有后续版本记录，导入时排除标记高于 7.3.5 最终构建 26972 的条目；任务只补充 `quest_request_items_locale` 和 `quest_offer_reward_locale`，保留现有的标题、描述和目标数据。
 - [TrinityCore 中文任务补丁](https://github.com/TrinityCore/TrinityCore/blob/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_19_world.sql)：中文记录标记为 26365。
 - [MagicStorm 历史 SQL](https://github.com/welder1976/MagicStorm/tree/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql)：固定在提交 `e941af4df2f394e7d0e0753ca15c0677271698c1`。从 world 与 hotfixes 补丁导入选定的中文任务字段、广播文本、NPC 选项和 8 个书页。多数相关文件含 WowPacketParser 的 zhCN、客户端版本采集头；没有采集头的补丁单独标记为 `community-capture`。法师书页来自 7.3.5.26365；德鲁伊书页标记为更早的军团再临版本 22594。不执行其 SQL、服务器脚本或程序。
 - [TrinityCore 书页原文补丁](https://github.com/TrinityCore/TrinityCore/blob/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_09_24_00_world.sql)：通过稳定的页面 ID 配对上述军团再临书页，生成原文指纹。该补丁部分原文记录标记为后续版本 27843；只有客户端实际全文匹配才替换。原文不随 AddOns 分发。
@@ -23,6 +23,7 @@
 - 在各自语言内，广播译文必须有不高于 26972 的正数 VerifiedBuild，优先采用军团再临较新的记录；同版本优先 hotfixes 客户端数据表，其次采集补丁。同等优先级有冲突的广播 ID 不导入该语言。VerifiedBuild 是上游记录的来源证据，不是本项目逐条核实官方原文的证明。
 - 导入完整广播库中能配对的文本，不再只按旧 world 数据库中不完整的 NPC 引用筛选。构建时读取原文语言以生成指纹，发布资源只保留中文正文。
 - 在同一种中文内，书页优先保留有采集标记的军团再临译文，再用军团再临社区库；最后才用 ID 和英文均核对一致的旧世界补充。低优先级译文不会覆盖或使高优先级译文失效，繁体也不会覆盖可用的简体译文。
+- 任务进行中与交任务对话按任务 ID 导入；同一种中文的较高 VerifiedBuild 记录优先于社区库的 0 版本记录。`data-audit.json` 的 `questDialogueSources` 单独统计最终选用的有版本标记字段与社区未核实字段。截图中的任务 12680 进度译文来自上述 7.3.5 社区库，VerifiedBuild 为 0；未将其标为已核实官中。
 - 相同全文在同一语言中对应同等级的不同译文时排除该语言的键；简体无可用键时才尝试繁体，两者都不可用则保留原文。任何已知指纹碰撞（包括简繁之间的碰撞）一律排除。页面候选数、语言候选数、最终有效指纹数和可匹配页面数分别统计，不能互相替代。
 - 未导入截断的 `2018_05_17_99_01_hostfixes_agus1.sql`，也未导入标记为 27326、27547 的后续资料片广播补丁。原始 SQL 只解析选定的数据表，不执行其中语句。
 - 不调用机器翻译，不把繁体中文转换后冒充简体官中。缺少可信来源或匹配不确定时保留原文。
@@ -37,6 +38,6 @@
 
 ## 界面接口依据
 
-对照 [Gethe 保存的 7.3.5 原版界面源码](https://github.com/Gethe/wow-ui-source/tree/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML) 核对事件、函数和控件名称；该参考源码不随插件分发。
+对照 [Gethe 保存的 7.3.5 原版界面源码](https://github.com/Gethe/wow-ui-source/tree/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML) 核对事件、函数和控件名称。`ItemTextFrame.xml` 和 `QuestFrame.xml` 在 XML 中绑定事件处理函数，因此书籍、任务进度及问候窗口通过 `HookScript` 挂钩实际窗口事件；只挂钩同名全局函数不会更新已经绑定的处理函数。参考源码不随插件分发。
 
 所有参与构建的数据文件与字体的固定 URL、SHA-256 均列于 `sources.json`。生成产物只保留中文值与匹配指纹。

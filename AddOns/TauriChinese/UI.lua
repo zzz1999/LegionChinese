@@ -1,11 +1,21 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A = TauriChinese
 local installed = {}
+local installedScripts = {}
 local function hook(name, callback)
     if not installed[name] and type(_G[name])=="function" then
         hooksecurefunc(name,function(...) if A.Enabled() then callback(...) end end)
         installed[name]=true
     end
+end
+
+local function hookScript(widget, event, callback)
+    if not widget or type(widget.HookScript)~="function" then return end
+    local events=installedScripts[widget]
+    if not events then events={};installedScripts[widget]=events end
+    if events[event] then return end
+    widget:HookScript(event,function(...) if A.Enabled() then callback(...) end end)
+    events[event]=true
 end
 
 local function currentQuestID()
@@ -84,10 +94,14 @@ end
 
 local function install()
     hook("QuestInfo_Display",A.UpdateQuestInfo)
-    hook("QuestFrameProgressPanel_OnShow",A.UpdateProgress)
+    -- Legion XML stores these handlers before addons load. Hook the actual
+    -- frame script so translation runs after Blizzard has populated the text.
+    hookScript(QuestFrameProgressPanel,"OnShow",A.UpdateProgress)
+    hookScript(QuestFrameGreetingPanel,"OnShow",A.UpdateGreeting)
+    -- QUEST_LOG_UPDATE also refreshes the greeting by calling this global.
     hook("QuestFrameGreetingPanel_OnShow",A.UpdateGreeting)
     hook("GossipFrameUpdate",A.UpdateGossip)
-    hook("ItemTextFrame_OnEvent",A.UpdateBook)
+    hookScript(ItemTextFrame,"OnEvent",A.UpdateBook)
     hook("QuestLogQuests_Update",A.UpdateQuestList)
 end
 local frame=CreateFrame("Frame")

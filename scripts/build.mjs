@@ -58,7 +58,8 @@ for(const source of manifest.sql){
   }
   const target=source.kind==='pages'?new Set(['page_text']):source.kind==='patch'?new Set([...selected].filter(t=>t.endsWith('_locale')))
     :source.kind==='gossip-patch'?new Set(['gossip_menu_option_locale'])
-    :source.kind==='dialogue-world'?new Set(['page_text','page_text_locale','gossip_menu_option','gossip_menu_option_locale','npc_text']):selected;
+    :source.kind==='dialogue-world'?new Set(['page_text','page_text_locale','gossip_menu_option','gossip_menu_option_locale','npc_text',
+      'quest_offer_reward_locale','quest_request_items_locale']):selected;
   await readSQL(file,target,(table,r,update)=>{
     if(source.kind==='dialogue-world'&&Number(r.VerifiedBuild)>LEGION_BUILD){audit.afterLegionSkipped++;return;}
     if(table==='page_text'&&['world','dialogue-world'].includes(source.kind))legionPages.set(idOf(r),r);
@@ -78,11 +79,13 @@ const questData=new Map(),questVariants=new Map();
 const gossip=new ChineseTextIndex(),books=new ChineseTextIndex(),titles=new ChineseTextIndex(),objectives=new ChineseTextIndex();
 const counts={quests:0,questFields:{},npcBroadcastRecords:0,broadcastChineseRecords:0,broadcastConflictingRecords:0,
   bookPages:0,bookPageCandidates:0,bookPagesWithoutSource:0,
-  questTraditionalFields:{},broadcastLocales:{zhCN:0,zhTW:0},bookLocaleCandidates:{zhCN:0,zhTW:0},bookPagesByLocale:{zhCN:0,zhTW:0},
+  questTraditionalFields:{},questDialogueSources:{buildMarked:0,communityUnverified:0},
+  broadcastLocales:{zhCN:0,zhTW:0},bookLocaleCandidates:{zhCN:0,zhTW:0},bookPagesByLocale:{zhCN:0,zhTW:0},
   bookSources:{clientSniff:0,legionCommunity:0,legacyCompatible:0},
   bookMatchedSources:{clientSniff:0,legionCommunity:0,legacyCompatible:0},
   legacyBooksSkipped:{missingLegionPage:0,changedOriginal:0,preferredTranslation:0},gossipOptions:0,gossipOptionsWithoutSource:0};
 const questFields={LogTitle:'Title',LogDescription:'Objectives',QuestDescription:'Description',QuestCompletionLog:'CompletionLog'};
+const questDialogueFields=[['quest_offer_reward_locale','RewardText','Completion'],['quest_request_items_locale','CompletionText','Progress']];
 function questLocaleEntry(row){
   const id=idOf(row),locale=localeOf(row);
   if(!questVariants.has(id))questVariants.set(id,{});
@@ -91,7 +94,7 @@ function questLocaleEntry(row){
 for(const r of tables.get('quest_template_locale')?.values()??[]){
   const entry=questLocaleEntry(r);for(const [col,field] of Object.entries(questFields))entry[field]=r[col];
 }
-for(const [table,col,field] of [['quest_offer_reward_locale','RewardText','Completion'],['quest_request_items_locale','CompletionText','Progress']]){
+for(const [table,col,field] of questDialogueFields){
   for(const r of tables.get(table)?.values()??[])questLocaleEntry(r)[field]=r[col];
 }
 for(const [id,localized] of questVariants){
@@ -101,6 +104,11 @@ for(const [id,localized] of questVariants){
   for(const field of Object.keys(values)){
     counts.questFields[field]=(counts.questFields[field]??0)+1;
     if(locales[field]==='zhTW')counts.questTraditionalFields[field]=(counts.questTraditionalFields[field]??0)+1;
+  }
+  for(const [table,,field] of questDialogueFields){
+    if(!values[field])continue;
+    const row=tables.get(table).get(id+':'+locales[field]);
+    counts.questDialogueSources[Number(row.VerifiedBuild)>0?'buildMarked':'communityUnverified']++;
   }
   for(const source of questTitles.get(id)??[])for(const locale of CHINESE_LOCALES)titles.add(locale,source,localized[locale]?.Title);
 }

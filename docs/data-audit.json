@@ -1,14 +1,14 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "counts": {
-    "quests": 17321,
+    "quests": 21376,
     "questFields": {
       "Title": 17306,
       "Objectives": 15509,
       "Description": 15456,
       "CompletionLog": 840,
-      "Completion": 19,
-      "Progress": 5
+      "Completion": 8412,
+      "Progress": 6112
     },
     "npcBroadcastRecords": 125416,
     "broadcastChineseRecords": 125929,
@@ -20,6 +20,10 @@
       "Title": 47,
       "Description": 30,
       "Objectives": 31
+    },
+    "questDialogueSources": {
+      "buildMarked": 24,
+      "communityUnverified": 14500
     },
     "broadcastLocales": {
       "zhCN": 125929,
@@ -106,7 +110,7 @@
       "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
       "kind": "dialogue-world",
       "provenance": "community-mixed",
-      "afterLegionSkipped": 4863
+      "afterLegionSkipped": 4958
     },
     {
       "file": "TDB_hotfixes_735.26972_2025_05_11.sql",
@@ -628,6 +632,9 @@
     "Data\\Quests_07.lua",
     "Data\\Quests_08.lua",
     "Data\\Quests_09.lua",
+    "Data\\Quests_10.lua",
+    "Data\\Quests_11.lua",
+    "Data\\Quests_12.lua",
     "Data\\Strings_01.lua",
     "Data\\Strings_02.lua",
     "Data\\Strings_03.lua",

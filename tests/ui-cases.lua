@@ -19,13 +19,41 @@ hooks.GossipFrameUpdate();assert(GossipGreetingText.text=="你好。" and Gossip
 GossipGreetingText.text="Unknown dialogue";hooks.GossipFrameUpdate();assert(GossipGreetingText.text=="Unknown dialogue")
 
 add("Books","Page one","第一页",3);add("Books","Page two","第二页",4)
-ItemTextPageText.text=bookText;hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY");assert(ItemTextPageText.text=="第一页")
-bookText="Page two";ItemTextPageText.text=bookText;hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY");assert(ItemTextPageText.text=="第二页")
-bookText="原来的中文书页";ItemTextPageText.text=bookText;local writes=ItemTextPageText.writes
-hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText and ItemTextPageText.writes==writes)
-bookText="Unknown page";ItemTextPageText.text=bookText;hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
-bookText="Page one";bookCreator="Author";ITEM_TEXT_FROM="From";hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY")
+ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text=="第一页")
+bookText="Page two";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text=="第二页")
+bookText="原来的中文书页";local writes=ItemTextPageText.writes;local fonts=ItemTextPageText.fontChanges
+ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText and ItemTextPageText.writes==writes+1 and ItemTextPageText.fontChanges==fonts)
+bookText="Unknown page";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
+bookText="Page one";bookCreator="Author";ITEM_TEXT_FROM="From";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
 assert(ItemTextPageText.text=="第一页\n\nFrom\nAuthor\n")
-TauriChineseSettings={enabled=false};bookText="Page two";ItemTextPageText.text=bookText
-hooks.ItemTextFrame_OnEvent(nil,"ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
+bookCreator=nil
+local previous=ItemTextPageText.text
+ItemTextFrame:Fire("OnEvent","ITEM_TEXT_BEGIN");assert(ItemTextPageText.text==previous)
+
+-- Reinstalling hooks after other addons load must not multiply handlers.
+frames[1]:Fire("OnEvent","ADDON_LOADED","AnotherAddon")
+frames[1]:Fire("OnEvent","ADDON_LOADED","TauriChinese")
+assert(#ItemTextFrame.scriptHooks.OnEvent==1)
+assert(#QuestFrameProgressPanel.scriptHooks.OnShow==1)
+questID=1;D.Quests[1].Progress="尚未完成。"
+progressTitle="原来的中文任务标题";progressText="Progress body"
+QuestFrameProgressPanel:Fire("OnShow")
+assert(QuestProgressTitleText.text==progressTitle and QuestProgressText.text=="尚未完成。")
+questID=2;progressText="Unknown progress";QuestFrameProgressPanel:Fire("OnShow")
+assert(QuestProgressText.text==progressText)
+questID=1;progressText="原来的中文进度";QuestFrameProgressPanel:Fire("OnShow")
+assert(QuestProgressText.text==progressText)
+QuestFrameGreetingPanel:Fire("OnShow");assert(GreetingText.text=="你好。")
+QuestFrameGreetingPanel_OnShow(QuestFrameGreetingPanel);assert(GreetingText.text=="你好。")
+
+-- Frames loaded later are installed on ADDON_LOADED as well.
+ItemTextFrame=ScriptFrame();ItemTextFrame:SetScript("OnEvent",ItemTextFrame_OnEvent)
+frames[1]:Fire("OnEvent","ADDON_LOADED","LateFrames")
+bookText="Page two";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
+assert(ItemTextPageText.text=="第二页" and #ItemTextFrame.scriptHooks.OnEvent==1)
+
+TauriChineseSettings={enabled=false};bookText="Page two"
+ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
+progressText="Progress body";QuestFrameProgressPanel:Fire("OnShow");assert(QuestProgressText.text==progressText)
+QuestFrameGreetingPanel:Fire("OnShow");assert(GreetingText.text==greetingText)
 GossipGreetingText.text="Hello there";hooks.GossipFrameUpdate();assert(GossipGreetingText.text=="Hello there")
