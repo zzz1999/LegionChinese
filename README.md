@@ -4,7 +4,7 @@
 
 为《魔兽世界》军团再临 **7.3.5** 客户端提供任务、NPC 对话、书籍、角色读条、宠物默认名称及场景物件提示的中文显示。
 
-**版本：1.2.4** · 离线使用 · 无需翻译密钥 · 简体优先，繁体补充
+**版本：1.2.5** · 离线使用 · 无需翻译密钥 · 简体优先，繁体补充
 
 **[下载最新版](https://github.com/zzz1999/LegionChinese/releases/latest/download/LegionChinese-latest.zip)** · [查看版本记录](https://github.com/zzz1999/LegionChinese/releases) · [反馈问题与建议](https://github.com/zzz1999/LegionChinese/issues)
 

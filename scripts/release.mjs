@@ -26,8 +26,23 @@ function compareVersions(left, right) {
   return a[0] - b[0] || a[1] - b[1] || a[2] - b[2];
 }
 
+async function isSuperseded({github, context, tags, latest}) {
+  if (!latest) return false;
+  // target_commitish can be a moving branch. Compare the released tag's commit
+  // instead, including when it is not in the earlier tag-list snapshot.
+  const ref = tags.find(tag => tag.name === latest.tag_name)?.commit.sha ?? latest.tag_name;
+  if (!ref) throw new Error('Cannot verify release ancestry: Latest has no tag.');
+  const {data} = await github.rest.repos.compareCommitsWithBasehead({
+    ...context.repo, basehead: `${ref}...${context.sha}`, per_page: 1, page: 1,
+  });
+  if (data.status === 'behind') return true;
+  if (data.status === 'ahead' || data.status === 'identical') return false;
+  throw new Error(`Cannot verify release ancestry: ${context.sha} is ${data.status} relative to ${ref}.`);
+}
+
 // Run inside the serialized release job, before packaging. New pushes get a
 // unique patch version; retries reuse the version already reserved for this SHA.
+// Return null for a superseded source so the workflow skips packaging/publishing.
 export async function resolveReleaseVersion({github, context, baseVersion}) {
   stableVersion(baseVersion);
   const api = github.rest.repos;
@@ -39,10 +54,13 @@ export async function resolveReleaseVersion({github, context, baseVersion}) {
   if (sameCommit) {
     const tag = tags.find(item => item.name === sameCommit.tag_name);
     if (tag && tag.commit.sha !== context.sha) throw new Error(`${tag.name} points to another commit.`);
-    return sameCommit.tag_name.slice(1);
+    if (!sameCommit.draft) return sameCommit.tag_name.slice(1);
   }
   const reserved = versions.filter(tag => tag.commit.sha === context.sha);
   if (reserved.length > 1) throw new Error('Multiple version tags point to this commit; refusing to guess.');
+  const latest = await optionalRelease(() => api.getLatestRelease(context.repo));
+  if (await isSuperseded({github, context, tags, latest})) return null;
+  if (sameCommit) return sameCommit.tag_name.slice(1);
   if (reserved.length === 1) return reserved[0].name.slice(1);
 
   // Draft releases may not have a visible tag yet, but still reserve a version.
@@ -127,8 +145,9 @@ export async function publishRelease({github, context, version, assets, changelo
   // Rerunning a successful build must not overwrite an already published package.
   if (release && !release.draft) return release;
 
+  const previous = await optionalRelease(() => api.getLatestRelease(repo));
+  if (await isSuperseded({github, context, tags, latest: previous})) return null;
   if (!release) {
-    const previous = await optionalRelease(() => api.getLatestRelease(repo));
     const notes = await describeChanges({github, context, version, changelog, previous});
     const base = `${context.serverUrl}/${repo.owner}/${repo.repo}`;
     release = (await api.createRelease({
@@ -168,8 +187,9 @@ export async function publishRelease({github, context, version, assets, changelo
     });
   }
 
-  // Compare the recorded workflow number, since tags now contain versions.
+  // Recheck after uploads as a release may also be published outside this job.
   const latest = await optionalRelease(() => api.getLatestRelease(repo));
+  if (await isSuperseded({github, context, tags, latest})) return null;
   return (await api.updateRelease({
     ...repo,
     release_id: release.id,

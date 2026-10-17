@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {fileURLToPath, pathToFileURL} from 'node:url';
 import {publishRelease, resolveReleaseVersion, notesForVersion} from '../scripts/release.mjs';
 
 const context = {
@@ -14,9 +16,12 @@ const version = '0.1.0';
 const changelog = '# 更新记录\n\n## v0.1.0\n\n- 补齐任务交付说明。\n\n## v0.0.9\n\n- 旧版说明。\n';
 function fixture({existing = null, latest = null, failUpload = null, readError = null,
   tags = [], releases = [], commits = [{sha: context.sha, commit: {message: '修复书籍翻页\n\n更多细节'}}],
-  notes = changelog, comparisonStatus = 'ahead'} = {}) {
+  notes = changelog, comparisonStatus = 'ahead', comparisonError = null, latestAfterUpload = null,
+  runContext = context} = {}) {
   const mutations = [];
+  const comparisons = [];
   let release = existing;
+  let uploaded = false;
   if (release) release.tag_name ??= 'v0.1.0';
   const missing = () => { throw Object.assign(new Error('Not found'), {status: 404}); };
   const api = {
@@ -27,12 +32,18 @@ function fixture({existing = null, latest = null, failUpload = null, readError =
     async listReleases() {},
     async listTags() {},
     async compareCommitsWithBasehead(args) {
-      assert.equal(args.basehead, `${latest.target_commitish}...${context.sha}`);
-      return {data: {status: comparisonStatus, commits: commits.slice((args.page - 1) * 100, args.page * 100)}};
+      comparisons.push(args);
+      if (comparisonError) throw comparisonError;
+      const previous = uploaded && latestAfterUpload ? latestAfterUpload : latest;
+      const refs = [previous.target_commitish, previous.tag_name,
+        tags.find(tag => tag.name === previous.tag_name)?.commit.sha].filter(Boolean);
+      assert.ok(refs.some(ref => args.basehead === `${ref}...${runContext.sha}`), args.basehead);
+      const status = typeof comparisonStatus === 'function' ? comparisonStatus(previous) : comparisonStatus;
+      return {data: {status, commits: commits.slice((args.page - 1) * args.per_page, args.page * args.per_page)}};
     },
     async getCommit(args) {
-      assert.equal(args.ref, context.sha);
-      return {data: {sha: context.sha, commit: {message: '修复书籍翻页\n\n更多细节'}}};
+      assert.equal(args.ref, runContext.sha);
+      return {data: {sha: runContext.sha, commit: {message: '修复书籍翻页\n\n更多细节'}}};
     },
     async createRelease(args) {
       mutations.push(['create', args]);
@@ -43,9 +54,10 @@ function fixture({existing = null, latest = null, failUpload = null, readError =
     async uploadReleaseAsset(args) {
       if (args.name === failUpload) throw new Error('Upload interrupted');
       mutations.push(['upload', args]);
+      uploaded = true;
       return {data: {}};
     },
-    async getLatestRelease() { return {data: latest ?? missing()}; },
+    async getLatestRelease() { return {data: (uploaded && latestAfterUpload ? latestAfterUpload : latest) ?? missing()}; },
     async updateRelease(args) {
       mutations.push(['publish', args]);
       return {data: {...release, ...args}};
@@ -64,9 +76,9 @@ function fixture({existing = null, latest = null, failUpload = null, readError =
       yield {data: [...releases, ...(release ? [release] : [])]};
     }},
   };
-  return {mutations,
-    resolve: (baseVersion = version) => resolveReleaseVersion({github, context, baseVersion}),
-    run: () => publishRelease({github, context, version, assets, changelog: notes}),
+  return {mutations, comparisons, github, context: runContext,
+    resolve: (baseVersion = version) => resolveReleaseVersion({github, context: runContext, baseVersion}),
+    run: (releaseVersion = version) => publishRelease({github, context: runContext, version: releaseVersion, assets, changelog: notes}),
   };
 }
 
@@ -100,15 +112,90 @@ test('interrupted upload leaves a draft and retry replaces only draft assets', a
 });
 
 test('rerunning a published build leaves its assets and Latest status intact', async () => {
-  const existing = {draft: false, target_commitish: context.sha};
-  const {run, mutations} = fixture({existing});
-  assert.equal(await run(), existing);
-  assert.deepEqual(mutations, []);
+  const existing = {tag_name: 'v0.1.0', draft: false, target_commitish: context.sha};
+  const f = fixture({existing, comparisonStatus: 'behind',
+    latest: {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40)}});
+  assert.equal(await f.resolve(), '0.1.0');
+  assert.equal(await f.run(), existing);
+  assert.deepEqual(f.mutations, []);
+  assert.deepEqual(f.comparisons, [], 'already published versions need no new ancestry check');
 });
 
-test('older queued build is published without replacing a newer Latest release', async () => {
-  const {run} = fixture({latest: {tag_name: 'v0.2.0', body: '- 构建记录：[#3](https://example.test/run)'}});
-  assert.equal((await run()).make_latest, 'false');
+test('a superseded build skips version allocation and publication without mutations', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40), draft: false,
+    body: '- 构建记录：[#3](https://example.test/run)'};
+  const f = fixture({latest, releases: [latest],
+    tags: [{name: latest.tag_name, commit: {sha: latest.target_commitish}}], comparisonStatus: 'behind'});
+  assert.equal(await f.resolve('1.2.4'), null, 'the older source must not receive v1.2.6');
+  assert.equal(await f.run('1.2.6'), null, 'publication must also reject an already selected version');
+  assert.deepEqual(f.mutations, []);
+});
+
+test('a new workflow run for an older commit is skipped even with a larger run number', async () => {
+  const f = fixture({runContext: {...context, runNumber: 99}, comparisonStatus: 'behind',
+    latest: {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40), body: '- 构建记录：[#3](url)'}});
+  assert.equal(await f.resolve('1.2.4'), null);
+  assert.equal(await f.run('1.2.6'), null);
+  assert.deepEqual(f.mutations, []);
+});
+
+test('superseded draft and tag-only retries cannot publish an older reserved version', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40)};
+  for (const existing of [null, {id: 1, tag_name: 'v0.1.0', target_commitish: context.sha,
+    draft: true, assets: [{id: 11, name: assets[0].name}]}]) {
+    const f = fixture({latest, existing, comparisonStatus: 'behind',
+      tags: [{name: 'v0.1.0', commit: {sha: context.sha}}]});
+    assert.equal(await f.resolve(), null);
+    assert.equal(await f.run(), null);
+    assert.deepEqual(f.mutations, [], 'a stale retry must not replace draft assets');
+  }
+});
+
+test('an actual descendant still receives the next version and becomes Latest', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40), draft: false,
+    body: '- 构建记录：[#1](url)'};
+  const f = fixture({latest, releases: [latest], comparisonStatus: 'ahead',
+    tags: [{name: latest.tag_name, commit: {sha: latest.target_commitish}}], notes: ''});
+  const next = await f.resolve('1.2.4');
+  assert.equal(next, '1.2.6');
+  const release = await f.run(next);
+  assert.equal(release.tag_name, 'v1.2.6');
+  assert.equal(release.make_latest, 'true');
+  assert.deepEqual(f.mutations.map(([name]) => name), ['create', 'upload', 'upload', 'publish']);
+});
+
+test('ancestry uses the released tag commit rather than a moving target branch', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'main'};
+  for (const tags of [[], [{name: latest.tag_name, commit: {sha: 'b'.repeat(40)}}]]) {
+    const f = fixture({latest, tags, comparisonStatus: 'behind'});
+    assert.equal(await f.resolve('1.2.4'), null);
+    assert.equal(f.comparisons[0].basehead, `${tags[0]?.commit.sha ?? latest.tag_name}...${context.sha}`);
+  }
+});
+
+test('unverifiable ancestry fails before allocating or publishing a version', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40)};
+  for (const status of ['diverged', 'unexpected', undefined]) {
+    const f = fixture({latest, comparisonStatus: () => status});
+    await assert.rejects(f.resolve('1.2.4'), /ancestry/i);
+    await assert.rejects(f.run(), /ancestry/i);
+    assert.deepEqual(f.mutations, []);
+  }
+  for (const status of [403, 404, 500]) {
+    const error = Object.assign(new Error('Comparison unavailable'), {status});
+    const f = fixture({latest, comparisonError: error});
+    await assert.rejects(f.resolve(), error);
+    await assert.rejects(f.run(), error);
+    assert.deepEqual(f.mutations, []);
+  }
+});
+
+test('a newer release appearing during asset upload keeps the superseded build as a draft', async () => {
+  const newer = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40), body: '- 构建记录：[#3](url)'};
+  const f = fixture({latestAfterUpload: newer, comparisonStatus: 'behind'});
+  assert.equal(await f.run(), null);
+  assert.deepEqual(f.mutations.map(([name]) => name), ['create', 'upload', 'upload']);
+  assert.equal(f.mutations[0][1].draft, true);
 });
 
 test('authentication errors are not treated as a missing release', async () => {
@@ -191,15 +278,77 @@ test('first release without curated notes describes its source commit', async ()
 });
 
 test('empty comparisons cannot publish generic release notes', async () => {
-  const f = fixture({notes: '', commits: [], latest: {target_commitish: 'b'.repeat(40)}});
+  const f = fixture({notes: '', commits: [], latest: {tag_name: 'v0.0.9', target_commitish: 'b'.repeat(40)}});
   await assert.rejects(f.run(), /No release notes or new commits/);
   assert.deepEqual(f.mutations, []);
 });
 
-test('a delayed older job can describe its source commit without taking Latest', async () => {
-  const release = await fixture({notes: '', commits: [], comparisonStatus: 'behind',
+test('a delayed older job without curated notes is skipped instead of generating a misleading release', async () => {
+  const f = fixture({notes: '', commits: [], comparisonStatus: 'behind',
     latest: {tag_name: 'v0.2.0', target_commitish: 'b'.repeat(40), body: '- 构建记录：[#3](url)'},
-  }).run();
-  assert.match(release.body, /修复书籍翻页/);
-  assert.equal(release.make_latest, 'false');
+  });
+  assert.equal(await f.run(), null);
+  assert.deepEqual(f.mutations, []);
+});
+
+// Run the actual inline Actions scripts with local API/filesystem stand-ins.
+// This checks that a null release selection is wired through to both step gates.
+const workflow = await readFile(new URL('../.github/workflows/check.yml', import.meta.url), 'utf8');
+const steps = new Map(workflow.replaceAll('\r\n', '\n').split(/^      - name: /m).slice(1)
+  .map(block => [block.slice(0, block.indexOf('\n')), block]));
+async function runWorkflowStep(name, f, outputs = {}) {
+  const messages = [];
+  const summary = {
+    addHeading(text) { messages.push(text); return this; },
+    addRaw(text) { messages.push(text); return this; },
+    addLink(text) { messages.push(text); return this; },
+    async write() {},
+  };
+  const core = {summary, notice: text => messages.push(text), setOutput: (key, value) => { outputs[key] = value; }};
+  const require = module => {
+    if (module === 'node:url') return {pathToFileURL};
+    assert.equal(module, 'node:fs/promises');
+    return {async readFile(path) {
+      if (path === 'package.json') return JSON.stringify({version: '1.2.4'});
+      if (path === 'CHANGELOG.md') return changelog;
+      const asset = assets.find(asset => path === `dist/${asset.name}`);
+      assert.ok(asset, `Unexpected file read: ${path}`);
+      return asset.data;
+    }};
+  };
+  const script = steps.get(name).split('          script: |\n')[1].replace(/^ {12}/gm, '');
+  const AsyncFunction = Object.getPrototypeOf(async function() {}).constructor;
+  await new AsyncFunction('require', 'github', 'context', 'core', 'process', script)(
+    require, f.github, f.context, core,
+    {env: {GITHUB_WORKSPACE: fileURLToPath(new URL('..', import.meta.url)), PACKAGE_VERSION: outputs.version}},
+  );
+  return {outputs, messages};
+}
+
+test('workflow skips both packaging and publishing for a superseded source', async () => {
+  const f = fixture({latest: {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40)}, comparisonStatus: 'behind'});
+  const {outputs, messages} = await runWorkflowStep('Select release version', f);
+  assert.equal(outputs.publish, 'false');
+  assert.equal(outputs.version, undefined);
+  for (const name of ['Package addon', 'Publish release']) {
+    assert.match(steps.get(name), /^        if: steps\.version\.outputs\.publish == 'true'$/m);
+  }
+  assert.ok(messages.includes('Release skipped'));
+  assert.deepEqual(f.mutations, []);
+});
+
+test('workflow publishes the selected successor version and handles a later skip cleanly', async () => {
+  const latest = {tag_name: 'v1.2.5', target_commitish: 'b'.repeat(40), draft: false};
+  const f = fixture({latest, releases: [latest], tags: [{name: latest.tag_name, commit: {sha: latest.target_commitish}}]});
+  const {outputs} = await runWorkflowStep('Select release version', f);
+  assert.deepEqual(outputs, {publish: 'true', version: '1.2.6'});
+  const result = await runWorkflowStep('Publish release', f, outputs);
+  assert.ok(result.messages.includes('v1.2.6'));
+  assert.equal(f.mutations[0][1].tag_name, 'v1.2.6');
+  assert.deepEqual(f.mutations.map(([name]) => name), ['create', 'upload', 'upload', 'publish']);
+
+  const stale = fixture({latest, comparisonStatus: 'behind'});
+  const skipped = await runWorkflowStep('Publish release', stale, outputs);
+  assert.ok(skipped.messages.includes('Release skipped'));
+  assert.deepEqual(stale.mutations, []);
 });

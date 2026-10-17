@@ -43,14 +43,22 @@ jobs:
             const { resolveReleaseVersion } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release.mjs`).href);
             const { version: baseVersion } = JSON.parse(await readFile('package.json', 'utf8'));
             const version = await resolveReleaseVersion({ github, context, baseVersion });
-            core.setOutput('version', version);
+            core.setOutput('publish', version !== null ? 'true' : 'false');
+            if (version === null) {
+              core.notice('Skipping release: newer source has already been published.');
+              await core.summary.addHeading('Release skipped').addRaw('Newer source has already been published.').write();
+            } else {
+              core.setOutput('version', version);
+            }
       - name: Package addon
+        if: steps.version.outputs.publish == 'true'
         shell: pwsh
         env:
           PACKAGE_VERSION: ${{ steps.version.outputs.version }}
         run: |
           ./scripts/package.ps1 -Version $env:PACKAGE_VERSION -ArchiveName LegionChinese-latest.zip
       - name: Publish release
+        if: steps.version.outputs.publish == 'true'
         uses: actions/github-script@v9
         env:
           PACKAGE_VERSION: ${{ steps.version.outputs.version }}
@@ -64,4 +72,9 @@ jobs:
             })));
             const changelog = await readFile('CHANGELOG.md', 'utf8');
             const release = await publishRelease({ github, context, version: process.env.PACKAGE_VERSION, assets, changelog });
-            await core.summary.addHeading('Release').addLink(release.tag_name, release.html_url).write();
+            if (release) {
+              await core.summary.addHeading('Release').addLink(release.tag_name, release.html_url).write();
+            } else {
+              core.notice('Skipping release: newer source has already been published.');
+              await core.summary.addHeading('Release skipped').addRaw('Newer source has already been published.').write();
+            }
