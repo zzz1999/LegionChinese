@@ -36,10 +36,10 @@ function A.ShowWelcome()
         local heading=label(window,"TauriChinese  "..version,18,{1,0.82,0})
         heading:SetPoint("TOPLEFT",24,-44)
 
-        local intro=label(window,"面向《魔兽世界》军团再临 7.3.5 的离线中文插件。\n任务、NPC 对话与书籍优先使用简体中文，缺少时使用繁体中文；两者都没有则保留原文。已有中文保持不变。\n角色读条使用客户端已有中文名称，缺少时保留原文。")
+        local intro=label(window,"面向《魔兽世界》军团再临 7.3.5 的离线中文插件。\n任务、NPC 对话、书籍及读条名称：简体优先，繁体补充，缺失保留原文。已有中文保持不变。\n内置法术译名；宠物只翻译可靠的默认名称，随机名字及自定义名字保留。")
         intro:SetPoint("TOPLEFT",heading,"BOTTOMLEFT",0,-14)
 
-        local credits=label(window,"作者与维护：zzz1999\n灵感来源：TauriHun（WorldOfHuncraft）\n感谢 TrinityCore、The Legion Preservation Project、MagicStorm 和 AzerothCore 的资料贡献。")
+        local credits=label(window,"作者与维护：zzz1999\n灵感来源：TauriHun（WorldOfHuncraft）\n感谢 TrinityCore、The Legion Preservation Project、MagicStorm、AzerothCore 和 Wago.Tools 的资料贡献。")
         credits:SetPoint("TOPLEFT",intro,"BOTTOMLEFT",0,-14)
 
         local feedback=label(window,"遇到缺失译文、显示异常，或有改进建议，请到 GitHub Issues 反馈。附上客户端版本、任务或 NPC 名称及截图，有助于定位问题。")

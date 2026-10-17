@@ -1,5 +1,5 @@
 {
-  "version": "1.1.7",
+  "version": "1.1.8",
   "counts": {
     "quests": 21376,
     "questFields": {
@@ -93,6 +93,50 @@
       "locales": {
         "zhCN": 2257,
         "zhTW": 22
+      }
+    },
+    "clientNames": {
+      "Spell": {
+        "ids": 160721,
+        "locales": {
+          "zhCN": 141175,
+          "zhTW": 19546
+        },
+        "fingerprints": 76935,
+        "nameLocales": {
+          "zhCN": 60596,
+          "zhTW": 16339
+        },
+        "ambiguousNames": 777,
+        "collisions": 0
+      },
+      "Creature": {
+        "ids": 9281,
+        "locales": {
+          "zhCN": 9229,
+          "zhTW": 52
+        },
+        "fingerprints": 6345,
+        "nameLocales": {
+          "zhCN": 6293,
+          "zhTW": 52
+        },
+        "ambiguousNames": 7,
+        "collisions": 0
+      },
+      "CreatureFamily": {
+        "ids": 75,
+        "locales": {
+          "zhCN": 75,
+          "zhTW": 0
+        },
+        "fingerprints": 75,
+        "nameLocales": {
+          "zhCN": 75,
+          "zhTW": 0
+        },
+        "ambiguousNames": 0,
+        "collisions": 0
       }
     }
   },
@@ -723,6 +767,21 @@
     "Data\\Titles_04.lua",
     "Data\\Titles_05.lua",
     "Data\\Objectives_01.lua",
-    "Data\\Completions_01.lua"
+    "Data\\Completions_01.lua",
+    "Data\\NameStrings_01.lua",
+    "Data\\NameStrings_02.lua",
+    "Data\\NameStrings_03.lua",
+    "Data\\NameStrings_04.lua",
+    "Data\\CreatureFamilies_01.lua",
+    "Data\\CreatureFamilyNames_01.lua",
+    "Data\\Creatures_01.lua",
+    "Data\\SpellNames_01.lua",
+    "Data\\SpellNames_02.lua",
+    "Data\\SpellNames_03.lua",
+    "Data\\SpellNames_04.lua",
+    "Data\\Spells_01.lua",
+    "Data\\Spells_02.lua",
+    "Data\\Spells_03.lua",
+    "Data\\Spells_04.lua"
   ]
 }

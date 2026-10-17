@@ -1,4 +1,4 @@
--- Legion API contract: UnitCastingInfo has nine returns, and spellcast
+-- Legion API contract: UnitCastingInfo has ten returns, and spellcast
 -- events pass (unit, spell name, rank, cast execution ID, spell database ID).
 activeCasts={};spellNames={};spellLookups={}
 function GetLocale() return "zhCN" end
@@ -6,13 +6,13 @@ function GetSpellInfo(key) spellLookups[#spellLookups+1]=key;return spellNames[k
 function UnitCastingInfo(unit)
     local cast=activeCasts[unit]
     if cast and not cast.channel then
-        return cast.name,"",cast.text,"icon",cast.start,cast.finish,cast.trade,cast.id,false
+        return cast.name,"",cast.text,"icon",cast.start,cast.finish,cast.trade,cast.id,false,cast.apiSpellID
     end
 end
 function UnitChannelInfo(unit)
     local cast=activeCasts[unit]
     if cast and cast.channel then
-        return cast.name,"",cast.text,"icon",cast.start,cast.finish,cast.trade,false
+        return cast.name,"",cast.text,"icon",cast.start,cast.finish,cast.trade,false,cast.apiSpellID
     end
 end
 function CastingBarFrame_OnEvent(bar,event,unit,spellName,rank,castID,spellID)

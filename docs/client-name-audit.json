@@ -1,0 +1,163 @@
+{
+  "version": "1.1.8",
+  "build": "7.3.5.26972",
+  "provenance": "client-db2-via-wago",
+  "sources": [
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "943e4118b4cdc59f1447dfc05ebfadcb31cab6627fce2cd7ef517a4b8b014335",
+      "records": 179382
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "214f755429b8eb2fd9bfec924cc2139091f751279d879a96129c772854c1802f",
+      "records": 179382
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "6049932f5630afad9caa313244a9f6d0ca4cb99489c81e3f1d2cfc5929e5dfdb",
+      "records": 179382
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "e9acd9ebbeb2b6fbfb8613e5045db6e276bdeab8a86bdcb57d02cda71fa7502f",
+      "records": 9942
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "1171eafa54330abb5848bede8553c62f976800d443cfe5c8968bb89643d70a99",
+      "records": 9942
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "7a2ddd6f9c0bbc9a91b893a243880d47d1b307a2d778ad6333ff9fb56ef5e146",
+      "records": 9942
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "9b4a61c097e139eea462e4da0549d6583d364c4b4ce4f1f73a4664bbfda7437d",
+      "records": 76
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "3f84d8ce2ef1f8c28f2f3e781307a6068365f36c3efe3320a15710acb40c0f5f",
+      "records": 76
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "bc9a22918cdffebded59582c9e42a168a83e1ba8ae5e280a41cb5b836e7b346a",
+      "records": 76
+    }
+  ],
+  "counts": {
+    "Spell": {
+      "ids": 160721,
+      "locales": {
+        "zhCN": 141175,
+        "zhTW": 19546
+      },
+      "fingerprints": 76935,
+      "nameLocales": {
+        "zhCN": 60596,
+        "zhTW": 16339
+      },
+      "ambiguousNames": 777,
+      "collisions": 0
+    },
+    "Creature": {
+      "ids": 9281,
+      "locales": {
+        "zhCN": 9229,
+        "zhTW": 52
+      },
+      "fingerprints": 6345,
+      "nameLocales": {
+        "zhCN": 6293,
+        "zhTW": 52
+      },
+      "ambiguousNames": 7,
+      "collisions": 0
+    },
+    "CreatureFamily": {
+      "ids": 75,
+      "locales": {
+        "zhCN": 75,
+        "zhTW": 0
+      },
+      "fingerprints": 75,
+      "nameLocales": {
+        "zhCN": 75,
+        "zhTW": 0
+      },
+      "ambiguousNames": 0,
+      "collisions": 0
+    }
+  },
+  "chineseStrings": 80174,
+  "exclusions": [
+    "Spell descriptions and auras are not imported.",
+    "No Chinese mapping found for randomized pet proper names."
+  ],
+  "generatedFiles": [
+    "Data\\NameStrings_01.lua",
+    "Data\\NameStrings_02.lua",
+    "Data\\NameStrings_03.lua",
+    "Data\\NameStrings_04.lua",
+    "Data\\CreatureFamilies_01.lua",
+    "Data\\CreatureFamilyNames_01.lua",
+    "Data\\Creatures_01.lua",
+    "Data\\SpellNames_01.lua",
+    "Data\\SpellNames_02.lua",
+    "Data\\SpellNames_03.lua",
+    "Data\\SpellNames_04.lua",
+    "Data\\Spells_01.lua",
+    "Data\\Spells_02.lua",
+    "Data\\Spells_03.lua",
+    "Data\\Spells_04.lua"
+  ]
+}

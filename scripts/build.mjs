@@ -6,6 +6,7 @@ import {readSQL} from './sql.mjs';
 import {hasChinese,luaString,variants,fingerprint} from './text.mjs';
 import {LEGION_BUILD,localeOf,idOf,menuKey,broadcastText,selectBroadcast,compatibleLegacyPage,compatibleLegacyQuest} from './dialogue.mjs';
 import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from './fallback.mjs';
+import {buildClientNames} from './client-names.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -232,7 +233,10 @@ for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:title
   writeChunks(name,[...index.entries].sort((a,b)=>a[0].localeCompare(b[0],'en')),([key,s])=>'D.'+name+'['+luaString(key)+']='+stringIDs.get(s));
   counts[name]={fingerprints:index.entries.size,ambiguousSkipped:index.ambiguous.size,locales:index.localeCounts};
 }
-const toc=['## Interface: 70300','## Title: TauriChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: TauriChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','Welcome.lua','UI.lua',''];
+const clientNames=buildClientNames({root,input,manifest,version});
+generated.push(...clientNames.generated);
+counts.clientNames=clientNames.audit.counts;
+const toc=['## Interface: 70300','## Title: TauriChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: TauriChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','TauriChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

@@ -166,14 +166,14 @@ local castEvents={UNIT_SPELLCAST_START=true,UNIT_SPELLCAST_CHANNEL_START=true,
 
 local function currentCast(bar)
     if not bar or not bar.unit or not bar.Text or not bar:IsShown() or bar.fadeOut then return end
-    local name,subtext,text,texture,startTime,endTime,tradeSkill,castID
+    local name,subtext,text,texture,startTime,endTime,tradeSkill,castID,notInterruptible,spellID
     if bar.channeling and UnitChannelInfo then
-        name,subtext,text,texture,startTime,endTime=UnitChannelInfo(bar.unit)
+        name,subtext,text,texture,startTime,endTime,tradeSkill,notInterruptible,spellID=UnitChannelInfo(bar.unit)
     elseif bar.casting and UnitCastingInfo then
-        name,subtext,text,texture,startTime,endTime,tradeSkill,castID=UnitCastingInfo(bar.unit)
+        name,subtext,text,texture,startTime,endTime,tradeSkill,castID,notInterruptible,spellID=UnitCastingInfo(bar.unit)
         if castID~=bar.castID then return end
     end
-    if type(name)=="string" and type(text)=="string" and text~="" then return name,text,startTime,castID end
+    if type(name)=="string" and type(text)=="string" and text~="" then return name,text,startTime,castID,spellID end
 end
 
 function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
@@ -182,23 +182,27 @@ function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
     if not A.Enabled() or not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame) then return end
     if event and not castEvents[event] then return end
     if event and event~="PLAYER_ENTERING_WORLD" and unit~=bar.unit then return end
-    local name,source,startTime,currentID=currentCast(bar)
+    local name,source,startTime,currentID,currentSpellID=currentCast(bar)
     if not name or A.IsChinese(source) or bar.Text:GetText()~=source then return end
 
-    local translated=A.IsChinese(name) and name or nil
+    -- Legion UnitCastingInfo returns the spell ID in position 10. Some server
+    -- clients omit it; their start event can supply a validated fallback.
+    -- The castID in position 8 / event argument 4 is an execution counter.
+    local matchingEvent=event=="UNIT_SPELLCAST_START" and bar.casting and castID==bar.castID
+        or event=="UNIT_SPELLCAST_CHANNEL_START" and bar.channeling and (spellName==name or spellName==source)
+    local id=type(currentSpellID)=="number" and currentSpellID>0 and currentSpellID%1==0 and currentSpellID or nil
+    if not id and matchingEvent and type(spellID)=="number" and spellID>0 and spellID%1==0 then id=spellID end
+    local translated=A.ResolveSpellName and A.ResolveSpellName(source,id) or nil
+    translated=translated or A.IsChinese(name) and name or nil
     local previous=castTranslations[bar]
     if not translated and previous and previous.unit==bar.unit and previous.name==name and previous.source==source
-        and previous.startTime==startTime and previous.castID==currentID and previous.channeling==bar.channeling then
+        and previous.startTime==startTime and previous.castID==currentID and previous.channeling==bar.channeling
+        and (not id or id==previous.spellID) then
         translated=previous.translated
     end
     if not translated and GetSpellInfo then
-        -- Legion events carry (unit, name, rank, castID, spellID). The castID
-        -- is an execution counter, NOT a spell ID; UnitCastingInfo has no
-        -- spell ID return on this client. Validate the event before using it.
-        local matchingEvent=event=="UNIT_SPELLCAST_START" and bar.casting and castID==bar.castID
-            or event=="UNIT_SPELLCAST_CHANNEL_START" and bar.channeling and (spellName==name or spellName==source)
-        if matchingEvent and type(spellID)=="number" and spellID>0 and spellID%1==0 then
-            local localized=GetSpellInfo(spellID)
+        if id then
+            local localized=GetSpellInfo(id)
             if A.IsChinese(localized) then translated=localized end
         end
         if not translated then
@@ -210,7 +214,7 @@ function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
     A.SetFont(bar.Text)
     bar.Text:SetText(translated)
     castTranslations[bar]={unit=bar.unit,name=name,source=source,translated=translated,
-        startTime=startTime,castID=currentID,channeling=bar.channeling}
+        startTime=startTime,castID=currentID,channeling=bar.channeling,spellID=id}
 end
 
 function A.RefreshCastBars()
@@ -263,6 +267,7 @@ local function install()
     hookScript(CastingBarFrame,"OnEvent",A.UpdateCastBar)
     hookScript(PetCastingBarFrame,"OnEvent",A.UpdateCastBar)
     hook("CastingBarFrame_OnEvent",A.UpdateCastBar)
+    if A.InstallPetNames then A.InstallPetNames(hook,hookScript) end
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -273,7 +278,10 @@ frame:SetScript("OnEvent",function(_,event,addonName)
     end
     install()
     if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="Blizzard_ObjectiveTracker") then A.RefreshTracker() end
-    if event=="PLAYER_LOGIN" then A.RefreshCastBars() end
+    if event=="PLAYER_LOGIN" then
+        A.RefreshCastBars()
+        if A.RefreshPetNames then A.RefreshPetNames() end
+    end
     if event=="PLAYER_LOGIN" and not TauriChineseSettings.welcomeSeen then A.ShowWelcome() end
 end)
 install()
@@ -286,11 +294,13 @@ SlashCmdList.TAURICHINESE=function(command)
         TauriChineseSettings.enabled=false
         A.RefreshTracker()
         A.RefreshCastBars()
+        if A.RefreshPetNames then A.RefreshPetNames() end
         print("TauriChinese：已关闭，重新打开窗口后生效。")
     elseif command=="on" or command=="开" then
         TauriChineseSettings.enabled=true
         A.RefreshTracker()
         A.RefreshCastBars()
+        if A.RefreshPetNames then A.RefreshPetNames() end
         print("TauriChinese：已开启，已有中文保持不变，缺失译文保留原文。")
     elseif command=="about" or command=="关于" then
         A.ShowWelcome()

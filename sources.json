@@ -520,5 +520,88 @@
       "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
       "sha256": "cdc0b9c725d9e712c2d28bce4dec76d1008678bb8b02c74afd7ef2d1a9df9df2"
     }
-  }
+  },
+  "clientTables": [
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "943e4118b4cdc59f1447dfc05ebfadcb31cab6627fce2cd7ef517a4b8b014335"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "214f755429b8eb2fd9bfec924cc2139091f751279d879a96129c772854c1802f"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "6049932f5630afad9caa313244a9f6d0ca4cb99489c81e3f1d2cfc5929e5dfdb"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "e9acd9ebbeb2b6fbfb8613e5045db6e276bdeab8a86bdcb57d02cda71fa7502f"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "1171eafa54330abb5848bede8553c62f976800d443cfe5c8968bb89643d70a99"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "7a2ddd6f9c0bbc9a91b893a243880d47d1b307a2d778ad6333ff9fb56ef5e146"
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "9b4a61c097e139eea462e4da0549d6583d364c4b4ce4f1f73a4664bbfda7437d"
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "3f84d8ce2ef1f8c28f2f3e781307a6068365f36c3efe3320a15710acb40c0f5f"
+    },
+    {
+      "table": "CreatureFamily",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "CreatureFamily-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "bc9a22918cdffebded59582c9e42a168a83e1ba8ae5e280a41cb5b836e7b346a"
+    }
+  ]
 }
