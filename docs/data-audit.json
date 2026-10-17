@@ -1,5 +1,5 @@
 {
-  "version": "1.1.3",
+  "version": "1.1.4",
   "counts": {
     "quests": 21376,
     "questFields": {
@@ -10,7 +10,7 @@
       "Completion": 8412,
       "Progress": 6112
     },
-    "npcBroadcastRecords": 125416,
+    "npcBroadcastRecords": 125415,
     "broadcastChineseRecords": 125929,
     "broadcastConflictingRecords": 11,
     "bookPages": 1705,
@@ -56,11 +56,11 @@
     "gossipOptionsWithoutSource": 58,
     "npcReferencedBroadcastRecords": 24339,
     "Gossip": {
-      "fingerprints": 1005001,
+      "fingerprints": 1004996,
       "ambiguousSkipped": 13846,
       "locales": {
         "zhCN": 997033,
-        "zhTW": 7968
+        "zhTW": 7963
       }
     },
     "Books": {

@@ -18,15 +18,18 @@ local function hookScript(widget, event, callback)
     events[event]=true
 end
 
-local function currentQuestID()
+local function currentQuest()
     if QuestInfoFrame and QuestInfoFrame.questLog then
-        if GetQuestLogTitle and GetQuestLogSelection then return select(8,GetQuestLogTitle(GetQuestLogSelection())) end
-    elseif GetQuestID then return GetQuestID() end
+        if GetQuestLogTitle and GetQuestLogSelection then
+            local title,_,_,_,_,_,_,id=GetQuestLogTitle(GetQuestLogSelection())
+            return id,title
+        end
+    elseif GetQuestID then return GetQuestID(),GetTitleText and GetTitleText() end
 end
 
 function A.UpdateQuestInfo()
-    local id=currentQuestID()
-    A.Apply(QuestInfoTitleHeader,"Quests",id,"Title")
+    local id,title=currentQuest()
+    A.Apply(QuestInfoTitleHeader,"Quests",id,"Title",title)
     A.Apply(QuestInfoDescriptionText,"Quests",id,"Description")
     A.Apply(QuestInfoObjectivesText,"Quests",id,"Objectives")
     A.Apply(QuestInfoRewardText,"Quests",id,"Completion")
@@ -37,7 +40,7 @@ end
 
 function A.UpdateProgress()
     local id=GetQuestID and GetQuestID()
-    A.Apply(QuestProgressTitleText,"Quests",id,"Title")
+    A.Apply(QuestProgressTitleText,"Quests",id,"Title",GetTitleText and GetTitleText())
     A.Apply(QuestProgressText,"Quests",id,"Progress")
 end
 
@@ -53,11 +56,15 @@ function A.UpdateGossip()
 end
 
 function A.UpdateGreeting()
-    A.Apply(GreetingText,"Gossip")
-    for i=1,32 do
+    local changed=A.Apply(GreetingText,"Gossip")
+    for i=1,MAX_NUM_QUESTS or 32 do
         local button=_G["QuestTitleButton"..i]
-        if button and button:IsShown() then A.Apply(button,"Titles") end
+        if button and button:IsShown() and A.Apply(button,"Titles") then
+            button:SetHeight(button:GetTextHeight()+2)
+            changed=true
+        end
     end
+    if changed and QuestGreetingScrollFrame and QuestGreetingScrollFrame.UpdateScrollChildRect then QuestGreetingScrollFrame:UpdateScrollChildRect() end
 end
 
 function A.UpdateQuestList()
@@ -65,9 +72,9 @@ function A.UpdateQuestList()
     if not contents then return end
     for _,button in ipairs(contents.Titles or {}) do
         if button:IsShown() and button.questLogIndex and button.Text then
-            local id=select(8,GetQuestLogTitle(button.questLogIndex))
+            local title,_,_,_,_,_,_,id=GetQuestLogTitle(button.questLogIndex)
             local oldHeight=button.Text:GetStringHeight()
-            if A.Apply(button.Text,"Quests",id,"Title") then
+            if A.Apply(button.Text,"Quests",id,"Title",title) then
                 button:SetHeight(button:GetHeight()+button.Text:GetStringHeight()-oldHeight)
             end
         end

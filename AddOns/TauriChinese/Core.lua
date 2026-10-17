@@ -3,6 +3,9 @@ local A, D = TauriChinese, TauriChineseDB
 local tags = { html=true, body=true, p=true, br=true, h1=true, h2=true, h3=true, h4=true, h5=true, h6=true, font=true, img=true }
 local classes = { WARRIOR="战士", PALADIN="圣骑士", HUNTER="猎人", ROGUE="潜行者", PRIEST="牧师", DEATHKNIGHT="死亡骑士", SHAMAN="萨满祭司", MAGE="法师", WARLOCK="术士", MONK="武僧", DRUID="德鲁伊", DEMONHUNTER="恶魔猎手" }
 local races = { Human="人类", Orc="兽人", Dwarf="矮人", NightElf="暗夜精灵", Scourge="亡灵", Tauren="牛头人", Gnome="侏儒", Troll="巨魔", Goblin="地精", BloodElf="血精灵", Draenei="德莱尼", Worgen="狼人", Pandaren="熊猫人", Nightborne="夜之子", HighmountainTauren="至高岭牛头人", VoidElf="虚空精灵", LightforgedDraenei="光铸德莱尼" }
+-- Server text can contain English substitutions even on a Chinese client.
+local englishClasses = { WARRIOR="Warrior", PALADIN="Paladin", HUNTER="Hunter", ROGUE="Rogue", PRIEST="Priest", DEATHKNIGHT="Death Knight", SHAMAN="Shaman", MAGE="Mage", WARLOCK="Warlock", MONK="Monk", DRUID="Druid", DEMONHUNTER="Demon Hunter" }
+local englishRaces = { Human="Human", Orc="Orc", Dwarf="Dwarf", NightElf="Night Elf", Scourge="Undead", Tauren="Tauren", Gnome="Gnome", Troll="Troll", Goblin="Goblin", BloodElf="Blood Elf", Draenei="Draenei", Worgen="Worgen", Pandaren="Pandaren", Nightborne="Nightborne", HighmountainTauren="Highmountain Tauren", VoidElf="Void Elf", LightforgedDraenei="Lightforged Draenei" }
 A.font = "Interface\\AddOns\\TauriChinese\\Media\\LXGWWenKaiLite-Regular.ttf"
 
 local function strip(text)
@@ -39,9 +42,11 @@ end
 
 local function playerTokens(text)
     local name = UnitName and UnitName("player")
-    local class = UnitClass and UnitClass("player")
-    local race = UnitRace and UnitRace("player")
-    for _, pair in ipairs({{name,"$N"},{class,"$C"},{race,"$R"}}) do
+    local class, classToken, race, raceToken
+    if UnitClass then class,classToken=UnitClass("player") end
+    if UnitRace then race,raceToken=UnitRace("player") end
+    for _, pair in ipairs({{name,"$N"},{class,"$C"},{race,"$R"},
+        {englishClasses[classToken],"$C"},{englishRaces[raceToken],"$R"}}) do
         if pair[1] then
             text = replaceLiteral(text, pair[1], pair[2])
             text = replaceLiteral(text, pair[1]:lower(), pair[2])
@@ -54,13 +59,11 @@ end
 function A.IsChinese(text)
     if type(text) ~= "string" then return false end
     text = strip(text)
-    local name = UnitName and UnitName("player")
-    if name then
-        local withoutName = replaceLiteral(text,name,"")
-        -- A Chinese name embedded in an English sentence is not Chinese prose.
-        -- A field consisting only of the name is conservatively left untouched.
-        if withoutName:find("%a") or withoutName:find("[\128-\255]") then text=withoutName end
-    end
+    if not text:find("[\128-\255]") then return false end
+    local withoutTokens = playerTokens(text):gsub("%$[NCR]", "")
+    -- A localized player name/class/race in English prose is not a Chinese
+    -- sentence. Standalone Chinese names and labels remain untouched.
+    if withoutTokens:find("%a") or withoutTokens:find("[\128-\255]") then text=withoutTokens end
     local i = 1
     while i <= #text do
         local a,b,c,d = text:byte(i,i+3)
@@ -77,10 +80,29 @@ function A.IsChinese(text)
     return false
 end
 
+local function substituteTokens(text, values)
+    local result, pos = {}, 1
+    while true do
+        local first = text:find("$",pos,true)
+        if not first then result[#result+1]=text:sub(pos);break end
+        result[#result+1]=text:sub(pos,first-1)
+        local token=text:sub(first+1,first+1):lower()
+        if values[token]~=nil then
+            result[#result+1]=values[token];pos=first+2
+            -- Some sources close $N/$C/$R with a dollar. It cannot consume
+            -- the start of the next token, including unsupported tokens.
+            if token~="b" and text:sub(pos,pos)=="$" and not text:sub(pos+1,pos+1):match("%a") then pos=pos+1 end
+        else
+            result[#result+1]="$";pos=first+1
+        end
+    end
+    return table.concat(result)
+end
+
 function A.Normalize(text, dynamic)
     text = strip(text or "")
     if dynamic then text = playerTokens(text) end
-    text = text:gsub("%$[Bb]", " "):gsub("%$([NnCcRr])%$?", function(token) return "~"..token:lower().."~" end)
+    text = substituteTokens(text,{n="~n~",c="~c~",r="~r~",b=" "})
     return text:lower():gsub("%s", "")
 end
 
@@ -121,34 +143,49 @@ function A.Render(text)
     local localizedClass, classToken, localizedRace, raceToken
     if UnitClass then localizedClass,classToken=UnitClass("player") end
     if UnitRace then localizedRace,raceToken=UnitRace("player") end
-    local values={n=(UnitName and UnitName("player")) or "", c=classes[classToken] or localizedClass or "", r=races[raceToken] or localizedRace or ""}
-    text=text:gsub("%$([NnCcRr])%$?",function(token) return values[token:lower()] end):gsub("%$[Bb]","\n")
+    local values={n=(UnitName and UnitName("player")) or "", c=classes[classToken] or localizedClass or "", r=races[raceToken] or localizedRace or "", b="\n"}
+    text=substituteTokens(text,values)
     if text:find("%$%a") then return nil end -- Preserve the original instead of exposing unsupported tokens.
     return text
 end
 
+local function findObjective(original)
+    local replacement=A.Find("Objectives",original)
+    if replacement then return replacement end
+    local label=original:gsub("^|c%x%x%x%x%x%x%x%x",""):gsub("|r$","")
+    local suffix,completion=""," ("..(COMPLETE or "Complete")..")"
+    -- Blizzard appends this client-localized status after the server text.
+    -- Remove only that exact suffix before language detection and lookup.
+    if label:sub(-#completion)==completion then
+        label=label:sub(1,-#completion-1);suffix=completion
+    end
+    replacement=A.Find("Objectives",label)
+    if not replacement then
+        local base,counter=label:match("^(.-)(%s*:%s*%d+%s*/%s*%d+%s*)$")
+        if base then replacement=A.Find("Objectives",base);suffix=counter..suffix end
+    end
+    return replacement,suffix
+end
+
 function A.Translate(category, original, questID, field)
-    if type(original)~="string" or original=="" or A.IsChinese(original) then return original,false end
-    local replacement
-    if category=="Quests" then
+    if type(original)~="string" or original=="" then return original,false end
+    local replacement,suffix
+    if category=="Objectives" then
+        replacement,suffix=findObjective(original)
+    elseif A.IsChinese(original) then
+        return original,false
+    elseif category=="Quests" then
         local record=D.Quests[tonumber(questID)]
         replacement=record and record[field]
         if not replacement and field=="Title" then replacement=A.Find("Titles",original) end
         if not replacement and (field=="Progress" or field=="Completion") then replacement=A.Find("Gossip",original) end
     else
         replacement=A.Find(category,original)
-        if not replacement and category=="Objectives" then
-            local label,counter=original:match("^(.-)(%s*:%s*%d+%s*/%s*%d+.*)$")
-            if label then
-                local translated=A.Find(category,label)
-                if translated then replacement=translated..counter end
-            end
-        end
     end
     if not replacement or not A.IsChinese(replacement) then return original,false end
     replacement=A.Render(replacement)
     if not replacement or replacement=="" then return original,false end
-    return replacement,true
+    return replacement..(suffix or ""),true
 end
 
 function A.SetFont(widget, html)
@@ -165,13 +202,25 @@ function A.SetFont(widget, html)
     end
 end
 
-function A.Apply(widget, category, questID, field)
+function A.Apply(widget, category, questID, field, sourceText)
     if not widget or not widget.GetText or not widget.SetText then return false end
     local original=widget:GetText()
-    local translated,changed=A.Translate(category,original,questID,field)
+    local first,last
+    if sourceText~=nil then
+        if type(original)~="string" or type(sourceText)~="string" or sourceText=="" then return false end
+        first,last=original:find(sourceText,1,true)
+        if not first then return false end -- The widget no longer shows this quest.
+    end
+    local translated,changed=A.Translate(category,sourceText or original,questID,field)
     if changed then
-        local color=original:match("^(|c%x%x%x%x%x%x%x%x)")
-        if color and original:sub(-2)=="|r" then translated=color..translated.."|r" end
+        if first then
+            -- Replace only the raw title returned by the quest API; preserve
+            -- level/party/ID prefixes, status suffixes and existing markup.
+            translated=original:sub(1,first-1)..translated..original:sub(last+1)
+        else
+            local color=original:match("^(|c%x%x%x%x%x%x%x%x)")
+            if color and original:sub(-2)=="|r" then translated=color..translated.."|r" end
+        end
         A.SetFont(widget)
         widget:SetText(translated)
     end
