@@ -26,10 +26,26 @@ export function selectWorldObjectNames(candidates){
   for(const [key,text] of index.entries){
     const locale=index.localeFor(key);
     const row=accepted.get(key).filter(r=>r.locale===locale&&r.text===text).sort((a,b)=>b.priority-a.priority)[0];
-    records.push({key,text,locale,source:row.source,id:row.id,verifiedBuild:Number(row.verifiedBuild),
+    records.push({key,text,locale,source:row.source,...(row.originalSource?{originalSource:row.originalSource}:{}),id:row.id,verifiedBuild:Number(row.verifiedBuild),
       quality:row.kind==='client-db2'?'client-db2':row.priority===1?'build-marked':'community-unverified'});
   }
   return {index,records};
+}
+
+export function pairSQLWorldObjectNames(sqlRows){
+  const originals=new Map(sqlRows.filter(r=>r.table==='gameobject_template').map(r=>[r.source+':'+r.id,r]));
+  const candidates=[];
+  for(const row of sqlRows){
+    if(row.table!=='gameobject_template_locale')continue;
+    const original=originals.get((row.baseFile??row.source)+':'+row.id);
+    if(!original||Number(original.verifiedBuild)>LEGION_BUILD)continue;
+    // A separate locale patch must name an explicit snapshot and the reviewed
+    // original. An ID alone is insufficient evidence across SQL releases.
+    if(row.baseFile&&(!row.expectedOriginal||row.expectedOriginal!==original.name||Number(original.verifiedBuild)<0))continue;
+    candidates.push({...row,original:original.name,text:row.name,kind:'sql',
+      ...(row.baseFile?{originalSource:row.baseFile}:{})});
+  }
+  return candidates;
 }
 
 export function buildWorldObjectNames({root,input,manifest,version,sqlRows}){
@@ -48,13 +64,7 @@ export function buildWorldObjectNames({root,input,manifest,version,sqlRows}){
     source:sources.find(s=>s.locale===locale).file});
   // Pair server object names by ID inside the same snapshot, never across
   // client DB2 IDs or different SQL releases with possibly changed identities.
-  const originals=new Map(sqlRows.filter(r=>r.table==='gameobject_template').map(r=>[r.source+':'+r.id,r]));
-  for(const row of sqlRows){
-    if(row.table!=='gameobject_template_locale')continue;
-    const original=originals.get(row.source+':'+row.id);
-    if(!original||Number(original.verifiedBuild)>LEGION_BUILD)continue;
-    candidates.push({...row,original:original.name,text:row.name,kind:'sql'});
-  }
+  candidates.push(...pairSQLWorldObjectNames(sqlRows));
   const {index,records}=selectWorldObjectNames(candidates);
   const output=path.join(root,'AddOns/LegionChinese/Data'),file='WorldObjects_01.lua';
   const lines=[...index.entries].sort((a,b)=>a[0].localeCompare(b[0],'en')).map(([key,text])=>`D.WorldObjects[${luaString(key)}]=${luaString(text)}`);

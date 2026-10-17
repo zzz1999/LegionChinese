@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
-import {selectWorldObjectNames} from '../scripts/world-objects.mjs';
+import {selectWorldObjectNames,pairSQLWorldObjectNames} from '../scripts/world-objects.mjs';
 import {nameKey} from '../scripts/client-names.mjs';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 
@@ -37,11 +37,26 @@ test('shipped world-name data includes the reported gate and agrees with its pin
   const gate=audit.records.find(r=>r.key===nameKey('Death Gate'));
   assert.equal(gate.text,'死亡之门');assert.equal(gate.id,190942);assert.equal(gate.verifiedBuild,18019);
   assert.equal(gate.quality,'build-marked');
+  const ashran=audit.records.find(r=>r.key===nameKey('Portal to Ashran'));
+  assert.equal(ashran.text,'到阿什兰的传送门');assert.equal(ashran.id,233610);
+  assert.equal(ashran.source,'2018_01_11_gameobject_template_locale.sql');
+  assert.equal(ashran.originalSource,'TDB_world_735.00_2018_02_19.sql');
+  assert.equal(audit.records.some(r=>r.key===nameKey('HERETICS WILL BURN')),false);
   assert.equal(audit.sources.length,3);
   for(const source of audit.sources)assert.equal(source.sha256,manifest.worldObjectTables.find(s=>s.file===source.file).sha256);
   for(const source of audit.sqlSources)assert.equal(source.sha256,manifest.sql.find(s=>s.file===source.file).sha256);
   const data=fs.readFileSync(new URL('Data/WorldObjects_01.lua',addon),'utf8');
   assert.equal(data.split('\n').filter(l=>l.startsWith('D.')).length,audit.counts.fingerprints);
+});
+
+test('a locale-only object patch requires an explicit snapshot and an exact reviewed original',()=>{
+  const base={table:'gameobject_template',id:233610,name:'Portal to Ashran',verifiedBuild:22522,source:'base.sql'};
+  const patch={table:'gameobject_template_locale',id:233610,name:'到阿什兰的传送门',locale:'zhCN',verifiedBuild:18019,
+    source:'patch.sql',baseFile:'base.sql',expectedOriginal:'Portal to Ashran'};
+  assert.equal(pairSQLWorldObjectNames([base,patch])[0].source,'patch.sql');
+  for(const changes of [{baseFile:undefined},{baseFile:'other.sql'},{expectedOriginal:undefined},{expectedOriginal:'Different object'},{id:1}])
+    assert.deepEqual(pairSQLWorldObjectNames([base,{...patch,...changes}]),[]);
+  assert.deepEqual(pairSQLWorldObjectNames([{...base,name:'Different object'},patch]),[]);
 });
 
 test('world tooltip translates Death Gate without altering native fonts, other lines or its handler',()=>run(`
@@ -56,6 +71,8 @@ test('world tooltip translates Death Gate without altering native fonts, other l
   GameTooltipTextLeft1:SetText("Death Gate");GameTooltip:Fire("OnUpdate",0.016)
   assert(GameTooltipTextLeft1.text=="死亡之门")
   WorldHover("Unknown custom portal");assert(GameTooltipTextLeft1.text=="Unknown custom portal")
+  WorldHover("Portal to Ashran");assert(GameTooltipTextLeft1.text=="到阿什兰的传送门")
+  WorldHover("HERETICS WILL BURN");assert(GameTooltipTextLeft1.text=="HERETICS WILL BURN")
   WorldHover("死亡之門");assert(GameTooltipTextLeft1.text=="死亡之門")
   WorldHover("|cffffffffDeath Gate|r");assert(GameTooltipTextLeft1.text=="|cffffffffDeath Gate|r")
 `));

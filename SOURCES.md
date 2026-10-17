@@ -54,13 +54,29 @@
 
 ## 场景物件名称
 
-1.2.0 起单独处理 GameObject 的世界鼠标提示。优先使用 Wago.Tools 存档的 [GameObjects 7.3.5.26972](https://wago.tools/db2/GameObjects?build=7.3.5.26972) 中 enUS、zhCN、zhTW 的名称字段，再使用上述两个 7.3.5 world 库的 `gameobject_template` 与 `gameobject_template_locale` 补充。SQL 原文与中文只在同一个源文件内按物件 ID 配对，不把客户端 DB2 的 ID 当成服务器模板 ID。
+1.2.0 起单独处理 GameObject 的世界鼠标提示。优先使用 Wago.Tools 存档的 [GameObjects 7.3.5.26972](https://wago.tools/db2/GameObjects?build=7.3.5.26972) 中 enUS、zhCN、zhTW 的名称字段，再使用上述两个 7.3.5 world 库的 `gameobject_template` 与 `gameobject_template_locale` 补充。完整 SQL 库内按同一源文件的物件 ID 配对；单独语言补丁须指定基础快照、审核过的物件 ID 和完全相同的英文原名。不把客户端 DB2 的 ID 当成服务器模板 ID。
 
 同一种中文内，客户端 DB2 优先，其次为有正数 VerifiedBuild 的记录，最后是未核实社区记录；高于 26972 的条目不导入。同优先级同名对应不同译文时排除该语言，简体无可用匹配才尝试繁体。不导入动态占位符或带界面标记的名字，匹配时也不代入玩家姓名。原文与 SQL 不随 AddOns 分发。
 
 截图中的 `Death Gate` 使用服务器物件 **190942** 的简体“死亡之门”，繁体记录为“死亡之門”，两者标记为 **18019**；7.3.5 库保留了这条较早的客户端记录。此来源标记不能代替逐字官方核实。它与法术 **50977** 的“黑锋之门”是不同名称字段，不互相套用。完整记录、选择结果及源文件哈希见 [docs/world-object-audit.json](docs/world-object-audit.json)。
 
 运行时仅后置更新世界场景中原版 GameTooltip 的名称，排除单位、物品、技能及界面控件提示。7.3.5 没有对应的 `OnTooltipSetGameObject` 事件，因此使用实际提示框的 `OnShow`、`OnUpdate`，并在隐藏、清空或切换内容时丢弃缓存。参考 `FrameXML/GameTooltip.lua` 和 `GameTooltip.xml`；不替换其原始处理函数或对象交互接口。
+
+1.2.2 补充 `Portal to Ashran`：从同一固定提交的 [MagicStorm gameobject_template_locale](https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_01_11_gameobject_template_locale.sql#L4344) 读取物件 **233610、237733** 的简体“到阿什兰的传送门”（VerifiedBuild 18019）。只与清单指定的 2018-02-19 基础库及审核过的英文名称配对；最终两条同名记录合并为一个名称指纹，原文与译文源文件分别写入审计。此记录是社区保存的带版本标记资料，不将它描述为已经逐字核实的官方译文。
+
+2026-10-17 的截图还反馈 `HERETICS WILL BURN`（现有服务器模板 221526）。两个基础库没有可用简繁中文名称，英文记录标记为 -18019；当前客户端 GameObjects 存档也未提供对应名称。没有据此自译、套用别的告示或将负数标记当作可靠采集记录，仍保留原文。
+
+## 钥石物品说明
+
+1.2.2 单独加入物品 **138019** 的使用说明。英文全文与 [DestinyCore 保存的 7.3.5 热修复记录](https://github.com/slash0x/DestinyCore/blob/2d631f4e79b1d1dd0bcc674f97436ae4785700e0/sql/old/7/hotfixes/ashamane/2018_06_10_00_hotfixes.sql#L3) 一致，源记录标记为 26654。繁体取自 [Wowhead 同一物品的数据库条目](https://www.wowhead.com/tw/item=138019/%E5%82%B3%E5%A5%87%E9%91%B0%E7%9F%B3) 的物品说明字段；没有使用评论、机器翻译或把后来资料片的不同物品 ID 当成 7.3.5 资料。
+
+该网页没有提供这一中文字段的采集 build，所以明确标为 `community-item-database`、`verifiedBuild: null`，不能声称已逐字核实为 7.3.5 官中。未找到同一条目的可核对简体记录，按约定使用繁体原文。审核摘录与来源保存在 `data/item-descriptions.json`，自身 SHA-256 固定在 `sources.json`；选择结果见 [docs/item-description-audit.json](docs/item-description-audit.json)。此处只摘录一条说明，网页原文和英文资料不随 AddOns 分发。
+
+运行时要求物品 ID 和完整说明指纹同时匹配，支持 GameTooltip 与聊天链接使用的 ItemRefTooltip，保留外围引号、整行颜色及客户端字体。`item:` 与 `keystone:` 链接通过原版 SetHyperlink 的安全后置挂钩识别，背包通过 GetItem 或 SetBagItem 后的 GetContainerItemID 识别；不修改链接、聊天文字、层数、词缀或服务器物品。依据为同一 7.3.5 界面快照的 `FrameXML/ItemRef.lua`、`ItemRef.xml` 和 `ContainerFrame.lua`。
+
+## 聊天物品链接
+
+聊天普通物品链接不使用网页译名表：通过 7.3.5 原版 `ChatFrame_AddMessageEventFilter` 处理本机显示，使用完整 `item:` 参数向客户端 `GetItemInfo` 查询名称。只采用返回的中文名称，保留超链接参数、颜色、发言正文及全部事件参数；无缓存、非中文、已有中文或特殊链接时保留原文。对应接口依据为上述界面快照的 `FrameXML/ChatFrame.lua`。不会调用发送聊天接口，开关只影响之后显示的消息，不重写聊天历史。
 
 ## 字体
 
@@ -77,7 +93,7 @@
 
 读条对照 `FrameXML/CastingBarFrame.lua`、XML 及 `PetFrame.lua`。`UnitFrame.lua` 的施法消耗预测明确读取 `UnitCastingInfo` 的第 10 个返回值作为法术 ID；若客户端未提供，则核对起始事件中的第 5 个参数，不能把第 4 个参数的施法执行编号当作法术 ID。宠物名称对照 `UnitFrame.lua`、`CompactUnitFrame.lua`、`UnitPopup.lua` 和 `AddOns/Blizzard_NamePlates/Blizzard_NamePlates.lua`，只后置更新现有控件，跳过禁止插件访问的姓名板，不替换 `UnitName` 或更改名字、姓名板设置。
 
-所有参与构建的数据文件与字体的固定 URL、SHA-256 均列于 `sources.json`。生成产物只保留中文值与匹配指纹。
+下载数据文件与字体的固定 URL、SHA-256 均列于 `sources.json`；本地审核摘录也固定自身 SHA-256，其逐项外部来源在摘录与审计文件中记录。生成产物只保留中文值与匹配指纹。
 
 ## 客户端语言设置
 

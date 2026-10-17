@@ -1,0 +1,35 @@
+{
+  "version": "1.2.2",
+  "reviewedSource": {
+    "file": "data/item-descriptions.json",
+    "sha256": "573b369aaef2f2bc3aebd7d8bfd19f3917369695089f851c59a471c000086012"
+  },
+  "counts": {
+    "items": 1,
+    "locales": {
+      "zhCN": 0,
+      "zhTW": 1
+    }
+  },
+  "records": [
+    {
+      "itemID": 138019,
+      "key": "d0d4b930a0427a35:60",
+      "text": "在傳奇難度中，放置在地城裡的能量之泉內。",
+      "locale": "zhTW",
+      "originalSource": {
+        "url": "https://raw.githubusercontent.com/slash0x/DestinyCore/2d631f4e79b1d1dd0bcc674f97436ae4785700e0/sql/old/7/hotfixes/ashamane/2018_06_10_00_hotfixes.sql",
+        "verifiedBuild": 26654,
+        "sha256": "0e7faff0574fae72881e112151c013ea3c3ba986b46374251d13077e34a5060b"
+      },
+      "source": {
+        "locale": "zhTW",
+        "text": "在傳奇難度中，放置在地城裡的能量之泉內。",
+        "url": "https://www.wowhead.com/tw/item=138019/%E5%82%B3%E5%A5%87%E9%91%B0%E7%9F%B3",
+        "provenance": "community-item-database",
+        "verifiedBuild": null,
+        "retrieved": "2026-10-17"
+      }
+    }
+  ]
+}

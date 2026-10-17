@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "counts": {
     "quests": 21376,
     "questFields": {
@@ -140,16 +140,23 @@
       }
     },
     "worldObjects": {
-      "fingerprints": 6305,
+      "fingerprints": 6306,
       "locales": {
-        "zhCN": 5075,
+        "zhCN": 5076,
         "zhTW": 1230
       },
       "ambiguousSkipped": 10,
       "quality": {
         "client-db2": 1058,
-        "build-marked": 5239,
+        "build-marked": 5240,
         "community-unverified": 8
+      }
+    },
+    "itemDescriptions": {
+      "items": 1,
+      "locales": {
+        "zhCN": 0,
+        "zhTW": 1
       }
     }
   },
@@ -735,6 +742,19 @@
           "verifiedBuild": 25996
         }
       ]
+    },
+    {
+      "file": "2018_01_11_gameobject_template_locale.sql",
+      "sha256": "a7437fd2ebce79ffe7b2c5d7892c1688423c1c205368b43f1a1a772bcbf09990",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_01_11_gameobject_template_locale.sql",
+      "kind": "world-object-locales",
+      "provenance": "community-build-marked",
+      "afterLegionSkipped": 0,
+      "baseFile": "TDB_world_735.00_2018_02_19.sql",
+      "objectIDs": [
+        233610,
+        237733
+      ]
     }
   ],
   "generatedFiles": [
@@ -830,6 +850,7 @@
     "Data\\Spells_02.lua",
     "Data\\Spells_03.lua",
     "Data\\Spells_04.lua",
-    "Data\\WorldObjects_01.lua"
+    "Data\\WorldObjects_01.lua",
+    "Data\\ItemDescriptions_01.lua"
   ]
 }

@@ -9,6 +9,7 @@ import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from
 import {buildClientNames} from './client-names.mjs';
 import {buildWorldObjectNames} from './world-objects.mjs';
 import {capturedQuestTables,capturedQuestDialogue} from './quest-dialogue.mjs';
+import {buildItemDescriptions} from './item-descriptions.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -26,7 +27,8 @@ function collect(table,record,update,source){
   const locale=localeOf(record);
   if(table==='gameobject_template'||table==='gameobject_template_locale'){
     if(!locale||CHINESE_LOCALES.includes(locale))worldObjectRows.push({table,id:Number(record.entry),locale,
-      name:record.name,verifiedBuild:Number(record.VerifiedBuild),source:source.file});
+      name:record.name,verifiedBuild:Number(record.VerifiedBuild),source:source.file,
+      ...(source.kind==='world-object-locales'?{baseFile:source.baseFile,expectedOriginal:source.objectNames?.[record.entry]}:{})});
     return;
   }
   record={...record,_source:source.file,_provenance:source.provenance};
@@ -57,6 +59,14 @@ for(const source of manifest.sql){
   const audit={file:source.file,sha256,url:source.url,kind:source.kind,provenance:source.provenance,afterLegionSkipped:0};
   sourceAudit.push(audit);
   if(['hotfixes','broadcast-patch'].includes(source.kind))continue;
+  if(source.kind==='world-object-locales'){
+    if(!manifest.sql.some(s=>s.file===source.baseFile&&s.kind==='world')||!source.objectNames)throw Error('Missing object patch base');
+    audit.baseFile=source.baseFile;audit.objectIDs=Object.keys(source.objectNames).map(Number);
+    await readSQL(file,new Set(['gameobject_template_locale']),(table,row)=>{
+      if(Object.hasOwn(source.objectNames,row.entry))collect(table,row,false,source);
+    });
+    continue;
+  }
   if(source.kind==='quest-dialogue-capture'){
     audit.locale=source.locale;audit.captureBuild=source.captureBuild;audit.imported=[];
     await readSQL(file,capturedQuestTables,(table,row)=>{
@@ -256,7 +266,9 @@ generated.push(...clientNames.generated);
 counts.clientNames=clientNames.audit.counts;
 const worldObjects=buildWorldObjectNames({root,input,manifest,version,sqlRows:worldObjectRows});
 generated.push(...worldObjects.generated);counts.worldObjects=worldObjects.audit.counts;
-const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','Welcome.lua','UI.lua',''];
+const itemDescriptions=buildItemDescriptions({root,manifest,version});
+generated.push(...itemDescriptions.generated);counts.itemDescriptions=itemDescriptions.audit.counts;
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ChatLinks.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

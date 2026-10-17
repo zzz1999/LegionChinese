@@ -275,6 +275,8 @@ local function install()
         hookScript(GameTooltip,"OnHide",A.ClearWorldObjectTooltip)
         hookScript(GameTooltip,"OnTooltipCleared",A.ClearWorldObjectTooltip)
     end
+    if A.InstallItemTooltips then A.InstallItemTooltips() end
+    if A.InstallChatItemLinks then A.InstallChatItemLinks() end
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -300,6 +302,7 @@ SlashCmdList.LEGIONCHINESE=function(command)
     if command=="off" or command=="关" then
         LegionChineseSettings.enabled=false
         if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
+        if A.RefreshItemTooltips then A.RefreshItemTooltips() end
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
@@ -307,6 +310,7 @@ SlashCmdList.LEGIONCHINESE=function(command)
     elseif command=="on" or command=="开" then
         LegionChineseSettings.enabled=true
         if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
+        if A.RefreshItemTooltips then A.RefreshItemTooltips() end
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end

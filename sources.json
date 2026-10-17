@@ -525,6 +525,18 @@
       "locale": "zhCN",
       "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_02_25_99_world_04.sql",
       "sha256": "6a4e6c86134bb534f5bdaff136b80e95495c726e89d34e5a67227b8ccc6e7db9"
+    },
+    {
+      "file": "2018_01_11_gameobject_template_locale.sql",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_01_11_gameobject_template_locale.sql",
+      "kind": "world-object-locales",
+      "provenance": "community-build-marked",
+      "baseFile": "TDB_world_735.00_2018_02_19.sql",
+      "objectNames": {
+        "233610": "Portal to Ashran",
+        "237733": "Portal to Ashran"
+      },
+      "sha256": "a7437fd2ebce79ffe7b2c5d7892c1688423c1c205368b43f1a1a772bcbf09990"
     }
   ],
   "archive": {
@@ -656,5 +668,9 @@
       "url": "https://wago.tools/db2/GameObjects/csv?build=7.3.5.26972&locale=zhTW",
       "sha256": "8815186b3bdd30c0a477f58c7ba1a2da550d2ba51090a710fd099801e54e7cfb"
     }
-  ]
+  ],
+  "itemDescriptions": {
+    "file": "data/item-descriptions.json",
+    "sha256": "573b369aaef2f2bc3aebd7d8bfd19f3917369695089f851c59a471c000086012"
+  }
 }
