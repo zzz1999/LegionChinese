@@ -2,7 +2,7 @@
 ## Title: TauriChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 0.1.3
+## Version: 1.1.3
 ## SavedVariables: TauriChineseSettings
 
 Bootstrap.lua
