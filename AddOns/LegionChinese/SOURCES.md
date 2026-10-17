@@ -19,6 +19,13 @@
 
 ### 选择与核验规则
 
+1.2.1 补充布林顿每日礼物的交任务正文。旧导入只读取 `quest_offer_reward_locale`，漏掉了上游将中文写入普通 `quest_offer_reward` 表的采集记录。本次只按清单中审核过的任务 ID、语言和采集版本导入正文，不执行 SQL，也不导入奖励物品或其他服务器逻辑：
+
+- **布林顿 5000（34774）**：[MagicStorm 2018_03_31_99_01_world.sql](https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_03_31_99_01_world.sql#L378)。文件头记录 WowPacketParser、`Detected locale: zhCN` 和 7.3.5.26124，目标行 VerifiedBuild 为 26124，标记为 `client-sniff`。只将 `RewardText` 转入该任务的 Completion 字段。
+- **布林顿 6000（40753）**：[MagicStorm 2018_02_25_99_world_04.sql](https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_02_25_99_world_04.sql#L1641)。文件头及目标行记录 7.3.5.25996；正文为简体中文，但文件头未声明采集语言，保守标为 `community-capture`，不声称已逐字核实官中。
+
+两份文件均固定上述提交及 SHA-256。未在清单内的任务、缺少正文的版本更新、非中文或超出目标版本的记录不导入。`docs/data-audit.json` 的对应源条目列出实际导入 ID、表和版本；原始 SQL 不随 AddOns 分发。布林顿 3000 的搏击俱乐部任务没有套用领取礼物的正文。
+
 感谢 TrinityCore、The Legion Preservation Project、MagicStorm、AzerothCore 的维护者和数据库贡献者。相关仓库包含 GNU GPL 许可。游戏名称、故事、人物与原始文本的权利归各自权利人；本项目不将社区数据库等同于暴雪发布或授权的完整官方译文库。
 
 - 所有类别均按“可用 zhCN → 可用 zhTW → 原文”处理，繁体译文直接来自上游 zhTW 字段，不经机器转换。任务逐字段回退，全文索引逐键回退。

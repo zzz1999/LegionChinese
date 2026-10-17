@@ -8,6 +8,7 @@ import {LEGION_BUILD,localeOf,idOf,menuKey,broadcastText,selectBroadcast,compati
 import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from './fallback.mjs';
 import {buildClientNames} from './client-names.mjs';
 import {buildWorldObjectNames} from './world-objects.mjs';
+import {capturedQuestTables,capturedQuestDialogue} from './quest-dialogue.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -56,6 +57,16 @@ for(const source of manifest.sql){
   const audit={file:source.file,sha256,url:source.url,kind:source.kind,provenance:source.provenance,afterLegionSkipped:0};
   sourceAudit.push(audit);
   if(['hotfixes','broadcast-patch'].includes(source.kind))continue;
+  if(source.kind==='quest-dialogue-capture'){
+    audit.locale=source.locale;audit.captureBuild=source.captureBuild;audit.imported=[];
+    await readSQL(file,capturedQuestTables,(table,row)=>{
+      const captured=capturedQuestDialogue(table,row,source);
+      if(!captured)return;
+      collect(captured.table,captured.row,true,source);
+      audit.imported.push({id:Number(captured.row.ID),table:captured.table,verifiedBuild:captured.row.VerifiedBuild});
+    });
+    continue;
+  }
   if(source.kind==='legacy-pages'){
     await readSQL(file,new Set(['page_text']),(t,r)=>legacyPages.set(idOf(r),r));continue;
   }

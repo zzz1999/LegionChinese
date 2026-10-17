@@ -501,6 +501,30 @@
       "provenance": "community-unverified",
       "url": "https://raw.githubusercontent.com/azerothcore/azerothcore-wotlk/4d9d1d4b5723e819c5c390f6ca1177283dbfb8e3/data/sql/base/db_world/quest_template_locale.sql",
       "sha256": "d4c7705fecc34f329416364daf23384060069a48af43aa2362bbc235d634d577"
+    },
+    {
+      "file": "2018_03_31_99_01_world.sql",
+      "captureBuild": 26124,
+      "questIDs": [
+        34774
+      ],
+      "provenance": "client-sniff",
+      "kind": "quest-dialogue-capture",
+      "locale": "zhCN",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_03_31_99_01_world.sql",
+      "sha256": "e8f24d1f06902906976cfae9ab5bf05912a5fee750172deabaf95657c8d35ae1"
+    },
+    {
+      "file": "2018_02_25_99_world_04.sql",
+      "captureBuild": 25996,
+      "questIDs": [
+        40753
+      ],
+      "provenance": "community-capture",
+      "kind": "quest-dialogue-capture",
+      "locale": "zhCN",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_02_25_99_world_04.sql",
+      "sha256": "6a4e6c86134bb534f5bdaff136b80e95495c726e89d34e5a67227b8ccc6e7db9"
     }
   ],
   "archive": {

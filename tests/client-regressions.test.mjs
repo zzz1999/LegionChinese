@@ -43,3 +43,57 @@ test('reported death knight book and quest progress translate through XML-bound 
     `);
   } finally {lua.lua_close(L);}
 });
+
+test('Blingtron daily reward body translates after the native reward population with a Chinese title',()=>{
+  const quests=readLines('Quests').filter(line=>/^D\.Quests\[(34774|40753|32851)\]=/.test(line));
+  assert.equal(quests.length,3);
+  const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
+  const execute=source=>{
+    const status=lauxlib.luaL_dostring(L,to_luastring(source));
+    assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
+  };
+  try{
+    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(`local D=LegionChineseDB\n${quests.join('\n')}`);
+    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    // 7.3.5 QuestInfo_ShowRewardText fills this widget through GetRewardText.
+    // Populate before installing the addon, as Blizzard's template does.
+    execute(`
+      rewardCalls=0
+      function GetLocale() return "zhCN" end
+      function GetTitleText() return rewardTitle end
+      function GetRewardText() rewardCalls=rewardCalls+1;return rewardBody end
+      function QuestInfo_Display()
+        QuestInfoFrame.questLog=false
+        QuestInfoTitleHeader:SetText(GetTitleText())
+        QuestInfoRewardText:SetText(GetRewardText())
+      end
+    `);
+    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(`
+      questID=34774;rewardTitle="布林顿5000"
+      local original="You will accept this gift, and you will like it.  To do otherwise will automatically engage my organic incineration weapons.  Thank you."
+      local translated="你要接受这份馈赠，并且一定会喜欢它的。不然就会自动启用我的有机焚化武器。谢谢你。"
+      rewardBody=original;QuestInfo_Display()
+      assert(QuestInfoTitleHeader.text==rewardTitle,"Chinese title stays unchanged")
+      assert(QuestInfoRewardText.text==translated,"Blingtron 5000 daily gift reward")
+      assert(rewardCalls==1 and GetRewardText()==original,"native quest API is unchanged")
+      assert(QuestInfoRewardText.fontChanges==0,"native Chinese font remains in use")
+      rewardTitle="Blingtron 5000";QuestInfo_Display()
+      assert(QuestInfoTitleHeader.text=="布林顿5000" and QuestInfoRewardText.text==translated)
+      rewardBody="服务器已有中文奖励正文。";QuestInfo_Display()
+      assert(QuestInfoRewardText.text==rewardBody,"existing Chinese stays unchanged")
+      rewardBody="伺服器已有繁體獎勵正文。";QuestInfo_Display()
+      assert(QuestInfoRewardText.text==rewardBody,"existing Traditional stays unchanged")
+      questID=32851;rewardTitle="布林顿3000";rewardBody="A different brawler reward.";QuestInfo_Display()
+      assert(QuestInfoRewardText.text==rewardBody,"do not assign daily gifts to Blingtron 3000")
+      local text=LegionChinese.Render(LegionChineseDB.Quests[40753].Completion)
+      assert(text=="我的功能是发放礼物，根据我的观察显示，你的功能是接收礼物。\\n\\n我们可以进行一次互惠互利的交易吗？","Blingtron 6000 paragraphs")
+      questID=34774;rewardBody=original;LegionChineseSettings={enabled=false};QuestInfo_Display()
+      assert(QuestInfoRewardText.text==original,"disabled addon preserves native reward")
+      LegionChineseSettings.enabled=true;QuestInfo_Display()
+      assert(QuestInfoRewardText.text==translated,"reopening after enabling translates again")
+    `);
+  }finally{lua.lua_close(L);}
+});

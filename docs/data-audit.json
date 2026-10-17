@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "counts": {
     "quests": 21376,
     "questFields": {
@@ -7,7 +7,7 @@
       "Objectives": 15007,
       "Description": 15454,
       "CompletionLog": 840,
-      "Completion": 8411,
+      "Completion": 8413,
       "Progress": 6112
     },
     "npcBroadcastRecords": 125061,
@@ -22,7 +22,7 @@
       "Description": 30
     },
     "questDialogueSources": {
-      "buildMarked": 24,
+      "buildMarked": 26,
       "communityUnverified": 14499
     },
     "broadcastLocales": {
@@ -701,6 +701,40 @@
       "kind": "legacy-quest-locales",
       "provenance": "community-unverified",
       "afterLegionSkipped": 0
+    },
+    {
+      "file": "2018_03_31_99_01_world.sql",
+      "sha256": "e8f24d1f06902906976cfae9ab5bf05912a5fee750172deabaf95657c8d35ae1",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_03_31_99_01_world.sql",
+      "kind": "quest-dialogue-capture",
+      "provenance": "client-sniff",
+      "afterLegionSkipped": 0,
+      "locale": "zhCN",
+      "captureBuild": 26124,
+      "imported": [
+        {
+          "id": 34774,
+          "table": "quest_offer_reward_locale",
+          "verifiedBuild": 26124
+        }
+      ]
+    },
+    {
+      "file": "2018_02_25_99_world_04.sql",
+      "sha256": "6a4e6c86134bb534f5bdaff136b80e95495c726e89d34e5a67227b8ccc6e7db9",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_02_25_99_world_04.sql",
+      "kind": "quest-dialogue-capture",
+      "provenance": "community-capture",
+      "afterLegionSkipped": 0,
+      "locale": "zhCN",
+      "captureBuild": 25996,
+      "imported": [
+        {
+          "id": 40753,
+          "table": "quest_offer_reward_locale",
+          "verifiedBuild": 25996
+        }
+      ]
     }
   ],
   "generatedFiles": [
