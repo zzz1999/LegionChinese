@@ -8,6 +8,23 @@ local englishClasses = { WARRIOR="Warrior", PALADIN="Paladin", HUNTER="Hunter", 
 local englishRaces = { Human="Human", Orc="Orc", Dwarf="Dwarf", NightElf="Night Elf", Scourge="Undead", Tauren="Tauren", Gnome="Gnome", Troll="Troll", Goblin="Goblin", BloodElf="Blood Elf", Draenei="Draenei", Worgen="Worgen", Pandaren="Pandaren", Nightborne="Nightborne", HighmountainTauren="Highmountain Tauren", VoidElf="Void Elf", LightforgedDraenei="Lightforged Draenei" }
 A.fallbackFont = "Interface\\AddOns\\LegionChinese\\Media\\LXGWWenKai-Regular.ttf"
 
+function A.ParseKeystoneLink(payload)
+    if type(payload)~="string" then return end
+    local mapID,level,rest=payload:match("^keystone:(%d+):(%d+)(.*)$")
+    if not mapID then return end
+    if tonumber(mapID)==138019 then
+        -- Also accept the item-prefixed variant, without interpreting the
+        -- generic item:138019 link as a particular dungeon or level.
+        mapID=level;level,rest=rest:match("^:(%d+)(.*)$")
+        if not level or (rest~="" and not rest:match("^:[%d:]*$")) then return end
+    elseif not rest:match("^:%d+:%d+:%d+$") then
+        -- Legion's native format is map:level:affix1:affix2:affix3.
+        return
+    end
+    mapID,level=tonumber(mapID),tonumber(level)
+    if mapID>0 and mapID<2147483648 and level>0 and level<2147483648 then return mapID,level end
+end
+
 local function strip(text)
     text = text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
     text = text:gsub("|H[^|]*|h(.-)|h", "%1"):gsub("|[TA].-|[ta]", "")

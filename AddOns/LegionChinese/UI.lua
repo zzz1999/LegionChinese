@@ -290,6 +290,7 @@ frame:SetScript("OnEvent",function(_,event,addonName)
     if event=="PLAYER_LOGIN" then
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
+        if A.RefreshChatItemLinks then A.RefreshChatItemLinks() end
     end
     if event=="PLAYER_LOGIN" and not LegionChineseSettings.welcomeSeen then A.ShowWelcome() end
 end)
@@ -306,6 +307,7 @@ SlashCmdList.LEGIONCHINESE=function(command)
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
+        if A.RefreshChatItemLinks then A.RefreshChatItemLinks() end
         print("LegionChinese：已关闭，重新打开窗口后生效。")
     elseif command=="on" or command=="开" then
         LegionChineseSettings.enabled=true
@@ -314,6 +316,7 @@ SlashCmdList.LEGIONCHINESE=function(command)
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
+        if A.RefreshChatItemLinks then A.RefreshChatItemLinks() end
         print("LegionChinese：已开启，已有中文保持不变，缺失译文保留原文。")
     elseif command=="about" or command=="关于" then
         A.ShowWelcome()

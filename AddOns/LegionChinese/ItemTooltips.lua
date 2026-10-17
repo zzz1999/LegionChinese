@@ -5,11 +5,11 @@ local installed=setmetatable({}, {__mode="k"})
 
 local function linkItemID(link)
     if type(link)~="string" then return end
-    -- Both ordinary item links and Legion keystone links carry the item ID
-    -- first. Never interpret a spell, quest or link label as an item ID.
     local payload=link:match("|H([^|]+)|h") or link
+    -- Native Legion keystones start with a challenge map ID, not an item ID.
+    if A.ParseKeystoneLink(payload) then return 138019 end
     local kind,id,rest=payload:match("^(%a+):(%d+)(.*)$")
-    if (kind=="item" or kind=="keystone") and (rest=="" or rest:sub(1,1)==":") then return tonumber(id) end
+    if kind=="item" and (rest=="" or rest:sub(1,1)==":") then return tonumber(id) end
 end
 
 local function translateLine(source,entries)

@@ -2,7 +2,7 @@
 ## Title: LegionChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 1.2.2
+## Version: 1.2.4
 ## SavedVariables: LegionChineseSettings
 
 Bootstrap.lua

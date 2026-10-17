@@ -1,0 +1,2053 @@
+{
+  "checkedAt": "2026-10-17",
+  "targetBuild": "7.3.5.26972",
+  "purpose": "Research only; no translation records imported.",
+  "policy": "Look up randomized pet names too. Prefer traceable official Chinese; use Simplified, then Traditional, then the original name. A matching NPC or spell name alone does not establish the localized random pet name.",
+  "sources": [
+    {
+      "member": "TDB_full_735.00_2018_02_19/TDB_world_735.00_2018_02_19.sql",
+      "kind": "world",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "file": "TDB_world_735.00_2018_02_19.sql",
+      "sha256": "786d8b7f84fe1daf765b770483721ae529f3d758da2271f812c261d914f1e99e"
+    },
+    {
+      "file": "TDB_world_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_world_735.26972_2025_05_11.sql",
+      "archive": "tdb735_2025",
+      "kind": "dialogue-world",
+      "provenance": "community-mixed",
+      "priority": 2,
+      "sha256": "9ddbe8f048c8f40fc886e243f474ba35cdd080d503600fdf4385459523360df5"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "943e4118b4cdc59f1447dfc05ebfadcb31cab6627fce2cd7ef517a4b8b014335"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "214f755429b8eb2fd9bfec924cc2139091f751279d879a96129c772854c1802f"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "6049932f5630afad9caa313244a9f6d0ca4cb99489c81e3f1d2cfc5929e5dfdb"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "e9acd9ebbeb2b6fbfb8613e5045db6e276bdeab8a86bdcb57d02cda71fa7502f"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "1171eafa54330abb5848bede8553c62f976800d443cfe5c8968bb89643d70a99"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "7a2ddd6f9c0bbc9a91b893a243880d47d1b307a2d778ad6333ff9fb56ef5e146"
+    }
+  ],
+  "groups": [
+    {
+      "entry": 416,
+      "prefixes": 34,
+      "suffixes": 31,
+      "combinations": 1054
+    },
+    {
+      "entry": 417,
+      "prefixes": 32,
+      "suffixes": 37,
+      "combinations": 1184
+    },
+    {
+      "entry": 1860,
+      "prefixes": 31,
+      "suffixes": 31,
+      "combinations": 961
+    },
+    {
+      "entry": 1863,
+      "prefixes": 25,
+      "suffixes": 29,
+      "combinations": 725
+    },
+    {
+      "entry": 17252,
+      "prefixes": 5,
+      "suffixes": 5,
+      "combinations": 25
+    },
+    {
+      "entry": 26125,
+      "prefixes": 28,
+      "suffixes": 25,
+      "combinations": 700
+    }
+  ],
+  "distinctCompleteNames": 4564,
+  "clientMatches": [
+    {
+      "table": "Creature",
+      "id": 22484,
+      "name": "Zeppit",
+      "zhCN": "塞比特",
+      "zhTW": "塞皮",
+      "randomPetEntries": [
+        416
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 66482,
+      "name": "Corpsefeeder",
+      "zhCN": "食尸虫",
+      "zhTW": "食屍蟲",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 74611,
+      "name": "Limbflayer",
+      "zhCN": "断肢",
+      "zhTW": "裂肢者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 85231,
+      "name": "Stonegrinder",
+      "zhCN": "磨石",
+      "zhTW": "碾石者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 85680,
+      "name": "Stonechewer",
+      "zhCN": "嚼石",
+      "zhTW": "嚼石戈倫",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 86038,
+      "name": "Limbflayer",
+      "zhCN": "断肢",
+      "zhTW": "裂肢者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 109781,
+      "name": "Chargore",
+      "zhCN": "焦血",
+      "zhTW": "焦血",
+      "randomPetEntries": [
+        1860
+      ]
+    },
+    {
+      "table": "Creature",
+      "id": 77290,
+      "name": "Limbflayer",
+      "zhCN": "断肢",
+      "zhTW": "裂肢者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 43951,
+      "name": "Bonegrinder",
+      "zhCN": "绞骨",
+      "zhTW": "磨骨打擊",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 43952,
+      "name": "Bonegrinder",
+      "zhCN": "绞骨",
+      "zhTW": "磨骨打擊",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 170282,
+      "name": "Stonegrinder",
+      "zhCN": "磨石",
+      "zhTW": "碾石者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 192538,
+      "name": "Bonebreaker",
+      "zhCN": "碎骨者",
+      "zhTW": "斷骨者",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 211936,
+      "name": "Bonebreaker",
+      "zhCN": "碎骨者",
+      "zhTW": "斷骨",
+      "randomPetEntries": [
+        26125
+      ]
+    },
+    {
+      "table": "Spell",
+      "id": 211941,
+      "name": "Bonebreaker",
+      "zhCN": "碎骨者",
+      "zhTW": "斷骨",
+      "randomPetEntries": [
+        26125
+      ]
+    }
+  ],
+  "worldMatches": [
+    {
+      "id": 3777,
+      "name": "Aelyssa",
+      "randomPetEntries": [
+        1863
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        1914
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "艾丽萨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "艾麗沙",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "艾丽萨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "艾麗沙",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 4276,
+      "name": "Piznik",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        7157
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "匹兹尼克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "匹茲尼克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "匹兹尼克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "匹茲尼克",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 14867,
+      "name": "Jubjub",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 1,
+      "creatureFamily": 0,
+      "modelIDs": [
+        14938
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "加布加布",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "呱呱",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "加布加布",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "呱呱",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 18652,
+      "name": "Zahlia",
+      "randomPetEntries": [
+        1863
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        18044
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "萨恩莉亚",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "札麗亞",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "萨恩莉亚",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "札麗亞",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 21711,
+      "name": "Haalum",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        20440
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "哈鲁姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "哈盧姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "哈鲁姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "哈盧姆",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 22484,
+      "name": "Zeppit",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 12,
+      "creatureFamily": 0,
+      "modelIDs": [
+        21048
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "塞比特",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "塞皮",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "塞比特",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "塞皮",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 30284,
+      "name": "Bonegrinder",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 6,
+      "creatureFamily": 0,
+      "modelIDs": [
+        25012
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "碾骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "磨骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "碾骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "磨骨者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 35465,
+      "name": "Zhaagrym",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        1913
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "扎戈瑞姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "札葛林姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "扎戈瑞姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "札葛林姆",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 37534,
+      "name": "Spinestalker",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 6,
+      "creatureFamily": 0,
+      "modelIDs": [
+        27982
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "猎脊冰龙",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "骨脊潛獵者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "猎脊冰龙",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "骨脊潛獵者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 40953,
+      "name": "Khaaphom",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        1913
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "喀胡恩",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "札葛林姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "喀胡恩",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "札葛林姆",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 50782,
+      "name": "Sarnak",
+      "randomPetEntries": [
+        1860
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        44255
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "萨纳克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "薩爾納克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "萨纳克",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "薩爾納克",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 50803,
+      "name": "Bonechewer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 1,
+      "creatureFamily": 7,
+      "modelIDs": [
+        37992
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嚼骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "噬骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嚼骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "噬骨者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 50814,
+      "name": "Corpsefeeder",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 1,
+      "creatureFamily": 7,
+      "modelIDs": [
+        23481
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嗜尸者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "食屍者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嗜尸者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "食屍者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 50959,
+      "name": "Karkin",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 1,
+      "creatureFamily": 8,
+      "modelIDs": [
+        38825
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "卡尔金",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "卡爾金",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "卡尔金",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "卡爾金",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 66482,
+      "name": "Corpsefeeder",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 12,
+      "creatureFamily": 0,
+      "modelIDs": [
+        45595
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "食尸虫",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "食屍蟲",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "食尸虫",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "食屍蟲",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 74611,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 75189,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 76688,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 77290,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 82632,
+      "name": "Spineslicer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 1,
+      "creatureFamily": 31,
+      "modelIDs": [
+        56020
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "切骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "割脊者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "切骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "割脊者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 82731,
+      "name": "Ribchewer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        56923
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 85215,
+      "name": "Earthbreaker",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 10,
+      "creatureFamily": 0,
+      "modelIDs": [
+        56963
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "碎地者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂地巨砲",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "碎地者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂地巨砲",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 85231,
+      "name": "Stonegrinder",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 12,
+      "creatureFamily": 0,
+      "modelIDs": [
+        58736
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "磨石",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "碾石者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "磨石",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "碾石者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 85680,
+      "name": "Stonechewer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 12,
+      "creatureFamily": 0,
+      "modelIDs": [
+        59027
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嚼石",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "嚼石戈倫",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嚼石",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "嚼石戈倫",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 85847,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 86038,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 12,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 86652,
+      "name": "Limbflayer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        52201
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "断肢",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裂肢者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 86776,
+      "name": "Ribchewer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        56923
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 87260,
+      "name": "Ribchewer",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        56923
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "嚼骨",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "噬肋者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 87837,
+      "name": "Bonebreaker",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        57863
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "碎骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "斷骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "碎骨者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "斷骨者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 88271,
+      "name": "Jubyap",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 7,
+      "creatureFamily": 0,
+      "modelIDs": [
+        4449
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "乔比亚普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "裘亞普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "乔比亚普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "裘亞普",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 91165,
+      "name": "Daglop",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62593
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 91166,
+      "name": "Daglop",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62593
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 91185,
+      "name": "Daglop",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62593
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 94724,
+      "name": "Bryanda",
+      "randomPetEntries": [
+        1863
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        20214
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "布莉安达",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "布里安達",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "布莉安达",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "布里安達",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 97556,
+      "name": "Blightstalker",
+      "randomPetEntries": [
+        26125
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62513
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "瘟疫魔犬",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "荒役巡者",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "瘟疫魔犬",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "荒役巡者",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 107096,
+      "name": "Chargore",
+      "randomPetEntries": [
+        1860
+      ],
+      "creatureType": 4,
+      "creatureFamily": 0,
+      "modelIDs": [
+        69826
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 108173,
+      "name": "Maazun",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        17321
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "马祖恩",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "馬祖恩",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "马祖恩",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "馬祖恩",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 108175,
+      "name": "Pryykun",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        70434
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "普瑞昆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "普萊昆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "普瑞昆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "普萊昆",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 108176,
+      "name": "Khiinam",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        70435
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "奇纳姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "基難",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "奇纳姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "基難",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 108694,
+      "name": "Kreenam",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        70434
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "克里纳姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "克力南",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "克里纳姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "克力南",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 108695,
+      "name": "Czaadym",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        70435
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "扎迪姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "紮丁姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "扎迪姆",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "紮丁姆",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 109781,
+      "name": "Chargore",
+      "randomPetEntries": [
+        1860
+      ],
+      "creatureType": 4,
+      "creatureFamily": 0,
+      "modelIDs": [
+        69826
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "焦血",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 112485,
+      "name": "Bheeghon",
+      "randomPetEntries": [
+        417
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        1913
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "比洪",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "大觸角",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "比洪",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "大觸角",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 119922,
+      "name": "Daglop",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62593
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        }
+      ]
+    },
+    {
+      "id": 120125,
+      "name": "Daglop",
+      "randomPetEntries": [
+        416
+      ],
+      "creatureType": 3,
+      "creatureFamily": 0,
+      "modelIDs": [
+        62593
+      ],
+      "locales": [
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.00_2018_02_19.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhCN",
+          "text": "达格洛普",
+          "verifiedBuild": 25549
+        },
+        {
+          "file": "TDB_world_735.26972_2025_05_11.sql",
+          "locale": "zhTW",
+          "text": "達格洛普",
+          "verifiedBuild": 25549
+        }
+      ]
+    }
+  ],
+  "additionalSources": [
+    {
+      "url": "https://github.com/mangostwo/database/blob/19e19c6a0449b11df47991c4883dd09730da4be6/World/Setup/FullDB/pet_name_generation.sql",
+      "result": "No Chinese text in the random name table."
+    },
+    {
+      "url": "https://github.com/MistCore/MC-Database/blob/fc24a618f49318b0198dc141de10445c38c9aff3/main_db/world/pet_name_generation.sql",
+      "result": "No Chinese text in the random name table."
+    },
+    {
+      "url": "https://github.com/BluetomatoBo/wow_db_chinese/tree/772f43a14c093ba0ad6e954a462c2d71e51062be",
+      "result": "Inspected complete repository tree; no random pet name table supplied."
+    },
+    {
+      "url": "https://github.com/zwisus/3.3.5_wow_db_chinese/tree/2ebf26be14bfa7ce7f0ae04c547fef5c8c2431bb",
+      "result": "Inspected complete repository tree; no random pet name table supplied."
+    }
+  ],
+  "decision": {
+    "approvedTranslations": 0,
+    "casketmasher": {
+      "directPairFound": false,
+      "completeNameMatchFound": false,
+      "display": "Casketmasher"
+    },
+    "rejectedExamples": [
+      {
+        "name": "Corpsefeeder",
+        "table": "Creature",
+        "id": 66482,
+        "zhCN": "食尸虫",
+        "reason": "Localized as a different creature, not a ghoul random name."
+      },
+      {
+        "name": "Spinestalker",
+        "table": "creature_template_locale",
+        "id": 37534,
+        "zhCN": "猎脊冰龙",
+        "reason": "The localized NPC is a frost wyrm, not a ghoul random name."
+      }
+    ],
+    "reason": "No source checked here establishes a Chinese counterpart for the randomized pet name itself. Preserve the original, and retain candidate matches as research leads only."
+  }
+}

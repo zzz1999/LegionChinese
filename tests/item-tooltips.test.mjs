@@ -79,6 +79,18 @@ test('keystone links and bags work when GetItem is unavailable, including enabli
   SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
 `));
 
+test('native Legion map-first keystone links translate their description with or without GetItem data',()=>run(`
+  for _,noItem in ipairs({false,true}) do
+    ItemRefTooltip.noItemAPI=noItem
+    ItemRefTooltip:SetHyperlink("|cffa335ee|Hkeystone:197:12:6:3:9|h[Keystone: Halls of Valor (12)]|h|r")
+    assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
+    SlashCmdList.LEGIONCHINESE("off")
+    assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
+    SlashCmdList.LEGIONCHINESE("on")
+    assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
+  end
+`));
+
 test('unknown, existing Chinese, changed descriptions, other link types and forbidden frames stay untouched',()=>run(`
   for _,text in ipairs({"已有简体说明","原有繁體說明",description.." Changed","|Hitem:1|h"..description.."|h"}) do
     ItemRefTooltip.pendingText=text;ItemRefTooltip:SetHyperlink("item:138019")

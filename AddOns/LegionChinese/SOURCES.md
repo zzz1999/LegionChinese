@@ -26,6 +26,14 @@
 
 两份文件均固定上述提交及 SHA-256。未在清单内的任务、缺少正文的版本更新、非中文或超出目标版本的记录不导入。`docs/data-audit.json` 的对应源条目列出实际导入 ID、表和版本；原始 SQL 不随 AddOns 分发。布林顿 3000 的搏击俱乐部任务没有套用领取礼物的正文。
 
+### 已确认的任务译文缺口
+
+2026-10-17 的游戏截图反馈 **保卫贫瘠之地（26642）** 在卡加尔·战痕处的交任务正文仍为英文。当前资源已有中文标题、描述、目标及交付位置提示，但没有 `Completion` 字段。交任务正文通过 `QuestInfoRewardText` 单独查询，不会因为标题已经是中文而跳过正文；这次属于译文数据缺失。
+
+已检查 TDB 735.00（2018-02-19）、TDB 735.26972（2025-05-11），以及 LegionCore 的 2020-04-25、2024-10-23 快照，均未找到该字段的可用 zhCN 或 zhTW 记录。进一步核对大灾变旧库 [mangosthree Chinese_Quest.sql](https://github.com/r-log/mangosthree-database/blob/b1c5e0c107566c3769d3c767e2a1378ec8398098/Translations/Translations/Chinese/Chinese_Quest.sql#L14327)，同一任务也只有标题、说明和目标；其 [Chinese_Quest_missing.sql](https://github.com/r-log/mangosthree-database/blob/b1c5e0c107566c3769d3c767e2a1378ec8398098/Translations/Translations_TODO/Chinese/Chinese_Quest_missing.sql#L1027) 将与截图一致的完整英文交付正文列为待译（word_id 181821）。该旧库仅用于核对缺口，没有导入其数据。
+
+此条目前仍待补充有出处的简繁中文译文，按既定回退规则保留原文。不能拿接任务说明或“去前沿哨所报到”的位置提示替代交任务对白，也未将自译文字冒充官方译文。
+
 感谢 TrinityCore、The Legion Preservation Project、MagicStorm、AzerothCore 的维护者和数据库贡献者。相关仓库包含 GNU GPL 许可。游戏名称、故事、人物与原始文本的权利归各自权利人；本项目不将社区数据库等同于暴雪发布或授权的完整官方译文库。
 
 - 所有类别均按“可用 zhCN → 可用 zhTW → 原文”处理，繁体译文直接来自上游 zhTW 字段，不经机器转换。任务逐字段回退，全文索引逐键回退。
@@ -50,7 +58,17 @@
 
 每张表均固定同一个 build，不自动切换到最新版本。9 个源文件的 URL、SHA-256 和记录数见 [docs/client-name-audit.json](docs/client-name-audit.json)；下载清单见 `sources.json` 的 `clientTables`。按 ID 选择可用简体，再选繁体；缺少 ID 时只使用无歧义的原名指纹，777 个在简繁中均无法消除歧义的名称键没有导入。不同 ID 的同名技能仍可通过 ID 区分。CSV 的英文名称、描述和原始导出仅用于构建，不随 AddOns 分发。
 
-**随机专有名字不翻译。** 检查过 TrinityCore 的 `pet_name_generation`，以及 AzerothCore 固定提交 `add9cadc2d4eeafdd53288570efd3fa5c5768b43` 的 [pet_name_generation_locale.sql](https://github.com/azerothcore/azerothcore-wotlk/blob/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/pet_name_generation_locale.sql)，未找到可靠的 zhCN/zhTW 随机姓名对应，因此没有导入该表。`Casketmasher` 等保持原样，不拼接种类名、不自行音译，也不修改服务器上的宠物名字。
+**随机专有名字只采用可核实的中文对应，缺失时保留原名。** 2026-10-17 再次检查食尸鬼随机姓名：上述两套 TDB，以及 LegionCore 的 2020-04-25、2024-10-23 world 快照中，`pet_name_generation` 均有食尸鬼 26125 的 53 条英文片段，但没有中文片段或中文本地化记录。其中 ID 280 为前缀 `Casket`，ID 292 为后缀 `masher`，能组成截图中的 `Casketmasher`；这些 ID 是服务器名字表的记录编号，不能当成中文客户端的姓名 ID。
+
+[LegionCore 7.3.5 的生成函数](https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/blob/fed58f79c498521836612acd12009e9fa9e60e31/src/server/game/Globals/ObjectMgr.cpp#L5690) 从两组片段中各取一个并拼接。客户端 [NameGen 7.3.5.26972](https://wago.tools/db2/NameGen?build=7.3.5.26972) 的 enUS、zhCN、zhTW 导出此次均返回相同的 15,599 条记录，无中文，也没有上述片段；其字段是角色 RaceID 和 Sex，[调用代码](https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/blob/fed58f79c498521836612acd12009e9fa9e60e31/src/server/game/DataStores/DB2Stores.cpp#L3059) 也按角色种族、性别取名，不能作为食尸鬼名字的中英对照。现有 Creature、CreatureFamily 和 GlobalStrings 存档也未找到 `Casketmasher` 的配对记录。
+
+补查 AzerothCore 固定提交 `26c74d61b857233dc4a53e3e6085037f7c4bc066` 的 [pet_name_generation_locale.sql](https://github.com/azerothcore/azerothcore-wotlk/blob/26c74d61b857233dc4a53e3e6085037f7c4bc066/data/sql/base/db_world/pet_name_generation_locale.sql)，该文件的 106 条本地化记录只有 esES、esMX，没有 zhCN/zhTW。这些检查仅能说明所查资料没有可用对应，不代表官方从未提供中文名字；也没有据此将旧版本的社区译名认定为 7.3.5 官中。
+
+本轮新增可核实的随机姓名译文为 **0**，因此未导入随机姓名表。`Casketmasher` 等继续保持原样，不拼接种类名、不自行音译，也不修改服务器上的宠物名字。后续若得到可核对的官方名字或生成片段及组合规则，按简体优先、繁体补充的规则接入；不能仅凭英文单词的常见译法组合出“官方名字”。
+
+同日进一步扩大随机姓名的查找范围，覆盖小鬼、地狱猎犬、虚空行者、魅魔、恶魔卫士及食尸鬼。将 2018 年 7.3.5 名字表可生成的 **4,564 个不同完整名字**，逐个与 7.3.5.26972 的 Creature、Spell 客户端记录和上述两份 TDB 的生物名称及简繁本地化记录对照。匹配只用于寻找线索：英文同名的其他 NPC、法术或物种，不能直接当作随机宠物姓名的官方对应。比如 `Corpsefeeder` 在客户端表里对应“食尸虫”，`Spinestalker` 在服务器表里对应“猎脊冰龙”，均不套用到食尸鬼；`Casketmasher` 没有找到完整名字匹配。
+
+还补查了 [MaNGOS Two 的名字表](https://github.com/mangostwo/database/blob/19e19c6a0449b11df47991c4883dd09730da4be6/World/Setup/FullDB/pet_name_generation.sql)、[MistCore 的名字表](https://github.com/MistCore/MC-Database/blob/fc24a618f49318b0198dc141de10445c38c9aff3/main_db/world/pet_name_generation.sql)，均无中文；以及 [旧版中文库](https://github.com/BluetomatoBo/wow_db_chinese/tree/772f43a14c093ba0ad6e954a462c2d71e51062be)、[3.3.5 中文库](https://github.com/zwisus/3.3.5_wow_db_chinese/tree/2ebf26be14bfa7ce7f0ae04c547fef5c8c2431bb) 的文件清单，均未提供随机宠物姓名表。完整名字的对照结果和来源清单见 [docs/random-pet-name-research.json](https://github.com/zzz1999/LegionChinese/blob/main/docs/random-pet-name-research.json)。这些结果是本次查找记录，不是断言其他资料中也不存在译文；仍未新增可用于随机姓名的译文。
 
 ## 场景物件名称
 
@@ -72,11 +90,17 @@
 
 该网页没有提供这一中文字段的采集 build，所以明确标为 `community-item-database`、`verifiedBuild: null`，不能声称已逐字核实为 7.3.5 官中。未找到同一条目的可核对简体记录，按约定使用繁体原文。审核摘录与来源保存在 `data/item-descriptions.json`，自身 SHA-256 固定在 `sources.json`；选择结果见 [docs/item-description-audit.json](docs/item-description-audit.json)。此处只摘录一条说明，网页原文和英文资料不随 AddOns 分发。
 
-运行时要求物品 ID 和完整说明指纹同时匹配，支持 GameTooltip 与聊天链接使用的 ItemRefTooltip，保留外围引号、整行颜色及客户端字体。`item:` 与 `keystone:` 链接通过原版 SetHyperlink 的安全后置挂钩识别，背包通过 GetItem 或 SetBagItem 后的 GetContainerItemID 识别；不修改链接、聊天文字、层数、词缀或服务器物品。依据为同一 7.3.5 界面快照的 `FrameXML/ItemRef.lua`、`ItemRef.xml` 和 `ContainerFrame.lua`。
+运行时要求物品 ID 和完整说明指纹同时匹配，支持 GameTooltip 与聊天链接使用的 ItemRefTooltip，保留外围引号、整行颜色及客户端字体。`item:` 与 `keystone:` 链接通过原版 SetHyperlink 的安全后置挂钩识别，背包通过 GetItem 或 SetBagItem 后的 GetContainerItemID 识别；说明模块不修改链接、聊天文字、层数、词缀或服务器物品。依据为同一 7.3.5 界面快照的 `FrameXML/ItemRef.lua`、`ItemRef.xml` 和 `ContainerFrame.lua`。1.2.4 修正原生 `keystone:副本ID:层数:词缀1:词缀2:词缀3` 被误当成物品 ID 的问题，同时接受带 `138019` 物品前缀的变体。
 
 ## 聊天物品链接
 
-聊天普通物品链接不使用网页译名表：通过 7.3.5 原版 `ChatFrame_AddMessageEventFilter` 处理本机显示，使用完整 `item:` 参数向客户端 `GetItemInfo` 查询名称。只采用返回的中文名称，保留超链接参数、颜色、发言正文及全部事件参数；无缓存、非中文、已有中文或特殊链接时保留原文。对应接口依据为上述界面快照的 `FrameXML/ChatFrame.lua`。不会调用发送聊天接口，开关只影响之后显示的消息，不重写聊天历史。
+聊天普通物品链接不使用网页译名表：使用完整 `item:` 参数向客户端 `GetItemInfo` 查询名称，只采用返回的中文名称，保留超链接参数、颜色和发言正文；已有中文或特殊链接保持不变。
+
+史诗钥石单独解析链接中的副本 ID 和层数，通过 7.3.5 原生 `C_ChallengeMode.GetMapInfo` 取得中文副本名称；没有中文时保持原文。接口依据为 [ChallengeModeInfoLua.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_APIDocumentation/ChallengeModeInfoLua.lua)，延迟资料通过原版挑战界面使用的 `RequestMapInfo` 和 `CHALLENGE_MODE_MAPS_UPDATE` 刷新。显示格式采用客户端中文 `CHALLENGE_MODE_KEYSTONE_HYPERLINK`，否则使用 [GlobalStrings 7.3.5.26972](https://wago.tools/db2/GlobalStrings?build=7.3.5.26972) 记录 36209 的简体格式“钥石：%s (%d)”。原生五字段链接结构交叉核对 [LegionCore ChatLink.cpp 的 KeystoneChatLink::Initialize](https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/blob/fed58f79c498521836612acd12009e9fa9e60e31/src/server/game/Chat/ChatLink.cpp#L1487)。保留整个原始链接和词缀参数，不查询玩家自己持有的钥石来代替别人的链接；通用 `item:138019` 缺少明确副本信息时不猜测。
+
+1.2.4 对照同一 7.3.5 快照的 [SharedXML/ScrollingMessageFrame.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/SharedXML/ScrollingMessageFrame.lua)，在原版窗口 `AddMessage` 和 `BackFillMessage` 后处理 `historyBuffer` 中的消息。首次未取得中文名时，收到 `GET_ITEM_INFO_RECEIVED` 或打开对应物品提示后重新查询，合并同批通知并更新原消息的 `message` 字段，再调用 `MarkDisplayDirty` 重新布局；消息对象、时间戳、颜色、额外参数、顺序、滚动位置和淡出时间均保留。不清空聊天、不重新投递聊天事件、不发送消息。已解析的中文名会留在对应消息中，等待另一个链接加载时不会退回外文。
+
+`/lcn on` 会重新处理原版窗口的现有聊天记录，`/lcn off` 只还原仍与本插件上次输出一致的名称，避免覆盖其他插件后续修改。临时密语窗口依据 `FrameXML/FloatingChatFrame.lua` 的 `FCF_OpenTemporaryWindow` 安装；消息记录使用弱引用，移出聊天缓冲区后可以回收。没有原版聊天缓冲区的第三方窗口保留 `ChatFrame_AddMessageEventFilter` 的即时处理，仅能替换当时已经取得的中文名称。对应原始过滤接口仍见 `FrameXML/ChatFrame.lua`。
 
 ## 字体
 
