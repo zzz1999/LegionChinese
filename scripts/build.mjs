@@ -7,6 +7,7 @@ import {hasChinese,luaString,variants,fingerprint} from './text.mjs';
 import {LEGION_BUILD,localeOf,idOf,menuKey,broadcastText,selectBroadcast,compatibleLegacyPage,compatibleLegacyQuest} from './dialogue.mjs';
 import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from './fallback.mjs';
 import {buildClientNames} from './client-names.mjs';
+import {buildWorldObjectNames} from './world-objects.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -16,11 +17,17 @@ const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'))
 const tables=new Map(),schemas=new Map(),questTitles=new Map(),broadcastIDs=new Set();
 const legionPages=new Map(),legacyPages=new Map(),legacyLocales=new Map();
 const legionQuests=new Map(),legacyQuests=new Map(),legacyQuestLocales=[];
+const worldObjectRows=[];
 const selected=new Set(['quest_template','quest_template_locale','quest_objectives','quest_objectives_locale',
   'quest_offer_reward_locale','quest_request_items_locale','page_text','page_text_locale',
-  'npc_text','gossip_menu_option','gossip_menu_option_locale','creature_text']);
+  'npc_text','gossip_menu_option','gossip_menu_option_locale','creature_text','gameobject_template','gameobject_template_locale']);
 function collect(table,record,update,source){
   const locale=localeOf(record);
+  if(table==='gameobject_template'||table==='gameobject_template_locale'){
+    if(!locale||CHINESE_LOCALES.includes(locale))worldObjectRows.push({table,id:Number(record.entry),locale,
+      name:record.name,verifiedBuild:Number(record.VerifiedBuild),source:source.file});
+    return;
+  }
   record={...record,_source:source.file,_provenance:source.provenance};
   if(locale)record.locale=locale;
   if(table==='gossip_menu_option')record.OptionBroadcastTextId=record.OptionBroadcastTextId??record.OptionBroadcastTextID;
@@ -70,7 +77,7 @@ for(const source of manifest.sql){
   const target=source.kind==='pages'?new Set(['page_text']):source.kind==='patch'?new Set([...selected].filter(t=>t.endsWith('_locale')))
     :source.kind==='gossip-patch'?new Set(['gossip_menu_option_locale'])
     :source.kind==='dialogue-world'?new Set(['page_text','page_text_locale','gossip_menu_option','gossip_menu_option_locale','npc_text',
-      'quest_offer_reward_locale','quest_request_items_locale']):selected;
+      'quest_offer_reward_locale','quest_request_items_locale','gameobject_template','gameobject_template_locale']):selected;
   await readSQL(file,target,(table,r,update)=>{
     if(source.kind==='dialogue-world'&&Number(r.VerifiedBuild)>LEGION_BUILD){audit.afterLegionSkipped++;return;}
     if(table==='page_text'&&['world','dialogue-world'].includes(source.kind))legionPages.set(idOf(r),r);
@@ -236,7 +243,9 @@ for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:title
 const clientNames=buildClientNames({root,input,manifest,version});
 generated.push(...clientNames.generated);
 counts.clientNames=clientNames.audit.counts;
-const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','Welcome.lua','UI.lua',''];
+const worldObjects=buildWorldObjectNames({root,input,manifest,version,sqlRows:worldObjectRows});
+generated.push(...worldObjects.generated);counts.worldObjects=worldObjects.audit.counts;
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

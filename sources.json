@@ -603,5 +603,34 @@
       "url": "https://wago.tools/db2/CreatureFamily/csv?build=7.3.5.26972&locale=zhTW",
       "sha256": "bc9a22918cdffebded59582c9e42a168a83e1ba8ae5e280a41cb5b836e7b346a"
     }
+  ],
+  "worldObjectTables": [
+    {
+      "table": "GameObjects",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "GameObjects-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/GameObjects/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "54b365ea2284cbb7a39d4be0094c5a49ec52639684ca3cdffe60e0fdc95d42c7"
+    },
+    {
+      "table": "GameObjects",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "GameObjects-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/GameObjects/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "1a7f86d217456b842de9fa365b62a5b135b9cd51cbda699f1681ac25f3e22770"
+    },
+    {
+      "table": "GameObjects",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "GameObjects-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/GameObjects/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "8815186b3bdd30c0a477f58c7ba1a2da550d2ba51090a710fd099801e54e7cfb"
+    }
   ]
 }

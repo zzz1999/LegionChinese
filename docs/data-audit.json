@@ -1,5 +1,5 @@
 {
-  "version": "1.1.9",
+  "version": "1.2.0",
   "counts": {
     "quests": 21376,
     "questFields": {
@@ -137,6 +137,19 @@
         },
         "ambiguousNames": 0,
         "collisions": 0
+      }
+    },
+    "worldObjects": {
+      "fingerprints": 6305,
+      "locales": {
+        "zhCN": 5075,
+        "zhTW": 1230
+      },
+      "ambiguousSkipped": 10,
+      "quality": {
+        "client-db2": 1058,
+        "build-marked": 5239,
+        "community-unverified": 8
       }
     }
   },
@@ -782,6 +795,7 @@
     "Data\\Spells_01.lua",
     "Data\\Spells_02.lua",
     "Data\\Spells_03.lua",
-    "Data\\Spells_04.lua"
+    "Data\\Spells_04.lua",
+    "Data\\WorldObjects_01.lua"
   ]
 }

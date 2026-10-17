@@ -45,6 +45,16 @@
 
 **随机专有名字不翻译。** 检查过 TrinityCore 的 `pet_name_generation`，以及 AzerothCore 固定提交 `add9cadc2d4eeafdd53288570efd3fa5c5768b43` 的 [pet_name_generation_locale.sql](https://github.com/azerothcore/azerothcore-wotlk/blob/add9cadc2d4eeafdd53288570efd3fa5c5768b43/data/sql/base/db_world/pet_name_generation_locale.sql)，未找到可靠的 zhCN/zhTW 随机姓名对应，因此没有导入该表。`Casketmasher` 等保持原样，不拼接种类名、不自行音译，也不修改服务器上的宠物名字。
 
+## 场景物件名称
+
+1.2.0 起单独处理 GameObject 的世界鼠标提示。优先使用 Wago.Tools 存档的 [GameObjects 7.3.5.26972](https://wago.tools/db2/GameObjects?build=7.3.5.26972) 中 enUS、zhCN、zhTW 的名称字段，再使用上述两个 7.3.5 world 库的 `gameobject_template` 与 `gameobject_template_locale` 补充。SQL 原文与中文只在同一个源文件内按物件 ID 配对，不把客户端 DB2 的 ID 当成服务器模板 ID。
+
+同一种中文内，客户端 DB2 优先，其次为有正数 VerifiedBuild 的记录，最后是未核实社区记录；高于 26972 的条目不导入。同优先级同名对应不同译文时排除该语言，简体无可用匹配才尝试繁体。不导入动态占位符或带界面标记的名字，匹配时也不代入玩家姓名。原文与 SQL 不随 AddOns 分发。
+
+截图中的 `Death Gate` 使用服务器物件 **190942** 的简体“死亡之门”，繁体记录为“死亡之門”，两者标记为 **18019**；7.3.5 库保留了这条较早的客户端记录。此来源标记不能代替逐字官方核实。它与法术 **50977** 的“黑锋之门”是不同名称字段，不互相套用。完整记录、选择结果及源文件哈希见 [docs/world-object-audit.json](docs/world-object-audit.json)。
+
+运行时仅后置更新世界场景中原版 GameTooltip 的名称，排除单位、物品、技能及界面控件提示。7.3.5 没有对应的 `OnTooltipSetGameObject` 事件，因此使用实际提示框的 `OnShow`、`OnUpdate`，并在隐藏、清空或切换内容时丢弃缓存。参考 `FrameXML/GameTooltip.lua` 和 `GameTooltip.xml`；不替换其原始处理函数或对象交互接口。
+
 ## 字体
 
 - 1.1.6 起中文客户端沿用每个原版控件自身的字体、字号和描边，包括书籍正文及各级标题；介绍窗口使用游戏字体。其他语言客户端先尝试游戏自带 `Fonts\ARKai_T.ttf`，加载失败才使用以下后备字体。只引用客户端中的游戏字体，不将其复制或随插件分发。

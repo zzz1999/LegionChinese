@@ -16,7 +16,7 @@ function Get-VerifiedFile([string]$Url, [string]$Path, [string]$Sha) {
     Move-Item -LiteralPath $taskPart -Destination $Path -Force
 }
 
-foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables)) {
+foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables) + @($taskManifest.worldObjectTables)) {
     if ([IO.Path]::GetFileName($taskSource.file) -ne $taskSource.file) { throw '无效的数据文件名' }
     $taskTarget = Join-Path $taskCache $taskSource.file
     if (Test-Checksum $taskTarget $taskSource.sha256) { continue }

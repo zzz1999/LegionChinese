@@ -32,7 +32,7 @@ test('SQL parser preserves apostrophes, semicolons, comments, and literal escape
 });
 
 test('SQL import handles multiline rows, UPDATE, and variable INSERT whitespace without executing SQL',async()=>{
-  const folder=fs.mkdtempSync(path.join(os.tmpdir(),'tcn-sql-'));
+  const folder=fs.mkdtempSync(path.join(os.tmpdir(),'lcn-sql-'));
   const file=path.join(folder,'fixture.sql');
   fs.writeFileSync(file,"CREATE TABLE `page_text` (\n `ID` int,\n `Text` text\n);\ninsert  into `page_text` values\n(1,'first'), -- a\n(2,'second');\nUPDATE `page_text` SET `Text`='第三页' WHERE `ID`=2;\n");
   const rows=[];await readSQL(file,new Set(['page_text']),(name,row,update)=>rows.push({row,update}));

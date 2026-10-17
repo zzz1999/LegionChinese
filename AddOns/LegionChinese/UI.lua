@@ -268,6 +268,13 @@ local function install()
     hookScript(PetCastingBarFrame,"OnEvent",A.UpdateCastBar)
     hook("CastingBarFrame_OnEvent",A.UpdateCastBar)
     if A.InstallPetNames then A.InstallPetNames(hook,hookScript) end
+    if A.UpdateWorldObjectTooltip then
+        -- World objects have no OnTooltipSetUnit/Item event in Legion.
+        hookScript(GameTooltip,"OnShow",A.UpdateWorldObjectTooltip)
+        hookScript(GameTooltip,"OnUpdate",A.UpdateWorldObjectTooltip)
+        hookScript(GameTooltip,"OnHide",A.ClearWorldObjectTooltip)
+        hookScript(GameTooltip,"OnTooltipCleared",A.ClearWorldObjectTooltip)
+    end
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -292,12 +299,14 @@ SlashCmdList.LEGIONCHINESE=function(command)
     command=(command or ""):lower():gsub("%s","")
     if command=="off" or command=="关" then
         LegionChineseSettings.enabled=false
+        if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
         print("LegionChinese：已关闭，重新打开窗口后生效。")
     elseif command=="on" or command=="开" then
         LegionChineseSettings.enabled=true
+        if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
         A.RefreshTracker()
         A.RefreshCastBars()
         if A.RefreshPetNames then A.RefreshPetNames() end
