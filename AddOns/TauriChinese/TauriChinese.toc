@@ -1,0 +1,39 @@
+## Interface: 70300
+## Title: TauriChinese 简体中文
+## Notes: 离线任务、NPC 对话与书籍汉化；已有中文保持不变。
+## Author: zzz1999
+## Version: 0.1.0
+## SavedVariables: TauriChineseSettings
+
+Bootstrap.lua
+Data\Quests_01.lua
+Data\Quests_02.lua
+Data\Quests_03.lua
+Data\Quests_04.lua
+Data\Quests_05.lua
+Data\Quests_06.lua
+Data\Quests_07.lua
+Data\Quests_08.lua
+Data\Quests_09.lua
+Data\Strings_01.lua
+Data\Strings_02.lua
+Data\Strings_03.lua
+Data\Strings_04.lua
+Data\Gossip_01.lua
+Data\Gossip_02.lua
+Data\Gossip_03.lua
+Data\Gossip_04.lua
+Data\Gossip_05.lua
+Data\Gossip_06.lua
+Data\Gossip_07.lua
+Data\Gossip_08.lua
+Data\Gossip_09.lua
+Data\Books_01.lua
+Data\Titles_01.lua
+Data\Titles_02.lua
+Data\Titles_03.lua
+Data\Titles_04.lua
+Data\Titles_05.lua
+Data\Objectives_01.lua
+Core.lua
+UI.lua

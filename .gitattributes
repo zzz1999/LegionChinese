@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.ttf binary
+# Preserve the font author's license byte-for-byte, including its original spacing.
+AddOns/TauriChinese/Media/OFL.txt -text whitespace=-blank-at-eol

@@ -1,0 +1,58 @@
+{
+  "sql": [
+    {
+      "member": "TDB_full_735.00_2018_02_19/TDB_world_735.00_2018_02_19.sql",
+      "kind": "world",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "file": "TDB_world_735.00_2018_02_19.sql",
+      "sha256": "786d8b7f84fe1daf765b770483721ae529f3d758da2271f812c261d914f1e99e"
+    },
+    {
+      "member": "TDB_full_735.00_2018_02_19/TDB_hotfixes_735.00_2018_02_19.sql",
+      "kind": "hotfixes",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "file": "TDB_hotfixes_735.00_2018_02_19.sql",
+      "sha256": "e8fd012f24f818c355b034fa39d39951e1e77209fc660e96bd7a8ebe43cd2a6c"
+    },
+    {
+      "sha256": "806c6f86704e9a007bb829c82ed376fb40c17b2b8ddf5bd9b525f2da3280f9b7",
+      "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_19_world.sql",
+      "kind": "patch",
+      "file": "2018_05_26_19_world.sql"
+    },
+    {
+      "sha256": "71ecff2370bb6591ce0d6739f26d013ef2cc1fdffd13f420c7149a0cc2307dc7",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_04_28_99_03_quest_objectives_locale_zhCN.sql",
+      "kind": "patch",
+      "file": "2018_04_28_99_03_quest_objectives_locale_zhCN.sql"
+    },
+    {
+      "sha256": "bfd37a04f1328d2e023615b39a1eae65f12673f7ffe3522c02b530b1aa0e5645",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_29_99_02_mage.sql",
+      "kind": "patch",
+      "file": "2018_05_29_99_02_mage.sql"
+    },
+    {
+      "sha256": "75c8f5568b1ffb7e0b0d88e65ac7bc1c546f85b9b1ddf517280df7c474273a90",
+      "url": "https://raw.githubusercontent.com/welder1976/MagicStorm/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_09_16_99_01_druid.sql",
+      "kind": "patch",
+      "file": "2018_09_16_99_01_druid.sql"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_09_24_00_world.sql",
+      "kind": "pages",
+      "file": "2018_09_24_00_world.sql",
+      "sha256": "d76cae02c8e8fba6aa52b4a7abefe20341d21814e67e73f7ae5b1c25b3ad5f90"
+    }
+  ],
+  "archive": {
+    "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+    "sha256": "15540bab9db7bf7a5d7e672f517be6140e36aebc0e26c73cbee63bd1135a9b6c"
+  },
+  "font": {
+    "licenseUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8/OFL.txt",
+    "sha256": "9737d7efe43e6a49ede3c563fe4d436f763db9be1e403a37b9613c2ab30e8cfb",
+    "licenseSha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
+    "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8/fonts/TTF/LXGWWenKaiLite-Regular.ttf"
+  }
+}
