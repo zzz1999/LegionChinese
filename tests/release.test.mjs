@@ -9,10 +9,10 @@ const context = {
   sha: 'a'.repeat(40), runNumber: 2, runId: 123,
   serverUrl: 'https://github.com',
 };
-const assets = ['LegionChinese-latest.zip', 'LegionChinese-latest.zip.sha256']
-  .map(name => ({name, data: Buffer.from('fixture')}));
-
 const version = '0.1.0';
+const assetsForVersion = value => [`LegionChinese-${value}.zip`, `LegionChinese-${value}.zip.sha256`]
+  .map(name => ({name, data: Buffer.from('fixture')}));
+const assets = assetsForVersion(version);
 const changelog = '# 更新记录\n\n## v0.1.0\n\n- 补齐任务交付说明。\n\n## v0.0.9\n\n- 旧版说明。\n';
 function fixture({existing = null, latest = null, failUpload = null, readError = null,
   tags = [], releases = [], commits = [{sha: context.sha, commit: {message: '修复书籍翻页\n\n更多细节'}}],
@@ -78,7 +78,8 @@ function fixture({existing = null, latest = null, failUpload = null, readError =
   };
   return {mutations, comparisons, github, context: runContext,
     resolve: (baseVersion = version) => resolveReleaseVersion({github, context: runContext, baseVersion}),
-    run: (releaseVersion = version) => publishRelease({github, context: runContext, version: releaseVersion, assets, changelog: notes}),
+    run: (releaseVersion = version) => publishRelease({github, context: runContext,
+      version: releaseVersion, assets: assetsForVersion(releaseVersion), changelog: notes}),
   };
 }
 
@@ -94,6 +95,9 @@ test('release is published only after both assets have uploaded', async () => {
   assert.equal(release.name, 'v0.1.0');
   assert.match(release.body, /## 本次更新\n\n- 补齐任务交付说明。/);
   assert.match(release.body, /插件版本：`0\.1\.0`/);
+  assert.ok(release.body.includes('下载 **LegionChinese-0.1.0.zip**'));
+  assert.deepEqual(mutations.filter(([name]) => name === 'upload').map(([, args]) => args.name),
+    ['LegionChinese-0.1.0.zip', 'LegionChinese-0.1.0.zip.sha256']);
   assert.doesNotMatch(release.body, /旧版说明/);
 });
 
@@ -311,7 +315,7 @@ async function runWorkflowStep(name, f, outputs = {}) {
     return {async readFile(path) {
       if (path === 'package.json') return JSON.stringify({version: '1.2.4'});
       if (path === 'CHANGELOG.md') return changelog;
-      const asset = assets.find(asset => path === `dist/${asset.name}`);
+      const asset = assetsForVersion(outputs.version).find(asset => path === `dist/${asset.name}`);
       assert.ok(asset, `Unexpected file read: ${path}`);
       return asset.data;
     }};
@@ -345,6 +349,9 @@ test('workflow publishes the selected successor version and handles a later skip
   const result = await runWorkflowStep('Publish release', f, outputs);
   assert.ok(result.messages.includes('v1.2.6'));
   assert.equal(f.mutations[0][1].tag_name, 'v1.2.6');
+  assert.ok(f.mutations[0][1].body.includes('下载 **LegionChinese-1.2.6.zip**'));
+  assert.deepEqual(f.mutations.filter(([name]) => name === 'upload').map(([, args]) => args.name),
+    ['LegionChinese-1.2.6.zip', 'LegionChinese-1.2.6.zip.sha256']);
   assert.deepEqual(f.mutations.map(([name]) => name), ['create', 'upload', 'upload', 'publish']);
 
   const stale = fixture({latest, comparisonStatus: 'behind'});

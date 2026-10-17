@@ -56,7 +56,7 @@ jobs:
         env:
           PACKAGE_VERSION: ${{ steps.version.outputs.version }}
         run: |
-          ./scripts/package.ps1 -Version $env:PACKAGE_VERSION -ArchiveName LegionChinese-latest.zip
+          ./scripts/package.ps1 -Version $env:PACKAGE_VERSION
       - name: Publish release
         if: steps.version.outputs.publish == 'true'
         uses: actions/github-script@v9
@@ -67,11 +67,13 @@ jobs:
             const { readFile } = require('node:fs/promises');
             const { pathToFileURL } = require('node:url');
             const { publishRelease } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/release.mjs`).href);
-            const assets = await Promise.all(['LegionChinese-latest.zip', 'LegionChinese-latest.zip.sha256'].map(async name => ({
+            const version = process.env.PACKAGE_VERSION;
+            const archiveName = `LegionChinese-${version}.zip`;
+            const assets = await Promise.all([archiveName, `${archiveName}.sha256`].map(async name => ({
               name, data: await readFile(`dist/${name}`)
             })));
             const changelog = await readFile('CHANGELOG.md', 'utf8');
-            const release = await publishRelease({ github, context, version: process.env.PACKAGE_VERSION, assets, changelog });
+            const release = await publishRelease({ github, context, version, assets, changelog });
             if (release) {
               await core.summary.addHeading('Release').addLink(release.tag_name, release.html_url).write();
             } else {

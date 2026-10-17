@@ -12,7 +12,7 @@ $taskDist = Join-Path $taskRoot 'dist'
 if (-not $Version) {
     $Version = (Get-Content -LiteralPath (Join-Path $taskRoot 'package.json') -Raw | ConvertFrom-Json).version
 }
-if (-not $ArchiveName) { $ArchiveName = "LegionChinese-v$Version.zip" }
+if (-not $ArchiveName) { $ArchiveName = "LegionChinese-$Version.zip" }
 New-Item -ItemType Directory -Path $taskDist -Force | Out-Null
 $taskZip = Join-Path $taskDist $ArchiveName
 Compress-Archive -LiteralPath $taskAddon -DestinationPath $taskZip -Force
