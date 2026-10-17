@@ -36,7 +36,7 @@ function A.ShowWelcome()
         local heading=label(window,"TauriChinese  "..version,18,{1,0.82,0})
         heading:SetPoint("TOPLEFT",24,-44)
 
-        local intro=label(window,"面向《魔兽世界》军团再临 7.3.5 的离线中文插件。\n任务、NPC 对话与书籍优先使用简体中文，缺少时使用繁体中文；两者都没有则保留原文。已有中文保持不变。")
+        local intro=label(window,"面向《魔兽世界》军团再临 7.3.5 的离线中文插件。\n任务、NPC 对话与书籍优先使用简体中文，缺少时使用繁体中文；两者都没有则保留原文。已有中文保持不变。\n角色读条使用客户端已有中文名称，缺少时保留原文。")
         intro:SetPoint("TOPLEFT",heading,"BOTTOMLEFT",0,-14)
 
         local credits=label(window,"作者与维护：zzz1999\n灵感来源：TauriHun（WorldOfHuncraft）\n感谢 TrinityCore、The Legion Preservation Project、MagicStorm 和 AzerothCore 的资料贡献。")

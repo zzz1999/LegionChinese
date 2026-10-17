@@ -160,6 +160,73 @@ function A.RefreshTracker()
     end
 end
 
+local castTranslations={}
+local castEvents={UNIT_SPELLCAST_START=true,UNIT_SPELLCAST_CHANNEL_START=true,
+    UNIT_SPELLCAST_DELAYED=true,UNIT_SPELLCAST_CHANNEL_UPDATE=true,PLAYER_ENTERING_WORLD=true}
+
+local function currentCast(bar)
+    if not bar or not bar.unit or not bar.Text or not bar:IsShown() or bar.fadeOut then return end
+    local name,subtext,text,texture,startTime,endTime,tradeSkill,castID
+    if bar.channeling and UnitChannelInfo then
+        name,subtext,text,texture,startTime,endTime=UnitChannelInfo(bar.unit)
+    elseif bar.casting and UnitCastingInfo then
+        name,subtext,text,texture,startTime,endTime,tradeSkill,castID=UnitCastingInfo(bar.unit)
+        if castID~=bar.castID then return end
+    end
+    if type(name)=="string" and type(text)=="string" and text~="" then return name,text,startTime,castID end
+end
+
+function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
+    -- Only the original player/controlled-pet bars. A post-hook of the shared
+    -- handler also receives target, focus and third-party bars.
+    if not A.Enabled() or not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame) then return end
+    if event and not castEvents[event] then return end
+    if event and event~="PLAYER_ENTERING_WORLD" and unit~=bar.unit then return end
+    local name,source,startTime,currentID=currentCast(bar)
+    if not name or A.IsChinese(source) or bar.Text:GetText()~=source then return end
+
+    local translated=A.IsChinese(name) and name or nil
+    local previous=castTranslations[bar]
+    if not translated and previous and previous.unit==bar.unit and previous.name==name and previous.source==source
+        and previous.startTime==startTime and previous.castID==currentID and previous.channeling==bar.channeling then
+        translated=previous.translated
+    end
+    if not translated and GetSpellInfo then
+        -- Legion events carry (unit, name, rank, castID, spellID). The castID
+        -- is an execution counter, NOT a spell ID; UnitCastingInfo has no
+        -- spell ID return on this client. Validate the event before using it.
+        local matchingEvent=event=="UNIT_SPELLCAST_START" and bar.casting and castID==bar.castID
+            or event=="UNIT_SPELLCAST_CHANNEL_START" and bar.channeling and (spellName==name or spellName==source)
+        if matchingEvent and type(spellID)=="number" and spellID>0 and spellID%1==0 then
+            local localized=GetSpellInfo(spellID)
+            if A.IsChinese(localized) then translated=localized end
+        end
+        if not translated then
+            local localized=GetSpellInfo(name)
+            if A.IsChinese(localized) then translated=localized end
+        end
+    end
+    if not translated then return end
+    A.SetFont(bar.Text)
+    bar.Text:SetText(translated)
+    castTranslations[bar]={unit=bar.unit,name=name,source=source,translated=translated,
+        startTime=startTime,castID=currentID,channeling=bar.channeling}
+end
+
+function A.RefreshCastBars()
+    for _,key in ipairs({"CastingBarFrame","PetCastingBarFrame"}) do
+        local bar=_G[key]
+        if A.Enabled() then
+            A.UpdateCastBar(bar)
+        elseif bar then
+            local previous=castTranslations[bar]
+            local name,source=currentCast(bar)
+            if previous and previous.unit==bar.unit and previous.name==name and previous.source==source
+                and bar.Text:GetText()==previous.translated then bar.Text:SetText(source) end
+        end
+    end
+end
+
 function A.UpdateBook(_,event)
     if event~="ITEM_TEXT_READY" or not ItemTextGetText or not ItemTextPageText then return end
     local original=ItemTextGetText()
@@ -191,6 +258,11 @@ local function install()
     hook("QuestLogQuests_Update",A.UpdateQuestList)
     hookMethod(QUEST_TRACKER_MODULE,"SetBlockHeader",A.UpdateTrackerHeader)
     hookMethod(QUEST_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
+    -- The player's XML stores the original callback before addon load; the
+    -- global hook additionally catches internal resume/unit-change calls.
+    hookScript(CastingBarFrame,"OnEvent",A.UpdateCastBar)
+    hookScript(PetCastingBarFrame,"OnEvent",A.UpdateCastBar)
+    hook("CastingBarFrame_OnEvent",A.UpdateCastBar)
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -201,6 +273,7 @@ frame:SetScript("OnEvent",function(_,event,addonName)
     end
     install()
     if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="Blizzard_ObjectiveTracker") then A.RefreshTracker() end
+    if event=="PLAYER_LOGIN" then A.RefreshCastBars() end
     if event=="PLAYER_LOGIN" and not TauriChineseSettings.welcomeSeen then A.ShowWelcome() end
 end)
 install()
@@ -212,10 +285,12 @@ SlashCmdList.TAURICHINESE=function(command)
     if command=="off" or command=="关" then
         TauriChineseSettings.enabled=false
         A.RefreshTracker()
+        A.RefreshCastBars()
         print("TauriChinese：已关闭，重新打开窗口后生效。")
     elseif command=="on" or command=="开" then
         TauriChineseSettings.enabled=true
         A.RefreshTracker()
+        A.RefreshCastBars()
         print("TauriChinese：已开启，已有中文保持不变，缺失译文保留原文。")
     elseif command=="about" or command=="关于" then
         A.ShowWelcome()
