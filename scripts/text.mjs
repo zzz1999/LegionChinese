@@ -4,7 +4,7 @@ export function normalize(text) {
     .replace(/\|H[^|]*\|h(.*?)\|h/g,'$1').replace(/\|[TA].*?\|[ta]/g,'')
     .replace(/<\/?(?:html|body|p|br|h[1-6]|font|img)(?:\s[^>]*)?\s*\/?\s*>/gi,' ')
     .replace(/&nbsp;/gi,' ').replace(/&quot;/gi,'"').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&amp;/gi,'&')
-    .replace(/\$([NnCcRr])(?:\$(?![A-Za-z]))?|\$[Bb]/g,(_,v)=>v?'~'+v.toLowerCase()+'~':' ')
+    .replace(/\$([NnCcRr])(?:\$(?![A-Za-z0-9]))?|\$[Bb]/g,(_,v)=>v?'~'+v.toLowerCase()+'~':' ')
     .replace(/[A-Z]/g,c=>c.toLowerCase()).replace(/[ \t\r\n\v\f]/g,'');
 }
 export function fingerprint(normalized) {
@@ -20,14 +20,16 @@ export function variants(text) {
   }
   return [...forms].filter(Boolean);
 }
-export const supportsTokens = text => variants(text).every(form=>!/\$[a-z]/i.test(form));
+// Numeric objective/world-state/item tokens also require client context. A
+// field we cannot render must fall through to the other locale or the original.
+export const supportsTokens = text => variants(text).every(form=>!/\$[a-z0-9]/i.test(form));
 export class TextIndex {
   constructor(){this.entries=new Map();this.ambiguous=new Set();this.normalized=new Map();this.priorities=new Map();this.collisions=new Set();}
   add(source,chinese,priority=0){
     if(!hasChinese(chinese)||hasChinese(source)||!supportsTokens(chinese))return;
     let accepted=false;
     for(const form of variants(source)){
-      if(form.length<2||/\$[a-z]/i.test(form))continue;
+      if(form.length<2||/\$[a-z0-9]/i.test(form))continue;
       const key=fingerprint(form);
       if(this.collisions.has(key))continue;
       const seen=this.normalized.has(key),previousPriority=this.priorities.get(key)??0;

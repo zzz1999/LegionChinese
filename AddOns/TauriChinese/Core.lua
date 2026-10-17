@@ -6,7 +6,7 @@ local races = { Human="人类", Orc="兽人", Dwarf="矮人", NightElf="暗夜�
 -- Server text can contain English substitutions even on a Chinese client.
 local englishClasses = { WARRIOR="Warrior", PALADIN="Paladin", HUNTER="Hunter", ROGUE="Rogue", PRIEST="Priest", DEATHKNIGHT="Death Knight", SHAMAN="Shaman", MAGE="Mage", WARLOCK="Warlock", MONK="Monk", DRUID="Druid", DEMONHUNTER="Demon Hunter" }
 local englishRaces = { Human="Human", Orc="Orc", Dwarf="Dwarf", NightElf="Night Elf", Scourge="Undead", Tauren="Tauren", Gnome="Gnome", Troll="Troll", Goblin="Goblin", BloodElf="Blood Elf", Draenei="Draenei", Worgen="Worgen", Pandaren="Pandaren", Nightborne="Nightborne", HighmountainTauren="Highmountain Tauren", VoidElf="Void Elf", LightforgedDraenei="Lightforged Draenei" }
-A.font = "Interface\\AddOns\\TauriChinese\\Media\\LXGWWenKaiLite-Regular.ttf"
+A.font = "Interface\\AddOns\\TauriChinese\\Media\\LXGWWenKai-Regular.ttf"
 
 local function strip(text)
     text = text:gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", "")
@@ -40,30 +40,35 @@ local function replaceLiteral(text, needle, replacement)
     return table.concat(result)
 end
 
-local function playerTokens(text)
+local function playerAliases()
     local name = UnitName and UnitName("player")
     local class, classToken, race, raceToken
     if UnitClass then class,classToken=UnitClass("player") end
     if UnitRace then race,raceToken=UnitRace("player") end
+    local aliases,seen={},{}
     for _, pair in ipairs({{name,"$N"},{class,"$C"},{race,"$R"},
         {englishClasses[classToken],"$C"},{englishRaces[raceToken],"$R"}}) do
         if pair[1] then
-            text = replaceLiteral(text, pair[1], pair[2])
-            text = replaceLiteral(text, pair[1]:lower(), pair[2])
-            text = replaceLiteral(text, pair[1]:upper(), pair[2])
+            for _,value in ipairs({pair[1],pair[1]:lower(),pair[1]:upper()}) do
+                local key=value..pair[2]
+                if value~="" and not seen[key] then
+                    seen[key]=true;aliases[#aliases+1]={value,pair[2]}
+                end
+            end
         end
     end
+    return aliases
+end
+
+local function playerTokens(text)
+    for _,pair in ipairs(playerAliases()) do text=replaceLiteral(text,pair[1],pair[2]) end
     return text
 end
 
-function A.IsChinese(text)
-    if type(text) ~= "string" then return false end
-    text = strip(text)
-    if not text:find("[\128-\255]") then return false end
-    local withoutTokens = playerTokens(text):gsub("%$[NCR]", "")
-    -- A localized player name/class/race in English prose is not a Chinese
-    -- sentence. Standalone Chinese names and labels remain untouched.
-    if withoutTokens:find("%a") or withoutTokens:find("[\128-\255]") then text=withoutTokens end
+-- Return whether Han remains, and whether the remainder contains prose rather
+-- than just spaces, numbers and punctuation (including Chinese punctuation).
+local function textLanguage(text)
+    local prose=false
     local i = 1
     while i <= #text do
         local a,b,c,d = text:byte(i,i+3)
@@ -72,12 +77,30 @@ function A.IsChinese(text)
             code = (a-224)*4096+(b-128)*64+c-128; length=3
         elseif a >= 240 and a <= 244 and b and c and d then
             code = (a-240)*262144+(b-128)*4096+(c-128)*64+d-128; length=4
-        elseif a >= 192 and a <= 223 and b then length=2 end
+        elseif a >= 192 and a <= 223 and b then code=(a-192)*64+b-128;length=2 end
         if (code >= 0x3400 and code <= 0x4dbf) or (code >= 0x4e00 and code <= 0x9fff)
             or (code >= 0xf900 and code <= 0xfaff) or (code >= 0x20000 and code <= 0x323af) then return true end
+        local punctuation=(code<128 and not text:sub(i,i):match("%a")) or code==0xa0
+            or (code>=0x2000 and code<=0x206f) or (code>=0x3000 and code<=0x303f)
+            or (code>=0xff01 and code<=0xff20) or (code>=0xff3b and code<=0xff40)
+            or (code>=0xff5b and code<=0xff65)
+        if not punctuation then prose=true end
         i=i+length
     end
-    return false
+    return false,prose
+end
+
+function A.IsChinese(text)
+    if type(text) ~= "string" then return false end
+    text=strip(text)
+    if not text:find("[\128-\255]") then return false end
+    local withoutTokens=playerTokens(text):gsub("%$[NCR]", "")
+    local chinese,prose=textLanguage(withoutTokens)
+    if chinese then return true end
+    -- A Chinese name in foreign prose is a substitution, but "人类。" and
+    -- "法师！" are complete Chinese labels and must remain Chinese.
+    if prose then return false end
+    return (textLanguage(text))
 end
 
 local function substituteTokens(text, values)
@@ -91,7 +114,7 @@ local function substituteTokens(text, values)
             result[#result+1]=values[token];pos=first+2
             -- Some sources close $N/$C/$R with a dollar. It cannot consume
             -- the start of the next token, including unsupported tokens.
-            if token~="b" and text:sub(pos,pos)=="$" and not text:sub(pos+1,pos+1):match("%a") then pos=pos+1 end
+            if token~="b" and text:sub(pos,pos)=="$" and not text:sub(pos+1,pos+1):match("[%a%d]") then pos=pos+1 end
         else
             result[#result+1]="$";pos=first+1
         end
@@ -127,11 +150,65 @@ function A.Fingerprint(text)
     return hex(a)..hex(b)..":"..#text
 end
 
+local function findDynamic(index,text)
+    -- Each occurrence may be either a substituted player value or an ordinary
+    -- word. For example only the first "mage" in "Hello, Mage; ask a mage"
+    -- might be $C. Never replace all occurrences and guess a translation.
+    local matches={}
+    text=strip(text)
+    for _,pair in ipairs(playerAliases()) do
+        local pos=1
+        while true do
+            local first,last=text:find(pair[1],pos,true)
+            if not first then break end
+            local left=first>1 and text:sub(first-1,first-1) or ""
+            local right=text:sub(last+1,last+1)
+            if not (pair[1]:sub(1,1):match("%w") and left:match("%w"))
+                and not (pair[1]:sub(-1):match("%w") and right:match("%w")) then
+                matches[first]=matches[first] or {}
+                matches[first][#matches[first]+1]={last=last,token=pair[2]}
+            end
+            pos=last+1
+        end
+    end
+    local positions={};for first in pairs(matches) do positions[#positions+1]=first end
+    table.sort(positions)
+    if #positions==0 then return nil end
+    local found,conflict,exhausted,leaves,bytes=nil,false,false,0,0
+    local seen={}
+    local function visit(pos,part,changed)
+        if conflict or exhausted then return end
+        local first
+        for _,candidate in ipairs(positions) do if candidate>=pos then first=candidate;break end end
+        if not first then
+            if not changed then return end
+            local normalized=A.Normalize(part..text:sub(pos),false)
+            if seen[normalized] then return end
+            seen[normalized]=true;leaves=leaves+1;bytes=bytes+#normalized
+            -- Bound work on long/unusual server text. An incomplete search is
+            -- uncertain, so it must preserve the original even after a hit.
+            if leaves>256 or bytes>262144 then exhausted=true;return end
+            local id=index[A.Fingerprint(normalized)]
+            if id and D.Strings[id] then
+                if found and D.Strings[found]~=D.Strings[id] then conflict=true else found=id end
+            end
+            return
+        end
+        local prefix=part..text:sub(pos,first-1)
+        visit(first+1,prefix..text:sub(first,first),changed)
+        for _,match in ipairs(matches[first]) do visit(match.last+1,prefix..match.token,true) end
+    end
+    -- Recursion depth also stays bounded independently of the leaf budget.
+    if #positions>32 then return nil end
+    visit(1,"",false)
+    if not conflict and not exhausted then return found end
+end
+
 function A.Find(category, text)
     local index=D[category]
     if type(text)~="string" or text=="" or A.IsChinese(text) or not index then return nil end
     local id=index[A.Fingerprint(A.Normalize(text,false))]
-    if not id then id=index[A.Fingerprint(A.Normalize(text,true))] end
+    if not id then id=findDynamic(index,text) end
     return id and D.Strings[id] or nil
 end
 
@@ -145,7 +222,7 @@ function A.Render(text)
     if UnitRace then localizedRace,raceToken=UnitRace("player") end
     local values={n=(UnitName and UnitName("player")) or "", c=classes[classToken] or localizedClass or "", r=races[raceToken] or localizedRace or "", b="\n"}
     text=substituteTokens(text,values)
-    if text:find("%$%a") then return nil end -- Preserve the original instead of exposing unsupported tokens.
+    if text:find("%$[%a%d]") then return nil end -- Preserve the original instead of exposing unsupported tokens.
     return text
 end
 

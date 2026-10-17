@@ -1,29 +1,29 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "counts": {
     "quests": 21376,
     "questFields": {
       "Title": 17306,
-      "Objectives": 15509,
-      "Description": 15456,
+      "Objectives": 15007,
+      "Description": 15454,
       "CompletionLog": 840,
-      "Completion": 8412,
+      "Completion": 8411,
       "Progress": 6112
     },
-    "npcBroadcastRecords": 125415,
+    "npcBroadcastRecords": 125061,
     "broadcastChineseRecords": 125929,
     "broadcastConflictingRecords": 11,
-    "bookPages": 1705,
+    "bookPages": 1704,
     "bookPageCandidates": 1830,
     "bookPagesWithoutSource": 0,
     "questTraditionalFields": {
+      "Objectives": 32,
       "Title": 47,
-      "Description": 30,
-      "Objectives": 31
+      "Description": 30
     },
     "questDialogueSources": {
       "buildMarked": 24,
-      "communityUnverified": 14500
+      "communityUnverified": 14499
     },
     "broadcastLocales": {
       "zhCN": 125929,
@@ -34,7 +34,7 @@
       "zhTW": 1793
     },
     "bookPagesByLocale": {
-      "zhCN": 1654,
+      "zhCN": 1653,
       "zhTW": 51
     },
     "bookSources": {
@@ -44,30 +44,30 @@
     },
     "bookMatchedSources": {
       "clientSniff": 8,
-      "legionCommunity": 1673,
+      "legionCommunity": 1672,
       "legacyCompatible": 24
     },
     "legacyBooksSkipped": {
       "missingLegionPage": 44,
       "changedOriginal": 6,
-      "preferredTranslation": 1792
+      "preferredTranslation": 1791
     },
     "gossipOptions": 4288,
     "gossipOptionsWithoutSource": 58,
-    "npcReferencedBroadcastRecords": 24339,
+    "npcReferencedBroadcastRecords": 24224,
     "Gossip": {
-      "fingerprints": 1004996,
-      "ambiguousSkipped": 13846,
+      "fingerprints": 1002095,
+      "ambiguousSkipped": 13788,
       "locales": {
-        "zhCN": 997033,
-        "zhTW": 7963
+        "zhCN": 994148,
+        "zhTW": 7947
       }
     },
     "Books": {
-      "fingerprints": 1685,
+      "fingerprints": 1684,
       "ambiguousSkipped": 50,
       "locales": {
-        "zhCN": 1662,
+        "zhCN": 1661,
         "zhTW": 23
       }
     },

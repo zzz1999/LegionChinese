@@ -494,10 +494,11 @@
     "sha256": "15540bab9db7bf7a5d7e672f517be6140e36aebc0e26c73cbee63bd1135a9b6c"
   },
   "font": {
-    "licenseUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8/OFL.txt",
-    "sha256": "9737d7efe43e6a49ede3c563fe4d436f763db9be1e403a37b9613c2ab30e8cfb",
-    "licenseSha256": "0333a85fe077b6849f8e417acc44e8bd879442ceb681e271acf93e2d57fd4e2e",
-    "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai-Lite/1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8/fonts/TTF/LXGWWenKaiLite-Regular.ttf"
+    "file": "LXGWWenKai-Regular.ttf",
+    "licenseUrl": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/00279e1e74e582eb42dc8891d05cf6becb783a9e/OFL.txt",
+    "sha256": "99e5826e782f32a8db145f5127a7faeef09c3ad95da0235d9acb2007ebf12d7e",
+    "licenseSha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0",
+    "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/00279e1e74e582eb42dc8891d05cf6becb783a9e/fonts/TTF/LXGWWenKai-Regular.ttf"
   },
   "archives": {
     "tdb735_2025": {

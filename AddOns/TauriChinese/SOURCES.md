@@ -27,13 +27,14 @@
 - 相同全文在同一语言中对应同等级的不同译文时排除该语言的键；简体无可用键时才尝试繁体，两者都不可用则保留原文。任何已知指纹碰撞（包括简繁之间的碰撞）一律排除。页面候选数、语言候选数、最终有效指纹数和可匹配页面数分别统计，不能互相替代。
 - 未导入截断的 `2018_05_17_99_01_hostfixes_agus1.sql`，也未导入标记为 27326、27547 的后续资料片广播补丁。原始 SQL 只解析选定的数据表，不执行其中语句。
 - 不调用机器翻译，不把繁体中文转换后冒充简体官中。缺少可信来源或匹配不确定时保留原文。
+- 不分发无法解析的数字占位符字段（如任务数量、物品或世界状态变量）；简体字段不可用时仍尝试繁体，再保留原文。运行时也拦截残留变量，不用数据库中的旧数量猜测服务器当前要求。
 
 [docs/book-provenance.json](docs/book-provenance.json) 按页面 ID 和语言记录来源、VerifiedBuild、证据类别和最终英文匹配结果；[docs/data-audit.json](docs/data-audit.json) 记录简繁覆盖统计、被版本过滤的数量和全部源文件哈希。安装包中的本文件保留署名，完整审计记录可在 [GitHub 仓库](https://github.com/zzz1999/TauriChinese/tree/main/docs) 查阅。
 
 ## 字体
 
-- [霞鹜文楷 Lite](https://github.com/lxgw/LxgwWenKai-Lite)，作者 LXGW，OFL-1.1。
-- 固定版本：`1e6aa244f1c396e7f98c5a73f726e9dbb34b31f8` 的 `LXGWWenKaiLite-Regular.ttf`。
+- [霞鹜文楷](https://github.com/lxgw/LxgwWenKai)，作者 LXGW，OFL-1.1。1.1.5 起使用完整版，补足 Lite 字库缺少的「抷」字。
+- 固定版本：`00279e1e74e582eb42dc8891d05cf6becb783a9e` 的 `LXGWWenKai-Regular.ttf`。构建检查逐字核验现有 Lua 文本中的汉字覆盖。
 - 字体未修改；完整许可证随字体保存在 `AddOns/TauriChinese/Media/OFL.txt`。
 
 ## 界面接口依据

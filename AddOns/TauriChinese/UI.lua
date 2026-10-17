@@ -70,15 +70,48 @@ end
 function A.UpdateQuestList()
     local contents=QuestMapFrame and QuestMapFrame.QuestsFrame and QuestMapFrame.QuestsFrame.Contents
     if not contents then return end
+    local quests,changed={},false
     for _,button in ipairs(contents.Titles or {}) do
         if button:IsShown() and button.questLogIndex and button.Text then
             local title,_,_,_,_,_,_,id=GetQuestLogTitle(button.questLogIndex)
+            if id then quests[id]=button end
             local oldHeight=button.Text:GetStringHeight()
             if A.Apply(button.Text,"Quests",id,"Title",title) then
                 button:SetHeight(button:GetHeight()+button.Text:GetStringHeight()-oldHeight)
+                if button.Check and button.Check:IsShown() then
+                    button.Check:SetPoint("LEFT",button.Text,button.Text:GetWrappedWidth()+2,0)
+                end
+                changed=true
             end
         end
     end
+    -- Legion's objective pool is local to Blizzard, but its frames are named
+    -- QLOF1, QLOF2, ... . Read existing frames only; do not allocate through
+    -- QuestLog_GetObjectiveFrame or alter the quest-log selection.
+    local i=1
+    while _G["QLOF"..i] do
+        local objective=_G["QLOF"..i]
+        local button=quests[objective.questID]
+        if button and objective:IsShown() and objective.Text then
+            local original=objective.Text:GetText()
+            local completion=GetQuestLogCompletionText and GetQuestLogCompletionText(button.questLogIndex)
+            local oldHeight=objective.Text:GetStringHeight()
+            local updated
+            if completion and completion~="" and original==completion then
+                updated=A.Apply(objective.Text,"Quests",objective.questID,"CompletionLog",completion)
+            else
+                updated=A.Apply(objective.Text,"Objectives")
+            end
+            if updated then
+                local height=objective.Text:GetStringHeight()
+                objective:SetHeight(height)
+                button:SetHeight(button:GetHeight()+height-oldHeight)
+                changed=true
+            end
+        end
+        i=i+1
+    end
+    if changed and QuestScrollFrame and QuestScrollFrame.UpdateScrollChildRect then QuestScrollFrame:UpdateScrollChildRect() end
 end
 
 function A.UpdateBook(_,event)

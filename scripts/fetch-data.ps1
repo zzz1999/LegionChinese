@@ -40,6 +40,7 @@ foreach ($taskSource in $taskManifest.sql) {
 }
 $taskMedia = Join-Path $taskRoot 'AddOns/TauriChinese/Media'
 New-Item -ItemType Directory -Path $taskMedia -Force | Out-Null
-Get-VerifiedFile $taskManifest.font.url (Join-Path $taskMedia 'LXGWWenKaiLite-Regular.ttf') $taskManifest.font.sha256
+if ([IO.Path]::GetFileName($taskManifest.font.file) -ne $taskManifest.font.file) { throw '无效的字体文件名' }
+Get-VerifiedFile $taskManifest.font.url (Join-Path $taskMedia $taskManifest.font.file) $taskManifest.font.sha256
 Get-VerifiedFile $taskManifest.font.licenseUrl (Join-Path $taskMedia 'OFL.txt') $taskManifest.font.licenseSha256
 Write-Output '数据与字体已校验。运行 npm run build 生成中文资源。'
