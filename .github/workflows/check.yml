@@ -58,6 +58,7 @@ jobs:
         run: |
           ./scripts/package.ps1 -Version $env:PACKAGE_VERSION
       - name: Publish release
+        id: release
         if: steps.version.outputs.publish == 'true'
         uses: actions/github-script@v9
         env:
@@ -75,8 +76,29 @@ jobs:
             const changelog = await readFile('CHANGELOG.md', 'utf8');
             const release = await publishRelease({ github, context, version, assets, changelog });
             if (release) {
+              core.setOutput('tag', release.tag_name);
               await core.summary.addHeading('Release').addLink(release.tag_name, release.html_url).write();
             } else {
               core.notice('Skipping release: newer source has already been published.');
               await core.summary.addHeading('Release skipped').addRaw('Newer source has already been published.').write();
             }
+      - name: Upload to CurseForge
+        if: steps.release.outputs.tag != ''
+        uses: actions/github-script@v9
+        env:
+          PACKAGE_VERSION: ${{ steps.version.outputs.version }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        with:
+          script: |
+            const { pathToFileURL } = require('node:url');
+            const { publishCurseForge } = await import(pathToFileURL(`${process.env.GITHUB_WORKSPACE}/scripts/curseforge.mjs`).href);
+            const result = await publishCurseForge({ github, context,
+              version: process.env.PACKAGE_VERSION, token: process.env.CF_API_TOKEN });
+            const messages = {
+              'not-configured': '尚未配置 CF_API_TOKEN，已跳过 CurseForge 上传。配置步骤见 docs/CURSEFORGE.md。',
+              'superseded': '已有更新的 GitHub Release，已跳过旧版的 CurseForge 上传。',
+              'already-uploaded': `此版本已上传至 CurseForge，文件 ID：${result.fileId}。`,
+              'uploaded': `已上传至 CurseForge，文件 ID：${result.fileId}。公开下载时间取决于 CurseForge 审核状态。`,
+            };
+            core.notice(messages[result.status]);
+            await core.summary.addHeading('CurseForge').addRaw(messages[result.status]).write();

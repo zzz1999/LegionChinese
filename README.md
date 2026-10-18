@@ -4,7 +4,7 @@
 
 为《魔兽世界》军团再临 **7.3.5** 客户端提供任务、NPC 对话、书籍、角色读条、宠物默认名称及场景物件提示的中文显示。
 
-**版本：1.2.6** · 离线使用 · 无需翻译密钥 · 简体优先，繁体补充
+**版本：1.2.7** · 离线使用 · 无需翻译密钥 · 简体优先，繁体补充
 
 **[下载最新版](https://github.com/zzz1999/LegionChinese/releases/latest)** · [查看版本记录](https://github.com/zzz1999/LegionChinese/releases) · [反馈问题与建议](https://github.com/zzz1999/LegionChinese/issues)
 
@@ -51,7 +51,7 @@
 
 ## 安装与更新
 
-1. **退出游戏**，打开上方“下载最新版”，在 **Assets** 中下载 `LegionChinese-版本号.zip` 安装包，例如 `LegionChinese-1.2.6.zip`。
+1. **退出游戏**，打开上方“下载最新版”，在 **Assets** 中下载 `LegionChinese-版本号.zip` 安装包，例如 `LegionChinese-1.2.7.zip`。
 2. 解压，将里面的 `LegionChinese` 文件夹放入游戏目录的 `Interface\AddOns\`。
 3. 确认文件路径如下，避免多套一层文件夹：
 
