@@ -10,6 +10,71 @@ const files=fs.readdirSync(data);
 const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
 const bookText='Welcome to the Scourge. Now that you have entered your true service, you may find immense relief in your liberation from various mortal inconveniences. No bothersome sleeping to take up your time anymore, nor any great need for shelter from the elements, and you are even free from the mild irritation of cutting hair and nails! How delightful!';
 
+test('Much to Learn journal description and objectives translate for all eight quest variants using shipped data',()=>{
+  const quests=readLines('Quests').filter(line=>/^D\.Quests\[(29404|30039|30040|30041|30042|30043|30044|30045)\]=/.test(line));
+  assert.equal(quests.length,8,'every class variant has journal translations');
+  const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
+  const execute=source=>{
+    const status=lauxlib.luaL_dostring(L,to_luastring(source));
+    assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
+  };
+  try{
+    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(`local D=LegionChineseDB\n${quests.join('\n')}`);
+    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(`
+      function GetLocale() return "zhCN" end
+      function GetQuestLogTitle(index)
+        assert(index==1,"do not change quest-log selection")
+        return journalTitle,1,0,false,false,false,0,journalID
+      end
+      function QuestInfo_Display()
+        QuestInfoFrame.questLog=true
+        QuestInfoTitleHeader:SetText(journalTitle)
+        QuestInfoDescriptionText:SetText(journalDescription)
+        QuestInfoObjectivesText:SetText(journalObjectives)
+      end
+    `);
+    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(`
+      questID=99999 -- Stale NPC quest ID must not be used for the journal.
+      for _,id in ipairs({29404,30039,30040,30041,30042,30043,30044,30045}) do
+        journalID=id;journalTitle="学海无涯"
+        journalObjectives="Speak to Master Shang Xi."
+        journalDescription=id==30039
+          and "Freshly arrived for your training, your first task is simple: Speak to Master Shang Xi."
+          or "Fresh to your training, your first task is simple: Speak to Master Shang Xi."
+        QuestInfo_Display()
+        assert(QuestInfoTitleHeader.text==journalTitle,"Chinese title remains unchanged")
+        assert(QuestInfoDescriptionText.text==LegionChineseDB.Quests[id].Description,"journal description "..id)
+        assert(QuestInfoObjectivesText.text==LegionChineseDB.Quests[id].Objectives,"journal objectives "..id)
+        assert(LegionChinese.IsChinese(QuestInfoDescriptionText.text))
+        assert(LegionChinese.IsChinese(QuestInfoObjectivesText.text))
+        assert(QuestInfoDescriptionText.fontChanges==0,"keep the native Chinese font")
+      end
+      for _,id in ipairs({30040,30042,30045}) do
+        journalID=id;journalTitle="Much to Learn";QuestInfo_Display()
+        assert(QuestInfoTitleHeader.text=="学海无涯")
+        assert(QuestInfoObjectivesText.text=="与尚喜师父交谈。")
+        assert(QuestInfoDescriptionText.text=="初来乍到，你的第一个任务很简单：与尚喜师父交谈。")
+      end
+      for _,text in ipairs({"服务器已有中文。","伺服器已有繁體中文。"}) do
+        journalDescription=text;journalObjectives=text;QuestInfo_Display()
+        assert(QuestInfoDescriptionText.text==text and QuestInfoObjectivesText.text==text)
+      end
+      journalDescription="Fresh to your training, your first task is simple: Speak to Master Shang Xi."
+      journalObjectives="Speak to Master Shang Xi."
+      LegionChineseSettings={enabled=false};QuestInfo_Display()
+      assert(QuestInfoDescriptionText.text==journalDescription and QuestInfoObjectivesText.text==journalObjectives)
+      LegionChineseSettings.enabled=true;QuestInfo_Display()
+      assert(QuestInfoObjectivesText.text=="与尚喜师父交谈。")
+      journalID=99999;journalTitle="Unknown quest";QuestInfo_Display()
+      assert(QuestInfoDescriptionText.text==journalDescription and QuestInfoObjectivesText.text==journalObjectives)
+    `);
+  }finally{lua.lua_close(L);}
+});
+
 test('reported death knight book and quest progress translate through XML-bound handlers with shipped data',()=>{
   const key=fingerprint(normalize(bookText));
   const bookRow=readLines('Books').find(line=>line.startsWith(`D.Books["${key}"]=`));

@@ -2,6 +2,7 @@
 local A,D=LegionChinese,LegionChineseDB
 local states=setmetatable({}, {__mode="k"})
 local installed=setmetatable({}, {__mode="k"})
+local pollDelay=setmetatable({}, {__mode="k"})
 
 local function linkItemID(link)
     if type(link)~="string" then return end
@@ -12,28 +13,43 @@ local function linkItemID(link)
     if kind=="item" and (rest=="" or rest:sub(1,1)==":") then return tonumber(id) end
 end
 
+local function translateBody(body,entries,depth)
+    if depth>3 then return end
+    local color,plain=body:match("^(|c%x%x%x%x%x%x%x%x)(.-)|r$")
+    if color then
+        local text=translateBody(plain,entries,depth+1)
+        if text then return color..text.."|r" end
+        return
+    end
+    -- Try the actual database wording first: quotes can be part of the stored
+    -- description as well as wrappers added by the native tooltip.
+    if not body:find("|",1,true) then
+        local text=entries[A.NameFingerprint(body) or ""]
+        if text then return text end
+    end
+    if body:sub(1,1)=='"' and body:sub(-1)=='"' then
+        local text=translateBody(body:sub(2,-2),entries,depth+1)
+        if text then return '"'..text..'"' end
+    end
+end
+
 local function translateLine(source,entries)
     if type(source)~="string" or A.IsChinese(source) then return end
     local prefix,body,suffix=source:match("^(%s*)(.-)(%s*)$")
-    local color,plain=body:match("^(|c%x%x%x%x%x%x%x%x)(.-)|r$")
-    if color then prefix=prefix..color;suffix="|r"..suffix;body=plain end
-    -- Preserve a native full-line color and flavor-text quotes. Other markup
-    -- is deliberately excluded, including linked text added by other addons.
-    if body:find("|",1,true) then return end
-    if body:sub(1,1)=='"' and body:sub(-1)=='"' then
-        prefix=prefix..'"';suffix='"'..suffix;body=body:sub(2,-2)
-    end
-    local text=entries[A.NameFingerprint(body) or ""]
+    local text=translateBody(body,entries,0)
     if text then return prefix..text..suffix end
 end
 
-function A.ClearItemTooltip(tooltip) states[tooltip]=nil end
+function A.ClearItemTooltip(tooltip)
+    states[tooltip]=nil;pollDelay[tooltip]=0.1
+end
 
 function A.UpdateItemTooltip(tooltip)
     if not tooltip or (tooltip~=GameTooltip and tooltip~=ItemRefTooltip)
         or (tooltip.IsForbidden and tooltip:IsForbidden()) then return end
     if not tooltip.IsShown or not tooltip:IsShown() or not tooltip.GetName
         or not tooltip.NumLines or not tooltip.GetItem then return end
+    pollDelay[tooltip]=0.1
     local name=tooltip:GetName()
     if not name then return end
     local unitName,unit,spell,rank,spellID
@@ -69,6 +85,14 @@ function A.UpdateItemTooltip(tooltip)
     if changed then tooltip:Show() end -- Recompute wrapping with the native tooltip.
 end
 
+local function pollItemTooltip(tooltip,elapsed)
+    if not A.Enabled() then return end
+    local remaining=(pollDelay[tooltip] or 0)-(elapsed or 0)
+    if remaining>0.000001 then pollDelay[tooltip]=remaining;return end
+    pollDelay[tooltip]=0.1
+    A.UpdateItemTooltip(tooltip)
+end
+
 local function setFallback(tooltip,id)
     local state=states[tooltip]
     if id and D.ItemDescriptions[id] then
@@ -95,7 +119,10 @@ function A.InstallItemTooltips()
             tooltip:HookScript("OnTooltipSetSpell",A.ClearItemTooltip)
             tooltip:HookScript("OnTooltipSetItem",A.UpdateItemTooltip)
             tooltip:HookScript("OnShow",A.UpdateItemTooltip)
-            tooltip:HookScript("OnUpdate",A.UpdateItemTooltip)
+            -- Native show/item/setter events translate immediately. Polling
+            -- catches later line changes, at most ten times per second instead
+            -- of traversing every line each rendered frame. Off disables polling.
+            tooltip:HookScript("OnUpdate",pollItemTooltip)
             if tooltip.SetHyperlink then
                 hooksecurefunc(tooltip,"SetHyperlink",function(self,link) setFallback(self,linkItemID(link)) end)
             end

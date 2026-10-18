@@ -7,6 +7,8 @@ import {selectItemDescriptions} from '../scripts/item-descriptions.mjs';
 import {nameKey} from '../scripts/client-names.mjs';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const source=JSON.parse(fs.readFileSync(new URL('../data/item-descriptions.json',import.meta.url)));
+const descriptionFiles=fs.readFileSync(new URL('LegionChinese.toc',addon),'utf8').split(/\r?\n/)
+  .filter(file=>/^Data\\ItemDescriptions_\d+\.lua$/.test(file)).map(file=>file.replaceAll('\\','/'));
 
 test('reviewed item descriptions prefer Simplified, fall back to Traditional, and exclude later or conflicting text',()=>{
   const choose=translations=>selectItemDescriptions({schema:1,records:[{...source.records[0],translations}]});
@@ -30,15 +32,19 @@ test('shipped keystone description matches its hashed source and keeps unverifie
   assert.equal(audit.records[0].itemID,138019);
   assert.equal(audit.records[0].locale,'zhTW');assert.equal(audit.records[0].source.verifiedBuild,null);
   assert.equal(audit.records[0].key,nameKey(source.records[0].original));
-  const data=fs.readFileSync(new URL('Data/ItemDescriptions_01.lua',addon),'utf8');
+  const data=descriptionFiles.map(file=>fs.readFileSync(new URL(file,addon),'utf8')).join('\n');
   assert.ok(data.includes(audit.records[0].text));assert.ok(!data.includes(source.records[0].original));
+  assert.ok(audit.counts.client.selected>16000);assert.equal(audit.sources.length,3);
+  assert.equal(audit.counts.entries,audit.clientRecords.length+audit.records.length);
+  assert.equal(audit.clientRecords.find(row=>row.itemID===32760).locale,'zhTW');
+  assert.ok(!audit.clientRecords.some(row=>row.itemID===20731)); // Unresolved enchantment values stay native.
 });
 
 function run(code){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=text=>{const status=lauxlib.luaL_dostring(L,to_luastring(text));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Data/ItemDescriptions_01.lua','Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
+    for(const file of ['Bootstrap.lua',...descriptionFiles,'Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
     for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','item-tooltip-fixture.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
@@ -63,6 +69,78 @@ test('bag and chat item tooltips translate only the known description, retaining
   assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
   SlashCmdList.LEGIONCHINESE("on")
   assert(GameTooltipTextLeft6.text=='"'..translatedDescription..'"')
+`));
+
+test('item polling is bounded, keeps native frames running, and stops while disabled even for unknown items',()=>run(`
+  ItemRefTooltip:SetHyperlink("item:138019")
+  local reads=0
+  for i=2,6 do
+    local widget=_G["ItemRefTooltipTextLeft"..i];local get=widget.GetText
+    widget.GetText=function(self) reads=reads+1;return get(self) end
+  end
+  for i=1,120 do ItemRefTooltip:Fire("OnUpdate",1/120) end
+  assert(reads==50 and ItemRefTooltip.nativeUpdates==120)
+  SlashCmdList.LEGIONCHINESE("off");reads=0
+  for i=1,120 do ItemRefTooltip:Fire("OnUpdate",1/120) end
+  assert(reads==0 and ItemRefTooltip.nativeUpdates==240)
+  assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
+  SlashCmdList.LEGIONCHINESE("on")
+  ItemRefTooltip:SetHyperlink("item:1")
+  local getItem=ItemRefTooltip.GetItem;local itemReads=0
+  ItemRefTooltip.GetItem=function(self) itemReads=itemReads+1;return getItem(self) end
+  for i=1,120 do ItemRefTooltip:Fire("OnUpdate",1/120) end
+  assert(itemReads==10,"unmatched items must not reset the polling interval each frame")
+`));
+
+test('native item events and toggles translate immediately while late line changes appear on the next poll',()=>run(`
+  ItemRefTooltip.pendingText="Waiting for item information"
+  ItemRefTooltip:SetHyperlink("item:138019")
+  ItemRefTooltipTextLeft6:SetText(description)
+  for i=1,11 do ItemRefTooltip:Fire("OnUpdate",1/120) end
+  assert(ItemRefTooltipTextLeft6.text==description)
+  ItemRefTooltip:Fire("OnUpdate",1/120)
+  assert(ItemRefTooltipTextLeft6.text==translatedDescription)
+  ItemRefTooltip.pendingText=description;ItemRefTooltip:SetHyperlink("item:138019")
+  assert(ItemRefTooltipTextLeft6.text==translatedDescription,"native item events must not wait for polling")
+  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==description)
+  SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text==translatedDescription)
+  ItemRefTooltip:SetHyperlink("item:1");assert(ItemRefTooltipTextLeft6.text==description)
+  ItemRefTooltip:Hide();ItemRefTooltip:SetHyperlink("item:138019")
+  assert(ItemRefTooltipTextLeft6.text==translatedDescription,"hide and reuse must not delay a known item")
+`));
+
+test('client item descriptions translate flavor text with Traditional fallback and preserve live stats and toggle originals',()=>run(`
+  local original='Fletched by Andy "The Macho Gnome" Savage.'
+  ItemRefTooltip.pendingText=original;ItemRefTooltip:SetHyperlink("item:32760:0:0:0:0:0")
+  assert(ItemRefTooltipTextLeft6.text=='由「硬漢地精」野蠻安迪裝填尾羽。')
+  ItemRefTooltipTextLeft2:SetText("物品等级 900")
+  ItemRefTooltipTextLeft4:SetText("+1,234 力量")
+  ItemRefTooltipTextLeft5:SetText("使用：恢复 12,345 点生命值。")
+  ItemRefTooltip:Fire("OnUpdate",0.016)
+  assert(ItemRefTooltipTextLeft2.text=="物品等级 900" and ItemRefTooltipTextLeft4.text=="+1,234 力量")
+  assert(ItemRefTooltipTextLeft5.text=="使用：恢复 12,345 点生命值。")
+  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==original)
+  SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text=='由「硬漢地精」野蠻安迪裝填尾羽。')
+  ItemRefTooltip.pendingText=original..' Changed';ItemRefTooltip:SetHyperlink("item:32760")
+  assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
+  ItemRefTooltip.pendingText=original;ItemRefTooltip:SetHyperlink("item:32761")
+  assert(ItemRefTooltipTextLeft6.text==original)
+`));
+
+test('client descriptions retain multiline text and native colors with quotes inside or outside the color wrapper',()=>run(`
+  local original='Doubt thou the stars are fire;\\r\\nDoubt that the sun doth move.'
+  ItemRefTooltip.pendingText='"'..original..'"';ItemRefTooltip:SetHyperlink("item:151800")
+  assert(ItemRefTooltipTextLeft6.text=='"汝不知星辰是否燃烧，\\n汝不知太阳是否运转。"')
+  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
+  SlashCmdList.LEGIONCHINESE("on")
+  for _,text in ipairs({'|cFF00AA99"For superior fighting and a healthier coat."|r',
+    '"|cFF00AA99"For superior fighting and a healthier coat."|r"'}) do
+    ItemRefTooltip.pendingText=text;ItemRefTooltip:SetHyperlink("item:129179")
+    assert(ItemRefTooltipTextLeft6.text:find('专为激烈的战斗和健康的体魄而烹制。',1,true))
+    assert(ItemRefTooltipTextLeft6.text:find('|cFF00AA99',1,true))
+    SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==text)
+    SlashCmdList.LEGIONCHINESE("on")
+  end
 `));
 
 test('keystone links and bags work when GetItem is unavailable, including enabling while already open',()=>run(`

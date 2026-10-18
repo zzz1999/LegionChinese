@@ -291,7 +291,7 @@ generated.push(...clientNames.generated);
 counts.clientNames=clientNames.audit.counts;
 const worldObjects=buildWorldObjectNames({root,input,manifest,version,sqlRows:worldObjectRows});
 generated.push(...worldObjects.generated);counts.worldObjects=worldObjects.audit.counts;
-const itemDescriptions=buildItemDescriptions({root,manifest,version});
+const itemDescriptions=buildItemDescriptions({root,input,manifest,version});
 generated.push(...itemDescriptions.generated);counts.itemDescriptions=itemDescriptions.audit.counts;
 const dungeonNames=buildDungeonNames({root,input,manifest});
 generated.push(...dungeonNames.generated);counts.dungeonNames=dungeonNames.audit.counts;

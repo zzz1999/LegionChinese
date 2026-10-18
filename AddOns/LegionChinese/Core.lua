@@ -155,7 +155,14 @@ local function hex(value)
     return result
 end
 
+-- Fingerprints depend only on text, so a small FIFO is safe across player,
+-- locale and translation changes. Bound both count and retained input length;
+-- long book pages are hashed normally instead of occupying the cache.
+local fingerprints,fingerprintKeys={},{}
+local fingerprintSlot=1
 function A.Fingerprint(text)
+    local cached=fingerprints[text]
+    if cached then return cached end
     -- Floating point also preserves Lua 5.1 arithmetic in test runtimes with integer subtypes.
     local a,b = 5381.0,0.0
     for i=1,#text do
@@ -163,7 +170,14 @@ function A.Fingerprint(text)
         a=(a*33.0+byte)%4294967296.0
         b=(b*65599.0+byte)%4294967296.0
     end
-    return hex(a)..hex(b)..":"..#text
+    local key=hex(a)..hex(b)..":"..#text
+    if #text<=512 then
+        local old=fingerprintKeys[fingerprintSlot]
+        if old then fingerprints[old]=nil end
+        fingerprints[text]=key;fingerprintKeys[fingerprintSlot]=text
+        fingerprintSlot=fingerprintSlot%128+1
+    end
+    return key
 end
 
 local function findDynamic(index,text)

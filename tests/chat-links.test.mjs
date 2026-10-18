@@ -254,6 +254,43 @@ test('failed or unrelated item events do not rewrite history and disabling cance
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[中文物品]|h")
 `,{native:true}));
 
+test('a cache event retries only matching pending links and shares exact variants across windows',()=>run(`
+  local first,second="item:1:0:100","item:2:0:200"
+  for _,frame in ipairs({ChatFrame1,ChatFrame2}) do
+    frame.historyBuffer.max=1000
+    for i=1,800 do frame:AddMessage("Ordinary player message "..i) end
+    for i=3,200 do frame:AddMessage("|Hitem:"..i.."|h[Waiting]|h") end
+    frame:AddMessage("|H"..first.."|h[First]|h / |H"..second.."|h[Second]|h")
+  end
+  queries={};itemNames[first]="第一件物品";itemNames[second]="第二件物品"
+  ItemDataReceived(1,true);ItemDataReceived(2,true);ItemDataReceived(1,true)
+  assert(#timers==1);FlushChatTimers()
+  assert(#queries==2,"only the two affected variants, once across both windows")
+  assert((queries[1]==first and queries[2]==second) or (queries[2]==first and queries[1]==second))
+  for _,frame in ipairs({ChatFrame1,ChatFrame2}) do
+    assert(frame:GetNumMessages()==999)
+    assert(frame.historyBuffer:GetEntryAtIndex(1).message=="|H"..first.."|h[第一件物品]|h / |H"..second.."|h[第二件物品]|h")
+    assert(frame.historyBuffer:GetEntryAtIndex(2).message=="|Hitem:200|h[Waiting]|h")
+  end
+`,{native:true}));
+
+test('shared foreign-name results retain pending retries for every copy and stop revisiting trimmed lines',()=>run(`
+  local message="|Hitem:1|h[Foreign caption]|h"
+  for _,frame in ipairs({ChatFrame1,ChatFrame2}) do
+    frame:AddMessage(message);frame:AddMessage(message)
+  end
+  itemNames["item:1"]="Still a foreign name"
+  queries={};ItemDataReceived(1,true);FlushChatTimers();assert(#queries==1)
+  local removed=table.remove(ChatFrame1.historyBuffer.entries,1)
+  itemNames["item:1"]="中文物品";queries={};ItemDataReceived(1,true);FlushChatTimers()
+  assert(#queries==1 and removed.message==message)
+  for _,frame in ipairs({ChatFrame1,ChatFrame2}) do
+    for _,entry in frame.historyBuffer:EnumerateIndexedEntries() do
+      assert(entry.message=="|Hitem:1|h[中文物品]|h")
+    end
+  end
+`,{native:true}));
+
 test('refresh respects later edits, trimmed history, forbidden frames and unsafe translated names',()=>run(`
   local message="|Hitem:1|h[Nombre]|h"
   itemNames["item:1"]="中文物品";ChatFrame1:AddMessage(message)

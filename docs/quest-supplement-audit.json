@@ -7,22 +7,22 @@
     "baselineAddonCommit": "e22f0dd",
     "selection": "Missing Chinese fields in LegionChinese 1.2.8, matching same 7.3.5 quest ID, English title, context and existing field; custom/test and post-26972 records excluded."
   },
-  "fields": 13727,
-  "quests": 4428,
+  "fields": 13736,
+  "quests": 4431,
   "byField": {
-    "Title": 4013,
-    "Objectives": 3967,
-    "Description": 3991,
+    "Title": 4016,
+    "Objectives": 3970,
+    "Description": 3994,
     "CompletionLog": 1311,
     "Progress": 128,
     "Completion": 317
   },
   "byLocale": {
-    "zhCN": 12771,
+    "zhCN": 12780,
     "zhTW": 956
   },
   "bySource": {
-    "legion-proyect-735": 13708,
+    "legion-proyect-735": 13717,
     "legion-preservation-735": 19
   },
   "rejected": 0,
@@ -109843,6 +109843,96 @@
       "source": "legion-proyect-735",
       "column": "quest_request_items_locale.completiontext",
       "build": 26972
+    },
+    {
+      "id": 30040,
+      "field": "Title",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logtitle",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30040,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30040,
+      "field": "Description",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.questdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30042,
+      "field": "Title",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logtitle",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30042,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30042,
+      "field": "Description",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.questdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30045,
+      "field": "Title",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logtitle",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30045,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.logdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
+    },
+    {
+      "id": 30045,
+      "field": "Description",
+      "locale": "zhCN",
+      "source": "legion-proyect-735",
+      "column": "quest_template_locale.questdescription",
+      "build": 26972,
+      "sourceQuestID": 30043,
+      "match": "reviewed-identical-journal-text"
     }
   ]
 }

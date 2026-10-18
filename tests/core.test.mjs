@@ -53,6 +53,26 @@ test('Lua 5.1 normalization and UTF-8 fingerprints match the build tool',()=>{
   runLua(vectors.map(value=>`assert(LegionChinese.Normalize(${luaString(value)})==${luaString(normalize(value))}); assert(LegionChinese.Fingerprint(LegionChinese.Normalize(${luaString(value)}))==${luaString(fingerprint(normalize(value)))})`).join('\n'));
 });
 
+test('fingerprint caching bounds retained short inputs and recomputes evicted or long inputs without changing keys',()=>{
+  const short='Repeated tooltip name',long='Long book page '.repeat(60);
+  runLua(`local A=LegionChinese
+    local byte=string.byte;local reads=0
+    string.byte=function(text,...) reads=reads+1;return byte(text,...) end
+    local text=${luaString(short)}
+    assert(A.Fingerprint(text)==${luaString(fingerprint(short))})
+    local first=reads
+    for i=1,500 do assert(A.Fingerprint(text)==${luaString(fingerprint(short))}) end
+    assert(reads==first,"repeated short text should not be hashed again")
+    for i=1,128 do A.Fingerprint("Different caption "..i) end
+    local before=reads
+    assert(A.Fingerprint(text)==${luaString(fingerprint(short))})
+    assert(reads>before,"old inputs must be evicted from the bounded cache")
+    text=${luaString(long)};before=reads
+    for i=1,2 do assert(A.Fingerprint(text)==${luaString(fingerprint(long))}) end
+    assert(reads-before==#text*2,"long pages must not be retained")
+    string.byte=byte`);
+});
+
 test('Chinese text stays byte-identical in every category; Chinese player names alone do not suppress translation',()=>{
   runLua(`local A=LegionChinese
     for _,kind in ipairs({"Quests","Gossip","Books","Titles","Objectives"}) do

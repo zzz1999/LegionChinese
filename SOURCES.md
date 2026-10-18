@@ -128,6 +128,8 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 
 合并审计见 `docs/quest-supplement-audit.json`。英文原文、来源 JSON 和 SQL 不随 AddOns 安装包分发；运行资源仅包含中文和匹配指纹。
 
+2026-10-18 的反馈指出“学海无涯”的任务日志描述或目标未汉化。核对八条同名任务记录后，确认 30040、30042、30045 缺少标题、目标和描述。`sources.json.questSupplement.fieldAliases` 显式列出这三个目标 ID，复用同一快照中 30043 的三个 zhCN 字段（来源 `legion-proyect-735`，build 26972）。构建时要求来源和目标在固定的 TDB735.00 库中都有相同的非空英文标题、目标、描述，并再次校验来源字段原文与版本；不按标题自动推广到其他任务，不覆盖已有中文，不复用各职业不同的进行中或交任务对白。审计逐字段记录 `sourceQuestID`，不将复用记录冒充目标 ID 自身的官服采集。这三个现有中文字段来自社区保存的 Legion 数据，尚未独立逐字确认其官服采集来源。
+
 ## 1.2.9 聊天链接与怪物动作
 
 任务链接按任务 ID 查询离线标题，缺失时尝试客户端 `GetQuestLink`；法术和制作配方按法术 ID 查询 `GetSpellInfo` 与离线法术库。成就、货币、天赋、战斗宠物及宠物技能分别使用 7.3.5 的 `GetAchievementInfo`、`GetCurrencyInfo`、`GetTalentInfoByID`、`C_PetJournal.GetPetInfoBySpeciesID`、`C_PetBattles.GetAbilityInfoByID`。只采用中文名称，保留原始超链接参数和外围文本，不把普通方括号当作超链接。接口返回值参考同一原版界面快照的 `Blizzard_TalentUI.lua`、`BattlePetTooltip.lua` 和 `SharedPetBattleTemplates.lua`。
@@ -143,3 +145,13 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 `journal:类型:记录ID:难度` 中 0 是副本、1 是首领、2 是章节；`instancelock:玩家GUID:地图ID:难度:完成掩码` 使用 Map ID。结构参考军团再临保存项目的 [HyperlinkTags.cpp](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/HyperlinkTags.cpp) 与 [Hyperlinks.h](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/Hyperlinks.h)。运行时只替换显示名，完整参数、颜色、难度、进度和点击对象保持不变。
 
 未入库的指南名称只尝试客户端中文 API：`EJ_GetInstanceInfo`、`EJ_GetEncounterInfo`、`C_EncounterJournal.GetSectionInfo().title`，对应 [7.3.5 EncounterJournal 界面源码](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.lua) 与其 API 文档。副本链接点击走 `SetItemRef` 打开指南，不经过物品提示；因此在点击后或指南加载后重试待解析的聊天记录。不调用加载、打开、选择副本或难度的接口。已有中文、无可靠对应、未知类型及格式不完整的链接保留原文。
+
+## 1.2.11 客户端物品说明
+
+使用暴雪 **7.3.5.26972** 客户端 DB2 的 `ItemSparse.Description_lang` 字段，由 Wago 导出：[enUS](https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=enUS)、[zhCN](https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhCN)、[zhTW](https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhTW)。复用 wow-quest-archive 已下载的相同原始 CSV，逐个核对 URL、build 和 SHA-256 后导入；没有使用该项目为其他资料片生成的说明。固定来源见 `sources.json.itemDescriptionTables`，导入脚本见 `scripts/item-descriptions.mjs`，逐项 ID、指纹、语言及统计见 `docs/item-description-audit.json`。
+
+三个文件各含 104,009 个物品 ID。enUS 的独立说明非空者为 16,355 个：其中 16,325 个固定说明有可用中文（16,302 简体、23 繁体），21 个说明包含尚未求值的附魔/法术数值公式，9 个没有汉字译文或本来就是编号、缩写与占位文字。仅导入固定说明，保留客户端中文原措辞，不机器翻译、不繁转简，也不把公式中引用的基础数值当作物品实际属性。这里统计的是说明字段，不是所有物品、使用效果或实测覆盖率。
+
+这些中文来自客户端数据的社区存档，标记为 `client-db2-via-wago`，优先于同语言的社区补充。原有物品 138019 的钥石说明不在这批 ItemSparse 导出中，继续使用前节注明来源的繁体补充；合计 16,326 个物品 ID、24 条繁体。空值、格式不支持或没有可靠中文时保留原文。
+
+运行时同时核对物品 ID 和完整原文的规范化指纹；忽略 ASCII 大小写与空白差异，保留引号、整行颜色包装和换行。未知的链接、纹理等内嵌标记不参与替换。按整行文本匹配，不按黄色这一颜色猜测内容；实际装备属性与使用效果仍由客户端显示。仅替换原版 GameTooltip / ItemRefTooltip 中命中的固定说明，不改写全局物品 API。安装包只包含中文、数字 ID 与指纹，不包含原始 CSV、英文说明或物品模型资源。

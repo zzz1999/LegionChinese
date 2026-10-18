@@ -1,11 +1,11 @@
 {
-  "version": "1.2.10",
+  "version": "1.2.11",
   "counts": {
-    "quests": 22700,
+    "quests": 22703,
     "questFields": {
-      "Title": 21319,
-      "Objectives": 18974,
-      "Description": 19445,
+      "Title": 21322,
+      "Objectives": 18977,
+      "Description": 19448,
       "CompletionLog": 2151,
       "Completion": 8730,
       "Progress": 6240
@@ -58,18 +58,18 @@
     "gossipOptions": 4288,
     "gossipOptionsWithoutSource": 58,
     "questSupplement": {
-      "fields": 13727,
-      "quests": 4428,
+      "fields": 13736,
+      "quests": 4431,
       "byField": {
-        "Title": 4013,
-        "Objectives": 3967,
-        "Description": 3991,
+        "Title": 4016,
+        "Objectives": 3970,
+        "Description": 3994,
         "CompletionLog": 1311,
         "Progress": 128,
         "Completion": 317
       },
       "byLocale": {
-        "zhCN": 12771,
+        "zhCN": 12780,
         "zhTW": 956
       }
     },
@@ -180,11 +180,24 @@
       }
     },
     "itemDescriptions": {
-      "items": 1,
+      "items": 16326,
+      "entries": 16326,
       "locales": {
-        "zhCN": 0,
-        "zhTW": 1
-      }
+        "zhCN": 16302,
+        "zhTW": 24
+      },
+      "client": {
+        "rows": 104009,
+        "nonemptyOriginal": 16355,
+        "skipped": {
+          "emptyOriginal": 87654,
+          "unsupportedOriginal": 21,
+          "missingChinese": 9,
+          "unsupportedChinese": 0
+        },
+        "selected": 16325
+      },
+      "reviewed": 1
     },
     "dungeonNames": {
       "JournalInstance": {
@@ -902,6 +915,7 @@
     "Data\\Spells_04.lua",
     "Data\\WorldObjects_01.lua",
     "Data\\ItemDescriptions_01.lua",
+    "Data\\ItemDescriptions_02.lua",
     "Data\\DungeonNames.lua"
   ]
 }

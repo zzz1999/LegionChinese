@@ -662,13 +662,59 @@
       "sha256": "8815186b3bdd30c0a477f58c7ba1a2da550d2ba51090a710fd099801e54e7cfb"
     }
   ],
+  "itemDescriptionTables": [
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "82c0cb28dafaffbe3818543a110a36bea75455da63be238ca413bc0336e18a19"
+    },
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "92476e65bf08296e243ea6c3df14252a0d0949f8eaaa6814c9349200b092e779"
+    },
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "226fe05ca2f75322f9b38a41e4bc85341c0279bc723615c45a24523e8018acb0"
+    }
+  ],
   "itemDescriptions": {
     "file": "data/item-descriptions.json",
     "sha256": "573b369aaef2f2bc3aebd7d8bfd19f3917369695089f851c59a471c000086012"
   },
   "questSupplement": {
     "file": "data/quest-supplement-735.json",
-    "sha256": "44c7d440daead120a002a239721c3b2a0624bf2f0bd17a745b2a5f67b716eb22"
+    "sha256": "44c7d440daead120a002a239721c3b2a0624bf2f0bd17a745b2a5f67b716eb22",
+    "fieldAliases": [
+      {
+        "id": 30040,
+        "sourceQuestID": 30043,
+        "fields": ["Title", "Objectives", "Description"]
+      },
+      {
+        "id": 30042,
+        "sourceQuestID": 30043,
+        "fields": ["Title", "Objectives", "Description"]
+      },
+      {
+        "id": 30045,
+        "sourceQuestID": 30043,
+        "fields": ["Title", "Objectives", "Description"]
+      }
+    ]
   },
   "dungeonTables": [
     {

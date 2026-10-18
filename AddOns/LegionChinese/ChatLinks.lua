@@ -119,7 +119,7 @@ local function linkedName(kind,id,payload,caption,journalType)
 end
 
 local function translate(message,names)
-    if type(message)~="string" then return message,false end
+    if type(message)~="string" or not message:find("|H",1,true) then return message,false end
     local changed=false
     local missing
     local translated=message:gsub("()(|H(%a+:[^|]+)|h)%[([^|]-)%](|h)",function(position,opening,payload,caption,closing)
@@ -131,17 +131,16 @@ local function translate(message,names)
         -- discarded by looking up only its base ID. This is the client's cache,
         -- not an external translation service. Cache only within this pass so
         -- an initially unavailable item can resolve when its data arrives.
-        local name=names and names[payload]
-        local waiting
-        if name==nil then
+        local cached=names and names[payload]
+        local name,waiting
+        if cached then
+            name,waiting=cached.name,cached.waiting
+        else
             name,waiting=linkedName(kind,id,payload,caption,journalType)
             if not waiting and kind~="item" and kind~="keystone" then waiting=payload end
-            if names then names[payload]=name or false end
-        elseif name==false then
-            if kind=="item" and tonumber(id)~=138019 then waiting=tonumber(id)
-            elseif kind=="keystone" and A.ParseKeystoneLink(payload) then waiting="keystone"
-            elseif kind=="journal" then waiting="journal"
-            elseif kind~="item" and kind~="keystone" then waiting=payload end
+            -- A cached foreign name is still pending, just like nil. Keep its
+            -- dependency so every copy can retry when Chinese data arrives.
+            if names then names[payload]={name=name,waiting=waiting} end
         end
         if not A.IsChinese(name) then
             if waiting then missing=missing or {};missing[waiting]=true end
@@ -181,33 +180,50 @@ local function updateEntry(frame,entry,names)
     return false
 end
 
+local function refreshFrame(frame,names,readyItems)
+    if not hasHistory(frame) then return end
+    local changed=false
+    for _,entry in frame.historyBuffer:EnumerateIndexedEntries() do
+        local retry=not readyItems
+        local record=pending[entry]
+        if readyItems and record then
+            for itemID in pairs(readyItems) do
+                if record.items[itemID] then retry=true;break end
+            end
+        end
+        if retry and updateEntry(frame,entry,names) then changed=true end
+    end
+    -- Enumerate the live buffer so removed/replaced entries are never touched.
+    -- A cache event retries only matching pending lines; login and toggling
+    -- still refresh all lines. Preserve metadata, order, fade and scroll state.
+    if changed then frame:MarkDisplayDirty() end
+end
+
 function A.RefreshChatItemLinks(target)
     local names={}
-    local function refresh(frame)
-        if not hasHistory(frame) then return end
-        local changed=false
-        for _,entry in frame.historyBuffer:EnumerateIndexedEntries() do
-            if updateEntry(frame,entry,names) then changed=true end
-        end
-        -- Legion already stores the complete formatted line in a Lua buffer.
-        -- Change only its text, preserving timestamp, colors, extraData, order,
-        -- fade timers and scroll offset. Do not clear or replay chat events.
-        if changed then frame:MarkDisplayDirty() end
-    end
-    if target then refresh(target) else for frame in pairs(chatFrames) do refresh(frame) end end
+    if target then refreshFrame(target,names)
+    else for frame in pairs(chatFrames) do refreshFrame(frame,names) end end
 end
 
 local function queueWaiting(itemID)
     if not A.Enabled() or not itemID then return end
     for _,record in pairs(pending) do
-        if record.items[itemID] then queuedFrames[record.frame]=true end
+        if record.items[itemID] then
+            local ready=queuedFrames[record.frame]
+            if not ready then ready={};queuedFrames[record.frame]=ready end
+            ready[itemID]=true
+        end
     end
     if refreshQueued or not next(queuedFrames) then return end
     refreshQueued=true
     local function flush()
         local frames=queuedFrames
         queuedFrames=setmetatable({}, {__mode="k"});refreshQueued=false
-        for frame in pairs(frames) do A.RefreshChatItemLinks(frame) end
+        if not A.Enabled() then return end
+        -- Share exact-variant lookups across windows in this batch only. Never
+        -- persist cache misses: another item or journal event can resolve them.
+        local names={}
+        for frame,ready in pairs(frames) do refreshFrame(frame,names,ready) end
     end
     if C_Timer and C_Timer.After then C_Timer.After(0.05,flush) else flush() end
 end
