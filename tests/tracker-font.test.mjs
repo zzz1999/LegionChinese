@@ -133,7 +133,7 @@ test('Chinese clients retain native font faces, sizes and flags for text, button
   end
 `));
 
-test('other clients prefer available Blizzard Chinese fonts and fall back only if missing',()=>run(`
+test('other clients use available Blizzard Chinese fonts without bundled replacements',()=>run(`
   function GetLocale() return "enUS" end
   local function widget(available)
     local w={font="Fonts\\\\FRIZQT__.TTF",size=16,flags="OUTLINE",attempts={}}
@@ -149,8 +149,8 @@ test('other clients prefer available Blizzard Chinese fonts and fall back only i
   assert(present.font=="Fonts\\\\ARKai_T.ttf" and #present.attempts==1 and present.size==16 and present.flags=="OUTLINE")
   A.SetFont(present);assert(#present.attempts==1)
   local absent=widget(false);A.SetFont(absent)
-  assert(absent.font==A.fallbackFont and #absent.attempts==2 and absent.size==16 and absent.flags=="OUTLINE")
-  A.SetFont(absent);assert(#absent.attempts==2,"do not repeatedly try a known missing face")
+  assert(absent.font=="Fonts\\\\FRIZQT__.TTF" and #absent.attempts==1 and absent.size==16 and absent.flags=="OUTLINE")
+  assert(A.fallbackFont==nil,"no bundled font dependency")
   local html={tags={},calls=0}
   function html:GetFont(tag) return self.tags[tag] or "Fonts\\\\FRIZQT__.TTF",tag=="P" and 14 or 20,"OUTLINE" end
   function html:SetFont(tag,font,size,flags) self.tags[tag]=font;self.calls=self.calls+1;assert(size==(tag=="P" and 14 or 20) and flags=="OUTLINE");return true end

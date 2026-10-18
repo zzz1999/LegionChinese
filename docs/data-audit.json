@@ -1,14 +1,14 @@
 {
-  "version": "1.2.2",
+  "version": "1.2.10",
   "counts": {
-    "quests": 21376,
+    "quests": 22700,
     "questFields": {
-      "Title": 17306,
-      "Objectives": 15007,
-      "Description": 15454,
-      "CompletionLog": 840,
-      "Completion": 8413,
-      "Progress": 6112
+      "Title": 21319,
+      "Objectives": 18974,
+      "Description": 19445,
+      "CompletionLog": 2151,
+      "Completion": 8730,
+      "Progress": 6240
     },
     "npcBroadcastRecords": 125061,
     "broadcastChineseRecords": 125929,
@@ -17,13 +17,16 @@
     "bookPageCandidates": 1830,
     "bookPagesWithoutSource": 0,
     "questTraditionalFields": {
-      "Objectives": 32,
-      "Title": 47,
-      "Description": 30
+      "Objectives": 204,
+      "Title": 227,
+      "Description": 193,
+      "CompletionLog": 75,
+      "Completion": 295,
+      "Progress": 71
     },
     "questDialogueSources": {
-      "buildMarked": 26,
-      "communityUnverified": 14499
+      "buildMarked": 427,
+      "communityUnverified": 14543
     },
     "broadcastLocales": {
       "zhCN": 125929,
@@ -54,13 +57,29 @@
     },
     "gossipOptions": 4288,
     "gossipOptionsWithoutSource": 58,
+    "questSupplement": {
+      "fields": 13727,
+      "quests": 4428,
+      "byField": {
+        "Title": 4013,
+        "Objectives": 3967,
+        "Description": 3991,
+        "CompletionLog": 1311,
+        "Progress": 128,
+        "Completion": 317
+      },
+      "byLocale": {
+        "zhCN": 12771,
+        "zhTW": 956
+      }
+    },
     "npcReferencedBroadcastRecords": 24224,
     "Gossip": {
-      "fingerprints": 1002095,
+      "fingerprints": 1002509,
       "ambiguousSkipped": 13788,
       "locales": {
-        "zhCN": 994148,
-        "zhTW": 7947
+        "zhCN": 994222,
+        "zhTW": 8287
       }
     },
     "Books": {
@@ -72,11 +91,11 @@
       }
     },
     "Titles": {
-      "fingerprints": 109402,
-      "ambiguousSkipped": 1039,
+      "fingerprints": 111948,
+      "ambiguousSkipped": 1053,
       "locales": {
-        "zhCN": 108410,
-        "zhTW": 992
+        "zhCN": 110851,
+        "zhTW": 1097
       }
     },
     "Objectives": {
@@ -88,11 +107,19 @@
       }
     },
     "Completions": {
-      "fingerprints": 2279,
-      "ambiguousSkipped": 25,
+      "fingerprints": 2605,
+      "ambiguousSkipped": 35,
       "locales": {
-        "zhCN": 2257,
-        "zhTW": 22
+        "zhCN": 2552,
+        "zhTW": 53
+      }
+    },
+    "NPCNames": {
+      "fingerprints": 64801,
+      "ambiguousSkipped": 171,
+      "locales": {
+        "zhCN": 59614,
+        "zhTW": 5187
       }
     },
     "clientNames": {
@@ -157,6 +184,22 @@
       "locales": {
         "zhCN": 0,
         "zhTW": 1
+      }
+    },
+    "dungeonNames": {
+      "JournalInstance": {
+        "ids": 136,
+        "locales": {
+          "zhCN": 136,
+          "zhTW": 0
+        }
+      },
+      "Map": {
+        "ids": 150,
+        "locales": {
+          "zhCN": 149,
+          "zhTW": 1
+        }
       }
     }
   },
@@ -770,6 +813,8 @@
     "Data\\Quests_10.lua",
     "Data\\Quests_11.lua",
     "Data\\Quests_12.lua",
+    "Data\\Quests_13.lua",
+    "Data\\Quests_14.lua",
     "Data\\Strings_01.lua",
     "Data\\Strings_02.lua",
     "Data\\Strings_03.lua",
@@ -784,6 +829,8 @@
     "Data\\Strings_12.lua",
     "Data\\Strings_13.lua",
     "Data\\Strings_14.lua",
+    "Data\\Strings_15.lua",
+    "Data\\Strings_16.lua",
     "Data\\Gossip_01.lua",
     "Data\\Gossip_02.lua",
     "Data\\Gossip_03.lua",
@@ -835,6 +882,9 @@
     "Data\\Titles_05.lua",
     "Data\\Objectives_01.lua",
     "Data\\Completions_01.lua",
+    "Data\\NPCNames_01.lua",
+    "Data\\NPCNames_02.lua",
+    "Data\\NPCNames_03.lua",
     "Data\\NameStrings_01.lua",
     "Data\\NameStrings_02.lua",
     "Data\\NameStrings_03.lua",
@@ -851,6 +901,7 @@
     "Data\\Spells_03.lua",
     "Data\\Spells_04.lua",
     "Data\\WorldObjects_01.lua",
-    "Data\\ItemDescriptions_01.lua"
+    "Data\\ItemDescriptions_01.lua",
+    "Data\\DungeonNames.lua"
   ]
 }

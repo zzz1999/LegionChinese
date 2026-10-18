@@ -70,3 +70,5 @@ end
 GameTooltip=ScriptFrame();ItemRefTooltip=ScriptFrame()
 function GameTooltip:GetItem() return self.itemName,self.itemLink end
 ItemRefTooltip.GetItem=GameTooltip.GetItem
+function GameTooltip:SetHyperlink(link) self.link=link end
+ItemRefTooltip.SetHyperlink=GameTooltip.SetHyperlink

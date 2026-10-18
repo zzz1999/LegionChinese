@@ -20,6 +20,8 @@ local function region()
     function r:GetStringHeight() return 32 end
     function r:GetFontString() self.fontString=self.fontString or region();return self.fontString end
     function r:CreateFontString(_,_,template) local child=region();child.template=template;return child end
+    function r:CreateTexture() return region() end
+    function r:SetTexture(path) self.texture=path end
     function r:Show() self.shown=true;self.shows=(self.shows or 0)+1 end
     function r:Hide() self.shown=false;if self.scripts.OnHide then self.scripts.OnHide(self) end end
     function r:IsShown() return self.shown end

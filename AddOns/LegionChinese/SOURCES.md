@@ -104,10 +104,7 @@
 
 ## 字体
 
-- 1.1.6 起中文客户端沿用每个原版控件自身的字体、字号和描边，包括书籍正文及各级标题；介绍窗口使用游戏字体。其他语言客户端先尝试游戏自带 `Fonts\ARKai_T.ttf`，加载失败才使用以下后备字体。只引用客户端中的游戏字体，不将其复制或随插件分发。
-- [霞鹜文楷](https://github.com/lxgw/LxgwWenKai)，作者 LXGW，OFL-1.1。1.1.5 起使用完整版，补足 Lite 字库缺少的「抷」字。
-- 固定版本：`00279e1e74e582eb42dc8891d05cf6becb783a9e` 的 `LXGWWenKai-Regular.ttf`。构建检查逐字核验现有 Lua 文本中的汉字覆盖。
-- 字体未修改；完整许可证随字体保存在 `AddOns/LegionChinese/Media/OFL.txt`。
+1.2.9 起不再打包第三方字体。中文客户端保留原版控件的字体、字号和描边，关于窗口使用游戏字体模板；非中文客户端仅尝试客户端已有的 `Fonts\ARKai_T.ttf`，缺失时保留原字体。魔兽世界字体不随插件分发。
 
 ## 界面接口依据
 
@@ -117,8 +114,32 @@
 
 读条对照 `FrameXML/CastingBarFrame.lua`、XML 及 `PetFrame.lua`。`UnitFrame.lua` 的施法消耗预测明确读取 `UnitCastingInfo` 的第 10 个返回值作为法术 ID；若客户端未提供，则核对起始事件中的第 5 个参数，不能把第 4 个参数的施法执行编号当作法术 ID。宠物名称对照 `UnitFrame.lua`、`CompactUnitFrame.lua`、`UnitPopup.lua` 和 `AddOns/Blizzard_NamePlates/Blizzard_NamePlates.lua`，只后置更新现有控件，跳过禁止插件访问的姓名板，不替换 `UnitName` 或更改名字、姓名板设置。
 
-下载数据文件与字体的固定 URL、SHA-256 均列于 `sources.json`；本地审核摘录也固定自身 SHA-256，其逐项外部来源在摘录与审计文件中记录。生成产物只保留中文值与匹配指纹。
+下载数据文件的固定 URL、SHA-256 均列于 `sources.json`；本地审核摘录也固定自身 SHA-256，其逐项外部来源在摘录与审计文件中记录。生成产物只保留中文值与匹配指纹。
 
 ## 客户端语言设置
 
 README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户端已有的语言配置项；变量含义可在 [AdvancedInterfaceOptions 保存的客户端 CVar 描述](https://github.com/Stanzilla/AdvancedInterfaceOptions/blob/03fa08ea8bca354f7009e477ea2fd202cd5a5569/cvars.dump#L4-L5) 中核对。暴雪的[文字语言设置说明](https://tw.support.blizzard.com/zh/article/11417)也区分文字与语音语言，但其当前安装器操作不能作为旧版 7.3.5 配套登录器行为的保证。语言资源需与所用客户端版本匹配，修改配置并不会提供缺失的语言文件，也不能替代服务器未下发的中文文本。
+
+## 1.2.9 同版本任务补充
+
+从 [wow-quest-archive 固定快照](https://github.com/zzz1999/wow-quest-archive/tree/bca7fa8d35b3697417027f74eaea2ddcf0727b97/data/legion) 提取 Legion 7.3.5 的缺失中文字段，保存为 `data/quest-supplement-735.json`，自身 SHA-256 固定于 `sources.json`。没有导入 Classic、WotLK、Cataclysm 或 MoP 的同 ID 任务。与本项目 TDB735.00 基础库核对 ID、英文标题、至少一个非空英文上下文字段；原字段非空时还要求英文原文一致，排除标记为自定义、测试及绝对值高于 26972 的 build，只填缺项，不覆盖已有简繁中文。
+
+补充的 13,727 个字段涉及 4,428 个任务。原始资料来自 [Legion Proyect](https://github.com/zitengzela/LegionCore-7.3.5V2/tree/80ad17a234fd4ed462bc9a23e401b70f86f15a0d)（13,708 个字段）和 The Legion Preservation Project（19 个字段）；具体仓库、提交、下载地址、哈希、许可证与每个字段的语言、表列、英文原文和 build 均保留在摘录中。上游许可证位于 `data/licenses/`；项目采用 GPL-2.0 项目声明，并保留上游对 LegionCore/UWOW 派生背景的说明。这些是社区保存的游戏文本，正数 build 是采集版本标记，不代表本项目已逐字独立验证官方译文。44 个字段 build 为 0，明确按未核实社区记录保留。
+
+合并审计见 `docs/quest-supplement-audit.json`。英文原文、来源 JSON 和 SQL 不随 AddOns 安装包分发；运行资源仅包含中文和匹配指纹。
+
+## 1.2.9 聊天链接与怪物动作
+
+任务链接按任务 ID 查询离线标题，缺失时尝试客户端 `GetQuestLink`；法术和制作配方按法术 ID 查询 `GetSpellInfo` 与离线法术库。成就、货币、天赋、战斗宠物及宠物技能分别使用 7.3.5 的 `GetAchievementInfo`、`GetCurrencyInfo`、`GetTalentInfoByID`、`C_PetJournal.GetPetInfoBySpeciesID`、`C_PetBattles.GetAbilityInfoByID`。只采用中文名称，保留原始超链接参数和外围文本，不把普通方括号当作超链接。接口返回值参考同一原版界面快照的 `Blizzard_TalentUI.lua`、`BattlePetTooltip.lua` 和 `SharedPetBattleTemplates.lua`。
+
+怪物提示仅注册 `CHAT_MSG_MONSTER_EMOTE` 和 `CHAT_MSG_RAID_BOSS_EMOTE`，使用现有 BroadcastText 中文指纹匹配，不处理玩家聊天正文。截图的逃跑提示来自 TDB735.00 热修复库 BroadcastText **1150**，简体原文“%s充满恐惧地想要转身逃跑！”、build **25549**。发送者名字通过同一基础世界库 `creature_template` / `creature_template_locale` 配对，简体优先、繁体补充，同名译文冲突时排除；例如 creature **3267** 的“钢鬃掠夺者”。这些名字仅供怪物系统提示使用，不改变玩家或随机宠物名。只允许原生聊天格式化可承接的 %s 字符串参数；无法可靠匹配时保留原消息。关闭插件只影响后续怪物动作消息，已经输出的动作消息保持当时内容。
+
+## 1.2.10 聊天副本链接
+
+名称取自暴雪 **7.3.5.26972** 客户端 DB2 的 [JournalInstance](https://wago.tools/db2/JournalInstance/csv?build=7.3.5.26972&locale=zhCN) 和 [Map](https://wago.tools/db2/Map/csv?build=7.3.5.26972&locale=zhCN)，由 Wago 导出；同时读取相同 build 的 zhTW 文件。不是人工或机器重译。四个原始 CSV 的 URL、SHA-256 和行数见 `sources.json` 与 `docs/dungeon-name-audit.json`。
+
+冒险指南保留 136 条中文名称；副本进度仅导入 Map 的地下城/团队类型，得到 150 条名称记录（149 简体、1 繁体）。这些是不同 ID 空间的记录数，不是去重后的可玩副本数量。例如冒险指南 721 与地图 1477 都对应“英灵殿”；冒险指南 786 与地图 1530 对应“暗夜要塞”。分发文件只含中文名称及数字 ID，不包含外文、描述或地图资源。
+
+`journal:类型:记录ID:难度` 中 0 是副本、1 是首领、2 是章节；`instancelock:玩家GUID:地图ID:难度:完成掩码` 使用 Map ID。结构参考军团再临保存项目的 [HyperlinkTags.cpp](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/HyperlinkTags.cpp) 与 [Hyperlinks.h](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/Hyperlinks.h)。运行时只替换显示名，完整参数、颜色、难度、进度和点击对象保持不变。
+
+未入库的指南名称只尝试客户端中文 API：`EJ_GetInstanceInfo`、`EJ_GetEncounterInfo`、`C_EncounterJournal.GetSectionInfo().title`，对应 [7.3.5 EncounterJournal 界面源码](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.lua) 与其 API 文档。副本链接点击走 `SetItemRef` 打开指南，不经过物品提示；因此在点击后或指南加载后重试待解析的聊天记录。不调用加载、打开、选择副本或难度的接口。已有中文、无可靠对应、未知类型及格式不完整的链接保留原文。

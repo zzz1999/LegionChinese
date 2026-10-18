@@ -16,7 +16,7 @@ function Get-VerifiedFile([string]$Url, [string]$Path, [string]$Sha) {
     Move-Item -LiteralPath $taskPart -Destination $Path -Force
 }
 
-foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables) + @($taskManifest.worldObjectTables)) {
+foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables) + @($taskManifest.worldObjectTables) + @($taskManifest.dungeonTables)) {
     if ([IO.Path]::GetFileName($taskSource.file) -ne $taskSource.file) { throw '无效的数据文件名' }
     $taskTarget = Join-Path $taskCache $taskSource.file
     if (Test-Checksum $taskTarget $taskSource.sha256) { continue }
@@ -38,9 +38,4 @@ foreach ($taskSource in @($taskManifest.sql) + @($taskManifest.clientTables) + @
         Get-VerifiedFile $taskSource.url $taskTarget $taskSource.sha256
     }
 }
-$taskMedia = Join-Path $taskRoot 'AddOns/LegionChinese/Media'
-New-Item -ItemType Directory -Path $taskMedia -Force | Out-Null
-if ([IO.Path]::GetFileName($taskManifest.font.file) -ne $taskManifest.font.file) { throw '无效的字体文件名' }
-Get-VerifiedFile $taskManifest.font.url (Join-Path $taskMedia $taskManifest.font.file) $taskManifest.font.sha256
-Get-VerifiedFile $taskManifest.font.licenseUrl (Join-Path $taskMedia 'OFL.txt') $taskManifest.font.licenseSha256
-Write-Output '数据与字体已校验。运行 npm run build 生成中文资源。'
+Write-Output '数据已校验。运行 npm run build 生成中文资源。'

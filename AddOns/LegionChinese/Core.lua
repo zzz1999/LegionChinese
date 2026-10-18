@@ -6,7 +6,6 @@ local races = { Human="人类", Orc="兽人", Dwarf="矮人", NightElf="暗夜�
 -- Server text can contain English substitutions even on a Chinese client.
 local englishClasses = { WARRIOR="Warrior", PALADIN="Paladin", HUNTER="Hunter", ROGUE="Rogue", PRIEST="Priest", DEATHKNIGHT="Death Knight", SHAMAN="Shaman", MAGE="Mage", WARLOCK="Warlock", MONK="Monk", DRUID="Druid", DEMONHUNTER="Demon Hunter" }
 local englishRaces = { Human="Human", Orc="Orc", Dwarf="Dwarf", NightElf="Night Elf", Scourge="Undead", Tauren="Tauren", Gnome="Gnome", Troll="Troll", Goblin="Goblin", BloodElf="Blood Elf", Draenei="Draenei", Worgen="Worgen", Pandaren="Pandaren", Nightborne="Nightborne", HighmountainTauren="Highmountain Tauren", VoidElf="Void Elf", LightforgedDraenei="Lightforged Draenei" }
-A.fallbackFont = "Interface\\AddOns\\LegionChinese\\Media\\LXGWWenKai-Regular.ttf"
 
 function A.ParseKeystoneLink(payload)
     if type(payload)~="string" then return end
@@ -304,19 +303,12 @@ function A.SetFont(widget, html, requestedSize)
             target="Fonts\\ARKai_T.ttf"
             local lower=font and font:lower() or ""
             if lower:find("arkai",1,true) or lower:find("arhei",1,true) or lower:find("bkai",1,true)
-                or lower:find("bhei",1,true) or lower:find("blei",1,true) or font==A.fallbackFont then target=font end
+                or lower:find("bhei",1,true) or lower:find("blei",1,true) then target=font end
         end
         local height=requestedSize or size or 14
         if target==font and height==size then return end
-        local success
-        if html then success=widget:SetFont(tag,target,height,flags or "")
-        else success=widget:SetFont(target,height,flags or "") end
-        -- Some non-Chinese installations do not contain Blizzard's Chinese
-        -- font files. Keep the licensed fallback solely for those installations.
-        if not success and not native and target~=A.fallbackFont then
-            if html then widget:SetFont(tag,A.fallbackFont,height,flags or "")
-            else widget:SetFont(A.fallbackFont,height,flags or "") end
-        end
+        if html then widget:SetFont(tag,target,height,flags or "")
+        else widget:SetFont(target,height,flags or "") end
     end
     if html then for _,tag in ipairs({"P","H1","H2","H3"}) do apply(tag) end else apply() end
 end

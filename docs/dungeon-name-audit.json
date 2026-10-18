@@ -1,0 +1,65 @@
+{
+  "build": "7.3.5.26972",
+  "provenance": "client-db2-via-wago",
+  "sources": [
+    {
+      "table": "JournalInstance",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "JournalInstance-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/JournalInstance/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "e8446bfcae4d676efbd013a3cdc2bc1b2be35507667ae49c034c615941bb77f6",
+      "provenance": "client-db2-via-wago",
+      "records": 136
+    },
+    {
+      "table": "JournalInstance",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "JournalInstance-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/JournalInstance/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "4f02b19552c389f0c94ef937e7eb0fc66f8d07e54f747784307e7e38b8d2c8aa",
+      "provenance": "client-db2-via-wago",
+      "records": 136
+    },
+    {
+      "table": "Map",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "Map-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Map/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "c62f09a7020fbf977f3679d435910d2a6f16341cad9d3fc2140bdaef339c5f7d",
+      "provenance": "client-db2-via-wago",
+      "records": 768
+    },
+    {
+      "table": "Map",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "Map-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Map/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "8461bf45af10ce6863bc307738e846c76df8db261868e9d770bf93a6666e2f52",
+      "provenance": "client-db2-via-wago",
+      "records": 768
+    }
+  ],
+  "counts": {
+    "JournalInstance": {
+      "ids": 136,
+      "locales": {
+        "zhCN": 136,
+        "zhTW": 0
+      }
+    },
+    "Map": {
+      "ids": 150,
+      "locales": {
+        "zhCN": 149,
+        "zhTW": 1
+      }
+    }
+  },
+  "generatedFiles": [
+    "Data\\DungeonNames.lua"
+  ]
+}
