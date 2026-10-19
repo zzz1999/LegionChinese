@@ -1,5 +1,5 @@
 {
-  "version": "1.2.13",
+  "version": "1.2.14",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -322,6 +322,32 @@
           "zhTW": 1
         }
       }
+    },
+    "artifacts": {
+      "artifacts": {
+        "ids": 43,
+        "zhCN": 41,
+        "zhTW": 2
+      },
+      "appearanceSets": {
+        "ids": 222,
+        "zhCN": 222,
+        "zhTW": 0
+      },
+      "appearances": {
+        "ids": 880,
+        "zhCN": 880,
+        "zhTW": 0
+      },
+      "conditions": {
+        "ids": 163,
+        "zhCN": 163,
+        "zhTW": 0
+      },
+      "titleConflicts": 0,
+      "powers": 952,
+      "traitSpellIDs": 919,
+      "choices": 43
     }
   },
   "sources": [
@@ -1055,6 +1081,7 @@
     "Data\\NPCLabelNames_07.lua",
     "Data\\NPCLabelNames_08.lua",
     "Data\\ExtraLinkNames_01.lua",
-    "Data\\ExtraLinkNames_02.lua"
+    "Data\\ExtraLinkNames_02.lua",
+    "Data\\Artifacts.lua"
   ]
 }

@@ -2,7 +2,7 @@
 ## Title: LegionChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 1.2.13
+## Version: 1.2.14
 ## X-Curse-Project-ID: 1750538
 ## SavedVariables: LegionChineseSettings
 
@@ -141,11 +141,14 @@ Data\NPCLabelNames_07.lua
 Data\NPCLabelNames_08.lua
 Data\ExtraLinkNames_01.lua
 Data\ExtraLinkNames_02.lua
+Data\Artifacts.lua
 Core.lua
 ClientNames.lua
 WorldObjects.lua
 ItemTooltips.lua
 ExtraTooltips.lua
+Artifacts.lua
 ChatLinks.lua
+Changelog.lua
 Welcome.lua
 UI.lua

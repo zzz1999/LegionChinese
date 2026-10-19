@@ -15,6 +15,8 @@ import {buildDungeonNames} from './dungeon-names.mjs';
 import {importTranslationExtras} from './translation-extras.mjs';
 import {buildExtraClientData} from './extra-client-data.mjs';
 import {buildBookContexts} from './book-contexts.mjs';
+import {buildArtifacts} from './artifacts.mjs';
+import {writeChangelog} from './changelog.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -348,7 +350,10 @@ const dungeonNames=buildDungeonNames({root,input,manifest});
 generated.push(...dungeonNames.generated);counts.dungeonNames=dungeonNames.audit.counts;
 const extraClient=buildExtraClientData({root,input,manifest,npcRows,version});
 generated.push(...extraClient.generated);counts.extraClient=extraClient.audit.counts;
-const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','ChatLinks.lua','Welcome.lua','UI.lua',''];
+const artifacts=buildArtifacts({root,input,manifest,version});
+generated.push(...artifacts.generated);counts.artifacts={...artifacts.audit.counts,choices:artifacts.audit.choices.fields};
+writeChangelog(root,version);
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','Artifacts.lua','ChatLinks.lua','Changelog.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

@@ -1,0 +1,999 @@
+{
+  "schema": 1,
+  "build": "7.3.5.26972",
+  "reviewedAt": "2026-10-19",
+  "provenance": "Community-preserved dialogue, manually compared by ID, specialization and complete meaning; not independently verified official client captures.",
+  "sources": [
+    {
+      "file": "2018_01_11_druid_playerchoice.sql",
+      "url": "https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_01_11_druid_playerchoice.sql",
+      "sha256": "1587925490641ae0e34ac6930ce52bb54db15c814a03c3082f05cb55699af73c",
+      "provenance": "community-mixed"
+    },
+    {
+      "file": "2018_05_16_99_01_hunter_playchoice.sql",
+      "url": "https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_16_99_01_hunter_playchoice.sql",
+      "sha256": "48f5284ac8d31baf6aa74866a80c5ea4832f101ca83e2c19b2427eaacd494a16",
+      "provenance": "community-mixed"
+    },
+    {
+      "file": "2018_05_16_99_02_warlock_playchoice.sql",
+      "url": "https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_05_16_99_02_warlock_playchoice.sql",
+      "sha256": "d3f8885e5939aac1e7d8e26606a95da577236bd548cfd8497e8e9f4eaebeb3cb",
+      "provenance": "community-mixed"
+    },
+    {
+      "file": "2018_06_04_99_01_playerchoice.sql",
+      "url": "https://github.com/welder1976/MagicStorm/blob/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world/2018_06_04_99_01_playerchoice.sql",
+      "sha256": "a7af847fbf4dc27938ce5d61f52e8ba40ff90dcfa1d156f6e0f6af6a0b65cdd1",
+      "provenance": "community-mixed"
+    }
+  ],
+  "comparison": {
+    "file": "LegionCore_world_735.26972_2024_10_23.sql",
+    "sha256": "0265cc795b6507f8918162293e7c905143cdb2ef227ee72179bb43bcf889f68c",
+    "url": "https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/releases/tag/LegionCore735.24101",
+    "verifiedBuild": 0
+  },
+  "reviews": [
+    {
+      "source": "2018_01_11_druid_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 531,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Header": {
+          "original": "Guardian",
+          "text": "守护",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Description": {
+          "original": "The mighty bear god, Ursoc, died during the War of the Ancients defending Azeroth from the Burning Legion.\n\nThe last remnants of his physical form, his claws, were placed within the Emerald Dream for safekeeping. There, his spirit still guards over them.\n\nIf you can obtain the claws they would be a valuable asset in our battles against the Legion.\n\n            |cFF000000|Hitem:128821|h[Claws of Ursoc]|h|r",
+          "text": "The mighty bear god, Ursoc, died during the War of the Ancients defending Azeroth from the Burning Legion.\n\nThe last remnants of his physical form, his claws, were placed within the Emerald Dream for safekeeping. There, his spirit still guards over them.\n\nIf you can obtain the claws they would be a valuable asset in our battles against the Legion.\n\n              |cFF000000|Hitem:128821|h[乌索克之爪]|h|r",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        }
+      }
+    },
+    {
+      "source": "2018_01_11_druid_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 530,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Header": {
+          "original": "Feral",
+          "text": "野性",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Description": {
+          "original": "Ashamane, an ancient and powerful nightsaber, fought in the War of the Ancients and fell ages ago deep in the forests of Val'Sharah.\n\nA group of druids called the Ashen honor her memory and are the guardians of the shrine that houses her fangs. \n\nWe will need to persuade them to allow their precious artifact to be used in combat, but the fangs would be a powerful weapon against the Legion.\n\n            |cFF000000|Hitem:128860|h[Fangs of Ashamane]|h|r",
+          "text": "Ashamane, an ancient and powerful nightsaber, fought in the War of the Ancients and fell ages ago deep in the forests of Val'Sharah.\n\nA group of druids called the Ashen honor her memory and are the guardians of the shrine that houses her fangs. \n\nWe will need to persuade them to allow their precious artifact to be used in combat, but the fangs would be a powerful weapon against the Legion.\n\n              |cFF000000|Hitem:128860|h[阿莎曼之牙]|h|r",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        }
+      }
+    },
+    {
+      "source": "2018_01_11_druid_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 529,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Header": {
+          "original": "Balance",
+          "text": "平衡",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Description": {
+          "original": "Held for safe keeping by Tyrande, the High Priestess of Elune, the Scythe of Elune carries a long and unsettling history for druids.\n\nTied to the origin of the worgen on Azeroth, the scythe is said to possess untold lunar power for the druid with balance enough to keep control.\n\nWe need only to convince Tyrande's people that you are worthy to keep it safe in the battles to come.\n\n            |cFF000000|Hitem:128858|h[Scythe of Elune]|h|r",
+          "text": "Held for safe keeping by Tyrande, the High Priestess of Elune, the Scythe of Elune carries a long and unsettling history for druids.\n\nTied to the origin of the worgen on Azeroth, the scythe is said to possess untold lunar power for the druid with balance enough to keep control.\n\nWe need only to convince Tyrande's people that you are worthy to keep it safe in the battles to come.\n\n              |cFF000000|Hitem:128858|h[月神镰刀]|h|r",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        }
+      }
+    },
+    {
+      "source": "2018_01_11_druid_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 545,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Header": {
+          "original": "Restoration",
+          "text": "恢复",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        },
+        "Description": {
+          "original": "Thousands of years ago, Aviana gifted the first druids a branch from the Mother Tree, G'Hanir.\n\nIt is said that the staff aids its wielder in achieving perfect harmony with nature, allowing them to tap into deeply powerful restorative spells.\n\nThe branch is kept at a shrine beneath the roots of Shaladrassil, but contact has recently been lost with the druids there...  \n\n          |cFF000000|Hitem:128306|h[G'Hanir, the Mother Tree]|h|r",
+          "text": "Thousands of years ago, Aviana gifted the first druids a branch from the Mother Tree, G'Hanir.\n\nIt is said that the staff aids its wielder in achieving perfect harmony with nature, allowing them to tap into deeply powerful restorative spells.\n\nThe branch is kept at a shrine beneath the roots of Shaladrassil, but contact has recently been lost with the druids there...\n\n          |cFF000000|Hitem:128306|h[加尼尔，母亲之树]|h|r",
+          "decision": "defer",
+          "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_01_hunter_playchoice.sql",
+      "choiceID": 240,
+      "responseID": 505,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Survival",
+          "text": "生存",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "The Highmountain tribe lost their greatest weapon, the ancient spear of Huln Highmountain, long ago to a magically corrupted monstrosity.\n\nThey ask you to travel to Stormheim, kill their nemesis, and reclaim the spear for the fight against the Legion.",
+          "text": "The Highmountain tribe lost their greatest weapon, the ancient spear of Huln Highmountain, long ago to a magically corrupted monstrosity.\n\nThey ask you to travel to Stormheim, kill their nemesis, and reclaim the spear for the fight against the Legion.",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_01_hunter_playchoice.sql",
+      "choiceID": 240,
+      "responseID": 506,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Marksmanship",
+          "text": "射击",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "Many years ago, the ranger Alleria Windrunner wielded her family bow, Thas'dorah, to batle the Legion. Her current whereabouts are unknown.\n\nIf Alleria could be located, her weapon would become a valuable asset in the war against the demons.",
+          "text": "Many years ago, the ranger Alleria Windrunner wielded her family bow, Thas'dorah, to batle the Legion. Her current whereabouts are unknown.\n\nIf Alleria could be located, her weapon would become a valuable asset in the war against the demons.",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_01_hunter_playchoice.sql",
+      "choiceID": 240,
+      "responseID": 504,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Beast Mastery",
+          "text": "兽王",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "In ancient times, a vrykul warlord stole a rifle infused with the power of storms. He used the artifact's might to conquer his rivals on the Broken Isles.\n\nDelve into the warlord's tomb and recover this mighty weapon!",
+          "text": "In ancient times, a vrykul warlord stole a rifle infused with the power of storms. He used the artifact's might to conquer his rivals on the Broken Isles.\n\nDelve into the warlord's tomb and recover this mighty weapon!",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_02_warlock_playchoice.sql",
+      "choiceID": 245,
+      "responseID": 525,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Destruction",
+          "text": "毁灭",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "Crafted by hundreds of eredar warlocks and the Dark Titan himself, it was used for terrible acts of destruction. Capable of tearing gaps in reality to other worlds, it was the key to the invasion of Azeroth.\n\nLater used by Nerzhul, he thoughtlessly unleashed its power on Draenor, causing its near destruction. Thought to be long lost, it has returned to the hands of the Legion.",
+          "text": "Crafted by hundreds of eredar warlocks and the Dark Titan himself, it was used for terrible acts of destruction. Capable of tearing gaps in reality to other worlds, it was the key to the invasion of Azeroth.\n\nLater used by Nerzhul, he thoughtlessly unleashed its power on Draenor, causing its near destruction. Thought to be long lost, it has returned to the hands of the Legion.",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_02_warlock_playchoice.sql",
+      "choiceID": 245,
+      "responseID": 524,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Demonology",
+          "text": "恶魔学识",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "The sorcerer Thal'kiel was one of the first Eredar who learned the techniques of summoning and controlling demons.\n\nAfter his defeat, his skull was put on display as an example of the dangers of the dark arts.\n\nThe lesson went unheeded.",
+          "text": "The sorcerer Thal'kiel was one of the first Eredar who learned the techniques of summoning and controlling demons.\n\nAfter his defeat, his skull was put on display as an example of the dangers of the dark arts.\n\nThe lesson went unheeded.",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_05_16_99_02_warlock_playchoice.sql",
+      "choiceID": 245,
+      "responseID": 523,
+      "locale": "zhCN",
+      "build": 25549,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "您选择的哪个神器 ?",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Header": {
+          "original": "Affliction",
+          "text": "痛苦",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        },
+        "Description": {
+          "original": "Wielded by Sataiel, the first necrolyte, the Deadwind Harvester earned its name by stripping the life from the lands known as Deadwind pass.\n\nAfter centuries locked away, Ulthalesh has been discovered in the posession of the Dark Riders. You must hunt them down if you wish to find where they have it hidden.",
+          "text": "Wielded by Sataiel, the first necrolyte, the Deadwind Harvester earned its name by stripping the life from the lands known as Deadwind pass.\n\nAfter centuries locked away, Ulthalesh has been discovered in the posession of the Dark Riders. You must hunt them down if you wish to find where they have it hidden.",
+          "decision": "defer",
+          "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 265,
+      "responseID": 584,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Arcane",
+          "text": "奥术",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "Aluneth was most notably wielded for a time by Aegwynn, the only female Guardian of Tirisfal, although stories indicate that it is far older than she.\n\nToward the end of Aegwynn's life, she entrusted the staff to the Blue Dragonflight. Deeming the staff too dangerous to use, they locked it away in a secret vault, where it remains still.",
+          "text": "艾格文是唯一一位女性的提瑞斯法守护者，艾露尼斯正因为被她使用过而出名。不过据说这把武器的年代比艾格文古老得多。\n\n在艾格文的晚年，她将这柄法杖托付给了蓝龙军团。蓝龙们认为此杖过于危险，将它藏在了一处秘密的宝库里，并存放至今。",
+          "decision": "accept",
+          "reason": "艾露尼斯：艾格文使用、托付蓝龙、秘密宝库三部分对应；完整英文与军团数据库相同。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 265,
+      "responseID": 585,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Fire",
+          "text": "火焰",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "\"Flamestrike\" in its native tongue, Felo'melorn was borne into battle by members of the Sunstrider family as they proved their valor in the War of the Ancients, during the Troll Wars, and against the death knight Arthas Menethil.\n\nUltimately, the sword was lost in the frigid wastes of Northrend.",
+          "text": "此剑在精灵语中被称为Felo'melorn，也就是“烈焰之击”的意思。在上古之战、巨魔战争以及对抗死亡骑士阿尔萨斯·米奈希尔时，都为逐日者家族带来了无数的荣誉。\n\n最终，这把剑遗失在了诺森德的冰荒废土中。",
+          "decision": "accept",
+          "reason": "烈焰之击：逐日者家族、三场战争、遗失诺森德均对应；完整英文与军团数据库相同。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 265,
+      "responseID": 586,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Frost",
+          "text": "冰霜",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "This greatstaff was wielded by Alodi, the first Guardian of Tirisfal. He bore the staff into many battles against Legion forces for the century in which he served as Guardian.\n\nShortly after Alodi stepped down as Guardian, he disappeared with the staff. No one knows where Alodi or the staff ended up, except perhaps Alodi himself.",
+          "text": "这柄传说之杖曾为提瑞斯法最初的守护者阿洛迪所有。在他身为守护者的一百年中，他曾无数次带着这柄法杖深入战场对抗燃烧军团的部队。\n\n在阿洛迪从守护者的位置上退下来后，他和这柄法杖一同消失了。没有人知道这一人一杖的下落——除了他自己。",
+          "decision": "accept",
+          "reason": "黑檀之寒：原补丁英文在 Shortly after Alodi 处截断；以军团数据库同 ID 的完整英文对照，任职百年、卸任后携杖失踪两段与中文对应。只匹配完整英文，拒绝截断版本。",
+          "sourceOriginal": "This greatstaff was wielded by Alodi, the first Guardian of Tirisfal. He bore the staff into many battles against Legion forces for the century in which he served as Guardian.\n\nShortly after Alodi",
+          "comparisonSource": "LegionCore_world_735.26972_2024_10_23.sql"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 235,
+      "responseID": 488,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Holy",
+          "text": "神圣",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "A secret order of paladins has been watching over the resting place of the great titan watcher Tyr for hundreds of years. Histories tell that his powerful warhammer as buried there with him.\n\nRecent events have threatened the safety of their secret charge, and they have appealed for help from paladins across Azeroth.",
+          "text": "A secret order of paladins has been watching over the resting place of the great titan watcher Tyr for hundreds of years. Histories tell that his powerful warhammer as buried there with him.\n\nRecent events have threatened the safety of their secret charge, and they have appealed for help from paladins across Azeroth.",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 235,
+      "responseID": 489,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Protection",
+          "text": "防护",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "An ancient vrykul saga speaks of a shield crafted by Tyr himself. During the Winterskorn War it was used to expose Loken's lies to the vrykul and convert many to Tyr's cause.\n\nThe shield final resting place of the shield was lost to time, but rumors point to one who might know the final chapters of its story.",
+          "text": "An ancient vrykul saga speaks of a shield crafted by Tyr himself. During the Winterskorn War it was used to expose Loken's lies to the vrykul and convert many to Tyr's cause.\n\nThe shield final resting place of the shield was lost to time, but rumors point to one who might know the final chapters of its story.",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 235,
+      "responseID": 490,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Retribution",
+          "text": "惩戒",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "During our failed assault on the Broken Shore, Highlord Tirion Fordring was lost, and with him our greatest weapon against the Legion... the Ashbringer.\n\nWe need to return to the Broken Shore and recover Tirion and the Ashbringer at all costs.",
+          "text": "During our failed assault on the Broken Shore, Highlord Tirion Fordring was lost, and with him our greatest weapon against the Legion... the Ashbringer.\n\nWe need to return to the Broken Shore and recover Tirion and the Ashbringer at all costs.",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 531,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Guardian",
+          "text": "守护",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "The mighty bear god, Ursoc, died during the War of the Ancients defending Azeroth from the Burning Legion.\n\nThe last remnants of his physical form, his claws, were placed within the Emerald Dream for safekeeping. There, his spirit still guards over them.\n\nIf you can obtain the claws they would be a valuable asset in our battles against the Legion.",
+          "text": "强大的巨熊之神乌索克在上古之战中为了对抗燃烧军团、保卫艾泽拉斯献出了生命。\n\n他在战斗中使用的令人生畏的巨爪被安放在了翡翠梦境之中。在那里，他的灵魂仍然守卫着自己的利爪。\n\n如果你能够取得他的利爪，就能够让它们在与军团的战斗中发挥最高的价值。",
+          "decision": "accept",
+          "reason": "乌索克之爪：上古之战牺牲、利爪存于梦境、灵魂守卫和对抗军团均对应；完整英文相同。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 530,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Feral",
+          "text": "野性",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "Ashamane, an ancient and powerful nightsaber, fought in the War of the Ancients and fell ages ago deep in the forests of Val'Sharah.\n\nA group of druids called the Ashen honor her memory and are the guardians of the shrine that houses her fangs. \n\nWe will need to persuade them to allow their precious artifact to be used in combat, but the fangs would be a powerful weapon against the Legion.",
+          "text": "阿莎曼，这只古老而强大的夜刃豹，曾在上古之战中战斗。很久之前，她便陨落在了瓦尔莎拉的森林深处。\n\n灰烬德鲁伊尊崇着她的记忆，守卫着保存她利齿的神殿。\n\n然而她的利齿在对抗军团的战斗中将会是无比强大的武器。我们需要说服他们，允许让我们在战斗中使用他们宝贵的神器。",
+          "decision": "accept",
+          "reason": "阿莎曼之牙：瓦尔莎拉、灰烬德鲁伊守卫和说服其出借神器均对应；完整英文相同。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 529,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Balance",
+          "text": "平衡",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "Held for safe keeping by Tyrande, the High Priestess of Elune, the Scythe of Elune carries a long and unsettling history for druids.\n\nTied to the origin of the worgen on Azeroth, the scythe is said to possess untold lunar power for the druid with balance enough to keep control.\n\nWe need only to convince Tyrande's people that you are worthy to keep it safe in the battles to come.",
+          "text": "月神镰刀涉及到德鲁伊教的一段黑暗历史，它一直由艾露恩的高阶女祭司泰兰德所保管。\n\n它与艾泽拉斯的狼人起源直接相关，据说其中蕴含了强大的月光能量，只有深谙平衡之道的德鲁伊才能控制住它。\n\n我们需要说服泰兰德的人民，证明你能够在即将到来的战争中保护它的安全。",
+          "decision": "accept",
+          "reason": "月神镰刀：泰兰德保管、狼人起源、月光力量及证明持有资格均对应；完整英文相同。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 247,
+      "responseID": 545,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Restoration",
+          "text": "恢复",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "Thousands of years ago, Aviana gifted the first druids a branch from the Mother Tree, G'Hanir.\n\nIt is said that the staff aids its wielder in achieving perfect harmony with nature, allowing them to tap into deeply powerful restorative spells.\n\nThe branch is kept at a shrine beneath the roots of Shaladrassil, but contact has recently been lost with the druids there...  ",
+          "text": "数千年前，艾维娜将母亲之树加尼尔的一根枝条赐给了最初的德鲁伊们。\n\n据说这把法杖可以让持有者与自然达到完美的和谐，能够使用最强大的恢复法术。\n\n这跟枝条被保管在莎拉达希尔下方的祭坛中，但最近有情报显示它和那里的德鲁伊一块失踪了……",
+          "decision": "defer",
+          "reason": "暂缓：英文说与守护德鲁伊失去联系，中文却断言法杖与德鲁伊一起失踪；无独立官中采集证据，不能确认这处差异。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 262,
+      "responseID": 568,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Assassination",
+          "text": "刺杀",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "\n\n",
+          "text": "\n\n",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 262,
+      "responseID": 569,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Outlaw",
+          "text": "狂徒",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "The Dread Admiral Eliza is known as the scourge of the South Seas. Many have learned to fear her cursed blades.\n\nWe've tracked her anchored off the coast of Azsuna in the Broken Isles. Her blades can be yours if you hurry.",
+          "text": "The Dread Admiral Eliza is known as the scourge of the South Seas. Many have learned to fear her cursed blades.\n\nWe've tracked her anchored off the coast of Azsuna in the Broken Isles. Her blades can be yours if you hurry.",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 262,
+      "responseID": 570,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Subtlety",
+          "text": "敏锐",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "The Legion now boast one Akaari Shadowgore - an eredar assassin unlike any we've seen. Her daggers twist the very air around their wielder to conceal them in shadow.\n\nWe have intelligence pointing to her current location. Now is the time to strike.",
+          "text": "The Legion now boast one Akaari Shadowgore - an eredar assassin unlike any we've seen. Her daggers twist the very air around their wielder to conceal them in shadow.\n\nWe have intelligence pointing to her current location. Now is the time to strike.",
+          "decision": "defer",
+          "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 266,
+      "responseID": 587,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Header": {
+          "original": "Enhancement",
+          "text": "元素",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Description": {
+          "original": "The Doomhammer has fallen into the Maelstrom. It would be wise to keep it from falling into the wrong hands.\n\nTravel with Thrall into Deepholm to pursue the missing artifact. Beware - the demon Geth'xun also plummeted into the Maelstrom and may still be alive.",
+          "text": "A secret order of paladins has been watching over the resting place of the great titan watcher Tyr for hundreds of years. Histories tell that his powerful warhammer as buried there with him.\n\nRecent events have threatened the safety of their secret charge, and they have appealed for help from paladins across Azeroth.",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 266,
+      "responseID": 588,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Header": {
+          "original": "Elemental",
+          "text": "增强",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Description": {
+          "original": "The gladiator Rehgar knows of a powerful weapon that may aid us against the Legion.\n\nAfter the Pandaren Campaign, the weapons of the storm god Ra-Den were discovered beneath the Throne of Thunder. They were placed in the care of the White Tiger, who will give them only to one who is worthy. Rehgar will help you prove your worth!",
+          "text": "An ancient vrykul saga speaks of a shield crafted by Tyr himself. During the Winterskorn War it was used to expose Loken's lies to the vrykul and convert many to Tyr's cause.\n\nThe shield final resting place of the shield was lost to time, but rumors point to one who might know the final chapters of its story.",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 266,
+      "responseID": 589,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Header": {
+          "original": "Restoration",
+          "text": "恢复",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        },
+        "Description": {
+          "original": "It is said that Queen Azshara wielded a scepter that had command over the sea and the waters of life.\n\nErunak has long sought the location of this artifact, and one of his shaman was close to finding it when she disappeared. Has she found it? Could the legends be true? What could such an artifact do in the hands of a talented shaman?",
+          "text": "During our failed assault on the Broken Shore, Highlord Tirion Fordring was lost, and with him our greatest weapon against the Legion... the Ashbringer.\n\nWe need to return to the Broken Shore and recover Tirion and the Ashbringer at all costs.",
+          "decision": "defer",
+          "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 253,
+      "responseID": 541,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Blood",
+          "text": "鲜血",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "裂肉者高瑞里克斯是一名凶残而庞大的恶魔战士。他挥舞着他的巨斧诅咒之喉，为军团屠戮了许多个世界。\n\n要想从高瑞里克斯那里夺取这把强大的武器，你需要只身前往入侵我们世界的军团部队的核心地带。但诅咒之喉中蕴含的力量会让你的冒险得到回报。",
+          "text": "裂肉者高瑞里克斯是一名凶残而庞大的恶魔战士。他挥舞着他的巨斧诅咒之喉，为军团屠戮了许多个世界。\n\n要想从高瑞里克斯那里夺取这把强大的武器，你需要只身前往入侵我们世界的军团部队的核心地带。但诅咒之喉中蕴含的力量会让你的冒险得到回报。",
+          "decision": "defer",
+          "reason": "暂缓：原补丁英文栏已被中文污染；军团数据库第二段讲献血增强防御，候选中文讲独自潜入军团，内容不对应。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 253,
+      "responseID": 542,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Frost",
+          "text": "冰霜",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "传奇武器霜之哀伤于四年前在冰冠堡被毁，即便如此，它依然还是艾泽拉斯最恶名昭彰的武器之一。\n\n只需要用上一点死灵法术，它的碎片便可被重铸为一对符文剑，其潜力绝不会逊色于霜之哀伤，甚至可能比霜之哀伤更加强大。",
+          "text": "传奇武器霜之哀伤于四年前在冰冠堡被毁，即便如此，它依然还是艾泽拉斯最恶名昭彰的武器之一。\n\n只需要用上一点死灵法术，它的碎片便可被重铸为一对符文剑，其潜力绝不会逊色于霜之哀伤，甚至可能比霜之哀伤更加强大。",
+          "decision": "defer",
+          "reason": "暂缓：原补丁英文栏已被中文污染；外部英文大意接近，但中文还增加比霜之哀伤更强的含义，缺少可确认的完整同源原文。"
+        }
+      }
+    },
+    {
+      "source": "2018_06_04_99_01_playerchoice.sql",
+      "choiceID": 253,
+      "responseID": 543,
+      "locale": "zhCN",
+      "build": 26654,
+      "fields": {
+        "Question": {
+          "original": "Which weapon should we pursue first?",
+          "text": "我们应该首先追求哪一把武器?",
+          "decision": "accept",
+          "reason": "该神器选择组的提问与中文含义相符。"
+        },
+        "Header": {
+          "original": "Unholy",
+          "text": "邪恶",
+          "decision": "accept",
+          "reason": "专精 ID 与英文标签、中文专精名相符。"
+        },
+        "Answer": {
+          "original": "Select",
+          "text": "选择",
+          "decision": "accept",
+          "reason": "Select 与选择对应；仅限本组本选项。"
+        },
+        "Description": {
+          "original": "天启是一把由纳斯雷兹姆所铸造的古剑，它曾散播过无数的瘟疫、死亡和恐慌，乃是究极的毁灭利器。\n\n这把剑曾由提瑞斯秘法会所使用，但后来被黑暗骑士夺走。若想要把它找回来，我们必须前往黑暗骑士的秘密巢穴。",
+          "text": "天启是一把由纳斯雷兹姆所铸造的古剑，它曾散播过无数的瘟疫、死亡和恐慌，乃是究极的毁灭利器。\n\n这把剑曾由提瑞斯秘法会所使用，但后来被黑暗骑士夺走。若想要把它找回来，我们必须前往黑暗骑士的秘密巢穴。",
+          "decision": "defer",
+          "reason": "暂缓：原补丁英文栏已被中文污染；军团数据库多出暗影攻击和随从段落，中文不完整。"
+        }
+      }
+    }
+  ]
+}

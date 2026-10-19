@@ -308,6 +308,7 @@ local function install()
     end
     if A.InstallItemTooltips then A.InstallItemTooltips() end
     if A.InstallExtraTooltips then A.InstallExtraTooltips() end
+    if A.InstallArtifacts then A.InstallArtifacts(hookMethod,hookScript) end
     if A.InstallChatItemLinks then A.InstallChatItemLinks() end
 end
 local frame=CreateFrame("Frame")

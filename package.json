@@ -1,10 +1,11 @@
 {
   "name": "legion-chinese",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "build:changelog": "node scripts/changelog.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "node scripts/check.mjs"
   },

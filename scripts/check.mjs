@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import luaparse from 'luaparse';
 import {hasChinese,supportsTokens} from './text.mjs';
+import {renderChangelog} from './changelog.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const addon=path.join(root,'AddOns','LegionChinese');
@@ -28,6 +29,10 @@ for(const file of files){
   if(file.startsWith('Data/'))walk(ast);
 }
 const listed=new Set(files);
+if(!listed.has('Changelog.lua')||files.indexOf('Changelog.lua')>=files.indexOf('Welcome.lua'))throw Error('Changelog.lua must load before Welcome.lua.');
+const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;
+const expectedNotes=renderChangelog(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8'),version);
+if(fs.readFileSync(path.join(addon,'Changelog.lua'),'utf8').replaceAll('\r\n','\n')!==expectedNotes)throw Error('In-game changelog is stale; run npm run build:changelog.');
 for(const file of fs.readdirSync(path.join(addon,'Data')))if(!listed.has('Data/'+file))throw Error(`Unlisted resource: ${file}`);
 const icon=fs.readFileSync(path.join(addon,'Media','LegionChineseIcon.tga'));
 if(icon[2]!==2||icon.readUInt16LE(12)!==256||icon.readUInt16LE(14)!==256||icon[16]!==32)throw Error('Invalid addon icon');

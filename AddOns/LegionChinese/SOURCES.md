@@ -183,6 +183,20 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 
 运行时同时核对物品 ID 和完整原文的规范化指纹；忽略 ASCII 大小写与空白差异，保留引号、整行颜色包装和换行。未知的链接、纹理等内嵌标记不参与替换。按整行文本匹配，不按黄色这一颜色猜测内容；实际装备属性与使用效果仍由客户端显示。仅替换原版 GameTooltip / ItemRefTooltip 中命中的固定说明，不改写全局物品 API。安装包只包含中文、数字 ID 与指纹，不包含原始 CSV、英文说明或物品模型资源。
 
+## 1.2.14 神器资料与选择对白
+
+神器数据固定为 **7.3.5.26972**，通过 [Wago DB2 存档](https://wago.tools/db2/Artifact?build=7.3.5.26972)取得客户端表的 enUS、zhCN、zhTW 导出。`Artifact`、`ArtifactAppearance`、`ArtifactAppearanceSet` 按 ID 配对，并逐行要求非语言字段完全一致；名称共 43／880／222 条，其中神器名称有 2 条由繁体补充。包含历史和内部记录，不代表 43 把可获取武器或实机覆盖率。数据来自客户端中文资源的社区存档，不是社区自行翻译的名称。
+
+`ArtifactAppearance.UnlockPlayerConditionID` 关联同 build 的 `PlayerCondition.Failure_description_lang`，只提取已引用的文字。208 个引用条件中，163 个有可用中文，45 个没有可配对原文。只支持段落 `$B` 与职业 `$C`，不把数值公式、未知变量或空白说明强行替换。该导出的不同语言对部分压缩字段的负值哨兵有不同表示；不使用也不写回条件数值和解锁逻辑。
+
+`ArtifactPower` 与 `ArtifactPowerRank` 只用于验证特质和法术 ID 的关系（952 个特质、919 个引用法术）。运行时由 `C_ArtifactUI.GetPowerInfo(powerID).spellID` 决定当前法术；中文名称和静态说明复用现有同 build 的 Spell 库。未实现通用法术公式求值器，动态描述继续使用客户端结果。
+
+选择对白候选来自 [MagicStorm 固定提交](https://github.com/welder1976/MagicStorm/tree/e941af4df2f394e7d0e0753ca15c0677271698c1/sql/sql/world)中的四个补丁。逐条核对 29 条选项，实际采用 `2018_06_04_99_01_playerchoice.sql` 标记 26654 的 6 段介绍及适用标签。法师冰霜选项的英文在补丁中截断，只与 [LegionCore735.24101 数据库](https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/releases/tag/LegionCore735.24101)同 ID 的完整英文配对；截断原文不能触发汉化。该英文记录的 VerifiedBuild 为 0，只是完整原文对照。候选没有可独立验证的原始抓包头，因此标为经过语义核验的社区保存资料，不宣称全部是已独立验证的官方译文。错误职业、英文栏被中文污染、遗漏句子或有语义差异的候选保留原文。
+
+逐条采用／排除理由、原始文字、补丁 URL 和 SHA-256 在 `data/artifact-choice-reviews.json`；`sources.json` 固定该审阅快照与 14 份客户端 CSV 的哈希。生成结果见 `docs/artifact-data-audit.json`，可读说明见 `docs/ARTIFACT-DATA.md`。英文原文、SQL 与 CSV 不随 AddOns 分发，只分发中文和匹配指纹。
+
+界面依据固定的 [7.3.5 QuestChoice 实现](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_QuestChoice/QuestChoiceFrameMixin.lua)、[神器外观实现](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_ArtifactUI/Blizzard_ArtifactAppearances.lua)和 [神器 API 定义](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_APIDocumentation/ArtifactUILua.lua)。神器选择属于 `Blizzard_QuestChoice`；原版先设置选择／选项 ID，再填入 SimpleHTML，最后计算布局。插件在填字时替换正文，沿用原版高度计算。外观按钮按当前 appearance ID 匹配解锁提示，保留选择响应、确认流程、预览、解锁条件和特质购买逻辑。
+
 ## 1.2.13 扩展资料与展示入口
 
 ### 任务变量、肖像与区域文字

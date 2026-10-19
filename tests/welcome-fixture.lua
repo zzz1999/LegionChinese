@@ -1,5 +1,6 @@
 -- Model lifecycle, focus and text; this fixture does not simulate real rendering.
-UISpecialFrames={};UIParent={};frames={}
+UISpecialFrames={};UIParent={height=768};frames={}
+function UIParent:GetHeight() return self.height end
 local function region()
     local r={scripts={},shown=true,text=""}
     function r:SetScript(event,callback) self.scripts[event]=callback end
@@ -15,9 +16,10 @@ local function region()
     function r:SetJustifyV() end
     function r:SetWidth(value) self.width=value end
     function r:SetHeight(value) self.height=value end
+    function r:GetHeight() return self.height or 0 end
     function r:SetSize(width,height) self.width=width;self.height=height end
     function r:SetPoint(...) self.point={...} end
-    function r:GetStringHeight() return 32 end
+    function r:GetStringHeight() return self.stringHeight or 32 end
     function r:GetFontString() self.fontString=self.fontString or region();return self.fontString end
     function r:CreateFontString(_,_,template) local child=region();child.template=template;return child end
     function r:CreateTexture() return region() end
@@ -28,6 +30,12 @@ local function region()
     function r:SetFrameStrata() end
     function r:SetClampedToScreen() end
     function r:EnableMouse() end
+    function r:EnableMouseWheel(value) self.mouseWheel=value end
+    function r:SetScrollChild(child) self.scrollChild=child end
+    function r:GetVerticalScrollRange() return math.max(0,self.scrollChild:GetHeight()-self:GetHeight()) end
+    function r:SetVerticalScroll(value) self.verticalScroll=math.max(0,math.min(value,self:GetVerticalScrollRange())) end
+    function r:GetVerticalScroll() return self.verticalScroll or 0 end
+    function r:UpdateScrollChildRect() self:SetVerticalScroll(self:GetVerticalScroll()) end
     function r:SetMovable() end
     function r:RegisterForDrag() end
     function r:StartMoving() end
@@ -44,6 +52,7 @@ function CreateFrame(kind,name,parent,template)
     local frame=region();frame.kind=kind;frame.template=template;frame.parent=parent
     if name then _G[name]=frame end
     if template=="BasicFrameTemplateWithInset" then frame.TitleText=region() end
+    if template=="UIPanelScrollFrameTemplate" then frame.ScrollBar=region() end
     frames[#frames+1]=frame;return frame
 end
 function GetAddOnMetadata() return "0.1.2+build.test" end

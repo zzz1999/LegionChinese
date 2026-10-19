@@ -1,0 +1,1539 @@
+{
+  "version": "1.2.14",
+  "build": "7.3.5.26972",
+  "sources": [
+    {
+      "table": "Artifact",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "Artifact-7.3.5.26972-zhCN.csv",
+      "sha256": "14b9f9ddc6d1b5b0e41938f437a8672c9abb80d25793f0e38cd4b2480e14278d"
+    },
+    {
+      "table": "Artifact",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=enUS",
+      "file": "Artifact-7.3.5.26972-enUS.csv",
+      "sha256": "6cde4cb15f965f0a42d1ef0c5338a8647ecc7bd56d72a11e9cdd81284c50ea5d"
+    },
+    {
+      "table": "Artifact",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "Artifact-7.3.5.26972-zhTW.csv",
+      "sha256": "3aec5c495809a562ff6286a7af9d2cab334d3d02926e9e4ed8b337a808ffc660"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-enUS.csv",
+      "sha256": "52efd294f312bd25704982a843740f7d539124b5e929bed44711b24f7bf2789d"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-zhCN.csv",
+      "sha256": "98128eeafcbe74c458cb344fa6d3d0328b69e20c1a311fa42b7cd687bb4dd26e"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-zhTW.csv",
+      "sha256": "8ea1859bafacab69c8100c69b14764c4a0aebf1007cf5cf5bd347811e6302666"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactAppearance-7.3.5.26972-enUS.csv",
+      "sha256": "c909254da2714a6cea615c7450a249d46ea0c9785592052dd7a0d0fa96bc447c"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "ArtifactAppearance-7.3.5.26972-zhCN.csv",
+      "sha256": "d439d5986dbd20200667ab03e3251fb83b3ef630226a1c9f192580dfc8dc909d"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "ArtifactAppearance-7.3.5.26972-zhTW.csv",
+      "sha256": "e29064457d62b712373b57e09ad46e133df63af1a9d8fe497e9acdce9e8c321b"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=enUS",
+      "file": "PlayerCondition-7.3.5.26972-enUS.csv",
+      "sha256": "bcd8998cb13bc8e5fc5f117893eee7c4d2686ff7dcbe52dd48cc2b95b4dc54f2"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "PlayerCondition-7.3.5.26972-zhCN.csv",
+      "sha256": "d697960352c101bf6aa9c7735cfe1c8f8e46bbdf70de93d24cc8d86cc71d52cb"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "PlayerCondition-7.3.5.26972-zhTW.csv",
+      "sha256": "b258fdd2dbb6fe4282ca642abd630f07ebc019dea5ea2645793fb403c6c7e721"
+    },
+    {
+      "table": "ArtifactPower",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactPower/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactPower-7.3.5.26972-enUS.csv",
+      "sha256": "d31a0ce6e76595799b3e67845a98ab4eaf91e5140f68346a9c295d7d1637b464"
+    },
+    {
+      "table": "ArtifactPowerRank",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactPowerRank/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactPowerRank-7.3.5.26972-enUS.csv",
+      "sha256": "43e0b00790869f7081b353d24c21f302b7b792e1ca7a8ee20a17d30187891ed4"
+    }
+  ],
+  "counts": {
+    "artifacts": {
+      "ids": 43,
+      "zhCN": 41,
+      "zhTW": 2
+    },
+    "appearanceSets": {
+      "ids": 222,
+      "zhCN": 222,
+      "zhTW": 0
+    },
+    "appearances": {
+      "ids": 880,
+      "zhCN": 880,
+      "zhTW": 0
+    },
+    "conditions": {
+      "ids": 163,
+      "zhCN": 163,
+      "zhTW": 0
+    },
+    "titleConflicts": 0,
+    "powers": 952,
+    "traitSpellIDs": 919
+  },
+  "deferred": {
+    "conditions": [
+      {
+        "id": 12549,
+        "reason": "missing_original"
+      },
+      {
+        "id": 37266,
+        "reason": "missing_original"
+      },
+      {
+        "id": 37268,
+        "reason": "missing_original"
+      },
+      {
+        "id": 37269,
+        "reason": "missing_original"
+      },
+      {
+        "id": 37270,
+        "reason": "missing_original"
+      },
+      {
+        "id": 38416,
+        "reason": "missing_original"
+      },
+      {
+        "id": 38417,
+        "reason": "missing_original"
+      },
+      {
+        "id": 38418,
+        "reason": "missing_original"
+      },
+      {
+        "id": 38419,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42265,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42266,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42267,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42268,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42270,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42271,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42273,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42274,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42275,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42277,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42278,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42279,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42281,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42282,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42283,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42284,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42285,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42286,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42287,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42288,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42289,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42290,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42291,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42292,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42293,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42294,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42295,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42296,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42297,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42298,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42299,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42300,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42301,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42302,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42303,
+        "reason": "missing_original"
+      },
+      {
+        "id": 42304,
+        "reason": "missing_original"
+      }
+    ],
+    "setDescriptions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      32,
+      33,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      200,
+      203,
+      206,
+      207,
+      208,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245
+    ]
+  },
+  "choices": {
+    "source": {
+      "file": "data/artifact-choice-reviews.json",
+      "sha256": "71dbdad2d5af72574b66a3b10af306fbb898c6a61417c7b1e890dd9f640a57e3"
+    },
+    "fields": 43,
+    "descriptions": 6,
+    "choices": 5,
+    "options": 16,
+    "records": [
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 584,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 584,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "f26a47efd467dc86:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 584,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 584,
+        "field": "Description",
+        "reason": "艾露尼斯：艾格文使用、托付蓝龙、秘密宝库三部分对应；完整英文与军团数据库相同。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6d5a8936ff46cd81:279"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 585,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 585,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "7c96cbebbddda476:4"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 585,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 585,
+        "field": "Description",
+        "reason": "烈焰之击：逐日者家族、三场战争、遗失诺森德均对应；完整英文与军团数据库相同。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "3714cf00b26fa355:247"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 586,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 586,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "0f752e33ff52a524:5"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 586,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 265,
+        "responseID": 586,
+        "field": "Description",
+        "reason": "黑檀之寒：原补丁英文在 Shortly after Alodi 处截断；以军团数据库同 ID 的完整英文对照，任职百年、卸任后携杖失踪两段与中文对应。只匹配完整英文，拒绝截断版本。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "0850c12d798c3692:275"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 488,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 488,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "7c97fd811dd9a194:4"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 488,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 489,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 489,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1e806feca4b0e5b9:10"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 489,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 490,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 490,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6454d69c95abec7f:11"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 490,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "a319a4b0848faaf1:8"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Description",
+        "reason": "乌索克之爪：上古之战牺牲、利爪存于梦境、灵魂守卫和对抗军团均对应；完整英文相同。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "d8a5b12bab08f514:288"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "0f6e17afa3e2357e:5"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Description",
+        "reason": "阿莎曼之牙：瓦尔莎拉、灰烬德鲁伊守卫和说服其出借神器均对应；完整英文相同。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "a8560c339278c600:319"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "65a8ac8be29b153c:7"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Description",
+        "reason": "月神镰刀：泰兰德保管、狼人起源、月光力量及证明持有资格均对应；完整英文相同。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "06809e1135e03efc:310"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "ba221bdf2205d0de:11"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 568,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 568,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "fdc7c2652574b0d0:13"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 568,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 569,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 569,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "135249e1f2ebcf14:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 569,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 570,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 570,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "b8ad4d6139ba6bd2:8"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 570,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 541,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 541,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "0f298155d874439a:5"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 541,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 542,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 542,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "0f752e33ff52a524:5"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 542,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 543,
+        "field": "Question",
+        "reason": "该神器选择组的提问与中文含义相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "6afa63b8a6910a9f:31"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 543,
+        "field": "Header",
+        "reason": "专精 ID 与英文标签、中文专精名相符。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "20cc0bc46fb2e5cd:6"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 543,
+        "field": "Answer",
+        "reason": "Select 与选择对应；仅限本组本选项。",
+        "locale": "zhCN",
+        "build": 26654,
+        "fingerprint": "1b80e3c5953071fc:6"
+      }
+    ],
+    "deferred": [
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Question",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Header",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Answer",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 531,
+        "field": "Description",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Question",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Header",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Answer",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 530,
+        "field": "Description",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Question",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Header",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Answer",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 529,
+        "field": "Description",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Question",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Header",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Answer",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_01_11_druid_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Description",
+        "reason": "旧候选仅翻译物品链接名，正文仍是英文；采用后续逐项核验数据。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 505,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 505,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 505,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 505,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 506,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 506,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 506,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 506,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 504,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 504,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 504,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_01_hunter_playchoice.sql",
+        "choiceID": 240,
+        "responseID": 504,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 525,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 525,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 525,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 525,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 524,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 524,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 524,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 524,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 523,
+        "field": "Question",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 523,
+        "field": "Header",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 523,
+        "field": "Answer",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_05_16_99_02_warlock_playchoice.sql",
+        "choiceID": 245,
+        "responseID": 523,
+        "field": "Description",
+        "reason": "旧候选只翻译专精标签，正文仍是英文；不作为神器对白收录。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 488,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 489,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 235,
+        "responseID": 490,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 247,
+        "responseID": 545,
+        "field": "Description",
+        "reason": "暂缓：英文说与守护德鲁伊失去联系，中文却断言法杖与德鲁伊一起失踪；无独立官中采集证据，不能确认这处差异。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 568,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 569,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 262,
+        "responseID": 570,
+        "field": "Description",
+        "reason": "中文栏为空或仍为英文，未找到可用中文正文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 587,
+        "field": "Question",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 587,
+        "field": "Header",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 587,
+        "field": "Answer",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 587,
+        "field": "Description",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 588,
+        "field": "Question",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 588,
+        "field": "Header",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 588,
+        "field": "Answer",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 588,
+        "field": "Description",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 589,
+        "field": "Question",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 589,
+        "field": "Header",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 589,
+        "field": "Answer",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 266,
+        "responseID": 589,
+        "field": "Description",
+        "reason": "萨满记录错配：增强与元素标签对调，正文复制圣骑士三种神器；整组选项排除。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 541,
+        "field": "Description",
+        "reason": "暂缓：原补丁英文栏已被中文污染；军团数据库第二段讲献血增强防御，候选中文讲独自潜入军团，内容不对应。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 542,
+        "field": "Description",
+        "reason": "暂缓：原补丁英文栏已被中文污染；外部英文大意接近，但中文还增加比霜之哀伤更强的含义，缺少可确认的完整同源原文。"
+      },
+      {
+        "source": "2018_06_04_99_01_playerchoice.sql",
+        "choiceID": 253,
+        "responseID": 543,
+        "field": "Description",
+        "reason": "暂缓：原补丁英文栏已被中文污染；军团数据库多出暗影攻击和随从段落，中文不完整。"
+      }
+    ]
+  }
+}

@@ -937,5 +937,123 @@
       "sha256": "69cf1f9fa344e7663d5a6720f3cc97b96a3af77e2eeed638ec8306bdaab2771d",
       "provenance": "client-db2-via-wago"
     }
-  ]
+  ],
+  "artifactTables": [
+    {
+      "table": "Artifact",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "Artifact-7.3.5.26972-zhCN.csv",
+      "sha256": "14b9f9ddc6d1b5b0e41938f437a8672c9abb80d25793f0e38cd4b2480e14278d"
+    },
+    {
+      "table": "Artifact",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=enUS",
+      "file": "Artifact-7.3.5.26972-enUS.csv",
+      "sha256": "6cde4cb15f965f0a42d1ef0c5338a8647ecc7bd56d72a11e9cdd81284c50ea5d"
+    },
+    {
+      "table": "Artifact",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/Artifact/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "Artifact-7.3.5.26972-zhTW.csv",
+      "sha256": "3aec5c495809a562ff6286a7af9d2cab334d3d02926e9e4ed8b337a808ffc660"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactAppearance-7.3.5.26972-enUS.csv",
+      "sha256": "c909254da2714a6cea615c7450a249d46ea0c9785592052dd7a0d0fa96bc447c"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "ArtifactAppearance-7.3.5.26972-zhCN.csv",
+      "sha256": "d439d5986dbd20200667ab03e3251fb83b3ef630226a1c9f192580dfc8dc909d"
+    },
+    {
+      "table": "ArtifactAppearance",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearance/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "ArtifactAppearance-7.3.5.26972-zhTW.csv",
+      "sha256": "e29064457d62b712373b57e09ad46e133df63af1a9d8fe497e9acdce9e8c321b"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-enUS.csv",
+      "sha256": "52efd294f312bd25704982a843740f7d539124b5e929bed44711b24f7bf2789d"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-zhCN.csv",
+      "sha256": "98128eeafcbe74c458cb344fa6d3d0328b69e20c1a311fa42b7cd687bb4dd26e"
+    },
+    {
+      "table": "ArtifactAppearanceSet",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactAppearanceSet/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "ArtifactAppearanceSet-7.3.5.26972-zhTW.csv",
+      "sha256": "8ea1859bafacab69c8100c69b14764c4a0aebf1007cf5cf5bd347811e6302666"
+    },
+    {
+      "table": "ArtifactPower",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactPower/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactPower-7.3.5.26972-enUS.csv",
+      "sha256": "d31a0ce6e76595799b3e67845a98ab4eaf91e5140f68346a9c295d7d1637b464"
+    },
+    {
+      "table": "ArtifactPowerRank",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/ArtifactPowerRank/csv?build=7.3.5.26972&locale=enUS",
+      "file": "ArtifactPowerRank-7.3.5.26972-enUS.csv",
+      "sha256": "43e0b00790869f7081b353d24c21f302b7b792e1ca7a8ee20a17d30187891ed4"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=enUS",
+      "file": "PlayerCondition-7.3.5.26972-enUS.csv",
+      "sha256": "bcd8998cb13bc8e5fc5f117893eee7c4d2686ff7dcbe52dd48cc2b95b4dc54f2"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "PlayerCondition-7.3.5.26972-zhCN.csv",
+      "sha256": "d697960352c101bf6aa9c7735cfe1c8f8e46bbdf70de93d24cc8d86cc71d52cb"
+    },
+    {
+      "table": "PlayerCondition",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/PlayerCondition/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "PlayerCondition-7.3.5.26972-zhTW.csv",
+      "sha256": "b258fdd2dbb6fe4282ca642abd630f07ebc019dea5ea2645793fb403c6c7e721"
+    }
+  ],
+  "artifactChoiceReviews": {
+    "file": "data/artifact-choice-reviews.json",
+    "sha256": "71dbdad2d5af72574b66a3b10af306fbb898c6a61417c7b1e890dd9f640a57e3"
+  }
 }
