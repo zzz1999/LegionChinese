@@ -90,7 +90,7 @@ test('tracker title and objective layout respects counters, colors, line limits 
   assert(foreign.Text.text=="Arrows collected: 2/15","other tracker modules stay untouched")
 `,{tracker:true}));
 
-test('tracker handles auto-completion, unknown quests, toggles and late-loaded modules safely',()=>run(`
+test('tracker handles auto-completion, unknown quests, refreshes and late-loaded modules safely',()=>run(`
   local block=NewQuestBlock(12680)
   local module=QUEST_TRACKER_MODULE
   local auto=module:AddObjective(block,"QuestComplete","Quest Complete!")
@@ -103,9 +103,9 @@ test('tracker handles auto-completion, unknown quests, toggles and late-loaded m
     module:SetBlockHeader(block,"阿彻鲁斯战马",1,true,12680)
     module:AddObjective(block,"QuestComplete",trackerCompletion,nil,true)
   end
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(block.lines.QuestComplete.Text.text==trackerCompletion and trackerRefreshes==1)
-  SlashCmdList.LEGIONCHINESE("on")
+  LegionChineseSettings={enabled=false};A.RefreshTracker()
+  assert(A.IsChinese(block.lines.QuestComplete.Text.text) and trackerRefreshes==1)
+  A.RefreshTracker()
   assert(A.IsChinese(block.lines.QuestComplete.Text.text) and trackerRefreshes==2)
   local installed=module.AddObjective
   frames[1]:Fire("OnEvent","ADDON_LOADED","OtherAddon")

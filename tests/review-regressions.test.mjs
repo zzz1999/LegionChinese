@@ -178,6 +178,6 @@ test('greeting quest rows resize after translation and refresh scrolling without
     assert(QuestGreetingScrollFrame.updates>0)
     A.UpdateGreeting();assert(QuestTitleButton1.heightWrites==1 and QuestTitleButton2.heightWrites==1)
     LegionChineseSettings={enabled=false};QuestTitleButton1.text="A title";QuestTitleButton1.height=16
-    QuestFrameGreetingPanel:Fire("OnShow");assert(QuestTitleButton1.text=="A title" and QuestTitleButton1.height==16)
+    QuestFrameGreetingPanel:Fire("OnShow");assert(QuestTitleButton1.text==D.Strings[999999] and QuestTitleButton1.height==44)
   `);
 });

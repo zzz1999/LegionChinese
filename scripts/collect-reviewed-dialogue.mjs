@@ -1,12 +1,12 @@
-// Reproduce the four reviewed Shang Xi dialogue fields from pinned SQL files.
-// Pass the locale SQL, Pandaria world SQL and Legion world SQL paths in that order.
+// Batch-review the pinned locale SQL against legacy and Legion quest context.
+// Optional paths: locale SQL, legacy world, Legion Proyect, TDB 2018, TDB 2025.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
 import {readSQL} from './sql.mjs';
-import {normalize} from './text.mjs';
+import {collectReviewedDialogue,dialogueColumns} from './quest-dialogue.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sources=[
@@ -22,38 +22,47 @@ const sources=[
     archiveSha256:'6bb034ec09e736deb814d4f511b19d5910722318ed171db5789c4934784a58a9',
     sha256:'d1faf4efeca0cbd2940964e72e7e519f90e304d6778c110d0cc951c79a06f27e',patch:'7.3.5',license:'GPL-2.0'}
 ];
-const ids=[29406,29524],rows=new Map();
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'sources.json'),'utf8'));
+for(const [id,kind] of [['tdb-2018','world'],['tdb-2025','dialogue-world']]){
+  const source=manifest.sql.find(s=>s.kind===kind);
+  sources.push({id,file:source.file,url:source.url,member:source.member,sha256:source.sha256,patch:'7.3.5',license:'GPL-2.0'});
+}
+const rows=new Map(),ids=new Set();
 const selected=new Set(['quest_template','quest_request_items','quest_offer_reward','quest_request_items_locale','quest_offer_reward_locale']);
 for(const [i,source] of sources.entries()){
-  const file=process.argv[i+2]??path.join(root,'.cache','reviewed-dialogue',source.file);
+  const file=process.argv[i+2]??path.join(root,'.cache',i<3?'reviewed-dialogue':'',source.file);
   const hash=crypto.createHash('sha256');for await(const chunk of fs.createReadStream(file))hash.update(chunk);
   assert.equal(hash.digest('hex'),source.sha256,`Source checksum: ${source.file}`);
-  await readSQL(file,selected,(table,row)=>{
+  const tables=new Map();rows.set(source.id,tables);
+  await readSQL(file,selected,(table,row,update)=>{
     const id=Number(row.ID??row.Id),locale=row.locale??row.Locale??'enUS';
-    if(ids.includes(id)&&['enUS','zhCN','zhTW'].includes(locale))rows.set(`${source.id}:${table}:${id}:${locale}`,row);
+    if(!['enUS','zhCN','zhTW'].includes(locale)||i>0&&!ids.has(id))return;
+    if(!tables.has(table))tables.set(table,new Map());
+    const records=tables.get(table),key=id+':'+locale,existing=records.get(key);
+    if(existing&&!update)throw Error(`Duplicate source row: ${source.id}:${table}:${key}`);
+    records.set(key,update?{...existing,...row}:row);
+    if(i===0&&['zhCN','zhTW'].includes(locale)&&Number(row.VerifiedBuild)>0&&Number(row.VerifiedBuild)<=26972)ids.add(id);
   });
+  console.log('Verified '+source.id);
 }
-const get=(source,table,id,locale='enUS')=>rows.get(`${source}:${table}:${id}:${locale}`);
-const identity=row=>({title:row.LogTitle??row.Title,objectives:row.LogDescription??row.Objectives,description:row.QuestDescription??row.Details});
-const quests=ids.map(id=>{
-  const old=get('pandaria-world','quest_template',id),current=get('legion-world','quest_template',id);
-  const legacyIdentity=identity(old),targetIdentity=identity(current);
-  for(const key of Object.keys(targetIdentity))assert.equal(normalize(legacyIdentity[key]),normalize(targetIdentity[key]));
-  const fields={};
-  for(const [field,table,column] of [['Progress','quest_request_items','CompletionText'],['Completion','quest_offer_reward','RewardText']]){
-    const original=get('legion-world',table,id),locales={};
-    assert.equal(Number(original.VerifiedBuild),26972);
-    if(field==='Completion')assert.equal(normalize(old.OfferRewardText),normalize(original[column]));
-    for(const locale of ['zhCN','zhTW']){
-      const localized=get('pandaria-locales',table+'_locale',id,locale);
-      assert.equal(Number(localized.VerifiedBuild),18414);
-      locales[locale]={text:localized[column],build:Number(localized.VerifiedBuild)};
-    }
-    fields[field]={english:original[column],englishBuild:Number(original.VerifiedBuild),column:table+'_locale.'+column,locales};
-  }
-  return {id,identity:targetIdentity,legacyIdentity,fields};
+const tableRows=(source,table)=>[...(rows.get(source).get(table)?.values()??[])];
+const questMap=source=>new Map(tableRows(source,'quest_template').map(r=>[String(r.ID??r.Id),r]));
+const localeRows=Object.entries(dialogueColumns).flatMap(([field,spec])=>{
+  const [table,column]=spec.split('.');
+  return tableRows('pandaria-locales',table).map(r=>({id:Number(r.ID),field,locale:r.locale??r.Locale,build:Number(r.VerifiedBuild),text:r[column]}));
 });
-const snapshot={schemaVersion:1,targetBuild:26972,provenance:'reviewed-legacy-dialogue',sources,quests};
+const references=['tdb-2018','tdb-2025','legion-world'].map(id=>({id,quests:questMap(id),
+  ...Object.fromEntries(Object.entries(dialogueColumns).map(([field,spec])=>{
+    const [table,column]=spec.split('.');
+    return [field,new Map(tableRows(id,table.replace('_locale','')).map(r=>[String(r.ID),{text:r[column],build:Number(r.VerifiedBuild)}]))];
+  }))}));
+const reviewFile='data/quest-dialogue-reviews.json',reviewBytes=fs.readFileSync(path.join(root,reviewFile));
+const {quests,verification}=collectReviewedDialogue({localeRows,legacyQuests:questMap('pandaria-world'),baseQuests:questMap('tdb-2018'),references,reviews:JSON.parse(reviewBytes)});
+const snapshot={schemaVersion:2,targetBuild:26972,provenance:'reviewed-legacy-dialogue',sources,
+  reviews:{file:reviewFile,sha256:crypto.createHash('sha256').update(reviewBytes).digest('hex')},verification,quests};
 const file='data/reviewed-quest-dialogue.json',bytes=JSON.stringify(snapshot,null,2)+'\n';
 fs.writeFileSync(path.join(root,file),bytes);
-console.log(JSON.stringify({file,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),quests:quests.length,fields:4}));
+manifest.reviewedQuestDialogue={file,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};
+fs.writeFileSync(path.join(root,'sources.json'),JSON.stringify(manifest,null,2)+'\n');
+console.log(JSON.stringify({...manifest.reviewedQuestDialogue,quests:quests.length,
+  fields:quests.reduce((n,q)=>n+Object.keys(q.fields).length,0),rows:verification.rows,byResult:verification.byResult}));

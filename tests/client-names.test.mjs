@@ -88,8 +88,7 @@ test('English client uses real 7.3.5 spell IDs for casting, gathering and item u
     StartCast(bar,{name=case[2],text=case[2],apiSpellID=case[1],id=77})
     assert(bar.Text:GetText()==case[3],case[2])
     assert(bar.Text.appliedFont=="Fonts\\\\ARKai_T.ttf" and bar.value==1 and bar.maxValue==5)
-    SlashCmdList.LEGIONCHINESE("off");assert(bar.Text:GetText()==case[2])
-    SlashCmdList.LEGIONCHINESE("on");assert(bar.Text:GetText()==case[3])
+    A.RefreshCastBars();assert(bar.Text:GetText()==case[3])
   end
   assert(#spellLookups==0,"offline data requires no client localized response")
 `,{imported:spellRows()}));
@@ -143,9 +142,8 @@ test('own default pet names translate in frames and tooltip without changing nat
       assert(frame.name:GetText()==case[4]);assert(frame.name.fontChanges==0)
     end
     assert(GameTooltipTextLeft1:GetText()==case[4] and UnitName("pet")==case[2])
-    SlashCmdList.LEGIONCHINESE("off")
-    assert(PetFrame.name:GetText()==case[2] and GameTooltipTextLeft1:GetText()==case[2])
-    SlashCmdList.LEGIONCHINESE("on");assert(PetFrame.name:GetText()==case[4])
+    LegionChineseSettings={enabled=false};A.RefreshPetNames()
+    assert(PetFrame.name:GetText()==case[4] and GameTooltipTextLeft1:GetText()==case[4])
   end
 `,{pets:true,imported:petRows()}));
 
@@ -175,8 +173,8 @@ test('only own tracked summons translate; other pets, players, ordinary NPCs and
   units.nameplate1=units.target;local plate=NewUnitFrame("nameplate1")
   CompactUnitFrame_UpdateName(plate);assert(plate.name:GetText()=="小鬼")
   clockTime=4000
-  SlashCmdList.LEGIONCHINESE("off");assert(plate.name:GetText()=="Imp","off restores even an expired ownership record")
-  SlashCmdList.LEGIONCHINESE("on");UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
+  A.RefreshPetNames();assert(plate.name:GetText()=="Imp","expired ownership restores the native label")
+  UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
   CombatEvent("SPELL_SUMMON",UnitGUID("player"),guid);CombatEvent("UNIT_DIED",nil,guid)
   UnitFrame_Update(TargetFrame);assert(TargetFrame.name:GetText()=="Imp")
   units.target={guid="Player-1-000002",name="Imp",family="Imp"}

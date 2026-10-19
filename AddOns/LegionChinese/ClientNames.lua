@@ -1,6 +1,22 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A,D=LegionChinese,LegionChineseDB
 
+function A.ResolveItemName(source,id,payload)
+    if type(source)~="string" or A.IsChinese(source) or id==138019 then return end
+    local row=D.ItemNames and D.ItemNames[id]
+    if not row then return end
+    local body=type(payload)=="string" and payload:match("^item:(.*)$")
+    if not body then return end
+    local fields={};for value in (body..":"):gmatch("(.-):") do fields[#fields+1]=value end
+    if tonumber(fields[1])~=id then return end
+    -- A suffix or bonus list can change the displayed name. Only fall back to
+    -- the base name if the complete visible name is itself that known base.
+    if (fields[7] and fields[7]~="" and fields[7]~="0") or (tonumber(fields[13]) or 0)>0 then
+        if A.NameFingerprint(source)~=row[2] then return end
+    end
+    return row[1]
+end
+
 function A.NameFingerprint(text)
     if type(text)~="string" or text=="" then return end
     -- Names do not contain player substitutions. A character called Fireball
@@ -55,7 +71,7 @@ end
 function A.TranslatePetName(unit)
     local original,guid,entry,mainPet=petIdentity(unit)
     if not original then return end
-    if not A.Enabled() or A.IsChinese(original) then return original,guid end
+    if A.IsChinese(original) then return original,guid end
     local family=UnitCreatureFamily and UnitCreatureFamily(unit)
     local familyID=D.CreatureFamilyNames[A.NameFingerprint(family) or ""]
     local record=D.Creatures[entry]
@@ -88,7 +104,6 @@ function A.ApplyPetName(widget,unit)
     if not widget or (widget.IsForbidden and widget:IsForbidden()) or not widget.GetText or not widget.SetText
         or (widget.IsShown and not widget:IsShown()) then return end
     local previous=labels[widget]
-    if not A.Enabled() then restoreLabel(widget,previous,unit);return end
     local translated,guid=A.TranslatePetName(unit)
     if not translated then restoreLabel(widget,previous,unit);return end
     local original=UnitName(unit)

@@ -52,8 +52,9 @@ frames[1]:Fire("OnEvent","ADDON_LOADED","LateFrames")
 bookText="Page two";ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
 assert(ItemTextPageText.text=="第二页" and #ItemTextFrame.scriptHooks.OnEvent==1)
 
+-- Legacy preferences cannot disable any translation surface.
 LegionChineseSettings={enabled=false};bookText="Page two"
-ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text==bookText)
-progressText="Progress body";QuestFrameProgressPanel:Fire("OnShow");assert(QuestProgressText.text==progressText)
-QuestFrameGreetingPanel:Fire("OnShow");assert(GreetingText.text==greetingText)
-GossipGreetingText.text="Hello there";hooks.GossipFrameUpdate();assert(GossipGreetingText.text=="Hello there")
+ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY");assert(ItemTextPageText.text=="第二页")
+progressText="Progress body";QuestFrameProgressPanel:Fire("OnShow");assert(QuestProgressText.text=="尚未完成。")
+QuestFrameGreetingPanel:Fire("OnShow");assert(GreetingText.text=="你好。")
+GossipGreetingText.text="Hello there";hooks.GossipFrameUpdate();assert(GossipGreetingText.text=="你好。")

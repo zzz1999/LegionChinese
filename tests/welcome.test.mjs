@@ -14,12 +14,12 @@ function run(code){
   execute(code);lua.lua_close(L);
 }
 
-test('first login defaults on and shows the welcome once, after settings have loaded',()=>run(`
+test('first login translates automatically and shows the welcome once, after settings have loaded',()=>run(`
   local event=frames[1].scripts.OnEvent
   event(frames[1],"ADDON_LOADED","AnotherAddon")
   assert(LegionChineseSettings==nil and LegionChineseWelcomeFrame==nil)
   event(frames[1],"ADDON_LOADED","LegionChinese")
-  assert(LegionChineseSettings.enabled and LegionChineseWelcomeFrame==nil)
+  assert(LegionChineseSettings.enabled==nil and LegionChineseWelcomeFrame==nil)
   event(frames[1],"PLAYER_LOGIN")
   local window=LegionChineseWelcomeFrame
   assert(window:IsShown() and LegionChineseSettings.welcomeSeen)
@@ -32,14 +32,14 @@ test('first login defaults on and shows the welcome once, after settings have lo
   assert(not window:IsShown() and window.shows==1)
 `));
 
-test('saved dismissal survives another session and about can reopen without enabling translation',()=>run(`
+test('saved dismissal survives another session and about reopens with automatic translation',()=>run(`
   LegionChineseSettings={enabled=false,welcomeSeen=true}
   frames[1].scripts.OnEvent(frames[1],"PLAYER_LOGIN")
-  assert(LegionChineseWelcomeFrame==nil and not LegionChinese.Enabled())
+  assert(LegionChineseWelcomeFrame==nil and LegionChineseSettings.enabled==nil)
   SlashCmdList.LEGIONCHINESE("about")
   local window=LegionChineseWelcomeFrame
-  assert(window:IsShown() and not LegionChinese.Enabled())
-  assert(window.status:GetText():find("汉化已关闭",1,true))
+  assert(window:IsShown() and LegionChineseSettings.enabled==nil)
+  assert(window.status:GetText():find("插件加载后自动汉化",1,true))
   window.feedbackAddress.scripts.OnMouseUp(window.feedbackAddress)
   assert(window.feedbackAddress.highlighted)
   window.feedbackAddress:SetText("accidental edit")
@@ -49,10 +49,30 @@ test('saved dismissal survives another session and about can reopen without enab
   SlashCmdList.LEGIONCHINESE("about"); assert(window.shows==2 and #UISpecialFrames==1)
 `));
 
-test('upgrading a previously disabled installation shows information without changing its choice',()=>run(`
+test('upgrading a previously disabled installation removes the retired switch and translates immediately',()=>run(`
   LegionChineseSettings={enabled=false}
   frames[1].scripts.OnEvent(frames[1],"ADDON_LOADED","LegionChinese")
   frames[1].scripts.OnEvent(frames[1],"PLAYER_LOGIN")
-  assert(LegionChineseWelcomeFrame:IsShown() and not LegionChinese.Enabled())
+  assert(LegionChineseWelcomeFrame:IsShown() and LegionChineseSettings.enabled==nil)
   assert(LegionChineseSettings.welcomeSeen==true)
+  LegionChineseDB.Quests[1]={Title="中文任务"}
+  QuestInfoTitleHeader.text="English title";hooks.QuestInfo_Display()
+  assert(QuestInfoTitleHeader.text=="中文任务")
+`));
+
+test('retired commands and aliases only show help and never change automatic translation',()=>run(`
+  LegionChineseSettings={enabled=false,welcomeSeen=true}
+  local messages={};print=function(message) messages[#messages+1]=message end
+  LegionChineseDB.Quests[1]={Title="中文任务"}
+  for _,command in ipairs({"on","off","开","关",""," OFF "}) do
+    SlashCmdList.LEGIONCHINESE(command)
+    assert(LegionChineseSettings.enabled==nil and LegionChineseSettings.welcomeSeen)
+    QuestInfoTitleHeader.text="English title";hooks.QuestInfo_Display()
+    assert(QuestInfoTitleHeader.text=="中文任务")
+    assert(LegionChineseWelcomeFrame==nil)
+    assert(messages[#messages]:find("插件加载后自动汉化",1,true))
+    assert(not messages[#messages]:find("/lcn on",1,true) and not messages[#messages]:find("/lcn off",1,true))
+  end
+  SlashCmdList.LEGIONCHINESE("关于")
+  assert(LegionChineseWelcomeFrame:IsShown() and LegionChineseSettings.welcomeSeen)
 `));

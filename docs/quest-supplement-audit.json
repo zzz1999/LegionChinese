@@ -7,25 +7,25 @@
     "baselineAddonCommit": "e22f0dd",
     "selection": "Missing Chinese fields in LegionChinese 1.2.8, matching same 7.3.5 quest ID, English title, context and existing field; custom/test and post-26972 records excluded."
   },
-  "fields": 13736,
+  "fields": 13729,
   "quests": 4431,
   "byField": {
     "Title": 4016,
     "Objectives": 3970,
-    "Description": 3994,
+    "Description": 3987,
     "CompletionLog": 1311,
     "Progress": 128,
     "Completion": 317
   },
   "byLocale": {
-    "zhCN": 12780,
+    "zhCN": 12773,
     "zhTW": 956
   },
   "bySource": {
-    "legion-proyect-735": 13717,
+    "legion-proyect-735": 13710,
     "legion-preservation-735": 19
   },
-  "rejected": 0,
+  "rejected": 7,
   "preserved": 0,
   "records": [
     {
@@ -109197,14 +109197,6 @@
       "build": 26972
     },
     {
-      "id": 46129,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
-      "build": 26972
-    },
-    {
       "id": 46140,
       "field": "Title",
       "locale": "zhCN",
@@ -109218,14 +109210,6 @@
       "locale": "zhCN",
       "source": "legion-proyect-735",
       "column": "quest_template_locale.logdescription",
-      "build": 26972
-    },
-    {
-      "id": 46140,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
       "build": 26972
     },
     {
@@ -109245,14 +109229,6 @@
       "build": 26972
     },
     {
-      "id": 46141,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
-      "build": 26972
-    },
-    {
       "id": 46142,
       "field": "Title",
       "locale": "zhCN",
@@ -109266,14 +109242,6 @@
       "locale": "zhCN",
       "source": "legion-proyect-735",
       "column": "quest_template_locale.logdescription",
-      "build": 26972
-    },
-    {
-      "id": 46142,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
       "build": 26972
     },
     {
@@ -109293,14 +109261,6 @@
       "build": 26972
     },
     {
-      "id": 46143,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
-      "build": 26972
-    },
-    {
       "id": 46144,
       "field": "Title",
       "locale": "zhCN",
@@ -109317,14 +109277,6 @@
       "build": 26972
     },
     {
-      "id": 46144,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
-      "build": 26972
-    },
-    {
       "id": 46147,
       "field": "Title",
       "locale": "zhCN",
@@ -109338,14 +109290,6 @@
       "locale": "zhCN",
       "source": "legion-proyect-735",
       "column": "quest_template_locale.logdescription",
-      "build": 26972
-    },
-    {
-      "id": 46147,
-      "field": "Description",
-      "locale": "zhCN",
-      "source": "legion-proyect-735",
-      "column": "quest_template_locale.questdescription",
       "build": 26972
     },
     {

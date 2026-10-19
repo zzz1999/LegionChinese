@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "targetBuild": 26972,
   "provenance": "reviewed-legacy-dialogue",
   "sources": [
@@ -28,9 +28,1889 @@
       "sha256": "d1faf4efeca0cbd2940964e72e7e519f90e304d6778c110d0cc951c79a06f27e",
       "patch": "7.3.5",
       "license": "GPL-2.0"
+    },
+    {
+      "id": "tdb-2018",
+      "file": "TDB_world_735.00_2018_02_19.sql",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "member": "TDB_full_735.00_2018_02_19/TDB_world_735.00_2018_02_19.sql",
+      "sha256": "786d8b7f84fe1daf765b770483721ae529f3d758da2271f812c261d914f1e99e",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "tdb-2025",
+      "file": "TDB_world_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_world_735.26972_2025_05_11.sql",
+      "sha256": "9ddbe8f048c8f40fc886e243f474ba35cdd080d503600fdf4385459523360df5",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
     }
   ],
+  "reviews": {
+    "file": "data/quest-dialogue-reviews.json",
+    "sha256": "2e9fb6325a2fc33ff6fe2438785eef98032f3efbb55cedae79324f4e6f3d98f3"
+  },
+  "verification": {
+    "rows": 29258,
+    "byResult": {
+      "unverified_build": 29072,
+      "translation_build": 98,
+      "cross-version-exact": 27,
+      "legacy-full-text": 28,
+      "reviewed-context": 9,
+      "missing_legacy_original": 10,
+      "reviewed-current": 5,
+      "quest_context": 9
+    },
+    "deferred": [
+      {
+        "id": 47,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 54,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 60,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 62,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7025,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7043,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7063,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 24589,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26389,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26390,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26391,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 27944,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27949,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27970,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27978,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28059,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28130,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28759,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28763,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28769,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28770,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28771,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28772,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28773,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28774,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28791,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28792,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28793,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28794,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28795,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28796,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28797,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28806,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28808,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28809,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28810,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28811,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28812,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28813,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28882,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29079,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29081,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29082,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29351,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29408,
+        "field": "Progress",
+        "locale": "zhCN",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29419,
+        "field": "Progress",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29419,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29548,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31144,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31440,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 40,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 54,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7043,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8744,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8744,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8768,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8768,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8769,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8769,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8803,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8803,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 26389,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26390,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26391,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28757,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28759,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28762,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28763,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28764,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28765,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28766,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28767,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28769,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28770,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28771,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28772,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28773,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28774,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28780,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28784,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28785,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28786,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28787,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28788,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28789,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28791,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28792,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28793,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28794,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28795,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28796,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28797,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28806,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28808,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28809,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28810,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28811,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28812,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28813,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28817,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28818,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28819,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28820,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28821,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28822,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28823,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29078,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29079,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29080,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29081,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29082,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29083,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31139,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31143,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31144,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31145,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31440,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      }
+    ]
+  },
   "quests": [
+    {
+      "id": 7022,
+      "identity": {
+        "title": "Greatfather Winter is Here!",
+        "objectives": "Speak with Greatfather Winter; he is located near the Smokywood Pastures vendor area in Ironforge.",
+        "description": "Have a wondrous Winter Veil, friend!  Be sure to say hello to Greatfather Winter!  If you've been nice this year, you'll receive wondrous treats on the day of the Feast of Winter Veil.  Be sure to tell him what you hope to get this year!$B$BAlso, be sure to stock up on treats to give those who've been nice this year.  We have a great selection to choose from.  Fresh from our farm to your plate - it's Smokywood Pastures wholesome goodness!"
+      },
+      "legacyIdentity": {
+        "title": "Greatfather Winter is Here!",
+        "objectives": "Speak with Greatfather Winter; he is located near the Smokywood Pastures vendor area in Ironforge.",
+        "description": "Have a wondrous Winter Veil, friend!  Be sure to say hello to Greatfather Winter!  If you've been nice this year, you'll receive wondrous treats on the day of the Feast of Winter Veil.  Be sure to tell him what you hope to get this year!$B$BAlso, be sure to stock up on treats to give those who've been nice this year.  We have a great selection to choose from.  Fresh from our farm to your plate - it's Smokywood Pastures wholesome goodness!"
+      },
+      "fields": {
+        "Completion": {
+          "english": "Ho ho hello.  I am Greatfather Winter, and I - courtesy of the fine folks of Smokywood Pastures... \"Fresh from our farm to your plate, it's Smokywood Pastures wholesome goodness\" - would like to wish you a fantastic Feast of Winter Veil. If you've been good this year, maybe you will receive treats from Smokywood Pastures as your treat for the Feast of Winter Veil.  Huzzah. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Ho ho hello.  I am Greatfather Winter, and I - courtesy of the fine folks of Smokywood Pastures... \"Fresh from our farm to your plate, it's Smokywood Pastures wholesome goodness\" - would like to wish you a fantastic Feast of Winter Veil. If you've been good this year, maybe you will receive treats from Smokywood Pastures as your treat for the Feast of Winter Veil.  Huzzah. ",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "tdb-2018",
+              "build": 19342
+            },
+            {
+              "source": "tdb-2025",
+              "build": 19342
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "呵呵，你好啊。我是冬天爷爷，烟林牧场的好朋友……“从农场挑选的新鲜食物，这些是来自烟林牧场的馈赠”——希望你在冬幕节度过一段美好的时光。$B$B如果你今年表现良好的话，你也许能从烟林木场得到礼物，作为冬幕节的礼品！哈！",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 7045,
+      "identity": {
+        "title": "A Smokywood Pastures' Thank You!",
+        "objectives": "Speak with Greatfather Winter in Ironforge.",
+        "description": "We at Smokywood Pastures appreciate the recovery of the stolen treats, $n.  For that, we'd like to offer you a special gift... presented by none other than Greatfather Winter himself!$B$BPlease, speak with Greatfather Winter, and he will give you your Feast of Winter Veil gift from us here at Smokywood Pastures.  From our farm to your plate, it's always Smokywood Pastures wholesome goodness... thanks to you, of course!"
+      },
+      "legacyIdentity": {
+        "title": "A Smokywood Pastures' Thank You!",
+        "objectives": "Speak with Greatfather Winter in Ironforge.",
+        "description": "We at Smokywood Pastures appreciate the recovery of the stolen treats, $n.  For that, we'd like to offer you a special gift... presented by none other than Greatfather Winter himself!$B$BPlease, speak with Greatfather Winter, and he will give you your Feast of Winter Veil gift from us here at Smokywood Pastures.  From our farm to your plate, it's always Smokywood Pastures wholesome goodness... thanks to you, of course!"
+      },
+      "fields": {
+        "Completion": {
+          "english": "Ho ho hello, adventurer! The goblins told me that you have earned a special gift this holiday season, and I am pleased to give it to you.  Here you go - have a wondrous Feast of Winter Veil this and every season in the future. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Ho ho hello, adventurer! The goblins told me that you have earned a special gift this holiday season, and I am pleased to give it to you.  Here you go - have a wondrous Feast of Winter Veil this and every season in the future. ",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "tdb-2018",
+              "build": 0
+            },
+            {
+              "source": "tdb-2025",
+              "build": 0
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "哈哈，你好啊，冒险者！$B$B那些地精告诉我，你已经为自己在这个节日中赢得了一份特殊的礼物，我很高兴能把它给你。给你这个——祝你冬幕节快乐，并且在未来的每个季节都像今天一样快乐。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 13520,
+      "identity": {
+        "title": "The Boon of the Seas",
+        "objectives": "Collect 16 Encrusted Clam Muscles.",
+        "description": "It is good to see you. You were key in ensuring that our loved ones made it home, and I hold some hope that you may yet help us further.$B$BLike Laird, their wounds will be grave - every one of them battered by the coast and assaulted by the elementals. I am doing what I can, but it seems that those elementals hosted a toxin that is weakening their ability to heal. I believe I can concoct a salve, but I will need secretion from the muscles of the clams that inhabit this coast. Can you help me?"
+      },
+      "legacyIdentity": {
+        "title": "The Boon of the Seas",
+        "objectives": "Collect 16 Encrusted Clam Muscles.",
+        "description": "It is good to see you. You were key in ensuring that our loved ones made it home, and I hold some hope that you may yet help us further.$B$BLike Laird, their wounds will be grave - every one of them battered by the coast and assaulted by the elementals. I am doing what I can, but it seems that those elementals hosted a toxin that is weakening their ability to heal. I believe I can concoct a salve, but I will need secretion from the muscles of the clams that inhabit this coast. Can you help me?"
+      },
+      "fields": {
+        "Progress": {
+          "english": "Did you bring muscles from the clams? I worry that our time grows very short.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Did you bring muscles from the clams? I worry that our time grows very short.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "tdb-2018",
+              "build": 0
+            },
+            {
+              "source": "tdb-2025",
+              "build": 0
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "你帶來鑲嵌蚌殼肉了嗎?我擔心我們只剩下很短的時間。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26153,
+      "identity": {
+        "title": "Penny's Pumpkin Pancakes",
+        "objectives": "Obtain 6 Stormwind Pumpkins.  Deliver them to Robby Flay in Stormwind City.",
+        "description": "My daughter Penny loves pumpkin pancakes but we have had a shortage of pumpkins here in Elwynn from the frostbite last season.  I have heard of a new pumpkin patch north of Stormwind that might be ripe for the picking now though.  Head out and harvest a few of those ripe pumpkins for me and let's see what we can do."
+      },
+      "legacyIdentity": {
+        "title": "Penny's Pumpkin Pancakes",
+        "objectives": "Obtain 6 Stormwind Pumpkins.  Deliver them to Robby Flay in Stormwind City.",
+        "description": "My daughter Penny loves pumpkin pancakes but we have had a shortage of pumpkins here in Elwynn from the frostbite last season.  I have heard of a new pumpkin patch north of Stormwind that might be ripe for the picking now though.  Head out and harvest a few of those ripe pumpkins for me and let's see what we can do."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Have you finished collecting the pumpkins? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Have you finished collecting the pumpkins? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "你收集完南瓜了嗎？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Nice job, $n! Penny will be very excited for breakfast tomorrow! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Nice job, $n! Penny will be very excited for breakfast tomorrow! ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "做得好，$n！潘妮看到明天的早餐一定會很興奮的！",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26177,
+      "identity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Catch 6 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      },
+      "legacyIdentity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Collect 10 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      },
+      "fields": {
+        "Progress": {
+          "english": "You must have fast hands!  I can't believe you caught all those crabs so quickly! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You must have fast hands!  I can't believe you caught all those crabs so quickly! ",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "pandaria-world",
+              "build": 15595,
+              "review": "Only the crab objective changes from 10 to 6; both full dialogue fields contain no quantity and still describe catching the crabs for the King."
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "contextReview": {
+            "identity": {
+              "title": "Feeling Crabby?",
+              "objectives": "Catch 6 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+              "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+            },
+            "legacyIdentity": {
+              "title": "Feeling Crabby?",
+              "objectives": "Collect 10 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+              "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+            }
+          },
+          "locales": {
+            "zhTW": {
+              "text": "你一定有雙快手!我不敢相信你這麼快就抓了這些螃蟹來!",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "These crabs look great!  I will clean these up and make sure that the King hears about your contribution.  Thanks! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "These crabs look great!  I will clean these up and make sure that the King hears about your contribution.  Thanks! ",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "pandaria-world",
+              "build": 15595,
+              "review": "Only the crab objective changes from 10 to 6; both full dialogue fields contain no quantity and still describe catching the crabs for the King."
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "contextReview": {
+            "identity": {
+              "title": "Feeling Crabby?",
+              "objectives": "Catch 6 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+              "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+            },
+            "legacyIdentity": {
+              "title": "Feeling Crabby?",
+              "objectives": "Collect 10 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+              "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+            }
+          },
+          "locales": {
+            "zhTW": {
+              "text": "這些螃蟹看起來很讚!我會把牠們清洗乾淨，並把你的貢獻告訴國王。謝啦!",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26192,
+      "identity": {
+        "title": "Orphans Like Cookies Too!",
+        "objectives": "Obtain 4 sacks of Confectioners' Sugar.  Deliver the sugar to Robby Flay in Stormwind City.",
+        "description": "The orphans of Stormwind are often forgotten, but not today my friend.  The king has requested a special batch of cookies be baked and sent immediately over to the orphanage.  I was almost finished with the final batch when I ran out of confectioners' sugar.  Can you run out and get some more for me?  You should be able to find it at any of the general stores or inns inside of Stormwind."
+      },
+      "legacyIdentity": {
+        "title": "Orphans Like Cookies Too!",
+        "objectives": "Obtain 4 sacks of Confectioners' Sugar.  Deliver the sugar to Robby Flay in Stormwind City.",
+        "description": "The orphans of Stormwind are often forgotten, but not today my friend.  The king has requested a special batch of cookies be baked and sent immediately over to the orphanage.  I was almost finished with the final batch when I ran out of confectioners' sugar.  Can you run out and get some more for me?  You should be able to find it at any of the general stores or inns inside of Stormwind."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Were you able to find the Confectioner's Sugar? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Were you able to find the Confectioner's Sugar? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "你有找到製作甜點用的糖嗎？",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26414,
+      "identity": {
+        "title": "Hitting a Walleye",
+        "objectives": "Catherine Leland in Stormwind City wants you to bring her 8 Hardened Walleye.",
+        "description": "Sometimes, I fish for fun.  Other times to relax, but sometimes I want a challenge.  That's where the hardened walleye comes into the picture.  This prized fish is not caught for us to eat, but for the challenge.  You can find the walleye in Stormwind Lake just north of the city.  Think you are up to the challenge?"
+      },
+      "legacyIdentity": {
+        "title": "Hitting a Walleye",
+        "objectives": "Catherine Leland in Stormwind City wants you to bring her 8 Hardened Walleye.",
+        "description": "Sometimes, I fish for fun.  Other times to relax, but sometimes I want a challenge.  That's where the hardened walleye comes into the picture.  This prized fish is not caught for us to eat, but for the challenge.  You can find the walleye in Stormwind Lake just north of the city.  Think you are up to the challenge?"
+      },
+      "fields": {
+        "Progress": {
+          "english": "Was the challenge too much for you? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Was the challenge too much for you? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "這挑戰對你來說太難了嗎?",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Nice work $n!  I see you are quite the fisherman these days.  Might just have to take you out on the boat soon and see what you can really do! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Nice work $n!  I see you are quite the fisherman these days.  Might just have to take you out on the boat soon and see what you can really do! ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "做得漂亮，$n!我看你這幾天完全就是個漁夫的樣子。或許應該帶你上船，看你能做些什麼!",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26420,
+      "identity": {
+        "title": "Diggin' For Worms",
+        "objectives": "Find an Overgrown Earthworm near Olivia's Pond and use it as bait to catch a Crystal Bass.  Crystal Bass can be found in Olivia's Pond, north of Stormwind.",
+        "description": "Hey there, Angler!  Arnold here tells me that you have been looking for a new fishing spot and I think I know just the place.  North of Stormwind there is a great little spot called Olivia's Pond.$b$bThe pond is stocked with crystal bass every year but they are hard to catch.  They only bite on a very specific type of bait... overgrown earthworms.  If you search the shore around the pond, you should find plenty of worms to use as bait."
+      },
+      "legacyIdentity": {
+        "title": "Diggin' For Worms",
+        "objectives": "Find an Overgrown Earthworm near Olivia's Pond and use it as bait to catch a Crystal Bass.  Crystal Bass can be found in Olivia's Pond, north of Stormwind.",
+        "description": "Hey there, Angler!  Arnold here tells me that you have been looking for a new fishing spot and I think I know just the place.  North of Stormwind there is a great little spot called Olivia's Pond.$b$bThe pond is stocked with crystal bass every year but they are hard to catch.  They only bite on a very specific type of bait... overgrown earthworms.  If you search the shore around the pond, you should find plenty of worms to use as bait."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Did the bait work? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Did the bait work? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "餌有用嗎?",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Those look like some nice bass, $n.  Let's fry em' up and see how they taste! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Those look like some nice bass, $n.  Let's fry em' up and see how they taste! ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "這些鱸魚看起來品質很好，$n。把牠們煎一煎看味道如何!",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26442,
+      "identity": {
+        "title": "Rock Lobster",
+        "objectives": "Collect 6 Rock Lobsters from the cages below the docks in Stormwind Harbor.  Watch out for sharks!",
+        "description": "If I could choose my last meal, it would definitely be fresh lobster tail.  Something about that tasty crustacean is just irresistible!  We recently started trapping lobsters here in Stormwind.  Would you mind heading out and checking the traps for me?$b$bOne more thing, watch out for the sharks.  They can be vicious down there."
+      },
+      "legacyIdentity": {
+        "title": "Rock Lobster",
+        "objectives": "Collect 6 Rock Lobsters from the cages below the docks in Stormwind Harbor.  Watch out for sharks!",
+        "description": "If I could choose my last meal, it would definitely be fresh lobster tail.  Something about that tasty crustacean is just irresistible!  We recently started trapping lobsters here in Stormwind.  Would you mind heading out and checking the traps for me?$b$bOne more thing, watch out for the sharks.  They can be vicious down there."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Looks like you were able to avoid the sharks.  Were there any lobsters in the traps? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Looks like you were able to avoid the sharks.  Were there any lobsters in the traps? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "看來你成功避開鯊魚了。陷阱裡有抓到龍蝦嗎?",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Looks like the traps are working!  Thanks $n! ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Looks like the traps are working!  Thanks $n! ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "看來陷阱有用!謝啦，$n!",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26488,
+      "identity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know it's a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      },
+      "legacyIdentity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know its a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Were you able to find my locket? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Were you able to find my locket? ",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "pandaria-world",
+              "build": 15595,
+              "review": "Only its/it's punctuation differs in the quest description; both complete locket dialogue fields and objectives retain the same meaning."
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "contextReview": {
+            "identity": {
+              "title": "Big Gulp",
+              "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+              "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know it's a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+            },
+            "legacyIdentity": {
+              "title": "Big Gulp",
+              "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+              "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know its a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+            }
+          },
+          "locales": {
+            "zhTW": {
+              "text": "你有找到我的墜盒嗎?",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "You found it!  I can't believe it was down there all those years!  You have no idea how much this means to me $n. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You found it!  I can't believe it was down there all those years!  You have no idea how much this means to me $n. ",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "pandaria-world",
+              "build": 15595,
+              "review": "Only its/it's punctuation differs in the quest description; both complete locket dialogue fields and objectives retain the same meaning."
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "contextReview": {
+            "identity": {
+              "title": "Big Gulp",
+              "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+              "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know it's a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+            },
+            "legacyIdentity": {
+              "title": "Big Gulp",
+              "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+              "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know its a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+            }
+          },
+          "locales": {
+            "zhTW": {
+              "text": "你找到了!我不敢相信它這些年來一直在水裡!你不知道這對我有多麼的重要，$n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 26536,
+      "identity": {
+        "title": "Thunder Falls",
+        "objectives": "Catch 4 Violet Perch from Thunder Falls, south of Stormwind.  Return to Catherine Leland with your catch once you are done.",
+        "description": "Arnold and I have been fishing in and around Stormwind for years now.  That's the kind of time it takes to find a good fishing spot.  One of my favorites is called Thunder Falls.$b$bIt's just south of Stormwind in Elwynn Forest.  Best part about Thunder Falls is the violet perch.  I have never seen them anywhere else, only up there at the falls.  It's a bit of hike for me and Arnold to get out there these days though, do you think you could head up there and fetch some of those perch for us?"
+      },
+      "legacyIdentity": {
+        "title": "Thunder Falls",
+        "objectives": "Catch 4 Violet Perch from Thunder Falls, south of Stormwind.  Return to Catherine Leland with your catch once you are done.",
+        "description": "Arnold and I have been fishing in and around Stormwind for years now.  That's the kind of time it takes to find a good fishing spot.  One of my favorites is called Thunder Falls.$b$bIt's just south of Stormwind in Elwynn Forest.  Best part about Thunder Falls is the violet perch.  I have never seen them anywhere else, only up there at the falls.  It's a bit of hike for me and Arnold to get out there these days though, do you think you could head up there and fetch some of those perch for us?"
+      },
+      "fields": {
+        "Progress": {
+          "english": "Were you able to find the falls? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Were you able to find the falls? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "你找到瀑布了嗎?",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "These perch look great $n.  Why don't you join us for a fish fry tonight? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "These perch look great $n.  Why don't you join us for a fish fry tonight? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "這些鱸魚看起來太棒了$n。你何不加入我們今晚的炸魚餐會?",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27944,
+      "identity": {
+        "title": "Thinning the Brood",
+        "objectives": "Kill 12 Darkwood Lurkers in The Darkwood.  The Darkwood forest is just west of here, across the bridge on the central island.",
+        "description": "We have been trying to get a foothold in The Darkwood for weeks now but that forest is infested with spiders.  Do me a favor and see if you can thin them out enough for us to set up an attack.$b$bCareful out there, I have heard reports of Horde troops nearby earlier in the week."
+      },
+      "legacyIdentity": {
+        "title": "Thinning the Brood",
+        "objectives": "Kill 12 Darkwood Lurkers in The Darkwood.  The Darkwood forest is just west of here, across the bridge on the central island.",
+        "description": "We have been trying to get a foothold in The Darkwood for weeks now but that forest is infested with spiders.  Do me a favor and see if you can thin them out enough for us to set up an attack.$b$bCareful out there, I have heard reports of Horde troops nearby earlier in the week."
+      },
+      "fields": {
+        "Completion": {
+          "english": "Nice work on those spiders $n.  At this rate, we will be taking that forest in no time. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Nice work on those spiders $n.  At this rate, we will be taking that forest in no time. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "殺蜘蛛的工作做得很好，$n。照這個情況，我們馬上就能攻下這個森林了。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27949,
+      "identity": {
+        "title": "The Forgotten",
+        "objectives": "Release the spirits of 6 tortured souls at Forgotten Hill.  Souls can be channeled by touching your hands directly to the gravestones.  Forgotten Hill is due west of here, past The Darkwood and The Restless Front.",
+        "description": "Many soldiers died on this island $n.  It is only fair that we pay our respects to them in any way that we can.$b$bI need you to travel to Forgotten Hill, due west of here and release our brothers in arms' tortured souls away from this place.  Do be careful over there, reports of undead have been ongoing in the area."
+      },
+      "legacyIdentity": {
+        "title": "The Forgotten",
+        "objectives": "Release the spirits of 6 tortured souls at Forgotten Hill.  Souls can be channeled by touching your hands directly to the gravestones.  Forgotten Hill is due west of here, past The Darkwood and The Restless Front.",
+        "description": "Many soldiers died on this island $n.  It is only fair that we pay our respects to them in any way that we can.$b$bI need you to travel to Forgotten Hill, due west of here and release our brothers in arms' tortured souls away from this place.  Do be careful over there, reports of undead have been ongoing in the area."
+      },
+      "fields": {
+        "Completion": {
+          "english": "May their souls rest in peace. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "May their souls rest in peace. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "願他們的靈魂安息。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27970,
+      "identity": {
+        "title": "Captain P. Harris",
+        "objectives": "You have been tasked with killing Captain P. Harris at the Cape of Lost Hope.  The Cape of Lost Hope can be found northwest of here, along the coast.  Just look for the shipwrecks.",
+        "description": "The Cape of Lost Hope has been a sore in our side for weeks here on Tol Barad.  Half of our supply ships end up on the rocks down there.$b$bTo make matters worse, it's been overrun by a gang of undead sailors.  We have tried thinning the ranks, but they just seem to keep coming back.  Our last resort is to try and take out the captain that they report to.  You should be able to find him on a ship, just off the shoreline.$b$bOh, and I hope you are not too scared of sharks."
+      },
+      "legacyIdentity": {
+        "title": "Captain P. Harris",
+        "objectives": "You have been tasked with killing Captain P. Harris at the Cape of Lost Hope.  The Cape of Lost Hope can be found northwest of here, along the coast.  Just look for the shipwrecks.",
+        "description": "The Cape of Lost Hope has been a sore in our side for weeks here on Tol Barad.  Half of our supply ships end up on the rocks down there.$b$bTo make matters worse, it's been overrun by a gang of undead sailors.  We have tried thinning the ranks, but they just seem to keep coming back.  Our last resort is to try and take out the captain that they report to.  You should be able to find him on a ship, just off the shoreline.$b$bOh, and I hope you are not too scared of sharks."
+      },
+      "fields": {
+        "Completion": {
+          "english": "You did it!  Maybe we can finally get some ships into port now.  Thank you $n. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You did it!  Maybe we can finally get some ships into port now.  Thank you $n. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "你做到了!也許我們現在終於可以讓船隻進港了。謝謝你 $n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27973,
+      "identity": {
+        "title": "Watch Out For Splinters!",
+        "objectives": "Sergeant Gray has asked you to recover 15 pieces of Shipyard Lumber from the Wellson Shipyard.  The lumber can be recovered from the ghosts in the shipyard or found lying around the premises.  The shipyard can be found northwest of here, on the coast.",
+        "description": "Have you been over to the Wellson Shipyard yet, $n?  Best to stay away from there unless you have a good reason to venture in.  Unfortunately, that is exactly what I need you to do.$b$bYou see, we have been short on supplies ever since we recaptured the island.  That ghost ridden shipyard is overflowing with lumber but every time we send an escort to recover the lumber, they never make it back.$b$bCan you help us out?"
+      },
+      "legacyIdentity": {
+        "title": "Watch Out For Splinters!",
+        "objectives": "Sergeant Gray has asked you to recover 15 pieces of Shipyard Lumber from the Wellson Shipyard.  The lumber can be recovered from the ghosts in the shipyard or found lying around the premises.  The shipyard can be found northwest of here, on the coast.",
+        "description": "Have you been over to the Wellson Shipyard yet, $n?  Best to stay away from there unless you have a good reason to venture in.  Unfortunately, that is exactly what I need you to do.$b$bYou see, we have been short on supplies ever since we recaptured the island.  That ghost ridden shipyard is overflowing with lumber but every time we send an escort to recover the lumber, they never make it back.$b$bCan you help us out?"
+      },
+      "fields": {
+        "Progress": {
+          "english": "Did the ghosts scare you off? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Did the ghosts scare you off? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "那些鬼嚇到你了嗎？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "I didn't think you would be able to do it, $n.  You are just full of surprises aren't you? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "I didn't think you would be able to do it, $n.  You are just full of surprises aren't you? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "我沒想到你真的能辦到，$n。你的能力真是讓人讚嘆，不是嗎？",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27978,
+      "identity": {
+        "title": "Ghostbuster",
+        "objectives": "Kill 14 ghosts of any type at Largo's Overlook, just northeast of base camp.",
+        "description": "See that hill just beyond our base camp?  That's Largo's Overlook and it's not a fun place to setup camp next to.  We have been dealing with those spirits and spectres ever since we setup base camp.$b$bCan you head up there and let them know we don't plan on leaving anytime soon?  A few good kills on their ranks should put them in line.$b$bThanks for your help on this, $n."
+      },
+      "legacyIdentity": {
+        "title": "Ghostbuster",
+        "objectives": "Kill 14 ghosts of any type at Largo's Overlook, just northeast of base camp.",
+        "description": "See that hill just beyond our base camp?  That's Largo's Overlook and it's not a fun place to setup camp next to.  We have been dealing with those spirits and spectres ever since we setup base camp.$b$bCan you head up there and let them know we don't plan on leaving anytime soon?  A few good kills on their ranks should put them in line.$b$bThanks for your help on this, $n."
+      },
+      "fields": {
+        "Completion": {
+          "english": "Great work, $n!  We should not hear from the ghosts again anytime soon. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Great work, $n!  We should not hear from the ghosts again anytime soon. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "幹得好，$n!我們很快就不會聽見那些鬼叫的聲音了。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 27992,
+      "identity": {
+        "title": "Magnets, How Do They Work?",
+        "objectives": "You have been tasked with recovering 7 pieces of Siege Engine Scrap.  Use the Magnetized Scrap Collector in The Restless Front to find the scraps.  The Restless Front is due west, just past the second bridge.",
+        "description": "Getting useful machine parts out here on the island has been difficult, $n.  We have been trying to repair the broken siege engines here in camp but we keep running out of useful parts.$b$bOur second regiment reported some wrecked out siege engines in a old battlefield to the west.  Maybe we could find some parts over there?$B$bYou are going to have trouble finding anything in that old battlefield so take this magnetized scrap collector and put it to some good use."
+      },
+      "legacyIdentity": {
+        "title": "Magnets, How Do They Work?",
+        "objectives": "You have been tasked with recovering 7 pieces of Siege Engine Scrap.  Use the Magnetized Scrap Collector in The Restless Front to find the scraps.  The Restless Front is due west, just past the second bridge.",
+        "description": "Getting useful machine parts out here on the island has been difficult, $n.  We have been trying to repair the broken siege engines here in camp but we keep running out of useful parts.$b$bOur second regiment reported some wrecked out siege engines in a old battlefield to the west.  Maybe we could find some parts over there?$B$bYou are going to have trouble finding anything in that old battlefield so take this magnetized scrap collector and put it to some good use."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Did that magnet contraptaion actually work? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Did that magnet contraptaion actually work? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "那個磁鐵裝置玩意真的有用嗎？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "These parts will really help us out, $n!  Who would have thought you can find stuff this useful in all that old junk? ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "These parts will really help us out, $n!  Who would have thought you can find stuff this useful in all that old junk? ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "這些零件真的幫了我們大忙，$n！誰想得到你能在那些古老垃圾裡頭找到這麼有用的東西？",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 28059,
+      "identity": {
+        "title": "Claiming The Keep",
+        "objectives": "You have been asked to kill Keep Lord Farson at the Farson Hold.  Farson Hold can be found on the north side of the island.",
+        "description": "Have you seen the keep on the north side of the island, $n?  That is where Keep Lord Farson runs his operation from.$b$bFarson has a small group of dedicated followers and they have been giving us trouble since we got here.  We sent a small group to investigate and they reported back on his exact position within the keep.$b$bCan you finish him off for us?"
+      },
+      "legacyIdentity": {
+        "title": "Claiming The Keep",
+        "objectives": "You have been asked to kill Keep Lord Farson at the Farson Hold.  Farson Hold can be found on the north side of the island.",
+        "description": "Have you seen the keep on the north side of the island, $n?  That is where Keep Lord Farson runs his operation from.$b$bFarson has a small group of dedicated followers and they have been giving us trouble since we got here.  We sent a small group to investigate and they reported back on his exact position within the keep.$b$bCan you finish him off for us?"
+      },
+      "fields": {
+        "Completion": {
+          "english": "You killed him?  We have been trying to take that guy out for weeks!  We thank you, $n. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You killed him?  We have been trying to take that guy out for weeks!  We thank you, $n. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "你殺死他了？我們試著殺掉那傢伙已經好幾週了！我們都很感謝你，$n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 28130,
+      "identity": {
+        "title": "Not The Friendliest Town",
+        "objectives": "Commander Marcus Johnson has asked you to kill 14 villagers in Rustberg Village.  Rustberg Village is just north of base camp, on the right side.",
+        "description": "Have you been up to Rustberg Village yet $n?  I would suggest you bring a sharpened blade if you are heading that direction.$b$bThe folks in that town look alright but something suspicious is going on in there.  Reports have been coming in that they are picking off our soldiers left and right.  We have had just about enough of that, so I need you to head down there and do a little cleaning house for us.$B$BTake down as many as you can and report back when you are done."
+      },
+      "legacyIdentity": {
+        "title": "Not The Friendliest Town",
+        "objectives": "Commander Marcus Johnson has asked you to kill 14 villagers in Rustberg Village.  Rustberg Village is just north of base camp, on the right side.",
+        "description": "Have you been up to Rustberg Village yet $n?  I would suggest you bring a sharpened blade if you are heading that direction.$b$bThe folks in that town look alright but something suspicious is going on in there.  Reports have been coming in that they are picking off our soldiers left and right.  We have had just about enough of that, so I need you to head down there and do a little cleaning house for us.$B$BTake down as many as you can and report back when you are done."
+      },
+      "fields": {
+        "Completion": {
+          "english": "Told you that village was full of wackos.  Nice job clearing it out $n. ",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Told you that village was full of wackos.  Nice job clearing it out $n. ",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "就跟你說那個村莊裡都是瘋子。把那裡清乾淨真是做得好，$n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29342,
+      "identity": {
+        "title": "Cold Water Fishing",
+        "objectives": "Catch 5 Arctic Char by fishing in Helm's Bed Lake in Dun Morogh.",
+        "description": "The best tastin' fish live in the cold waters o' Dun Morogh, $n, an' don't let anyone else tell ye otherwise! Me favorite, an' the most popular one in Ironforge, is the arctic char, which only comes from our ancestral lands.$B$BI like tae think o' it as Ironforge's gift t' the world!$B$BWhy don't ye try yer hand at catchin' a few yerself? The best place tae find 'em is down in Helm's Bed Lake, in the eastern end o' Dun Morogh."
+      },
+      "legacyIdentity": {
+        "title": "Cold Water Fishing",
+        "objectives": "Catch 5 Arctic Char by fishing in Helm's Bed Lake in Dun Morogh.",
+        "description": "The best tastin' fish live in the cold waters o' Dun Morogh, $n, an' don't let anyone else tell ye otherwise! Me favorite, an' the most popular one in Ironforge, is the arctic char, which only comes from our ancestral lands.$B$BI like tae think o' it as Ironforge's gift t' the world!$B$BWhy don't ye try yer hand at catchin' a few yerself? The best place tae find 'em is down in Helm's Bed Lake, in the eastern end o' Dun Morogh."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Have ye tried to catch those char?",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Have ye tried to catch those char?",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "抓到那些鮭魚了嗎？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "These are beautiful, $n! I think ye've got the hang of it.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "These are beautiful, $n! I think ye've got the hang of it.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "這些魚太漂亮了，$n!我覺得你現在已經駕輕就熟了。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29347,
+      "identity": {
+        "title": "Live Bait",
+        "objectives": "Use Grimnur's Bait on yourself, then jump into Helm's Bed Lake in Dun Morogh.",
+        "description": "If ye've ever fished fer crayfish, ye know they respond best to live bait, an' the more bait, the better. Would ye like to test my new bait? Simply smear this on yerself an' hop into Helm's Bed Lake in eastern Dun Morogh.$B$BAfter ye've got the catch, take it to me friend, Cook Ghilm at Gol'Bolar Quarry, west of the lake. He's an expert at cookin' those oversized bugs!"
+      },
+      "legacyIdentity": {
+        "title": "Live Bait",
+        "objectives": "Use Grimnur's Bait on yourself, then jump into Helm's Bed Lake in Dun Morogh.",
+        "description": "If ye've ever fished fer crayfish, ye know they respond best to live bait, an' the more bait, the better. Would ye like to test my new bait? Simply smear this on yerself an' hop into Helm's Bed Lake in eastern Dun Morogh.$B$BAfter ye've got the catch, take it to me friend, Cook Ghilm at Gol'Bolar Quarry, west of the lake. He's an expert at cookin' those oversized bugs!"
+      },
+      "fields": {
+        "Completion": {
+          "english": "These are beautiful, $n! Grimnur's goin' tae be so proud when he hears about this!$B$BOh, he did say tae pass this along tae ye, if the scheme worked.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "These are beautiful, $n! Grimnur's goin' tae be so proud when he hears about this!$B$BOh, he did say tae pass this along tae ye, if the scheme worked.",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "太漂亮了，$n!格瑞諾爾聽到這個消息的時候一定會感到很驕傲的!$B$B噢，他曾說過如果計畫成功的話，要把這個交給你。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29351,
+      "identity": {
+        "title": "A Round for the Guards",
+        "objectives": "Distribute the Ironforge Rations to 6 Ironforge Guards.",
+        "description": "The guards who defend Ironforge put their lives on the line against our many enemies, and it's up to us to take care of them.$B$BToday, their rations consist of two dwarven favorites, haggis and Ironforge pale ale. Would ye be so kind as to help me distribute them? That way, everyone gets his food in a timely manner and we can move on to other tasks."
+      },
+      "legacyIdentity": {
+        "title": "A Round for the Guards",
+        "objectives": "Distribute the Ironforge Rations to 6 Ironforge Guards.",
+        "description": "The guards who defend Ironforge put their lives on the line against our many enemies, and it's up to us to take care of them.$B$BToday, their rations consist of two dwarven favorites, haggis and Ironforge pale ale. Would ye be so kind as to help me distribute them? That way, everyone gets his food in a timely manner and we can move on to other tasks."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A full guard is a happy guard, as I always say. Thanks fer yer help, $n.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A full guard is a happy guard, as I always say. Thanks fer yer help, $n.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "就像我常說的，吃飽的守衛就是開心的守衛。非常感謝你的幫助，$n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29353,
+      "identity": {
+        "title": "Keepin' the Haggis Flowin'",
+        "objectives": "Obtain a Bag o' Sheep Innards, 5 packets of Mild Spices, and 4 Sacks of Oatmeal.",
+        "description": "The haggis must flow. Aye, it's a figure o' speech, for haggis'll ne'er flow! Ye dinnae want to know what'll happen if the people o' Ironforge don't get their haggis.$B$BI'm working on the next batch, but I'm still missing a couple of ingredients.$B$BSognar Cliffbeard is the meat vendor in the Military Ward, an' he'll sell you the big bag o' sheep innards I need. Ye can buy mild spices from any cooking supplier and ye can find sacks o' oatmeal in any inn or among the supplies  in the city."
+      },
+      "legacyIdentity": {
+        "title": "Keepin' the Haggis Flowin'",
+        "objectives": "Obtain a Bag o' Sheep Innards, 5 packets of Mild Spices, and 4 Sacks of Oatmeal.",
+        "description": "The haggis must flow. Aye, it's a figure o' speech, for haggis'll ne'er flow! Ye dinnae want to know what'll happen if the people o' Ironforge don't get their haggis.$B$BI'm working on the next batch, but I'm still missing a couple of ingredients.$B$BSognar Cliffbeard is the meat vendor in the Military Ward, an' he'll sell you the big bag o' sheep innards I need. Ye can buy mild spices from any cooking supplier and ye can find sacks o' oatmeal in any inn or among the supplies  in the city."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Do ye have those ingredients?",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Do ye have those ingredients?",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "你拿到所有的材料了嗎？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Ye got them all? Wonderful! I'll get started right away.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Ye got them all? Wonderful! I'll get started right away.",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "你全都拿到了？太好了！我馬上就開始準備。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29355,
+      "identity": {
+        "title": "Can't Get Enough Spice Bread",
+        "objectives": "Make or obtain 10 slices of Spice Bread.",
+        "description": "It might seem like a basic thing, $n, but spice bread is a longtime favorite in Ironforge. Some days, I have trouble keeping up!$B$BWould ye like to cook some to practice yer skills an' help meet the demand? Ye can buy all the ingredients ye'll need from me brother, Emrul Riknussun, who is downstairs."
+      },
+      "legacyIdentity": {
+        "title": "Can't Get Enough Spice Bread",
+        "objectives": "Make or obtain 10 slices of Spice Bread.",
+        "description": "It might seem like a basic thing, $n, but spice bread is a longtime favorite in Ironforge. Some days, I have trouble keeping up!$B$BWould ye like to cook some to practice yer skills an' help meet the demand? Ye can buy all the ingredients ye'll need from me brother, Emrul Riknussun, who is downstairs."
+      },
+      "fields": {
+        "Progress": {
+          "english": "How's that spice bread?",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "How's that spice bread?",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "香料麵包的進展如何？",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "That bread looks delicious. Thanks, $n.",
+          "englishBuild": 15595,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "That bread looks delicious. Thanks, $n.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "那片麵包看起來真是美味可口。謝啦，$n。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
     {
       "id": 29406,
       "identity": {
@@ -47,6 +1927,16 @@
         "Progress": {
           "english": "The training targets are just down the hill. Come back to me once you're finished.",
           "englishBuild": 26972,
+          "englishSource": "legion-world",
+          "legacyEnglish": "",
+          "method": "reviewed-current",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972,
+              "review": "Retained from the v1.2.12 Shang Xi review: legacy progress is empty; the complete Legion progress text and both build-18414 locales describe the same training targets and return instruction."
+            }
+          ],
           "column": "quest_request_items_locale.CompletionText",
           "locales": {
             "zhCN": {
@@ -61,7 +1951,16 @@
         },
         "Completion": {
           "english": "Not bad, $n. You may indeed have chosen the proper path.$B$BGood. Let us continue.",
-          "englishBuild": 26972,
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Not bad, $n. You may indeed have chosen the proper path.$B$BGood. Let us continue.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
           "column": "quest_offer_reward_locale.RewardText",
           "locales": {
             "zhCN": {
@@ -70,6 +1969,222 @@
             },
             "zhTW": {
               "text": "不壞，$n。或許你終究選擇了正確的道路。$B$B很好。讓我們繼續下去。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29408,
+      "identity": {
+        "title": "The Lesson of the Burning Scroll",
+        "objectives": "Snatch the flame from Master Shang Xi's palm, then burn the Edict of Temperance.",
+        "description": "Every wisdom has a time and place, and times are changing for those of us living here on Shen-zin Su. For this lesson, I would ask two things of you.$B$BFor the first, I hold a flame in my hand. Gather your wits, and when you think you are ready, attempt to snatch the flame.$B$BShould you succeed, I want you to then climb to the top of this temple and burn the Edict of Temperance that you find there."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Burning Scroll",
+        "objectives": "Snatch the flame from Master Shang Xi's palm, then burn the Edict of Temperance.",
+        "description": "Every wisdom has a time and place, and times are changing for those of us living here on Shen-zin Su. For this lesson, I would ask two things of you.$B$BFor the first, I hold a flame in my hand. Gather your wits, and when you think you are ready, attempt to snatch the flame.$B$BShould you succeed, I want you to then climb to the top of this temple and burn the Edict of Temperance that you find there."
+      },
+      "fields": {
+        "Progress": {
+          "english": "There will come time when you must trust your instincts and simply act.",
+          "englishBuild": 26972,
+          "englishSource": "legion-world",
+          "legacyEnglish": "",
+          "method": "reviewed-current",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972,
+              "review": "Legacy progress is empty. Full quest context matches 7.3.5; Legion progress and the build-18414 zhTW field both say there are moments to trust one's instincts and act. Exact original only, no inferred alternate wording."
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhTW": {
+              "text": "某些時刻，你必須信任自己的直覺，並單純地做出反應。",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "The fact that you were able to snatch the flame so easily is no small feat.$B$BThe Edict of Temperance is a scroll of wisdom passed down from my elders' elders. Wisdom from a more peaceful time.$B$BEvery lesson has its time and place, and with darkness on the horizon, the time for this particular wisdom has passed.$B$BThe burning of the scroll is an acceptance of tidings to come and a promise to action. Your hand carried the flame, and I suspect that it will continue to do so in the future.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "The fact that you were able to snatch the flame so easily is no small feat.$B$BThe Edict of Temperance is a scroll of wisdom passed down from my elders' elders. Wisdom from a more peaceful time.$B$BEvery lesson has its time and place, and with darkness on the horizon, the time for this particular wisdom has passed.$B$BThe burning of the scroll is an acceptance of tidings to come and a promise to action. Your hand carried the flame, and I suspect that it will continue to do so in the future.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "能如此轻易地从我手中夺过火焰，你可真是不简单。$B$B戒酒令是由我的先祖们代代相传下来的智慧卷轴。它源自一个更加和平的年代。$B$B每一件事物都有其适用的时代和背景，当黑暗即将降临时，它就不合时宜了。$B$B烧毁卷轴说明我们顺应局势并采取行动的决心，而你手中的火焰将照亮我们的未来。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "能如此輕易地攫走火焰，可是不小的成就。$B$B節制敕令是傳自我師祖的師祖的一份智慧卷軸。一個更平和的時代所流傳下來的智慧。$B$B一切教誨都有其時空環境，而面對眼前的黑暗，這份智慧所隸屬的時代已然逝去。$B$B燒毀這份卷軸代表著正視眼前的驚濤，並許下起身而行的承諾。我相信你會用你捧過火焰的雙手，持續捧著我們的未來。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29409,
+      "identity": {
+        "title": "The Disciple's Challenge",
+        "objectives": "Defeat Jaomin Ro.",
+        "description": "$n, I see great strength and great courage in you, and an unsurpassed purity of soul.$B$BThe hour is young, but I think you may be ready to face a greater challenge.$B$BGo to the bottom of the stairs, and cross the bridge. There, you will find Jaomin Ro, one of our eldest students. Challenge and defeat him in honorable combat, and this first phase of your training will be complete."
+      },
+      "legacyIdentity": {
+        "title": "The Disciple's Challenge",
+        "objectives": "Defeat Jaomin Ro.",
+        "description": "$n, I see great strength and great courage in you, and an unsurpassed purity of soul.$B$BThe hour is young, but I think you may be ready to face a greater challenge.$B$BGo to the bottom of the stairs, and cross the bridge. There, you will find Jaomin Ro, one of our eldest students. Challenge and defeat him in honorable combat, and this first phase of your training will be complete."
+      },
+      "fields": {
+        "Completion": {
+          "english": "You truly impress, $n. It seems certain that the path of the $c is indeed the path for you.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You truly impress, $n. It seems certain that the path of the $c is indeed the path for you.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "真是令人惊讶，$n。果然你是注定将要踏上$c之道的人。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "你表現得著實出色，$n。看來$c之路確實是屬於你的道路。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29410,
+      "identity": {
+        "title": "Aysa of the Tushui",
+        "objectives": "Speak to Merchant Lorvo by Fu's Pond.",
+        "description": "In such a short time, you've shown me that you have the potential to be a great $c. The training grounds are behind you, but now you must prove yourself by facing a far greater challenge, one that none of my students have accomplished.$B$BI want you to return Huo, the spirit of fire, to the Temple of Five Dawns.$B$BMy two other most gifted students will help you in this task. The first is Aysa Cloudsinger. Seek her out at the pool to the west."
+      },
+      "legacyIdentity": {
+        "title": "Aysa of the Tushui",
+        "objectives": "Speak to Merchant Lorvo by Fu's Pond.",
+        "description": "In such a short time, you've shown me that you have the potential to be a great $c. The training grounds are behind you, but now you must prove yourself by facing a far greater challenge, one that none of my students have accomplished.$B$BI want you to return Huo, the spirit of fire, to the Temple of Five Dawns.$B$BMy two other most gifted students will help you in this task. The first is Aysa Cloudsinger. Seek her out at the pool to the west."
+      },
+      "fields": {
+        "Completion": {
+          "english": "You came for Aysa? You... you really shouldn't interrupt her until she finishes her exercises. She doesn't speak to anyone until her routine is done.$B$BIn the meantime, could you maybe help me? I had some bad luck with forest sprites.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You came for Aysa? You... you really shouldn't interrupt her until she finishes her exercises. She doesn't speak to anyone until her routine is done.$B$BIn the meantime, could you maybe help me? I had some bad luck with forest sprites.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhTW": {
+              "text": "你是來找艾莎的嗎？你…最好不要在她完成修行前打擾到她。在完成整套訓練之前她是不會和任何人說話的。$B$B在等待的時候，你能幫幫我嗎？我在森林妖精的問題上遇到了一些麻煩。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29412,
+      "identity": {
+        "title": "Blown Away",
+        "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+        "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon Faire. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+      },
+      "legacyIdentity": {
+        "title": "Blown Away",
+        "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+        "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon fair. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+      },
+      "fields": {
+        "Progress": {
+          "english": "Did you find all of my balloons, $gmister:miss;?",
+          "englishBuild": 0,
+          "englishSource": "tdb-2018",
+          "legacyEnglish": "Did you find all of my balloons, mister?",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "tdb-2018",
+              "build": 0,
+              "review": "Only fair/Faire spelling changes in quest context. Use the current full gender-aware progress text and the captured zhTW matching gender branches."
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "contextReview": {
+            "identity": {
+              "title": "Blown Away",
+              "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+              "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon Faire. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+            },
+            "legacyIdentity": {
+              "title": "Blown Away",
+              "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+              "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon fair. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+            }
+          },
+          "locales": {
+            "zhTW": {
+              "text": "氣球都找回來了嗎，$g先生:小姐;？",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29424,
+      "identity": {
+        "title": "Items of Utmost Importance",
+        "objectives": "Recover 6 Training Supplies from Amberleaf Scamps.",
+        "description": "Amberleaf scamps swarmed my cart and stole most of the training supplies I was bringing up to the training grounds. They've always been troublemakers, but they've never been this aggressive before. I don't know what happened.$B$BPlease, help me recover my supplies."
+      },
+      "legacyIdentity": {
+        "title": "Items of Utmost Importance",
+        "objectives": "Recover 6 Training Supplies from Amberleaf Scamps.",
+        "description": "Amberleaf scamps swarmed my cart and stole most of the training supplies I was bringing up to the training grounds. They've always been troublemakers, but they've never been this aggressive before. I don't know what happened.$B$BPlease, help me recover my supplies."
+      },
+      "fields": {
+        "Progress": {
+          "english": "You needn't worry about hurting the sprites. They're really just living plants when it comes down to it - they'll resprout later.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "You needn't worry about hurting the sprites. They're really just living plants when it comes down to it - they'll resprout later.",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhCN": {
+              "text": "你不用担心会伤到这些树精。它们不过是成了精的植物，很快就会重新发芽。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "你不用擔心傷害到這些妖精。說到底他們就是些會跑的植物 - 過陣子他們就會重新長出來了。",
               "build": 18414
             }
           }
@@ -92,6 +2207,16 @@
         "Progress": {
           "english": "There is a time for meditation and contemplation, and there is a time for action. Diving the balance between the two is one of the greatest wisdoms we seek.",
           "englishBuild": 26972,
+          "englishSource": "legion-world",
+          "legacyEnglish": "",
+          "method": "reviewed-current",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972,
+              "review": "Retained from the v1.2.12 review and IMG_1905 screenshot: the Legion progress and build-18414 locales discuss balancing meditation and action; legacy progress is empty. Keep the server's exact Diving spelling."
+            }
+          ],
           "column": "quest_request_items_locale.CompletionText",
           "locales": {
             "zhCN": {
@@ -106,7 +2231,16 @@
         },
         "Completion": {
           "english": "Intriguing, my young pupil.$B$BMost of the other trainees have been here for quite some time, but you are able to match them even within this first hour.$B$BThis speaks well of you, but there are yet other lessons I would see you learn.",
-          "englishBuild": 26972,
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "Intriguing, my young pupil.$B$BMost of the other trainees have been here for quite some time, but you are able to match them even within this first hour.$B$BThis speaks well of you, but there are yet other lessons I would see you learn.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
           "column": "quest_offer_reward_locale.RewardText",
           "locales": {
             "zhCN": {
@@ -115,6 +2249,324 @@
             },
             "zhTW": {
               "text": "真令人印象深刻!$B$B其他受訓弟子大多在此待了一段時間，但你剛來一個時辰便勝過了他們。$B$B你表現得很好，但是我仍需要你進行其他的修行。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30027,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a pair of Trainee's Handwraps.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a pair of fist weapons from one of the weapon racks below, bring them to me, and show me that you know how to equip them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Staff.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a staff from one of the weapon racks below, bring it to me, and show me that you know how to equip it properly."
+      },
+      "fields": {
+        "Progress": {
+          "english": "Picking up your first weapon is also a symbolic gesture. Every $c that leaves these training grounds must be ready to take up arms in defense of their fellow pandaren.",
+          "englishBuild": 26972,
+          "englishSource": "legion-world",
+          "legacyEnglish": "",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972,
+              "review": "Staff changes to fist weapons in the quest objective/description. The reviewed progress and reward are weapon-generic and mention neither weapon type nor quantity."
+            }
+          ],
+          "column": "quest_request_items_locale.CompletionText",
+          "contextReview": {
+            "identity": {
+              "title": "The Lesson of the Iron Bough",
+              "objectives": "Retrieve and equip a pair of Trainee's Handwraps.",
+              "description": "First, you will need a weapon suited to your talents. Retrieve a pair of fist weapons from one of the weapon racks below, bring them to me, and show me that you know how to equip them properly."
+            },
+            "legacyIdentity": {
+              "title": "The Lesson of the Iron Bough",
+              "objectives": "Retrieve and equip a Trainee's Staff.",
+              "description": "First, you will need a weapon suited to your talents. Retrieve a staff from one of the weapon racks below, bring it to me, and show me that you know how to equip it properly."
+            }
+          },
+          "locales": {
+            "zhCN": {
+              "text": "拿起自己的第一件武器也是一种象征。每一个离开习武场的$c都必须做好拿起武器，保护他们的熊猫人同胞的准备。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "取得你的第一件兵器也具有一種象徵性的意涵。每一名離開訓練營的$c都必須準備好武裝自己，守衛他們的熊貓人同胞。",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "reviewed-context",
+          "confirmation": [
+            {
+              "source": "pandaria-world",
+              "build": 18414,
+              "review": "Staff changes to fist weapons in the quest objective/description. The reviewed progress and reward are weapon-generic and mention neither weapon type nor quantity."
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "contextReview": {
+            "identity": {
+              "title": "The Lesson of the Iron Bough",
+              "objectives": "Retrieve and equip a pair of Trainee's Handwraps.",
+              "description": "First, you will need a weapon suited to your talents. Retrieve a pair of fist weapons from one of the weapon racks below, bring them to me, and show me that you know how to equip them properly."
+            },
+            "legacyIdentity": {
+              "title": "The Lesson of the Iron Bough",
+              "objectives": "Retrieve and equip a Trainee's Staff.",
+              "description": "First, you will need a weapon suited to your talents. Retrieve a staff from one of the weapon racks below, bring it to me, and show me that you know how to equip it properly."
+            }
+          },
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30033,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Spellblade and a Trainee's Hand Fan.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a spellblade and a hand fan from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Spellblade and a Trainee's Hand Fan.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a spellblade and a hand fan from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30034,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Crossbow.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a crossbow from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Crossbow.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a crossbow from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30035,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Mace and a Trainee's Book of Prayers.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a mace and a book of prayers from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Mace and a Trainee's Book of Prayers.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a mace and a book of prayers from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30036,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a pair of Trainee's Daggers.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a pair of daggers from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a pair of Trainee's Daggers.",
+        "description": "First, you will need weapons suited to your talents. Retrieve a pair of daggers from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "legacy-full-text",
+          "confirmation": [],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30037,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Axe and a Trainee's Shield.",
+        "description": "First, you will need weapons suited to your talents. Retrieve an axe and a shield from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Axe and a Trainee's Shield.",
+        "description": "First, you will need weapons suited to your talents. Retrieve an axe and a shield from one of the weapon racks below, bring them to me, and show me that you know how to hold them properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 30038,
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Sword.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a sword from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Sword.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a sword from one of the weapon racks below, bring it to me, and show me that you know how to hold it properly."
+      },
+      "fields": {
+        "Completion": {
+          "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "englishBuild": 18414,
+          "englishSource": "pandaria-world",
+          "legacyEnglish": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+          "method": "cross-version-exact",
+          "confirmation": [
+            {
+              "source": "legion-world",
+              "build": 26972
+            }
+          ],
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "不错的武器。它应该可以发挥你的能力。$B$B现在，来用用看吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不錯的兵器。它應該能符合你的需求。$B$B現在來使用它吧。",
               "build": 18414
             }
           }

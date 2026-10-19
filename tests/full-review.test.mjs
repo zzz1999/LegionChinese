@@ -169,6 +169,6 @@ test('quest log translates objective and completion rows, preserves metadata and
     assert(first.height==112 and second.height==84 and QuestScrollFrame.updates==1,"idempotent refresh")
     LegionChineseSettings={enabled=false}
     QLOF1.Text.text="Bring Mina Mudclaw home to her father: 0/1"
-    hooks.QuestLogQuests_Update();assert(QLOF1.Text.text=="Bring Mina Mudclaw home to her father: 0/1")
+    hooks.QuestLogQuests_Update();assert(QLOF1.Text.text=="将米娜·泥爪带回她父亲身边: 0/1")
   `,[shippedRow('Quests',12680),shippedRow('Quests',47202),shippedText('Objectives',objective)].join('\n'));
 });

@@ -1,6 +1,6 @@
 {
   "source": "data/reviewed-quest-dialogue.json",
-  "sha256": "272f48369ba03bb30b87e3daf5471bde04f1e2ab30016174aec04695a55e0243",
+  "sha256": "a997a44147985b64e007d29df9bbb3c74230a6c951dda09ba6c3bc8b49eb0fb6",
   "provenance": "reviewed-legacy-dialogue",
   "sources": [
     {
@@ -28,18 +28,1344 @@
       "sha256": "d1faf4efeca0cbd2940964e72e7e519f90e304d6778c110d0cc951c79a06f27e",
       "patch": "7.3.5",
       "license": "GPL-2.0"
+    },
+    {
+      "id": "tdb-2018",
+      "file": "TDB_world_735.00_2018_02_19.sql",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "member": "TDB_full_735.00_2018_02_19/TDB_world_735.00_2018_02_19.sql",
+      "sha256": "786d8b7f84fe1daf765b770483721ae529f3d758da2271f812c261d914f1e99e",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "tdb-2025",
+      "file": "TDB_world_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_world_735.26972_2025_05_11.sql",
+      "sha256": "9ddbe8f048c8f40fc886e243f474ba35cdd080d503600fdf4385459523360df5",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
     }
   ],
+  "reviews": {
+    "file": "data/quest-dialogue-reviews.json",
+    "sha256": "2e9fb6325a2fc33ff6fe2438785eef98032f3efbb55cedae79324f4e6f3d98f3"
+  },
+  "verification": {
+    "rows": 29258,
+    "byResult": {
+      "unverified_build": 29072,
+      "translation_build": 98,
+      "cross-version-exact": 27,
+      "legacy-full-text": 28,
+      "reviewed-context": 9,
+      "missing_legacy_original": 10,
+      "reviewed-current": 5,
+      "quest_context": 9
+    },
+    "deferred": [
+      {
+        "id": 47,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 54,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 60,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 62,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7025,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7043,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7063,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 24589,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26389,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26390,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26391,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 27944,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27949,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27970,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 27978,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28059,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28130,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 28759,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28763,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28769,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28770,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28771,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28772,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28773,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28774,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28791,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28792,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28793,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28794,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28795,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28796,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28797,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28806,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28808,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28809,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28810,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28811,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28812,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28813,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28882,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29079,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29081,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29082,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29351,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29408,
+        "field": "Progress",
+        "locale": "zhCN",
+        "build": 52649,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29419,
+        "field": "Progress",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29419,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "missing_legacy_original"
+      },
+      {
+        "id": 29548,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31144,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31440,
+        "field": "Progress",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 40,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 54,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 7043,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8744,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8744,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8768,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8768,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8769,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8769,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8803,
+        "field": "Completion",
+        "locale": "zhCN",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 8803,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 18414,
+        "reason": "quest_context"
+      },
+      {
+        "id": 26389,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26390,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 26391,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28757,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28759,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28762,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28763,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28764,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28765,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28766,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28767,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28769,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28770,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28771,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28772,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28773,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28774,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28780,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28784,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28785,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28786,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28787,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28788,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28789,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28791,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28792,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28793,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28794,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28795,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28796,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28797,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28806,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28808,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28809,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28810,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28811,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28812,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28813,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28817,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28818,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28819,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28820,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28821,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28822,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 28823,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29078,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29079,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29080,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29081,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29082,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 29083,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31139,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31143,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31144,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31145,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      },
+      {
+        "id": 31440,
+        "field": "Completion",
+        "locale": "zhTW",
+        "build": 55261,
+        "reason": "translation_build"
+      }
+    ]
+  },
   "candidates": [
     {
+      "id": 7022,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "1687c20a1c4d9059:308"
+      ],
+      "alreadyCovered": true,
+      "selected": false
+    },
+    {
+      "id": 7045,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "66c79cc81df28805:181"
+      ],
+      "alreadyCovered": true,
+      "selected": false
+    },
+    {
+      "id": 13520,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "6d74b19df6eaab06:63"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26153,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "3aa1e16bf7711e04:37"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26153,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "910bc48fd5457720:55"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26177,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "521f1a83cfc4f7f6:66"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26177,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "2d1cdd94110708f9:93"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26192,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "7d0169c86b620abd:40"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26414,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "ede55196b60e7de3:29"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26414,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "2fc55d1eb87ef89b:112"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26420,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "6a15145974af70f2:15"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26420,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "18e68bea6846694b:62"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26442,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "e8c3e829c68b68bc:68"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26442,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "4104f68b124c4180:38"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26488,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "dce3ceb4de1549cd:26"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26488,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "851f922c9e60153d:89"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26536,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "2bf224dfd7003c6c:26"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 26536,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "2450c6b87c9afd4f:59"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27944,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "b8ac79cc7c0bedc3:70"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27949,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "a457945f8af3ce04:25"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27970,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "86fd8c43977d594e:62"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27973,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "bb5e3e14d8840741:24"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27973,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "a9c13db0ecf2f8af:72"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27978,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "6927e5ff2e7f4a8e:59"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27992,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "9b63bdb662af78f7:38"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 27992,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "533ba7e4ed155225:95"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 28059,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "3b7d71abdf0652c2:69"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 28130,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "a6286bbf0428fdf0:58"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29342,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "82a39365f927c466:28"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29342,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "af01c39e85362033:48"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29347,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "6f066ade09841791:120"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29351,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "482c33f65cbe23eb:58"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29353,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "afedddf80bd8566b:25"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29353,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "097896c797f62646:47"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29355,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "38e417af98632c12:20"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29355,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "9de8c7b8c8afae5b:35"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
       "id": 29406,
       "field": "Progress",
       "locale": "zhCN",
       "build": 18414,
       "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-current",
       "fingerprints": [
         "32ec5d0cef75371b:68"
       ],
+      "alreadyCovered": false,
       "selected": true
     },
     {
@@ -48,9 +1374,11 @@
       "locale": "zhTW",
       "build": 18414,
       "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-current",
       "fingerprints": [
         "32ec5d0cef75371b:68"
       ],
+      "alreadyCovered": false,
       "selected": false
     },
     {
@@ -59,9 +1387,11 @@
       "locale": "zhCN",
       "build": 18414,
       "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
       "fingerprints": [
         "fad7dafd3d1b4538:66"
       ],
+      "alreadyCovered": false,
       "selected": true
     },
     {
@@ -70,9 +1400,129 @@
       "locale": "zhTW",
       "build": 18414,
       "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
       "fingerprints": [
         "fad7dafd3d1b4538:66"
       ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 29408,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-current",
+      "fingerprints": [
+        "6d63e907ec2e90e6:59"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29408,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "71d51b9dbfe43124:394"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29408,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "71d51b9dbfe43124:394"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 29409,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "8e6d09c2c204a9d9:75"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29409,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "8e6d09c2c204a9d9:75"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 29410,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "f1d9efa7039d3960:192"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29412,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "0be952a12574a258:33",
+        "6064976993ac9b26:31"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29424,
+      "field": "Progress",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "78c217efafcd2408:108"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 29424,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "78c217efafcd2408:108"
+      ],
+      "alreadyCovered": false,
       "selected": false
     },
     {
@@ -81,9 +1531,11 @@
       "locale": "zhCN",
       "build": 18414,
       "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-current",
       "fingerprints": [
         "b7f0ee1cbec5ac8b:128"
       ],
+      "alreadyCovered": false,
       "selected": true
     },
     {
@@ -92,9 +1544,11 @@
       "locale": "zhTW",
       "build": 18414,
       "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-current",
       "fingerprints": [
         "b7f0ee1cbec5ac8b:128"
       ],
+      "alreadyCovered": false,
       "selected": false
     },
     {
@@ -103,9 +1557,11 @@
       "locale": "zhCN",
       "build": 18414,
       "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
       "fingerprints": [
         "6a078ecbc2d9a710:187"
       ],
+      "alreadyCovered": false,
       "selected": true
     },
     {
@@ -114,11 +1570,232 @@
       "locale": "zhTW",
       "build": 18414,
       "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
       "fingerprints": [
         "6a078ecbc2d9a710:187"
       ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30027,
+      "field": "Progress",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "b288c9e4fc8a6d2d:139"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30027,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "b288c9e4fc8a6d2d:139"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30027,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30027,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "reviewed-context",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30033,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30033,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30034,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30034,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30035,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30035,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30036,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30036,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "legacy-full-text",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30037,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30037,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": false
+    },
+    {
+      "id": 30038,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
+      "selected": true
+    },
+    {
+      "id": 30038,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "method": "cross-version-exact",
+      "fingerprints": [
+        "bca9cc58e51fa9d3:57"
+      ],
+      "alreadyCovered": false,
       "selected": false
     }
   ],
-  "rejected": 0
+  "rejected": 0,
+  "alreadyCoveredFields": 2,
+  "fields": 52,
+  "quests": 36,
+  "byField": {
+    "Progress": 20,
+    "Completion": 32
+  },
+  "byLocale": {
+    "zhCN": 15,
+    "zhTW": 37
+  }
 }

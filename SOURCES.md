@@ -32,11 +32,26 @@
 
 截图中的 **沙袋训练（29406）** 完成对白与 **戒骄（29524）** 进行中对白缺少中文；现已一并补充两项任务的进行中、完成对白，共 4 段。
 
-简繁译文来自 [alexkulya/pandaria_5.4.8 的固定本地化快照](https://github.com/alexkulya/pandaria_5.4.8/blob/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/old/world/2026_08_06_16_world_quest_locale_import.sql#L90987)。仅提取这两个 ID 的 `quest_offer_reward_locale.RewardText` 和 `quest_request_items_locale.CompletionText`，8 条简繁记录均标注 `VerifiedBuild=18414`。该版本号是上游资料标记，尚无独立原始抓包证明，归类为 `reviewed-legacy-dialogue`，不声称已逐字核实官方译文；同一文件中较晚版本的日志字段未导入。
+简繁译文来自 [alexkulya/pandaria_5.4.8 的固定本地化快照](https://github.com/alexkulya/pandaria_5.4.8/blob/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/old/world/2026_08_06_16_world_quest_locale_import.sql#L90987)。1.2.12 仅提取这两个 ID 的 `quest_offer_reward_locale.RewardText` 和 `quest_request_items_locale.CompletionText`，8 条简繁记录均标注 `VerifiedBuild=18414`。该版本号是上游资料标记，尚无独立原始抓包证明，归类为 `reviewed-legacy-dialogue`，不声称已逐字核实官方译文；同一文件中较晚版本的日志字段未导入。
 
 已核对 5.4.8 与 7.3.5 的英文标题、目标、描述一致；4 段运行时原文取自 [Legion Proyect 固定 7.3.5 快照](https://github.com/zitengzela/LegionCore-7.3.5V2/blob/80ad17a234fd4ed462bc9a23e401b70f86f15a0d/sql/base/Legion_Proyect-DB.7z) 中 build 26972 的记录，其中两段与用户截图吻合。只在当前完整对白指纹匹配时使用，角色名与换行按现有规则处理，不按同 ID 强行替换旧对白。简体缺失或不可用才取繁体；已有中文与修改过的原文保持不变。
 
-固定输入文件与哈希、逐字段英文及简繁文字见 `data/reviewed-quest-dialogue.json`；实际导入语言及指纹见 `docs/reviewed-quest-dialogue-audit.json`。运行 `node scripts/collect-reviewed-dialogue.mjs <本地化SQL> <5.4.8世界SQL> <7.3.5世界SQL>` 可从三份固定原始资料重新提取，脚本先核对完整文件 SHA-256。构建使用固定哈希的提取结果，AddOns 资源只保留选中的中文与原文指纹。
+#### 任务对白批量补缺（1.2.13）
+
+继续筛查上述快照中的全部 **29,258 条简繁对白记录**，以对应的 5.4.8 world 数据为旧版上下文，并交叉核对 TDB 2018、TDB 2025 与 Legion Proyect 三份固定 7.3.5 资料。29,072 条未标记采集版本的旧记录没有作为本次新增来源；此前已收录的同类记录保持不变。另有 98 条标记为 52649/55261 的后续版本记录被排除。其余 88 条有适用版本标记的记录中，9 条任务上下文仍不一致、10 条缺少可安全配对的原文，暂不导入；另有 9 条候选经过显式的前后版本上下文复核。
+
+核对后得到 38 个任务、54 个字段的 69 条简繁候选；其中 2 个字段已有中文，继续使用原有来源。实际补充库覆盖 **36 个任务的 52 个字段**（进行中 20、完成 32；简体 15、繁体 37），较 1.2.12 新增 **34 个任务、48 个字段**。这些是任务/阶段的数量，不是全文覆盖率；不同职业任务可能共用一段对白。
+
+- 默认要求任务 ID、完整标题、日志目标和描述与当前基础库相符。四个显式复核例外（26177、26488、29412、30027）同时固定旧版和当前完整上下文，只接受与改动数量、武器种类无关的通用对白，或已核实的原文标点／大小写变体；任何未列出的上下文变化仍拒绝。
+- `cross-version-exact`：27 条简繁候选的旧版原文还与至少一份 7.3.5 记录全文一致。
+- `legacy-full-text`：28 条候选保留旧库的完整英文作为匹配依据。部分 Legion Proyect 基础字段实际是西班牙语，不能将它冒充已核对的英文；只有客户端在同一任务、同一阶段实际显示该旧英文时才替换。其他措辞或语言不猜测对应关系。
+- `reviewed-current`：5 条候选来自三条单独复核的进行中对白（29406、29524、29408）。旧库相应原文字段为空，但完整任务上下文相同，已复核 7.3.5 原文与版本标记为 18414 的简繁字段含义一致。具体原文与理由固定在 `data/quest-dialogue-reviews.json`。
+- `reviewed-context`：9 条简繁候选来自上述四个复核任务，最终补充 7 个字段。前后任务内容、适用对白与理由保存在 `data/quest-dialogue-reviews.json`；不是放宽所有任务的匹配规则。
+- 运行时同时匹配**任务 ID、对白阶段、完整原文指纹**；补缺字段简体优先、繁体补充，保留已有译文的优先级。没有可靠译文、上下文冲突、后续版本或原文不匹配时保留客户端文字；不机器翻译，不将繁体转换后冒充简体官中。
+
+全部新采用的中文都标注 `VerifiedBuild=18414`，仍属于社区保存的历史版本记录，**版本标记不构成官方原文的独立证明**。没有把补充库宣称为完整的官方对白库。
+
+固定输入文件与哈希、逐字段英文及简繁文字见 `data/reviewed-quest-dialogue.json`；实际导入语言、未采用原因及指纹见 `docs/reviewed-quest-dialogue-audit.json`。运行 `node scripts/collect-reviewed-dialogue.mjs <本地化SQL> <5.4.8世界SQL> <Legion Proyect SQL> [TDB 2018 SQL] [TDB 2025 SQL]` 可重新提取；后两个路径默认使用 `.cache/` 中的固定文件。脚本核对全部输入 SHA-256，拒绝重复记录，生成快照并同步清单哈希。构建再次校验快照、人工复核清单与任务上下文；AddOns 仅保留中文、数值 ID 和匹配指纹，不携带原始 SQL 或外文正文。
 
 #### 保卫贫瘠之地
 
@@ -64,7 +79,7 @@
 
 1.1.8 起使用 Wago.Tools 保存的 **7.3.5.26972** 客户端 DB2 表，分别获取 enUS、zhCN 和 zhTW 的 CSV 导出。来源是该版本客户端中的名称字段，优先采用其简体译名；这是社区维护的客户端资料存档，不是暴雪发布或背书的插件数据库。
 
-- [Spell](https://wago.tools/db2/Spell?build=7.3.5.26972)：只导入 `Name_lang`，不导入法术描述、光环说明或数值。最终收录 160,721 个法术 ID，其中简体 141,175 个、繁体补充 19,546 个。包含 NPC 技能和历史记录，不能当作玩家技能数量或任一服务器的实测覆盖率。
+- [Spell](https://wago.tools/db2/Spell?build=7.3.5.26972)：法术名称使用 `Name_lang`。1.2.13 另接入无动态公式的描述、光环说明和副标题，详见下文；不计算战斗数值。最终收录 160,721 个法术 ID，其中简体 141,175 个、繁体补充 19,546 个。包含 NPC 技能和历史记录，不能当作玩家技能数量或任一服务器的实测覆盖率。
 - [Creature](https://wago.tools/db2/Creature?build=7.3.5.26972)：按生物 ID 配对客户端名称，保存中文名称和原名指纹；仅在运行时确认是自己的宠物或召唤物，且当前名字与该记录的默认原名一致时使用。它不等同于完整的服务器生物库。
 - [CreatureFamily](https://wago.tools/db2/CreatureFamily?build=7.3.5.26972)：用于核对狼、食尸鬼等默认种类名。猎人仅处理当前仍可改名且名字与默认种类匹配的宠物，其他名字保留。
 
@@ -106,13 +121,13 @@
 
 ## 聊天物品链接
 
-聊天普通物品链接不使用网页译名表：使用完整 `item:` 参数向客户端 `GetItemInfo` 查询名称，只采用返回的中文名称，保留超链接参数、颜色和发言正文；已有中文或特殊链接保持不变。
+聊天普通物品链接优先使用完整 `item:` 参数向客户端 `GetItemInfo` 查询中文名称；1.2.13 在客户端未返回中文时，补查同版本 ItemSparse 的 103,910 个离线名称。存在随机后缀或奖励变体参数时，只有显示名称与已核对英文基础名一致才使用离线基础名，避免把有区别的变体名称抹掉。已有中文、未知 ID 和缺少明确副本信息的通用钥石保持原样；超链接参数、颜色及玩家发言正文不变。
 
 史诗钥石单独解析链接中的副本 ID 和层数，通过 7.3.5 原生 `C_ChallengeMode.GetMapInfo` 取得中文副本名称；没有中文时保持原文。接口依据为 [ChallengeModeInfoLua.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_APIDocumentation/ChallengeModeInfoLua.lua)，延迟资料通过原版挑战界面使用的 `RequestMapInfo` 和 `CHALLENGE_MODE_MAPS_UPDATE` 刷新。显示格式采用客户端中文 `CHALLENGE_MODE_KEYSTONE_HYPERLINK`，否则使用 [GlobalStrings 7.3.5.26972](https://wago.tools/db2/GlobalStrings?build=7.3.5.26972) 记录 36209 的简体格式“钥石：%s (%d)”。原生五字段链接结构交叉核对 [LegionCore ChatLink.cpp 的 KeystoneChatLink::Initialize](https://github.com/The-Legion-Preservation-Project/LegionCore-7.3.5/blob/fed58f79c498521836612acd12009e9fa9e60e31/src/server/game/Chat/ChatLink.cpp#L1487)。保留整个原始链接和词缀参数，不查询玩家自己持有的钥石来代替别人的链接；通用 `item:138019` 缺少明确副本信息时不猜测。
 
 1.2.4 对照同一 7.3.5 快照的 [SharedXML/ScrollingMessageFrame.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/SharedXML/ScrollingMessageFrame.lua)，在原版窗口 `AddMessage` 和 `BackFillMessage` 后处理 `historyBuffer` 中的消息。首次未取得中文名时，收到 `GET_ITEM_INFO_RECEIVED` 或打开对应物品提示后重新查询，合并同批通知并更新原消息的 `message` 字段，再调用 `MarkDisplayDirty` 重新布局；消息对象、时间戳、颜色、额外参数、顺序、滚动位置和淡出时间均保留。不清空聊天、不重新投递聊天事件、不发送消息。已解析的中文名会留在对应消息中，等待另一个链接加载时不会退回外文。
 
-`/lcn on` 会重新处理原版窗口的现有聊天记录，`/lcn off` 只还原仍与本插件上次输出一致的名称，避免覆盖其他插件后续修改。临时密语窗口依据 `FrameXML/FloatingChatFrame.lua` 的 `FCF_OpenTemporaryWindow` 安装；消息记录使用弱引用，移出聊天缓冲区后可以回收。没有原版聊天缓冲区的第三方窗口保留 `ChatFrame_AddMessageEventFilter` 的即时处理，仅能替换当时已经取得的中文名称。对应原始过滤接口仍见 `FrameXML/ChatFrame.lua`。
+插件加载后自动汉化，登录时重新处理原版窗口的现有聊天记录。刷新直接处理当前消息，保留已经取得的中文名称与其他插件后续修改；不再为汉化开关保存原文副本。临时密语窗口依据 `FrameXML/FloatingChatFrame.lua` 的 `FCF_OpenTemporaryWindow` 安装；消息记录使用弱引用，移出聊天缓冲区后可以回收。没有原版聊天缓冲区的第三方窗口保留 `ChatFrame_AddMessageEventFilter` 的即时处理，仅能替换当时已经取得的中文名称。对应原始过滤接口仍见 `FrameXML/ChatFrame.lua`。
 
 ## 字体
 
@@ -156,7 +171,7 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 
 `journal:类型:记录ID:难度` 中 0 是副本、1 是首领、2 是章节；`instancelock:玩家GUID:地图ID:难度:完成掩码` 使用 Map ID。结构参考军团再临保存项目的 [HyperlinkTags.cpp](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/HyperlinkTags.cpp) 与 [Hyperlinks.h](https://github.com/The-Legion-Preservation-Project/TrinityCore/blob/3c85e24f280227620c2a163385a613e8447653a7/src/server/game/Chat/Hyperlinks.h)。运行时只替换显示名，完整参数、颜色、难度、进度和点击对象保持不变。
 
-未入库的指南名称只尝试客户端中文 API：`EJ_GetInstanceInfo`、`EJ_GetEncounterInfo`、`C_EncounterJournal.GetSectionInfo().title`，对应 [7.3.5 EncounterJournal 界面源码](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.lua) 与其 API 文档。副本链接点击走 `SetItemRef` 打开指南，不经过物品提示；因此在点击后或指南加载后重试待解析的聊天记录。不调用加载、打开、选择副本或难度的接口。已有中文、无可靠对应、未知类型及格式不完整的链接保留原文。
+1.2.13 已补入同版本 JournalEncounter 和 JournalEncounterSection 的中文名称。客户端中文名称优先，离线库补缺；其他未入库指南名称只尝试客户端中文 API：`EJ_GetInstanceInfo`、`EJ_GetEncounterInfo`、`C_EncounterJournal.GetSectionInfo().title`，对应 [7.3.5 EncounterJournal 界面源码](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.lua) 与其 API 文档。副本链接点击走 `SetItemRef` 打开指南，不经过物品提示；因此在点击后或指南加载后重试待解析的聊天记录。不调用加载、打开、选择副本或难度的接口。已有中文、无可靠对应、未知类型及格式不完整的链接保留原文。
 
 ## 1.2.11 客户端物品说明
 
@@ -167,3 +182,33 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 这些中文来自客户端数据的社区存档，标记为 `client-db2-via-wago`，优先于同语言的社区补充。原有物品 138019 的钥石说明不在这批 ItemSparse 导出中，继续使用前节注明来源的繁体补充；合计 16,326 个物品 ID、24 条繁体。空值、格式不支持或没有可靠中文时保留原文。
 
 运行时同时核对物品 ID 和完整原文的规范化指纹；忽略 ASCII 大小写与空白差异，保留引号、整行颜色包装和换行。未知的链接、纹理等内嵌标记不参与替换。按整行文本匹配，不按黄色这一颜色猜测内容；实际装备属性与使用效果仍由客户端显示。仅替换原版 GameTooltip / ItemRefTooltip 中命中的固定说明，不改写全局物品 API。安装包只包含中文、数字 ID 与指纹，不包含原始 CSV、英文说明或物品模型资源。
+
+## 1.2.13 扩展资料与展示入口
+
+### 任务变量、肖像与区域文字
+
+从 [wow-quest-archive 的固定军团档案](https://github.com/zzz1999/wow-quest-archive/tree/3f8a6bc4861bb067397be83c10b59fe134623794/data/legion) 生成 `data/translation-extras.json`。快照保留输入 JSONL 哈希、源资料清单、逐字段原文、译文、语言、列名、build，以及任务身份和目标要求。构建校验快照 SHA-256 与 TDB735.00 基础库 SHA-256，排除后续 build、无可核对原文、已标记测试或自定义的记录；当前任务已有字段优先。
+
+`$p` 按玩家名处理，`$ct`、`$vn` 和 `$vg` 使用同版本 **ChrClassTitle / ChrClassVillain** 的 enUS、zhCN、zhTW 数据展开；这些 CSV 的 URL 和 SHA-256 保存在快照 `archive.reading` 中。`$1oa` 等仅使用同一任务、相同目标 ID 和顺序的所需数量，不读取玩家当前完成进度。目标顺序不明确、世界状态值、未支持的职业复数等标记不猜测。修正单字母变量解析边界，避免 `$ct` 被错误替换成“职业名 + t”。
+
+最终补充 **4,579 个任务的 5,928 个字段**，其中简体 5,505、繁体 423；包含接取肖像说明 1,005、名称 1,235，交付肖像说明 149、名称 179，区域／交付提示 722，标题 1,938，完成提示 51，接取描述 121，目标摘要 528。统计包含内部或不可见任务，不是实机覆盖率。运行时同时匹配任务 ID、字段和完整原文指纹，无法确认则不替换。45 个候选字段未通过导入条件，另有 11 个字段在采集时因缺原文或 build 被排除；详见 `docs/translation-extras-audit.json` 与快照 `deferred`。
+
+肖像文字挂钩 [QuestFrame_ShowQuestPortrait](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/QuestFrame.lua)，分别处理接取和交付介绍，并调用原版文字布局函数。区域文字只在有当前任务 ID 的目标显示入口匹配。
+
+### 离线名称与静态提示说明
+
+复用已固定的 ItemSparse、Spell、Creature 三语 CSV，另下载 **7.3.5.26972** 的 [Achievement](https://wago.tools/db2/Achievement?build=7.3.5.26972)、[CurrencyTypes](https://wago.tools/db2/CurrencyTypes?build=7.3.5.26972)、[BattlePetSpecies](https://wago.tools/db2/BattlePetSpecies?build=7.3.5.26972)、[BattlePetAbility](https://wago.tools/db2/BattlePetAbility?build=7.3.5.26972)、[JournalEncounter](https://wago.tools/db2/JournalEncounter?build=7.3.5.26972)、[JournalEncounterSection](https://wago.tools/db2/JournalEncounterSection?build=7.3.5.26972) 三语导出。原始文件版本、URL 与 SHA-256 固定在 `sources.json.extraLinkTables`；构建要求三个语言文件齐全、ID 唯一、表头和列数正确。
+
+数据标记为 `client-db2-via-wago`，保留客户端本身的中文措辞，简体可用时优先，繁体补缺。不带公式的完整原文和中文共同通过检查后才生成说明匹配表；`$`、未知内嵌标记和控制字符被拒绝，不计算角色等级、装备缩放或服务器实际战斗数值。法术／光环按 ID、说明类型和整行原文匹配。7.3.5 的 UnitAura / UnitBuff / UnitDebuff 在第 11 个返回值提供 spellID，核对依据为同版本 [CompactUnitFrame.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/CompactUnitFrame.lua) 和 [TargetFrame.lua](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/TargetFrame.lua)。
+
+新增数量与简繁构成见 `docs/extra-client-data-audit.json`：物品名称 103,910；静态法术说明 32,592、光环说明 18,609、技能副标题 3,037；成就 5,655、货币 98、战斗宠物 1,422、战斗宠物技能 1,013、冒险指南首领 755、章节／技能 9,783。战斗宠物名称通过三语一致的 CreatureID 关联同版本 Creature 表。新增链接资料用于显示名称，不代表完整成就或冒险指南界面描述已汉化。
+
+NPC 名称和头衔来自原有固定 TDB 2018 基础行及其简繁 locale 行，通过 Creature ID 与对应英文名称／头衔配对，收录名称 95,761 个 ID、头衔 16,947 个 ID。它们属于社区保存的世界数据库资料，不以 build 字段作为逐字官服采集证明。仅作用于可识别 Creature GUID 的原版提示框，不改玩家名称、公会名、自定义宠物名或引擎绘制的头顶浮动文字。
+
+### 书籍上下文与 NPC 消息
+
+沿已固定世界库的 `page_text.NextPageID` 建立书籍页链。全局指纹无法唯一确定的正文，再按第一页原文指纹、当前页码和当前正文指纹选择译文；上下文内部仍有冲突时拒绝。恢复 51 个页 ID 的匹配，共 55 个上下文／页码组合。`ITEM_TEXT_BEGIN` / `ITEM_TEXT_CLOSED` 清除旧书上下文；缺少第一页、书页顺序不同或来源冲突时保留原文。
+
+NPC 说话、喊话、密语、首领密语复用已有 BroadcastText / Gossip 中文资料，怪物动作消息保留原有处理。只有怪物动作事件使用 `%s` 姓名格式，普通 NPC 对白不能把该模板直接写进聊天。处理不会发送聊天消息，也不改变玩家发言正文。选项 `BoxText` / `BoxBroadcastTextID` 及原版 `GOSSIP_CONFIRM` 确认框已接入匹配流程，但现有资料未发现可增加的中文 BoxText 行，不能计为新增已翻译内容。
+
+所有新增 AddOns 数据只保留中文、数字 ID 与匹配指纹，不携带原始 SQL、CSV 或外文正文。未通过来源或格式核对的内容保持原文，范围及后续缺口见 `docs/TRANSLATION-COVERAGE.md`。

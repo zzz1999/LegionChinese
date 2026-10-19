@@ -64,14 +64,12 @@ test('bag and chat item tooltips translate only the known description, retaining
   local writes=ItemRefTooltipTextLeft6.writes
   for i=1,20 do ItemRefTooltip:Fire("OnUpdate",0.016) end
   assert(ItemRefTooltipTextLeft6.writes==writes and ItemRefTooltip.nativeUpdates==20)
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(GameTooltipTextLeft6.text=='"'..description..'"')
-  assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshItemTooltips()
+  assert(ItemRefTooltipTextLeft6.text=='|cffffff00"'..translatedDescription..'"|r')
   assert(GameTooltipTextLeft6.text=='"'..translatedDescription..'"')
 `));
 
-test('item polling is bounded, keeps native frames running, and stops while disabled even for unknown items',()=>run(`
+test('item polling stays bounded for known and unknown items even with legacy disabled settings',()=>run(`
   ItemRefTooltip:SetHyperlink("item:138019")
   local reads=0
   for i=2,6 do
@@ -80,11 +78,10 @@ test('item polling is bounded, keeps native frames running, and stops while disa
   end
   for i=1,120 do ItemRefTooltip:Fire("OnUpdate",1/120) end
   assert(reads==50 and ItemRefTooltip.nativeUpdates==120)
-  SlashCmdList.LEGIONCHINESE("off");reads=0
+  LegionChineseSettings={enabled=false};reads=0
   for i=1,120 do ItemRefTooltip:Fire("OnUpdate",1/120) end
-  assert(reads==0 and ItemRefTooltip.nativeUpdates==240)
-  assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
-  SlashCmdList.LEGIONCHINESE("on")
+  assert(reads==50 and ItemRefTooltip.nativeUpdates==240)
+  assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
   ItemRefTooltip:SetHyperlink("item:1")
   local getItem=ItemRefTooltip.GetItem;local itemReads=0
   ItemRefTooltip.GetItem=function(self) itemReads=itemReads+1;return getItem(self) end
@@ -92,7 +89,7 @@ test('item polling is bounded, keeps native frames running, and stops while disa
   assert(itemReads==10,"unmatched items must not reset the polling interval each frame")
 `));
 
-test('native item events and toggles translate immediately while late line changes appear on the next poll',()=>run(`
+test('native item events and refreshes translate immediately while late line changes appear on the next poll',()=>run(`
   ItemRefTooltip.pendingText="Waiting for item information"
   ItemRefTooltip:SetHyperlink("item:138019")
   ItemRefTooltipTextLeft6:SetText(description)
@@ -102,14 +99,13 @@ test('native item events and toggles translate immediately while late line chang
   assert(ItemRefTooltipTextLeft6.text==translatedDescription)
   ItemRefTooltip.pendingText=description;ItemRefTooltip:SetHyperlink("item:138019")
   assert(ItemRefTooltipTextLeft6.text==translatedDescription,"native item events must not wait for polling")
-  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==description)
-  SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text==translatedDescription)
+  A.RefreshItemTooltips();assert(ItemRefTooltipTextLeft6.text==translatedDescription)
   ItemRefTooltip:SetHyperlink("item:1");assert(ItemRefTooltipTextLeft6.text==description)
   ItemRefTooltip:Hide();ItemRefTooltip:SetHyperlink("item:138019")
   assert(ItemRefTooltipTextLeft6.text==translatedDescription,"hide and reuse must not delay a known item")
 `));
 
-test('client item descriptions translate flavor text with Traditional fallback and preserve live stats and toggle originals',()=>run(`
+test('client item descriptions translate flavor text with Traditional fallback and preserve live stats across refreshes',()=>run(`
   local original='Fletched by Andy "The Macho Gnome" Savage.'
   ItemRefTooltip.pendingText=original;ItemRefTooltip:SetHyperlink("item:32760:0:0:0:0:0")
   assert(ItemRefTooltipTextLeft6.text=='由「硬漢地精」野蠻安迪裝填尾羽。')
@@ -119,8 +115,7 @@ test('client item descriptions translate flavor text with Traditional fallback a
   ItemRefTooltip:Fire("OnUpdate",0.016)
   assert(ItemRefTooltipTextLeft2.text=="物品等级 900" and ItemRefTooltipTextLeft4.text=="+1,234 力量")
   assert(ItemRefTooltipTextLeft5.text=="使用：恢复 12,345 点生命值。")
-  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==original)
-  SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text=='由「硬漢地精」野蠻安迪裝填尾羽。')
+  A.RefreshItemTooltips();assert(ItemRefTooltipTextLeft6.text=='由「硬漢地精」野蠻安迪裝填尾羽。')
   ItemRefTooltip.pendingText=original..' Changed';ItemRefTooltip:SetHyperlink("item:32760")
   assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
   ItemRefTooltip.pendingText=original;ItemRefTooltip:SetHyperlink("item:32761")
@@ -131,30 +126,31 @@ test('client descriptions retain multiline text and native colors with quotes in
   local original='Doubt thou the stars are fire;\\r\\nDoubt that the sun doth move.'
   ItemRefTooltip.pendingText='"'..original..'"';ItemRefTooltip:SetHyperlink("item:151800")
   assert(ItemRefTooltipTextLeft6.text=='"汝不知星辰是否燃烧，\\n汝不知太阳是否运转。"')
-  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshItemTooltips()
+  assert(ItemRefTooltipTextLeft6.text=='"汝不知星辰是否燃烧，\\n汝不知太阳是否运转。"')
   for _,text in ipairs({'|cFF00AA99"For superior fighting and a healthier coat."|r',
     '"|cFF00AA99"For superior fighting and a healthier coat."|r"'}) do
     ItemRefTooltip.pendingText=text;ItemRefTooltip:SetHyperlink("item:129179")
     assert(ItemRefTooltipTextLeft6.text:find('专为激烈的战斗和健康的体魄而烹制。',1,true))
     assert(ItemRefTooltipTextLeft6.text:find('|cFF00AA99',1,true))
-    SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==text)
-    SlashCmdList.LEGIONCHINESE("on")
+    local translated=ItemRefTooltipTextLeft6.text;A.RefreshItemTooltips()
+    assert(ItemRefTooltipTextLeft6.text==translated)
   end
 `));
 
-test('keystone links and bags work when GetItem is unavailable, including enabling while already open',()=>run(`
-  SlashCmdList.LEGIONCHINESE("off")
+test('keystone links and bags work without GetItem while cleared tips lose their former identity',()=>run(`
+  LegionChineseSettings={enabled=false}
   ItemRefTooltip.noItemAPI=true;ItemRefTooltip:SetHyperlink("keystone:138019:197:12:1:2:3")
-  assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
-  SlashCmdList.LEGIONCHINESE("on")
+  assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
+  A.RefreshItemTooltips()
   assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
   GameTooltip.noItemAPI=true;GameTooltip:SetBagItem(0,1)
   assert(GameTooltipTextLeft6.text=='"'..translatedDescription..'"')
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(ItemRefTooltipTextLeft6.text=='"'..description..'"' and GameTooltipTextLeft6.text=='"'..description..'"')
+  A.RefreshItemTooltips()
+  assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"' and GameTooltipTextLeft6.text=='"'..translatedDescription..'"')
   ItemRefTooltip:Fire("OnTooltipCleared");ItemRefTooltip.itemLink=nil
-  SlashCmdList.LEGIONCHINESE("on");assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
+  ItemRefTooltipTextLeft6:SetText(description)
+  A.RefreshItemTooltips();assert(ItemRefTooltipTextLeft6.text==description)
 `));
 
 test('native Legion map-first keystone links translate their description with or without GetItem data',()=>run(`
@@ -162,9 +158,7 @@ test('native Legion map-first keystone links translate their description with or
     ItemRefTooltip.noItemAPI=noItem
     ItemRefTooltip:SetHyperlink("|cffa335ee|Hkeystone:197:12:6:3:9|h[Keystone: Halls of Valor (12)]|h|r")
     assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
-    SlashCmdList.LEGIONCHINESE("off")
-    assert(ItemRefTooltipTextLeft6.text=='"'..description..'"')
-    SlashCmdList.LEGIONCHINESE("on")
+    A.RefreshItemTooltips()
     assert(ItemRefTooltipTextLeft6.text=='"'..translatedDescription..'"')
   end
 `));
@@ -187,11 +181,11 @@ test('unknown, existing Chinese, changed descriptions, other link types and forb
 test('reused tips do not retain a former item identity or overwrite another addon or preexisting Chinese',()=>run(`
   ItemRefTooltip:SetHyperlink("item:138019")
   ItemRefTooltip.pendingText='"'..translatedDescription..'"';ItemRefTooltip:SetHyperlink("item:138019")
-  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
-  SlashCmdList.LEGIONCHINESE("on");ItemRefTooltip.pendingText=nil;ItemRefTooltip:SetHyperlink("item:138019")
+  A.RefreshItemTooltips();assert(ItemRefTooltipTextLeft6.text==ItemRefTooltip.pendingText)
+  A.RefreshItemTooltips();ItemRefTooltip.pendingText=nil;ItemRefTooltip:SetHyperlink("item:138019")
   ItemRefTooltipTextLeft6:SetText("另一个插件的文字")
-  SlashCmdList.LEGIONCHINESE("off");assert(ItemRefTooltipTextLeft6.text=="另一个插件的文字")
-  SlashCmdList.LEGIONCHINESE("on");ItemRefTooltip:SetHyperlink("item:138019")
+  A.RefreshItemTooltips();assert(ItemRefTooltipTextLeft6.text=="另一个插件的文字")
+  A.RefreshItemTooltips();ItemRefTooltip:SetHyperlink("item:138019")
   ItemRefTooltip.noItemAPI=true;ItemRefTooltip.pendingText=description
   ItemRefTooltip:SetHyperlink("spell:138019");ItemRefTooltip:Fire("OnUpdate",0.016)
   assert(ItemRefTooltipTextLeft6.text==description)

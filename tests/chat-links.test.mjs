@@ -85,9 +85,7 @@ test('Legion keystone captions use the linked dungeon and level for native and i
   local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
   assert(entry.message=="[12:34] [Global] [Sender]: LFM |cffa335ee|H"..hall.."|h[钥石：英灵殿 (12)]|h|r / |H"..court.."|h[钥石：群星庭院 (18)]|h")
   assert(#queries==0 and mapQueries[1]==197 and mapQueries[2]==210 and mapRequests==0)
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(entry.message=="[12:34] [Global] [Sender]: "..message)
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshChatItemLinks()
   assert(entry.message:find("[钥石：英灵殿 (12)]",1,true))
 `,{native:true}));
 
@@ -148,9 +146,7 @@ test('native chat shows a cached Chinese caption immediately and keeps the exact
   assert(entry.timestamp==100 and entry.r==0.25 and entry.g==0.5 and entry.b==0.75)
   assert(entry.extraData.n==5 and entry.extraData[1]==7 and entry.extraData[4]==nil and entry.extraData[5]==11)
   assert(ChatFrame1.addCalls==1 and #queries==1 and queries[1]==payload)
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(entry.message=="[12:34] [Global] [Sender]: Vendo "..link.." por 500 oro.")
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshChatItemLinks()
   assert(entry.message:find("[雷霆之怒，逐风者的祝福之剑]",1,true))
 `,{native:true}));
 
@@ -189,16 +185,14 @@ test('opening the Chinese item tooltip refreshes an earlier foreign caption even
   assert(entry.message:find("[中文物品]",1,true) and ChatFrame1.addCalls==1)
 `,{native:true}));
 
-test('existing chat history is translated at login and when enabling, including messages received while disabled',()=>run(`
+test('existing and newly received chat history translates at login despite legacy disabled settings',()=>run(`
   frames[1]:Fire("OnEvent","PLAYER_LOGIN")
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="Old |Hitem:1|h[已有资料]|h")
-  SlashCmdList.LEGIONCHINESE("off")
+  LegionChineseSettings={enabled=false}
   ChatFrame1:AddMessage("|Hitem:1|h[Nombre]|h")
-  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[Nombre]|h")
-  SlashCmdList.LEGIONCHINESE("on")
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[已有资料]|h")
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(2).message=="Old |Hitem:1|h[已有资料]|h")
-`,{native:true,beforeUI:'itemNames["item:1"]="已有资料";ChatFrame1:AddMessage("Old |Hitem:1|h[Nombre]|h");LegionChineseSettings={welcomeSeen=true}'}));
+`,{native:true,beforeUI:'itemNames["item:1"]="已有资料";ChatFrame1:AddMessage("Old |Hitem:1|h[Nombre]|h");LegionChineseSettings={enabled=false,welcomeSeen=true}'}));
 
 test('asynchronous variant lookup never substitutes a base item or changes other link types and Chinese captions',()=>run(`
   local first,second="item:1:0:0:0:0:0:100","item:1:0:0:0:0:0:200"
@@ -237,20 +231,18 @@ test('a resolved name remains Chinese while another link loads, even if its clie
   itemNames["item:1"]=nil;itemNames["item:2"]="第二件物品"
   ItemDataReceived(2,true);FlushChatTimers()
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[第一件物品]|h |Hitem:2|h[第二件物品]|h")
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message==original)
+  A.RefreshChatItemLinks()
+  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[第一件物品]|h |Hitem:2|h[第二件物品]|h")
 `,{native:true}));
 
-test('failed or unrelated item events do not rewrite history and disabling cancels queued translations',()=>run(`
+test('failed or unrelated item events do not rewrite history and legacy disabled settings cannot cancel valid retries',()=>run(`
   local original="|Hitem:1|h[Nombre]|h"
   ChatFrame1:AddMessage(original)
   ItemDataReceived(1,false);ItemDataReceived(2,true)
   assert(#timers==0)
   ItemDataReceived(1,true)
   itemNames["item:1"]="中文物品"
-  SlashCmdList.LEGIONCHINESE("off");FlushChatTimers()
-  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message==original)
-  SlashCmdList.LEGIONCHINESE("on")
+  LegionChineseSettings={enabled=false};FlushChatTimers()
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|Hitem:1|h[中文物品]|h")
 `,{native:true}));
 
@@ -296,9 +288,9 @@ test('refresh respects later edits, trimmed history, forbidden frames and unsafe
   itemNames["item:1"]="中文物品";ChatFrame1:AddMessage(message)
   local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
   entry.message="Updated by another addon"
-  SlashCmdList.LEGIONCHINESE("off")
+  A.RefreshChatItemLinks()
   assert(entry.message=="Updated by another addon")
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshChatItemLinks()
   itemNames["item:1"]=nil;ChatFrame1:AddMessage(message)
   table.remove(ChatFrame1.historyBuffer.entries,1)
   itemNames["item:1"]="新的中文";ItemDataReceived(1,true);FlushChatTimers()
@@ -312,15 +304,13 @@ test('refresh respects later edits, trimmed history, forbidden frames and unsafe
   end
 `,{native:true}));
 
-test('chat filters install once, preserve settings and affect only messages received while enabled',()=>run(`
+test('chat filters install once and translate despite legacy settings',()=>run(`
   for i=1,3 do frames[1]:Fire("OnEvent","ADDON_LOADED","OtherAddon") end
   local count=0
   for event,list in pairs(filters) do assert(#list==1);count=count+1 end
-  assert(count==18 and filters.CHAT_MSG_WHISPER and filters.CHAT_MSG_BN_WHISPER and filters.CHAT_MSG_INSTANCE_CHAT)
+  assert(count==22 and filters.CHAT_MSG_WHISPER and filters.CHAT_MSG_BN_WHISPER and filters.CHAT_MSG_INSTANCE_CHAT)
   itemNames["item:1"]="中文"
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(select(2,A.TranslateChatItemLinks(nil,nil,"|Hitem:1|h[Nombre]|h"))==nil)
-  SlashCmdList.LEGIONCHINESE("on")
+  LegionChineseSettings={enabled=false}
   assert(select(2,A.TranslateChatItemLinks(nil,nil,"|Hitem:1|h[Nombre]|h"))=="|Hitem:1|h[中文]|h")
   assert(A.TranslateChatItemLinks(nil,nil,nil)==false)
 `));
@@ -332,8 +322,7 @@ test('screenshot quest captions use shipped titles and preserve link IDs, level 
   local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
   assert(entry.message=="is this bugged? |cffffff00|Hquest:11249:70|h[阻止升华！]|h|r |Hquest:44287:110|h[致命：凋零者吉姆]|h")
   assert(#queries==0 and mapRequests==0)
-  SlashCmdList.LEGIONCHINESE("off");assert(entry.message==message)
-  SlashCmdList.LEGIONCHINESE("on");assert(entry.message:find("[阻止升华！]",1,true))
+  A.RefreshChatItemLinks();assert(entry.message:find("[阻止升华！]",1,true))
 `,{native:true,beforeUI:questRows([11249,44287])}));
 
 test('typed links query their own IDs for spells, recipes, achievements, currencies, talents and battle pets',()=>run(`
@@ -370,8 +359,7 @@ test('native unbracketed pet ability links translate without adding brackets or 
   assert(entry.message==translated)
   assert(calls==1,"both caption formats share the same lookup")
   assert(entry.timestamp==100 and entry.r==0.25 and entry.extraData.n==5 and ChatFrame1.scrollOffset==3)
-  SlashCmdList.LEGIONCHINESE("off");assert(entry.message=="[12:34] [Global] [Sender]: "..message)
-  SlashCmdList.LEGIONCHINESE("on");assert(entry.message==translated and ChatFrame1.addCalls==1)
+  A.RefreshChatItemLinks();assert(entry.message==translated and ChatFrame1.addCalls==1)
   assert(select(2,A.TranslateChatItemLinks(nil,nil,raw))=="|cff4e96f7|H"..payload.."|h撕咬|h|r")
   local before=calls
   for _,untouched in ipairs({"Bite [Bite]", "|Hplayer:Bite|hBite|h", "|Hunknown:110|hBite|h",
@@ -382,7 +370,7 @@ test('native unbracketed pet ability links translate without adding brackets or 
   assert(calls==before,"ordinary, invalid, empty and Chinese captions need no lookup")
 `,{native:true}));
 
-test('clicking an unbracketed ability retries unavailable Chinese in place and can restore the original',()=>run(`
+test('clicking an unbracketed ability retries unavailable Chinese in place and preserves the resolved caption',()=>run(`
   local payload="battlePetAbil:110:1500:300:280"
   local message="Try |cff4e96f7|H"..payload.."|hBite|h|r!"
   ChatFrame1:AddMessage(message)
@@ -394,8 +382,7 @@ test('clicking an unbracketed ability retries unavailable Chinese in place and c
   SetItemRef(payload);assert(#timers==1);FlushChatTimers()
   assert(entry.message=="Try |cff4e96f7|H"..payload.."|h撕咬技能|h|r!")
   assert(refClicks==2 and ChatFrame1.addCalls==1 and ChatFrame1.scrollOffset==3)
-  SlashCmdList.LEGIONCHINESE("off");assert(entry.message==message)
-  SlashCmdList.LEGIONCHINESE("on");assert(entry.message:find("|h撕咬技能|h",1,true))
+  A.RefreshChatItemLinks();assert(entry.message:find("|h撕咬技能|h",1,true))
 `,{native:true,beforeUI:'refClicks=0; function SetItemRef() refClicks=refClicks+1 end'}));
 
 test('Chinese captions, plain brackets, unknown types and unavailable client APIs retain the original message',()=>run(`
@@ -427,8 +414,8 @@ test('known monster emotes use Chinese templates and NPC names without translati
     D.Strings[1]=text;assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_EMOTE","%s attempts to run away in fear!","NPC"))==nil)
   end
   D.Strings[1]="%s充满恐惧地想要转身逃跑！"
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_EMOTE","%s attempts to run away in fear!","NPC"))==nil)
+  LegionChineseSettings={enabled=false}
+  assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_EMOTE","%s attempts to run away in fear!","NPC"))=="%s充满恐惧地想要转身逃跑！")
 `));
 
 
@@ -441,7 +428,7 @@ test('opening a non-item link retries its previously unavailable client name in 
   function GetQuestLink() return "|H"..payload.."|h[客户端中文任务]|h" end
   ItemRefTooltip:SetHyperlink(payload);FlushChatTimers()
   assert(entry.message=="|H"..payload.."|h[客户端中文任务]|h" and ChatFrame1.addCalls==1)
-  SlashCmdList.LEGIONCHINESE("off");assert(entry.message==message)
+  A.RefreshChatItemLinks();assert(entry.message=="|H"..payload.."|h[客户端中文任务]|h")
 `,{native:true}));
 
 test('journal and lockout dungeon captions use shipped Chinese while preserving GUID, difficulty, progress and colors',()=>run(`
@@ -456,8 +443,7 @@ test('journal and lockout dungeon captions use shipped Chinese while preserving 
   assert(entry.message==translated)
   assert(entry.timestamp==100 and entry.r==0.25 and entry.extraData.n==5 and ChatFrame1.scrollOffset==3)
   assert(#queries==0 and mapRequests==0)
-  SlashCmdList.LEGIONCHINESE("off");assert(entry.message=="[12:34] [Global] [Sender]: "..message)
-  SlashCmdList.LEGIONCHINESE("on");assert(entry.message==translated and ChatFrame1.addCalls==1)
+  A.RefreshChatItemLinks();assert(entry.message==translated and ChatFrame1.addCalls==1)
 `,{native:true,beforeUI:dungeonData()}));
 
 test('journal instances, encounters and sections use distinct client APIs and the second numeric field',()=>run(`
@@ -520,5 +506,5 @@ test('loading or clicking the journal retries pending dungeon names without repl
   SetItemRef(payload);assert(refClicks==1 and #timers==1);FlushChatTimers()
   assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message=="|H"..payload.."|h[点击后可用的副本]|h")
   assert(ChatFrame1.addCalls==2 and ChatFrame2.addCalls==1 and ChatFrame1.scrollOffset==3)
-  SlashCmdList.LEGIONCHINESE("off");assert(first.message==message)
+  A.RefreshChatItemLinks();assert(first.message=="|H"..payload.."|h[后加载的副本]|h")
 `,{native:true,beforeUI:'refClicks=0; function SetItemRef() refClicks=refClicks+1 end'}));

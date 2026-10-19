@@ -4,7 +4,7 @@ export function normalize(text) {
     .replace(/\|H[^|]*\|h(.*?)\|h/g,'$1').replace(/\|[TA].*?\|[ta]/g,'')
     .replace(/<\/?(?:html|body|p|br|h[1-6]|font|img)(?:\s[^>]*)?\s*\/?\s*>/gi,' ')
     .replace(/&nbsp;/gi,' ').replace(/&quot;/gi,'"').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&amp;/gi,'&')
-    .replace(/\$([NnCcRr])(?:\$(?![A-Za-z0-9]))?|\$[Bb]/g,(_,v)=>v?'~'+v.toLowerCase()+'~':' ')
+    .replace(/\$([NnCcRr])(?![A-Za-z])(?:\$(?![A-Za-z0-9]))?|\$[Bb]/g,(_,v)=>v?'~'+v.toLowerCase()+'~':' ')
     .replace(/[A-Z]/g,c=>c.toLowerCase()).replace(/[ \t\r\n\v\f]/g,'');
 }
 export function fingerprint(normalized) {

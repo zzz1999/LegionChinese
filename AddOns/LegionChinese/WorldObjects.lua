@@ -25,10 +25,6 @@ function A.UpdateWorldObjectTooltip(tooltip)
     if not widget then A.ClearWorldObjectTooltip();return end
     if previous and previous.widget~=widget then A.ClearWorldObjectTooltip() end
     local source=widget:GetText()
-    if not A.Enabled() then
-        if previous and source==previous.text then widget:SetText(previous.source);tooltip:Show() end
-        A.ClearWorldObjectTooltip();return
-    end
     if previous and source==previous.text then return end
     previous=nil
     if type(source)~="string" or source=="" or source:find("|",1,true) then return end

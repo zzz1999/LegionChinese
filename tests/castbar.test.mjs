@@ -34,9 +34,9 @@ test('Legion event spell ID resolves the Chinese name without confusing the cast
   spellNames[133]="火球术";spellNames[77]="另一个法术"
   StartCast(bar,{name="Fireball",text="Fireball",id=77,spellID=133})
   assert(bar.Text:GetText()=="火球术" and #spellLookups==1 and spellLookups[1]==133)
-  SlashCmdList.LEGIONCHINESE("off")
-  assert(bar.Text:GetText()=="Fireball" and bar.casting and bar.value==1 and bar.maxValue==5)
-  SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshCastBars()
+  assert(bar.Text:GetText()=="火球术" and bar.casting and bar.value==1 and bar.maxValue==5)
+  bar.Text:SetText("Fireball");A.RefreshCastBars()
   assert(bar.Text:GetText()=="火球术","same active cast can reuse its confirmed translation")
   StartCast(bar,{name="Fireball",text="Fireball",id=78,start=2000})
   assert(bar.Text:GetText()=="Fireball","a new cast must not inherit an old event's spell ID")
@@ -61,7 +61,7 @@ test('channels, pet/vehicle bars and direct native resume calls use current text
   assert(bar.Text:GetText()=="载具法术")
 `));
 
-test('existing Simplified/Traditional, unknown spells, disabled addon and other bars keep their text',()=>run(`
+test('existing Chinese, unknown spells and other bars keep their text while legacy settings are ignored',()=>run(`
   for _,text in ipairs({"火球术","採礦"}) do
     StartCast(CastingBarFrame,{name="不同的中文名称",text=text})
     assert(CastingBarFrame.Text:GetText()==text)
@@ -75,10 +75,8 @@ test('existing Simplified/Traditional, unknown spells, disabled addon and other 
   assert(CastingBarFrame.Text:GetText()=="採礦","use the available official Traditional name")
   StartCast(TargetCastBar,{name="火球术",text="Fireball"})
   assert(TargetCastBar.Text:GetText()=="Fireball","shared native handler must not extend scope")
-  SlashCmdList.LEGIONCHINESE("off")
+  LegionChineseSettings={enabled=false}
   StartCast(CastingBarFrame,{name="采矿",text="Mining"})
-  assert(CastingBarFrame.Text:GetText()=="Mining")
-  SlashCmdList.LEGIONCHINESE("on")
   assert(CastingBarFrame.Text:GetText()=="采矿")
 `));
 
@@ -109,7 +107,7 @@ test('resuming by name is bounded, hidden or third-party-decorated text stays un
   CastingBarFrame_OnEvent(bar,"PLAYER_ENTERING_WORLD")
   assert(bar.Text:GetText()=="采矿" and #spellLookups==1)
   bar.Text:SetText("Other addon: Mining (2/5)")
-  SlashCmdList.LEGIONCHINESE("off");SlashCmdList.LEGIONCHINESE("on")
+  A.RefreshCastBars()
   assert(bar.Text:GetText()=="Other addon: Mining (2/5)")
   bar.Text:SetText("Mining");bar.shown=false
   A.RefreshCastBars();assert(bar.Text:GetText()=="Mining")

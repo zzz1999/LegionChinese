@@ -126,7 +126,7 @@ local function substituteTokens(text, values)
         if not first then result[#result+1]=text:sub(pos);break end
         result[#result+1]=text:sub(pos,first-1)
         local token=text:sub(first+1,first+1):lower()
-        if values[token]~=nil then
+        if values[token]~=nil and (token=="b" or not text:sub(first+2,first+2):match("%a")) then
             result[#result+1]=values[token];pos=first+2
             -- Some sources close $N/$C/$R with a dollar. It cannot consume
             -- the start of the next token, including unsupported tokens.
@@ -234,12 +234,26 @@ local function findDynamic(index,text)
     if not conflict and not exhausted then return found end
 end
 
-function A.Find(category, text)
-    local index=D[category]
+local function findText(index, text)
     if type(text)~="string" or text=="" or A.IsChinese(text) or not index then return nil end
     local id=index[A.Fingerprint(A.Normalize(text,false))]
     if not id then id=findDynamic(index,text) end
     return id and D.Strings[id] or nil
+end
+
+function A.Find(category, text)
+    return findText(D[category],text)
+end
+
+function A.FindQuestExtra(id,field,text)
+    local quest=D.QuestExtras and D.QuestExtras[tonumber(id)]
+    return findText(quest and quest[field],text)
+end
+
+function A.FindBookPage(anchor,page,text)
+    local pages=anchor and D.BookContexts and D.BookContexts[anchor]
+    local value=findText(pages and pages[page],text)
+    return value and A.Render(value)
 end
 
 function A.Render(text)
@@ -256,7 +270,7 @@ function A.Render(text)
     return text
 end
 
-local function findObjective(original)
+local function findObjective(original,questID)
     local replacement=A.Find("Objectives",original)
     if replacement then return replacement end
     local label=original:gsub("^|c%x%x%x%x%x%x%x%x",""):gsub("|r$","")
@@ -267,6 +281,7 @@ local function findObjective(original)
         label=label:sub(1,-#completion-1);suffix=completion
     end
     replacement=A.Find("Objectives",label)
+    if not replacement then replacement=A.FindQuestExtra(questID,"AreaDescription",label) end
     if not replacement then
         local base,counter=label:match("^(.-)(%s*:%s*%d+%s*/%s*%d+%s*)$")
         if base then replacement=A.Find("Objectives",base);suffix=counter..suffix end
@@ -278,7 +293,7 @@ function A.Translate(category, original, questID, field)
     if type(original)~="string" or original=="" then return original,false end
     local replacement,suffix
     if category=="Objectives" then
-        replacement,suffix=findObjective(original)
+        replacement,suffix=findObjective(original,questID)
     elseif A.IsChinese(original) then
         return original,false
     elseif category=="Quests" then
@@ -287,8 +302,10 @@ function A.Translate(category, original, questID, field)
         if not replacement and field=="Title" then replacement=A.Find("Titles",original) end
         if not replacement and field=="CompletionLog" then replacement=A.Find("Completions",original) end
         if not replacement and (field=="Progress" or field=="Completion") then
-            replacement=A.Find("Gossip",original) or A.Find("QuestDialogue",original)
+            local dialogue=D.QuestDialogue and D.QuestDialogue[tonumber(questID)]
+            replacement=A.Find("Gossip",original) or findText(dialogue and dialogue[field],original)
         end
+        if not replacement then replacement=A.FindQuestExtra(questID,field,original) end
     else
         replacement=A.Find(category,original)
     end
@@ -354,12 +371,10 @@ function A.Apply(widget, category, questID, field, sourceText)
     return changed
 end
 
-function A.Enabled()
-    return not LegionChineseSettings or LegionChineseSettings.enabled~=false
-end
-
 function A.InitializeSettings()
     if type(LegionChineseSettings)~="table" then LegionChineseSettings={} end
-    if LegionChineseSettings.enabled==nil then LegionChineseSettings.enabled=true end
+    -- Translation runs whenever the addon is loaded. Only the welcome-window
+    -- dismissal is a preference; discard the retired translation switch.
+    LegionChineseSettings.enabled=nil
     return LegionChineseSettings
 end

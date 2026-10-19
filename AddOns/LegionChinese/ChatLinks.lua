@@ -5,7 +5,6 @@ local windowHooked=false
 local referenceHooked=false
 local eventFrame
 local chatFrames=setmetatable({}, {__mode="k"})
-local originals=setmetatable({}, {__mode="k"})
 local pending=setmetatable({}, {__mode="k"})
 local tooltipHooks=setmetatable({}, {__mode="k"})
 local queuedFrames=setmetatable({}, {__mode="k"})
@@ -19,6 +18,12 @@ local events={"SAY","YELL","WHISPER","WHISPER_INFORM","BN_WHISPER","BN_WHISPER_I
 
 local function safeChinese(text)
     return A.IsChinese(text) and not text:find("|",1,true) and not text:find("[\r\n]")
+end
+
+local function nativeOrOffline(name,category,id)
+    if safeChinese(name) then return name end
+    local names=LegionChineseDB.LinkNames and LegionChineseDB.LinkNames[category]
+    return names and names[id]
 end
 
 local function keystoneName(payload)
@@ -74,10 +79,10 @@ local function journalName(id,journalType)
         if safeChinese(name) then return name end
         return apiName(EJ_GetInstanceInfo,1,id)
     elseif journalType==1 then
-        return apiName(EJ_GetEncounterInfo,1,id)
+        return nativeOrOffline(apiName(EJ_GetEncounterInfo,1,id),"Encounter",id)
     elseif journalType==2 then
         local info=apiName(C_EncounterJournal and C_EncounterJournal.GetSectionInfo,1,id)
-        if type(info)=="table" then return info.title end
+        return nativeOrOffline(type(info)=="table" and info.title,"JournalSection",id)
     end
 end
 
@@ -86,7 +91,9 @@ end
 local function linkedName(kind,id,payload,caption,journalType)
     if kind=="item" then
         if id==138019 then return end -- A generic keystone item lacks a dungeon.
-        return apiName(GetItemInfo,1,payload),id
+        local name=apiName(GetItemInfo,1,payload)
+        if safeChinese(name) then return name,id end
+        return A.ResolveItemName and A.ResolveItemName(caption,id,payload),id
     elseif kind=="keystone" then
         if A.ParseKeystoneLink(payload) then return keystoneName(payload),"keystone" end
     elseif kind=="quest" then
@@ -102,15 +109,15 @@ local function linkedName(kind,id,payload,caption,journalType)
         if safeChinese(name) then return name end
         if A.ResolveSpellName then return A.ResolveSpellName(caption,id) end
     elseif kind=="achievement" then
-        return apiName(GetAchievementInfo,2,id)
+        return nativeOrOffline(apiName(GetAchievementInfo,2,id),"Achievement",id)
     elseif kind=="currency" then
-        return apiName(GetCurrencyInfo,1,id)
+        return nativeOrOffline(apiName(GetCurrencyInfo,1,id),"Currency",id)
     elseif kind=="talent" then
         return apiName(GetTalentInfoByID,2,id,apiName(GetActiveSpecGroup,1) or 1)
     elseif kind=="battlepet" then
-        return apiName(C_PetJournal and C_PetJournal.GetPetInfoBySpeciesID,1,id)
+        return nativeOrOffline(apiName(C_PetJournal and C_PetJournal.GetPetInfoBySpeciesID,1,id),"BattlePet",id)
     elseif kind=="battlePetAbil" then
-        return apiName(C_PetBattles and C_PetBattles.GetAbilityInfoByID,2,id)
+        return nativeOrOffline(apiName(C_PetBattles and C_PetBattles.GetAbilityInfoByID,2,id),"BattlePetAbility",id)
     elseif kind=="journal" then
         return journalName(id,journalType),"journal"
     elseif kind=="instancelock" then
@@ -167,18 +174,9 @@ end
 
 local function updateEntry(frame,entry,names)
     if type(entry)~="table" or type(entry.message)~="string" then return false end
-    local previous=originals[entry]
-    -- A different addon may have replaced this line since our last update.
-    -- Never restore a stale snapshot over its newer text.
-    local source=previous and entry.message==previous.rendered and previous.source or entry.message
-    local text,missing=source,nil
-    if A.Enabled() then
-        local changed
-        -- Retain names already resolved in this entry even if the client's
-        -- cache later evicts them while another link is still loading.
-        text,changed,missing=translate(entry.message,names)
-    end
-    originals[entry]=text~=source and {source=source,rendered=text} or nil
+    -- Translate the live entry so other addons' changes and names already
+    -- resolved before a client-cache eviction both remain intact.
+    local text,_,missing=translate(entry.message,names)
     pending[entry]=missing and {frame=frame,items=missing} or nil
     requestMaps(missing)
     if text~=entry.message then entry.message=text;return true end
@@ -199,7 +197,7 @@ local function refreshFrame(frame,names,readyItems)
         if retry and updateEntry(frame,entry,names) then changed=true end
     end
     -- Enumerate the live buffer so removed/replaced entries are never touched.
-    -- A cache event retries only matching pending lines; login and toggling
+    -- A cache event retries only matching pending lines; login and refreshes
     -- still refresh all lines. Preserve metadata, order, fade and scroll state.
     if changed then frame:MarkDisplayDirty() end
 end
@@ -211,7 +209,7 @@ function A.RefreshChatItemLinks(target)
 end
 
 local function queueWaiting(itemID)
-    if not A.Enabled() or not itemID then return end
+    if not itemID then return end
     for _,record in pairs(pending) do
         if record.items[itemID] then
             local ready=queuedFrames[record.frame]
@@ -224,7 +222,6 @@ local function queueWaiting(itemID)
     local function flush()
         local frames=queuedFrames
         queuedFrames=setmetatable({}, {__mode="k"});refreshQueued=false
-        if not A.Enabled() then return end
         -- Share exact-variant lookups across windows in this batch only. Never
         -- persist cache misses: another item or journal event can resolve them.
         local names={}
@@ -234,7 +231,7 @@ local function queueWaiting(itemID)
 end
 
 local function tooltipReady(tooltip)
-    if not A.Enabled() or not next(pending) or not tooltip.GetItem
+    if not next(pending) or not tooltip.GetItem
         or (tooltip.IsForbidden and tooltip:IsForbidden()) then return end
     local _,link=tooltip:GetItem()
     if type(link)=="string" then
@@ -270,9 +267,8 @@ local function installFrame(frame)
 end
 
 function A.TranslateChatItemLinks(frame,_,message,...)
-    if not A.Enabled() then return false end
     -- Native windows are handled after formatting, so we retain the original
-    -- caption for /lcn off and can update that same line after a cache miss.
+    -- message entry and can update that same line after a cache miss.
     local methods=frame and chatFrames[frame]
     if methods and methods.AddMessage==frame.AddMessage and hasHistory(frame) then return false end
     local translated,changed,missing=translate(message,{})
@@ -281,20 +277,28 @@ function A.TranslateChatItemLinks(frame,_,message,...)
     return false
 end
 
+local monsterEvents={CHAT_MSG_MONSTER_EMOTE=true,CHAT_MSG_RAID_BOSS_EMOTE=true,CHAT_MSG_MONSTER_SAY=true,
+    CHAT_MSG_MONSTER_YELL=true,CHAT_MSG_MONSTER_WHISPER=true,CHAT_MSG_RAID_BOSS_WHISPER=true}
 function A.TranslateMonsterMessage(_,event,message,author,...)
-    if not A.Enabled() or (event~="CHAT_MSG_MONSTER_EMOTE" and event~="CHAT_MSG_RAID_BOSS_EMOTE")
+    if not monsterEvents[event]
         or type(message)~="string" then return false end
+    local emote=event=="CHAT_MSG_MONSTER_EMOTE" or event=="CHAT_MSG_RAID_BOSS_EMOTE"
     local translated,changed=A.Translate("Gossip",message)
-    if not changed and type(author)=="string" and author~="" and message:sub(1,#author)==author then
+    if emote and not changed and type(author)=="string" and author~="" and message:sub(1,#author)==author then
         -- Some servers send the expanded name instead of the native %s token.
         translated,changed=A.Translate("Gossip","%s"..message:sub(#author+1))
     end
     if not changed then return false end
     -- ChatFrame formats monster emotes with the speaker twice. Permit only
     -- those string slots, never unexpected format directives from data.
-    local format=translated:gsub("%%%%","")
-    local count;format,count=format:gsub("%%s","")
-    if count>2 or format:find("%%") then return false end
+    if emote then
+        local format=translated:gsub("%%%%","")
+        local count;format,count=format:gsub("%%s","")
+        if count>2 or format:find("%%") then return false end
+    elseif translated:find("%s",1,true) then
+        -- Ordinary NPC speech is not passed through ChatFrame's emote formatter.
+        return false
+    end
     local name=A.Find("NPCNames",author)
     if not safeChinese(name) then name=author end
     return false,translated,name,...
@@ -303,8 +307,7 @@ end
 function A.InstallChatItemLinks()
     if not installed and type(ChatFrame_AddMessageEventFilter)=="function" then
         for _,event in ipairs(events) do ChatFrame_AddMessageEventFilter("CHAT_MSG_"..event,A.TranslateChatItemLinks) end
-        ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_EMOTE",A.TranslateMonsterMessage)
-        ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID_BOSS_EMOTE",A.TranslateMonsterMessage)
+        for event in pairs(monsterEvents) do ChatFrame_AddMessageEventFilter(event,A.TranslateMonsterMessage) end
         installed=true
     end
     if not eventFrame and type(CreateFrame)=="function" then

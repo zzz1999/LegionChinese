@@ -2,7 +2,7 @@
 ## Title: LegionChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 1.2.12
+## Version: 1.2.13
 ## X-Curse-Project-ID: 1750538
 ## SavedVariables: LegionChineseSettings
 
@@ -37,6 +37,7 @@ Data\Strings_13.lua
 Data\Strings_14.lua
 Data\Strings_15.lua
 Data\Strings_16.lua
+Data\Strings_17.lua
 Data\Gossip_01.lua
 Data\Gossip_02.lua
 Data\Gossip_03.lua
@@ -92,6 +93,8 @@ Data\NPCNames_01.lua
 Data\NPCNames_02.lua
 Data\NPCNames_03.lua
 Data\QuestDialogue_01.lua
+Data\QuestExtras_01.lua
+Data\BookContexts_01.lua
 Data\NameStrings_01.lua
 Data\NameStrings_02.lua
 Data\NameStrings_03.lua
@@ -111,10 +114,38 @@ Data\WorldObjects_01.lua
 Data\ItemDescriptions_01.lua
 Data\ItemDescriptions_02.lua
 Data\DungeonNames.lua
+Data\ItemNames_01.lua
+Data\ItemNames_02.lua
+Data\ItemNames_03.lua
+Data\ItemNames_04.lua
+Data\ItemNames_05.lua
+Data\ItemNames_06.lua
+Data\ItemNames_07.lua
+Data\ItemNames_08.lua
+Data\SpellTexts_01.lua
+Data\SpellTexts_02.lua
+Data\SpellTexts_03.lua
+Data\SpellTexts_04.lua
+Data\SpellTexts_05.lua
+Data\SpellTexts_06.lua
+Data\SpellTexts_07.lua
+Data\NPCTitles_01.lua
+Data\NPCTitles_02.lua
+Data\NPCLabelNames_01.lua
+Data\NPCLabelNames_02.lua
+Data\NPCLabelNames_03.lua
+Data\NPCLabelNames_04.lua
+Data\NPCLabelNames_05.lua
+Data\NPCLabelNames_06.lua
+Data\NPCLabelNames_07.lua
+Data\NPCLabelNames_08.lua
+Data\ExtraLinkNames_01.lua
+Data\ExtraLinkNames_02.lua
 Core.lua
 ClientNames.lua
 WorldObjects.lua
 ItemTooltips.lua
+ExtraTooltips.lua
 ChatLinks.lua
 Welcome.lua
 UI.lua

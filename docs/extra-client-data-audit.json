@@ -1,0 +1,314 @@
+{
+  "version": "1.2.13",
+  "sources": [
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "82c0cb28dafaffbe3818543a110a36bea75455da63be238ca413bc0336e18a19"
+    },
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "92476e65bf08296e243ea6c3df14252a0d0949f8eaaa6814c9349200b092e779"
+    },
+    {
+      "table": "ItemSparse",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "ItemSparse-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/ItemSparse/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "226fe05ca2f75322f9b38a41e4bc85341c0279bc723615c45a24523e8018acb0"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "943e4118b4cdc59f1447dfc05ebfadcb31cab6627fce2cd7ef517a4b8b014335"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "214f755429b8eb2fd9bfec924cc2139091f751279d879a96129c772854c1802f"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "6049932f5630afad9caa313244a9f6d0ca4cb99489c81e3f1d2cfc5929e5dfdb"
+    },
+    {
+      "table": "Achievement",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "Achievement-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Achievement/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "a7b855a2ec04cad1e7ba35fcbaf272c55ea6d655cb8f6f483774e9efa06059bc",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "Achievement",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "Achievement-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Achievement/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "b8c8f664e924090751680e941382b8f65570218c8e13364b98c30b392652dfa5",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "Achievement",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "Achievement-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Achievement/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "45451c4dfcd715a1b47b33590a4bd3081f5d3aec6dc798becefd78c87670b927",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "CurrencyTypes",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "CurrencyTypes-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/CurrencyTypes/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "a25f52770bb8d825d1a73887eaddb12a974728a98e3dca4dada6608b262f83f6",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "CurrencyTypes",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "CurrencyTypes-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/CurrencyTypes/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "73001c2da77585ba6e5f8ca59f90320d02ccbd1326f4e160f0eab898f9eb6720",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "CurrencyTypes",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "CurrencyTypes-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/CurrencyTypes/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "3051a75a4e20ba869ec73ab503f4bdc69a91302f4ab0046a259168757451be0b",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetAbility",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "BattlePetAbility-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/BattlePetAbility/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "7932561826bfc68d81edb22dc9536e61d6d7d324ea1ed50996250cb5cc53379c",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetAbility",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "BattlePetAbility-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/BattlePetAbility/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "eb79e5ed0b574dcd7c880084298cf330664ce917a1e5db5df3931f1212af05b8",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetAbility",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "BattlePetAbility-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/BattlePetAbility/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "bfa9517e37b0538caadbe65ef0232f397542edf7b61f6c0ab6637aaae834293d",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounter",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "JournalEncounter-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/JournalEncounter/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "130b41934a23f0ca0fca4b36a2ad9b84ef8b99151aea2d26f6fbbfc67d57c627",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounter",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "JournalEncounter-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/JournalEncounter/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "72f06b19bed7729f541a5fb3180fdfb4d475720c3e116111940ace7496ef2d26",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounter",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "JournalEncounter-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/JournalEncounter/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "66ee571a2e03eaa41ef20e4c50c67b4255e425b85fd34fc13d2707b703f8255f",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounterSection",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "JournalEncounterSection-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/JournalEncounterSection/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "a55d6a7226f2b76095e827148c2737c0083bd788cc81246e4ac305edd3b933a7",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounterSection",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "JournalEncounterSection-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/JournalEncounterSection/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "a6ade7d5e3ad4eb93a74d430cfacf5edeea6d411d21a4fbe3706055e123996c9",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "JournalEncounterSection",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "JournalEncounterSection-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/JournalEncounterSection/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "69cf1f9fa344e7663d5a6720f3cc97b96a3af77e2eeed638ec8306bdaab2771d",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetSpecies",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "file": "BattlePetSpecies-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/BattlePetSpecies/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "e98d7cc0c3c8c0a78fa2fec58d9af4412dba1ee4f709082e27a16911175deca6",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetSpecies",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "file": "BattlePetSpecies-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/BattlePetSpecies/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "024257e288ab347d2c5f820440ea5e93befd0da0a013fe8d8159f0d49df1f8dd",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "BattlePetSpecies",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "file": "BattlePetSpecies-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/BattlePetSpecies/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "0fca6a07f6a7808b4058f02bb58b2f14563bc58048125b46cc9e4d57aec07ae5",
+      "provenance": "client-db2-via-wago"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "e9acd9ebbeb2b6fbfb8613e5045db6e276bdeab8a86bdcb57d02cda71fa7502f"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "1171eafa54330abb5848bede8553c62f976800d443cfe5c8968bb89643d70a99"
+    },
+    {
+      "table": "Creature",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Creature-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Creature/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "7a2ddd6f9c0bbc9a91b893a243880d47d1b307a2d778ad6333ff9fb56ef5e146"
+    }
+  ],
+  "counts": {
+    "items": {
+      "ids": 103910,
+      "zhCN": 103832,
+      "zhTW": 78
+    },
+    "spells": {
+      "Description": {
+        "ids": 32592,
+        "zhCN": 32334,
+        "zhTW": 258,
+        "deferred": 45185
+      },
+      "Aura": {
+        "ids": 18609,
+        "zhCN": 18534,
+        "zhTW": 75,
+        "deferred": 23060
+      },
+      "Rank": {
+        "ids": 3037,
+        "zhCN": 3021,
+        "zhTW": 16,
+        "deferred": 16
+      }
+    },
+    "npcs": {
+      "titles": 16947,
+      "names": 95761,
+      "zhCN": 107404,
+      "zhTW": 5312
+    },
+    "links": {
+      "Achievement": {
+        "ids": 5655,
+        "zhCN": 5654,
+        "zhTW": 1
+      },
+      "Currency": {
+        "ids": 98,
+        "zhCN": 96,
+        "zhTW": 2
+      },
+      "BattlePetAbility": {
+        "ids": 1013,
+        "zhCN": 1007,
+        "zhTW": 6
+      },
+      "Encounter": {
+        "ids": 755,
+        "zhCN": 755,
+        "zhTW": 0
+      },
+      "JournalSection": {
+        "ids": 9783,
+        "zhCN": 9782,
+        "zhTW": 1
+      },
+      "BattlePet": {
+        "ids": 1422,
+        "zhCN": 1421,
+        "zhTW": 1
+      }
+    }
+  },
+  "deferred": {}
+}

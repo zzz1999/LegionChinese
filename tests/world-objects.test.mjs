@@ -97,23 +97,23 @@ test('world tooltips exclude units, pets, item and spell tips, UI owners, hidden
   end
 `));
 
-test('commands restore only the active object tip and reuse never leaks an older translation',()=>run(`
+test('refreshes preserve the active translation and reused tips never inherit an older object identity',()=>run(`
   WorldHover("Death Gate")
-  SlashCmdList.LEGIONCHINESE("off");assert(GameTooltipTextLeft1.text=="Death Gate")
-  GameTooltip:Fire("OnUpdate",0.016);assert(GameTooltipTextLeft1.text=="Death Gate")
-  SlashCmdList.LEGIONCHINESE("on");assert(GameTooltipTextLeft1.text=="死亡之门")
+  LegionChineseSettings={enabled=false};A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="死亡之门")
+  GameTooltip:Fire("OnUpdate",0.016);assert(GameTooltipTextLeft1.text=="死亡之门")
+  A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="死亡之门")
   GameTooltip:Hide();WorldHover("死亡之门")
-  SlashCmdList.LEGIONCHINESE("off");assert(GameTooltipTextLeft1.text=="死亡之门")
-  SlashCmdList.LEGIONCHINESE("on");WorldHover("Death Gate")
+  A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="死亡之门")
+  A.RefreshWorldObjectTooltip();WorldHover("Death Gate")
   -- A recycled unit tooltip must not be restored to the object's English name.
   GameTooltip:Fire("OnTooltipCleared");GameTooltip.unitName="死亡之门";GameTooltip.unit="target"
-  SlashCmdList.LEGIONCHINESE("off");assert(GameTooltipTextLeft1.text=="死亡之门")
-  SlashCmdList.LEGIONCHINESE("on");WorldHover("Death Gate")
+  A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="死亡之门")
+  A.RefreshWorldObjectTooltip();WorldHover("Death Gate")
   GameTooltipTextLeft1:SetText("Other addon text")
-  SlashCmdList.LEGIONCHINESE("off");assert(GameTooltipTextLeft1.text=="Other addon text")
-  SlashCmdList.LEGIONCHINESE("on");WorldHover("Death Gate")
+  A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="Other addon text")
+  A.RefreshWorldObjectTooltip();WorldHover("Death Gate")
   GameTooltipTextLeft1=Widget("死亡之门")
-  SlashCmdList.LEGIONCHINESE("off");assert(GameTooltipTextLeft1.text=="死亡之门","replaced native label")
+  A.RefreshWorldObjectTooltip();assert(GameTooltipTextLeft1.text=="死亡之门","replaced native label")
 `));
 
 test('world tooltip hooks install on late load only once and the English client uses the native Chinese font',()=>run(`

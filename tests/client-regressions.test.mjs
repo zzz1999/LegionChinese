@@ -12,9 +12,9 @@ const bookText='Welcome to the Scourge. Now that you have entered your true serv
 
 test('Shang Xi screenshot dialogue translates with a Chinese player name through native progress and reward handlers',()=>{
   const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
-  const index=readLines('QuestDialogue').filter(line=>line.startsWith('D.QuestDialogue['));
-  assert.equal(index.length,4);
-  const ids=new Set(index.map(line=>line.match(/=(\d+)$/)[1]));
+  const index=readLines('QuestDialogue').filter(line=>/^D\.QuestDialogue\[(29406|29524)\]=/.test(line));
+  assert.equal(index.length,2);
+  const ids=new Set(index.flatMap(line=>[...line.matchAll(/\]=(\d+)/g)].map(m=>m[1])));
   const strings=readLines('Strings').filter(line=>ids.has(line.match(/^D\.Strings\[(\d+)\]=/)?.[1]));
   const quests=readLines('Quests').filter(line=>/^D\.Quests\[(29406|29524)\]=/.test(line));
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
@@ -41,7 +41,7 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
       end
     `);
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
-    for(const quest of snapshot.quests)for(const [field,record] of Object.entries(quest.fields)){
+    for(const quest of snapshot.quests.filter(q=>[29406,29524].includes(q.id)))for(const [field,record] of Object.entries(quest.fields)){
       const reward=field==='Completion',widget=reward?'QuestInfoRewardText':'QuestProgressText';
       const refresh=reward?'QuestInfo_Display()':'QuestFrameProgressPanel:Fire("OnShow")';
       const variable=reward?'rewardBody':'progressText';
@@ -59,9 +59,9 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
           assert(${widget}.fontChanges==0,"native Chinese font")
           assert(${reward?'QuestInfoTitleHeader':'QuestProgressTitleText'}.text==rewardTitle,"Chinese title stays unchanged")
           LegionChineseSettings={enabled=false};${refresh}
-          assert(${widget}.text==original,"disabled addon preserves original")
-          LegionChineseSettings.enabled=true;${refresh}
-          assert(${widget}.text==expected,"reopening after enabling translates again")
+          assert(${widget}.text==expected,"legacy disabled settings must not stop translation")
+          LegionChinese.InitializeSettings();${refresh}
+          assert(${widget}.text==expected and LegionChineseSettings.enabled==nil,"retired preference is removed")
           ${variable}=original.." A different server ending.";${refresh}
           assert(${widget}.text==${variable},"modified server prose must remain unchanged")
           assert(LegionChinese.Translate("Quests",original,999999,"Description")==original,"not a journal description")
@@ -72,6 +72,61 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
         end
       `);
     }
+  }finally{lua.lua_close(L);}
+});
+
+test('every shipped batch dialogue uses its quest and stage, with Traditional fallback and original-text guards',()=>{
+  const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
+  const audit=JSON.parse(fs.readFileSync(new URL('../docs/reviewed-quest-dialogue-audit.json',import.meta.url),'utf8'));
+  const index=readLines('QuestDialogue').filter(line=>line.startsWith('D.QuestDialogue['));
+  const ids=new Set(index.flatMap(line=>[...line.matchAll(/\]=(\d+)/g)].map(m=>m[1])));
+  const strings=readLines('Strings').filter(line=>ids.has(line.match(/^D\.Strings\[(\d+)\]=/)?.[1]));
+  const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
+  const execute=source=>{
+    const status=lauxlib.luaL_dostring(L,to_luastring(source));
+    assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
+  };
+  try{
+    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(`local D=LegionChineseDB\n${[...index,...strings].join('\n')}`);
+    execute(`
+      function UnitName() return "包括" end
+      function UnitClass() return "武僧","MONK" end
+      function UnitRace() return "熊猫人","Pandaren" end
+      function UnitSex() return 3 end
+    `);
+    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+    const selected=audit.candidates.filter(r=>r.selected);
+    assert.equal(selected.length,52);
+    for(const candidate of selected){
+      const record=snapshot.quests.find(q=>q.id===candidate.id).fields[candidate.field];
+      execute(`
+        local A,D=LegionChinese,LegionChineseDB
+        local original=A.Render(${luaString(record.english)})
+        local expected=A.Render(${luaString(record.locales[candidate.locale].text)})
+        local translated,changed=A.Translate("Quests",original,${candidate.id},${luaString(candidate.field)})
+        assert(changed and translated==expected,"batch ${candidate.id}:${candidate.field}:${candidate.locale}")
+        assert(A.Translate("Quests",original,999999,${luaString(candidate.field)})==original,"unrelated ID")
+        assert(A.Translate("Quests",original,${candidate.id},"Description")==original,"unrelated field")
+        local modified=original.." Changed on this server."
+        assert(A.Translate("Quests",modified,${candidate.id},${luaString(candidate.field)})==modified,"changed original")
+        for _,chinese in ipairs({"原本已有中文。","原本已有繁體中文。"}) do
+          assert(A.Translate("Quests",chinese,${candidate.id},${luaString(candidate.field)})==chinese,"existing Chinese")
+        end
+        D.Quests[${candidate.id}]={${candidate.field}="已有的优先译文。"}
+        assert(A.Translate("Quests",original,${candidate.id},${luaString(candidate.field)})=="已有的优先译文。","existing source wins")
+        D.Quests[${candidate.id}]=nil
+      `);
+    }
+    // A legacy phrase that also appears in another quest must remain scoped.
+    const progress=snapshot.quests.find(q=>q.id===26153).fields.Progress;
+    execute(`
+      local A,D=LegionChinese,LegionChineseDB
+      local original=A.Render(${luaString(progress.english)})
+      local translated,changed=A.Translate("Quests",original,26153,"Progress")
+      assert(changed and translated~=original,"known progress text")
+      assert(A.Translate("Quests",original,26153,"Completion")==original,"wrong quest stage")
+    `);
   }finally{lua.lua_close(L);}
 });
 
@@ -131,8 +186,7 @@ test('Much to Learn journal description and objectives translate for all eight q
       journalDescription="Fresh to your training, your first task is simple: Speak to Master Shang Xi."
       journalObjectives="Speak to Master Shang Xi."
       LegionChineseSettings={enabled=false};QuestInfo_Display()
-      assert(QuestInfoDescriptionText.text==journalDescription and QuestInfoObjectivesText.text==journalObjectives)
-      LegionChineseSettings.enabled=true;QuestInfo_Display()
+      assert(QuestInfoDescriptionText.text==LegionChineseDB.Quests[journalID].Description)
       assert(QuestInfoObjectivesText.text=="与尚喜师父交谈。")
       journalID=99999;journalTitle="Unknown quest";QuestInfo_Display()
       assert(QuestInfoDescriptionText.text==journalDescription and QuestInfoObjectivesText.text==journalObjectives)
@@ -169,7 +223,7 @@ test('reported death knight book and quest progress translate through XML-bound 
       assert(QuestProgressText.text=="你不想一直徒步行走，对吧?","reported quest progress")
       LegionChineseSettings={enabled=false}
       QuestFrameProgressPanel:Fire("OnShow");ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
-      assert(QuestProgressText.text==progressText and ItemTextPageText.text==bookText)
+      assert(QuestProgressText.text=="你不想一直徒步行走，对吧?" and LegionChinese.IsChinese(ItemTextPageText.text))
     `);
   } finally {lua.lua_close(L);}
 });
@@ -221,9 +275,9 @@ test('Blingtron daily reward body translates after the native reward population 
       local text=LegionChinese.Render(LegionChineseDB.Quests[40753].Completion)
       assert(text=="我的功能是发放礼物，根据我的观察显示，你的功能是接收礼物。\\n\\n我们可以进行一次互惠互利的交易吗？","Blingtron 6000 paragraphs")
       questID=34774;rewardBody=original;LegionChineseSettings={enabled=false};QuestInfo_Display()
-      assert(QuestInfoRewardText.text==original,"disabled addon preserves native reward")
-      LegionChineseSettings.enabled=true;QuestInfo_Display()
-      assert(QuestInfoRewardText.text==translated,"reopening after enabling translates again")
+      assert(QuestInfoRewardText.text==translated,"legacy disabled settings do not stop reward translation")
+      LegionChinese.InitializeSettings();QuestInfo_Display()
+      assert(QuestInfoRewardText.text==translated and LegionChineseSettings.enabled==nil)
     `);
   }finally{lua.lua_close(L);}
 });

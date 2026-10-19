@@ -118,6 +118,6 @@ test('book signatures keep their underscores while matching player-name and gend
     assert(A.Normalize("X:___Ann",true)=="x:___~n~")`);
 });
 
-test('UI hooks respect Chinese fields, task switching, books with multiple pages, and the disabled setting',()=>{
+test('UI hooks respect Chinese fields, task switching and book pages while ignoring legacy disabled settings',()=>{
   runLua(fs.readFileSync(new URL('./ui-cases.lua',import.meta.url),'utf8'),true);
 });

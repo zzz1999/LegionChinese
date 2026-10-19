@@ -1,0 +1,156 @@
+[
+  {
+    "id": 29406,
+    "field": "Progress",
+    "source": "legion-world",
+    "english": "The training targets are just down the hill. Come back to me once you're finished.",
+    "note": "Retained from the v1.2.12 Shang Xi review: legacy progress is empty; the complete Legion progress text and both build-18414 locales describe the same training targets and return instruction."
+  },
+  {
+    "id": 29524,
+    "field": "Progress",
+    "source": "legion-world",
+    "english": "There is a time for meditation and contemplation, and there is a time for action. Diving the balance between the two is one of the greatest wisdoms we seek.",
+    "note": "Retained from the v1.2.12 review and IMG_1905 screenshot: the Legion progress and build-18414 locales discuss balancing meditation and action; legacy progress is empty. Keep the server's exact Diving spelling."
+  },
+  {
+    "id": 29408,
+    "field": "Progress",
+    "source": "legion-world",
+    "english": "There will come time when you must trust your instincts and simply act.",
+    "note": "Legacy progress is empty. Full quest context matches 7.3.5; Legion progress and the build-18414 zhTW field both say there are moments to trust one's instincts and act. Exact original only, no inferred alternate wording."
+  },
+  {
+    "id": 26177,
+    "field": "Progress",
+    "source": "pandaria-world",
+    "english": "You must have fast hands!  I can't believe you caught all those crabs so quickly! ",
+    "note": "Only the crab objective changes from 10 to 6; both full dialogue fields contain no quantity and still describe catching the crabs for the King.",
+    "context": {
+      "identity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Catch 6 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      },
+      "legacyIdentity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Collect 10 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      }
+    }
+  },
+  {
+    "id": 26177,
+    "field": "Completion",
+    "source": "pandaria-world",
+    "english": "These crabs look great!  I will clean these up and make sure that the King hears about your contribution.  Thanks! ",
+    "note": "Only the crab objective changes from 10 to 6; both full dialogue fields contain no quantity and still describe catching the crabs for the King.",
+    "context": {
+      "identity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Catch 6 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      },
+      "legacyIdentity": {
+        "title": "Feeling Crabby?",
+        "objectives": "Collect 10 Canal Crabs. Deliver them to Robby Flay in Stormwind City.",
+        "description": "Fresh crab legs have always been one of the King's favorite foods.  We have had good luck catching fresh crabs in the canals over the past few weeks.  Do you think you can lend me a hand and catch a few of them for me?  Be sure to catch them alive, they are no good to me dead, the King requires the freshest catch we can muster."
+      }
+    }
+  },
+  {
+    "id": 26488,
+    "field": "Progress",
+    "source": "pandaria-world",
+    "english": "Were you able to find my locket? ",
+    "note": "Only its/it's punctuation differs in the quest description; both complete locket dialogue fields and objectives retain the same meaning.",
+    "context": {
+      "identity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know it's a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      },
+      "legacyIdentity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know its a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      }
+    }
+  },
+  {
+    "id": 26488,
+    "field": "Completion",
+    "source": "pandaria-world",
+    "english": "You found it!  I can't believe it was down there all those years!  You have no idea how much this means to me $n. ",
+    "note": "Only its/it's punctuation differs in the quest description; both complete locket dialogue fields and objectives retain the same meaning.",
+    "context": {
+      "identity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know it's a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      },
+      "legacyIdentity": {
+        "title": "Big Gulp",
+        "objectives": "Fish up a Royal Monkfish from the moat in the Valley of Heroes district of Stormwind.  Once you catch a monkfish, fillet it and check if it swallowed the locket.",
+        "description": "Arnold and I used to relax down at the moat in the Valley of Heroes.  One day, I lost my locket in the lake and I have never been able to find it.  Rumor has it that huge royal monkfish live in that moat and that they eat anything!  I know its a long shot, but do you think you could catch a few monkfish and look for my locket?$b$bPlease let me know right away if you find it, it's very precious to me."
+      }
+    }
+  },
+  {
+    "id": 29412,
+    "field": "Progress",
+    "source": "tdb-2018",
+    "english": "Did you find all of my balloons, $gmister:miss;?",
+    "note": "Only fair/Faire spelling changes in quest context. Use the current full gender-aware progress text and the captured zhTW matching gender branches.",
+    "context": {
+      "identity": {
+        "title": "Blown Away",
+        "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+        "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon Faire. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+      },
+      "legacyIdentity": {
+        "title": "Blown Away",
+        "objectives": "Vin wants you to collect 5 Windswept Balloons from Stormwind.",
+        "description": "Please, $gmister:miss;, you just gotta help me!$b$bFather bought me a bunch of balloons from the Darkmoon fair. They're magical, you know, and never lose their floatiness!$b$bThere's just one thing...$b$bA gust of wind blew them out of my hands. They're scattered all over Stormwind!$b$bI'd chase after them myself, but this city's so big I'd get lost for sure.$b$bCan you find them for me before they float away?$b$bPlease?"
+      }
+    }
+  },
+  {
+    "id": 30027,
+    "field": "Progress",
+    "source": "legion-world",
+    "english": "Picking up your first weapon is also a symbolic gesture. Every $c that leaves these training grounds must be ready to take up arms in defense of their fellow pandaren.",
+    "note": "Staff changes to fist weapons in the quest objective/description. The reviewed progress and reward are weapon-generic and mention neither weapon type nor quantity.",
+    "context": {
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a pair of Trainee's Handwraps.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a pair of fist weapons from one of the weapon racks below, bring them to me, and show me that you know how to equip them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Staff.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a staff from one of the weapon racks below, bring it to me, and show me that you know how to equip it properly."
+      }
+    }
+  },
+  {
+    "id": 30027,
+    "field": "Completion",
+    "source": "pandaria-world",
+    "english": "A fine weapon. It should suit your needs well.$B$BNow let's put it to use.",
+    "note": "Staff changes to fist weapons in the quest objective/description. The reviewed progress and reward are weapon-generic and mention neither weapon type nor quantity.",
+    "context": {
+      "identity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a pair of Trainee's Handwraps.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a pair of fist weapons from one of the weapon racks below, bring them to me, and show me that you know how to equip them properly."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Iron Bough",
+        "objectives": "Retrieve and equip a Trainee's Staff.",
+        "description": "First, you will need a weapon suited to your talents. Retrieve a staff from one of the weapon racks below, bring it to me, and show me that you know how to equip it properly."
+      }
+    }
+  }
+]

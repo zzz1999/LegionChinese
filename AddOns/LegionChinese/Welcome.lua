@@ -100,7 +100,7 @@ function A.ShowWelcome()
         UISpecialFrames[#UISpecialFrames+1]="LegionChineseWelcomeFrame"
         window.content={heading,intro,credits,download,feedback,hint}
     end
-    window.status:SetText((A.Enabled() and "汉化已开启" or "汉化已关闭").."。/lcn on 开启，/lcn off 关闭。\n使用 /lcn about 可再次打开此窗口。")
+    window.status:SetText("插件加载后自动汉化，无需额外开启。\n使用 /lcn about 可再次打开此窗口。")
     local headerHeight=math.max(80,window.content[1]:GetStringHeight())
     window.header:SetHeight(headerHeight)
     local height=44+headerHeight+14+14+14+12+24+14+12+24+6+14+18+26+22

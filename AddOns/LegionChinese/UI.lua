@@ -5,7 +5,7 @@ local installedScripts = {}
 local installedMethods = {}
 local function hook(name, callback)
     if not installed[name] and type(_G[name])=="function" then
-        hooksecurefunc(name,function(...) if A.Enabled() then callback(...) end end)
+        hooksecurefunc(name,callback)
         installed[name]=true
     end
 end
@@ -15,7 +15,7 @@ local function hookMethod(object, name, callback)
     local methods=installedMethods[object]
     if not methods then methods={};installedMethods[object]=methods end
     if methods[name] then return end
-    hooksecurefunc(object,name,function(...) if A.Enabled() then callback(...) end end)
+    hooksecurefunc(object,name,callback)
     methods[name]=true
 end
 
@@ -24,7 +24,7 @@ local function hookScript(widget, event, callback)
     local events=installedScripts[widget]
     if not events then events={};installedScripts[widget]=events end
     if events[event] then return end
-    widget:HookScript(event,function(...) if A.Enabled() then callback(...) end end)
+    widget:HookScript(event,callback)
     events[event]=true
 end
 
@@ -44,7 +44,7 @@ function A.UpdateQuestInfo()
     A.Apply(QuestInfoObjectivesText,"Quests",id,"Objectives")
     A.Apply(QuestInfoRewardText,"Quests",id,"Completion")
     if QuestInfoObjectivesFrame and QuestInfoObjectivesFrame.Objectives then
-        for _,widget in ipairs(QuestInfoObjectivesFrame.Objectives) do A.Apply(widget,"Objectives") end
+        for _,widget in ipairs(QuestInfoObjectivesFrame.Objectives) do A.Apply(widget,"Objectives",id) end
     end
 end
 
@@ -110,7 +110,7 @@ function A.UpdateQuestList()
             if completion and completion~="" and original==completion then
                 updated=A.Apply(objective.Text,"Quests",objective.questID,"CompletionLog",completion)
             else
-                updated=A.Apply(objective.Text,"Objectives")
+                updated=A.Apply(objective.Text,"Objectives",objective.questID)
             end
             if updated then
                 local height=objective.Text:GetStringHeight()
@@ -141,7 +141,7 @@ function A.UpdateTrackerObjective(module, block, key, text, _, useFullHeight, _,
     local oldHeight=line:GetHeight()
     local changed
     if type(key)=="number" then
-        changed=A.Apply(line.Text,"Objectives")
+        changed=A.Apply(line.Text,"Objectives",block.id)
     elseif key=="QuestComplete" then
         local index=GetQuestLogIndexByID and GetQuestLogIndexByID(block.id)
         local completion=index and index>0 and GetQuestLogCompletionText and GetQuestLogCompletionText(index)
@@ -179,7 +179,7 @@ end
 function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
     -- Only the original player/controlled-pet bars. A post-hook of the shared
     -- handler also receives target, focus and third-party bars.
-    if not A.Enabled() or not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame) then return end
+    if not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame) then return end
     if event and not castEvents[event] then return end
     if event and event~="PLAYER_ENTERING_WORLD" and unit~=bar.unit then return end
     local name,source,startTime,currentID,currentSpellID=currentCast(bar)
@@ -219,22 +219,28 @@ end
 
 function A.RefreshCastBars()
     for _,key in ipairs({"CastingBarFrame","PetCastingBarFrame"}) do
-        local bar=_G[key]
-        if A.Enabled() then
-            A.UpdateCastBar(bar)
-        elseif bar then
-            local previous=castTranslations[bar]
-            local name,source=currentCast(bar)
-            if previous and previous.unit==bar.unit and previous.name==name and previous.source==source
-                and bar.Text:GetText()==previous.translated then bar.Text:SetText(source) end
-        end
+        A.UpdateCastBar(_G[key])
     end
 end
 
+local bookAnchor
 function A.UpdateBook(_,event)
+    if event=="ITEM_TEXT_BEGIN" or event=="ITEM_TEXT_CLOSED" then bookAnchor=nil;return end
     if event~="ITEM_TEXT_READY" or not ItemTextGetText or not ItemTextPageText then return end
     local original=ItemTextGetText()
+    local page=ItemTextGetPage and ItemTextGetPage()
+    if page==1 then
+        bookAnchor=nil
+        for _,dynamic in ipairs({false,true}) do
+            local key=A.Fingerprint(A.Normalize(original,dynamic))
+            if LegionChineseDB.BookContexts[key] then bookAnchor=key;break end
+        end
+    end
     local translated,changed=A.Translate("Books",original)
+    if not changed and bookAnchor then
+        translated=A.FindBookPage(bookAnchor,page,original)
+        changed=translated~=nil
+    end
     if not changed then return end
     local creator=ItemTextGetCreator and ItemTextGetCreator()
     if creator then translated=translated.."\n\n"..(ITEM_TEXT_FROM or "作者").."\n"..creator.."\n" end
@@ -249,6 +255,29 @@ function A.UpdateBook(_,event)
     end
 end
 
+function A.UpdateQuestPortrait(parent,_,text,name)
+    local id,stage
+    if parent==QuestFrame then
+        id=GetQuestID and GetQuestID()
+        stage=QuestFrameRewardPanel and QuestFrameRewardPanel:IsShown() and "PortraitTurnIn" or "PortraitGiver"
+    else
+        if GetQuestLogTitle and GetQuestLogSelection then local _,_,_,_,_,_,_,selected=GetQuestLogTitle(GetQuestLogSelection());id=selected end
+        stage="PortraitGiver"
+    end
+    A.Apply(QuestNPCModelNameText,"Quests",id,stage.."Name",name)
+    if A.Apply(QuestNPCModelText,"Quests",id,stage.."Text",text) and QuestFrame_UpdatePortraitText then
+        QuestFrame_UpdatePortraitText(QuestNPCModelText:GetText())
+    end
+end
+
+function A.UpdateGossipConfirmation(which)
+    if which~="GOSSIP_CONFIRM" then return end
+    for i=1,STATICPOPUP_NUMDIALOGS or 4 do
+        local popup=_G["StaticPopup"..i]
+        if popup and popup.which==which and popup:IsShown() then A.Apply(popup.text or _G["StaticPopup"..i.."Text"],"Gossip") end
+    end
+end
+
 local function install()
     hook("QuestInfo_Display",A.UpdateQuestInfo)
     -- Legion XML stores these handlers before addons load. Hook the actual
@@ -258,6 +287,8 @@ local function install()
     -- QUEST_LOG_UPDATE also refreshes the greeting by calling this global.
     hook("QuestFrameGreetingPanel_OnShow",A.UpdateGreeting)
     hook("GossipFrameUpdate",A.UpdateGossip)
+    hook("QuestFrame_ShowQuestPortrait",A.UpdateQuestPortrait)
+    hook("StaticPopup_Show",A.UpdateGossipConfirmation)
     hookScript(ItemTextFrame,"OnEvent",A.UpdateBook)
     hook("QuestLogQuests_Update",A.UpdateQuestList)
     hookMethod(QUEST_TRACKER_MODULE,"SetBlockHeader",A.UpdateTrackerHeader)
@@ -276,6 +307,7 @@ local function install()
         hookScript(GameTooltip,"OnTooltipCleared",A.ClearWorldObjectTooltip)
     end
     if A.InstallItemTooltips then A.InstallItemTooltips() end
+    if A.InstallExtraTooltips then A.InstallExtraTooltips() end
     if A.InstallChatItemLinks then A.InstallChatItemLinks() end
 end
 local frame=CreateFrame("Frame")
@@ -300,27 +332,9 @@ SLASH_LEGIONCHINESE1="/lcn"
 SlashCmdList.LEGIONCHINESE=function(command)
     A.InitializeSettings()
     command=(command or ""):lower():gsub("%s","")
-    if command=="off" or command=="关" then
-        LegionChineseSettings.enabled=false
-        if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
-        if A.RefreshItemTooltips then A.RefreshItemTooltips() end
-        A.RefreshTracker()
-        A.RefreshCastBars()
-        if A.RefreshPetNames then A.RefreshPetNames() end
-        if A.RefreshChatItemLinks then A.RefreshChatItemLinks() end
-        print("LegionChinese：已关闭，重新打开窗口后生效。")
-    elseif command=="on" or command=="开" then
-        LegionChineseSettings.enabled=true
-        if A.RefreshWorldObjectTooltip then A.RefreshWorldObjectTooltip() end
-        if A.RefreshItemTooltips then A.RefreshItemTooltips() end
-        A.RefreshTracker()
-        A.RefreshCastBars()
-        if A.RefreshPetNames then A.RefreshPetNames() end
-        if A.RefreshChatItemLinks then A.RefreshChatItemLinks() end
-        print("LegionChinese：已开启，已有中文保持不变，缺失译文保留原文。")
-    elseif command=="about" or command=="关于" then
+    if command=="about" or command=="关于" then
         A.ShowWelcome()
     else
-        print("LegionChinese："..(A.Enabled() and "已开启" or "已关闭").."。/lcn on 开启，/lcn off 关闭，/lcn about 关于与反馈。")
+        print("LegionChinese：插件加载后自动汉化。/lcn about 查看介绍与反馈。")
     end
 end

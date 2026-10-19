@@ -1,32 +1,32 @@
 {
-  "version": "1.2.12",
+  "version": "1.2.13",
   "counts": {
     "quests": 22703,
     "questFields": {
       "Title": 21322,
       "Objectives": 18977,
-      "Description": 19448,
+      "Description": 19412,
       "CompletionLog": 2151,
-      "Completion": 8730,
+      "Completion": 8728,
       "Progress": 6240
     },
-    "npcBroadcastRecords": 125061,
+    "npcBroadcastRecords": 124975,
     "broadcastChineseRecords": 125929,
     "broadcastConflictingRecords": 11,
     "bookPages": 1704,
     "bookPageCandidates": 1830,
     "bookPagesWithoutSource": 0,
     "questTraditionalFields": {
+      "Description": 194,
       "Objectives": 204,
       "Title": 227,
-      "Description": 193,
       "CompletionLog": 75,
       "Completion": 295,
       "Progress": 71
     },
     "questDialogueSources": {
       "buildMarked": 427,
-      "communityUnverified": 14543
+      "communityUnverified": 14541
     },
     "broadcastLocales": {
       "zhCN": 125929,
@@ -58,28 +58,33 @@
     "gossipOptions": 4288,
     "gossipOptionsWithoutSource": 58,
     "questSupplement": {
-      "fields": 13736,
+      "fields": 13729,
       "quests": 4431,
       "byField": {
         "Title": 4016,
         "Objectives": 3970,
-        "Description": 3994,
+        "Description": 3987,
         "CompletionLog": 1311,
         "Progress": 128,
         "Completion": 317
       },
       "byLocale": {
-        "zhCN": 12780,
+        "zhCN": 12773,
         "zhTW": 956
       }
     },
-    "npcReferencedBroadcastRecords": 24224,
+    "npcReferencedBroadcastRecords": 24217,
+    "bookContexts": {
+      "contexts": 55,
+      "pages": 51,
+      "fingerprints": 55
+    },
     "Gossip": {
-      "fingerprints": 1002509,
+      "fingerprints": 1001350,
       "ambiguousSkipped": 13788,
       "locales": {
-        "zhCN": 994222,
-        "zhTW": 8287
+        "zhCN": 993004,
+        "zhTW": 8346
       }
     },
     "Books": {
@@ -123,12 +128,42 @@
       }
     },
     "QuestDialogue": {
-      "fingerprints": 4,
+      "quests": 36,
+      "fields": 52,
+      "byField": {
+        "Progress": 20,
+        "Completion": 32
+      },
+      "byLocale": {
+        "zhCN": 15,
+        "zhTW": 37
+      },
+      "fingerprints": 53,
       "ambiguousSkipped": 0,
       "locales": {
-        "zhCN": 4,
-        "zhTW": 0
+        "zhCN": 15,
+        "zhTW": 38
       }
+    },
+    "questExtras": {
+      "quests": 4579,
+      "fields": 5928,
+      "byField": {
+        "AreaDescription": 722,
+        "PortraitGiverText": 1005,
+        "PortraitGiverName": 1235,
+        "Title": 1938,
+        "PortraitTurnInText": 149,
+        "PortraitTurnInName": 179,
+        "CompletionLog": 51,
+        "Description": 121,
+        "Objectives": 528
+      },
+      "byLocale": {
+        "zhCN": 5505,
+        "zhTW": 423
+      },
+      "deferred": 45
     },
     "clientNames": {
       "Spell": {
@@ -219,6 +254,71 @@
         "ids": 150,
         "locales": {
           "zhCN": 149,
+          "zhTW": 1
+        }
+      }
+    },
+    "extraClient": {
+      "items": {
+        "ids": 103910,
+        "zhCN": 103832,
+        "zhTW": 78
+      },
+      "spells": {
+        "Description": {
+          "ids": 32592,
+          "zhCN": 32334,
+          "zhTW": 258,
+          "deferred": 45185
+        },
+        "Aura": {
+          "ids": 18609,
+          "zhCN": 18534,
+          "zhTW": 75,
+          "deferred": 23060
+        },
+        "Rank": {
+          "ids": 3037,
+          "zhCN": 3021,
+          "zhTW": 16,
+          "deferred": 16
+        }
+      },
+      "npcs": {
+        "titles": 16947,
+        "names": 95761,
+        "zhCN": 107404,
+        "zhTW": 5312
+      },
+      "links": {
+        "Achievement": {
+          "ids": 5655,
+          "zhCN": 5654,
+          "zhTW": 1
+        },
+        "Currency": {
+          "ids": 98,
+          "zhCN": 96,
+          "zhTW": 2
+        },
+        "BattlePetAbility": {
+          "ids": 1013,
+          "zhCN": 1007,
+          "zhTW": 6
+        },
+        "Encounter": {
+          "ids": 755,
+          "zhCN": 755,
+          "zhTW": 0
+        },
+        "JournalSection": {
+          "ids": 9783,
+          "zhCN": 9782,
+          "zhTW": 1
+        },
+        "BattlePet": {
+          "ids": 1422,
+          "zhCN": 1421,
           "zhTW": 1
         }
       }
@@ -852,6 +952,7 @@
     "Data\\Strings_14.lua",
     "Data\\Strings_15.lua",
     "Data\\Strings_16.lua",
+    "Data\\Strings_17.lua",
     "Data\\Gossip_01.lua",
     "Data\\Gossip_02.lua",
     "Data\\Gossip_03.lua",
@@ -907,6 +1008,8 @@
     "Data\\NPCNames_02.lua",
     "Data\\NPCNames_03.lua",
     "Data\\QuestDialogue_01.lua",
+    "Data\\QuestExtras_01.lua",
+    "Data\\BookContexts_01.lua",
     "Data\\NameStrings_01.lua",
     "Data\\NameStrings_02.lua",
     "Data\\NameStrings_03.lua",
@@ -925,6 +1028,33 @@
     "Data\\WorldObjects_01.lua",
     "Data\\ItemDescriptions_01.lua",
     "Data\\ItemDescriptions_02.lua",
-    "Data\\DungeonNames.lua"
+    "Data\\DungeonNames.lua",
+    "Data\\ItemNames_01.lua",
+    "Data\\ItemNames_02.lua",
+    "Data\\ItemNames_03.lua",
+    "Data\\ItemNames_04.lua",
+    "Data\\ItemNames_05.lua",
+    "Data\\ItemNames_06.lua",
+    "Data\\ItemNames_07.lua",
+    "Data\\ItemNames_08.lua",
+    "Data\\SpellTexts_01.lua",
+    "Data\\SpellTexts_02.lua",
+    "Data\\SpellTexts_03.lua",
+    "Data\\SpellTexts_04.lua",
+    "Data\\SpellTexts_05.lua",
+    "Data\\SpellTexts_06.lua",
+    "Data\\SpellTexts_07.lua",
+    "Data\\NPCTitles_01.lua",
+    "Data\\NPCTitles_02.lua",
+    "Data\\NPCLabelNames_01.lua",
+    "Data\\NPCLabelNames_02.lua",
+    "Data\\NPCLabelNames_03.lua",
+    "Data\\NPCLabelNames_04.lua",
+    "Data\\NPCLabelNames_05.lua",
+    "Data\\NPCLabelNames_06.lua",
+    "Data\\NPCLabelNames_07.lua",
+    "Data\\NPCLabelNames_08.lua",
+    "Data\\ExtraLinkNames_01.lua",
+    "Data\\ExtraLinkNames_02.lua"
   ]
 }

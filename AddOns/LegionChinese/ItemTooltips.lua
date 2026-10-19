@@ -62,23 +62,25 @@ function A.UpdateItemTooltip(tooltip)
     if link then id=linkItemID(link)
     elseif not item and state then id=state.fallbackID end
     local entries=id and D.ItemDescriptions[id]
-    if not entries then A.ClearItemTooltip(tooltip);return end
+    local itemName=id and D.ItemNames and D.ItemNames[id]
+    if not entries and not itemName then A.ClearItemTooltip(tooltip);return end
     if not state or state.itemID~=id then
         state={itemID=id,fallbackID=state and state.fallbackID,lines={}};states[tooltip]=state
     end
-    local enabled,changed=A.Enabled(),false
-    for i=2,tooltip:NumLines() do
+    local changed=false
+    for i=itemName and 1 or 2,entries and tooltip:NumLines() or 1 do
         local widget=_G[name.."TextLeft"..i]
         if widget and not (widget.IsForbidden and widget:IsForbidden()) then
             local source=widget:GetText()
             local cached=state.lines[i]
             if not cached or cached.widget~=widget or (source~=cached.source and source~=cached.text) then
-                cached={widget=widget,source=source,text=translateLine(source,entries)};state.lines[i]=cached
+                local translated
+                if i==1 and A.ResolveItemName then translated=A.ResolveItemName(source,id,link and (link:match("|H([^|]+)|h") or link))
+                elseif entries then translated=translateLine(source,entries) end
+                cached={widget=widget,source=source,text=translated};state.lines[i]=cached
             end
-            if enabled and cached.text and source~=cached.text then
+            if cached.text and source~=cached.text then
                 A.SetFont(widget);widget:SetText(cached.text);changed=true
-            elseif not enabled and cached.text and source==cached.text then
-                widget:SetText(cached.source);changed=true
             end
         end
     end
@@ -86,7 +88,6 @@ function A.UpdateItemTooltip(tooltip)
 end
 
 local function pollItemTooltip(tooltip,elapsed)
-    if not A.Enabled() then return end
     local remaining=(pollDelay[tooltip] or 0)-(elapsed or 0)
     if remaining>0.000001 then pollDelay[tooltip]=remaining;return end
     pollDelay[tooltip]=0.1
@@ -95,9 +96,9 @@ end
 
 local function setFallback(tooltip,id)
     local state=states[tooltip]
-    if id and D.ItemDescriptions[id] then
+    if id and (D.ItemDescriptions[id] or D.ItemNames and D.ItemNames[id]) then
         -- OnTooltipSetItem can already have translated the lines inside the
-        -- native setter. Retain those originals for /lcn off.
+        -- native setter. Keep its line cache until the tooltip changes.
         if not state or state.itemID~=id then state={lines={}} end
         state.fallbackID=id;states[tooltip]=state
     else states[tooltip]=nil end
@@ -111,8 +112,7 @@ function A.InstallItemTooltips()
         if tooltip and not installed[tooltip] and tooltip.HookScript
             and not (tooltip.IsForbidden and tooltip:IsForbidden()) then
             installed[tooltip]=true
-            -- Keep cleanup active while disabled: these native frames are reused
-            -- for units, spells and links, even when our translator is off.
+            -- These native frames are reused for units, spells and links.
             tooltip:HookScript("OnTooltipCleared",A.ClearItemTooltip)
             tooltip:HookScript("OnHide",A.ClearItemTooltip)
             tooltip:HookScript("OnTooltipSetUnit",A.ClearItemTooltip)
@@ -121,7 +121,7 @@ function A.InstallItemTooltips()
             tooltip:HookScript("OnShow",A.UpdateItemTooltip)
             -- Native show/item/setter events translate immediately. Polling
             -- catches later line changes, at most ten times per second instead
-            -- of traversing every line each rendered frame. Off disables polling.
+            -- of traversing every line each rendered frame.
             tooltip:HookScript("OnUpdate",pollItemTooltip)
             if tooltip.SetHyperlink then
                 hooksecurefunc(tooltip,"SetHyperlink",function(self,link) setFallback(self,linkItemID(link)) end)
