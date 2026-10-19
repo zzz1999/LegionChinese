@@ -26,12 +26,17 @@ function compareVersions(left, right) {
   return a[0] - b[0] || a[1] - b[1] || a[2] - b[2];
 }
 
-async function isSuperseded({github, context, tags, latest}) {
-  if (!latest) return false;
+function releasedRef(release, tags) {
   // target_commitish can be a moving branch. Compare the released tag's commit
   // instead, including when it is not in the earlier tag-list snapshot.
-  const ref = tags.find(tag => tag.name === latest.tag_name)?.commit.sha ?? latest.tag_name;
+  const ref = tags.find(tag => tag.name === release.tag_name)?.commit.sha ?? release.tag_name;
   if (!ref) throw new Error('Cannot verify release ancestry: Latest has no tag.');
+  return ref;
+}
+
+async function isSuperseded({github, context, tags, latest}) {
+  if (!latest) return false;
+  const ref = releasedRef(latest, tags);
   const {data} = await github.rest.repos.compareCommitsWithBasehead({
     ...context.repo, basehead: `${ref}...${context.sha}`, per_page: 1, page: 1,
   });
@@ -86,17 +91,18 @@ export function notesForVersion(changelog, version) {
   return section ? section.slice(section.indexOf('\n') + 1).trim() : '';
 }
 
-async function describeChanges({github, context, version, changelog, previous}) {
+async function describeChanges({github, context, version, changelog, previous, tags}) {
   const curated = notesForVersion(changelog, version);
   if (curated) return curated;
   const api = github.rest.repos;
   let commits;
   if (previous) {
+    const ref = releasedRef(previous, tags);
     commits = [];
     let status;
     for (let page = 1; ; page++) {
       const {data} = await api.compareCommitsWithBasehead({
-        ...context.repo, basehead: `${previous.target_commitish}...${context.sha}`, per_page: 100, page,
+        ...context.repo, basehead: `${ref}...${context.sha}`, per_page: 100, page,
       });
       status ??= data.status;
       commits.push(...data.commits);
@@ -148,7 +154,7 @@ export async function publishRelease({github, context, version, assets, changelo
   const previous = await optionalRelease(() => api.getLatestRelease(repo));
   if (await isSuperseded({github, context, tags, latest: previous})) return null;
   if (!release) {
-    const notes = await describeChanges({github, context, version, changelog, previous});
+    const notes = await describeChanges({github, context, version, changelog, previous, tags});
     const base = `${context.serverUrl}/${repo.owner}/${repo.repo}`;
     release = (await api.createRelease({
       ...repo,

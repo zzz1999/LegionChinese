@@ -122,10 +122,15 @@ local function translate(message,names)
     if type(message)~="string" or not message:find("|H",1,true) then return message,false end
     local changed=false
     local missing
-    local translated=message:gsub("()(|H(%a+:[^|]+)|h)%[([^|]-)%](|h)",function(position,opening,payload,caption,closing)
-        local original=opening.."["..caption.."]"..closing
+    local translated=message:gsub("()(|H(%a+:[^|]+)|h)([^|]-)(|h)",function(position,opening,payload,display,closing)
+        local original=opening..display..closing
+        -- Native battle-pet ability links have no square brackets. Resolve the
+        -- semantic payload in either format and retain the sender's wrapper.
+        local caption=display:match("^%[(.*)%]$")
+        local bracketed=caption~=nil
+        caption=caption or display
         local kind,id,journalType=parseLink(payload)
-        if not kind or A.IsChinese(caption)
+        if not kind or caption=="" or A.IsChinese(caption)
             or (position>1 and message:sub(position-1,position-1)=="|") then return original end
         -- Query the entire item variant: suffixes and bonuses must not be
         -- discarded by looking up only its base ID. This is the client's cache,
@@ -148,7 +153,7 @@ local function translate(message,names)
         end
         if not safeChinese(name) then return original end
         changed=true
-        return opening.."["..name.."]"..closing
+        return opening..(bracketed and "["..name.."]" or name)..closing
     end)
     return translated,changed,missing
 end

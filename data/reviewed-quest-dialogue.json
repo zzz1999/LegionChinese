@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "targetBuild": 26972,
+  "provenance": "reviewed-legacy-dialogue",
+  "sources": [
+    {
+      "id": "pandaria-locales",
+      "file": "2026_08_06_16_world_quest_locale_import.sql",
+      "url": "https://raw.githubusercontent.com/alexkulya/pandaria_5.4.8/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/old/world/2026_08_06_16_world_quest_locale_import.sql",
+      "sha256": "723085dca6fcbc11b7130aff535af9f2534262884a42725335a1861c09e3a85f",
+      "patch": "5.4.8",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "pandaria-world",
+      "file": "world_04_03_2023.sql",
+      "url": "https://raw.githubusercontent.com/alexkulya/pandaria_5.4.8/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/base/world_04_03_2023.zip",
+      "archiveSha256": "16c9a3e63f8aeaab9259524aefda5184f089455d7cbfb7a3810516ec4f257c7f",
+      "sha256": "e1be72be7b5b6b3effd3426906c32b43e47b03d562b74520ab8ce7a070702542",
+      "patch": "5.4.8",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "legion-world",
+      "file": "legion_world.sql",
+      "url": "https://raw.githubusercontent.com/zitengzela/LegionCore-7.3.5V2/80ad17a234fd4ed462bc9a23e401b70f86f15a0d/sql/base/Legion_Proyect-DB.7z",
+      "archiveSha256": "6bb034ec09e736deb814d4f511b19d5910722318ed171db5789c4934784a58a9",
+      "sha256": "d1faf4efeca0cbd2940964e72e7e519f90e304d6778c110d0cc951c79a06f27e",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
+    }
+  ],
+  "quests": [
+    {
+      "id": 29406,
+      "identity": {
+        "title": "The Lesson of the Sandy Fist",
+        "objectives": "Destroy 5 Training Targets.",
+        "description": "I'd like to observe you putting your new weapon to use, my young student. This will aid me in determining what degree of training will be best suited to your talents.$B$BWe have many training targets in the training grounds below. Practice your attacks upon them, and return to me once you're feeling comfortable with your new weapon."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of the Sandy Fist",
+        "objectives": "Destroy 5 Training Targets.",
+        "description": "I'd like to observe you putting your new weapon to use, my young student. This will aid me in determining what degree of training will be best suited to your talents.$B$BWe have many training targets in the training grounds below. Practice your attacks upon them, and return to me once you're feeling comfortable with your new weapon."
+      },
+      "fields": {
+        "Progress": {
+          "english": "The training targets are just down the hill. Come back to me once you're finished.",
+          "englishBuild": 26972,
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhCN": {
+              "text": "训练沙袋就在山坡下。练习完成后就来找我吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "訓練目標就在小丘下面。完成後便即刻回來見我。",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Not bad, $n. You may indeed have chosen the proper path.$B$BGood. Let us continue.",
+          "englishBuild": 26972,
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "干得不错，$n。你的确选择了正确的道路。$B$B很好。我们继续吧。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "不壞，$n。或許你終究選擇了正確的道路。$B$B很好。讓我們繼續下去。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 29524,
+      "identity": {
+        "title": "The Lesson of Stifled Pride",
+        "objectives": "Defeat 6 Huojin Trainees or Tushui Trainees.",
+        "description": "Facing a living opponent is a very different thing from the stationary targets in the yard. Living opponents strike back. There is the very real fear of failure, and sometimes, even death.$B$BYou must have the courage to overcome those fears.$B$BChallenge the other trainees within the temple or down the steps below, and defeat them."
+      },
+      "legacyIdentity": {
+        "title": "The Lesson of Stifled Pride",
+        "objectives": "Defeat 6 Huojin Trainees or Tushui Trainees.",
+        "description": "Facing a living opponent is a very different thing from the stationary targets in the yard. Living opponents strike back. There is the very real fear of failure, and sometimes, even death.$B$BYou must have the courage to overcome those fears.$B$BChallenge the other trainees within the temple or down the steps below, and defeat them."
+      },
+      "fields": {
+        "Progress": {
+          "english": "There is a time for meditation and contemplation, and there is a time for action. Diving the balance between the two is one of the greatest wisdoms we seek.",
+          "englishBuild": 26972,
+          "column": "quest_request_items_locale.CompletionText",
+          "locales": {
+            "zhCN": {
+              "text": "有时，我们需要沉思冥想；有时，我们则需要果断行动。两者间的平衡发展就是我们所追求的最高境界。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "有時需要冥想沉思，有時也要奮起而行。兩者之間的平衡取捨是我們所追求的大智慧之一。",
+              "build": 18414
+            }
+          }
+        },
+        "Completion": {
+          "english": "Intriguing, my young pupil.$B$BMost of the other trainees have been here for quite some time, but you are able to match them even within this first hour.$B$BThis speaks well of you, but there are yet other lessons I would see you learn.",
+          "englishBuild": 26972,
+          "column": "quest_offer_reward_locale.RewardText",
+          "locales": {
+            "zhCN": {
+              "text": "很不错，我年轻的徒弟。$B$B这里的其他徒弟大多经过了长时间的训练，而你接受训练的时间还不到一小时，却能够击败他们。$B$B这值得赞扬，但我还有其他东西要教给你。",
+              "build": 18414
+            },
+            "zhTW": {
+              "text": "真令人印象深刻!$B$B其他受訓弟子大多在此待了一段時間，但你剛來一個時辰便勝過了他們。$B$B你表現得很好，但是我仍需要你進行其他的修行。",
+              "build": 18414
+            }
+          }
+        }
+      }
+    }
+  ]
+}

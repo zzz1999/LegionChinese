@@ -1,0 +1,124 @@
+{
+  "source": "data/reviewed-quest-dialogue.json",
+  "sha256": "272f48369ba03bb30b87e3daf5471bde04f1e2ab30016174aec04695a55e0243",
+  "provenance": "reviewed-legacy-dialogue",
+  "sources": [
+    {
+      "id": "pandaria-locales",
+      "file": "2026_08_06_16_world_quest_locale_import.sql",
+      "url": "https://raw.githubusercontent.com/alexkulya/pandaria_5.4.8/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/old/world/2026_08_06_16_world_quest_locale_import.sql",
+      "sha256": "723085dca6fcbc11b7130aff535af9f2534262884a42725335a1861c09e3a85f",
+      "patch": "5.4.8",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "pandaria-world",
+      "file": "world_04_03_2023.sql",
+      "url": "https://raw.githubusercontent.com/alexkulya/pandaria_5.4.8/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/base/world_04_03_2023.zip",
+      "archiveSha256": "16c9a3e63f8aeaab9259524aefda5184f089455d7cbfb7a3810516ec4f257c7f",
+      "sha256": "e1be72be7b5b6b3effd3426906c32b43e47b03d562b74520ab8ce7a070702542",
+      "patch": "5.4.8",
+      "license": "GPL-2.0"
+    },
+    {
+      "id": "legion-world",
+      "file": "legion_world.sql",
+      "url": "https://raw.githubusercontent.com/zitengzela/LegionCore-7.3.5V2/80ad17a234fd4ed462bc9a23e401b70f86f15a0d/sql/base/Legion_Proyect-DB.7z",
+      "archiveSha256": "6bb034ec09e736deb814d4f511b19d5910722318ed171db5789c4934784a58a9",
+      "sha256": "d1faf4efeca0cbd2940964e72e7e519f90e304d6778c110d0cc951c79a06f27e",
+      "patch": "7.3.5",
+      "license": "GPL-2.0"
+    }
+  ],
+  "candidates": [
+    {
+      "id": 29406,
+      "field": "Progress",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "fingerprints": [
+        "32ec5d0cef75371b:68"
+      ],
+      "selected": true
+    },
+    {
+      "id": 29406,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "fingerprints": [
+        "32ec5d0cef75371b:68"
+      ],
+      "selected": false
+    },
+    {
+      "id": 29406,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "fingerprints": [
+        "fad7dafd3d1b4538:66"
+      ],
+      "selected": true
+    },
+    {
+      "id": 29406,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "fingerprints": [
+        "fad7dafd3d1b4538:66"
+      ],
+      "selected": false
+    },
+    {
+      "id": 29524,
+      "field": "Progress",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "fingerprints": [
+        "b7f0ee1cbec5ac8b:128"
+      ],
+      "selected": true
+    },
+    {
+      "id": 29524,
+      "field": "Progress",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_request_items_locale.CompletionText",
+      "fingerprints": [
+        "b7f0ee1cbec5ac8b:128"
+      ],
+      "selected": false
+    },
+    {
+      "id": 29524,
+      "field": "Completion",
+      "locale": "zhCN",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "fingerprints": [
+        "6a078ecbc2d9a710:187"
+      ],
+      "selected": true
+    },
+    {
+      "id": 29524,
+      "field": "Completion",
+      "locale": "zhTW",
+      "build": 18414,
+      "column": "quest_offer_reward_locale.RewardText",
+      "fingerprints": [
+        "6a078ecbc2d9a710:187"
+      ],
+      "selected": false
+    }
+  ],
+  "rejected": 0
+}

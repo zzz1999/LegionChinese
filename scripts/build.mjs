@@ -8,7 +8,7 @@ import {LEGION_BUILD,localeOf,idOf,menuKey,broadcastText,selectBroadcast,compati
 import {CHINESE_LOCALES,usableChinese,chooseChineseFields,ChineseTextIndex} from './fallback.mjs';
 import {buildClientNames} from './client-names.mjs';
 import {buildWorldObjectNames} from './world-objects.mjs';
-import {capturedQuestTables,capturedQuestDialogue} from './quest-dialogue.mjs';
+import {capturedQuestTables,capturedQuestDialogue,importReviewedDialogue} from './quest-dialogue.mjs';
 import {buildItemDescriptions} from './item-descriptions.mjs';
 import {mergeQuestSupplement} from './quest-supplement.mjs';
 import {buildDungeonNames} from './dungeon-names.mjs';
@@ -179,6 +179,14 @@ for(const record of supplement.records){
 }
 counts.questSupplement={fields:supplement.fields,quests:supplement.quests,byField:supplement.byField,byLocale:supplement.byLocale};
 counts.quests=questData.size;
+const dialogueSpec=manifest.reviewedQuestDialogue;
+const dialogueBytes=fs.readFileSync(path.join(root,dialogueSpec.file));
+if(crypto.createHash('sha256').update(dialogueBytes).digest('hex')!==dialogueSpec.sha256)throw Error('Reviewed dialogue checksum mismatch');
+const dialogueSnapshot=JSON.parse(dialogueBytes),reviewedDialogue=new ChineseTextIndex();
+const dialogueAudit={source:dialogueSpec.file,sha256:dialogueSpec.sha256,provenance:dialogueSnapshot.provenance,
+  sources:dialogueSnapshot.sources,...importReviewedDialogue(dialogueSnapshot,legionQuests,reviewedDialogue)};
+reviewedDialogue.finish();
+for(const candidate of dialogueAudit.candidates)candidate.selected=candidate.fingerprints.every(key=>reviewedDialogue.localeFor(key)===candidate.locale);
 titles.finish();
 for(const row of legacyQuestLocales){
   const id=idOf(row),locale=localeOf(row),legacy=legacyQuests.get(id);
@@ -280,9 +288,9 @@ function writeChunks(name,rows,make){
 }
 writeChunks('Quests',[...questData].sort((a,b)=>+a[0]-b[0]),([id,r])=>'D.Quests['+id+']={'+Object.entries(r).map(([k,v])=>k+'='+luaString(v)).join(',')+'}');
 const strings=[],stringIDs=new Map();
-for(const index of [gossip,books,titles,objectives,completions,npcNames])for(const text of index.entries.values())if(!stringIDs.has(text)){stringIDs.set(text,strings.length+1);strings.push(text);}
+for(const index of [gossip,books,titles,objectives,completions,npcNames,reviewedDialogue])for(const text of index.entries.values())if(!stringIDs.has(text)){stringIDs.set(text,strings.length+1);strings.push(text);}
 writeChunks('Strings',strings.map((s,i)=>[i+1,s]),([id,s])=>'D.Strings['+id+']='+luaString(s));
-for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:titles,Objectives:objectives,Completions:completions,NPCNames:npcNames})){
+for(const [name,index] of Object.entries({Gossip:gossip,Books:books,Titles:titles,Objectives:objectives,Completions:completions,NPCNames:npcNames,QuestDialogue:reviewedDialogue})){
   writeChunks(name,[...index.entries].sort((a,b)=>a[0].localeCompare(b[0],'en')),([key,s])=>'D.'+name+'['+luaString(key)+']='+stringIDs.get(s));
   counts[name]={fingerprints:index.entries.size,ambiguousSkipped:index.ambiguous.size,locales:index.localeCounts};
 }
@@ -299,10 +307,11 @@ const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.
-for(const file of fs.readdirSync(output))if(/^(Quests|Strings|Gossip|Books|Titles|Objectives|Completions|NPCNames)_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));
+for(const file of fs.readdirSync(output))if(/^(Quests|Strings|Gossip|Books|Titles|Objectives|Completions|NPCNames|QuestDialogue)_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));
 const audit={version,counts,sources:sourceAudit,generatedFiles:generated};
 fs.mkdirSync(path.join(root,'docs'),{recursive:true});
 fs.writeFileSync(path.join(root,'docs','quest-supplement-audit.json'),JSON.stringify(supplement,null,2)+'\n');
+fs.writeFileSync(path.join(root,'docs','reviewed-quest-dialogue-audit.json'),JSON.stringify(dialogueAudit,null,2)+'\n');
 fs.writeFileSync(path.join(root,'docs','data-audit.json'),JSON.stringify(audit,null,2)+'\n');
 fs.writeFileSync(path.join(root,'docs','book-provenance.json'),JSON.stringify(bookPageAudit.sort((a,b)=>a.id-b.id||a.locale.localeCompare(b.locale)),null,2)+'\n');
 fs.writeFileSync(path.join(root,'docs','completion-provenance.json'),JSON.stringify(completionAudit.map(row=>({...row,

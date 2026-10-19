@@ -1,5 +1,5 @@
 {
-  "version": "1.2.11",
+  "version": "1.2.12",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -120,6 +120,14 @@
       "locales": {
         "zhCN": 59614,
         "zhTW": 5187
+      }
+    },
+    "QuestDialogue": {
+      "fingerprints": 4,
+      "ambiguousSkipped": 0,
+      "locales": {
+        "zhCN": 4,
+        "zhTW": 0
       }
     },
     "clientNames": {
@@ -898,6 +906,7 @@
     "Data\\NPCNames_01.lua",
     "Data\\NPCNames_02.lua",
     "Data\\NPCNames_03.lua",
+    "Data\\QuestDialogue_01.lua",
     "Data\\NameStrings_01.lua",
     "Data\\NameStrings_02.lua",
     "Data\\NameStrings_03.lua",

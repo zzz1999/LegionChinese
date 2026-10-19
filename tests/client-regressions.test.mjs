@@ -10,6 +10,71 @@ const files=fs.readdirSync(data);
 const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
 const bookText='Welcome to the Scourge. Now that you have entered your true service, you may find immense relief in your liberation from various mortal inconveniences. No bothersome sleeping to take up your time anymore, nor any great need for shelter from the elements, and you are even free from the mild irritation of cutting hair and nails! How delightful!';
 
+test('Shang Xi screenshot dialogue translates with a Chinese player name through native progress and reward handlers',()=>{
+  const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
+  const index=readLines('QuestDialogue').filter(line=>line.startsWith('D.QuestDialogue['));
+  assert.equal(index.length,4);
+  const ids=new Set(index.map(line=>line.match(/=(\d+)$/)[1]));
+  const strings=readLines('Strings').filter(line=>ids.has(line.match(/^D\.Strings\[(\d+)\]=/)?.[1]));
+  const quests=readLines('Quests').filter(line=>/^D\.Quests\[(29406|29524)\]=/.test(line));
+  const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
+  const execute=source=>{
+    const status=lauxlib.luaL_dostring(L,to_luastring(source));
+    assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
+  };
+  try{
+    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(`local D=LegionChineseDB\n${[...quests,...index,...strings].join('\n')}`);
+    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(`
+      playerName="包括"
+      function UnitName(unit) if unit=="player" then return playerName end end
+      function UnitClass() return "武僧","MONK" end
+      function UnitRace() return "熊猫人","Pandaren" end
+      function GetLocale() return "zhCN" end
+      function GetRewardText() return rewardBody end
+      function QuestInfo_Display()
+        QuestInfoFrame.questLog=false
+        QuestInfoTitleHeader:SetText(rewardTitle)
+        QuestInfoRewardText:SetText(GetRewardText())
+      end
+    `);
+    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    for(const quest of snapshot.quests)for(const [field,record] of Object.entries(quest.fields)){
+      const reward=field==='Completion',widget=reward?'QuestInfoRewardText':'QuestProgressText';
+      const refresh=reward?'QuestInfo_Display()':'QuestFrameProgressPanel:Fire("OnShow")';
+      const variable=reward?'rewardBody':'progressText';
+      execute(`
+        questID=${quest.id}
+        rewardTitle=LegionChineseDB.Quests[questID].Title;progressTitle=rewardTitle
+        local template=${luaString(record.english)}
+        for _,name in ipairs({"包括","Alice"}) do
+          playerName=name
+          local original=template:gsub("%$n",name):gsub("%$B","\\n")
+          assert(not LegionChinese.IsChinese(original),"Chinese player name is not Chinese prose")
+          local expected=LegionChinese.Render(${luaString(record.locales.zhCN.text)})
+          ${variable}=original;${refresh}
+          assert(${widget}.text==expected,"reported dialogue ${quest.id} ${field}")
+          assert(${widget}.fontChanges==0,"native Chinese font")
+          assert(${reward?'QuestInfoTitleHeader':'QuestProgressTitleText'}.text==rewardTitle,"Chinese title stays unchanged")
+          LegionChineseSettings={enabled=false};${refresh}
+          assert(${widget}.text==original,"disabled addon preserves original")
+          LegionChineseSettings.enabled=true;${refresh}
+          assert(${widget}.text==expected,"reopening after enabling translates again")
+          ${variable}=original.." A different server ending.";${refresh}
+          assert(${widget}.text==${variable},"modified server prose must remain unchanged")
+          assert(LegionChinese.Translate("Quests",original,999999,"Description")==original,"not a journal description")
+        end
+        for _,native in ipairs({"服务器已有中文对白。","伺服器已有繁體對白。"}) do
+          ${variable}=native;${refresh}
+          assert(${widget}.text==native,"native Chinese stays unchanged")
+        end
+      `);
+    }
+  }finally{lua.lua_close(L);}
+});
+
 test('Much to Learn journal description and objectives translate for all eight quest variants using shipped data',()=>{
   const quests=readLines('Quests').filter(line=>/^D\.Quests\[(29404|30039|30040|30041|30042|30043|30044|30045)\]=/.test(line));
   assert.equal(quests.length,8,'every class variant has journal translations');

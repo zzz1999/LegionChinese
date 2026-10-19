@@ -28,6 +28,18 @@
 
 ### 已确认的任务译文缺口
 
+#### 尚喜师父的两项新手训练（1.2.12）
+
+截图中的 **沙袋训练（29406）** 完成对白与 **戒骄（29524）** 进行中对白缺少中文；现已一并补充两项任务的进行中、完成对白，共 4 段。
+
+简繁译文来自 [alexkulya/pandaria_5.4.8 的固定本地化快照](https://github.com/alexkulya/pandaria_5.4.8/blob/e0a20613d73e2b9324ac13a4783c724fec1d4559/sql/old/world/2026_08_06_16_world_quest_locale_import.sql#L90987)。仅提取这两个 ID 的 `quest_offer_reward_locale.RewardText` 和 `quest_request_items_locale.CompletionText`，8 条简繁记录均标注 `VerifiedBuild=18414`。该版本号是上游资料标记，尚无独立原始抓包证明，归类为 `reviewed-legacy-dialogue`，不声称已逐字核实官方译文；同一文件中较晚版本的日志字段未导入。
+
+已核对 5.4.8 与 7.3.5 的英文标题、目标、描述一致；4 段运行时原文取自 [Legion Proyect 固定 7.3.5 快照](https://github.com/zitengzela/LegionCore-7.3.5V2/blob/80ad17a234fd4ed462bc9a23e401b70f86f15a0d/sql/base/Legion_Proyect-DB.7z) 中 build 26972 的记录，其中两段与用户截图吻合。只在当前完整对白指纹匹配时使用，角色名与换行按现有规则处理，不按同 ID 强行替换旧对白。简体缺失或不可用才取繁体；已有中文与修改过的原文保持不变。
+
+固定输入文件与哈希、逐字段英文及简繁文字见 `data/reviewed-quest-dialogue.json`；实际导入语言及指纹见 `docs/reviewed-quest-dialogue-audit.json`。运行 `node scripts/collect-reviewed-dialogue.mjs <本地化SQL> <5.4.8世界SQL> <7.3.5世界SQL>` 可从三份固定原始资料重新提取，脚本先核对完整文件 SHA-256。构建使用固定哈希的提取结果，AddOns 资源只保留选中的中文与原文指纹。
+
+#### 保卫贫瘠之地
+
 2026-10-17 的游戏截图反馈 **保卫贫瘠之地（26642）** 在卡加尔·战痕处的交任务正文仍为英文。当前资源已有中文标题、描述、目标及交付位置提示，但没有 `Completion` 字段。交任务正文通过 `QuestInfoRewardText` 单独查询，不会因为标题已经是中文而跳过正文；这次属于译文数据缺失。
 
 已检查 TDB 735.00（2018-02-19）、TDB 735.26972（2025-05-11），以及 LegionCore 的 2020-04-25、2024-10-23 快照，均未找到该字段的可用 zhCN 或 zhTW 记录。进一步核对大灾变旧库 [mangosthree Chinese_Quest.sql](https://github.com/r-log/mangosthree-database/blob/b1c5e0c107566c3769d3c767e2a1378ec8398098/Translations/Translations/Chinese/Chinese_Quest.sql#L14327)，同一任务也只有标题、说明和目标；其 [Chinese_Quest_missing.sql](https://github.com/r-log/mangosthree-database/blob/b1c5e0c107566c3769d3c767e2a1378ec8398098/Translations/Translations_TODO/Chinese/Chinese_Quest_missing.sql#L1027) 将与截图一致的完整英文交付正文列为待译（word_id 181821）。该旧库仅用于核对缺口，没有导入其数据。

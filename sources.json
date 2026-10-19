@@ -695,6 +695,10 @@
     "file": "data/item-descriptions.json",
     "sha256": "573b369aaef2f2bc3aebd7d8bfd19f3917369695089f851c59a471c000086012"
   },
+  "reviewedQuestDialogue": {
+    "file": "data/reviewed-quest-dialogue.json",
+    "sha256": "272f48369ba03bb30b87e3daf5471bde04f1e2ab30016174aec04695a55e0243"
+  },
   "questSupplement": {
     "file": "data/quest-supplement-735.json",
     "sha256": "44c7d440daead120a002a239721c3b2a0624bf2f0bd17a745b2a5f67b716eb22",

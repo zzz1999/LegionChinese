@@ -275,6 +275,36 @@ test('missing curated notes list every actual commit since the previous release 
   assert.doesNotMatch(release.body, /提交正文/);
 });
 
+test('automatic notes compare the released tag even when its target branch has advanced to this push', async () => {
+  const latest = {tag_name: 'v1.2.11', target_commitish: 'main', draft: false};
+  const commits = Array.from({length: 101}, (_, i) => ({sha: i.toString(16).padStart(40, '0'),
+    commit: {message: `版本间更新 ${i}\n\n提交正文`}}));
+  for (const tags of [[], [{name: latest.tag_name, commit: {sha: 'b'.repeat(40)}}]]) {
+    const f = fixture({latest, releases: [latest], tags, notes: '', commits});
+    const compare = f.github.rest.repos.compareCommitsWithBasehead;
+    const requested = [];
+    f.github.rest.repos.compareCommitsWithBasehead = async args => {
+      requested.push(args);
+      // main already points at the current push, unlike the previous version tag.
+      if (args.basehead === `main...${context.sha}`) return {data: {status: 'identical', commits: []}};
+      return compare(args);
+    };
+    const next = await f.resolve('1.2.11');
+    assert.equal(next, '1.2.12');
+    const release = await f.run(next);
+    assert.equal(release.tag_name, 'v1.2.12');
+    assert.equal(release.draft, false);
+    assert.equal(release.make_latest, 'true');
+    assert.match(release.body, /版本间更新 0 /);
+    assert.match(release.body, /版本间更新 100 /);
+    assert.equal((release.body.match(/版本间更新/g) ?? []).length, 101);
+    const ref = tags[0]?.commit.sha ?? latest.tag_name;
+    assert.ok(requested.every(args => args.basehead === `${ref}...${context.sha}`));
+    assert.deepEqual(requested.filter(args => args.per_page === 100).map(args => args.page), [1, 2]);
+    assert.deepEqual(f.mutations.map(([name]) => name), ['create', 'upload', 'upload', 'publish']);
+  }
+});
+
 test('first release without curated notes describes its source commit', async () => {
   const release = await fixture({notes: ''}).run();
   assert.match(release.body, /修复书籍翻页/);

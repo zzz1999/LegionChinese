@@ -356,6 +356,48 @@ test('typed links query their own IDs for spells, recipes, achievements, currenc
   assert(select(2,A.TranslateChatItemLinks(nil,nil,"|Hspell:133|h[Fireball]|h"))=="|Hspell:133|h[离线法术名]|h")
 `));
 
+test('native unbracketed pet ability links translate without adding brackets or altering chat metadata',()=>run(`
+  local payload="battlePetAbil:110:1500:300:280"
+  local calls=0
+  C_PetBattles={GetAbilityInfoByID=function(id) calls=calls+1;assert(id==110);return id,"撕咬" end}
+  -- GetBattlePetAbilityHyperlink in the 7.3.5 FrameXML uses a raw caption.
+  local raw="|cff4e96f7|H"..payload.."|hBite|h|r"
+  local bracketed="|cff4e96f7|H"..payload.."|h[Bite]|h|r"
+  local message="Use "..raw.." / "..bracketed.." now."
+  NativeChatMessage(ChatFrame1,"CHAT_MSG_CHANNEL",message)
+  local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
+  local translated="[12:34] [Global] [Sender]: Use |cff4e96f7|H"..payload.."|h撕咬|h|r / |cff4e96f7|H"..payload.."|h[撕咬]|h|r now."
+  assert(entry.message==translated)
+  assert(calls==1,"both caption formats share the same lookup")
+  assert(entry.timestamp==100 and entry.r==0.25 and entry.extraData.n==5 and ChatFrame1.scrollOffset==3)
+  SlashCmdList.LEGIONCHINESE("off");assert(entry.message=="[12:34] [Global] [Sender]: "..message)
+  SlashCmdList.LEGIONCHINESE("on");assert(entry.message==translated and ChatFrame1.addCalls==1)
+  assert(select(2,A.TranslateChatItemLinks(nil,nil,raw))=="|cff4e96f7|H"..payload.."|h撕咬|h|r")
+  local before=calls
+  for _,untouched in ipairs({"Bite [Bite]", "|Hplayer:Bite|hBite|h", "|Hunknown:110|hBite|h",
+    "|HbattlePetAbil:110bad|hBite|h", "||H"..payload.."||hBite||h", "||H"..payload.."|hBite|h",
+    "|H"..payload.."|h|h", "|H"..payload.."|h[]|h", "|H"..payload.."|h撕咬|h"}) do
+    assert(select(2,A.TranslateChatItemLinks(nil,nil,untouched))==nil,untouched)
+  end
+  assert(calls==before,"ordinary, invalid, empty and Chinese captions need no lookup")
+`,{native:true}));
+
+test('clicking an unbracketed ability retries unavailable Chinese in place and can restore the original',()=>run(`
+  local payload="battlePetAbil:110:1500:300:280"
+  local message="Try |cff4e96f7|H"..payload.."|hBite|h|r!"
+  ChatFrame1:AddMessage(message)
+  local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
+  assert(entry.message==message)
+  C_PetBattles={GetAbilityInfoByID=function(id) return id,"Bite" end}
+  SetItemRef(payload);FlushChatTimers();assert(entry.message==message)
+  C_PetBattles.GetAbilityInfoByID=function(id) assert(id==110);return id,"撕咬技能" end
+  SetItemRef(payload);assert(#timers==1);FlushChatTimers()
+  assert(entry.message=="Try |cff4e96f7|H"..payload.."|h撕咬技能|h|r!")
+  assert(refClicks==2 and ChatFrame1.addCalls==1 and ChatFrame1.scrollOffset==3)
+  SlashCmdList.LEGIONCHINESE("off");assert(entry.message==message)
+  SlashCmdList.LEGIONCHINESE("on");assert(entry.message:find("|h撕咬技能|h",1,true))
+`,{native:true,beforeUI:'refClicks=0; function SetItemRef() refClicks=refClicks+1 end'}));
+
 test('Chinese captions, plain brackets, unknown types and unavailable client APIs retain the original message',()=>run(`
   function GetAchievementInfo() error("invalid ID") end
   function GetQuestLink(id) return "|Hquest:123:110|h[另一个任务]|h" end

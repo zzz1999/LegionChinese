@@ -286,7 +286,9 @@ function A.Translate(category, original, questID, field)
         replacement=record and record[field]
         if not replacement and field=="Title" then replacement=A.Find("Titles",original) end
         if not replacement and field=="CompletionLog" then replacement=A.Find("Completions",original) end
-        if not replacement and (field=="Progress" or field=="Completion") then replacement=A.Find("Gossip",original) end
+        if not replacement and (field=="Progress" or field=="Completion") then
+            replacement=A.Find("Gossip",original) or A.Find("QuestDialogue",original)
+        end
     else
         replacement=A.Find(category,original)
     end
