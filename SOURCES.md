@@ -1,5 +1,24 @@
 # 数据与署名
 
+## 世界地图任务提示与征令板
+
+- 地图可接任务名称复用现有任务库。补充索引仅使用通过 `QuestSources` 任务 ID、字段及原文校验的标题；同名译文冲突继续按现有简繁回退规则处理，无法消歧则保留原文。“A Recent Discovery”对应任务 50341 的“近期发现”，补充原文来自 TDB735.25051 的同 ID 简英记录，标记构建为 26365，与已安装中文标题一致。
+- 征令板三个地区名来自 [7.3.5.26972 AdventureJournal](https://wago.tools/db2/AdventureJournal?build=7.3.5.26972)：35／艾萨拉、34／北贫瘠之地、29／银松森林。按 ID、任务 ID、地图区域和非文本元数据核对简英繁记录；只借用完全同名的地区名称，**不把冒险指南中措辞不同的说明替代为征令板正文**。三种语言导出及 SHA-256 固定在 `sources.json`。
+- 任务板标题、说明和按钮尚无可核实中文对应。“Orgrimmar Portals”在 2018 数据库中为 `points_of_interest` 510、构建 23420，没有对应中文；后来同坐标的“Orgrimmar Cataclysm Portals”及“奥格瑞玛大灾变传送门”标记为 44325，文字已改变，未采用或删词拼接。按照项目使用者要求，缺口不填入人工译文。
+- 逐项采纳与排除记录见 `data/quest-board-reviews.json`、`docs/map-ui-audit.json` 和 `docs/MAP-UI.md`。原版地图入口依据 [7.3.5 WorldMapFrameTemplates.xml](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/WorldMapFrameTemplates.xml) 中 `WorldMapStoryLineTemplate` 的流程；它提供当前任务名称与索引，没有可直接用于此提示的任务 ID。
+
+## 1.2.16 客户端说明与显示入口
+
+新增说明复用已固定为 **7.3.5.26972** 的 Achievement、CurrencyTypes、BattlePetSpecies、BattlePetAbility、JournalEncounter、JournalEncounterSection 和 AdventureJournal 三语 CSV。来源是暴雪客户端 DB2 的 Wago 社区导出，构建逐个验证 `sources.json` 中的 URL、build、SHA-256 及唯一 ID。没有把其他 build 的中文补到这些条目，也不自动转换简繁字形。
+
+`scripts/client-descriptions.mjs` 按 ID 和字段选择简体或繁体；保留完整原文指纹，无 ID 的入口只使用同类别、同字段内无译文冲突的索引。数据包括成就说明与奖励、货币说明、宠物背景与来源、宠物技能、首领与章节正文和冒险推荐。分项语言、拒绝数量和输入清单见 `docs/client-descriptions-audit.json`。冒险推荐文字只用于对应界面，不替代措辞不同的征令板。
+
+战斗宠物技能的方括号表达式仅在原文与中文完全相同、出现次数也相同时保留，交给 [7.3.5 原版 SharedPetBattleTemplates](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/SharedPetBattleTemplates.lua) 的解析器读取当前宠物属性。不编写或计算额外技能公式。其余静态字段拒绝未处理的变量及内嵌标记。
+
+`scripts/dynamic-spell-text.mjs` 读取相同 build 的固定 Spell 三语 CSV。仅收录效果数值变量身份和出现次数相同、固定数字也一致的原文与中文；生成完整结构指纹和中文占位模板。运行时核对整个当前说明并复制对应数值，支持普通小数和英文千分位；不计算基础伤害、治疗、持续时间、角色等级或装备缩放。来源及语言统计见 `docs/dynamic-spell-audit.json`。
+
+地图、任务追踪、成就、宠物手册、冒险指南、NPC 头像对白与字幕接口均依据固定的 [7.3.5 原版界面快照](https://github.com/Gethe/wow-ui-source/tree/67ecbf5ce0e50cc7483c2295caecf410460f0994)。新增普通 NPC 名称和气泡／字幕入口复用本文件已注明来源的数据库，不把社区来源升级标记为独立核实的官方译文。只分发中文、数字 ID、指纹及必要的原生表达式，不携带原始英文正文、CSV 或 SQL。范围和仍缺可靠依据的条目见 `docs/COVERAGE-EXPANSION.md`。
+
 ## 插件启发来源
 
 - TauriHun：作者 **WorldOfHuncraft**，发布账号 **TauriHun**。

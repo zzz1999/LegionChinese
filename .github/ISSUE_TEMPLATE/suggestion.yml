@@ -1,0 +1,23 @@
+name: 功能建议 / Feature suggestion
+description: 提出新的汉化范围或使用体验建议。
+title: "[建议] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 希望解决的问题 / Problem to solve
+      description: 请描述在哪个游戏界面或操作中遇到什么问题。
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议的效果 / Suggested behavior
+      description: 请说明希望插件如何表现。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 补充资料 / Additional context
+      description: 可以附截图、相关插件、客户端版本或可靠中文资料链接。

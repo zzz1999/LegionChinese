@@ -10,6 +10,18 @@ const columns={
 };
 export const questSourceTables=Object.keys(columns);
 
+export function addValidatedQuestTitles(index,sourceIndex,questData,origins){
+  for(const [id,sources] of sourceIndex.titleSources){
+    const origin=origins.get(id),text=questData.get(id)?.Title;
+    if(!origin||!['zhCN','zhTW'].includes(origin.locale)||!hasChinese(text))continue;
+    for(const source of sources){
+      // The stored forms are normalized already. Do not decode nested
+      // entities a second time and authorize a different original.
+      if(normalize(source)===source)index.add(origin.locale,source,text,origin.priority);
+    }
+  }
+}
+
 // Store source fingerprints per quest AND field. Foreign-language source text
 // stays in the build cache, never in the installed addon.
 export class QuestSourceIndex {
@@ -74,7 +86,7 @@ export class QuestSourceIndex {
       }
     }
     for(const [id,fields] of this.reviewed)merge(id,fields);
-    const rows=new Map(),audit={quests:0,fields:0,fingerprints:0,unmatchedFields:[]};
+    const rows=new Map(),titleSources=new Map(),audit={quests:0,fields:0,fingerprints:0,unmatchedFields:[]};
     for(const [id,quest] of questData){
       const row={};
       for(const field of Object.keys(quest)){
@@ -83,8 +95,9 @@ export class QuestSourceIndex {
         else audit.unmatchedFields.push({id:Number(id),field});
       }
       if(Object.keys(row).length)rows.set(id,row);
+      if(row.Title)titleSources.set(id,[...merged.get(id).Title.values()].filter(form=>form!==null));
     }
     audit.quests=rows.size;
-    return {rows,audit};
+    return {rows,titleSources,audit};
   }
 }

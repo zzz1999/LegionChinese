@@ -21,6 +21,37 @@ local function matchText(text,entries)
     if value then return prefix..(color or "")..value..(color and "|r" or "")..suffix end
 end
 
+function A.ResolveDynamicSpellText(id,field,source)
+    local row=D.DynamicSpellTexts[id]
+    local spec=row and row[field]
+    if not spec or type(source)~="string" or A.IsChinese(source) then return end
+    local text=source:gsub("|c%x%x%x%x%x%x%x%x",""):gsub("|r","")
+    if text:find("[|$~{}]") or #text>8192 then return end
+    local values={}
+    local skeleton=text:gsub("%d[%d,.]*",function(value)
+        local body,tail=value:match("^(.-)([.,]*)$")
+        values[#values+1]=body;return "~v~"..tail
+    end)
+    if #values~=spec.Count or A.NameFingerprint(skeleton)~=spec.Key then return end
+    for _,value in ipairs(values) do
+        local compact=value:gsub(",","")
+        if not compact:match("^%d+%.?%d*$") then return end
+        if value:find(",",1,true) then
+            local integer=value:match("^(%d[%d,]*)")
+            local first,rest=integer:match("^(%d+)(,.*)$")
+            if not first or #first>3 or rest:gsub(",%d%d%d","")~="" then return end
+        end
+    end
+    for index,constant in pairs(spec.Constants) do
+        if tonumber((values[index]:gsub(",","")))~=constant then return end
+    end
+    for _,pair in ipairs(spec.Equals) do if values[pair[1]]~=values[pair[2]] then return end end
+    local translated=spec.Text:gsub("{(%d+)}",function(index) return values[tonumber(index)] or "" end)
+    if translated:find("[{}$]") then return end
+    local color=source:match("^(|c%x%x%x%x%x%x%x%x)")
+    return color and source:sub(-2)=="|r" and color..translated.."|r" or translated
+end
+
 function A.UpdateExtraTooltip(self,kind,id)
     if not self or (self.IsForbidden and self:IsForbidden()) then return end
     local state=states[self]
@@ -35,7 +66,8 @@ function A.UpdateExtraTooltip(self,kind,id)
     local spell=D.SpellTexts[id]
     local titles=kind=="unit" and D.NPCTitles[id]
     local names=kind=="unit" and D.NPCLabelNames[id]
-    if kind~="unit" and not spell and not D.Spells[id] or kind=="unit" and not titles and not names then clear(self);return end
+    if kind~="unit" and not spell and not D.Spells[id] and not D.DynamicSpellTexts[id]
+        or kind=="unit" and not titles and not names then clear(self);return end
     local changed=false
     for i=1,self:NumLines() do
         local widget=_G[self:GetName().."TextLeft"..i]
@@ -47,7 +79,11 @@ function A.UpdateExtraTooltip(self,kind,id)
                 if kind=="unit" then
                     if i==1 then text=matchText(source,names) else text=matchText(source,titles) end
                 elseif i==1 then text=A.ResolveSpellName(source,id)
-                elseif spell then text=matchText(source,spell[kind=="aura" and "Aura" or "Description"]) or matchText(source,spell.Rank) end
+                else
+                    local field=kind=="aura" and "Aura" or "Description"
+                    text=spell and (matchText(source,spell[field]) or matchText(source,spell.Rank))
+                    text=text or A.ResolveDynamicSpellText(id,field,source)
+                end
                 previous={widget=widget,source=source,text=text};state.lines[i]=previous
             end
             if previous.text and source~=previous.text then

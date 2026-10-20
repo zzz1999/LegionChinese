@@ -1,5 +1,5 @@
 {
-  "version": "1.2.15",
+  "version": "1.2.16",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -219,11 +219,11 @@
       }
     },
     "Titles": {
-      "fingerprints": 111948,
-      "ambiguousSkipped": 1053,
+      "fingerprints": 125588,
+      "ambiguousSkipped": 1145,
       "locales": {
-        "zhCN": 110851,
-        "zhTW": 1097
+        "zhCN": 124216,
+        "zhTW": 1372
       }
     },
     "Objectives": {
@@ -446,6 +446,142 @@
         }
       }
     },
+    "clientDescriptions": {
+      "Achievement": {
+        "Name": {
+          "ids": 5654,
+          "zhCN": 5653,
+          "zhTW": 1,
+          "nativeExpressions": 0
+        },
+        "Description": {
+          "ids": 4937,
+          "zhCN": 4937,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Reward": {
+          "ids": 613,
+          "zhCN": 613,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        }
+      },
+      "Currency": {
+        "Description": {
+          "ids": 60,
+          "zhCN": 59,
+          "zhTW": 1,
+          "nativeExpressions": 0
+        },
+        "Name": {
+          "ids": 98,
+          "zhCN": 96,
+          "zhTW": 2,
+          "nativeExpressions": 0
+        }
+      },
+      "BattlePet": {
+        "Description": {
+          "ids": 979,
+          "zhCN": 979,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Source": {
+          "ids": 850,
+          "zhCN": 850,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        }
+      },
+      "BattlePetAbility": {
+        "Name": {
+          "ids": 1010,
+          "zhCN": 1004,
+          "zhTW": 6,
+          "nativeExpressions": 0
+        },
+        "Description": {
+          "ids": 709,
+          "zhCN": 705,
+          "zhTW": 4,
+          "nativeExpressions": 544
+        }
+      },
+      "Encounter": {
+        "Name": {
+          "ids": 755,
+          "zhCN": 755,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Description": {
+          "ids": 634,
+          "zhCN": 634,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        }
+      },
+      "JournalSection": {
+        "Name": {
+          "ids": 9775,
+          "zhCN": 9774,
+          "zhTW": 1,
+          "nativeExpressions": 0
+        },
+        "Description": {
+          "ids": 1906,
+          "zhCN": 1905,
+          "zhTW": 1,
+          "nativeExpressions": 0
+        }
+      },
+      "Adventure": {
+        "Name": {
+          "ids": 355,
+          "zhCN": 355,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Description": {
+          "ids": 357,
+          "zhCN": 357,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Button": {
+          "ids": 303,
+          "zhCN": 303,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Reward": {
+          "ids": 3,
+          "zhCN": 3,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        },
+        "Continue": {
+          "ids": 8,
+          "zhCN": 8,
+          "zhTW": 0,
+          "nativeExpressions": 0
+        }
+      }
+    },
+    "dynamicSpells": {
+      "Description": {
+        "ids": 16224,
+        "zhCN": 16086,
+        "zhTW": 138
+      },
+      "Aura": {
+        "ids": 11709,
+        "zhCN": 11664,
+        "zhTW": 45
+      }
+    },
     "artifacts": {
       "artifacts": {
         "ids": 43,
@@ -471,7 +607,8 @@
       "powers": 952,
       "traitSpellIDs": 919,
       "choices": 43
-    }
+    },
+    "questBoardHeaders": 3
   },
   "sources": [
     {
@@ -1170,6 +1307,7 @@
     "Data\\Titles_03.lua",
     "Data\\Titles_04.lua",
     "Data\\Titles_05.lua",
+    "Data\\Titles_06.lua",
     "Data\\Objectives_01.lua",
     "Data\\Completions_01.lua",
     "Data\\NPCNames_01.lua",
@@ -1224,6 +1362,17 @@
     "Data\\NPCLabelNames_08.lua",
     "Data\\ExtraLinkNames_01.lua",
     "Data\\ExtraLinkNames_02.lua",
-    "Data\\Artifacts.lua"
+    "Data\\ClientTexts_01.lua",
+    "Data\\ClientTexts_02.lua",
+    "Data\\ClientTexts_03.lua",
+    "Data\\ClientTexts_04.lua",
+    "Data\\ClientTexts_05.lua",
+    "Data\\DynamicSpellTexts_01.lua",
+    "Data\\DynamicSpellTexts_02.lua",
+    "Data\\DynamicSpellTexts_03.lua",
+    "Data\\DynamicSpellTexts_04.lua",
+    "Data\\DynamicSpellTexts_05.lua",
+    "Data\\Artifacts.lua",
+    "Data\\QuestBoards.lua"
   ]
 }

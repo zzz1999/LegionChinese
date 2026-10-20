@@ -1,0 +1,45 @@
+{
+  "version": "1.2.16",
+  "sources": [
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "enUS",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-enUS.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=enUS",
+      "sha256": "943e4118b4cdc59f1447dfc05ebfadcb31cab6627fce2cd7ef517a4b8b014335"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhCN.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhCN",
+      "sha256": "214f755429b8eb2fd9bfec924cc2139091f751279d879a96129c772854c1802f"
+    },
+    {
+      "table": "Spell",
+      "build": "7.3.5.26972",
+      "locale": "zhTW",
+      "provenance": "client-db2-via-wago",
+      "file": "Spell-7.3.5.26972-zhTW.csv",
+      "url": "https://wago.tools/db2/Spell/csv?build=7.3.5.26972&locale=zhTW",
+      "sha256": "6049932f5630afad9caa313244a9f6d0ca4cb99489c81e3f1d2cfc5929e5dfdb"
+    }
+  ],
+  "counts": {
+    "Description": {
+      "ids": 16224,
+      "zhCN": 16086,
+      "zhTW": 138
+    },
+    "Aura": {
+      "ids": 11709,
+      "zhCN": 11664,
+      "zhTW": 45
+    }
+  },
+  "rule": "Numeric effect tokens only. Copy values from an exactly matching live tooltip; never evaluate spell damage, durations or conditions."
+}

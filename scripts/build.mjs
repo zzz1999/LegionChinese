@@ -16,8 +16,11 @@ import {importTranslationExtras} from './translation-extras.mjs';
 import {buildExtraClientData} from './extra-client-data.mjs';
 import {buildBookContexts} from './book-contexts.mjs';
 import {buildArtifacts} from './artifacts.mjs';
+import {buildQuestBoards} from './quest-boards.mjs';
+import {buildClientDescriptions} from './client-descriptions.mjs';
+import {buildDynamicSpellText} from './dynamic-spell-text.mjs';
 import {writeChangelog} from './changelog.mjs';
-import {QuestSourceIndex,questSourceTables} from './quest-sources.mjs';
+import {QuestSourceIndex,questSourceTables,addValidatedQuestTitles} from './quest-sources.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -146,7 +149,7 @@ for(const source of broadcastSources){
     if(CHINESE_LOCALES.includes(locale))selectBroadcast(byBroadcast[locale],r,source.file,source.priority??0,locale);
   });
 }
-const questData=new Map(),questVariants=new Map();
+const questData=new Map(),questVariants=new Map(),questTitleOrigins=new Map();
 const gossip=new ChineseTextIndex(),books=new ChineseTextIndex(),titles=new ChineseTextIndex(),objectives=new ChineseTextIndex();
 const npcNames=new ChineseTextIndex();
 for(const row of npcNameRows.values())for(const locale of CHINESE_LOCALES){
@@ -178,6 +181,7 @@ for(const [id,localized] of questVariants){
   const {values,locales}=chooseChineseFields(localized.zhCN,localized.zhTW);
   if(!Object.keys(values).length)continue;
   questData.set(id,values);
+  if(values.Title)questTitleOrigins.set(id,{locale:locales.Title,priority:0});
   for(const field of Object.keys(values)){
     counts.questFields[field]=(counts.questFields[field]??0)+1;
     if(locales[field]==='zhTW')counts.questTraditionalFields[field]=(counts.questTraditionalFields[field]??0)+1;
@@ -192,6 +196,7 @@ for(const [id,localized] of questVariants){
 const supplement=mergeQuestSupplement({root,manifest,baseQuests:legionQuests,questData,titles,gossip,completions,
   onField:(id,field,record)=>questSources.addReviewed(id,field,record.english)});
 for(const record of supplement.records){
+  if(record.field==='Title')questTitleOrigins.set(String(record.id),{locale:record.locale,priority:-1});
   counts.questFields[record.field]=(counts.questFields[record.field]??0)+1;
   if(record.locale==='zhTW')counts.questTraditionalFields[record.field]=(counts.questTraditionalFields[record.field]??0)+1;
   if(['Progress','Completion'].includes(record.field))counts.questDialogueSources[record.build>0?'buildMarked':'communityUnverified']++;
@@ -211,6 +216,11 @@ const extras=importTranslationExtras({root,manifest,baseQuests:legionQuests,base
 const extraScopes=extras.scopes.filter(s=>!reviewedDialogue.some(d=>d.id===s.id&&d.field===s.field));
 const dialogueAudit={source:dialogueSpec.file,sha256:dialogueSpec.sha256,provenance:dialogueSnapshot.provenance,
   sources:dialogueSnapshot.sources,reviews:dialogueSnapshot.reviews,verification:dialogueSnapshot.verification,...reviewedAudit};
+const sourceIndex=questSources.finish(legionQuests,questData);
+// Later 7.3.5 bilingual captures may supply titles absent from the 2018 base.
+// Reuse only the original text already accepted by per-quest validation, then
+// let the shared title index reject same-name conflicts and hash collisions.
+addValidatedQuestTitles(titles,sourceIndex,questData,questTitleOrigins);
 titles.finish();
 for(const row of legacyQuestLocales){
   const id=idOf(row),locale=localeOf(row),legacy=legacyQuests.get(id);
@@ -315,7 +325,6 @@ function writeChunks(name,rows,make){
   for(const row of rows){const line=make(row);if(size+Buffer.byteLength(line)>900000)flush();lines.push(line);size+=Buffer.byteLength(line)+1;}flush();
 }
 writeChunks('Quests',[...questData].sort((a,b)=>+a[0]-b[0]),([id,r])=>'D.Quests['+id+']={'+Object.entries(r).map(([k,v])=>k+'='+luaString(v)).join(',')+'}');
-const sourceIndex=questSources.finish(legionQuests,questData);
 writeChunks('QuestSources',[...sourceIndex.rows].sort((a,b)=>+a[0]-b[0]),([id,fields])=>
   'D.QuestSources['+id+']={'+Object.entries(fields).map(([field,keys])=>
     field+'={'+keys.map(key=>'['+luaString(key)+']=true').join(',')+'}').join(',')+'}');
@@ -363,10 +372,16 @@ const dungeonNames=buildDungeonNames({root,input,manifest});
 generated.push(...dungeonNames.generated);counts.dungeonNames=dungeonNames.audit.counts;
 const extraClient=buildExtraClientData({root,input,manifest,npcRows,version});
 generated.push(...extraClient.generated);counts.extraClient=extraClient.audit.counts;
+const clientDescriptions=buildClientDescriptions({root,input,manifest,version});
+generated.push(...clientDescriptions.generated);counts.clientDescriptions=clientDescriptions.audit.counts;
+const dynamicSpells=buildDynamicSpellText({root,input,manifest,version});
+generated.push(...dynamicSpells.generated);counts.dynamicSpells=dynamicSpells.audit.counts;
 const artifacts=buildArtifacts({root,input,manifest,version});
 generated.push(...artifacts.generated);counts.artifacts={...artifacts.audit.counts,choices:artifacts.audit.choices.fields};
+const questBoards=buildQuestBoards({root,input,manifest,version});
+generated.push(...questBoards.generated);counts.questBoardHeaders=questBoards.audit.headers.length;
 writeChangelog(root,version);
-const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','Artifacts.lua','ChatLinks.lua','Changelog.lua','Welcome.lua','UI.lua',''];
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','ClientDescriptions.lua','QuestBoards.lua','Artifacts.lua','MapTooltips.lua','ChatLinks.lua','DialogueSurfaces.lua','Changelog.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

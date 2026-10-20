@@ -118,7 +118,21 @@ function A.ApplyPetName(widget,unit)
 end
 
 function A.UpdatePetUnitFrame(frame)
-    if frame and not (frame.IsForbidden and frame:IsForbidden()) and not frame.overrideName then A.ApplyPetName(frame.name,frame.unit) end
+    if not frame or frame.IsForbidden and frame:IsForbidden() or frame.overrideName then return end
+    A.ApplyPetName(frame.name,frame.unit)
+    local widget,unit=frame.name,frame.unit
+    if not widget or not widget.GetText or not widget.SetText or widget.IsForbidden and widget:IsForbidden()
+        or not unit or not UnitGUID or not UnitName or UnitIsPlayer and UnitIsPlayer(unit)
+        or UnitPlayerControlled and UnitPlayerControlled(unit) then return end
+    local guid=UnitGUID(unit)
+    local id=type(guid)=="string" and tonumber(guid:match("^Creature%-%d+%-%d+%-%d+%-%d+%-(%d+)%-"))
+    local name=UnitName(unit)
+    -- Creature GUIDs only; Pet GUIDs and player-controlled/custom names keep
+    -- the stricter pet path. Entry AND the complete live name must agree.
+    if not id or widget:GetText()~=name or A.IsChinese(name) then return end
+    local row=D.NPCLabelNames[id]
+    local text=row and row[A.NameFingerprint(name) or ""]
+    if text then A.SetFont(widget);widget:SetText(text) end
 end
 
 function A.UpdatePetTooltip(tooltip)

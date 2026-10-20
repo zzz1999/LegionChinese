@@ -41,6 +41,9 @@ local function hookChoiceWidget(hookMethod,frame,option,widget,field)
     hookMethod(widget,"SetText",function(self,source)
         if writing[self] then return end
         local text=A.ResolveArtifactChoice(frame.choiceID,option and option.optID,field,source)
+        if not text and field=="Header" and A.ResolveQuestBoardHeader then
+            text=A.ResolveQuestBoardHeader(frame.choiceID,option and option.optID,source)
+        end
         setText(self,text,field=="Description")
     end)
 end

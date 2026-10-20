@@ -1,0 +1,83 @@
+name: 汉化缺失或使用问题 / Translation or bug report
+description: 反馈未汉化、译文错误、显示异常或报错。
+title: "[反馈] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量一次报告同一个问题，并先搜索是否已有相同 Issue。
+        本插件只使用有可靠对应的已有译文：简体优先，其次繁体，缺失保留原文。
+        You may fill in this form in Chinese or English. Please report one issue at a time.
+  - type: dropdown
+    id: type
+    attributes:
+      label: 问题类型 / Type
+      options:
+        - 未汉化 / Missing translation
+        - 译文错误 / Incorrect translation
+        - 显示或字体异常 / Display or font problem
+        - Lua 报错或功能异常 / Error or malfunction
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 插件版本 / Addon version
+      description: 输入 /lcn about 查看。请填写实际版本号，不要只写“最新版”。
+      placeholder: "例如：1.2.16"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 游戏环境 / Game environment
+      description: 请填写客户端版本（包括 build）、语言及服务器；不知道 build 时可填“不清楚”。
+      placeholder: |
+        客户端：7.3.5.26972
+        语言：zhCN / zhTW / enUS / 其他
+        服务器：
+        职业（任务或宠物问题请填）：
+        同时使用的相关界面插件（没有则填“无”）：
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 内容与显示位置 / Content and location
+      description: 写明任务、NPC、物品、书籍等名称，以及具体显示位置。有 ID 可附上，没有也能提交。
+      placeholder: |
+        名称或 ID：
+        地图 / NPC：
+        位置：接任务正文、任务日志、交任务对白、追踪栏、地图提示、聊天链接、物品提示等
+        书籍页码 / 神器选项 / 宠物类型（如适用）：
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 实际内容与预期 / Actual and expected behavior
+      description: 尽量粘贴完整未汉化原文。无法抄写时在这里说明，并在下方上传截图；不要求自行翻译。
+      placeholder: |
+        现在显示的内容或异常：
+        希望出现的结果：
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      placeholder: |
+        1. 前往……
+        2. 打开…… / 鼠标悬停……
+        3. 看到……
+        是否每次出现：
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图、报错与译文来源 / Screenshots, errors and sources
+      description: |
+        可直接拖入或粘贴截图。请保留窗口标题和完整正文；物品请附完整提示框。
+        有 Lua 报错请贴完整报错。如果已找到官方中文或同版本资料，请附链接或截图。
+        请遮挡账号、密码等私人信息；不需要上传整个 WTF 文件夹。

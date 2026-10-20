@@ -1,0 +1,108 @@
+{
+  "version": "1.2.16",
+  "build": "7.3.5.26972",
+  "review": {
+    "file": "data/quest-board-reviews.json",
+    "sha256": "b82a9facce5f54d4e7f041176f9efb8b5c066a03887fde6d04f9a4c8fb130f93"
+  },
+  "sources": [
+    {
+      "table": "AdventureJournal",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=enUS",
+      "file": "AdventureJournal-7.3.5.26972-enUS.csv",
+      "sha256": "80bad4d80590db314917204d9ac2fd81135118d421ac5f215ed9bd227a6e5fc9"
+    },
+    {
+      "table": "AdventureJournal",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "AdventureJournal-7.3.5.26972-zhCN.csv",
+      "sha256": "398ea85f28f9e9a6f8bb17249ef177bed7a25bec39b6eb15eff39dbc04c0ade3"
+    },
+    {
+      "table": "AdventureJournal",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "AdventureJournal-7.3.5.26972-zhTW.csv",
+      "sha256": "e9efa9e5ab3ededb326e3a04f31fa2648c534abdbd6e62525014cd83751cbfa9"
+    }
+  ],
+  "headers": [
+    {
+      "id": 35,
+      "original": "Azshara",
+      "questID": 28496,
+      "mapAreaID": 181,
+      "locale": "zhCN",
+      "text": "艾萨拉",
+      "fingerprint": "5381b44f51942e42:7"
+    },
+    {
+      "id": 34,
+      "original": "Northern Barrens",
+      "questID": 28494,
+      "mapAreaID": 11,
+      "locale": "zhCN",
+      "text": "北贫瘠之地",
+      "fingerprint": "852f62e2a58b8faf:15"
+    },
+    {
+      "id": 29,
+      "original": "Silverpine Forest",
+      "questID": 28568,
+      "mapAreaID": 21,
+      "locale": "zhCN",
+      "text": "银松森林",
+      "fingerprint": "dedf1fb922f0e8ba:16"
+    }
+  ],
+  "deferred": [
+    {
+      "field": "Question",
+      "original": "The Warchief needs you! Take a flyer.",
+      "reason": "No verified Chinese counterpart found in the inspected 7.3.5 captures."
+    },
+    {
+      "field": "Description",
+      "header": "Azshara",
+      "original": "The Alliance are attempting to reverse the efforts made by our forces in Azshara.\n\nPush them back!",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defend Orgrimmar",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "Description",
+      "header": "Northern Barrens",
+      "original": "The quilboars and centaurs advancing on the Northern Barrens pose a threat to the supply caravans being sent out of Orgrimmar.\n\nStop them!",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defend the Barrens",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "Description",
+      "header": "Silverpine Forest",
+      "original": "Guerilla forces sent by Gilneas continue to attack Horde outposts in Silverpine Forest.\n\nAssist the Forsaken and crush the Gilnean opposition.",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defeat the Gilneans",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "MinimapPOI",
+      "original": "Orgrimmar Portals",
+      "reason": "The 7.3.5 base has points_of_interest ID 510 (build 23420) but no Chinese locale. The later Chinese row at the same coordinates belongs to Orgrimmar Cataclysm Portals (build 44325), with changed text. Do not copy or shorten it."
+    }
+  ]
+}

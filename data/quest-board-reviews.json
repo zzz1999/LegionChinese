@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "build": "7.3.5.26972",
+  "question": "The Warchief needs you! Take a flyer.",
+  "contextSource": "In-game report, 2026-10-20. The choice ID and response IDs are unavailable; require the complete live question and the current option header.",
+  "headers": [
+    { "id": 35, "original": "Azshara", "questID": 28496, "mapAreaID": 181 },
+    { "id": 34, "original": "Northern Barrens", "questID": 28494, "mapAreaID": 11 },
+    { "id": 29, "original": "Silverpine Forest", "questID": 28568, "mapAreaID": 21 }
+  ],
+  "deferred": [
+    {
+      "field": "Question",
+      "original": "The Warchief needs you! Take a flyer.",
+      "reason": "No verified Chinese counterpart found in the inspected 7.3.5 captures."
+    },
+    {
+      "field": "Description",
+      "header": "Azshara",
+      "original": "The Alliance are attempting to reverse the efforts made by our forces in Azshara.\n\nPush them back!",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defend Orgrimmar",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "Description",
+      "header": "Northern Barrens",
+      "original": "The quilboars and centaurs advancing on the Northern Barrens pose a threat to the supply caravans being sent out of Orgrimmar.\n\nStop them!",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defend the Barrens",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "Description",
+      "header": "Silverpine Forest",
+      "original": "Guerilla forces sent by Gilneas continue to attack Horde outposts in Silverpine Forest.\n\nAssist the Forsaken and crush the Gilnean opposition.",
+      "reason": "AdventureJournal describes the same region but has different English wording; its description cannot replace this text."
+    },
+    {
+      "field": "Answer",
+      "original": "Defeat the Gilneans",
+      "reason": "No verified same-context Chinese button capture found."
+    },
+    {
+      "field": "MinimapPOI",
+      "original": "Orgrimmar Portals",
+      "reason": "The 7.3.5 base has points_of_interest ID 510 (build 23420) but no Chinese locale. The later Chinese row at the same coordinates belongs to Orgrimmar Cataclysm Portals (build 44325), with changed text. Do not copy or shorten it."
+    }
+  ]
+}

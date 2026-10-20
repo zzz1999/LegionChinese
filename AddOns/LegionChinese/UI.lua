@@ -11,7 +11,7 @@ local function hook(name, callback)
 end
 
 local function hookMethod(object, name, callback)
-    if not object or type(object[name])~="function" then return end
+    if not object or object.IsForbidden and object:IsForbidden() or type(object[name])~="function" then return end
     local methods=installedMethods[object]
     if not methods then methods={};installedMethods[object]=methods end
     if methods[name] then return end
@@ -20,7 +20,7 @@ local function hookMethod(object, name, callback)
 end
 
 local function hookScript(widget, event, callback)
-    if not widget or type(widget.HookScript)~="function" then return end
+    if not widget or widget.IsForbidden and widget:IsForbidden() or type(widget.HookScript)~="function" then return end
     local events=installedScripts[widget]
     if not events then events={};installedScripts[widget]=events end
     if events[event] then return end
@@ -140,8 +140,21 @@ function A.UpdateTrackerObjective(module, block, key, text, _, useFullHeight, _,
     if not line or not line.Text or line.Text:GetText()~=text then return end
     local oldHeight=line:GetHeight()
     local changed
-    if type(key)=="number" then
+    if type(key)=="number" and key==0 and (module==BONUS_OBJECTIVE_TRACKER_MODULE or module==WORLD_QUEST_TRACKER_MODULE)
+        and type(block.id)=="number" and block.id>0 then
+        changed=A.Apply(line.Text,"Quests",block.id,"Title",text)
+    elseif type(key)=="number" then
         changed=A.Apply(line.Text,"Objectives",block.id)
+        if not changed and type(text)=="string" and (module==SCENARIO_TRACKER_MODULE
+            or module==BONUS_OBJECTIVE_TRACKER_MODULE or module==WORLD_QUEST_TRACKER_MODULE) then
+            -- Scenario criteria put counts before the label. Preserve the live
+            -- progress and only translate the complete criterion wording.
+            local prefix,body=text:match("^(%d+%s*/%s*%d+%s+)(.+)$")
+            if body then
+                local translated,updated=A.Translate("Objectives",body,block.id)
+                if updated then A.SetFont(line.Text);line.Text:SetText(prefix..translated);changed=true end
+            end
+        end
     elseif key=="QuestComplete" then
         local index=GetQuestLogIndexByID and GetQuestLogIndexByID(block.id)
         local completion=index and index>0 and GetQuestLogCompletionText and GetQuestLogCompletionText(index)
@@ -177,9 +190,9 @@ local function currentCast(bar)
 end
 
 function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
-    -- Only the original player/controlled-pet bars. A post-hook of the shared
-    -- handler also receives target, focus and third-party bars.
-    if not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame) then return end
+    if not bar or (bar~=CastingBarFrame and bar~=PetCastingBarFrame
+        and bar~=TargetFrameSpellBar and bar~=FocusFrameSpellBar)
+        or bar.IsForbidden and bar:IsForbidden() then return end
     if event and not castEvents[event] then return end
     if event and event~="PLAYER_ENTERING_WORLD" and unit~=bar.unit then return end
     local name,source,startTime,currentID,currentSpellID=currentCast(bar)
@@ -218,7 +231,7 @@ function A.UpdateCastBar(bar,event,unit,spellName,rank,castID,spellID)
 end
 
 function A.RefreshCastBars()
-    for _,key in ipairs({"CastingBarFrame","PetCastingBarFrame"}) do
+    for _,key in ipairs({"CastingBarFrame","PetCastingBarFrame","TargetFrameSpellBar","FocusFrameSpellBar"}) do
         A.UpdateCastBar(_G[key])
     end
 end
@@ -293,10 +306,15 @@ local function install()
     hook("QuestLogQuests_Update",A.UpdateQuestList)
     hookMethod(QUEST_TRACKER_MODULE,"SetBlockHeader",A.UpdateTrackerHeader)
     hookMethod(QUEST_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
+    hookMethod(BONUS_OBJECTIVE_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
+    hookMethod(WORLD_QUEST_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
+    hookMethod(SCENARIO_TRACKER_MODULE,"AddObjective",A.UpdateTrackerObjective)
     -- The player's XML stores the original callback before addon load; the
     -- global hook additionally catches internal resume/unit-change calls.
     hookScript(CastingBarFrame,"OnEvent",A.UpdateCastBar)
     hookScript(PetCastingBarFrame,"OnEvent",A.UpdateCastBar)
+    hookScript(TargetFrameSpellBar,"OnEvent",A.UpdateCastBar)
+    hookScript(FocusFrameSpellBar,"OnEvent",A.UpdateCastBar)
     hook("CastingBarFrame_OnEvent",A.UpdateCastBar)
     if A.InstallPetNames then A.InstallPetNames(hook,hookScript) end
     if A.UpdateWorldObjectTooltip then
@@ -309,6 +327,9 @@ local function install()
     if A.InstallItemTooltips then A.InstallItemTooltips() end
     if A.InstallExtraTooltips then A.InstallExtraTooltips() end
     if A.InstallArtifacts then A.InstallArtifacts(hookMethod,hookScript) end
+    if A.InstallMapTooltips then A.InstallMapTooltips(hookMethod,hook) end
+    if A.InstallClientDescriptions then A.InstallClientDescriptions(hook,hookMethod,hookScript) end
+    if A.InstallDialogueSurfaces then A.InstallDialogueSurfaces(hook,hookMethod,hookScript) end
     if A.InstallChatItemLinks then A.InstallChatItemLinks() end
 end
 local frame=CreateFrame("Frame")

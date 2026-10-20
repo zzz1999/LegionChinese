@@ -1055,5 +1055,35 @@
   "artifactChoiceReviews": {
     "file": "data/artifact-choice-reviews.json",
     "sha256": "71dbdad2d5af72574b66a3b10af306fbb898c6a61417c7b1e890dd9f640a57e3"
+  },
+  "questBoardTables": [
+    {
+      "table": "AdventureJournal",
+      "locale": "enUS",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=enUS",
+      "file": "AdventureJournal-7.3.5.26972-enUS.csv",
+      "sha256": "80bad4d80590db314917204d9ac2fd81135118d421ac5f215ed9bd227a6e5fc9"
+    },
+    {
+      "table": "AdventureJournal",
+      "locale": "zhCN",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=zhCN",
+      "file": "AdventureJournal-7.3.5.26972-zhCN.csv",
+      "sha256": "398ea85f28f9e9a6f8bb17249ef177bed7a25bec39b6eb15eff39dbc04c0ade3"
+    },
+    {
+      "table": "AdventureJournal",
+      "locale": "zhTW",
+      "build": "7.3.5.26972",
+      "url": "https://wago.tools/db2/AdventureJournal/csv?build=7.3.5.26972&locale=zhTW",
+      "file": "AdventureJournal-7.3.5.26972-zhTW.csv",
+      "sha256": "e9efa9e5ab3ededb326e3a04f31fa2648c534abdbd6e62525014cd83751cbfa9"
+    }
+  ],
+  "questBoardReviews": {
+    "file": "data/quest-board-reviews.json",
+    "sha256": "b82a9facce5f54d4e7f041176f9efb8b5c066a03887fde6d04f9a4c8fb130f93"
   }
 }

@@ -3,6 +3,10 @@ local A,D=LegionChinese,LegionChineseDB
 local states=setmetatable({}, {__mode="k"})
 local installed=setmetatable({}, {__mode="k"})
 local pollDelay=setmetatable({}, {__mode="k"})
+local function supported(tooltip)
+    return tooltip and (tooltip==GameTooltip or tooltip==ItemRefTooltip or tooltip==ShoppingTooltip1
+        or tooltip==ShoppingTooltip2 or tooltip==ItemRefShoppingTooltip1 or tooltip==ItemRefShoppingTooltip2)
+end
 
 local function linkItemID(link)
     if type(link)~="string" then return end
@@ -45,7 +49,7 @@ function A.ClearItemTooltip(tooltip)
 end
 
 function A.UpdateItemTooltip(tooltip)
-    if not tooltip or (tooltip~=GameTooltip and tooltip~=ItemRefTooltip)
+    if not supported(tooltip)
         or (tooltip.IsForbidden and tooltip:IsForbidden()) then return end
     if not tooltip.IsShown or not tooltip:IsShown() or not tooltip.GetName
         or not tooltip.NumLines or not tooltip.GetItem then return end
@@ -106,9 +110,8 @@ local function setFallback(tooltip,id)
 end
 
 function A.InstallItemTooltips()
-    local tooltips={GameTooltip,ItemRefTooltip}
-    for i=1,2 do
-        local tooltip=tooltips[i]
+    for _,name in ipairs({"GameTooltip","ItemRefTooltip","ShoppingTooltip1","ShoppingTooltip2","ItemRefShoppingTooltip1","ItemRefShoppingTooltip2"}) do
+        local tooltip=_G[name]
         if tooltip and not installed[tooltip] and tooltip.HookScript
             and not (tooltip.IsForbidden and tooltip:IsForbidden()) then
             installed[tooltip]=true
@@ -136,6 +139,7 @@ function A.InstallItemTooltips()
 end
 
 function A.RefreshItemTooltips()
-    A.UpdateItemTooltip(GameTooltip)
-    A.UpdateItemTooltip(ItemRefTooltip)
+    for _,name in ipairs({"GameTooltip","ItemRefTooltip","ShoppingTooltip1","ShoppingTooltip2","ItemRefShoppingTooltip1","ItemRefShoppingTooltip2"}) do
+        A.UpdateItemTooltip(_G[name])
+    end
 end
