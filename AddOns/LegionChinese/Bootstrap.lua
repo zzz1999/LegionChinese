@@ -1,5 +1,5 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
-LegionChineseDB = { Quests = {}, Strings = {}, Gossip = {}, Books = {}, Titles = {}, Objectives = {}, Completions = {}, NPCNames = {},
+LegionChineseDB = { Quests = {}, QuestSources = {}, Strings = {}, Gossip = {}, Books = {}, Titles = {}, Objectives = {}, Completions = {}, NPCNames = {},
     NameStrings = {}, Spells = {}, SpellNames = {}, Creatures = {}, CreatureFamilies = {}, CreatureFamilyNames = {}, WorldObjects = {}, ItemDescriptions = {},
     JournalInstances = {}, InstanceMaps = {}, QuestDialogue = {}, QuestExtras = {}, ItemNames = {}, SpellTexts = {}, NPCTitles = {}, NPCLabelNames = {}, BookContexts = {},
     ArtifactNames = {}, ArtifactAppearances = {}, ArtifactAppearanceSets = {}, ArtifactTitleNames = {}, ArtifactConditions = {}, ArtifactPowerSpells = {}, ArtifactChoices = {},

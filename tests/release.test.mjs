@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath, pathToFileURL} from 'node:url';
-import {publishRelease, resolveReleaseVersion, notesForVersion} from '../scripts/release.mjs';
+import {publishRelease, resolveReleaseVersion, notesForVersion, prepareReleaseNotes} from '../scripts/release.mjs';
+import {renderReleaseChangelog} from '../scripts/changelog.mjs';
 
 const context = {
   repo: {owner: 'example', repo: 'addon'},
@@ -78,10 +79,34 @@ function fixture({existing = null, latest = null, failUpload = null, readError =
   };
   return {mutations, comparisons, github, context: runContext,
     resolve: (baseVersion = version) => resolveReleaseVersion({github, context: runContext, baseVersion}),
-    run: (releaseVersion = version) => publishRelease({github, context: runContext,
-      version: releaseVersion, assets: assetsForVersion(releaseVersion), changelog: notes}),
+    prepare: releaseVersion => prepareReleaseNotes({github,context:runContext,version:releaseVersion,changelog:notes}),
+    run: (releaseVersion = version, releaseNotes) => publishRelease({github, context: runContext,
+      version: releaseVersion, assets: assetsForVersion(releaseVersion), changelog: notes, releaseNotes}),
   };
 }
+
+test('automatic patch bumps share actual new notes with the packaged changelog and release body',async()=>{
+  const prior={tag_name:'v0.1.0',target_commitish:'b'.repeat(40),draft:false};
+  const flow=fixture({latest:prior,releases:[prior],tags:[{name:prior.tag_name,commit:{sha:prior.target_commitish}}]});
+  const next=await flow.resolve();assert.equal(next,'0.1.1');
+  const notes=await flow.prepare(next);
+  assert.match(notes,/修复书籍翻页/);assert.doesNotMatch(notes,/补齐任务交付说明|旧版说明/);
+  const lua=renderReleaseChangelog(notes,next);
+  assert.match(lua,/version = "0\.1\.1"/);assert.match(lua,/修复书籍翻页/);
+  const release=await flow.run(next,notes);
+  assert.ok(release.body.includes(`## 本次更新\n\n${notes}\n\n## 安装与更新`));
+});
+
+test('draft retries preserve packaged notes and reject a mismatched replacement before uploading',async()=>{
+  const draft={id:1,tag_name:'v0.1.0',target_commitish:context.sha,draft:true,assets:[],
+    body:'## 本次更新\n\n- 已准备的更新记录。\n\n## 安装与更新\n\n下载。'};
+  const flow=fixture({existing:draft});
+  assert.equal(await flow.prepare(version),'- 已准备的更新记录。');
+  await assert.rejects(flow.run(version,'- 不一致的更新记录。'),/Packaged notes differ/);
+  assert.equal(flow.mutations.length,0);
+  const release=await flow.run(version,await flow.prepare(version));
+  assert.equal(release.body,draft.body);
+});
 
 test('release is published only after both assets have uploaded', async () => {
   const {run, mutations} = fixture();
@@ -330,7 +355,10 @@ test('a delayed older job without curated notes is skipped instead of generating
 const workflow = await readFile(new URL('../.github/workflows/check.yml', import.meta.url), 'utf8');
 const steps = new Map(workflow.replaceAll('\r\n', '\n').split(/^      - name: /m).slice(1)
   .map(block => [block.slice(0, block.indexOf('\n')), block]));
+const workflowFiles=new WeakMap();
 async function runWorkflowStep(name, f, outputs = {}) {
+  if(!workflowFiles.has(outputs))workflowFiles.set(outputs,new Map());
+  const files=workflowFiles.get(outputs);
   const messages = [];
   const summary = {
     addHeading(text) { messages.push(text); return this; },
@@ -342,7 +370,10 @@ async function runWorkflowStep(name, f, outputs = {}) {
   const require = module => {
     if (module === 'node:url') return {pathToFileURL};
     assert.equal(module, 'node:fs/promises');
-    return {async readFile(path) {
+    return {async mkdir(path){assert.equal(path,'.release');},
+      async writeFile(path,text){files.set(path,text);},
+      async readFile(path) {
+      if(files.has(path))return files.get(path);
       if (path === 'package.json') return JSON.stringify({version: '1.2.4'});
       if (path === 'CHANGELOG.md') return changelog;
       const asset = assetsForVersion(outputs.version).find(asset => path === `dist/${asset.name}`);

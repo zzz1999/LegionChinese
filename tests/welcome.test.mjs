@@ -62,6 +62,7 @@ test('upgrading a previously disabled installation removes the retired switch an
   assert(LegionChineseWelcomeFrame:IsShown() and LegionChineseSettings.enabled==nil)
   assert(LegionChineseSettings.welcomeSeen==true)
   LegionChineseDB.Quests[1]={Title="中文任务"}
+  AllowQuestSource(1,"Title","English title")
   QuestInfoTitleHeader.text="English title";hooks.QuestInfo_Display()
   assert(QuestInfoTitleHeader.text=="中文任务")
 `));
@@ -70,6 +71,7 @@ test('retired commands and aliases only show help and never change automatic tra
   LegionChineseSettings={enabled=false,welcomeSeen=true}
   local messages={};print=function(message) messages[#messages+1]=message end
   LegionChineseDB.Quests[1]={Title="中文任务"}
+  AllowQuestSource(1,"Title","English title")
   for _,command in ipairs({"on","off","开","关",""," OFF "}) do
     SlashCmdList.LEGIONCHINESE(command)
     assert(LegionChineseSettings.enabled==nil and LegionChineseSettings.welcomeSeen)

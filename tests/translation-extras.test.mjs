@@ -126,7 +126,7 @@ test('NPC say/yell filters never translate ordinary player chat',()=>run(`
   assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_SAY","Guide waves.","Guide"))==nil)
   assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_SAY","%s waves.","Guide"))==nil)
   D.Gossip[A.Fingerprint(A.Normalize("100% guaranteed."))]=3;D.Strings[3]="100%保证。"
-  assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_SAY","100% guaranteed.","Guide"))=="100%保证。")
+  assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_SAY","100% guaranteed.","Guide"))=="100%%保证。")
 `));
 
 test('offline semantic link dictionaries keep payloads and native Chinese API names',()=>run(`

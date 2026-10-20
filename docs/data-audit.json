@@ -1,5 +1,5 @@
 {
-  "version": "1.2.14",
+  "version": "1.2.15",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -78,6 +78,129 @@
       "contexts": 55,
       "pages": 51,
       "fingerprints": 55
+    },
+    "questSourceValidation": {
+      "quests": 22703,
+      "fields": 76801,
+      "fingerprints": 517819,
+      "unmatchedFields": [
+        {
+          "id": 44232,
+          "field": "Completion"
+        },
+        {
+          "id": 42479,
+          "field": "Completion"
+        },
+        {
+          "id": 42477,
+          "field": "Completion"
+        },
+        {
+          "id": 42477,
+          "field": "Progress"
+        },
+        {
+          "id": 42476,
+          "field": "Completion"
+        },
+        {
+          "id": 42476,
+          "field": "Progress"
+        },
+        {
+          "id": 42455,
+          "field": "Completion"
+        },
+        {
+          "id": 42455,
+          "field": "Progress"
+        },
+        {
+          "id": 42452,
+          "field": "Completion"
+        },
+        {
+          "id": 42452,
+          "field": "Progress"
+        },
+        {
+          "id": 41125,
+          "field": "Completion"
+        },
+        {
+          "id": 41124,
+          "field": "Completion"
+        },
+        {
+          "id": 41113,
+          "field": "Completion"
+        },
+        {
+          "id": 41112,
+          "field": "Completion"
+        },
+        {
+          "id": 41085,
+          "field": "Completion"
+        },
+        {
+          "id": 41036,
+          "field": "Completion"
+        },
+        {
+          "id": 41036,
+          "field": "Progress"
+        },
+        {
+          "id": 41035,
+          "field": "Completion"
+        },
+        {
+          "id": 40900,
+          "field": "Completion"
+        },
+        {
+          "id": 40838,
+          "field": "Completion"
+        },
+        {
+          "id": 40837,
+          "field": "Completion"
+        },
+        {
+          "id": 40835,
+          "field": "Completion"
+        },
+        {
+          "id": 40834,
+          "field": "Completion"
+        },
+        {
+          "id": 40753,
+          "field": "Completion"
+        },
+        {
+          "id": 12689,
+          "field": "Objectives"
+        },
+        {
+          "id": 12582,
+          "field": "Objectives"
+        },
+        {
+          "id": 258,
+          "field": "Description"
+        },
+        {
+          "id": 43879,
+          "field": "Completion"
+        },
+        {
+          "id": 39058,
+          "field": "CompletionLog"
+        }
+      ]
     },
     "Gossip": {
       "fingerprints": 1001350,
@@ -372,7 +495,7 @@
       "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
       "kind": "dialogue-world",
       "provenance": "community-mixed",
-      "afterLegionSkipped": 4958
+      "afterLegionSkipped": 5600
     },
     {
       "file": "TDB_hotfixes_735.26972_2025_05_11.sql",
@@ -962,6 +1085,25 @@
     "Data\\Quests_12.lua",
     "Data\\Quests_13.lua",
     "Data\\Quests_14.lua",
+    "Data\\QuestSources_01.lua",
+    "Data\\QuestSources_02.lua",
+    "Data\\QuestSources_03.lua",
+    "Data\\QuestSources_04.lua",
+    "Data\\QuestSources_05.lua",
+    "Data\\QuestSources_06.lua",
+    "Data\\QuestSources_07.lua",
+    "Data\\QuestSources_08.lua",
+    "Data\\QuestSources_09.lua",
+    "Data\\QuestSources_10.lua",
+    "Data\\QuestSources_11.lua",
+    "Data\\QuestSources_12.lua",
+    "Data\\QuestSources_13.lua",
+    "Data\\QuestSources_14.lua",
+    "Data\\QuestSources_15.lua",
+    "Data\\QuestSources_16.lua",
+    "Data\\QuestSources_17.lua",
+    "Data\\QuestSources_18.lua",
+    "Data\\QuestSources_19.lua",
     "Data\\Strings_01.lua",
     "Data\\Strings_02.lua",
     "Data\\Strings_03.lua",

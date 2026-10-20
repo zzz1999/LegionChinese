@@ -2,7 +2,7 @@
 ## Title: LegionChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 1.2.14
+## Version: 1.2.15
 ## X-Curse-Project-ID: 1750538
 ## SavedVariables: LegionChineseSettings
 
@@ -21,6 +21,25 @@ Data\Quests_11.lua
 Data\Quests_12.lua
 Data\Quests_13.lua
 Data\Quests_14.lua
+Data\QuestSources_01.lua
+Data\QuestSources_02.lua
+Data\QuestSources_03.lua
+Data\QuestSources_04.lua
+Data\QuestSources_05.lua
+Data\QuestSources_06.lua
+Data\QuestSources_07.lua
+Data\QuestSources_08.lua
+Data\QuestSources_09.lua
+Data\QuestSources_10.lua
+Data\QuestSources_11.lua
+Data\QuestSources_12.lua
+Data\QuestSources_13.lua
+Data\QuestSources_14.lua
+Data\QuestSources_15.lua
+Data\QuestSources_16.lua
+Data\QuestSources_17.lua
+Data\QuestSources_18.lua
+Data\QuestSources_19.lua
 Data\Strings_01.lua
 Data\Strings_02.lua
 Data\Strings_03.lua

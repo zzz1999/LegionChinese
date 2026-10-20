@@ -296,8 +296,13 @@ function A.TranslateMonsterMessage(_,event,message,author,...)
         local count;format,count=format:gsub("%%s","")
         if count>2 or format:find("%%") then return false end
     elseif translated:find("%s",1,true) then
-        -- Ordinary NPC speech is not passed through ChatFrame's emote formatter.
+        -- Ordinary speech has no speaker slots inside the message itself.
         return false
+    else
+        -- ChatFrame formats ALL monster messages, but only escapes percent
+        -- signs for player messages. Keep shared dialogue data literal and
+        -- escape it here, immediately before the native string.format call.
+        translated=translated:gsub("%%","%%%%")
     end
     local name=A.Find("NPCNames",author)
     if not safeChinese(name) then name=author end

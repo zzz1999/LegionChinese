@@ -1,6 +1,10 @@
 local A,D=LegionChinese,LegionChineseDB
 D.Quests[1]={Title="第一任务",Description="替代正文",Objectives="第一目标"}
 D.Quests[2]={Title="第二任务",Description="第二正文"}
+AllowQuestSource(1,"Title",QuestInfoTitleHeader.text)
+AllowQuestSource(1,"Objectives",QuestInfoObjectivesText.text)
+AllowQuestSource(2,"Title","Second title","Log title")
+AllowQuestSource(2,"Description","Second body")
 hooks.QuestInfo_Display()
 assert(QuestInfoTitleHeader.text=="第一任务")
 assert(QuestInfoDescriptionText.text=="原有中文正文" and QuestInfoDescriptionText.writes==0 and QuestInfoDescriptionText.fontChanges==0)
@@ -36,6 +40,7 @@ frames[1]:Fire("OnEvent","ADDON_LOADED","LegionChinese")
 assert(#ItemTextFrame.scriptHooks.OnEvent==1)
 assert(#QuestFrameProgressPanel.scriptHooks.OnShow==1)
 questID=1;D.Quests[1].Progress="尚未完成。"
+AllowQuestSource(1,"Progress","Progress body")
 progressTitle="原来的中文任务标题";progressText="Progress body"
 QuestFrameProgressPanel:Fire("OnShow")
 assert(QuestProgressTitleText.text==progressTitle and QuestProgressText.text=="尚未完成。")

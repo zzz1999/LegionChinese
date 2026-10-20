@@ -73,3 +73,10 @@ GreetingText=Widget("")
 ItemTextFrame=ScriptFrame();ItemTextFrame:SetScript("OnEvent",ItemTextFrame_OnEvent)
 QuestFrameProgressPanel=ScriptFrame();QuestFrameProgressPanel:SetScript("OnShow",QuestFrameProgressPanel_OnShow)
 QuestFrameGreetingPanel=ScriptFrame();QuestFrameGreetingPanel:SetScript("OnShow",QuestFrameGreetingPanel_OnShow)
+-- Explicit original text for synthetic quest fixtures; never authorize by ID alone.
+function AllowQuestSource(id,field,...)
+    local A,D=LegionChinese,LegionChineseDB
+    D.QuestSources[id]=D.QuestSources[id] or {}
+    D.QuestSources[id][field]=D.QuestSources[id][field] or {}
+    for _,text in ipairs({...}) do D.QuestSources[id][field][A.Fingerprint(A.Normalize(text))]=true end
+end

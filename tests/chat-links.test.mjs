@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {withQuestSources} from './quest-fixture.mjs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 function questRows(ids){
@@ -8,7 +9,7 @@ function questRows(ids){
   for(const file of fs.readdirSync(new URL('Data/',addon)).filter(f=>f.startsWith('Quests_'))){
     for(const line of fs.readFileSync(new URL('Data/'+file,addon),'utf8').split('\n')){
       const id=Number(line.match(/^D\.Quests\[(\d+)\]/)?.[1]);
-      if(wanted.delete(id))rows.push(line);
+      if(wanted.delete(id))rows.push(withQuestSources(line));
     }
   }
   assert.equal(wanted.size,0,'screenshot quests must be shipped');
@@ -416,6 +417,24 @@ test('known monster emotes use Chinese templates and NPC names without translati
   D.Strings[1]="%s充满恐惧地想要转身逃跑！"
   LegionChineseSettings={enabled=false}
   assert(select(2,A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_EMOTE","%s attempts to run away in fear!","NPC"))=="%s充满恐惧地想要转身逃跑！")
+`));
+
+test('native monster speech formatting safely displays literal percent signs without changing dialogue data',()=>run(`
+  local D=LegionChineseDB
+  local original="We have one quarter of our needed silithyst! Keep it up!"
+  D.Gossip[A.Fingerprint(A.Normalize(original))]=1
+  for _,translated in ipairs({"水晶尘的收集进度达到25%了！继续努力！","效率95%","中文%q和%d以及%%"}) do
+    D.Strings[1]=translated
+    for _,event in ipairs({"CHAT_MSG_MONSTER_SAY","CHAT_MSG_MONSTER_YELL","CHAT_MSG_MONSTER_WHISPER","CHAT_MSG_RAID_BOSS_WHISPER"}) do
+      local blocked,text,name,tail=A.TranslateMonsterMessage(nil,event,original,"Guide","tail")
+      assert(not blocked and name=="Guide" and tail=="tail")
+      assert(string.format("%s: "..text,name,name)=="Guide: "..translated)
+      assert(A.Translate("Gossip",original)==translated,"gossip windows need literal text")
+    end
+  end
+  D.Strings[1]="%s达到25%%了。"
+  local _,text,name=A.TranslateMonsterMessage(nil,"CHAT_MSG_MONSTER_EMOTE",original,"Guide")
+  assert(string.format(text,name,name)=="Guide达到25%了。")
 `));
 
 

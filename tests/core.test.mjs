@@ -88,6 +88,7 @@ test('Chinese text stays byte-identical in every category; Chinese player names 
 test('quest fields have independent fallback, numeric IDs work, and missing text stays intact',()=>{
   runLua(`local A=LegionChinese
     LegionChineseDB.Quests[42]={Title="任务标题",Description="你好，$n。你是一名$c。"}
+    LegionChineseDB.QuestSources[42]={Title={[A.Fingerprint(A.Normalize("English title"))]=true},Description={[A.Fingerprint(A.Normalize("Original"))]=true}}
     local t,c=A.Translate("Quests","English title","42","Title");assert(t=="任务标题" and c)
     t,c=A.Translate("Quests","Original",42,"Description");assert(t=="你好，Alice。你是一名法师。" and c)
     t,c=A.Translate("Quests","Untranslated reward",42,"Completion");assert(t=="Untranslated reward" and not c)

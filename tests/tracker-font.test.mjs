@@ -56,6 +56,7 @@ test('the screenshot return instruction translates in the sidebar with shipped d
     text,changed=A.Translate("Quests",changedSource,12680,"CompletionLog")
     assert(text==changedSource and not changed,"never guess a return destination from ID alone")
     D.Quests[12680].CompletionLog="已有军团再临交付译文。"
+    AllowQuestSource(12680,"CompletionLog",trackerCompletion)
     text=A.Translate("Quests",trackerCompletion,12680,"CompletionLog")
     assert(text=="已有军团再临交付译文。","current data takes precedence")
   `,{tracker:true,rows:quest+'\n'+shippedCompletion()});
@@ -63,6 +64,7 @@ test('the screenshot return instruction translates in the sidebar with shipped d
 
 test('tracker title and objective layout respects counters, colors, line limits and reuse',()=>run(`
   D.Quests[42]={Title="很长的中文任务标题"}
+  AllowQuestSource(42,"Title","Collect Arrows")
   D.Strings[1]="收集箭矢";D.Objectives[A.Fingerprint(A.Normalize("Arrows collected"))]=1
   local module=QUEST_TRACKER_MODULE
   local block=NewQuestBlock(42)
@@ -129,6 +131,7 @@ test('Chinese clients retain native font faces, sizes and flags for text, button
     function html:SetFont() self.calls=self.calls+1 end
     A.SetFont(html,true);assert(html.calls==0,"preserve every native HTML tag")
     D.Quests[42]={Title="中文任务"}
+    AllowQuestSource(42,"Title",widget.text)
     assert(A.Apply(widget,"Quests",42,"Title") and widget.fontChanges==0)
   end
 `));

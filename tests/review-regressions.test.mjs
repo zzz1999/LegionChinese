@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {withQuestSources} from './quest-fixture.mjs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {normalize,fingerprint,luaString,supportsTokens} from '../scripts/text.mjs';
 
@@ -34,7 +35,7 @@ function runLua(code,rows=''){
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end
       function UnitSex() return playerSex end`);
-    execute('local D=LegionChineseDB\n'+rows);
+    execute('local D=LegionChineseDB\n'+rows.split('\n').map(withQuestSources).join('\n'));
     execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
     execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
@@ -111,6 +112,8 @@ test('quest title translation preserves level, party count, quest ID, failure st
       assert(QuestInfoTitleHeader.text=="阿彻鲁斯战马 - ("..failed..")",failed)
     end
     raw="Escape (Now) [2].";QuestInfoTitleHeader.text=raw.." - (Failed)"
+    hooks.QuestInfo_Display();assert(QuestInfoTitleHeader.text==raw.." - (Failed)","changed server title")
+    AllowQuestSource(12680,"Title",raw)
     hooks.QuestInfo_Display();assert(QuestInfoTitleHeader.text=="阿彻鲁斯战马 - (Failed)","literal title matching")
     QuestInfoTitleHeader.text="Different quest title - (Failed)"
     hooks.QuestInfo_Display();assert(QuestInfoTitleHeader.text=="Different quest title - (Failed)","stale context")

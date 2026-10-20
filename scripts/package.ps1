@@ -2,7 +2,8 @@ param(
     [ValidatePattern('^[0-9A-Za-z][0-9A-Za-z.+-]*$')]
     [string]$Version,
     [ValidatePattern('^[0-9A-Za-z][0-9A-Za-z._+-]*\.zip$')]
-    [string]$ArchiveName
+    [string]$ArchiveName,
+    [string]$ReleaseNotesPath
 )
 
 $ErrorActionPreference = 'Stop'
@@ -13,11 +14,18 @@ if (-not $Version) {
     $Version = (Get-Content -LiteralPath (Join-Path $taskRoot 'package.json') -Raw | ConvertFrom-Json).version
 }
 if (-not $ArchiveName) { $ArchiveName = "LegionChinese-$Version.zip" }
+# Resolve actual-version notes before touching an existing archive. An automatic
+# version bump must supply the same notes that will appear on GitHub.
+$taskNoteArgs = @((Join-Path $PSScriptRoot 'changelog.mjs'), '--package', $Version)
+if ($ReleaseNotesPath) { $taskNoteArgs += $ReleaseNotesPath }
+$taskNotes = & node @taskNoteArgs
+if ($LASTEXITCODE -ne 0) { throw "Could not generate release notes for $Version." }
+$taskNotes = ($taskNotes -join "`n") + "`n"
 New-Item -ItemType Directory -Path $taskDist -Force | Out-Null
 $taskZip = Join-Path $taskDist $ArchiveName
 Compress-Archive -LiteralPath $taskAddon -DestinationPath $taskZip -Force
 
-# Stamp the packaged TOC only; the tracked addon stays unchanged.
+# Stamp both packaged files; the tracked addon stays unchanged.
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $taskArchive = [System.IO.Compression.ZipFile]::Open($taskZip, [System.IO.Compression.ZipArchiveMode]::Update)
 try {
@@ -33,6 +41,12 @@ try {
     $taskEntry = $taskArchive.CreateEntry('LegionChinese/LegionChinese.toc')
     $taskWriter = [System.IO.StreamWriter]::new($taskEntry.Open(), [System.Text.UTF8Encoding]::new($false))
     try { $taskWriter.Write($taskToc) } finally { $taskWriter.Dispose() }
+    $taskNotesEntry = $taskArchive.GetEntry('LegionChinese/Changelog.lua')
+    if (-not $taskNotesEntry) { throw 'The archive is missing LegionChinese/Changelog.lua.' }
+    $taskNotesEntry.Delete()
+    $taskNotesEntry = $taskArchive.CreateEntry('LegionChinese/Changelog.lua')
+    $taskWriter = [System.IO.StreamWriter]::new($taskNotesEntry.Open(), [System.Text.UTF8Encoding]::new($false))
+    try { $taskWriter.Write($taskNotes) } finally { $taskWriter.Dispose() }
 } finally {
     $taskArchive.Dispose()
 }

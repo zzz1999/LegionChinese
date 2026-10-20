@@ -33,7 +33,7 @@ export function compatibleFieldAlias(target,source,quest,field,record){
     &&compatibleSupplement(target,{...quest,id:Number(target.ID)},field,record);
 }
 
-export function mergeQuestSupplement({root,manifest,baseQuests,questData,titles,gossip,completions}){
+export function mergeQuestSupplement({root,manifest,baseQuests,questData,titles,gossip,completions,onField}){
   const spec=manifest.questSupplement;
   const bytes=fs.readFileSync(path.join(root,spec.file));
   if(crypto.createHash('sha256').update(bytes).digest('hex')!==spec.sha256)throw Error('Quest supplement checksum mismatch');
@@ -44,6 +44,7 @@ export function mergeQuestSupplement({root,manifest,baseQuests,questData,titles,
   const seen=new Set(),affected=new Set();
   function addField(id,field,record,extra={}){
     const key=String(id),row=questData.get(key)??{};
+    onField?.(id,field,record);
     // Fill holes only, including preserving existing Traditional Chinese.
     if(usableChinese(row[field])){audit.preserved++;return;}
     row[field]=record.text;questData.set(key,row);affected.add(id);audit.fields++;

@@ -17,6 +17,7 @@ import {buildExtraClientData} from './extra-client-data.mjs';
 import {buildBookContexts} from './book-contexts.mjs';
 import {buildArtifacts} from './artifacts.mjs';
 import {writeChangelog} from './changelog.mjs';
+import {QuestSourceIndex,questSourceTables} from './quest-sources.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const input=path.resolve(process.argv[2]??path.join(root,'.cache'));
@@ -29,11 +30,13 @@ const legionQuests=new Map(),legacyQuests=new Map(),legacyQuestLocales=[];
 const worldObjectRows=[];
 const npcNameRows=new Map();
 const npcRows=new Map(),baseObjectives=new Map();
+const questSources=new QuestSourceIndex();
 const selected=new Set(['quest_template','quest_template_locale','quest_objectives','quest_objectives_locale',
-  'quest_offer_reward_locale','quest_request_items_locale','page_text','page_text_locale',
+  'quest_offer_reward','quest_request_items','quest_offer_reward_locale','quest_request_items_locale','page_text','page_text_locale',
   'npc_text','gossip_menu_option','gossip_menu_option_locale','creature_text','gameobject_template','gameobject_template_locale',
   'creature_template','creature_template_locale']);
 function collect(table,record,update,source){
+  questSources.collect(table,record,source);
   const locale=localeOf(record);
   if(table==='creature_template'||table==='creature_template_locale'){
     if(source.kind!=='world'||Math.abs(Number(record.VerifiedBuild))>LEGION_BUILD)return;
@@ -123,12 +126,15 @@ for(const source of manifest.sql){
   const target=source.kind==='pages'?new Set(['page_text']):source.kind==='patch'?new Set([...selected].filter(t=>t.endsWith('_locale')))
     :source.kind==='gossip-patch'?new Set(['gossip_menu_option_locale'])
     :source.kind==='dialogue-world'?new Set(['page_text','page_text_locale','gossip_menu_option','gossip_menu_option_locale','npc_text',
-      'quest_offer_reward_locale','quest_request_items_locale','gameobject_template','gameobject_template_locale']):selected;
+      ...questSourceTables,'gameobject_template','gameobject_template_locale']):selected;
   await readSQL(file,target,(table,r,update)=>{
     if(source.kind==='dialogue-world'&&Number(r.VerifiedBuild)>LEGION_BUILD){audit.afterLegionSkipped++;return;}
     if(table==='page_text'&&['world','dialogue-world'].includes(source.kind))legionPages.set(idOf(r),r);
     if(table==='quest_template'&&source.kind==='world'&&Number(r.VerifiedBuild)<=LEGION_BUILD)legionQuests.set(idOf(r),r);
-    collect(table,r,update,source);
+    // Journal fields from the second database supply matching keys only;
+    // retain the established Chinese quest selection and title priorities.
+    if(source.kind==='dialogue-world'&&['quest_template','quest_template_locale'].includes(table))questSources.collect(table,r,source);
+    else collect(table,r,update,source);
   },schemas);
 }
 const byBroadcast={zhCN:new Map(),zhTW:new Map()};
@@ -183,7 +189,8 @@ for(const [id,localized] of questVariants){
   }
   for(const source of questTitles.get(id)??[])for(const locale of CHINESE_LOCALES)titles.add(locale,source,localized[locale]?.Title);
 }
-const supplement=mergeQuestSupplement({root,manifest,baseQuests:legionQuests,questData,titles,gossip,completions});
+const supplement=mergeQuestSupplement({root,manifest,baseQuests:legionQuests,questData,titles,gossip,completions,
+  onField:(id,field,record)=>questSources.addReviewed(id,field,record.english)});
 for(const record of supplement.records){
   counts.questFields[record.field]=(counts.questFields[record.field]??0)+1;
   if(record.locale==='zhTW')counts.questTraditionalFields[record.field]=(counts.questTraditionalFields[record.field]??0)+1;
@@ -197,7 +204,8 @@ if(crypto.createHash('sha256').update(dialogueBytes).digest('hex')!==dialogueSpe
 const dialogueSnapshot=JSON.parse(dialogueBytes);
 const reviewBytes=fs.readFileSync(path.join(root,dialogueSnapshot.reviews.file));
 if(crypto.createHash('sha256').update(reviewBytes).digest('hex')!==dialogueSnapshot.reviews.sha256)throw Error('Dialogue review checksum mismatch');
-const {audit:reviewedAudit,scopes:reviewedDialogue}=importReviewedDialogue(dialogueSnapshot,legionQuests,questData);
+const {audit:reviewedAudit,scopes:reviewedDialogue}=importReviewedDialogue(dialogueSnapshot,legionQuests,questData,
+  (id,field,original)=>questSources.addReviewed(id,field,original));
 const extras=importTranslationExtras({root,manifest,baseQuests:legionQuests,baseObjectives,questData});
 // Dedicated reviewed dialogue takes precedence over general archive supplements.
 const extraScopes=extras.scopes.filter(s=>!reviewedDialogue.some(d=>d.id===s.id&&d.field===s.field));
@@ -307,6 +315,11 @@ function writeChunks(name,rows,make){
   for(const row of rows){const line=make(row);if(size+Buffer.byteLength(line)>900000)flush();lines.push(line);size+=Buffer.byteLength(line)+1;}flush();
 }
 writeChunks('Quests',[...questData].sort((a,b)=>+a[0]-b[0]),([id,r])=>'D.Quests['+id+']={'+Object.entries(r).map(([k,v])=>k+'='+luaString(v)).join(',')+'}');
+const sourceIndex=questSources.finish(legionQuests,questData);
+writeChunks('QuestSources',[...sourceIndex.rows].sort((a,b)=>+a[0]-b[0]),([id,fields])=>
+  'D.QuestSources['+id+']={'+Object.entries(fields).map(([field,keys])=>
+    field+'={'+keys.map(key=>'['+luaString(key)+']=true').join(',')+'}').join(',')+'}');
+counts.questSourceValidation=sourceIndex.audit;
 const strings=[],stringIDs=new Map();
 for(const index of [gossip,books,titles,objectives,completions,npcNames,...reviewedDialogue.map(s=>s.index),...extraScopes.map(s=>s.index),...bookContexts.scopes.map(s=>s.index)])for(const text of index.entries.values())if(!stringIDs.has(text)){stringIDs.set(text,strings.length+1);strings.push(text);}
 writeChunks('Strings',strings.map((s,i)=>[i+1,s]),([id,s])=>'D.Strings['+id+']='+luaString(s));
@@ -357,7 +370,7 @@ const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.
-for(const file of fs.readdirSync(output))if(/^(Quests|Strings|Gossip|Books|Titles|Objectives|Completions|NPCNames|QuestDialogue|QuestExtras|BookContexts)_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));
+for(const file of fs.readdirSync(output))if(/^(Quests|QuestSources|Strings|Gossip|Books|Titles|Objectives|Completions|NPCNames|QuestDialogue|QuestExtras|BookContexts)_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));
 const audit={version,counts,sources:sourceAudit,generatedFiles:generated};
 fs.mkdirSync(path.join(root,'docs'),{recursive:true});
 fs.writeFileSync(path.join(root,'docs','quest-supplement-audit.json'),JSON.stringify(supplement,null,2)+'\n');

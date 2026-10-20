@@ -29,6 +29,7 @@ for(const file of files){
   if(file.startsWith('Data/'))walk(ast);
 }
 const listed=new Set(files);
+if(!files.some(file=>/^Data\/QuestSources_\d+\.lua$/.test(file)))throw Error('Missing quest source validation resources.');
 if(!listed.has('Changelog.lua')||files.indexOf('Changelog.lua')>=files.indexOf('Welcome.lua'))throw Error('Changelog.lua must load before Welcome.lua.');
 const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;
 const expectedNotes=renderChangelog(fs.readFileSync(path.join(root,'CHANGELOG.md'),'utf8'),version);

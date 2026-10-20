@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {withQuestSources} from './quest-fixture.mjs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {normalize,fingerprint,luaString,supportsTokens,TextIndex} from '../scripts/text.mjs';
 import {chooseChinese,chooseChineseFields} from '../scripts/fallback.mjs';
@@ -31,7 +32,7 @@ function runLua(code,rows=''){
       function UnitName() return playerName end
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end`);
-    execute('local D=LegionChineseDB\n'+rows);
+    execute('local D=LegionChineseDB\n'+rows.split('\n').map(withQuestSources).join('\n'));
     execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
     execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));

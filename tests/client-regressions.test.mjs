@@ -3,11 +3,12 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {fingerprint,normalize,luaString} from '../scripts/text.mjs';
+import {withQuestSources} from './quest-fixture.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
 const files=fs.readdirSync(data);
-const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
+const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n')).map(withQuestSources);
 const bookText='Welcome to the Scourge. Now that you have entered your true service, you may find immense relief in your liberation from various mortal inconveniences. No bothersome sleeping to take up your time anymore, nor any great need for shelter from the elements, and you are even free from the mild irritation of cutting hair and nails! How delightful!';
 
 test('Shang Xi screenshot dialogue translates with a Chinese player name through native progress and reward handlers',()=>{
@@ -114,6 +115,7 @@ test('every shipped batch dialogue uses its quest and stage, with Traditional fa
           assert(A.Translate("Quests",chinese,${candidate.id},${luaString(candidate.field)})==chinese,"existing Chinese")
         end
         D.Quests[${candidate.id}]={${candidate.field}="已有的优先译文。"}
+        D.QuestSources[${candidate.id}]={${candidate.field}={[A.Fingerprint(A.Normalize(original))]=true}}
         assert(A.Translate("Quests",original,${candidate.id},${luaString(candidate.field)})=="已有的优先译文。","existing source wins")
         D.Quests[${candidate.id}]=nil
       `);

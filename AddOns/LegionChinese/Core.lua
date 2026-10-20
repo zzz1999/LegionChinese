@@ -180,7 +180,7 @@ function A.Fingerprint(text)
     return key
 end
 
-local function findDynamic(index,text)
+local function findDynamic(index,text,values)
     -- Each occurrence may be either a substituted player value or an ordinary
     -- word. For example only the first "mage" in "Hello, Mage; ask a mage"
     -- might be $C. Never replace all occurrences and guess a translation.
@@ -219,8 +219,8 @@ local function findDynamic(index,text)
             -- uncertain, so it must preserve the original even after a hit.
             if leaves>256 or bytes>262144 then exhausted=true;return end
             local id=index[A.Fingerprint(normalized)]
-            if id and D.Strings[id] then
-                if found and D.Strings[found]~=D.Strings[id] then conflict=true else found=id end
+            if id and values[id] then
+                if found and values[found]~=values[id] then conflict=true else found=id end
             end
             return
         end
@@ -234,11 +234,18 @@ local function findDynamic(index,text)
     if not conflict and not exhausted then return found end
 end
 
-local function findText(index, text)
+local function findText(index, text, values)
     if type(text)~="string" or text=="" or A.IsChinese(text) or not index then return nil end
+    values=values or D.Strings
     local id=index[A.Fingerprint(A.Normalize(text,false))]
-    if not id then id=findDynamic(index,text) end
-    return id and D.Strings[id] or nil
+    if not id then id=findDynamic(index,text,values) end
+    return id and values[id] or nil
+end
+
+local acceptedQuestSource={[true]=true}
+function A.MatchesQuestSource(id,field,text)
+    local quest=D.QuestSources[tonumber(id)]
+    return findText(quest and quest[field],text,acceptedQuestSource)==true
 end
 
 function A.Find(category, text)
@@ -298,7 +305,9 @@ function A.Translate(category, original, questID, field)
         return original,false
     elseif category=="Quests" then
         local record=D.Quests[tonumber(questID)]
-        replacement=record and record[field]
+        if record and record[field] and A.MatchesQuestSource(questID,field,original) then
+            replacement=record[field]
+        end
         if not replacement and field=="Title" then replacement=A.Find("Titles",original) end
         if not replacement and field=="CompletionLog" then replacement=A.Find("Completions",original) end
         if not replacement and (field=="Progress" or field=="Completion") then

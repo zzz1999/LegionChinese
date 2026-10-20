@@ -130,7 +130,29 @@ function buildNumber(release) {
     ?? /^- 构建记录：\[#(\d+)\]/m.exec(release?.body ?? '')?.[1] ?? 0);
 }
 
-export async function publishRelease({github, context, version, assets, changelog = ''}) {
+function releaseNotesFromBody(body) {
+  const match=/^## 本次更新\r?\n([\s\S]*?)^## 安装与更新\r?$/m.exec(body ?? '');
+  if(!match?.[1].trim())throw new Error('Existing release has no recognizable update notes.');
+  return match[1].trim();
+}
+
+// Resolve once before packaging, then feed the exact same notes to both the
+// in-game changelog and the release body. Draft retries retain their notes.
+export async function prepareReleaseNotes({github,context,version,changelog=''}){
+  stableVersion(version);
+  const api=github.rest.repos,repo=context.repo,tag=`v${version}`;
+  let existing=await optionalRelease(()=>api.getReleaseByTag({...repo,tag}));
+  if(!existing)existing=(await collect(github,api.listReleases,repo)).find(r=>r.tag_name===tag);
+  if(existing){
+    if(existing.target_commitish!==context.sha)throw new Error(`${tag} already belongs to another commit.`);
+    return releaseNotesFromBody(existing.body);
+  }
+  const previous=await optionalRelease(()=>api.getLatestRelease(repo));
+  const tags=await collect(github,api.listTags,repo);
+  return describeChanges({github,context,version,changelog,previous,tags});
+}
+
+export async function publishRelease({github, context, version, assets, changelog = '', releaseNotes}) {
   stableVersion(version);
   const repo = context.repo;
   const api = github.rest.repos;
@@ -150,11 +172,15 @@ export async function publishRelease({github, context, version, assets, changelo
   }
   // Rerunning a successful build must not overwrite an already published package.
   if (release && !release.draft) return release;
+  if(releaseNotes!==undefined&&(typeof releaseNotes!=='string'||!releaseNotes.trim()))
+    throw new Error('Prepared release notes must not be empty.');
+  if(release&&releaseNotes!==undefined&&releaseNotesFromBody(release.body)!==releaseNotes.trim())
+    throw new Error('Packaged notes differ from the existing draft release.');
 
   const previous = await optionalRelease(() => api.getLatestRelease(repo));
   if (await isSuperseded({github, context, tags, latest: previous})) return null;
   if (!release) {
-    const notes = await describeChanges({github, context, version, changelog, previous, tags});
+    const notes = releaseNotes ?? await describeChanges({github, context, version, changelog, previous, tags});
     const base = `${context.serverUrl}/${repo.owner}/${repo.repo}`;
     release = (await api.createRelease({
       ...repo,

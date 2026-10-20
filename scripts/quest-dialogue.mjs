@@ -88,9 +88,9 @@ export function collectReviewedDialogue({localeRows,legacyQuests,baseQuests,refe
   return {quests:[...quests.values()].sort((a,b)=>a.id-b.id),verification};
 }
 
-// Keep supplementary dialogue separate from ID-only translations, including
+// Keep supplementary dialogue separate from base quest translations, including
 // its quest and stage. A common phrase must never leak to an unrelated quest.
-export function importReviewedDialogue(snapshot,baseQuests,existingQuests=new Map()){
+export function importReviewedDialogue(snapshot,baseQuests,existingQuests=new Map(),onOriginal){
   if(snapshot.schemaVersion!==2||snapshot.targetBuild!==LEGION_BUILD
     ||snapshot.provenance!=='reviewed-legacy-dialogue')throw Error('Invalid reviewed dialogue snapshot');
   const audit={candidates:[],rejected:0,alreadyCoveredFields:0,fields:0,quests:0,byField:{},byLocale:{zhCN:0,zhTW:0}},seen=new Set(),scopes=[];
@@ -125,6 +125,7 @@ export function importReviewedDialogue(snapshot,baseQuests,existingQuests=new Ma
         candidates.push(candidate);audit.candidates.push(candidate);
       }
       index.finish();
+      if(candidates.length)onOriginal?.(quest.id,field,record.english);
       for(const candidate of candidates){
         candidate.selected=!covered&&candidate.fingerprints.every(key=>index.localeFor(key)===candidate.locale
           &&index.entries.get(key)===record.locales[candidate.locale].text);
