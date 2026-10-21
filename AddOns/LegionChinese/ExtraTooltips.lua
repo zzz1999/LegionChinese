@@ -52,6 +52,11 @@ function A.ResolveDynamicSpellText(id,field,source)
     return color and source:sub(-2)=="|r" and color..translated.."|r" or translated
 end
 
+function A.ResolveSpellText(id,field,source,includeRank)
+    local row=D.SpellTexts[id]
+    return row and (matchText(source,row[field]) or includeRank and matchText(source,row.Rank)) or A.ResolveDynamicSpellText(id,field,source)
+end
+
 function A.UpdateExtraTooltip(self,kind,id)
     if not self or (self.IsForbidden and self:IsForbidden()) then return end
     local state=states[self]
@@ -81,8 +86,7 @@ function A.UpdateExtraTooltip(self,kind,id)
                 elseif i==1 then text=A.ResolveSpellName(source,id)
                 else
                     local field=kind=="aura" and "Aura" or "Description"
-                    text=spell and (matchText(source,spell[field]) or matchText(source,spell.Rank))
-                    text=text or A.ResolveDynamicSpellText(id,field,source)
+                    text=A.ResolveSpellText(id,field,source,true)
                 end
                 previous={widget=widget,source=source,text=text};state.lines[i]=previous
             end

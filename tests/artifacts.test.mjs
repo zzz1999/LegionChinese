@@ -142,6 +142,19 @@ test('all accepted descriptions are reachable; rejected fragments and modified o
   }).join('')
 ));
 
+test('SimpleHTML choice descriptions without GetText retain their SetText translation before native layout',()=>run(`
+  LoadArtifactFrames()
+  local option=QuestChoiceFrame.Options[1]
+  option.OptionText.GetText=nil
+  choiceInfo={id=265,question="Which weapon should we pursue first?",options={{id=584,
+    header="Arcane",answer="Select",description=${luaString(arcane.fields.Description.original)}}}}
+  frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_QuestChoice")
+  QuestChoiceFrame:Update()
+  assert(option.OptionText.text==${luaString(arcane.fields.Description.text)})
+  assert(QuestChoiceFrame.height==480+(136+180)-278)
+  QuestChoiceFrame:Update();assert(not QuestChoiceFrame.hasPendingUpdate)
+`));
+
 test('artifact appearances reuse pool slots without carrying old names or unlock conditions',()=>run(`
   LoadArtifactFrames();frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_ArtifactUI")
   local tab=ArtifactFrame.AppearancesTab

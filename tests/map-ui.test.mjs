@@ -36,6 +36,27 @@ function titleFixture(){
   return shippedTitle='local D=LegionChineseDB\n'+titleLine+'\n'+valueLine;
 }
 
+let shippedSystemAnswer;
+function systemAnswerFixture(){
+  if(shippedSystemAnswer)return shippedSystemAnswer;
+  const dir=new URL('Data/',addon),files=listFixtureFiles(dir);
+  const prefix='D.CatalogTexts.System["'+fingerprint(normalize('For the Horde!'))+'"]=';
+  let entry;
+  for(const file of files.filter(f=>f.startsWith('SystemTexts_'))){
+    entry=readFixtureFile(new URL(file,dir),'utf8').split('\n').find(line=>line.startsWith(prefix));
+    if(entry)break;
+  }
+  assert.ok(entry,'the button must reuse a shipped native UI translation');
+  const id=entry.match(/=(\d+)$/)?.[1];assert.ok(id);
+  let value;
+  for(const file of files.filter(f=>f.startsWith('CatalogStrings_'))){
+    value=readFixtureFile(new URL(file,dir),'utf8').split('\n').find(line=>line.startsWith('D.CatalogStrings['+id+']='));
+    if(value)break;
+  }
+  assert.ok(value?.includes('为了部落！'));
+  return shippedSystemAnswer='local D=LegionChineseDB\nD.CatalogTexts.System=D.CatalogTexts.System or {}\n'+entry+'\n'+value;
+}
+
 function run(code,before=''){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{
@@ -45,7 +66,7 @@ function run(code,before=''){
   try{
     for(const file of ['Bootstrap.lua','Data/QuestBoards.lua','Core.lua','ClientNames.lua','QuestBoards.lua','Artifacts.lua','MapTooltips.lua'])
       execute(readFixtureFile(new URL(file,addon),'utf8'));
-    execute(titleFixture());
+    execute(titleFixture());execute(systemAnswerFixture());
     for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','artifact-fixture.lua','map-ui-fixture.lua'])
       execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
     execute(before);execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
@@ -155,7 +176,7 @@ test('board headers translate through the original choice UI while all unverifie
   for i=1,3 do frames[1]:Fire("OnEvent","ADDON_LOADED","OtherAddon") end
   local calls=0;local resolve=A.ResolveQuestBoardHeader
   A.ResolveQuestBoardHeader=function(...) calls=calls+1;return resolve(...) end
-  QuestChoiceFrame:Update();assert(calls==3)
+  QuestChoiceFrame:Update();assert(calls==3,"one lookup per foreign header: "..calls)
   assert(not QuestChoiceFrame.hasPendingUpdate)
 `));
 
@@ -175,9 +196,108 @@ test('board lookup checks the live context and never imports different descripti
   assert(A.ResolveQuestBoardHeader(999,101,"A custom region")==nil)
 `));
 
+const reportedBoard=`choiceInfo={id=999,question=${luaString(review.question)},options={
+  {id=101,header="Ashenvale",answer="Reinforce the Rampart",description="The might of Ashenvale is bearing down on our forces at the Mor'shan Ramparts!"},
+  {id=102,header="Stonetalon Mountains",answer="For the Horde!",description="The Alliance seek to control more territory in Kalimdor."},
+  {id=103,header="Silverpine Forest",answer="Defeat the Gilneans",description="Uncollected Silverpine description"}
+}}`;
+
+test('reported board names and its verified native UI button translate while unknown prose and buttons remain intact',()=>run(`
+  LoadArtifactFrames();frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_QuestChoice")
+  ${reportedBoard}
+  for i=1,3 do
+    QuestChoiceFrame:Update()
+    for index,text in ipairs({"灰谷","石爪山脉","银松森林"})do
+      local option=QuestChoiceFrame.Options[index]
+      assert(option.Header.Text:GetText()==text and option.optID==choiceInfo.options[index].id)
+      assert(option.OptionText:GetText()==choiceInfo.options[index].description)
+      assert(option.OptionButton:GetText()==(index==2 and "为了部落！" or choiceInfo.options[index].answer))
+    end
+  end
+  assert(QuestChoiceFrame.QuestionText:GetText()==choiceInfo.question)
+`));
+
+test('board answers require the complete live question, option identity, reviewed region and current button text',()=>run(`
+  ${reportedBoard}
+  assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")=="为了部落！")
+  assert(A.ResolveQuestBoardAnswer(998,102,"For the Horde!")==nil)
+  assert(A.ResolveQuestBoardAnswer(999,101,"For the Horde!")==nil)
+  assert(A.ResolveQuestBoardAnswer(999,nil,"For the Horde!")==nil)
+  assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde! Custom condition.")==nil)
+  assert(A.ResolveQuestBoardAnswer(999,102,"为了部落！")==nil)
+  choiceInfo.options[2].header="Server custom region"
+  assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")==nil)
+  choiceInfo.options[2].header="Stonetalon Mountains"
+  choiceInfo.options[2].answer="Changed native answer"
+  assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")==nil)
+  choiceInfo.options[2].answer="For the Horde!";choiceInfo.question="A different choice"
+  assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")==nil)
+`));
+
+test('the reused board answer agrees with the pinned same-build client source and unsupported text stays unchanged',()=>{
+  const bytes=fs.readFileSync(new URL(manifest.localClientSnapshot.file,root));
+  assert.equal(hash(bytes),manifest.localClientSnapshot.sha256);
+  const snapshot=JSON.parse(bytes);
+  assert.equal(snapshot.build,BOARD_BUILD);
+  const row=snapshot.pairs.find(p=>p.table==='GlobalStrings'&&p.id===22583&&p.field==='TagText_lang'&&p.locale==='zhCN');
+  assert.equal(row?.source,'For the Horde!');assert.equal(row.text,'为了部落！');
+  run(`
+    ${reportedBoard}
+    local index=D.CatalogTexts.System;local key=A.Fingerprint(A.Normalize("For the Horde!",false));local id=index[key]
+    local calls=0;local info=GetQuestChoiceInfo
+    GetQuestChoiceInfo=function(...)calls=calls+1;return info(...)end
+    assert(A.ResolveQuestBoardAnswer(999,101,"Reinforce the Rampart")==nil and calls==0)
+    D.CatalogStrings[id]="无法解析 $s1";assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")==nil)
+    index[key]=nil;assert(A.ResolveQuestBoardAnswer(999,102,"For the Horde!")==nil)
+  `);
+});
+
+test('already displayed and recycled board buttons update without changing IDs, handlers or unrelated choices',()=>run(`
+  LoadArtifactFrames();${reportedBoard};QuestChoiceFrame:Update()
+  local button=QuestChoiceFrame.Options[2].OptionButton
+  local action=function()end;button.OnClick=action
+  assert(button:GetText()=="For the Horde!")
+  frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_QuestChoice")
+  assert(button:GetText()=="为了部落！" and button.OnClick==action and QuestChoiceFrame.Options[2].optID==102)
+  choiceInfo.options[2].answer="Server custom answer";QuestChoiceFrame:Update()
+  assert(button:GetText()=="Server custom answer")
+  choiceInfo.options[2].answer="原有繁體中文";QuestChoiceFrame:Update()
+  assert(button:GetText()=="原有繁體中文")
+  choiceInfo.options[2].answer="For the Horde!";choiceInfo.question="An unrelated choice";QuestChoiceFrame:Update()
+  assert(button:GetText()=="For the Horde!")
+`));
+
+test('an already populated board is translated when bindings arrive after its initial display',()=>run(`
+  LoadArtifactFrames();${reportedBoard}
+  QuestChoiceFrame:Update()
+  assert(QuestChoiceFrame.Options[3].Header.Text:GetText()=="Silverpine Forest")
+  frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_QuestChoice")
+  assert(QuestChoiceFrame.Options[1].Header.Text:GetText()=="灰谷")
+  assert(QuestChoiceFrame.Options[3].Header.Text:GetText()=="银松森林")
+  local writes=QuestChoiceFrame.Options[3].Header.Text.writes
+  local _,method,script=A.Hooks.ForFeature("artifacts")
+  for i=1,10 do A.InstallArtifacts(method,script)end
+  assert(QuestChoiceFrame.Options[3].Header.Text.writes==writes)
+`));
+
+test('board child creation inside Update is repaired without a further addon load or a repeated layout loop',()=>run(`
+  LoadArtifactFrames();${reportedBoard}
+  local choice=QuestChoiceFrame;local native=choice.Update
+  function choice:Update()
+    if not self.Options[1].Header.Text then self.Options[1].Header.Text=Widget("") end
+    return native(self)
+  end
+  choice.Options[1].Header.Text=nil
+  frames[1]:Fire("OnEvent","ADDON_LOADED","Blizzard_QuestChoice")
+  choice:Update();assert(choice.Options[1].Header.Text:GetText()=="灰谷")
+  choice:Update();assert(not choice.hasPendingUpdate)
+  choiceInfo.question="Different server choice";choice:Update()
+  assert(choice.Options[1].Header.Text:GetText()=="Ashenvale")
+`));
+
 test('board audit keeps only verified names and records all other reported fields as deferred',()=>{
   const audit=JSON.parse(readFixtureFile(new URL('docs/map-ui-audit.json',root)));
-  assert.deepEqual(audit.headers.map(r=>r.text),['艾萨拉','北贫瘠之地','银松森林']);
+  assert.deepEqual(audit.headers.map(r=>r.text),['艾萨拉','北贫瘠之地','银松森林','灰谷','石爪山脉']);
   assert.equal(audit.deferred.length,8);
   assert.ok(audit.deferred.some(r=>r.original==='Orgrimmar Portals'));
   assert.equal(hash(readFixtureFile(new URL(manifest.questBoardReviews.file,root))),manifest.questBoardReviews.sha256);

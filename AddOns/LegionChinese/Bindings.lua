@@ -2,6 +2,7 @@
 local A=LegionChinese
 if A.BindCatalog then return end
 local writing=setmetatable({}, {__mode="k"})
+local poolBindings=setmetatable({}, {__mode="k"})
 function A.IsWriting(widget) return writing[widget] end
 
 function A.IsTextWidget(widget)
@@ -55,15 +56,47 @@ end
 
 function A.BindCatalogPool(hookMethod,pool,bind,slot)
     if not pool or pool.IsForbidden and pool:IsForbidden() or type(pool.EnumerateActive)~="function" then return end
-    local function refresh()
-        for object in pool:EnumerateActive() do
-            if object and not (object.IsForbidden and object:IsForbidden()) then bind(object) end
+    local methods=poolBindings[pool]
+    if not methods then methods={};poolBindings[pool]=methods end
+    local slots=methods[hookMethod]
+    if not slots then slots={};methods[hookMethod]=slots end
+    local key=slot or false
+    local state=slots[key]
+    if not state then
+        state={seen=setmetatable({}, {__mode="k"})};slots[key]=state
+        state.object=function(_,object)
+            if object and not state.seen[object] and not (object.IsForbidden and object:IsForbidden()) then
+                state.bind(object);state.seen[object]=true
+            end
+        end
+        state.acquire=function()
+            if state.native and pool.Acquire==state.acquireMethod and pool.resetterFunc==state.resetterMethod then return end
+            -- Compatibility pools without the native reset callback still
+            -- discover new objects, but never repeat existing registrations.
+            for object in pool:EnumerateActive() do state.object(pool,object) end
         end
     end
-    -- Acquire has registered its object before returning to the caller. Bind
-    -- there, so the caller's SetText/layout uses Chinese on the first display.
-    hookMethod(pool,"Acquire",refresh,slot)
-    refresh()
+    state.bind=bind
+    local current=pool.Acquire
+    state.native=type(pool.inactiveObjects)=="table" and type(pool.activeObjects)=="table" and type(pool.resetterFunc)=="function"
+        and type(pool.EnumerateInactive)=="function"
+        and (state.native and current==state.acquireMethod
+            or ObjectPoolMixin and current==ObjectPoolMixin.Acquire or FramePoolMixin and current==FramePoolMixin.Acquire) or false
+    if state.native then
+        -- 7.3.5 calls resetterFunc(pool, newObject) inside Acquire, before
+        -- returning it to the caller. Reused objects retain their bindings.
+        hookMethod(pool,"resetterFunc",state.object,slot)
+        state.resetterMethod=pool.resetterFunc
+    end
+    hookMethod(pool,"Acquire",state.acquire,slot)
+    state.acquireMethod=pool.Acquire
+    local function refresh(object)
+        if object and not (object.IsForbidden and object:IsForbidden()) then bind(object);state.seen[object]=true end
+    end
+    -- Explicit installation/refresh also repairs changed child widgets. The
+    -- full pass happens once per panel refresh, never once per acquired row.
+    for object in pool:EnumerateActive() do refresh(object) end
+    if state.native then for _,object in pool:EnumerateInactive() do refresh(object) end end
 end
 
 function A.UpdateCatalogTooltip(tooltip,scope,firstName,allNames)

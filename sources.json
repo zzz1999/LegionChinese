@@ -533,6 +533,8 @@
       "provenance": "community-build-marked",
       "baseFile": "TDB_world_735.00_2018_02_19.sql",
       "objectNames": {
+        "206109": "Warchief's Command Board",
+        "206116": "Warchief's Command Board",
         "233610": "Portal to Ashran",
         "237733": "Portal to Ashran"
       },
@@ -1084,7 +1086,7 @@
   ],
   "questBoardReviews": {
     "file": "data/quest-board-reviews.json",
-    "sha256": "b82a9facce5f54d4e7f041176f9efb8b5c066a03887fde6d04f9a4c8fb130f93"
+    "sha256": "fcb8c65207dba7f697ad6ff60d6e5fe4516897cc8687e01520e6980783a8a551"
   },
   "localClientSnapshot": {
     "file": "data/local-client-735.json",

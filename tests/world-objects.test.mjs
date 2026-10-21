@@ -60,6 +60,26 @@ test('a locale-only object patch requires an explicit snapshot and an exact revi
   assert.deepEqual(pairSQLWorldObjectNames([{...base,name:'Different object'},patch]),[]);
 });
 
+test('the reported command board uses its explicitly paired legacy source and retains the community provenance',()=>{
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/world-object-audit.json',import.meta.url)));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url)));
+  const record=audit.records.find(r=>r.key===nameKey("Warchief's Command Board"));
+  assert.equal(record?.text,'酋长的命令布告板');assert.equal(record.locale,'zhCN');
+  assert.ok([206109,206116].includes(record.id));assert.equal(record.verifiedBuild,0);
+  assert.equal(record.quality,'community-unverified');
+  assert.equal(record.source,'2018_01_11_gameobject_template_locale.sql');
+  assert.equal(record.originalSource,'TDB_world_735.00_2018_02_19.sql');
+  const source=manifest.sql.find(s=>s.file===record.source);
+  assert.equal(source.objectNames[record.id],"Warchief's Command Board");
+  run(`
+    WorldHover("Warchief's Command Board");assert(GameTooltipTextLeft1:GetText()=="酋长的命令布告板")
+    assert(GameTooltipTextLeft2:GetText()=="unchanged extra line")
+    WorldHover("Warchief's Command Board custom suffix")
+    assert(GameTooltipTextLeft1:GetText()=="Warchief's Command Board custom suffix")
+    WorldHover("酋長的命令布告板");assert(GameTooltipTextLeft1:GetText()=="酋長的命令布告板")
+  `);
+});
+
 test('world tooltip translates Death Gate without altering native fonts, other lines or its handler',()=>run(`
   WorldHover("Death Gate")
   assert(GameTooltipTextLeft1.text=="死亡之门")

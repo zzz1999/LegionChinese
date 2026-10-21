@@ -14,7 +14,25 @@ function A.UpdateMapLocationTooltip(owner)
     if changed and tooltip.Show then tooltip:Show() end
 end
 
+function A.UpdateMinimapLocationTooltip()
+    local tip,owner=GameTooltip,MinimapZoneTextButton
+    if not owner or owner.IsForbidden and owner:IsForbidden() or not tip
+        or tip.IsForbidden and tip:IsForbidden() or not tip.GetOwner or tip:GetOwner()~=owner
+        or not tip.IsShown or not tip:IsShown() then return end
+    local zone=GetZoneText and GetZoneText()
+    local subzone=GetSubZoneText and GetSubZoneText()
+    local changed=false
+    for i,source in pairs({zone,subzone~=zone and subzone or nil}) do
+        local widget=_G["GameTooltipTextLeft"..i]
+        if type(source)=="string" and source~="" and A.IsTextWidget(widget) and widget:GetText()==source then
+            if A.ApplyCatalogText(widget,"World") then changed=true end
+        end
+    end
+    if changed and tip.Show then tip:Show() end
+end
+
 function A.InstallMapLabels(hook,hookMethod)
     for _,widget in pairs({WorldMapFrameAreaLabel,WorldMapFrameAreaDescription,MinimapZoneText,ZoneTextString,SubZoneTextString}) do bind(hookMethod,widget,"World") end
     hook("WorldMapPOI_OnEnter",A.UpdateMapLocationTooltip)
+    hook("Minimap_SetTooltip",A.UpdateMinimapLocationTooltip)
 end

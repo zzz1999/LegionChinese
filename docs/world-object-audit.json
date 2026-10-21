@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.3",
   "build": "7.3.5.26972",
   "sources": [
     {
@@ -58,6 +58,8 @@
       "provenance": "community-build-marked",
       "baseFile": "TDB_world_735.00_2018_02_19.sql",
       "objectNames": {
+        "206109": "Warchief's Command Board",
+        "206116": "Warchief's Command Board",
         "233610": "Portal to Ashran",
         "237733": "Portal to Ashran"
       },
@@ -65,16 +67,16 @@
     }
   ],
   "counts": {
-    "fingerprints": 6306,
+    "fingerprints": 6307,
     "locales": {
-      "zhCN": 5076,
+      "zhCN": 5077,
       "zhTW": 1230
     },
     "ambiguousSkipped": 10,
     "quality": {
       "client-db2": 1058,
       "build-marked": 5240,
-      "community-unverified": 8
+      "community-unverified": 9
     }
   },
   "records": [
@@ -42162,6 +42164,16 @@
       "id": 187988,
       "verifiedBuild": 18019,
       "quality": "build-marked"
+    },
+    {
+      "key": "bef2302ff53dc264:22",
+      "text": "酋长的命令布告板",
+      "locale": "zhCN",
+      "source": "2018_01_11_gameobject_template_locale.sql",
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "id": 206116,
+      "verifiedBuild": 0,
+      "quality": "community-unverified"
     },
     {
       "key": "bef4947e245eb981:19",

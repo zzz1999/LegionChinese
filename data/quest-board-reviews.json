@@ -6,7 +6,9 @@
   "headers": [
     { "id": 35, "original": "Azshara", "questID": 28496, "mapAreaID": 181 },
     { "id": 34, "original": "Northern Barrens", "questID": 28494, "mapAreaID": 11 },
-    { "id": 29, "original": "Silverpine Forest", "questID": 28568, "mapAreaID": 21 }
+    { "id": 29, "original": "Silverpine Forest", "questID": 28568, "mapAreaID": 21 },
+    { "id": 8, "original": "Ashenvale", "questID": 28493, "mapAreaID": 43 },
+    { "id": 41, "original": "Stonetalon Mountains", "questID": 28532, "mapAreaID": 81 }
   ],
   "deferred": [
     {

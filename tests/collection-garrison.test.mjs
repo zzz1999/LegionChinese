@@ -6,6 +6,7 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import {runtimeFiles} from '../scripts/resource-layout.mjs';
 import {fingerprint,variants,luaString} from '../scripts/text.mjs';
+import {nameKey} from '../scripts/client-names.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon),catalog=new Map(),values=new Map();
@@ -31,6 +32,8 @@ const examples={
   ability:pick('GarrAbility','Name_lang'),abilityBody:pick('GarrAbility','Description_lang'),mechanic:pick('GarrMechanicType','Name_lang'),
   mechanicBody:pick('GarrMechanicType','Description_lang'),
   building:pick('GarrBuilding','AllianceName_lang'),buildingBody:pick('GarrBuilding','Description_lang'),buildingTip:pick('GarrBuilding','Tooltip_lang'),
+  zone:pick('AreaTable','AreaName_lang','zhCN',p=>p.source==='Orgrimmar'),
+  subzone:pick('AreaTable','AreaName_lang','zhCN',p=>p.source==='Valley of Wisdom'),
 };
 let resources='local D=LegionChineseDB\nExamples={}\n';
 for(const [name,p] of Object.entries(examples)){
@@ -38,6 +41,19 @@ for(const [name,p] of Object.entries(examples)){
   resources+=`D.CatalogTexts.${p.scope}=D.CatalogTexts.${p.scope} or {}\nD.CatalogTexts.${p.scope}[${luaString(key)}]=${id}\nD.CatalogStrings[${id}]=${values.get(id)}\n`;
   resources+=`Examples.${name}={source=${luaString(p.source)},text=${luaString(p.text)}}\n`;
 }
+function shipped(category,key){
+  const prefix=`D.${category}[${typeof key==='number'?key:luaString(key)}]=`;
+  for(const file of listFixtureFiles(data).filter(f=>f.startsWith(category+'_'))){
+    const line=readFixtureFile(new URL(file,data),'utf8').split('\n').find(l=>l.startsWith(prefix));
+    if(line)return line;
+  }
+  assert.fail('Missing shipped test resource '+prefix);
+}
+for(const [id,source]of [[11479,'Transmute: Iron to Gold'],[11480,'Transmute: Mithril to Truesilver']]){
+  const spell=shipped('Spells',id),stringID=Number(spell.match(/=(\d+)$/)[1]);
+  resources+=[spell,shipped('NameStrings',stringID),shipped('SpellNames',nameKey(source)),shipped('SpellTexts',id)].join('\n')+'\n';
+}
+resources+=shipped('ItemNames',25)+'\n';
 const baselineCache=new Map();
 function read(file){
   if(!process.env.LCN_UI_FEATURE_BASELINE)return fs.readFileSync(new URL(file,addon),'utf8');
@@ -54,6 +70,7 @@ function run(body,setup=''){
     exec(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
     exec(resources);exec(fs.readFileSync(new URL('collection-garrison-fixture.lua',import.meta.url),'utf8'));
     exec(fs.readFileSync(new URL('collection-garrison-regression-fixture.lua',import.meta.url),'utf8'));
+    exec(fs.readFileSync(new URL('ui-fixes-fixture.lua',import.meta.url),'utf8'));
     exec(setup);
     for(const file of runtimeFiles.filter(f=>f!=='Core.lua'))exec(read(file));
     exec('local A,D,E=LegionChinese,LegionChineseDB,Examples\n'+body);
@@ -449,6 +466,158 @@ test('recycled skill widgets clear translated-font state for unknown originals a
   page:ShowAbilities({abilities={{name=E.ability.source}}})
   assert(current.Name:GetText()==E.ability.source and current.Name.font:find("FRIZQT",1,true))
 `, 'UseNativeFollowerLayout("enUS")'));
+
+test('profession names and descriptions use the current recipe and shipped spell text before layout',()=>run(`
+  local details=TradeSkillFrame.DetailsFrame;local c=details.Contents
+  c.RecipeName:SetText("Transmute: Iron to Gold");c.Description:SetText("Turns a bar of Iron into a bar of Gold.")
+  assert(c.RecipeName:GetText()=="点铁成金" and c.Description:GetText()=="将一块铁锭变成金锭。")
+  details.selectedRecipeID=11480
+  c.RecipeName:SetText("Transmute: Mithril to Truesilver");c.Description:SetText("Turns a bar of Mithril into a bar of Truesilver.")
+  assert(c.RecipeName:GetText()=="转化秘银" and c.Description:GetText()=="将一块秘银锭变成真银锭。")
+  assert(c.Description:GetHeight()==48 and gameplayCalls==0)
+`, 'TradeSkillFrame={DetailsFrame={selectedRecipeID=11479,Contents={RecipeName=RichWidget(""),Description=RichWidget("")}}}'));
+
+test('profession bindings reject wrong recipe IDs, changed wording, existing Chinese and protected parents',()=>run(`
+  local d=TradeSkillFrame.DetailsFrame;local c=d.Contents
+  c.RecipeName:SetText("Server custom recipe");c.Description:SetText("Turns two bars of Iron into a bar of Gold.")
+  assert(c.RecipeName:GetText()=="Server custom recipe" and c.Description:GetText():find("two",1,true))
+  d.selectedRecipeID=999999;c.RecipeName:SetText("Transmute: Iron to Gold")
+  c.Description:SetText("Turns a bar of Iron into a bar of Gold.")
+  assert(c.RecipeName:GetText()=="Transmute: Iron to Gold" and not A.IsChinese(c.Description:GetText()))
+  d.selectedRecipeID=11479
+  c.RecipeName:SetText("已有繁體名稱");c.Description:SetText("已有繁體說明")
+  assert(c.RecipeName:GetText()=="已有繁體名稱" and c.Description:GetText()=="已有繁體說明")
+  d.forbidden=true;c.RecipeName:SetText("Transmute: Iron to Gold");c.Description:SetText("Turns a bar of Iron into a bar of Gold.")
+  assert(c.RecipeName:GetText()=="Transmute: Iron to Gold" and not A.IsChinese(c.Description:GetText()))
+`, 'TradeSkillFrame={DetailsFrame={selectedRecipeID=11479,IsForbidden=function(self)return self.forbidden end,Contents={RecipeName=RichWidget(""),Description=RichWidget("")}}}'));
+
+test('late recipe widgets bind on the existing root and numeric descriptions retain current values',()=>run(`
+  local c=TradeSkillFrame.DetailsFrame.Contents;c.RecipeName=RichWidget("");c.Description=RichWidget("")
+  frames[1]:Fire("OnEvent","ADDON_LOADED","LateRecipeLabels")
+  c.RecipeName:SetText("Transmute: Iron to Gold");assert(c.RecipeName:GetText()=="点铁成金")
+  D.DynamicSpellTexts[11479]={Description={Key=A.NameFingerprint("Create ~v~ pieces from ~v~ units."),Text="从{2}份材料制作{1}件。",Count=2,Constants={[2]=3},Equals={}}}
+  c.Description:SetText("Create 23 pieces from 3 units.");assert(c.Description:GetText()=="从3份材料制作23件。")
+  c.Description:SetText("Create 23 pieces from 4 units.");assert(c.Description:GetText()=="Create 23 pieces from 4 units.")
+`, 'TradeSkillFrame={DetailsFrame={selectedRecipeID=11479,Contents={}}}'));
+
+test('wardrobe alternative item names retain native arrow and spacer textures and exclude unknown suffixes',()=>run(`
+  local arrow,spacer=WARDROBE_TOOLTIP_CYCLE_ARROW_ICON,WARDROBE_TOOLTIP_CYCLE_SPACER_ICON
+  local source={itemID=25,sourceID=25,name="Worn Shortsword"}
+  WardrobeCollectionFrame_SetAppearanceTooltip({}, {source},25)
+  local chinese=D.ItemNames[25][1]
+  assert(GameTooltipTextLeft1:GetText()==chinese)
+  assert(GameTooltipTextLeft2:GetText()==arrow..chinese and GameTooltipTextLeft3:GetText()==spacer..chinese)
+  assert(GameTooltipTextLeft4:GetText()=="|TUnknown:1|tWorn Shortsword")
+  assert(source.name=="Worn Shortsword")
+  source.name="Worn Shortsword of the Beast";WardrobeCollectionFrame_SetAppearanceTooltip({}, {source},25)
+  assert(GameTooltipTextLeft1:GetText()==source.name and GameTooltipTextLeft2:GetText()==arrow..source.name)
+  source.name="已有中文";WardrobeCollectionFrame_SetAppearanceTooltip({}, {source},25)
+  assert(GameTooltipTextLeft2:GetText()==arrow..source.name)
+`, String.raw`
+  WARDROBE_TOOLTIP_CYCLE_ARROW_ICON="|TInterface\\Transmogrify\\transmog-tooltip-arrow:12:11:-1:-1|t"
+  WARDROBE_TOOLTIP_CYCLE_SPACER_ICON="|TInterface\\Common\\spacer:12:11:-1:-1|t"
+  function WardrobeCollectionFrame_SetAppearanceTooltip(owner,sources)
+    local name=sources[1].name
+    TooltipLines({name,WARDROBE_TOOLTIP_CYCLE_ARROW_ICON..name,WARDROBE_TOOLTIP_CYCLE_SPACER_ICON..name,"|TUnknown:1|t"..name},owner)
+  end
+`));
+
+test('native research confirmation variants translate names and retain exact costs, time and response data',()=>run(`
+  local button=ScriptFrame();button.OnClick=GarrisonTalentButtonMixin.OnClick
+  function button:GetParent()return OrderHallTalentFrame end
+  for _,case in ipairs({{123,60},{456,0},{0,78}})do
+    button.talent={id=39,name=E.talent.source,talentAvailability=1,researchCost=case[1],researchDuration=case[2]}
+    button:OnClick()
+    local popup=StaticPopup1;local text=popup.text:GetText()
+    assert(text:find(A.Render(E.talent.text),1,true) and not text:find(E.talent.source,1,true))
+    if case[1]>0 then assert(text:find(tostring(case[1]),1,true) and text:find("ResourceTexture",1,true))end
+    if case[2]>0 then assert(text:find(tostring(case[2]).." seconds",1,true))end
+    assert(popup.measured==text and popup.data.id==39 and popup.data.button==button)
+    assert(button.talent.name==E.talent.source and gameplayCalls==0)
+  end
+`, 'UseResearchConfirmations()'));
+
+test('research confirmation guards mismatched text, data, reused popup contexts and protected frames',()=>run(`
+  local button=ScriptFrame();function button:GetParent()return OrderHallTalentFrame end
+  button.talent={id=39,name=E.talent.source,researchCost=123,researchDuration=60}
+  local data={id=39,hasTime=true,button=button}
+  local source="Research "..E.talent.source.." for 123 ResourceTexture in 60 seconds?"
+  for _,case in ipairs({"foreign","wrong-id","changed","forbidden","hidden","unknown","chinese"})do
+    local which=case=="foreign" and "GOSSIP_CONFIRM" or "ORDER_HALL_TALENT_RESEARCH"
+    data.id=case=="wrong-id" and 40 or 39
+    button.talent.name=case=="unknown" and "Unknown research" or case=="chinese" and "已有中文" or E.talent.source
+    local value=case=="changed" and source.." Custom warning." or source
+    StaticPopup1.forbidden=case=="forbidden";StaticPopup1.hidden=case=="hidden"
+    StaticPopup_Show(which,value,nil,data);assert(StaticPopup1.text:GetText()==value,case)
+  end
+  StaticPopup1.forbidden=nil;StaticPopup1.hidden=nil;button.talent.name=E.talent.source;data.id=39
+  for i=1,10 do A.InstallResearch(A.Hooks.ForFeature("research")) end
+  local resized=StaticPopup1.resizes
+  local popup,empty,number=StaticPopup_Show("ORDER_HALL_TALENT_RESEARCH",source,nil,data)
+  assert(popup==StaticPopup1 and empty==nil and number==3 and popup.resizes-resized==2)
+  assert(popup.text:GetText():find(E.talent.text,1,true))
+`, 'UseResearchConfirmations()'));
+
+test('native minimap hover uses the same shipped World names as its label and preserves the status line',()=>run(`
+  GameTooltip.owner=MinimapZoneTextButton
+  MiniPVP="contested";CONTESTED_TERRITORY="Status / 2/6";Minimap_Update()
+  Expect(MinimapZoneText,E.zone);Expect(GameTooltipTextLeft1,E.zone);Expect(GameTooltipTextLeft2,E.subzone)
+  assert(GameTooltipTextLeft3:GetText()=="Status / 2/6" and GameTooltip:GetOwner()==MinimapZoneTextButton)
+  MiniSubzone=MiniZone;Minimap_Update();Expect(GameTooltipTextLeft1,E.zone)
+  assert(GameTooltipTextLeft2:GetText()=="")
+`, 'UseMinimapTooltip()'));
+
+test('minimap translation excludes other owners, stale labels, hidden and protected tooltips',()=>run(`
+  for _,case in ipairs({"other","stale","hidden","forbidden"})do
+    TooltipLines({E.zone.source,E.subzone.source},case=="other" and {} or MinimapZoneTextButton)
+    GameTooltip.hidden=case=="hidden";GameTooltip.forbidden=case=="forbidden"
+    if case=="stale" then GameTooltipTextLeft1:SetText("Unknown location");GameTooltipTextLeft2:SetText("Current timer: 23")end
+    local first,second=GameTooltipTextLeft1:GetText(),GameTooltipTextLeft2:GetText()
+    A.UpdateMinimapLocationTooltip()
+    assert(GameTooltipTextLeft1:GetText()==first and GameTooltipTextLeft2:GetText()==second,case)
+  end
+`, 'UseMinimapTooltip()'));
+
+test('native pools bind new objects once without active enumeration on Acquire and retain reuse and return values',()=>run(`
+  local pool=NativeBindingPool(function()return {Name=RichWidget("")}end)
+  local _,method=A.Hooks.ForFeature("linear-pool");local visits,enumerations=0,0
+  local enumerate=pool.EnumerateActive
+  function pool:EnumerateActive()enumerations=enumerations+1;return enumerate(self)end
+  A.BindCatalogPool(method,pool,function(row)visits=visits+1;A.BindCatalog(method,row.Name,"Garrison")end)
+  enumerations=0
+  for i=1,16 do local row,new=pool:Acquire();assert(new);row.Name:SetText(E.ability.source);Expect(row.Name,E.ability)end
+  assert(visits==16 and enumerations==0,"new native rows must not re-enumerate the active pool")
+  pool:ReleaseAll()
+  for i=1,16 do local row,new=pool:Acquire();assert(not new);row.Name:SetText(E.ability.source);Expect(row.Name,E.ability)end
+  assert(visits==16 and enumerations==0,"reused native rows retain their bindings")
+`, 'UseNativeBindingPool()'));
+
+test('native pool installation covers existing inactive rows and explicit refresh repairs replacement child labels',()=>run(`
+  local pool=NativeBindingPool(function()return {Name=RichWidget("")}end)
+  local old=pool:Acquire();pool:Release(old)
+  local _,method=A.Hooks.ForFeature("inactive-pool");local visits=0
+  local function bind(row)visits=visits+1;A.BindCatalog(method,row.Name,"Garrison")end
+  A.BindCatalogPool(method,pool,bind)
+  local row,new=pool:Acquire();assert(row==old and not new and visits==1)
+  row.Name:SetText(E.ability.source);Expect(row.Name,E.ability)
+  row.Name=RichWidget(E.ability.source);A.BindCatalogPool(method,pool,bind)
+  Expect(row.Name,E.ability);assert(visits==2)
+  row.Name:SetText("Unknown skill");assert(row.Name:GetText()=="Unknown skill")
+`, 'UseNativeBindingPool()'));
+
+test('compatibility pools register each object once and native reset-method replacements safely fall back',()=>run(`
+  local _,method=A.Hooks.ForFeature("compat-pool");local calls=0
+  local pool=Pool(function()return ScriptFrame()end)
+  A.BindCatalogPool(method,pool,function()calls=calls+1 end)
+  for i=1,16 do pool:Acquire()end;assert(calls==16)
+  local native=NativeBindingPool(function()return ScriptFrame()end)
+  A.BindCatalogPool(method,native,function()calls=calls+1 end)
+  native.resetterFunc=function()end
+  native:Acquire();assert(calls==17,"an unhooked replacement uses the safe discovery path")
+  A.Hooks.Refresh();native:Acquire();assert(calls==18)
+  A.BindCatalogPool(method,native,function()calls=calls+1 end)
+  local before=calls;native:Acquire();assert(calls==before+1)
+`, 'UseNativeBindingPool()'));
 
 for(const locale of ['zhCN','zhTW'])test(`${locale} follower skill layouts preserve their native font family, size and flags`,()=>run(`
   local page=GarrisonMissionFrame.FollowerTab

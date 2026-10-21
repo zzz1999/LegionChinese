@@ -1,9 +1,9 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.3",
   "build": "7.3.5.26972",
   "review": {
     "file": "data/quest-board-reviews.json",
-    "sha256": "b82a9facce5f54d4e7f041176f9efb8b5c066a03887fde6d04f9a4c8fb130f93"
+    "sha256": "fcb8c65207dba7f697ad6ff60d6e5fe4516897cc8687e01520e6980783a8a551"
   },
   "sources": [
     {
@@ -58,6 +58,24 @@
       "locale": "zhCN",
       "text": "银松森林",
       "fingerprint": "dedf1fb922f0e8ba:16"
+    },
+    {
+      "id": 8,
+      "original": "Ashenvale",
+      "questID": 28493,
+      "mapAreaID": 43,
+      "locale": "zhCN",
+      "text": "灰谷",
+      "fingerprint": "70209a1cd08c1ec3:9"
+    },
+    {
+      "id": 41,
+      "original": "Stonetalon Mountains",
+      "questID": 28532,
+      "mapAreaID": 81,
+      "locale": "zhCN",
+      "text": "石爪山脉",
+      "fingerprint": "419ea14a18c1f5ed:19"
     }
   ],
   "deferred": [

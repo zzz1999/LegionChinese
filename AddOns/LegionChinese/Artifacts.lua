@@ -30,14 +30,39 @@ function A.ResolveArtifactChoice(choiceID,responseID,field,source)
 end
 
 local function hookChoiceWidget(hookMethod,frame,option,widget,field)
-    hookMethod(widget,"SetText",function(self,source)
-        if A.IsWriting(self) then return end
+    -- SimpleHTML has SetText without a FontString-style GetText on some
+    -- supported clients. Its future writes must still receive the hook.
+    if not widget or not widget.SetText or widget.IsForbidden and widget:IsForbidden() then return false end
+    local function apply(self,source)
+        if A.IsWriting(self) or type(source)~="string" or source=="" or A.IsChinese(source) then return end
         local text=A.ResolveArtifactChoice(frame.choiceID,option and option.optID,field,source)
         if not text and field=="Header" and A.ResolveQuestBoardHeader then
             text=A.ResolveQuestBoardHeader(frame.choiceID,option and option.optID,source)
+        elseif not text and field=="Answer" and A.ResolveQuestBoardAnswer then
+            text=A.ResolveQuestBoardAnswer(frame.choiceID,option and option.optID,source)
         end
-        setText(self,text,field=="Description")
-    end)
+        return setText(self,text,field=="Description")
+    end
+    hookMethod(widget,"SetText",apply)
+    if widget.GetText then return apply(widget,widget:GetText()) end
+end
+
+local function choiceWidgets(hookMethod,choice)
+    if not choice or choice.IsForbidden and choice:IsForbidden() then return end
+    hookChoiceWidget(hookMethod,choice,nil,choice.QuestionText,"Question")
+    local changed=false
+    for _,option in ipairs(choice.Options or {}) do
+        if not (option.IsForbidden and option:IsForbidden()) then
+            hookChoiceWidget(hookMethod,choice,option,option.OptionButton,"Answer")
+            changed=hookChoiceWidget(hookMethod,choice,option,option.OptionText,"Description") or changed
+            hookChoiceWidget(hookMethod,choice,option,option.Header and option.Header.Text,"Header")
+        end
+    end
+    -- If installation followed an already populated dialog, schedule one
+    -- native layout. Subsequent updates translate at SetText before measuring.
+    if changed then
+        if choice.SetPendingUpdate then choice:SetPendingUpdate() else choice.hasPendingUpdate=true end
+    end
 end
 
 function A.ResolveArtifactTitle(source,appearanceID)
@@ -107,16 +132,10 @@ end
 
 function A.InstallArtifacts(hookMethod,hookScript)
     local choice=QuestChoiceFrame
-    if choice then
-        hookChoiceWidget(hookMethod,choice,nil,choice.QuestionText,"Question")
-        for _,option in ipairs(choice.Options or {}) do
-            hookChoiceWidget(hookMethod,choice,option,option.OptionButton,"Answer")
-            hookChoiceWidget(hookMethod,choice,option,option.OptionText,"Description")
-            hookChoiceWidget(hookMethod,choice,option,option.Header and option.Header.Text,"Header")
-        end
-        -- Text is translated as the stock Update fills each widget, BEFORE its
-        -- height calculation. No second Update / resize loop or new polling.
+    for _,frame in pairs({choice,QuestChoiceFrameMixin}) do
+        hookMethod(frame,"Update",function(self) choiceWidgets(hookMethod,self) end)
     end
+    choiceWidgets(hookMethod,choice)
     local artifact=ArtifactFrame
     if artifact then
         hookMethod(artifact.PerksTab and artifact.PerksTab.TitleContainer,"RefreshTitle",A.UpdateArtifactTitle)

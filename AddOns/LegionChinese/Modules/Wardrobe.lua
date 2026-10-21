@@ -32,7 +32,18 @@ local function appearance(sources)
             if row and A.NameFingerprint(source.name)==row[2] then names[source.name]=row[1] end
         end
     end
-    A.UpdateCatalogTooltip(GameTooltip,"Collection",function(source) return names[source] end,true)
+    A.UpdateCatalogTooltip(GameTooltip,"Collection",function(source)
+        if names[source] then return names[source] end
+        if type(source)~="string" then return end
+        -- Native alternative rows prepend one of these exact textures. Keep
+        -- the texture and match the complete remaining item name as before.
+        for _,prefix in pairs({WARDROBE_TOOLTIP_CYCLE_ARROW_ICON,WARDROBE_TOOLTIP_CYCLE_SPACER_ICON}) do
+            if type(prefix)=="string" and prefix~="" and source:sub(1,#prefix)==prefix then
+                local text=names[source:sub(#prefix+1)]
+                if text then return prefix..text end
+            end
+        end
+    end,true)
 end
 function A.InstallWardrobe(hook,hookMethod,hookScript)
     local root=WardrobeCollectionFrame

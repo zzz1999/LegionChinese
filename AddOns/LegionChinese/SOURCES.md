@@ -3,8 +3,9 @@
 ## 世界地图任务提示与征令板
 
 - 地图可接任务名称复用现有任务库。补充索引仅使用通过 `QuestSources` 任务 ID、字段及原文校验的标题；同名译文冲突继续按现有简繁回退规则处理，无法消歧则保留原文。“A Recent Discovery”对应任务 50341 的“近期发现”，补充原文来自 TDB735.25051 的同 ID 简英记录，标记构建为 26365，与已安装中文标题一致。
-- 征令板三个地区名来自 [7.3.5.26972 AdventureJournal](https://wago.tools/db2/AdventureJournal?build=7.3.5.26972)：35／艾萨拉、34／北贫瘠之地、29／银松森林。按 ID、任务 ID、地图区域和非文本元数据核对简英繁记录；只借用完全同名的地区名称，**不把冒险指南中措辞不同的说明替代为征令板正文**。三种语言导出及 SHA-256 固定在 `sources.json`。
-- 任务板标题、说明和按钮尚无可核实中文对应。“Orgrimmar Portals”在 2018 数据库中为 `points_of_interest` 510、构建 23420，没有对应中文；后来同坐标的“Orgrimmar Cataclysm Portals”及“奥格瑞玛大灾变传送门”标记为 44325，文字已改变，未采用或删词拼接。按照项目使用者要求，缺口不填入人工译文。
+- 征令板五个地区名来自 [7.3.5.26972 AdventureJournal](https://wago.tools/db2/AdventureJournal?build=7.3.5.26972)：35／艾萨拉、34／北贫瘠之地、29／银松森林、8／灰谷、41／石爪山脉。按 ID、任务 ID、地图区域和非文本元数据核对简英繁记录；只借用完全同名的地区名称，**不把冒险指南中措辞不同的说明替代为征令板正文**。三种语言导出及 SHA-256 固定在 `sources.json`。
+- 2026-10-22 截图中的“For the Horde!”按钮复用本地 7.3.5.26972 `GlobalStrings` 记录 22583 的 `TagText_lang`：“为了部落！”。该完整简英对已在 `data/local-client-735.json` 核对、由既有 `System` 范围中文索引收录；运行时只在完整实时提问、响应 ID、地区标题与当前按钮文字都能核对时借用已有界面译文，不新增人工译文或匹配字串片段。
+- 任务板顶部提示、卡片正文及其余未核实按钮保留原文。“Orgrimmar Portals”在 2018 数据库中为 `points_of_interest` 510、构建 23420，没有对应中文；后来同坐标的“Orgrimmar Cataclysm Portals”及“奥格瑞玛大灾变传送门”标记为 44325，文字已改变，未采用或删词拼接。按照项目使用者要求，缺口不填入人工译文。
 - 逐项采纳与排除记录见 `data/quest-board-reviews.json`、`docs/map-ui-audit.json` 和 `docs/MAP-UI.md`。原版地图入口依据 [7.3.5 WorldMapFrameTemplates.xml](https://github.com/Gethe/wow-ui-source/blob/67ecbf5ce0e50cc7483c2295caecf410460f0994/FrameXML/WorldMapFrameTemplates.xml) 中 `WorldMapStoryLineTemplate` 的流程；它提供当前任务名称与索引，没有可直接用于此提示的任务 ID。
 
 ## 1.2.16 客户端说明与显示入口
@@ -158,6 +159,8 @@
 
 右侧任务追踪栏对照同一提交的 `AddOns/Blizzard_ObjectiveTracker/Blizzard_QuestObjectiveTracker.lua` 和 `Blizzard_ObjectiveTracker.lua`，使用任务模块方法的安全后置挂钩，在后续目标及任务定位之前更新文字与行高，不替换全局任务 API。字体规则参考 `FrameXML/Fonts.xml` 与 `SharedXML/SharedFonts.xml`。
 
+1.3.3 进一步核对原版 `QuestObjectiveTracker_DoQuestObjectives`：`GetQuestLogLeaderBoard` 的当前原文直接交给数字键的 `QUEST_TRACKER_MODULE:AddObjective`。普通任务的前置计数此前没有进入与场景／世界任务相同的回退路径，现补入这一已确认入口；只分离原样保留的整数进度前缀，对完整目标正文查询既有库。截图中 `Help Raggaran`、`Help Misha Tor'kren`、`Help Zen'Taji`、`Runaway Shredder Captured` 和 `Razormane Quilboar slain` 的原文指纹已有对应，不另造译文；`tests/tracker-font.test.mjs` 直接读取安装资源验证简繁、行高、复用、未知文字及受保护控件。
+
 读条对照 `FrameXML/CastingBarFrame.lua`、XML 及 `PetFrame.lua`。`UnitFrame.lua` 的施法消耗预测明确读取 `UnitCastingInfo` 的第 10 个返回值作为法术 ID；若客户端未提供，则核对起始事件中的第 5 个参数，不能把第 4 个参数的施法执行编号当作法术 ID。宠物名称对照 `UnitFrame.lua`、`CompactUnitFrame.lua`、`UnitPopup.lua` 和 `AddOns/Blizzard_NamePlates/Blizzard_NamePlates.lua`，只后置更新现有控件，跳过禁止插件访问的姓名板，不替换 `UnitName` 或更改名字、姓名板设置。
 
 下载数据文件的固定 URL、SHA-256 均列于 `sources.json`；本地审核摘录也固定自身 SHA-256，其逐项外部来源在摘录与审计文件中记录。生成产物只保留中文值与匹配指纹。
@@ -251,6 +254,14 @@ NPC 说话、喊话、密语、首领密语复用已有 BroadcastText / Gossip �
 本版按功能目录组织资源，并将地图、收藏、专业、声望、要塞等界面处理拆成独立模块。资料来源、语言优先级和匹配索引保持不变；只有重复且实际能节省源码体积的中文进入共享字符串池，原有 ID 继续指向相同译文，不合并不同语义的索引。
 
 资源目录、分片顺序与运行模块由 `scripts/resource-layout.mjs` 统一登记。共享中文在加载时解析为普通字符串，之后释放临时池表。构建在独立临时目录完成，生成清单和哈希、检查 Lua 5.1 语法与共享引用后才替换正式目录；替换失败会回滚，无法完成回滚时保留恢复备份。重构期间逐条核对与 1.3.0 的资源赋值，结果在 `docs/refactor-equivalence.json`，基线在 `docs/refactor-baseline-1.3.0.json`，资源明细在 `docs/resource-manifest.json`。结构和构建流程见 `docs/ARCHITECTURE.md`。这些检查不代替游戏内字形、布局和兼容性验收。
+
+## 1.3.3 显示补漏与控件池优化
+
+专业配方复用同版 `Spell` 名称和说明索引，按当前配方 ID 与完整原文核验；数值说明只采用原有的受限格式匹配，不计算新数值。征令板新增 `AdventureJournal` 记录 8（灰谷、任务 28493、地图区域 43）和 41（石爪山脉、任务 28532、地图区域 81）的地区名，逐字段核对同版三种语言的非语言信息；仍不使用该表中与征令板原文不同的正文和按钮。
+
+“Warchief's Command Board”与“酋长的命令布告板”配对来自原有 MagicStorm `2018_01_11_gameobject_template_locale.sql` 中条目 206109／206116，并与其明确指定的 `TDB_world_735.00_2018_02_19.sql` 原名逐条核对。中文条目 `VerifiedBuild=0`，按现有规则标为 `community-unverified`，不宣称是已独立核验的官方客户端译文；同名有冲突时仍排除。来源哈希与采用记录见 `sources.json`、`docs/world-object-audit.json`。
+
+显示和刷新顺序继续核对同一界面源码 commit，包括 `Blizzard_TradeSkillDetails.lua`、`Constants.lua`、`Minimap.lua`、`QuestChoiceFrameMixin.lua`、`StaticPopup.lua` 和 `SharedXML/Pools.lua`。原版池的新对象在 `resetterFunc(pool, object)` 中登记；安装时也处理已有的活动／闲置对象，不修改 `Acquire` 的返回值、原版对象资料或游戏操作。
 
 ## 1.3.2 收藏、考古、研究与要塞入口
 

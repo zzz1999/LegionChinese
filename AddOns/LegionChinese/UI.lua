@@ -111,7 +111,7 @@ end
 
 function A.UpdateTrackerObjective(module, block, key, text, _, useFullHeight, _, colorStyle)
     local line=block and block.lines and block.lines[key]
-    if not line or not line.Text or line.Text:GetText()~=text then return end
+    if not line or not line.Text or line.Text.IsForbidden and line.Text:IsForbidden() or line.Text:GetText()~=text then return end
     local oldHeight=line:GetHeight()
     local changed
     if type(key)=="number" and key==0 and (module==BONUS_OBJECTIVE_TRACKER_MODULE or module==WORLD_QUEST_TRACKER_MODULE)
@@ -119,10 +119,10 @@ function A.UpdateTrackerObjective(module, block, key, text, _, useFullHeight, _,
         changed=A.Apply(line.Text,"Quests",block.id,"Title",text)
     elseif type(key)=="number" then
         changed=A.Apply(line.Text,"Objectives",block.id)
-        if not changed and type(text)=="string" and (module==SCENARIO_TRACKER_MODULE
+        if not changed and type(text)=="string" and (module==QUEST_TRACKER_MODULE or module==SCENARIO_TRACKER_MODULE
             or module==BONUS_OBJECTIVE_TRACKER_MODULE or module==WORLD_QUEST_TRACKER_MODULE) then
-            -- Scenario criteria put counts before the label. Preserve the live
-            -- progress and only translate the complete criterion wording.
+            -- Quest objectives and criteria may put counts before the label.
+            -- Preserve live progress and match the complete objective wording.
             local prefix,body=text:match("^(%d+%s*/%s*%d+%s+)(.+)$")
             if body then
                 local translated,updated=A.Translate("Objectives",body,block.id)
@@ -308,7 +308,7 @@ local features={
     {"descriptions","InstallClientDescriptions","standard",{"Blizzard_AchievementUI","Blizzard_Collections","Blizzard_EncounterJournal","Blizzard_TokenUI"},{"AchievementFrame","PetJournal","EncounterJournal","GameTooltip","ItemRefTooltip",
         "AchievementButton_OnLoad","AchievementFrameAchievements_SetupButton","SharedPetBattleAbilityTooltip_SetAbility","PetJournal_UpdatePetCard","EncounterJournal_ToggleHeaders","EncounterJournal_SetUpOverview","EncounterJournal_SetBullets"}},
     {"dialogue","InstallDialogueSurfaces","standard",{"Blizzard_TalkingHeadUI"},{"TalkingHeadFrame","CinematicFrame"}},
-    {"map-labels","InstallMapLabels","standard",{"Blizzard_WorldMap"},{"WorldMapFrameAreaLabel","WorldMapFrameAreaDescription","MinimapZoneText","ZoneTextString","SubZoneTextString","WorldMapPOI_OnEnter"}},
+    {"map-labels","InstallMapLabels","standard",{"Blizzard_WorldMap"},{"WorldMapFrameAreaLabel","WorldMapFrameAreaDescription","MinimapZoneText","MinimapZoneTextButton","GameTooltip","ZoneTextString","SubZoneTextString","WorldMapPOI_OnEnter","Minimap_SetTooltip"}},
     {"collections","InstallCollections","standard",{"Blizzard_Collections"},{"MountJournal","MountJournal_UpdateMountList","MountJournal_UpdateMountDisplay"}},
     {"toys","InstallToys","standard",{"Blizzard_Collections"},{"ToyBox","GameTooltip","ItemRefTooltip","ToySpellButton_UpdateButton","ToyBox_UpdateButtons"}},
     {"wardrobe","InstallWardrobe","standard",{"Blizzard_Collections"},{"WardrobeCollectionFrame","WardrobeSetsCollectionMixin","WardrobeSetsCollectionScrollFrameMixin","WardrobeItemsModelMixin","WardrobeSetsTransmogModelMixin","WardrobeCollectionFrame_SetAppearanceTooltip"}},
@@ -327,7 +327,7 @@ local features={
 -- addons can finish constructing a child/list after its parent already exists.
 -- These are fixed UI paths, not a scan of every global/frame on addon loads.
 local childTargets={
-    artifacts={"QuestChoiceFrame.QuestionText","QuestChoiceFrame.Options.*.OptionButton","QuestChoiceFrame.Options.*.OptionText","QuestChoiceFrame.Options.*.Header.Text",
+    artifacts={"QuestChoiceFrame.Update","QuestChoiceFrameMixin","QuestChoiceFrame.QuestionText","QuestChoiceFrame.Options.*.OptionButton","QuestChoiceFrame.Options.*.OptionText","QuestChoiceFrame.Options.*.Header.Text",
         "ArtifactFrame.PerksTab.TitleContainer","ArtifactFrame.AppearancesTab"},
     descriptions={"AchievementFrameAchievementsContainer.buttons.*.label","AchievementFrameAchievementsContainer.buttons.*.description",
         "AchievementFrameAchievementsContainer.buttons.*.hiddenDescription","AchievementFrameAchievementsContainer.buttons.*.reward",
@@ -336,7 +336,7 @@ local childTargets={
     dialogue={"TalkingHeadFrame.TextFrame.Text","TalkingHeadFrame.NameFrame.Name"},
     collections={"MountJournal.MountDisplay.InfoButton.Name","MountJournal.MountDisplay.InfoButton.Source","MountJournal.MountDisplay.InfoButton.Lore",
         "MountJournal.ListScrollFrame.buttons.*.name"},
-    professions={"TradeSkillFrame.DetailsFrame.Contents.Description","TradeSkillFrame.DetailsFrame.Contents.SourceText"},
+    professions={"TradeSkillFrame.DetailsFrame.Contents.RecipeName","TradeSkillFrame.DetailsFrame.Contents.Description","TradeSkillFrame.DetailsFrame.Contents.SourceText"},
     ["group-finder"]={"LFDQueueFrameRandomScrollFrameChildFrame.title","LFDQueueFrameRandomScrollFrameChildFrame.description"},
     scenario={"ScenarioStageBlock.Name","ScenarioStageBlock.Description"},
     garrison={},

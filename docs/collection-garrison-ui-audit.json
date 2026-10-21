@@ -132,6 +132,16 @@
       "sha256": "61d37e2d527265c0cecb689f343d9a4e1080b4a0fd3344f5703f6a3366924ccc"
     },
     {
+      "path": "AddOns/Blizzard_TradeSkillUI/Blizzard_TradeSkillDetails.lua",
+      "gitBlob": "66914b34466474fadc3d39a18291ef0c9560cf14",
+      "sha256": "55198bca35676defc481ef0ce1f5c5d4ac62fe7c4c3da47174ccdee41c0a7d7c"
+    },
+    {
+      "path": "FrameXML/Constants.lua",
+      "gitBlob": "174e9b92a24988048e4872f686172049ac709eaa",
+      "sha256": "74d6195d2bd0cce718f8e17c94a48cf843d57e422c262b0764cb272c7f0eae71"
+    },
+    {
       "path": "FrameXML/FloatingGarrisonFollowerTooltip.lua",
       "gitBlob": "0246a1bac3fb3fcb83bed26a30a85fc490a1a3ab",
       "sha256": "a4ad334a3555fbc4ab319bb8f05594b9d28079a90ae4f3da3119bca2daa8e8b5"
@@ -162,6 +172,21 @@
       "sha256": "7e1e79d586b83e3aa70f569f36af6aac35337486f90480e36214f048ce06d2e4"
     },
     {
+      "path": "FrameXML/Minimap.lua",
+      "gitBlob": "91883e4176f47e0d92f57bd099430b8026fb58fb",
+      "sha256": "ae18aeebb63f734e91410b72263c85e774f30ec3cb557a045eae116ba6471c96"
+    },
+    {
+      "path": "FrameXML/QuestChoiceFrameMixin.lua",
+      "gitBlob": "d53683e6d5b4c204608fe0a8603eec47ba8c7dfb",
+      "sha256": "47f02b4160783df785023c59c2160ea3c6b81dd1c78b422f93adaca84f86e897"
+    },
+    {
+      "path": "FrameXML/StaticPopup.lua",
+      "gitBlob": "c82e0a658f4e6f4702ad15ae0d01183e67c11b4b",
+      "sha256": "69aca62aebce8df2a48a971874f03f0f876b5b5740258758d2dddd2bfc31c8c3"
+    },
+    {
       "path": "FrameXML/UIDropDownMenu.lua",
       "gitBlob": "1179d0959672e3fac97c1187eaab13688557ec9b",
       "sha256": "6d903a081b53f11ed81f50c780ce443e240ea51a9d816758975eebf3cc5b4858"
@@ -180,6 +205,11 @@
       "path": "FrameXML/WorldMapFrame.lua",
       "gitBlob": "699a467270d64397ce5ab1dd711b6c9c0e60d05c",
       "sha256": "cde19ff0221bb46d58d9b4e59b45085e6b4c09e1bb784db5c5343e5ac6a63917"
+    },
+    {
+      "path": "SharedXML/Pools.lua",
+      "gitBlob": "a60e7d3c1377c7305be4b0094b03ae5804aea8a7",
+      "sha256": "1392b16314a39c8fbba8a737b09af39372d0281f429396cc44568876e9126302"
     }
   ]
 }

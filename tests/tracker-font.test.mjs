@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
-import {fingerprint,normalize} from '../scripts/text.mjs';
+import {fingerprint,normalize,luaString} from '../scripts/text.mjs';
 import {compatibleLegacyQuest} from '../scripts/dialogue.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
@@ -19,6 +19,26 @@ function shippedCompletion(){
   const text=lines('Strings').find(line=>line.startsWith(`D.Strings[${id}]=`));
   assert.ok(text);
   return row+'\n'+text;
+}
+const reportedObjectives=[
+  ['Help Raggaran','帮助拉格兰','0/1 '],
+  ["Help Misha Tor'kren",'帮助米莎·托克伦','0/1 '],
+  ["Help Zen'Taji",'帮助岑塔基','0/1 '],
+  ['Runaway Shredder Captured','俘获逃跑的伐木机','0/1 '],
+  ['Razormane Quilboar slain','殺死剃鬃野豬人','2/4 '],
+];
+function shippedObjectives(){
+  const objectives=lines('Objectives'),strings=new Map(lines('Strings').map(line=>{
+    const match=/^D.Strings\[(\d+)\]=/.exec(line);return [match?.[1],line];
+  }));
+  return reportedObjectives.map(([source,text])=>{
+    const key=fingerprint(normalize(source));
+    const row=objectives.find(line=>line.startsWith(`D.Objectives["${key}"]=`));
+    assert.ok(row,'the screenshot goal must already be collected: '+source);
+    const id=row.match(/=(\d+)$/)?.[1],value=strings.get(id);
+    assert.ok(value?.includes(text),'the regression must use its actual shipped translation');
+    return row+'\n'+value;
+  }).join('\n');
 }
 function run(code,{tracker=false,welcome=false,rows=''}={}){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
@@ -92,6 +112,60 @@ test('tracker title and objective layout respects counters, colors, line limits 
   local foreign=OTHER_TRACKER_MODULE:AddObjective(other,1,"Arrows collected: 2/15")
   assert(foreign.Text.text=="Arrows collected: 2/15","other tracker modules stay untouched")
 `,{tracker:true}));
+
+test('ordinary quest tracker translates the reported leading-count goals with shipped Simplified and Traditional text',()=>run(`
+  clientLocale="enUS"
+  local module=QUEST_TRACKER_MODULE;local block=NewQuestBlock(42)
+  local entries={${reportedObjectives.map(([source,text,prefix])=>`{source=${luaString(source)},text=${luaString(text)},prefix=${luaString(prefix)}}`).join(',')}}
+  for i,entry in ipairs(entries)do
+    local line=module:AddObjective(block,i,entry.prefix..entry.source,nil,true,nil,OBJECTIVE_TRACKER_COLOR.Complete)
+    assert(line.Text:GetText()==entry.prefix..entry.text,line.Text:GetText())
+    assert(line:GetHeight()==42 and block.height==i*44,"native layout must use the translated height once")
+    assert(line.Text.color==OBJECTIVE_TRACKER_COLOR.Complete and line.Text.highlight)
+    assert(line.state=="PRESENT" and line.check=="retained")
+  end
+  assert(block.itemButton.id=="item" and block.poiButton.id=="poi")
+`,{tracker:true,rows:shippedObjectives()}));
+
+test('normal tracker count prefixes preserve current progress and reused lines clear translations for unknown goals',()=>run(`
+  local module=QUEST_TRACKER_MODULE;local block=NewQuestBlock(42)
+  for _,prefix in ipairs({"0/1 ","1/1 ","2 / 10  "})do
+    block.height=0;block.currentLine=nil
+    local line=module:AddObjective(block,1,prefix.."Help Raggaran",nil,false)
+    assert(line.Text:GetText()==prefix.."帮助拉格兰")
+    assert(line:GetHeight()==28 and block.height==30,"no cumulative growth on refresh")
+  end
+  for _,source in ipairs({"0/1 Help Grandmatron Tekla","0/250 Durotar Crocolisk Tooth","1/1 帮助拉格兰","1/1 幫助拉格蘭","0/x Help Raggaran","0/1 Help Raggaran at a different camp"})do
+    local line=module:AddObjective(block,1,source)
+    assert(line.Text:GetText()==source,source)
+  end
+  local source="0/1 Help Raggaran"
+  D.Strings[900001]="完整目标的既有译文";D.Objectives[A.Fingerprint(A.Normalize(source))]=900001
+  local line=module:AddObjective(block,1,source)
+  assert(line.Text:GetText()=="完整目标的既有译文","full-source matching retains priority")
+`,{tracker:true,rows:shippedObjectives()}));
+
+test('leading-count fallback excludes special rows, unrelated modules, protected widgets and invalid translations',()=>run(`
+  local module=QUEST_TRACKER_MODULE;local block=NewQuestBlock(42)
+  for _,key in ipairs({"Money","Failed","ClickComplete","QuestComplete"})do
+    local line=module:AddObjective(block,key,"0/1 Help Raggaran")
+    assert(line.Text:GetText()=="0/1 Help Raggaran")
+  end
+  local other=NewQuestBlock(42);other.module=OTHER_TRACKER_MODULE
+  local line=OTHER_TRACKER_MODULE:AddObjective(other,1,"0/1 Help Raggaran")
+  assert(line.Text:GetText()=="0/1 Help Raggaran")
+  line=module:AddObjective(block,1,"Unknown goal")
+  function line.Text:IsForbidden()return self.forbidden end
+  line.Text.forbidden=true
+  local writes=line.Text.writes
+  module:AddObjective(block,1,"0/1 Help Raggaran")
+  assert(line.Text:GetText()=="0/1 Help Raggaran" and line.Text.writes==writes+1,"only the native write is allowed")
+  line.Text.forbidden=nil
+  local id=D.Objectives[A.Fingerprint(A.Normalize("Help Raggaran"))]
+  D.Strings[id]="未知变量 $s1"
+  module:AddObjective(block,1,"0/1 Help Raggaran")
+  assert(line.Text:GetText()=="0/1 Help Raggaran")
+`,{tracker:true,rows:shippedObjectives()}));
 
 test('tracker handles auto-completion, unknown quests, refreshes and late-loaded modules safely',()=>run(`
   local block=NewQuestBlock(12680)
