@@ -329,6 +329,7 @@ local function install()
     if A.InstallArtifacts then A.InstallArtifacts(hookMethod,hookScript) end
     if A.InstallMapTooltips then A.InstallMapTooltips(hookMethod,hook) end
     if A.InstallClientDescriptions then A.InstallClientDescriptions(hook,hookMethod,hookScript) end
+    if A.InstallLocalClient then A.InstallLocalClient(hook,hookMethod) end
     if A.InstallDialogueSurfaces then A.InstallDialogueSurfaces(hook,hookMethod,hookScript) end
     if A.InstallChatItemLinks then A.InstallChatItemLinks() end
 end

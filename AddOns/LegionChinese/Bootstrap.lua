@@ -6,5 +6,5 @@ LegionChineseDB = { Quests = {}, QuestSources = {}, Strings = {}, Gossip = {}, B
     LinkNames = { Achievement = {}, Currency = {}, BattlePet = {}, BattlePetAbility = {}, Encounter = {}, JournalSection = {} },
     ClientTexts = { Achievement = {}, Currency = {}, BattlePet = {}, BattlePetAbility = {}, Encounter = {}, JournalSection = {}, Adventure = {} },
     ClientTextIndex = { Achievement = {}, Currency = {}, BattlePet = {}, BattlePetAbility = {}, Encounter = {}, JournalSection = {}, Adventure = {} },
-    DynamicSpellTexts = {} }
+    DynamicSpellTexts = {}, LocalClientValues = {}, LocalClientTexts = {} }
 LegionChinese = {}

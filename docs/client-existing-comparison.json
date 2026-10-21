@@ -1,0 +1,146 @@
+[
+  {
+    "table": "Spell",
+    "same": 263259,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 454269,
+    "examples": []
+  },
+  {
+    "table": "Creature",
+    "same": 11307,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 28461,
+    "examples": []
+  },
+  {
+    "table": "CreatureFamily",
+    "same": 75,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 1,
+    "examples": []
+  },
+  {
+    "table": "GameObjects",
+    "same": 4148,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 1308,
+    "examples": []
+  },
+  {
+    "table": "ItemSparse",
+    "same": 120155,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 399890,
+    "examples": []
+  },
+  {
+    "table": "JournalInstance",
+    "same": 251,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 21,
+    "examples": []
+  },
+  {
+    "table": "Map",
+    "same": 521,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 4087,
+    "examples": []
+  },
+  {
+    "table": "Achievement",
+    "same": 11210,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 5944,
+    "examples": []
+  },
+  {
+    "table": "CurrencyTypes",
+    "same": 155,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 55,
+    "examples": []
+  },
+  {
+    "table": "BattlePetSpecies",
+    "same": 1956,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 902,
+    "examples": []
+  },
+  {
+    "table": "BattlePetAbility",
+    "same": 2017,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 77,
+    "examples": []
+  },
+  {
+    "table": "JournalEncounter",
+    "same": 1389,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 121,
+    "examples": []
+  },
+  {
+    "table": "JournalEncounterSection",
+    "same": 15619,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 4005,
+    "examples": []
+  },
+  {
+    "table": "Artifact",
+    "same": 41,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 2,
+    "examples": []
+  },
+  {
+    "table": "ArtifactAppearance",
+    "same": 880,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 0,
+    "examples": []
+  },
+  {
+    "table": "ArtifactAppearanceSet",
+    "same": 222,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 222,
+    "examples": []
+  },
+  {
+    "table": "PlayerCondition",
+    "same": 775,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 6340,
+    "examples": []
+  },
+  {
+    "table": "AdventureJournal",
+    "same": 1028,
+    "added": 0,
+    "changed": 0,
+    "localEmpty": 772,
+    "examples": []
+  }
+]

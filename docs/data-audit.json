@@ -1,5 +1,5 @@
 {
-  "version": "1.2.16",
+  "version": "1.3.0",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -580,6 +580,118 @@
         "ids": 11709,
         "zhCN": 11664,
         "zhTW": 45
+      }
+    },
+    "localClient": {
+      "Collection": {
+        "fingerprints": 2600,
+        "ambiguous": 1,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 2594,
+          "zhTW": 6
+        }
+      },
+      "Dialogue": {
+        "fingerprints": 0,
+        "ambiguous": 4,
+        "alreadyPresent": 3690,
+        "baseAmbiguous": 82,
+        "locales": {
+          "zhCN": 0,
+          "zhTW": 0
+        }
+      },
+      "Faction": {
+        "fingerprints": 796,
+        "ambiguous": 7,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 690,
+          "zhTW": 106
+        }
+      },
+      "Garrison": {
+        "fingerprints": 5851,
+        "ambiguous": 10,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 5799,
+          "zhTW": 52
+        }
+      },
+      "GroupFinder": {
+        "fingerprints": 1087,
+        "ambiguous": 0,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 1085,
+          "zhTW": 2
+        }
+      },
+      "Item": {
+        "fingerprints": 1920,
+        "ambiguous": 0,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 1860,
+          "zhTW": 60
+        }
+      },
+      "Objective": {
+        "fingerprints": 21281,
+        "ambiguous": 43,
+        "alreadyPresent": 862,
+        "baseAmbiguous": 1,
+        "locales": {
+          "zhCN": 19910,
+          "zhTW": 1371
+        }
+      },
+      "Profession": {
+        "fingerprints": 4109,
+        "ambiguous": 2,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 4098,
+          "zhTW": 11
+        }
+      },
+      "System": {
+        "fingerprints": 11085,
+        "ambiguous": 102,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 10687,
+          "zhTW": 398
+        }
+      },
+      "Title": {
+        "fingerprints": 1924,
+        "ambiguous": 3,
+        "alreadyPresent": 789,
+        "baseAmbiguous": 5,
+        "locales": {
+          "zhCN": 1908,
+          "zhTW": 16
+        }
+      },
+      "World": {
+        "fingerprints": 10204,
+        "ambiguous": 15,
+        "alreadyPresent": 0,
+        "baseAmbiguous": 0,
+        "locales": {
+          "zhCN": 9868,
+          "zhTW": 336
+        }
       }
     },
     "artifacts": {
@@ -1372,6 +1484,14 @@
     "Data\\DynamicSpellTexts_03.lua",
     "Data\\DynamicSpellTexts_04.lua",
     "Data\\DynamicSpellTexts_05.lua",
+    "Data\\LocalClient_01.lua",
+    "Data\\LocalClient_02.lua",
+    "Data\\LocalClient_03.lua",
+    "Data\\LocalClient_04.lua",
+    "Data\\LocalClient_05.lua",
+    "Data\\LocalClient_06.lua",
+    "Data\\LocalClient_07.lua",
+    "Data\\LocalClient_08.lua",
     "Data\\Artifacts.lua",
     "Data\\QuestBoards.lua"
   ]

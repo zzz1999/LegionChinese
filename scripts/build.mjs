@@ -19,6 +19,7 @@ import {buildArtifacts} from './artifacts.mjs';
 import {buildQuestBoards} from './quest-boards.mjs';
 import {buildClientDescriptions} from './client-descriptions.mjs';
 import {buildDynamicSpellText} from './dynamic-spell-text.mjs';
+import {buildLocalClientData} from './local-client-data.mjs';
 import {writeChangelog} from './changelog.mjs';
 import {QuestSourceIndex,questSourceTables,addValidatedQuestTitles} from './quest-sources.mjs';
 
@@ -376,12 +377,14 @@ const clientDescriptions=buildClientDescriptions({root,input,manifest,version});
 generated.push(...clientDescriptions.generated);counts.clientDescriptions=clientDescriptions.audit.counts;
 const dynamicSpells=buildDynamicSpellText({root,input,manifest,version});
 generated.push(...dynamicSpells.generated);counts.dynamicSpells=dynamicSpells.audit.counts;
+const localClient=buildLocalClientData({root,manifest,version,baseIndexes:{Title:titles,Objective:objectives,Dialogue:gossip}});
+generated.push(...localClient.generated);counts.localClient=localClient.audit.counts;
 const artifacts=buildArtifacts({root,input,manifest,version});
 generated.push(...artifacts.generated);counts.artifacts={...artifacts.audit.counts,choices:artifacts.audit.choices.fields};
 const questBoards=buildQuestBoards({root,input,manifest,version});
 generated.push(...questBoards.generated);counts.questBoardHeaders=questBoards.audit.headers.length;
 writeChangelog(root,version);
-const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','ClientDescriptions.lua','QuestBoards.lua','Artifacts.lua','MapTooltips.lua','ChatLinks.lua','DialogueSurfaces.lua','Changelog.lua','Welcome.lua','UI.lua',''];
+const toc=['## Interface: 70300','## Title: LegionChinese 中文','## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。','## Author: zzz1999','## Version: '+version,'## X-Curse-Project-ID: 1750538','## SavedVariables: LegionChineseSettings','', 'Bootstrap.lua',...generated,'Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua','ClientDescriptions.lua','LocalClient.lua','QuestBoards.lua','Artifacts.lua','MapTooltips.lua','ChatLinks.lua','DialogueSurfaces.lua','Changelog.lua','Welcome.lua','UI.lua',''];
 fs.writeFileSync(path.join(output,'..','LegionChinese.toc'),toc.join('\n'));
 fs.copyFileSync(path.join(root,'SOURCES.md'),path.join(output,'..','SOURCES.md'));
 // Remove stale generated shards only, within the generated data directory.

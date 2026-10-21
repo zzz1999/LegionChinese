@@ -248,8 +248,21 @@ function A.MatchesQuestSource(id,field,text)
     return findText(quest and quest[field],text,acceptedQuestSource)==true
 end
 
+function A.FindLocalClient(scope,text,dynamic)
+    local index=D.LocalClientTexts and D.LocalClientTexts[scope]
+    local values=D.LocalClientValues
+    if not index or not values or type(text)~="string" or text=="" or #text>32768 or A.IsChinese(text) then return end
+    if dynamic then return findText(index,text,values) end
+    local id=index[A.Fingerprint(A.Normalize(text,false))]
+    return id and values[id]
+end
+
+local localCategories={Titles="Title",Objectives="Objective",Gossip="Dialogue"}
 function A.Find(category, text)
-    return findText(D[category],text)
+    local translated=findText(D[category],text)
+    if translated then return translated end
+    local scope=localCategories[category]
+    return scope and A.FindLocalClient(scope,text,true)
 end
 
 function A.FindQuestExtra(id,field,text)

@@ -1085,5 +1085,12 @@
   "questBoardReviews": {
     "file": "data/quest-board-reviews.json",
     "sha256": "b82a9facce5f54d4e7f041176f9efb8b5c066a03887fde6d04f9a4c8fb130f93"
+  },
+  "localClientSnapshot": {
+    "file": "data/local-client-735.json",
+    "sha256": "60fedf417d32890dc0d528440e04b00943412874b2d759ca86e685742e82f0a2",
+    "build": "7.3.5.26972",
+    "buildKey": "3b0517b51edbe0b96f6ac5ea7eaaed38",
+    "rootCKey": "7f4cefa93ecc032a4d33d422764a8cf5"
   }
 }

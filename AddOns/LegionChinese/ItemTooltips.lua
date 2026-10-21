@@ -67,12 +67,13 @@ function A.UpdateItemTooltip(tooltip)
     elseif not item and state then id=state.fallbackID end
     local entries=id and D.ItemDescriptions[id]
     local itemName=id and D.ItemNames and D.ItemNames[id]
-    if not entries and not itemName then A.ClearItemTooltip(tooltip);return end
+    local localText=id and id>0 and A.FindLocalClient and D.LocalClientTexts and D.LocalClientTexts.Item
+    if not entries and not itemName and not localText then A.ClearItemTooltip(tooltip);return end
     if not state or state.itemID~=id then
         state={itemID=id,fallbackID=state and state.fallbackID,lines={}};states[tooltip]=state
     end
     local changed=false
-    for i=itemName and 1 or 2,entries and tooltip:NumLines() or 1 do
+    for i=itemName and 1 or 2,(entries or localText) and tooltip:NumLines() or 1 do
         local widget=_G[name.."TextLeft"..i]
         if widget and not (widget.IsForbidden and widget:IsForbidden()) then
             local source=widget:GetText()
@@ -80,7 +81,18 @@ function A.UpdateItemTooltip(tooltip)
             if not cached or cached.widget~=widget or (source~=cached.source and source~=cached.text) then
                 local translated
                 if i==1 and A.ResolveItemName then translated=A.ResolveItemName(source,id,link and (link:match("|H([^|]+)|h") or link))
-                elseif entries then translated=translateLine(source,entries) end
+                else
+                    if entries then translated=translateLine(source,entries) end
+                    if not translated and localText then
+                        translated=A.FindLocalClient("Item",source) or A.FindLocalClient("System",source)
+                        if not translated and id==138019 then translated=A.FindLocalClient("GroupFinder",source) end
+                        translated=translated and A.Render(translated)
+                        if translated then
+                            local color=source:match("^(|c%x%x%x%x%x%x%x%x)")
+                            if color and source:sub(-2)=="|r" and not translated:match("^|c%x%x%x%x%x%x%x%x") then translated=color..translated.."|r" end
+                        end
+                    end
+                end
                 cached={widget=widget,source=source,text=translated};state.lines[i]=cached
             end
             if cached.text and source~=cached.text then
@@ -100,7 +112,8 @@ end
 
 local function setFallback(tooltip,id)
     local state=states[tooltip]
-    if id and (D.ItemDescriptions[id] or D.ItemNames and D.ItemNames[id]) then
+    if id and id>0 and (D.ItemDescriptions[id] or D.ItemNames and D.ItemNames[id]
+        or A.FindLocalClient and D.LocalClientTexts and D.LocalClientTexts.Item) then
         -- OnTooltipSetItem can already have translated the lines inside the
         -- native setter. Keep its line cache until the tooltip changes.
         if not state or state.itemID~=id then state={lines={}} end

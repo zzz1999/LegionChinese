@@ -1,0 +1,1697 @@
+{
+  "version": "1.3.0",
+  "build": "7.3.5.26972",
+  "buildKey": "3b0517b51edbe0b96f6ac5ea7eaaed38",
+  "rootCKey": "7f4cefa93ecc032a4d33d422764a8cf5",
+  "snapshot": "data/local-client-735.json",
+  "sha256": "60fedf417d32890dc0d528440e04b00943412874b2d759ca86e685742e82f0a2",
+  "tools": {
+    "cascLib": "3f8be478177802de4ae7ebae24fb25ab860ef104",
+    "dbcd": "e732093f8864240fc5884bd1bba6b02f3dfc0d56",
+    "definitions": "77582e12f6f61c7647635bc31c152b119b9dd7f9"
+  },
+  "tables": [
+    {
+      "table": "Achievement_Category",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "c4eb0bfb2759480a01447aea1235f369",
+      "sha256": "9779d20247ca29c7bc1e01f8e54ea76fdbdfdd554ba98f535e8060f396acfa1c",
+      "english": {
+        "url": "https://wago.tools/db2/Achievement_Category/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "1e5c5fece9afbf447d10db81d6164272422324d33eb6083f83342a5a4fea819a"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Achievement_Category/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "a1866a80b700b097b8a0fc11b0a8817fe4668d246ad1aca8cc2e840e676940b6"
+      },
+      "rows": 175,
+      "identityMatched": 175,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 170,
+      "traditionalAccepted": 175,
+      "unsupported": 0,
+      "traditionalRetained": 23
+    },
+    {
+      "table": "AdventureMapPOI",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "138c840a13ae8f12cce3d0681b56d560",
+      "sha256": "8f00714a164ba3bc19938a1243cbb15ec0d1bfbf69e2c7f10b1b9ec9c6c39bf3",
+      "english": {
+        "url": "https://wago.tools/db2/AdventureMapPOI/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "9a62ba9e620a4493a7c5aafbfd68318e227be6932f937a7bd45108f3e2c22ce4"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/AdventureMapPOI/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "e21e0e0aeb386459ffe136d65204987ffac7f20c6ab0f51ea85c04859d2efa15"
+      },
+      "rows": 26,
+      "identityMatched": 26,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 35,
+      "traditionalAccepted": 29,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "AreaPOI",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "14e81d34e122d96747c10bcb4fc18689",
+      "sha256": "2d3b8c80a70e39fa25944153d2ee2933c96628f2f793bdac39c750ae94936fd6",
+      "english": {
+        "url": "https://wago.tools/db2/AreaPOI/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "72d40f745f48f992d5f82a31241063f900f91175f574d9357b6e4789e520927b"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/AreaPOI/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "e0c1b44fad0fbde8176aa1310415989e4505f07353672120717ea3bf8cfffa98"
+      },
+      "rows": 1812,
+      "identityMatched": 1812,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 2405,
+      "traditionalAccepted": 2393,
+      "unsupported": 0,
+      "traditionalRetained": 188
+    },
+    {
+      "table": "AreaPOIState",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "5d4e6a2a7f570887666ba286b37502f4",
+      "sha256": "00430d2afe85dadc48f00be7fa4e19cab212762629cb0a340d25a2aef3db5ca4",
+      "english": {
+        "url": "https://wago.tools/db2/AreaPOIState/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "3f1e3f7985da40ea33ab2c52acbe936a9322740709e6ec04a74d55404fa3ce56"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/AreaPOIState/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "204489868c39b7c0305f56d112c5912f8221aa8bed1a7bca397cfb20a9ff6429"
+      },
+      "rows": 553,
+      "identityMatched": 553,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 77,
+      "traditionalAccepted": 77,
+      "unsupported": 0,
+      "traditionalRetained": 30
+    },
+    {
+      "table": "AreaTable",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "eb7964d94eebfe15e64c05d7131a0571",
+      "sha256": "81bb0781a6910f7401c87854591f7a6ba223ebb8147622c8975956e191dc8f61",
+      "english": {
+        "url": "https://wago.tools/db2/AreaTable/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "f878cb7d15359ede1aa7341ae1233e595cfd8e29e12985a3fc769a3a890f69b4"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/AreaTable/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "f51920e784e9a1a9547e6eeb29a5913841a26c4fcc2165adaa2a05bcc4116932"
+      },
+      "rows": 5853,
+      "identityMatched": 5853,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 5752,
+      "traditionalAccepted": 5747,
+      "unsupported": 8,
+      "traditionalRetained": 83
+    },
+    {
+      "table": "BroadcastText",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "7dece06c020aa79104e846e4ab1235ee",
+      "sha256": "1ad88cfcc4bf7f4832e14fc69b9bdfc9cb591c975f797fb4f3107831f3bd0aab",
+      "english": {
+        "url": "https://wago.tools/db2/BroadcastText/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "9944659a51109dcf3904d3ff82a4be72f6a78b0e729a9811d03eb04471213994"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/BroadcastText/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "81e9b126a4a8b4f4cc623002d52d22abe182e50a67bb025fd5accba5d9987f70"
+      },
+      "rows": 3894,
+      "identityMatched": 3894,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 3946,
+      "traditionalAccepted": 3802,
+      "unsupported": 49,
+      "traditionalRetained": 44
+    },
+    {
+      "table": "CharShipmentContainer",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "d1aa1b8039faeedd481438f40398297a",
+      "sha256": "6105f2a72d73dda24bd9c38a36d591154ffb01b87becc7e0212d98e7e7e47ec5",
+      "english": {
+        "url": "https://wago.tools/db2/CharShipmentContainer/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "4ab3e88664eae40d5fcafbeda9225f6b3c7dbf59304482001725645f3f3c8d13"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/CharShipmentContainer/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "4df7544e8e934f5f60cc58d205995ac986d4958ffd2d86e67186f9813b210010"
+      },
+      "rows": 149,
+      "identityMatched": 149,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 276,
+      "traditionalAccepted": 276,
+      "unsupported": 0,
+      "traditionalRetained": 9
+    },
+    {
+      "table": "CharTitles",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "013b4495097dc583ee18ae1412e6ddb8",
+      "sha256": "6701c1c7d66f58615737a5e88bff2c8a0a0850fc9943857e85c6df99c5b826cd",
+      "english": {
+        "url": "https://wago.tools/db2/CharTitles/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "37bb3445c5a325138d4a91659695681004dde33a1151fe6d5fc85235e9ba0a20"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/CharTitles/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "414e9a78673bffc67c515cb2cdca46e79d04cba23f1aaebfa33c554c1bfaf446"
+      },
+      "rows": 364,
+      "identityMatched": 364,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 0,
+      "traditionalAccepted": 0,
+      "unsupported": 728,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "ChrSpecialization",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "2aa8f84b63f6502ead5fe9f4ede11a26",
+      "sha256": "af1c8a3522c6616f93e1b9978bc37a4d491456ccb333aadb02ccaddcb6d51903",
+      "english": {
+        "url": "https://wago.tools/db2/ChrSpecialization/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "b730c9e38c2c35bcd4f1d3208b6ec77197961b77eb417533c8c8a3242fbd32e4"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ChrSpecialization/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "40a3c675ca45d8e7290e220459a5f918fb496cfc22880fe6b94f70da22f5026a"
+      },
+      "rows": 42,
+      "identityMatched": 42,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 117,
+      "traditionalAccepted": 117,
+      "unsupported": 9,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "CriteriaTree",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "a4d1dc8dcfb7709f80b1b3bf85073448",
+      "sha256": "b1a1a55eb7fd50b157476be9c98527d2e48e1cb7188c027eb3701740b88344f9",
+      "english": {
+        "url": "https://wago.tools/db2/CriteriaTree/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "7be0847f0738d9f0f31e9ceb279692b7fb9dbf05806ab2660c427fab705d6891"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/CriteriaTree/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c52c3b4e8b90e73a8532d594c2d5a017f6dc4ca52719354596f941717c0721bb"
+      },
+      "rows": 49712,
+      "identityMatched": 49712,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 33646,
+      "traditionalAccepted": 33786,
+      "unsupported": 104,
+      "traditionalRetained": 1988
+    },
+    {
+      "table": "DungeonEncounter",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "10f44866d41d3541cc7a6e20b0b9ec41",
+      "sha256": "b6359ac4f7add2672dbfafbf3bc43b4fe3f25b7bf993ffa46a34d2735c0d00ca",
+      "english": {
+        "url": "https://wago.tools/db2/DungeonEncounter/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "c2760e0ec81484c6d78819751f5fea6e03056a9e33c0a776f6a587fe24efa06f"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/DungeonEncounter/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "9ac45fd7482cbfa4962b54963d067b0e6f5c747ed1c66ff21acca6811943268f"
+      },
+      "rows": 799,
+      "identityMatched": 799,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 795,
+      "traditionalAccepted": 794,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "Faction",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "4d180b9c89b38f422b63abe8e5ec50f4",
+      "sha256": "5670b9c647c02802332fe49ed390d2e54870acbf537f62a55df72c643e5d7b38",
+      "english": {
+        "url": "https://wago.tools/db2/Faction/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "048511fe06fda7911fbe45f0aea2484483ab674962cdedb5d81e2b8ee48de426"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Faction/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "a360aad8bc08f38f09eba12537e92d58c2b7d432bb4001e9d541b3cbaa8ead19"
+      },
+      "rows": 610,
+      "identityMatched": 610,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 669,
+      "traditionalAccepted": 767,
+      "unsupported": 0,
+      "traditionalRetained": 108
+    },
+    {
+      "table": "FriendshipRepReaction",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "8a05f0083f58910138ed4c213e89d8c4",
+      "sha256": "b1a3b6ee86e852ec77b2acd733d1989acd8403bffb45d27bead4798e2d924161",
+      "english": {
+        "url": "https://wago.tools/db2/FriendshipRepReaction/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "f39a35b1f5420f6135a023b8b194b7a478a486e6438e4b1684c1b57c647c370f"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/FriendshipRepReaction/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "054372c29a17f8e985fe401212d7870258a9e37910ec8052c96a84d475224260"
+      },
+      "rows": 223,
+      "identityMatched": 223,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 223,
+      "traditionalAccepted": 219,
+      "unsupported": 0,
+      "traditionalRetained": 50
+    },
+    {
+      "table": "FriendshipReputation",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "7b4004f569487465191a2290d035623b",
+      "sha256": "1ffa0265cb5236f736506e56fc7ea18409bf6136cdc226c3241a29a067e71480",
+      "english": {
+        "url": "https://wago.tools/db2/FriendshipReputation/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "ff62c0a4c78d5748687ce537275456c913670dd899b8a25a75c9264676945eb4"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/FriendshipReputation/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c77cfaf3eea17210f960d2081cd6e561690b4749af0b3124f0aa847e6d0d6151"
+      },
+      "rows": 41,
+      "identityMatched": 41,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1,
+      "traditionalAccepted": 0,
+      "unsupported": 35,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "GarrAbility",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "08f9b8373120d85592094cbb925baa2e",
+      "sha256": "51a069de8fd59a8a272966191bd62a6fdc31982dd5b4733b4b56a9f650dea35b",
+      "english": {
+        "url": "https://wago.tools/db2/GarrAbility/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "364716e3ad8aa0970e3059d1d33fa571d61d80fc7d558b60091209b20c55a131"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrAbility/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c46874ac100b4d288fbbc43ba0d2ba5b11da0e3a6f91de2aacdfba8db83ecd7e"
+      },
+      "rows": 719,
+      "identityMatched": 719,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1053,
+      "traditionalAccepted": 1043,
+      "unsupported": 367,
+      "traditionalRetained": 17
+    },
+    {
+      "table": "GarrBuilding",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "d58e72450fb85c496d5dc91a2f788d14",
+      "sha256": "93f4f0b456e4d3d09a64f28865debf0a4269755ed84abc3335bdfc7ebab1c053",
+      "english": {
+        "url": "https://wago.tools/db2/GarrBuilding/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "54b70bbb1d6ee0e85a5fef6358ad0ea54ac7c7aaec0968303f44ba4380aadf8e"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrBuilding/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "fb0cb17731f43de4b28fa853ac6ce7af3ed22d9e1c8aebc159485867954624f8"
+      },
+      "rows": 76,
+      "identityMatched": 76,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 299,
+      "traditionalAccepted": 299,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "GarrClassSpec",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "03bcee585cd4989c33431fd7cd392f92",
+      "sha256": "a0989208540432744cee5086e453f3dc8c01764e6fa04ac0cd183a49bd8cc26d",
+      "english": {
+        "url": "https://wago.tools/db2/GarrClassSpec/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "1e9002a780f48996f1e04ceb87cd6467f0d0e88a5373fc66145e48e8a9e2c150"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrClassSpec/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "62de4442012c3464896fe80c3c60524e437b11b09de2ea96b1440096fab07d62"
+      },
+      "rows": 140,
+      "identityMatched": 140,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 274,
+      "traditionalAccepted": 274,
+      "unsupported": 135,
+      "traditionalRetained": 15
+    },
+    {
+      "table": "GarrEncounter",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "12f2bacddef01edb6624493b48f84537",
+      "sha256": "a428498f55ab5030519fb33f0d7481f8295a460c40bf777f3b2d816b8d65a22a",
+      "english": {
+        "url": "https://wago.tools/db2/GarrEncounter/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "fb5e0663589c3e51e408a0b361d7f11641bbef1974893a1983c60d2d166b3c98"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrEncounter/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "558bd361001e648de3c269523077470cf34ad1d9d93802b8819d4ab3b13a1d1a"
+      },
+      "rows": 2077,
+      "identityMatched": 2077,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 2058,
+      "traditionalAccepted": 2068,
+      "unsupported": 0,
+      "traditionalRetained": 33
+    },
+    {
+      "table": "GarrFollower",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "8dde2b79fee9ee28e4a78495b9849204",
+      "sha256": "e21174e7792b32e7acaf28ea914c4fd0091d4157ead13c1bf679e8d3d9d30edd",
+      "english": {
+        "url": "https://wago.tools/db2/GarrFollower/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "73306811e1e478efee07c5070832ed717b315efdb733c5fe8409f44e163abbcc"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrFollower/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "1b752e6b3b1b8b6eabf1efca48daf88d497c1cfae03f4a9a253ae3fc01f60715"
+      },
+      "rows": 875,
+      "identityMatched": 875,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 358,
+      "traditionalAccepted": 358,
+      "unsupported": 0,
+      "traditionalRetained": 5
+    },
+    {
+      "table": "GarrMechanicType",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "981f60ca85a47d25cced18cbb81fd86c",
+      "sha256": "0029ec6e9a6a42ba2720a413f9031417604d71d4a4ddbf3d93e53c9e4ffc74de",
+      "english": {
+        "url": "https://wago.tools/db2/GarrMechanicType/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "b0d2d1c1cc4e80c442a8d78e7fa8f149a10084099770867a420d26c85b063f44"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrMechanicType/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "20e25c5238d5e99cc073043bf914cefddde2b94d5ae98e3b73b4da2a6c829e67"
+      },
+      "rows": 73,
+      "identityMatched": 73,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 138,
+      "traditionalAccepted": 139,
+      "unsupported": 4,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "GarrMission",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "db102eefed2fb2a02e115441214930d6",
+      "sha256": "9c4063f6bd9e858855594218c5e76c354d543503630ffc25cf0ac339c1b13ee8",
+      "english": {
+        "url": "https://wago.tools/db2/GarrMission/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "9c21abe4ca0014df9c847d9f3d16ddd8a9c8d05e562b02e1029a60f74698e342"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrMission/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "8379b106c6d53983ebc1262297e44aba612401cb7b645114753e454bdc29f01a"
+      },
+      "rows": 1395,
+      "identityMatched": 1395,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 3870,
+      "traditionalAccepted": 3841,
+      "unsupported": 0,
+      "traditionalRetained": 146
+    },
+    {
+      "table": "GarrMissionType",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "313909e244d4e18ba677ef28af96ba30",
+      "sha256": "d135e50af70997f2ededf9918e03e10303c3167377d2f97757516e21856f3893",
+      "english": {
+        "url": "https://wago.tools/db2/GarrMissionType/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "f60390994a7443235d5a9359badd7e8f730dd4813debffc13712834aca63a273"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrMissionType/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "db549d16102e232dd35994aecbb8c09d8e41dd5160ee75735b8930feb307a880"
+      },
+      "rows": 61,
+      "identityMatched": 61,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 60,
+      "traditionalAccepted": 49,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "GarrSpecialization",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "87bbbc2f39b5d41338b03f4d74bed917",
+      "sha256": "ea988b433885f0b69b0aeedd07e2194003fcf0ba09529f07b5a6372bb69e27bd",
+      "english": {
+        "url": "https://wago.tools/db2/GarrSpecialization/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "34f2f3cad45c4764d1324aecb83491f7b4b740b5da91ccb1433f9b3e23e3180a"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrSpecialization/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "74c2444a7ce6278b0079c77c85ee36d0d131145dc5d1dd542431bfed7920ac88"
+      },
+      "rows": 26,
+      "identityMatched": 26,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 50,
+      "traditionalAccepted": 50,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "GarrString",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "8c321afd60d6da50303bead0097e8177",
+      "sha256": "b7b248bd92f35564fdd234d0874dd52b13c3e986b6c113421d3734c52b0b9536",
+      "english": {
+        "url": "https://wago.tools/db2/GarrString/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "16ad3f6b2beb2350d9a2f4eb1c3fc541befd02b730272906d240ea7345f179c7"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrString/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "2dd0dc5ad8465ccd213b8c9afdd62316ccb7f4a1830626d400e8477ccd38fa57"
+      },
+      "rows": 75,
+      "identityMatched": 75,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 75,
+      "traditionalAccepted": 75,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "GarrTalent",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "89d3bd5dca9a08077594f11cbc19d999",
+      "sha256": "5bdc7ebe4fcd31839103410471b73352bc508e886f0af338ea7bea9cca07b133",
+      "english": {
+        "url": "https://wago.tools/db2/GarrTalent/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "fb191f39d2d3be51a2e79c6c09fcf41718d05be24ccf52ab466f752576b54d73"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GarrTalent/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "01b3dc40190e42981a2dd41bed8ed8b99f5b6b5a52888f75284b4ab784f61c91"
+      },
+      "rows": 184,
+      "identityMatched": 184,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 250,
+      "traditionalAccepted": 250,
+      "unsupported": 86,
+      "traditionalRetained": 9
+    },
+    {
+      "table": "GlobalStrings",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "7131be2cef02ade3f4ba88e97c59bb41",
+      "sha256": "b9b8bacc5bd54f191400e167fb265004ed9b183486ca6105f3cf5de7749b1e55",
+      "english": {
+        "url": "https://wago.tools/db2/GlobalStrings/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "3b3ef72313bc5b9f1783cd9fe903d662cd985c991f20bc37bd57767a0afa54ea"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GlobalStrings/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "e3ae3ed2ac357445f994ca0ccb0af3eb90604ee63d4772b5e59448b9733e3a31"
+      },
+      "rows": 16670,
+      "identityMatched": 16670,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 12571,
+      "traditionalAccepted": 12884,
+      "unsupported": 2422,
+      "traditionalRetained": 874
+    },
+    {
+      "table": "GroupFinderActivity",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "fed0680529ef6b5169c9e92f98aadeec",
+      "sha256": "be4f99e3dd7a318ca1a6e93f84233a660a04313146f8ec1d648fe62e4b44c404",
+      "english": {
+        "url": "https://wago.tools/db2/GroupFinderActivity/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "95c83b7983265e5d4f0467e58156ef253107fa5d9f51db5a63aaf5a224c9e44b"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GroupFinderActivity/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "d3113e59682c11682f5131422df8048fa91c8bc71a86d12bafe2b9e6f7c4a380"
+      },
+      "rows": 472,
+      "identityMatched": 472,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 932,
+      "traditionalAccepted": 932,
+      "unsupported": 0,
+      "traditionalRetained": 2
+    },
+    {
+      "table": "GroupFinderActivityGrp",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "046c116154eb54d152596947ffb4680b",
+      "sha256": "504bf3a063d73d92df0dd651605c1b71d4441cff56bae796e82b41b256481c45",
+      "english": {
+        "url": "https://wago.tools/db2/GroupFinderActivityGrp/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "2818537ab2bbe8e17ff476f18835d7214aa7c8c5550bce28a5e73341f0ebfeba"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GroupFinderActivityGrp/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "d1b9a9e27a4340f7c8b27668fc56860279ceb3288b34f22d17524225ae9c24c8"
+      },
+      "rows": 117,
+      "identityMatched": 117,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 117,
+      "traditionalAccepted": 117,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "GroupFinderCategory",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "d9121f69112e68b5f47f644b155f3769",
+      "sha256": "07f4b62faea81a0c2f915f7a74b7017ef9b575bc5f258e013bd6bfb6c4bb4a0c",
+      "english": {
+        "url": "https://wago.tools/db2/GroupFinderCategory/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "02c39cd677f2b778aa0d381d40864942e7e368b192ac8404e9514871eb8e953c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/GroupFinderCategory/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "3e3375efe8b2b9d5c3a56acb63c8e97cc9285e8eb671a78d7c5ed5bf43319dea"
+      },
+      "rows": 10,
+      "identityMatched": 10,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 10,
+      "traditionalAccepted": 10,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "ItemLimitCategory",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "e1d4127f0c6506c20696b9c733e37d53",
+      "sha256": "95c95de14587c7112348cc6de186142267f232d8ac263f7d4f600f52fa74ad57",
+      "english": {
+        "url": "https://wago.tools/db2/ItemLimitCategory/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "caac07e54bdd6ce0f534106a7b66b85c7c6cde8482a0ebdbab3105016d46878c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ItemLimitCategory/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "a4bed31a3f26e503febf75e9f27d4166232d837a2efaae4b989ec6747f769e95"
+      },
+      "rows": 330,
+      "identityMatched": 330,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 320,
+      "traditionalAccepted": 320,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "ItemNameDescription",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "9af03f8d7db80e19c7b409c5209c7b33",
+      "sha256": "89dc5ecf1b22bf1bbc6830b06f847fdc29f095c24e12de6da07cbe699a323772",
+      "english": {
+        "url": "https://wago.tools/db2/ItemNameDescription/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "32a6f3a54b6ab78f432c3f33f136e269fb37e40390b54d1fef8571c3873aa7d3"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ItemNameDescription/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "06a794c94e33641a872dae14322bd2823d0e9fe55b60fcf8edfd2be5275c82ab"
+      },
+      "rows": 238,
+      "identityMatched": 238,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 236,
+      "traditionalAccepted": 237,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "ItemRandomProperties",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "2b54dc3cdaab7e1ea7216377f4990036",
+      "sha256": "d1f3ac9c99661fa4ee05b372fc3429fc7dcb953dd8f68f751d4e4956317d1869",
+      "english": {
+        "url": "https://wago.tools/db2/ItemRandomProperties/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "56bb9a601223db16b1526d41ad7512306166657c1527f8a9f913c9c2e0e6c8d4"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ItemRandomProperties/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "f77567126f7d141fc0f73907c4d0907d40a37313c088760c0b5b0c20e77a9651"
+      },
+      "rows": 2012,
+      "identityMatched": 2012,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 2011,
+      "traditionalAccepted": 2012,
+      "unsupported": 0,
+      "traditionalRetained": 47
+    },
+    {
+      "table": "ItemRandomSuffix",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "6402e0424f764482b1ad0b9343f63795",
+      "sha256": "6d2854c76e7cb8f64f978c6aceea04b6c5c1a089fefa6dadc21bf34e7e69c916",
+      "english": {
+        "url": "https://wago.tools/db2/ItemRandomSuffix/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "8d2f27bcfc8369b172b6e80a810fb02c336cb64ed686010372eabacf5de75da5"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ItemRandomSuffix/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "2a73ab306b2e4c9c116348f32b4c47417c00790e1fb9459e50032ddc6739537d"
+      },
+      "rows": 452,
+      "identityMatched": 452,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 417,
+      "traditionalAccepted": 417,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "ItemSet",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "2366fb8e5ddd15016f2e747478648290",
+      "sha256": "a239d5224b340edef7f2c6aae311d512070242d15aed7d3b6063253445ecca3e",
+      "english": {
+        "url": "https://wago.tools/db2/ItemSet/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "66914cc0ff85adeaadd471eeb7d5abc9116bb8237ce4ad7945ef4acbfe2fa49c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ItemSet/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "f5d4853b6ca3d2f07be1356fe1c244c546f0bd127fd108c52b49341bdce8cc9b"
+      },
+      "rows": 795,
+      "identityMatched": 795,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 793,
+      "traditionalAccepted": 793,
+      "unsupported": 0,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "KeystoneAffix",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "269a071f33b63593d5f0f24989e9255c",
+      "sha256": "cd3ea0f98046a3f24b188ce0f176b8ba635c6e626c22cfa494950e0ed553b630",
+      "english": {
+        "url": "https://wago.tools/db2/KeystoneAffix/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "cca90f51c5b6c34f8f1399f91a43cbc4464fe4ebe88ef37b426574a7713e85a0"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/KeystoneAffix/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "84221c2cc5b6b3e052ede06412a17b17bb80c51485331f402db0acf590c282f5"
+      },
+      "rows": 15,
+      "identityMatched": 15,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 30,
+      "traditionalAccepted": 30,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "LFGDungeonGroup",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "a472070a1db0ffded156d7bb989d50d1",
+      "sha256": "5981bf68f5857883e1a02d75fd9c31cc7a04cfc4a3da51e82f2595615ddddde7",
+      "english": {
+        "url": "https://wago.tools/db2/LFGDungeonGroup/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "39cbb33ea298a2e36a77d84096f2ed552d2b3f7e794ba27f9d40ab8ac98c2118"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/LFGDungeonGroup/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "353a2732a43f62169051b67f07a3516a71907d5252058ebe35ac3ec4add1c8a6"
+      },
+      "rows": 35,
+      "identityMatched": 35,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 35,
+      "traditionalAccepted": 35,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "LFGDungeons",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "c6a2d343c6634161bcbcef20d1584d40",
+      "sha256": "0a3353aae61ccaff28c4ef3822df7edfbc3424da9989bd432628e478fe513ed2",
+      "english": {
+        "url": "https://wago.tools/db2/LFGDungeons/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "5851aee0bb2edddf40ebdeffd0bf773ebbd17f2ab13d1d452a362ebaed429543"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/LFGDungeons/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "14e387987aa8623d153ef330dcef8c6a8283cbd6a852a0490ad435bc992314db"
+      },
+      "rows": 684,
+      "identityMatched": 684,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 912,
+      "traditionalAccepted": 899,
+      "unsupported": 0,
+      "traditionalRetained": 3
+    },
+    {
+      "table": "MapChallengeMode",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "6a1b8f8d8611625ba7b531f06cc0a461",
+      "sha256": "e392259fc46d128a3fd6a175d7399016b48976b340381d4bd882e8a165b68b5e",
+      "english": {
+        "url": "https://wago.tools/db2/MapChallengeMode/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "48c601ca9e8b90b2186f1afb00f40cab94ec043451cbab38e4c32002b08191b9"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/MapChallengeMode/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "403637bb07e530cd123fb2e864e95e54280995e8b43e670cc453d07103f0476c"
+      },
+      "rows": 30,
+      "identityMatched": 30,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 30,
+      "traditionalAccepted": 30,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "MapDifficulty",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "bf0db0972c1cfd4758cdf5026be385ad",
+      "sha256": "c43bcf732aaeb07caea6d359a4b00cd62c3f2f5f8660723d34f0527b928ee3aa",
+      "english": {
+        "url": "https://wago.tools/db2/MapDifficulty/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "d7c922f8fc34948e120763174ef895ef0c0cd42b8fbf5db0071c94ebccadb3cd"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/MapDifficulty/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "ed078bd5d40e6e108feab789d2ddb14fa60efed1d11125cb2fdc2cea16ac1229"
+      },
+      "rows": 948,
+      "identityMatched": 948,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 280,
+      "traditionalAccepted": 282,
+      "unsupported": 0,
+      "traditionalRetained": 59
+    },
+    {
+      "table": "MapDifficultyXCondition",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "dd6d93c6594345d171b5e0affa3e53dc",
+      "sha256": "942828da9071aca0938368f48a5275e62dc1053759141cbabb8865a7cbd22491",
+      "english": {
+        "url": "https://wago.tools/db2/MapDifficultyXCondition/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "866b74354ca2a00eee09cf589a53e4ef3d0a35b48b75ae6f7bb0d2ffaa7c5094"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/MapDifficultyXCondition/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "3d1edeca79ae1e6cbec7609813c6582d052c22adfd0202f38b742e3d32e0515d"
+      },
+      "rows": 1095,
+      "identityMatched": 1095,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1027,
+      "traditionalAccepted": 1027,
+      "unsupported": 0,
+      "traditionalRetained": 99
+    },
+    {
+      "table": "Mount",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "3f00af7c930660bc72f654a070ae88ef",
+      "sha256": "a6945eebbcbea985a9de1674e59b47c513e4fbea4becf100d87a7ba0d33abc32",
+      "english": {
+        "url": "https://wago.tools/db2/Mount/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "21a4534626348698ca45a587d25f43534204fd98c5ba84eb77ce1bcebfa8566c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Mount/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "514b76ffb473943061cf7180feb55ff6c11b0be470018c0ef693f7e1635e0eb4"
+      },
+      "rows": 654,
+      "identityMatched": 654,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1960,
+      "traditionalAccepted": 1958,
+      "unsupported": 2,
+      "traditionalRetained": 13
+    },
+    {
+      "table": "QuestInfo",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "99ee09990f943c10d7a33abf78a43779",
+      "sha256": "ed6a8395cf08f131a23641b27f530968bf9b0f139b2bb33eda59bea4fa3a15f8",
+      "english": {
+        "url": "https://wago.tools/db2/QuestInfo/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "d18168f4112466942df099f0209738dc6e6fd45557977acaa1ced89a4d118ba3"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/QuestInfo/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "8034a1b62cd4c9381537aa026f40bc425ef88c0023e0f7179ea93818119bd078"
+      },
+      "rows": 49,
+      "identityMatched": 49,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 48,
+      "traditionalAccepted": 48,
+      "unsupported": 0,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "QuestLine",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "926a06d331a8ac600a757d3112ca6c37",
+      "sha256": "6c82e375abd99c12424175b0c5d77757fb2ef72525c693061a2ae2aa4de832aa",
+      "english": {
+        "url": "https://wago.tools/db2/QuestLine/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "dea810090964d668a8cca92803de5e2f46cde5fb9928500d65b55178ba356672"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/QuestLine/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "ec9a850045b84a38f3a42ed44f024af832e5defde7a3628fb4c762f085a0c1e1"
+      },
+      "rows": 423,
+      "identityMatched": 423,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 423,
+      "traditionalAccepted": 423,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "QuestObjective",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "2eaff92602d2d43cd9aae602ce444aa9",
+      "sha256": "7303ce3d98574295d5da31e7a29f6801d97a1d142c7becd2d4761ec90ee8238d",
+      "english": {
+        "url": "https://wago.tools/db2/QuestObjective/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "eb2aa1b2dd326d14e49460f87114f2f623ede714cb0609de59e04f680ac9c353"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/QuestObjective/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "08482ce066f7293c8f9d9c50d8c307b8479e60bcc8591a5429962a7e33c24f1a"
+      },
+      "rows": 3448,
+      "identityMatched": 3448,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1566,
+      "traditionalAccepted": 1761,
+      "unsupported": 0,
+      "traditionalRetained": 233
+    },
+    {
+      "table": "QuestSort",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "02bb31e1dbc0bba34e8a869592b4c905",
+      "sha256": "b16306072b7979c95d92c3d1e887b545f92c9384cc34febe202523a69fa95dee",
+      "english": {
+        "url": "https://wago.tools/db2/QuestSort/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "3f36a321307f10ed8f54fc09d265e27af4cbf3163b64935096fbfae8e8ba0820"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/QuestSort/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "12f9a4ac5d73aa6df35bdc71155d5f3f8e2dfab9e00a8b65995dfac5d6062cdc"
+      },
+      "rows": 95,
+      "identityMatched": 95,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 95,
+      "traditionalAccepted": 95,
+      "unsupported": 0,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "QuestV2CliTask",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "e8504cdeee07873a9cbe9f0f9d4d29ff",
+      "sha256": "275948616b12c425e5fb6cfd1ffc633fcfdce82196b30958094deb4ee25e333f",
+      "english": {
+        "url": "https://wago.tools/db2/QuestV2CliTask/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "dbebbfd0a263f18bf7d8aff2e8d7ce4e33abf04ecdd8e229f9e12549c2b0b08c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/QuestV2CliTask/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "f97fc1f033709798ccf34034d59bfee66dadddb7a2994464a45c4535bcfc9415"
+      },
+      "rows": 1341,
+      "identityMatched": 1341,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1336,
+      "traditionalAccepted": 1338,
+      "unsupported": 0,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "ResearchBranch",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "a9b853de21b1b95e666049436ee3c33f",
+      "sha256": "7b9c49086b564d07afa7f7349d8f6f4296c1a7838963e23ac78e939d6fc66cc2",
+      "english": {
+        "url": "https://wago.tools/db2/ResearchBranch/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "a03eb4042519ab5bafe03129299d8fcff9f4e69f89236959525aec11820d0447"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ResearchBranch/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "abaebe04c72d1e3733cad0a02833ae6d2d823223d4b5362242612c1d0cb724c0"
+      },
+      "rows": 18,
+      "identityMatched": 18,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 18,
+      "traditionalAccepted": 18,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "ResearchProject",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "8fef5e1c23644d41b3b9443da952e2d4",
+      "sha256": "02eb3c5c719cbc6a0f8e1de30056f87a90134e5900f121b6b9c921c18cb76fe3",
+      "english": {
+        "url": "https://wago.tools/db2/ResearchProject/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "c8ae8187043027050a82599976317cdacccaf48780bd70cc418d87add5bf2c46"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ResearchProject/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "ba903989d18b0840afc5d85874572b2557a79b26f7ddf4049c74169b2b03db85"
+      },
+      "rows": 249,
+      "identityMatched": 249,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 493,
+      "traditionalAccepted": 495,
+      "unsupported": 0,
+      "traditionalRetained": 2
+    },
+    {
+      "table": "ResearchSite",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "bf85847c85b4f0979725561f132a1644",
+      "sha256": "a46deaff624fb48124fa88d3e5ac26ab83f5b1175c7086eab7ec4381f3fe2ffc",
+      "english": {
+        "url": "https://wago.tools/db2/ResearchSite/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "ef650239aad2832900b8c11be42730c2f7fc67eb5eb375ee871898e91c0264bc"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ResearchSite/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "8aaee699660c3365897c073809070f7af33760164c094a107c566511439583c0"
+      },
+      "rows": 403,
+      "identityMatched": 403,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 399,
+      "traditionalAccepted": 396,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "Scenario",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "d5da932e13b8e5e8022c95168c67ce0b",
+      "sha256": "da0e9b7e366efc2470caa7a8b7f4e5d2d3d1f78bfc9f306d307e99c000a9dc66",
+      "english": {
+        "url": "https://wago.tools/db2/Scenario/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "97104a2bc9c42cbc78577694dcf39a36e97396a922c64156a12fbfca70d9b8ef"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Scenario/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "afe836b4decf920bd3586f05d3df20210827c6572af039a39f2ae4f5e8b64d87"
+      },
+      "rows": 440,
+      "identityMatched": 440,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 437,
+      "traditionalAccepted": 433,
+      "unsupported": 0,
+      "traditionalRetained": 2
+    },
+    {
+      "table": "ScenarioStep",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "fe1e49ca3f7d3ff9c6866eae96509a95",
+      "sha256": "9546185bc47113a7898ff2291a8a77863e9ebb067c078002503856573a33ea90",
+      "english": {
+        "url": "https://wago.tools/db2/ScenarioStep/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "f2a569eb8cc0df1c1c3e8817900705d42879fe849afb327c7156cefa9959f53d"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/ScenarioStep/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "8195a82b3b8f82cda9f1d772a0a1e03be1449f28c777789f2087d27eed4e0ec0"
+      },
+      "rows": 1634,
+      "identityMatched": 1634,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 3205,
+      "traditionalAccepted": 3213,
+      "unsupported": 0,
+      "traditionalRetained": 117
+    },
+    {
+      "table": "SkillLine",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "0f739699617d1d0d7176973c9dfcf415",
+      "sha256": "cc84df1a368ade15c80234822c18a4d9e061d1aba75d6c97d10e73a2ba476898",
+      "english": {
+        "url": "https://wago.tools/db2/SkillLine/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "646b542042e44679d2a88596020de911cdf33251f3489c8026faeb919f8add02"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SkillLine/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "81e81b65cc96ec3bfedf22b4336f0c47f7a6fa14df877f54aa11e0acc5a415d0"
+      },
+      "rows": 192,
+      "identityMatched": 192,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 289,
+      "traditionalAccepted": 290,
+      "unsupported": 0,
+      "traditionalRetained": 5
+    },
+    {
+      "table": "SourceInfo",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "d4a069d6e6ffb1f21bce8c23054c62f8",
+      "sha256": "a8806730640746e074e80f85313a70d745bc3d1e9d4f1125ed9d2bbc1270bf19",
+      "english": {
+        "url": "https://wago.tools/db2/SourceInfo/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "4ce5c960a59cc28c437f9a04e06b02327c7358196e626a58811fa1440ba766ff"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SourceInfo/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "d2d027201503e39c4cbafa6093ac1d306f4c0958781bcf28083e1502d1ae4a3a"
+      },
+      "rows": 6466,
+      "identityMatched": 6466,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 5289,
+      "traditionalAccepted": 5289,
+      "unsupported": 1177,
+      "traditionalRetained": 7
+    },
+    {
+      "table": "SpellFlyout",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "3be28ca7efed3498934b16a8b3f11bc3",
+      "sha256": "d2deb35f810cb4c3941a7f022a9deb5b883c67e111479a14917d5f167cd14b46",
+      "english": {
+        "url": "https://wago.tools/db2/SpellFlyout/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "05ecce899f53ef2c9a7047cdeb3c18a5a406361ff12476f7f1ee2a742e6dc716"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SpellFlyout/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "323cbd99194227df1c2fb449ab258e9808bfd1df3c14d4efe4f8e3a6cfb63602"
+      },
+      "rows": 16,
+      "identityMatched": 14,
+      "identityMismatch": 2,
+      "missingEnglish": 0,
+      "accepted": 28,
+      "traditionalAccepted": 28,
+      "unsupported": 0,
+      "traditionalRetained": 2
+    },
+    {
+      "table": "SpellFocusObject",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "94a2e36db2113b8f209fa257ffafa299",
+      "sha256": "d1ab2eb8c2ac4bfe31e503afa70fa7934a9a4f0bfd2a1873c90a5ca5e1a415be",
+      "english": {
+        "url": "https://wago.tools/db2/SpellFocusObject/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "a23f5b26abe5f8fc05fc894de4668950e412d7ab6a0ea2459364eebc19719a62"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SpellFocusObject/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c7324de5107e7606cfad3750016477a4324968e0884cb7233ac68dba0b969826"
+      },
+      "rows": 670,
+      "identityMatched": 670,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 666,
+      "traditionalAccepted": 664,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "SpellItemEnchantment",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "78b988fd178a52aeee1f87ee5b740ba2",
+      "sha256": "f1b7356936553fb99385f4b7f0d52597231a4ddaf1ba4b506ffd90a1e55f2636",
+      "english": {
+        "url": "https://wago.tools/db2/SpellItemEnchantment/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "60c4561f0eb3925d115b7da16698fca1dcf8c6834b2f6597974799c82aa3966b"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SpellItemEnchantment/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "b126221332623378c420a6c22c6c6b5b474457d7d62035c5c7254969e1b9b279"
+      },
+      "rows": 4173,
+      "identityMatched": 4173,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 722,
+      "traditionalAccepted": 460,
+      "unsupported": 3376,
+      "traditionalRetained": 56
+    },
+    {
+      "table": "SpellShapeshiftForm",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "f22fe060b7cb542dd38f678bbc6c53ab",
+      "sha256": "802d100f26c6c086f40b0d6ea237ae01b992149065d0a205d02f48feb7e79daf",
+      "english": {
+        "url": "https://wago.tools/db2/SpellShapeshiftForm/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "60c70a1a6d5a0ba94caf21759a1594d0d55367b05922590f04d08d604e95f2ed"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/SpellShapeshiftForm/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "ca750e516d827c61bd34483be822190bdec9f133d2490eb7245fa1e67da04dd8"
+      },
+      "rows": 64,
+      "identityMatched": 64,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 36,
+      "traditionalAccepted": 40,
+      "unsupported": 0,
+      "traditionalRetained": 4
+    },
+    {
+      "table": "TaxiNodes",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "c80fcf059669f2f30ab1b2b6bcd70020",
+      "sha256": "3f3339238ffcc9be41902421a15e6b182dd2acaac0e40704068f8374914dd2d0",
+      "english": {
+        "url": "https://wago.tools/db2/TaxiNodes/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "58c34739377bf151d5e3e99ecafe64744dc8992beef5fb268185d2a3b4d573a3"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/TaxiNodes/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "e0a5344d4474ccf6d7b6ac18981b795233d5f1fa50aba417707b81fdb703af02"
+      },
+      "rows": 882,
+      "identityMatched": 882,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 564,
+      "traditionalAccepted": 758,
+      "unsupported": 0,
+      "traditionalRetained": 227
+    },
+    {
+      "table": "Toy",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "adb5ddbce9fb01f006b74edd1599af79",
+      "sha256": "f7a1f9849cd6f94dfe3443e9f18b1d9aa8321ca795036b14adccf585a9d1971c",
+      "english": {
+        "url": "https://wago.tools/db2/Toy/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "1d5c02966780866d821bd216043ac9c1f5ba324d403b7b5bdb199f9d481f9ca1"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Toy/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c8857db086a08e9d38adea3301f95aecc872b8cee317e7d6d0eb30cdb8334833"
+      },
+      "rows": 513,
+      "identityMatched": 513,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 483,
+      "traditionalAccepted": 483,
+      "unsupported": 11,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "TradeSkillCategory",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "84a82bd28463d21f988ac47c58debc9a",
+      "sha256": "335b3a027748173d24192a2366df70ff329de5b669f4027c06e62b58064439a8",
+      "english": {
+        "url": "https://wago.tools/db2/TradeSkillCategory/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "bc68ca3cba3147e6a266f1ad512b37858ac57fd8a0222a6cb062dbff03694204"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/TradeSkillCategory/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "882cc2a940e0bd0f0b121c42ea15eb22c137d23f3fc6121390ad73c60374901c"
+      },
+      "rows": 327,
+      "identityMatched": 327,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 327,
+      "traditionalAccepted": 327,
+      "unsupported": 0,
+      "traditionalRetained": 20
+    },
+    {
+      "table": "TransmogSet",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "729ff6d43ea99d52cf61f2ce417f22e6",
+      "sha256": "3ae4c37a47418b693e2e5745f09fc3628743d4b762bef7aeed517182878dffb3",
+      "english": {
+        "url": "https://wago.tools/db2/TransmogSet/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "6277d4b16dcfc79f7e47f552bb71a6413ef27591ace71af99647aefc40b147ba"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/TransmogSet/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "3e1144cb912bdbf2e6914d7eaa570995475608cf0c4e0793bb92100a7363b28c"
+      },
+      "rows": 1456,
+      "identityMatched": 1456,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 1411,
+      "traditionalAccepted": 1411,
+      "unsupported": 0,
+      "traditionalRetained": 5
+    },
+    {
+      "table": "TransmogSetGroup",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "a221281a108347d10c61af8271bb3b62",
+      "sha256": "49269d3dd5673737a51ee5bd74ef73b20560f9fb43e48f3faf88bca3d38bfdd9",
+      "english": {
+        "url": "https://wago.tools/db2/TransmogSetGroup/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "526cf27d437c28146b0d23845783352894dc6969d13cb96992af7cccb05fe1b6"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/TransmogSetGroup/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "d8468e01f0f1517501c627ba09b535678d910a3af828501707e36c06988ee0da"
+      },
+      "rows": 59,
+      "identityMatched": 59,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 57,
+      "traditionalAccepted": 58,
+      "unsupported": 0,
+      "traditionalRetained": 1
+    },
+    {
+      "table": "UnitPowerBar",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "6dc9617957e41ae44f3a9fa006b7af4d",
+      "sha256": "962e47ecffeea298ab5490c9d279b55ab819ded2f03506686de17effecfc42a8",
+      "english": {
+        "url": "https://wago.tools/db2/UnitPowerBar/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "66e710b92740a4988ff65d12206e38b8f72911493f00f556be2d526d650238c8"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/UnitPowerBar/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c0467f7284855fa73d00b25abb0db0d86e053ae14a36a55c73f02a753a2941cb"
+      },
+      "rows": 184,
+      "identityMatched": 184,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 466,
+      "traditionalAccepted": 460,
+      "unsupported": 3,
+      "traditionalRetained": 16
+    },
+    {
+      "table": "Vignette",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "b35088100a5ff296d089b40beef25443",
+      "sha256": "8291a457d393e1443108ed6209eb10898c5a49370188b86eae2247d492f36e3a",
+      "english": {
+        "url": "https://wago.tools/db2/Vignette/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "410e497503049b4ad75cede6d57fae0254329a83219ec642361924f6f9629a2c"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/Vignette/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "6090fc49aac68df68b8e13a4b8b1a90822115f47809a8c3ed2be7cccdaff3c25"
+      },
+      "rows": 2079,
+      "identityMatched": 2079,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 2068,
+      "traditionalAccepted": 2059,
+      "unsupported": 0,
+      "traditionalRetained": 6
+    },
+    {
+      "table": "WMOAreaTable",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "f88e0114b3cd5c53fb2e6c2d077b0b2e",
+      "sha256": "05f9ef5d4d4cef0a05039a669b4a272f69a9c53660ae363f4db9f1cc3d1c3ed1",
+      "english": {
+        "url": "https://wago.tools/db2/WMOAreaTable/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "25908f18b613a015ec9d085b49bc14cf3bd355cadaafd142e766bf292487d9fd"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/WMOAreaTable/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "2d703fb255f0e4f9876a5854b26226ddc24c4964e6de89c018cc407bb95fe2b7"
+      },
+      "rows": 40263,
+      "identityMatched": 40263,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 8072,
+      "traditionalAccepted": 8069,
+      "unsupported": 0,
+      "traditionalRetained": 197
+    },
+    {
+      "table": "WorldBossLockout",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "7320e831da7081d35c8e78ba5bbe9800",
+      "sha256": "601c45e7039022497936000c9ceed91aad52ec4a099a5452f6282d836b564770",
+      "english": {
+        "url": "https://wago.tools/db2/WorldBossLockout/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "25160bb942acff4702a84567b89a8944f39458b3bafe5e64a84b34b6c4441acb"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/WorldBossLockout/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "97e2bc59cf584dcf6a80327f076e3fe696e2825d5990d60bf0881fbf298670bd"
+      },
+      "rows": 14,
+      "identityMatched": 14,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 14,
+      "traditionalAccepted": 14,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "WorldElapsedTimer",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "ba752cfe645e2eeb0454e0035d12a836",
+      "sha256": "33089d2070913f30aaabfa67504b4b1e9a5ac32ab49d99c0780d89fdc3bb519f",
+      "english": {
+        "url": "https://wago.tools/db2/WorldElapsedTimer/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "d7d81f24d3ebe58821368f898f4a7ddde49c633091225bc47f6b495525b5ddba"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/WorldElapsedTimer/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "c7941d3b34b30145d72e0e6eeae9ad838e9909f4d118702dc6cb830e35f37b45"
+      },
+      "rows": 5,
+      "identityMatched": 5,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 3,
+      "traditionalAccepted": 3,
+      "unsupported": 0,
+      "traditionalRetained": 0
+    },
+    {
+      "table": "WorldStateUI",
+      "build": "7.3.5.26972",
+      "locale": "zhCN",
+      "cKey": "ef0866237ad3f8979e1d8c196a39b34f",
+      "sha256": "ee45782e4696ad13f06758959940dc3a56753035209c38f0850eb0e7d4d9b07a",
+      "english": {
+        "url": "https://wago.tools/db2/WorldStateUI/csv?build=7.3.5.26972&locale=enUS",
+        "sha256": "4576343eaea725ec368c9baa440f97d9acff00f42fe24937859c8b18bf0dc5a2"
+      },
+      "traditional": {
+        "url": "https://wago.tools/db2/WorldStateUI/csv?build=7.3.5.26972&locale=zhTW",
+        "sha256": "71cff1f844e1497c165a09b36b9b7e64a5a0f4de4b784d4818b8403ca9318314"
+      },
+      "rows": 494,
+      "identityMatched": 494,
+      "identityMismatch": 0,
+      "missingEnglish": 0,
+      "accepted": 504,
+      "traditionalAccepted": 504,
+      "unsupported": 308,
+      "traditionalRetained": 56
+    }
+  ],
+  "counts": {
+    "Collection": {
+      "fingerprints": 2600,
+      "ambiguous": 1,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 2594,
+        "zhTW": 6
+      }
+    },
+    "Dialogue": {
+      "fingerprints": 0,
+      "ambiguous": 4,
+      "alreadyPresent": 3690,
+      "baseAmbiguous": 82,
+      "locales": {
+        "zhCN": 0,
+        "zhTW": 0
+      }
+    },
+    "Faction": {
+      "fingerprints": 796,
+      "ambiguous": 7,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 690,
+        "zhTW": 106
+      }
+    },
+    "Garrison": {
+      "fingerprints": 5851,
+      "ambiguous": 10,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 5799,
+        "zhTW": 52
+      }
+    },
+    "GroupFinder": {
+      "fingerprints": 1087,
+      "ambiguous": 0,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 1085,
+        "zhTW": 2
+      }
+    },
+    "Item": {
+      "fingerprints": 1920,
+      "ambiguous": 0,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 1860,
+        "zhTW": 60
+      }
+    },
+    "Objective": {
+      "fingerprints": 21281,
+      "ambiguous": 43,
+      "alreadyPresent": 862,
+      "baseAmbiguous": 1,
+      "locales": {
+        "zhCN": 19910,
+        "zhTW": 1371
+      }
+    },
+    "Profession": {
+      "fingerprints": 4109,
+      "ambiguous": 2,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 4098,
+        "zhTW": 11
+      }
+    },
+    "System": {
+      "fingerprints": 11085,
+      "ambiguous": 102,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 10687,
+        "zhTW": 398
+      }
+    },
+    "Title": {
+      "fingerprints": 1924,
+      "ambiguous": 3,
+      "alreadyPresent": 789,
+      "baseAmbiguous": 5,
+      "locales": {
+        "zhCN": 1908,
+        "zhTW": 16
+      }
+    },
+    "World": {
+      "fingerprints": 10204,
+      "ambiguous": 15,
+      "alreadyPresent": 0,
+      "baseAmbiguous": 0,
+      "locales": {
+        "zhCN": 9868,
+        "zhTW": 336
+      }
+    }
+  },
+  "chineseStrings": 53605,
+  "exclusions": [
+    "Name filters, reserved names, internal test tables and player-authored text are not localization sources.",
+    "ADB/WDB server caches are not promoted to official client translations.",
+    "Only matching IDs, unchanged non-language fields and supported complete text are imported."
+  ]
+}

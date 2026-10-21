@@ -1,0 +1,22 @@
+{
+  "Sources": [
+    {
+      "Repository": "WoW-Tools/CascLib",
+      "Commit": "3f8be478177802de4ae7ebae24fb25ab860ef104",
+      "Name": "CascLib"
+    },
+    {
+      "Repository": "wowdev/DBCD",
+      "Commit": "e732093f8864240fc5884bd1bba6b02f3dfc0d56",
+      "Name": "DBCD"
+    },
+    {
+      "Repository": "wowdev/WoWDBDefs",
+      "Commit": "77582e12f6f61c7647635bc31c152b119b9dd7f9",
+      "Name": "WoWDBDefs"
+    }
+  ],
+  "ProgramSha256": "16ee30f1d2ea180f0138bb082ec576afd96790ed771b0871d71196fbb8610376",
+  "ReadOnly": true,
+  "NetworkFallback": false
+}

@@ -245,3 +245,15 @@ NPC 名称和头衔来自原有固定 TDB 2018 基础行及其简繁 locale 行�
 NPC 说话、喊话、密语、首领密语复用已有 BroadcastText / Gossip 中文资料，怪物动作消息保留原有处理。只有怪物动作事件使用 `%s` 姓名格式，普通 NPC 对白不能把该模板直接写进聊天。处理不会发送聊天消息，也不改变玩家发言正文。选项 `BoxText` / `BoxBroadcastTextID` 及原版 `GOSSIP_CONFIRM` 确认框已接入匹配流程，但现有资料未发现可增加的中文 BoxText 行，不能计为新增已翻译内容。
 
 所有新增 AddOns 数据只保留中文、数字 ID 与匹配指纹，不携带原始 SQL、CSV 或外文正文。未通过来源或格式核对的内容保持原文，范围及后续缺口见 `docs/TRANSLATION-COVERAGE.md`。
+
+## 1.3.0 本地中文客户端提取
+
+本次从用户提供的 **7.3.5.26972、cn、zhCN** 客户端 CASC 资源中只读提取。活动 Build Key 为 `3b0517b51edbe0b96f6ac5ea7eaaed38`，Root CKey 为 `7f4cefa93ecc032a4d33d422764a8cf5`。每份 DB2 解包后要求 MD5 与 CASC CKey 一致，并记录 SHA-256；不启动游戏、不修改客户端，也不将服务器写入的 ADB/WDB 缓存视为官方译文。
+
+读取工具固定 [CascLib](https://github.com/WoW-Tools/CascLib/tree/3f8be478177802de4ae7ebae24fb25ab860ef104)、[DBCD](https://github.com/wowdev/DBCD/tree/e732093f8864240fc5884bd1bba6b02f3dfc0d56) 与 [WoWDBDefs](https://github.com/wowdev/WoWDBDefs/tree/77582e12f6f61c7647635bc31c152b119b9dd7f9) 的版本。对缓存中的工具源码修正配置文件的只读访问，禁用本地文件缺失时的在线回退；导出时保留数值数组和大整数的精度。复现入口为 `scripts/extract-client.ps1`，工具版本与提取结果见 `docs/client-extractor-tools.json`、`docs/client-extraction-audit.json`。
+
+本地导出 243 张表，其中 144 张含中文；内部测试表 `UnitTestSparse` 因无匹配布局定义被排除。与原有资料重叠的法术、物品、神器等 18 张中文表逐字段核对结果相同，没有凭空增加这部分覆盖率，见 `docs/client-existing-comparison.json`。新增候选来自 68 张面向玩家的表，原文使用 Wago.Tools **相同 7.3.5.26972** enUS 导出对照，缺简体时使用同版 zhTW；每张表的 URL、哈希、身份核对结果及采用数量均保留在 `data/local-client-735.json`，其整体哈希由 `sources.json.localClientSnapshot` 固定。
+
+候选须逐记录核对 ID 和全部非语言字段，包括数组成员；同版本的两条 SpellFlyout 记录仍存在 ClassMask 差异，已排除。只有完整原文与可直接显示的可靠中文通过检查才生成索引；不推测公式、不翻译玩家输入，同名歧义不选择译文。按内容范围分别建库，已有任务标题、目标和对白索引优先；新增候选如已存在则去重。简体可用时优先，简体缺失或冲突时再用可核实的繁体。
+
+新增显示处理核对固定的 [7.3.5 界面源码](https://github.com/Gethe/wow-ui-source/tree/67ecbf5ce0e50cc7483c2295caecf410460f0994)：地图地点、区域标签、场景与成就条件、坐骑手册、专业配方来源、地下城排队说明、声望详情及要塞任务固定字段。任务和世界目标复用原有入口。收录表还包含其他尚未单独适配的内容，不能把资源条数当成已完成的界面汉化数量；详情与复现方式见 `docs/LOCAL-CLIENT-DATA.md`。任务全文、进行中／交付对白和书页主要由服务器发送，不能靠客户端安装包完全补齐。`Casketmasher`、征令板未核实的正文及 `Orgrimmar Portals` 仍没有可采纳的中文对应。
