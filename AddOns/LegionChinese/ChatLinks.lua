@@ -6,8 +6,12 @@ local referenceHooked=false
 local eventFrame
 local chatFrames=setmetatable({}, {__mode="k"})
 local pending=setmetatable({}, {__mode="k"})
+local owners=setmetatable({}, {__mode="kv"})
+-- Dependencies point to weak entry sets. Only live pending records retain a
+-- bucket, so neither this index nor a record keeps trimmed history alive.
+local waiting=setmetatable({}, {__mode="v"})
 local tooltipHooks=setmetatable({}, {__mode="k"})
-local queuedFrames=setmetatable({}, {__mode="k"})
+local queuedIDs={}
 local refreshQueued=false
 local mapsRequested=false
 local linkKinds={item=true,keystone=true,quest=true,spell=true,enchant=true,achievement=true,
@@ -88,10 +92,11 @@ end
 
 -- Resolve semantic links, never arbitrary text enclosed in square brackets.
 -- Each resolver uses the linked ID; the payload itself is left untouched.
-local function linkedName(kind,id,payload,caption,journalType)
+local function linkedName(kind,id,payload,caption,journalType,cache)
     if kind=="item" then
         if id==138019 then return end -- A generic keystone item lacks a dungeon.
-        local name=apiName(GetItemInfo,1,payload)
+        if not cache.itemQueried then cache.itemName=apiName(GetItemInfo,1,payload);cache.itemQueried=true end
+        local name=cache.itemName
         if safeChinese(name) then return name,id end
         return A.ResolveItemName and A.ResolveItemName(caption,id,payload),id
     elseif kind=="keystone" then
@@ -143,16 +148,20 @@ local function translate(message,names)
         -- discarded by looking up only its base ID. This is the client's cache,
         -- not an external translation service. Cache only within this pass so
         -- an initially unavailable item can resolve when its data arrives.
-        local cached=names and names[payload]
+        local cache=names[payload]
+        if not cache then cache={captions={}};names[payload]=cache end
+        local cached=cache.captions[caption]
         local name,waiting
         if cached then
             name,waiting=cached.name,cached.waiting
         else
-            name,waiting=linkedName(kind,id,payload,caption,journalType)
+            name,waiting=linkedName(kind,id,payload,caption,journalType,cache)
             if not waiting and kind~="item" and kind~="keystone" then waiting=payload end
             -- A cached foreign name is still pending, just like nil. Keep its
             -- dependency so every copy can retry when Chinese data arrives.
-            if names then names[payload]={name=name,waiting=waiting} end
+            -- Source-guarded fallback depends on the visible caption, even
+            -- when two links share an ID and the exact same payload.
+            cache.captions[caption]={name=name,waiting=waiting}
         end
         if not A.IsChinese(name) then
             if waiting then missing=missing or {};missing[waiting]=true end
@@ -166,35 +175,56 @@ local function translate(message,names)
 end
 
 local function hasHistory(frame)
-    local buffer=frame and frame.historyBuffer
-    return frame and not (frame.IsForbidden and frame:IsForbidden()) and buffer
+    if not frame or frame.IsForbidden and frame:IsForbidden() then return false end
+    local buffer=frame.historyBuffer
+    return buffer
         and type(buffer.EnumerateIndexedEntries)=="function" and type(buffer.GetEntryAtIndex)=="function"
         and type(buffer.GetNumElements)=="function" and type(frame.MarkDisplayDirty)=="function"
 end
 
+local function setPending(frame,entry,missing)
+    local record=pending[entry]
+    if record then
+        for id,bucket in pairs(record.items) do
+            if not missing or not missing[id] then
+                bucket[entry]=nil
+                if not next(bucket) and waiting[id]==bucket then waiting[id]=nil end
+            end
+        end
+    end
+    if not missing then pending[entry]=nil;owners[entry]=nil;return end
+    for id in pairs(missing) do
+        local bucket=waiting[id]
+        if not bucket then bucket=setmetatable({}, {__mode="k"});waiting[id]=bucket end
+        bucket[entry]=true;missing[id]=bucket
+    end
+    record=record or {};record.items=missing;pending[entry]=record;owners[entry]=frame
+end
+
 local function updateEntry(frame,entry,names)
-    if type(entry)~="table" or type(entry.message)~="string" then return false end
+    if type(entry)~="table" then return false end
+    if type(entry.message)~="string" then setPending(frame,entry,nil);return false end
     -- Translate the live entry so other addons' changes and names already
     -- resolved before a client-cache eviction both remain intact.
     local text,_,missing=translate(entry.message,names)
-    pending[entry]=missing and {frame=frame,items=missing} or nil
+    setPending(frame,entry,missing)
     requestMaps(missing)
     if text~=entry.message then entry.message=text;return true end
     return false
 end
 
-local function refreshFrame(frame,names,readyItems)
+local function refreshFrame(frame,names,readyEntries)
     if not hasHistory(frame) then return end
     local changed=false
     for _,entry in frame.historyBuffer:EnumerateIndexedEntries() do
-        local retry=not readyItems
-        local record=pending[entry]
-        if readyItems and record then
-            for itemID in pairs(readyItems) do
-                if record.items[itemID] then retry=true;break end
-            end
-        end
+        local retry=not readyEntries or readyEntries[entry]
+        if readyEntries then readyEntries[entry]=nil end
         if retry and updateEntry(frame,entry,names) then changed=true end
+    end
+    if readyEntries then
+        for entry in pairs(readyEntries) do
+            if owners[entry]==frame then setPending(frame,entry,nil) end
+        end
     end
     -- Enumerate the live buffer so removed/replaced entries are never touched.
     -- A cache event retries only matching pending lines; login and refreshes
@@ -209,19 +239,24 @@ function A.RefreshChatItemLinks(target)
 end
 
 local function queueWaiting(itemID)
-    if not itemID then return end
-    for _,record in pairs(pending) do
-        if record.items[itemID] then
-            local ready=queuedFrames[record.frame]
-            if not ready then ready={};queuedFrames[record.frame]=ready end
-            ready[itemID]=true
-        end
-    end
-    if refreshQueued or not next(queuedFrames) then return end
+    local bucket=itemID and waiting[itemID]
+    if not bucket or not next(bucket) then return end
+    queuedIDs[itemID]=true
+    if refreshQueued then return end
     refreshQueued=true
     local function flush()
-        local frames=queuedFrames
-        queuedFrames=setmetatable({}, {__mode="k"});refreshQueued=false
+        local ids=queuedIDs;queuedIDs={};refreshQueued=false
+        local frames={}
+        for id in pairs(ids) do
+            for entry in pairs(waiting[id] or {}) do
+                local record,frame=pending[entry],owners[entry]
+                if record and record.items[id]==waiting[id] and frame then
+                    local ready=frames[frame]
+                    if not ready then ready={};frames[frame]=ready end
+                    ready[entry]=true
+                end
+            end
+        end
         -- Share exact-variant lookups across windows in this batch only. Never
         -- persist cache misses: another item or journal event can resolve them.
         local names={}
@@ -248,22 +283,48 @@ local function referenceReady(link)
     if kind=="journal" then queueWaiting("journal") else queueWaiting(payload) end
 end
 
-local function installFrame(frame)
+local function installFrame(frame,hookMethod)
     if not hasHistory(frame) or type(frame.AddMessage)~="function" or not hooksecurefunc then return end
     local methods=chatFrames[frame]
     if not methods then methods={};chatFrames[frame]=methods end
+    local changed=methods.buffer~=frame.historyBuffer
+    methods.buffer=frame.historyBuffer
     for _,method in ipairs({"AddMessage","BackFillMessage"}) do
         if type(frame[method])=="function" and methods[method]~=frame[method] then
             local backfill=method=="BackFillMessage"
-            hooksecurefunc(frame,method,function(self)
+            hookMethod(frame,method,function(self)
                 if not hasHistory(self) then return end
                 local buffer=self.historyBuffer
                 local entry=buffer:GetEntryAtIndex(backfill and buffer:GetNumElements() or 1)
                 if updateEntry(self,entry,{}) then self:MarkDisplayDirty() end
             end)
             methods[method]=frame[method]
+            changed=true
         end
     end
+    return changed
+end
+
+local function frameChanged(frame)
+    if not hasHistory(frame) or type(frame.AddMessage)~="function" then return false end
+    local methods=chatFrames[frame]
+    return not methods or methods.buffer~=frame.historyBuffer or methods.AddMessage~=frame.AddMessage
+        or type(frame.BackFillMessage)=="function" and methods.BackFillMessage~=frame.BackFillMessage
+end
+
+function A.ChatLinksChanged()
+    if not installed and type(ChatFrame_AddMessageEventFilter)=="function" then return true end
+    if type(FCF_OpenTemporaryWindow)=="function" and windowHooked~=FCF_OpenTemporaryWindow
+        or type(SetItemRef)=="function" and referenceHooked~=SetItemRef then return true end
+    for i=1,NUM_CHAT_WINDOWS or 10 do if frameChanged(_G["ChatFrame"..i]) then return true end end
+    for _,name in ipairs(CHAT_FRAMES or {}) do if frameChanged(_G[name]) then return true end end
+    for _,tooltip in pairs({GameTooltip,ItemRefTooltip}) do
+        if tooltip.HookScript and not (tooltip.IsForbidden and tooltip:IsForbidden()) then
+            local record=tooltipHooks[tooltip]
+            if not record or type(tooltip.SetHyperlink)=="function" and record.hyperlink~=tooltip.SetHyperlink then return true end
+        end
+    end
+    return false
 end
 
 function A.TranslateChatItemLinks(frame,_,message,...)
@@ -310,6 +371,7 @@ function A.TranslateMonsterMessage(_,event,message,author,...)
 end
 
 function A.InstallChatItemLinks()
+    local hook,hookMethod,hookScript=A.Hooks.ForFeature("chat-links")
     if not installed and type(ChatFrame_AddMessageEventFilter)=="function" then
         for _,event in ipairs(events) do ChatFrame_AddMessageEventFilter("CHAT_MSG_"..event,A.TranslateChatItemLinks) end
         for event in pairs(monsterEvents) do ChatFrame_AddMessageEventFilter(event,A.TranslateMonsterMessage) end
@@ -326,32 +388,38 @@ function A.InstallChatItemLinks()
             elseif event=="GET_ITEM_INFO_RECEIVED" and success then queueWaiting(itemID) end
         end)
     end
-    for i=1,NUM_CHAT_WINDOWS or 10 do installFrame(_G["ChatFrame"..i]) end
-    for _,name in ipairs(CHAT_FRAMES or {}) do installFrame(_G[name]) end
-    if not windowHooked and type(FCF_OpenTemporaryWindow)=="function" and hooksecurefunc then
-        hooksecurefunc("FCF_OpenTemporaryWindow",function()
+    local names={}
+    local function installChat(frame) if installFrame(frame,hookMethod) then refreshFrame(frame,names) end end
+    for i=1,NUM_CHAT_WINDOWS or 10 do installChat(_G["ChatFrame"..i]) end
+    for _,name in ipairs(CHAT_FRAMES or {}) do installChat(_G[name]) end
+    if windowHooked~=FCF_OpenTemporaryWindow and type(FCF_OpenTemporaryWindow)=="function" and hooksecurefunc then
+        hook("FCF_OpenTemporaryWindow",function()
             A.InstallChatItemLinks();A.RefreshChatItemLinks()
         end)
-        windowHooked=true
+        windowHooked=FCF_OpenTemporaryWindow
     end
     -- Journal links open the guide, not ItemRefTooltip. Retry only after the
     -- user's click or its addon load; never open/select a dungeon ourselves.
-    if not referenceHooked and type(SetItemRef)=="function" and hooksecurefunc then
-        hooksecurefunc("SetItemRef",referenceReady)
-        referenceHooked=true
+    if referenceHooked~=SetItemRef and type(SetItemRef)=="function" and hooksecurefunc then
+        hook("SetItemRef",referenceReady)
+        referenceHooked=SetItemRef
     end
     local tooltips={GameTooltip,ItemRefTooltip}
     for i=1,2 do
         local tooltip=tooltips[i]
-        if tooltip and not tooltipHooks[tooltip] and tooltip.HookScript
+        if tooltip and tooltip.HookScript
             and not (tooltip.IsForbidden and tooltip:IsForbidden()) then
-            tooltipHooks[tooltip]=true
-            tooltip:HookScript("OnTooltipSetItem",tooltipReady)
-            tooltip:HookScript("OnShow",tooltipReady)
-            if tooltip.SetHyperlink and hooksecurefunc then
-                hooksecurefunc(tooltip,"SetHyperlink",function(_,link)
+            local record=tooltipHooks[tooltip]
+            if not record then
+                record={};tooltipHooks[tooltip]=record
+                hookScript(tooltip,"OnTooltipSetItem",tooltipReady)
+                hookScript(tooltip,"OnShow",tooltipReady)
+            end
+            if type(tooltip.SetHyperlink)=="function" and record.hyperlink~=tooltip.SetHyperlink and hooksecurefunc then
+                hookMethod(tooltip,"SetHyperlink",function(_,link)
                     referenceReady(link)
                 end)
+                record.hyperlink=tooltip.SetHyperlink
             end
         end
     end

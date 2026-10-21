@@ -20,8 +20,9 @@ export const families=new Map(definitions.flatMap(([group,names])=>names.split('
 const familyOrder=[...families.keys()];
 export const runtimeFiles=[
   'Core.lua','Hooks.lua','Bindings.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua',
-  'ClientDescriptions.lua','Modules/Maps.lua','Modules/Collections.lua','Modules/Professions.lua','Modules/Reputation.lua',
-  'Modules/Garrison.lua','Modules/GroupFinder.lua','Modules/Scenario.lua','Modules/Achievements.lua',
+  'ClientDescriptions.lua','Modules/Maps.lua','Modules/Collections.lua','Modules/Toys.lua','Modules/Wardrobe.lua',
+  'Modules/Professions.lua','Modules/Archaeology.lua','Modules/Reputation.lua',
+  'Modules/Garrison.lua','Modules/Followers.lua','Modules/Buildings.lua','Modules/Research.lua','Modules/GroupFinder.lua','Modules/Scenario.lua','Modules/Achievements.lua',
   'QuestBoards.lua','Artifacts.lua','MapTooltips.lua','ChatLinks.lua','DialogueSurfaces.lua','Changelog.lua','Welcome.lua','UI.lua',
 ];
 const runtimeDependencies={
@@ -31,7 +32,9 @@ const runtimeDependencies={
   'ExtraTooltips.lua':['Core.lua','ClientNames.lua'],
   'ClientDescriptions.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'Artifacts.lua':['Core.lua','Bindings.lua','QuestBoards.lua'],
-  'ChatLinks.lua':['Core.lua','ClientNames.lua'],
+  'ChatLinks.lua':['Core.lua','Hooks.lua','ClientNames.lua'],
+  'Modules/Toys.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
+  'Modules/Wardrobe.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'DialogueSurfaces.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'Welcome.lua':['Core.lua','Changelog.lua'],
   'UI.lua':runtimeFiles.filter(file=>file!=='UI.lua'),

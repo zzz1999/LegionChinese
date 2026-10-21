@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "clientBuild": "7.3.5.26972",
+  "uiCommit": "67ecbf5ce0e50cc7483c2295caecf410460f0994",
+  "sourceRepository": "https://github.com/Gethe/wow-ui-source",
+  "dataSnapshot": {
+    "file": "data/local-client-735.json",
+    "sha256": "60fedf417d32890dc0d528440e04b00943412874b2d759ca86e685742e82f0a2",
+    "build": "7.3.5.26972",
+    "buildKey": "3b0517b51edbe0b96f6ac5ea7eaaed38",
+    "rootCKey": "7f4cefa93ecc032a4d33d422764a8cf5"
+  },
+  "files": [
+    {
+      "path": "AddOns/Blizzard_APIDocumentation/GarrisonInfoLua.lua",
+      "gitBlob": "978cacd2ca0040380f1336fe6de1c75a18a06e01",
+      "sha256": "0d981550888bd0a3d51a5eef7f223dd0ef406ce752cb311d12c6c0d566d35d31"
+    },
+    {
+      "path": "AddOns/Blizzard_ArchaeologyUI/Blizzard_ArchaeologyProgressBar.lua",
+      "gitBlob": "3cb0dc9508a1c0a3444aee9ad5a2f5ff12811209",
+      "sha256": "630a75905ae50e1c813cb33ea0f15928a9b718f1ff617317d2b42b5b33349e96"
+    },
+    {
+      "path": "AddOns/Blizzard_ArchaeologyUI/Blizzard_ArchaeologyProgressBar.xml",
+      "gitBlob": "22a3a47849f2b07231faeeef42da6a45c5d1d9e2",
+      "sha256": "95ce005d007fb42ae20bc60fb8ecf15a293a18b19c52dd2d06ff91939dd2dc04"
+    },
+    {
+      "path": "AddOns/Blizzard_ArchaeologyUI/Blizzard_ArchaeologyUI.lua",
+      "gitBlob": "f86a214459e6fde5949ee1b1fefb3b5c57c2cd80",
+      "sha256": "8e04ca20dd86db87dd51f16c75e6e2234a2bcbcfe529937355fc0a0d4fc9637f"
+    },
+    {
+      "path": "AddOns/Blizzard_ArchaeologyUI/Blizzard_ArchaeologyUI.xml",
+      "gitBlob": "b657df6178cce4d77428722221ced5d8db63f69b",
+      "sha256": "b1b799aa6ac742734c526789e5f938a318ff9d10ff1e4b99219ba24c3c6c8a02"
+    },
+    {
+      "path": "AddOns/Blizzard_ArchaeologyUI/Localization.lua",
+      "gitBlob": "e7b2086e12e8a1c59610914ea4d0ed9c4272e5a7",
+      "sha256": "835100e9c62e81bde9181d26349865ae5cdea459b04929ca019182859d9dd02d"
+    },
+    {
+      "path": "AddOns/Blizzard_Collections/Blizzard_ToyBox.lua",
+      "gitBlob": "5c7360cfdb206e91e5e2801a2a60c4600a7b5c31",
+      "sha256": "0b781fc34a39823fc71976247526199c6612a664bd2ef617f3352c2d6ab321f0"
+    },
+    {
+      "path": "AddOns/Blizzard_Collections/Blizzard_ToyBox.xml",
+      "gitBlob": "5beecdfb439698ac67d825bd521d2986618a33cb",
+      "sha256": "2a3415967b9a05869daa5e83b1e9d3eab327308b07732376b953d222f2852c24"
+    },
+    {
+      "path": "AddOns/Blizzard_Collections/Blizzard_Wardrobe.lua",
+      "gitBlob": "3b26e2463c7c59d4f8f06cf5970872103b12a68a",
+      "sha256": "4fd0d48dc376f7966ac0aca9cc51892d4f4ee82429a1d4d26d2fa61c29369020"
+    },
+    {
+      "path": "AddOns/Blizzard_Collections/Blizzard_Wardrobe.xml",
+      "gitBlob": "192a1cb5bd5447eae7fc9e74358a97afb38ad814",
+      "sha256": "807b4c4d13249e841b41b775dd4a967f5a3edff411bd1d48bc562ea8d61d39a0"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.lua",
+      "gitBlob": "11edfa299e8d052cf8a5268e10e20c38ee6f7cfc",
+      "sha256": "12129d05cf7ab1c77409c782ce6845b5ba3b4a5cf5b4f2d659724e99eb905266"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml",
+      "gitBlob": "c8273fdeae0317fe78fe350a04fdfb1a126e5580",
+      "sha256": "532002e583ca7da31710604fd7a19842fea9613ec7becd5beb9c923556fde0f4"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.lua",
+      "gitBlob": "82e368e4ae4dc9312bc4f352b2293f9e49dab840",
+      "sha256": "f8f0b337eadee8f34c8b3d11af77eefb2fc67ded4ac6336a85dc6870b7ae5dd1"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml",
+      "gitBlob": "0e2e8c593ae4203d82d5c49e21fba666b090c17b",
+      "sha256": "1c81ce12676d9d87d7bc913a9575679b8cb1b695be2af8f477f4a3ded8eeb24e"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.lua",
+      "gitBlob": "3c607059b4a09a9221d8cc85ccb1993fe9b1cea2",
+      "sha256": "70ee81e0abdfe6c079176cb8d07e21c56b83fb3cd8f7e7bf23a5834bc243b40d"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml",
+      "gitBlob": "5d18f396bc77887a6b4e5623c5ee3301b08c2278",
+      "sha256": "82a84b41070945875a105aac66cbd826cd7f5e34c0f6cb15a2fa5378790bbf30"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.lua",
+      "gitBlob": "70eb3267a2ef7da57a5376124cabf795c1cd37e1",
+      "sha256": "f0c1333d430a8cf7d2c1d2b56de80c409224b1dc84404a401c0bb7151ec91b01"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml",
+      "gitBlob": "14167d660f77f95257b2a954a658af2fa7ac1901",
+      "sha256": "10f046b1e68a292df95208381bf3c30cfb30cff0ec8f9d092a97903fdb00ba67"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.lua",
+      "gitBlob": "903f79c3dc1214d9a9b99d1bedefb8354999e7b2",
+      "sha256": "9960c86024f4cffc3adfed2f9b107b6b583e847407017a1e843650a22c5dac35"
+    },
+    {
+      "path": "AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml",
+      "gitBlob": "f8453e2e0139e56baba8cfb8f89c6bde47704984",
+      "sha256": "15de5cd2ac47392c81f40bf557e040f6fc49040a14dfac24d496e71d08f03dec"
+    },
+    {
+      "path": "AddOns/Blizzard_OrderHallUI/Blizzard_OrderHallMissionUI.lua",
+      "gitBlob": "195818127ab05e68192b287651092ce694d5a055",
+      "sha256": "7d1c62ca53e0bff5403b59208edf457ab3b6c4eb3c9b7d4b8e2118a3ab9f7e9e"
+    },
+    {
+      "path": "AddOns/Blizzard_OrderHallUI/Blizzard_OrderHallMissionUI.xml",
+      "gitBlob": "b24eb80bf956c587dfabc1e0aa4fcf951ca7fba5",
+      "sha256": "b1d579bcda23d9cdea4eb94963314bcb4b391326478edb8cddeda7d4660be7dd"
+    },
+    {
+      "path": "AddOns/Blizzard_OrderHallUI/Blizzard_OrderHallTalents.lua",
+      "gitBlob": "ef9bf19b4193fc163acd580b1a063b551ef3211b",
+      "sha256": "3909e146379993a8dff263b4612f4e0fcc0b71ea997342b4ad91f9e616918988"
+    },
+    {
+      "path": "AddOns/Blizzard_OrderHallUI/Blizzard_OrderHallTalents.xml",
+      "gitBlob": "bf0a551415f2c35ea5953fe66cc5cd86901593b5",
+      "sha256": "61d37e2d527265c0cecb689f343d9a4e1080b4a0fd3344f5703f6a3366924ccc"
+    },
+    {
+      "path": "FrameXML/FloatingGarrisonFollowerTooltip.lua",
+      "gitBlob": "0246a1bac3fb3fcb83bed26a30a85fc490a1a3ab",
+      "sha256": "a4ad334a3555fbc4ab319bb8f05594b9d28079a90ae4f3da3119bca2daa8e8b5"
+    },
+    {
+      "path": "FrameXML/FloatingGarrisonFollowerTooltip.xml",
+      "gitBlob": "1f5ddc796af2e2c6c29df2c28da66bd8604bbb99",
+      "sha256": "3c98618ce5a214df600c3cc5c9510512351f852591322a62297b01d2ae794f11"
+    },
+    {
+      "path": "FrameXML/GarrisonBaseUtils.lua",
+      "gitBlob": "0abbe700907d025b12cd8178f3275ec259347a20",
+      "sha256": "9eca9f9c092bba96c57dd190a0ca4fe6ff9e6b4a15d966a177994b0dd833ee07"
+    },
+    {
+      "path": "FrameXML/GarrisonBaseUtils.xml",
+      "gitBlob": "9b61c26fd7ffe28bd3aa22db98bed399bf3684fe",
+      "sha256": "6533a825159d5d52c65de8e3597fa1a590f5e5fdbae9565b67e9add8b8af6887"
+    },
+    {
+      "path": "FrameXML/GarrisonFollowerTooltip.lua",
+      "gitBlob": "2082a6068ac24cfde67a5fff0737f10d38d0ff79",
+      "sha256": "5cabcbb10d9a9784f1522510902676b7146140421bb91c913236fb20d6af903c"
+    },
+    {
+      "path": "FrameXML/GarrisonFollowerTooltip.xml",
+      "gitBlob": "d58c88a966c298c21cfff5a2e7fc96edf51e48ae",
+      "sha256": "7e1e79d586b83e3aa70f569f36af6aac35337486f90480e36214f048ce06d2e4"
+    },
+    {
+      "path": "FrameXML/UIDropDownMenu.lua",
+      "gitBlob": "1179d0959672e3fac97c1187eaab13688557ec9b",
+      "sha256": "6d903a081b53f11ed81f50c780ce443e240ea51a9d816758975eebf3cc5b4858"
+    },
+    {
+      "path": "FrameXML/WardrobeOutfits.lua",
+      "gitBlob": "cb128a0a49487d75730929d15c9f23921599bf7e",
+      "sha256": "8e7ed6b04a6a9328162046b7ec0628f6fd555ce9ea0f38dd0559d5f550c57163"
+    },
+    {
+      "path": "FrameXML/WardrobeOutfits.xml",
+      "gitBlob": "dec0995d412e1f1bd436dfb2d0e74085c8a2ad04",
+      "sha256": "3263aaea7f6b90ff763156b9ce48cd23e4be4e2d155c0c2fc7471cb44704417b"
+    },
+    {
+      "path": "FrameXML/WorldMapFrame.lua",
+      "gitBlob": "699a467270d64397ce5ab1dd711b6c9c0e60d05c",
+      "sha256": "cde19ff0221bb46d58d9b4e59b45085e6b4c09e1bb784db5c5343e5ac6a63917"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "schema": 1,
   "resources": [
     {
@@ -1360,7 +1360,30 @@
       ]
     },
     {
+      "path": "Modules/Toys.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "Modules/Wardrobe.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
       "path": "Modules/Professions.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Archaeology.lua",
       "after": [
         "Core.lua",
         "Bindings.lua"
@@ -1375,6 +1398,27 @@
     },
     {
       "path": "Modules/Garrison.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Followers.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Buildings.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Research.lua",
       "after": [
         "Core.lua",
         "Bindings.lua"
@@ -1425,6 +1469,7 @@
       "path": "ChatLinks.lua",
       "after": [
         "Core.lua",
+        "Hooks.lua",
         "ClientNames.lua"
       ]
     },
@@ -1462,9 +1507,15 @@
         "ClientDescriptions.lua",
         "Modules/Maps.lua",
         "Modules/Collections.lua",
+        "Modules/Toys.lua",
+        "Modules/Wardrobe.lua",
         "Modules/Professions.lua",
+        "Modules/Archaeology.lua",
         "Modules/Reputation.lua",
         "Modules/Garrison.lua",
+        "Modules/Followers.lua",
+        "Modules/Buildings.lua",
+        "Modules/Research.lua",
         "Modules/GroupFinder.lua",
         "Modules/Scenario.lua",
         "Modules/Achievements.lua",
@@ -1674,9 +1725,15 @@
     "ClientDescriptions.lua",
     "Modules/Maps.lua",
     "Modules/Collections.lua",
+    "Modules/Toys.lua",
+    "Modules/Wardrobe.lua",
     "Modules/Professions.lua",
+    "Modules/Archaeology.lua",
     "Modules/Reputation.lua",
     "Modules/Garrison.lua",
+    "Modules/Followers.lua",
+    "Modules/Buildings.lua",
+    "Modules/Research.lua",
     "Modules/GroupFinder.lua",
     "Modules/Scenario.lua",
     "Modules/Achievements.lua",

@@ -65,7 +65,9 @@ function NativeChatMessage(frame,event,message,...)
     frame:AddMessage('[12:34] [Global] [Sender]: '..message,0.25,0.5,0.75,7,8,9,nil,11)
 end
 function ItemDataReceived(id,success)
-    for _,frame in ipairs(frames) do frame:Fire('OnEvent','GET_ITEM_INFO_RECEIVED',id,success) end
+    for _,frame in ipairs(frames) do
+        if frame.registered and frame.registered.GET_ITEM_INFO_RECEIVED then frame:Fire('OnEvent','GET_ITEM_INFO_RECEIVED',id,success) end
+    end
 end
 GameTooltip=ScriptFrame();ItemRefTooltip=ScriptFrame()
 function GameTooltip:GetItem() return self.itemName,self.itemLink end

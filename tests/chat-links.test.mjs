@@ -38,6 +38,140 @@ function run(code,{native=false,beforeUI=''}={}){
   }finally{lua.lua_close(L);}
 }
 
+test('replaced chat insertion methods and history buffers retain deferred translation and native metadata',()=>run(`
+  local function replace()
+    function ChatFrame1:AddMessage(message,r,g,b,...)
+      self.addCalls=self.addCalls+1
+      self.historyBuffer:PushFront(self:PackageEntry(message,r,g,b,...))
+      self:MarkDisplayDirty()
+      return "replacement",nil,3
+    end
+  end
+  replace()
+  NativeChatMessage(ChatFrame1,"CHAT_MSG_CHANNEL","|Hitem:700001|h[Before addon event]|h")
+  local early=ChatFrame1.historyBuffer:GetEntryAtIndex(1);local metadata=early.extraData
+  frames[1]:Fire("OnEvent","ADDON_LOADED","ReplacementChat")
+  NativeChatMessage(ChatFrame1,"CHAT_MSG_CHANNEL","|Hitem:700001|h[After addon event]|h")
+  local later=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
+  itemNames["item:700001"]="可靠物品"
+  ItemDataReceived(700001,true);FlushChatTimers()
+  assert(early.message:find("[可靠物品]",1,true) and later.message:find("[可靠物品]",1,true))
+  assert(early.extraData==metadata and early.timestamp==100 and ChatFrame1.addCalls==2)
+  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(2)==early)
+  local other=ChatWindow("OtherHistory");ChatFrame1.historyBuffer=other.historyBuffer
+  ChatFrame1.historyBuffer:PushFront(ChatFrame1:PackageEntry("|Hitem:700002|h[Restored history]|h"))
+  frames[1]:Fire("OnEvent","ADDON_LOADED","ReplacementBuffer")
+  itemNames["item:700002"]="还原物品"
+  ItemDataReceived(700002,true);FlushChatTimers()
+  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message:find("[还原物品]",1,true))
+  for i=1,20 do frames[1]:Fire("OnEvent","ADDON_LOADED","UnrelatedAddon") end
+  queries={};local a,b,c=ChatFrame1:AddMessage("|Hitem:700003|h[Pending]|h")
+  assert(a=="replacement" and b==nil and c==3 and #queries==1)
+`,{native:true}));
+
+test('quest caption source guards are evaluated independently for identical payloads in either order',()=>run(`
+  local D=LegionChineseDB
+  D.Quests[700001]={Title="可靠任务"};AllowQuestSource(700001,"Title","Known quest")
+  local known="|Hquest:700001:1|h[Known quest]|h"
+  local custom="|Hquest:700001:1|h[Server custom quest]|h"
+  for _,message in ipairs({known.." "..custom,custom.." "..known}) do
+    local _,text=A.TranslateChatItemLinks(nil,"CHAT_MSG_SAY",message)
+    assert(text and text:find("[可靠任务]",1,true) and text:find(custom,1,true))
+    NativeChatMessage(ChatFrame1,"CHAT_MSG_CHANNEL",message)
+    assert(ChatFrame1.historyBuffer:GetEntryAtIndex(1).message:find(custom,1,true))
+  end
+`,{native:true}));
+
+test('item variant fallback is caption-specific while exact variant cache requests remain shared',()=>run(`
+  local D=LegionChineseDB
+  D.ItemNames[700001]={"可靠物品",A.NameFingerprint("Known item")}
+  local payload="item:700001::::::123"
+  local known="|H"..payload.."|h[Known item]|h"
+  local custom="|H"..payload.."|h[Server custom variant]|h"
+  for _,message in ipairs({known.." "..custom,custom.." "..known}) do
+    queries={}
+    local _,text=A.TranslateChatItemLinks(nil,"CHAT_MSG_SAY",message)
+    assert(text and text:find("[可靠物品]",1,true) and text:find(custom,1,true))
+    assert(#queries==1 and queries[1]==payload)
+  end
+`,{native:true}));
+
+test('unrelated item events do not traverse pending messages, read history, request names or schedule work',()=>run(`
+  ChatFrame1.historyBuffer.max=1200
+  for i=1,1000 do ChatFrame1:AddMessage("|Hitem:"..(700000+i).."|h[Pending]|h") end
+  local visits=0;local nativePairs=pairs
+  function pairs(table)
+    local iterator,state,key=nativePairs(table)
+    return function(state,key)
+      local nextKey,value=iterator(state,key)
+      if nextKey~=nil then visits=visits+1 end
+      return nextKey,value
+    end,state,key
+  end
+  local reads=0;local buffer=ChatFrame1.historyBuffer;local enumerate=buffer.EnumerateIndexedEntries
+  function buffer:EnumerateIndexedEntries()reads=reads+1;return enumerate(self)end
+  queries={}
+  for i=1,20 do
+    for _,frame in ipairs(frames) do
+      if frame.registered and frame.registered.GET_ITEM_INFO_RECEIVED then
+        frame:Fire("OnEvent","GET_ITEM_INFO_RECEIVED",999999,true)
+      end
+    end
+  end
+  pairs=nativePairs
+  assert(visits==0,"unrelated notifications visited "..visits.." pending records")
+  assert(reads==0 and #queries==0 and #timers==0)
+`,{native:true,beforeUI:`
+  local create=CreateFrame
+  function CreateFrame(...)
+    local frame=create(...);frame.registered={}
+    function frame:RegisterEvent(event)self.registered[event]=true end
+    return frame
+  end
+`}));
+
+test('dependency changes and evicted history remove obsolete retry work without changing detached entries',()=>run(`
+  local function notify(id)
+    ItemDataReceived(id,true);FlushChatTimers()
+  end
+  ChatFrame1:AddMessage("|Hitem:700001|h[Unknown item]|h")
+  local entry=ChatFrame1.historyBuffer:GetEntryAtIndex(1)
+  entry.message="|Hitem:700002|h[Different item]|h"
+  A.RefreshChatItemLinks(ChatFrame1)
+  queries={};ItemDataReceived(700001,true)
+  assert(#timers==0 and #queries==0,"old dependency must be removed")
+  notify(700002);assert(#queries==1)
+  table.remove(ChatFrame1.historyBuffer.entries,1)
+  local source=entry.message
+  notify(700002)
+  assert(entry.message==source,"trimmed entries are never rewritten")
+  queries={};ItemDataReceived(700002,true)
+  assert(#timers==0 and #queries==0,"evicted entries must stop scheduling retries")
+  ChatFrame2:AddMessage("|Hitem:700003|h[Pending]|h")
+  local other=ChatFrame2.historyBuffer:GetEntryAtIndex(1)
+  other.message="Changed by another addon";A.RefreshChatItemLinks(ChatFrame2)
+  ItemDataReceived(700003,true);assert(#timers==0 and other.message=="Changed by another addon")
+  ChatFrame2:AddMessage("|Hitem:700004|h[Pending]|h")
+  local emptied=ChatFrame2.historyBuffer:GetEntryAtIndex(1);emptied.message=nil
+  notify(700004);ItemDataReceived(700004,true)
+  assert(#timers==0 and emptied.message==nil,"cleared messages must release their dependency too")
+`,{native:true}));
+
+test('restoring an already hooked chat method does not stack callbacks, including backfilled history',()=>run(`
+  local saved=ChatFrame1.AddMessage
+  function ChatFrame1:AddMessage(message)self.historyBuffer:PushFront(self:PackageEntry(message))end
+  function ChatFrame1:BackFillMessage(message)self.historyBuffer:PushBack(self:PackageEntry(message));return 9,nil,11 end
+  frames[1]:Fire("OnEvent","ADDON_LOADED","ReplacementChat")
+  ChatFrame1.AddMessage=saved
+  for i=1,20 do frames[1]:Fire("OnEvent","ADDON_LOADED","RestoredChat") end
+  queries={};ChatFrame1:AddMessage("|Hitem:700001|h[Pending]|h");assert(#queries==1)
+  local a,b,c=ChatFrame1:BackFillMessage("|Hitem:700002|h[Pending backfill]|h")
+  assert(a==9 and b==nil and c==11)
+  itemNames["item:700002"]="历史物品"
+  ItemDataReceived(700002,true);FlushChatTimers()
+  assert(ChatFrame1.historyBuffer:GetEntryAtIndex(2).message=="|Hitem:700002|h[历史物品]|h")
+`,{native:true}));
+
 test('foreign item link captions use the exact client variant while preserving color, payload, surrounding text and event arguments',()=>run(`
   local payload="item:19019::::::::110:250::5:2:123:456:::"
   itemNames[payload]="雷霆之怒，逐风者的祝福之剑"

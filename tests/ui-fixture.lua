@@ -10,8 +10,8 @@ function hooksecurefunc(object,name,callback)
     end
 end
 function ScriptFrame()
-    local frame={scripts={},scriptHooks={}}
-    function frame:RegisterEvent() end
+    local frame={scripts={},scriptHooks={},registered={}}
+    function frame:RegisterEvent(event) self.registered[event]=true end
     function frame:SetScript(event,callback) self.scripts[event]=callback end
     function frame:HookScript(event,callback)
         self.scriptHooks[event]=self.scriptHooks[event] or {}

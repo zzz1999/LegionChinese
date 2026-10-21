@@ -252,6 +252,12 @@ NPC 说话、喊话、密语、首领密语复用已有 BroadcastText / Gossip �
 
 资源目录、分片顺序与运行模块由 `scripts/resource-layout.mjs` 统一登记。共享中文在加载时解析为普通字符串，之后释放临时池表。构建在独立临时目录完成，生成清单和哈希、检查 Lua 5.1 语法与共享引用后才替换正式目录；替换失败会回滚，无法完成回滚时保留恢复备份。重构期间逐条核对与 1.3.0 的资源赋值，结果在 `docs/refactor-equivalence.json`，基线在 `docs/refactor-baseline-1.3.0.json`，资源明细在 `docs/resource-manifest.json`。结构和构建流程见 `docs/ARCHITECTURE.md`。这些检查不代替游戏内字形、布局和兼容性验收。
 
+## 1.3.2 收藏、考古、研究与要塞入口
+
+新增玩具、幻化、考古、研究、追随者和建筑显示入口，不重新采集或混入其他版本资料。固定说明复用下述本地 7.3.5.26972 客户端数据及已有同版物品库，沿用简体优先、繁体补缺和完整原文／歧义检查。追随者默认姓名复用原有可靠 NPC 名称索引，并校验实例名与客户端模板默认名；该姓名索引包含社区保存的世界数据库资料，不把这部分重新标为独立核验的官中。舰船、玩家改名及无法核对的姓名不替换。
+
+显示路径核对固定界面源码 commit `67ecbf5ce0e50cc7483c2295caecf410460f0994`，包括 ToyBox、Wardrobe、ArchaeologyUI、OrderHallTalents、GarrisonSharedTemplates、GarrisonBuildingUI、FollowerTooltip 和 UIDropDownMenu。源码路径及 Git blob／SHA-256 记录在 `docs/collection-garrison-ui-audit.json`；入口边界与测试方法见 `docs/COLLECTION-GARRISON-UI.md`。没有新增机器翻译、人工补译或第三方字体。
+
 ## 1.3.0 本地中文客户端提取
 
 本次从用户提供的 **7.3.5.26972、cn、zhCN** 客户端 CASC 资源中只读提取。活动 Build Key 为 `3b0517b51edbe0b96f6ac5ea7eaaed38`，Root CKey 为 `7f4cefa93ecc032a4d33d422764a8cf5`。每份 DB2 解包后要求 MD5 与 CASC CKey 一致，并记录 SHA-256；不启动游戏、不修改客户端，也不将服务器写入的 ADB/WDB 缓存视为官方译文。

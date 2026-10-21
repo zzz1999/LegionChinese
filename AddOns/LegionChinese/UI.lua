@@ -310,29 +310,116 @@ local features={
     {"dialogue","InstallDialogueSurfaces","standard",{"Blizzard_TalkingHeadUI"},{"TalkingHeadFrame","CinematicFrame"}},
     {"map-labels","InstallMapLabels","standard",{"Blizzard_WorldMap"},{"WorldMapFrameAreaLabel","WorldMapFrameAreaDescription","MinimapZoneText","ZoneTextString","SubZoneTextString","WorldMapPOI_OnEnter"}},
     {"collections","InstallCollections","standard",{"Blizzard_Collections"},{"MountJournal","MountJournal_UpdateMountList","MountJournal_UpdateMountDisplay"}},
+    {"toys","InstallToys","standard",{"Blizzard_Collections"},{"ToyBox","GameTooltip","ItemRefTooltip","ToySpellButton_UpdateButton","ToyBox_UpdateButtons"}},
+    {"wardrobe","InstallWardrobe","standard",{"Blizzard_Collections"},{"WardrobeCollectionFrame","WardrobeSetsCollectionMixin","WardrobeSetsCollectionScrollFrameMixin","WardrobeItemsModelMixin","WardrobeSetsTransmogModelMixin","WardrobeCollectionFrame_SetAppearanceTooltip"}},
     {"professions","InstallProfessions","standard",{"Blizzard_TradeSkillUI"},{"TradeSkillFrame"}},
+    {"archaeology","InstallArchaeology","standard",{"Blizzard_ArchaeologyUI","Blizzard_WorldMap"},{"ArchaeologyFrame","ArchaeologyFrame_CurrentArtifactUpdate","ArchaeologyFrame_UpdateSummary","ArchaeologyFrame_UpdateComplete","ArchaeologyFrame_OnShow","WorldMapTooltip","WorldMapPOI_OnEnter"}},
     {"reputation","InstallReputation","standard",{"Blizzard_ReputationUI"},{"ReputationDetailFactionName","ReputationDetailFactionDescription"}},
     {"garrison","InstallGarrison","standard",{"Blizzard_GarrisonUI","Blizzard_OrderHallUI","Blizzard_GarrisonShipyardUI","Blizzard_GarrisonMissionUI"},{"GarrisonMissionFrame","OrderHallMissionFrame","GarrisonShipyardFrame","GarrisonMissionListMixin","GarrisonFollowerMission","GarrisonMissionButton_SetInProgressTooltip"}},
+    {"followers","InstallGarrisonFollowers","standard",{"Blizzard_GarrisonTemplates","Blizzard_GarrisonUI","Blizzard_OrderHallUI"},{"GarrisonMissionFrame","OrderHallMissionFrame","GarrisonBuildingFrame","GarrisonLandingPage","GarrisonRecruiterFrame","GarrisonRecruitSelectFrame","GarrisonFollowerList","GarrisonFollowerTabMixin","GarrisonFollowerList_SetButtonMode","GarrisonFollowerButton_AddAbility","GarrisonFollowerTooltipTemplate_SetGarrisonFollower","GarrisonFollowerTooltipTemplate_SetAbility","GarrisonFollowerAbilityTooltipTemplate_SetAbility","GarrisonRecruitSelectFrame_UpdateRecruits","GarrisonRecruiterFrame_SetAbilityPreference"}},
+    {"buildings","InstallGarrisonBuildings","standard",{"Blizzard_GarrisonUI"},{"GarrisonBuildingFrame","GarrisonBuildingInfoBox_ShowBuilding","GarrisonBuildingList_SelectTab","GarrisonBuilding_ShowLevelTooltip","GarrisonBuildingFrame_UpdateBuildingList","GarrisonBuildingFrameLevelIcon_OnEnter","GarrisonPlot_ShowTooltip"}},
+    {"research","InstallResearch","standard",{"Blizzard_OrderHallUI"},{"OrderHallTalentFrame","OrderHallTalentFrameMixin","GarrisonTalentButtonMixin","GameTooltip"}},
     {"group-finder","InstallGroupFinder","standard",{"Blizzard_GroupFinder"},{"LFDQueueFrameRandomScrollFrameChildFrame","LFGRewardsFrame_OnLoad","LFGRewardsFrame_UpdateFrame"}},
     {"scenario","InstallScenario","standard",{"Blizzard_ObjectiveTracker"},{"ScenarioStageBlock","SCENARIO_TRACKER_MODULE"}},
     {"criteria","InstallAchievementCriteria","standard",{"Blizzard_AchievementUI"},{"AchievementFrameAchievementsContainer","AchievementButton_GetCriteria"}},
 }
+-- Watch the actual binding targets as well as their roots. Blizzard and other
+-- addons can finish constructing a child/list after its parent already exists.
+-- These are fixed UI paths, not a scan of every global/frame on addon loads.
+local childTargets={
+    artifacts={"QuestChoiceFrame.QuestionText","QuestChoiceFrame.Options.*.OptionButton","QuestChoiceFrame.Options.*.OptionText","QuestChoiceFrame.Options.*.Header.Text",
+        "ArtifactFrame.PerksTab.TitleContainer","ArtifactFrame.AppearancesTab"},
+    descriptions={"AchievementFrameAchievementsContainer.buttons.*.label","AchievementFrameAchievementsContainer.buttons.*.description",
+        "AchievementFrameAchievementsContainer.buttons.*.hiddenDescription","AchievementFrameAchievementsContainer.buttons.*.reward",
+        "EncounterJournal.encounter.info.encounterTitle","EncounterJournal.encounter.infoFrame.description","EncounterJournal.encounter.overviewFrame.loreDescription",
+        "EncounterJournal.encounter.usedHeaders.*.description","EncounterJournal.encounter.usedHeaders.*.button.title","EncounterJournalTooltip.headerText"},
+    dialogue={"TalkingHeadFrame.TextFrame.Text","TalkingHeadFrame.NameFrame.Name"},
+    collections={"MountJournal.MountDisplay.InfoButton.Name","MountJournal.MountDisplay.InfoButton.Source","MountJournal.MountDisplay.InfoButton.Lore",
+        "MountJournal.ListScrollFrame.buttons.*.name"},
+    professions={"TradeSkillFrame.DetailsFrame.Contents.Description","TradeSkillFrame.DetailsFrame.Contents.SourceText"},
+    ["group-finder"]={"LFDQueueFrameRandomScrollFrameChildFrame.title","LFDQueueFrameRandomScrollFrameChildFrame.description"},
+    scenario={"ScenarioStageBlock.Name","ScenarioStageBlock.Description"},
+    garrison={},
+    toys={},
+    wardrobe={"WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame.Name","WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame.LongName",
+        "WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame.Label","WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame.VariantSetsButton",
+        "WardrobeCollectionFrame.SetsCollectionFrame.ScrollFrame.buttons.*.Name","WardrobeCollectionFrame.SetsCollectionFrame.ScrollFrame.buttons.*.Label",
+        "WardrobeCollectionFrame.ItemsCollectionFrame.Models.*","WardrobeCollectionFrame.SetsTransmogFrame.Models.*"},
+    archaeology={"ArchaeologyFrame.artifactPage.artifactName","ArchaeologyFrame.artifactPage.raceRarity","ArchaeologyFrame.artifactPage.historyScroll.child.text","ArchaeologyFrame.raceFilterDropDown.Text","WorldMapFrameAreaLabel"},
+    followers={"GarrisonRecruiterFrame.Pick.Counter.Title","GarrisonRecruiterFrame.Pick.Counter.Description","GarrisonRecruiterFrame.Pick.ThreatDropDown.Text","GarrisonRecruitSelectFrame.FollowerSelection",
+        "GarrisonMissionMechanic_OnEnter","GarrisonMissionMechanicFollowerCounter_OnEnter","GarrisonMissionMechanicTooltip.Name","GarrisonMissionMechanicTooltip.Description",
+        "GarrisonMissionMechanicFollowerCounterTooltip.Name","GarrisonMissionMechanicFollowerCounterTooltip.CounterName"},
+    buildings={"GarrisonBuildingFrame.InfoBox.Title","GarrisonBuildingFrame.InfoBox.Description","GarrisonBuildingFrame.BuildingLevelTooltip.Name","GarrisonBuildingFrame.BuildingList.Buttons.*.Name"},
+    research={"OrderHallTalentFrame.buttonPool"},
+}
+for i=1,18 do childTargets.toys[#childTargets.toys+1]="ToyBox.iconsFrame.spellButton"..i..".name" end
+for i=1,12 do
+    childTargets.archaeology[#childTargets.archaeology+1]="ArchaeologyFrame.summaryPage.race"..i..".raceName"
+    childTargets.archaeology[#childTargets.archaeology+1]="ArchaeologyFrame.completedPage.artifact"..i..".artifactName"
+    childTargets.archaeology[#childTargets.archaeology+1]="ArchaeologyFrame.completedPage.artifact"..i..".artifactSubText"
+end
+for i=1,3 do childTargets.buildings[#childTargets.buildings+1]="GarrisonBuildingFrame.BuildingLevelTooltip.Rank"..i.."Tooltip" end
+for _,root in ipairs({"GarrisonMissionFrame","OrderHallMissionFrame","GarrisonBuildingFrame","GarrisonLandingPage","GarrisonRecruitSelectFrame"}) do
+    for _,field in ipairs({"Name","ClassSpec","Source.SourceText","AbilitiesFrame.FlavorText","abilitiesPool","equipmentPool"}) do
+        childTargets.followers[#childTargets.followers+1]=root..".FollowerTab."..field
+    end
+    childTargets.followers[#childTargets.followers+1]=root..".FollowerList.listScroll.buttons.*.Follower.Name"
+end
+for i=1,3 do
+    local card="EncounterJournal.suggestFrame.Suggestion"..i
+    for _,field in ipairs({"centerDisplay.title.text","centerDisplay.description.text","centerDisplay.button","button"}) do
+        childTargets.descriptions[#childTargets.descriptions+1]=card.."."..field
+    end
+end
+for _,root in ipairs({"GarrisonMissionFrame","OrderHallMissionFrame","GarrisonShipyardFrame"}) do
+    for _,field in ipairs({"MissionList.listScroll.buttons.*.Title","MissionPage.Title","MissionPage.Stage.MissionDescription","MissionPage.Stage.Location"}) do
+        childTargets.garrison[#childTargets.garrison+1]=root..".MissionTab."..field
+    end
+end
+for _,feature in ipairs(features) do
+    for _,name in ipairs(childTargets[feature[1]] or {}) do feature[5][#feature[5]+1]=name end
+end
 local observed={}
 local baseTargets={"QuestFrameProgressPanel","QuestFrameGreetingPanel","ItemTextFrame","GossipGreetingText","CastingBarFrame","PetCastingBarFrame","TargetFrameSpellBar","FocusFrameSpellBar","PetFrame",
     "GameTooltip","ItemRefTooltip","ShoppingTooltip1","ShoppingTooltip2","ItemRefShoppingTooltip1","ItemRefShoppingTooltip2",
     "QUEST_TRACKER_MODULE","BONUS_OBJECTIVE_TRACKER_MODULE","WORLD_QUEST_TRACKER_MODULE","SCENARIO_TRACKER_MODULE",
-    "QuestInfo_Display","QuestFrameGreetingPanel_OnShow","GossipFrameUpdate","QuestFrame_ShowQuestPortrait","StaticPopup_Show","QuestLogQuests_Update","CastingBarFrame_OnEvent"}
-local function targetsChanged(id,names,save)
-    local previous=observed[id] or {};local changed=false
+    "QuestInfo_Display","QuestFrameGreetingPanel_OnShow","GossipFrameUpdate","QuestFrame_ShowQuestPortrait","StaticPopup_Show","QuestLogQuests_Update","CastingBarFrame_OnEvent",
+    "UnitFrame_Update","UnitFrame_OnEvent","CompactUnitFrame_UpdateName"}
+local paths={}
+local function compile(names)
     for _,name in ipairs(names) do
-        local value=_G[name] or false
-        if previous[name]~=value then changed=true end
-        if save then previous[name]=value end
+        local parts={};for part in name:gmatch("[^.]+") do parts[#parts+1]=part end
+        paths[name]=parts
     end
+end
+compile(baseTargets)
+for _,feature in ipairs(features) do compile(feature[5]) end
+local function targetsChanged(id,names,save)
+    local previous=observed[id] or {};local changed=false;local count=0
+    local function remember(value)
+        count=count+1;value=value or false
+        if previous[count]~=value then changed=true end
+        if save then previous[count]=value end
+    end
+    local function visit(value,parts,index)
+        remember(value)
+        if (type(value)~="table" and type(value)~="userdata")
+            or value.IsForbidden and value:IsForbidden() then return end
+        if index>#parts then remember(value.GetText);remember(value.SetText);return end
+        if parts[index]=="*" then
+            if type(value)=="table" then for _,child in ipairs(value) do visit(child,parts,index+1) end end
+        else visit(value[parts[index]],parts,index+1) end
+    end
+    for _,name in ipairs(names) do
+        local parts=paths[name];visit(_G[parts[1]],parts,2)
+    end
+    if #previous~=count then changed=true end
+    if save then for i=#previous,count+1,-1 do previous[i]=nil end end
     if save then observed[id]=previous end
     return changed
 end
 local function install(addonName)
+    A.Hooks.Refresh()
     local all=not addonName or addonName=="LegionChinese"
     if all or addonName=="Blizzard_ObjectiveTracker" or targetsChanged("base",baseTargets) then
         installBase();targetsChanged("base",baseTargets,true)
@@ -349,6 +436,7 @@ local function install(addonName)
         end
         targetsChanged(feature[1],feature[5],true)
     end
+    if A.ChatLinksChanged and A.ChatLinksChanged() then A.InstallChatItemLinks() end
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
