@@ -1,32 +1,6 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A = LegionChinese
-local installed = {}
-local installedScripts = {}
-local installedMethods = {}
-local function hook(name, callback)
-    if not installed[name] and type(_G[name])=="function" then
-        hooksecurefunc(name,callback)
-        installed[name]=true
-    end
-end
-
-local function hookMethod(object, name, callback)
-    if not object or object.IsForbidden and object:IsForbidden() or type(object[name])~="function" then return end
-    local methods=installedMethods[object]
-    if not methods then methods={};installedMethods[object]=methods end
-    if methods[name] then return end
-    hooksecurefunc(object,name,callback)
-    methods[name]=true
-end
-
-local function hookScript(widget, event, callback)
-    if not widget or widget.IsForbidden and widget:IsForbidden() or type(widget.HookScript)~="function" then return end
-    local events=installedScripts[widget]
-    if not events then events={};installedScripts[widget]=events end
-    if events[event] then return end
-    widget:HookScript(event,callback)
-    events[event]=true
-end
+local hook,hookMethod,hookScript=A.Hooks.ForFeature("base")
 
 local function currentQuest()
     if QuestInfoFrame and QuestInfoFrame.questLog then
@@ -291,7 +265,7 @@ function A.UpdateGossipConfirmation(which)
     end
 end
 
-local function install()
+local function installBase()
     hook("QuestInfo_Display",A.UpdateQuestInfo)
     -- Legion XML stores these handlers before addons load. Hook the actual
     -- frame script so translation runs after Blizzard has populated the text.
@@ -326,12 +300,55 @@ local function install()
     end
     if A.InstallItemTooltips then A.InstallItemTooltips() end
     if A.InstallExtraTooltips then A.InstallExtraTooltips() end
-    if A.InstallArtifacts then A.InstallArtifacts(hookMethod,hookScript) end
-    if A.InstallMapTooltips then A.InstallMapTooltips(hookMethod,hook) end
-    if A.InstallClientDescriptions then A.InstallClientDescriptions(hook,hookMethod,hookScript) end
-    if A.InstallLocalClient then A.InstallLocalClient(hook,hookMethod) end
-    if A.InstallDialogueSurfaces then A.InstallDialogueSurfaces(hook,hookMethod,hookScript) end
     if A.InstallChatItemLinks then A.InstallChatItemLinks() end
+end
+local features={
+    {"artifacts","InstallArtifacts","method-script",{"Blizzard_ArtifactUI","Blizzard_QuestChoice","Blizzard_ArtifactRelicForgeUI"},{"QuestChoiceFrame","ArtifactFrame","ArtifactLevelUpToast","GameTooltip","ItemRefTooltip"}},
+    {"map-tooltips","InstallMapTooltips","method-global",{"Blizzard_WorldMap"},{"WorldMapTooltip","WorldMapQuestPOI_SetTooltip","WorldMapQuestPOI_AppendTooltip"}},
+    {"descriptions","InstallClientDescriptions","standard",{"Blizzard_AchievementUI","Blizzard_Collections","Blizzard_EncounterJournal","Blizzard_TokenUI"},{"AchievementFrame","PetJournal","EncounterJournal","GameTooltip","ItemRefTooltip",
+        "AchievementButton_OnLoad","AchievementFrameAchievements_SetupButton","SharedPetBattleAbilityTooltip_SetAbility","PetJournal_UpdatePetCard","EncounterJournal_ToggleHeaders","EncounterJournal_SetUpOverview","EncounterJournal_SetBullets"}},
+    {"dialogue","InstallDialogueSurfaces","standard",{"Blizzard_TalkingHeadUI"},{"TalkingHeadFrame","CinematicFrame"}},
+    {"map-labels","InstallMapLabels","standard",{"Blizzard_WorldMap"},{"WorldMapFrameAreaLabel","WorldMapFrameAreaDescription","MinimapZoneText","ZoneTextString","SubZoneTextString","WorldMapPOI_OnEnter"}},
+    {"collections","InstallCollections","standard",{"Blizzard_Collections"},{"MountJournal","MountJournal_UpdateMountList","MountJournal_UpdateMountDisplay"}},
+    {"professions","InstallProfessions","standard",{"Blizzard_TradeSkillUI"},{"TradeSkillFrame"}},
+    {"reputation","InstallReputation","standard",{"Blizzard_ReputationUI"},{"ReputationDetailFactionName","ReputationDetailFactionDescription"}},
+    {"garrison","InstallGarrison","standard",{"Blizzard_GarrisonUI","Blizzard_OrderHallUI","Blizzard_GarrisonShipyardUI","Blizzard_GarrisonMissionUI"},{"GarrisonMissionFrame","OrderHallMissionFrame","GarrisonShipyardFrame","GarrisonMissionListMixin","GarrisonFollowerMission","GarrisonMissionButton_SetInProgressTooltip"}},
+    {"group-finder","InstallGroupFinder","standard",{"Blizzard_GroupFinder"},{"LFDQueueFrameRandomScrollFrameChildFrame","LFGRewardsFrame_OnLoad","LFGRewardsFrame_UpdateFrame"}},
+    {"scenario","InstallScenario","standard",{"Blizzard_ObjectiveTracker"},{"ScenarioStageBlock","SCENARIO_TRACKER_MODULE"}},
+    {"criteria","InstallAchievementCriteria","standard",{"Blizzard_AchievementUI"},{"AchievementFrameAchievementsContainer","AchievementButton_GetCriteria"}},
+}
+local observed={}
+local baseTargets={"QuestFrameProgressPanel","QuestFrameGreetingPanel","ItemTextFrame","GossipGreetingText","CastingBarFrame","PetCastingBarFrame","TargetFrameSpellBar","FocusFrameSpellBar","PetFrame",
+    "GameTooltip","ItemRefTooltip","ShoppingTooltip1","ShoppingTooltip2","ItemRefShoppingTooltip1","ItemRefShoppingTooltip2",
+    "QUEST_TRACKER_MODULE","BONUS_OBJECTIVE_TRACKER_MODULE","WORLD_QUEST_TRACKER_MODULE","SCENARIO_TRACKER_MODULE",
+    "QuestInfo_Display","QuestFrameGreetingPanel_OnShow","GossipFrameUpdate","QuestFrame_ShowQuestPortrait","StaticPopup_Show","QuestLogQuests_Update","CastingBarFrame_OnEvent"}
+local function targetsChanged(id,names,save)
+    local previous=observed[id] or {};local changed=false
+    for _,name in ipairs(names) do
+        local value=_G[name] or false
+        if previous[name]~=value then changed=true end
+        if save then previous[name]=value end
+    end
+    if save then observed[id]=previous end
+    return changed
+end
+local function install(addonName)
+    local all=not addonName or addonName=="LegionChinese"
+    if all or addonName=="Blizzard_ObjectiveTracker" or targetsChanged("base",baseTargets) then
+        installBase();targetsChanged("base",baseTargets,true)
+    end
+    for _,feature in ipairs(features) do
+        local relevant=all or targetsChanged(feature[1],feature[5])
+        for _,name in ipairs(feature[4]) do if name==addonName then relevant=true end end
+        local installer=A[feature[2]]
+        if relevant and installer then
+            local global,method,script=A.Hooks.ForFeature(feature[1])
+            if feature[3]=="method-script" then installer(method,script)
+            elseif feature[3]=="method-global" then installer(method,global)
+            else installer(global,method,script) end
+        end
+        targetsChanged(feature[1],feature[5],true)
+    end
 end
 local frame=CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
@@ -340,7 +357,7 @@ frame:SetScript("OnEvent",function(_,event,addonName)
     if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="LegionChinese") then
         A.InitializeSettings()
     end
-    install()
+    install(event=="ADDON_LOADED" and addonName or nil)
     if event=="PLAYER_LOGIN" or (event=="ADDON_LOADED" and addonName=="Blizzard_ObjectiveTracker") then A.RefreshTracker() end
     if event=="PLAYER_LOGIN" then
         A.RefreshCastBars()

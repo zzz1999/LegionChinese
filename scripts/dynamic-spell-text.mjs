@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -57,16 +58,7 @@ export function buildDynamicSpellText({root,input,manifest,version}){
     }
     if(fields.length)lines.push(`D.DynamicSpellTexts[${id}]={`+fields.join(',')+'}');
   }
-  const out=path.join(root,'AddOns/LegionChinese/Data'),generated=[];
-  let part=0,buffer=[],bytes=0;
-  const flush=()=>{
-    if(!buffer.length)return;
-    const file='DynamicSpellTexts_'+String(++part).padStart(2,'0')+'.lua';
-    fs.writeFileSync(path.join(out,file),'-- 自动生成：同版中文数值模板及完整原文结构指纹。数值仅取客户端当前提示。\nlocal D=LegionChineseDB\n'+buffer.join('\n')+'\n');
-    generated.push('Data\\'+file);buffer=[];bytes=0;
-  };
-  for(const line of lines){if(bytes+Buffer.byteLength(line)>900000)flush();buffer.push(line);bytes+=Buffer.byteLength(line)+1;}flush();
-  for(const file of fs.readdirSync(out))if(/^DynamicSpellTexts_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(out,file));
+  const generated=writeResourceChunks({root,name:'DynamicSpellTexts',lines,header:'同版中文数值模板及完整原文结构指纹。数值仅取客户端当前提示。'});
   fs.writeFileSync(path.join(root,'docs/dynamic-spell-audit.json'),JSON.stringify(audit,null,2)+'\n');
   return {generated,audit};
 }

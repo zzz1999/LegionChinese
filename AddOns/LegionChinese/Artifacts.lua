@@ -1,6 +1,5 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A,D=LegionChinese,LegionChineseDB
-local writing=setmetatable({}, {__mode="k"})
 
 local function lookup(index,source,condition)
     if not index or type(source)~="string" or source=="" or A.IsChinese(source) then return end
@@ -16,14 +15,7 @@ local function lookup(index,source,condition)
     return value
 end
 
-local function setText(widget,text,html)
-    if not widget or not text or not widget.SetText or writing[widget]
-        or widget.IsForbidden and widget:IsForbidden() then return end
-    writing[widget]=true
-    A.SetFont(widget,html)
-    widget:SetText(text)
-    writing[widget]=nil
-end
+local function setText(widget,text,html) return A.WriteText(widget,text,html) end
 
 function A.ResolveArtifactChoice(choiceID,responseID,field,source)
     if type(source)~="string" or A.IsChinese(source) or source:find("|H",1,true)
@@ -39,7 +31,7 @@ end
 
 local function hookChoiceWidget(hookMethod,frame,option,widget,field)
     hookMethod(widget,"SetText",function(self,source)
-        if writing[self] then return end
+        if A.IsWriting(self) then return end
         local text=A.ResolveArtifactChoice(frame.choiceID,option and option.optID,field,source)
         if not text and field=="Header" and A.ResolveQuestBoardHeader then
             text=A.ResolveQuestBoardHeader(frame.choiceID,option and option.optID,source)

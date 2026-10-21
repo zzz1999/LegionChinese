@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -23,13 +24,7 @@ export function chooseStatic(original,cn,tw){
 export function buildExtraClientData({root,input,manifest,npcRows,version}){
   const generated=[],audit={version,sources:[],counts:{},deferred:{}};
   const out=path.join(root,'AddOns/LegionChinese/Data');
-  function write(name,lines){
-    let part=0,buffer=[],bytes=0;
-    const flush=()=>{if(!buffer.length)return;const file=name+'_'+String(++part).padStart(2,'0')+'.lua';
-      fs.writeFileSync(path.join(out,file),'-- 自动生成：仅含中文译文与匹配指纹。来源见 SOURCES.md。\nlocal D=LegionChineseDB\n'+buffer.join('\n')+'\n');
-      generated.push('Data\\'+file);buffer=[];bytes=0;};
-    for(const line of lines){if(bytes+Buffer.byteLength(line)>900000)flush();buffer.push(line);bytes+=Buffer.byteLength(line)+1;}flush();
-  }
+  const write=(name,lines)=>generated.push(...writeResourceChunks({root,name,lines}));
   function read(table,columns,sources){
     const result={};for(const s of sources.filter(s=>s.table===table)){
       if(s.build!=='7.3.5.26972'||!['enUS','zhCN','zhTW'].includes(s.locale))throw Error('Unsupported extra client build/locale');

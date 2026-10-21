@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -40,8 +41,8 @@ test('Blingtron 6000 capture retains both paragraphs and no reward mechanics',()
 });
 
 test('shipped source audit confirms both pinned daily reward captures were imported',()=>{
-  const manifest=JSON.parse(fs.readFileSync(new URL('../sources.json',import.meta.url),'utf8'));
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/data-audit.json',import.meta.url),'utf8'));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url),'utf8'));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/data-audit.json',import.meta.url),'utf8'));
   const captures=manifest.sql.filter(source=>source.kind==='quest-dialogue-capture');
   assert.deepEqual(captures.flatMap(source=>source.questIDs).sort((a,b)=>a-b),[34774,40753]);
   for(const source of captures){
@@ -55,7 +56,7 @@ test('shipped source audit confirms both pinned daily reward captures were impor
 });
 
 const reviewed=()=>{
-  const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
+  const snapshot=JSON.parse(readFixtureFile(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
   snapshot.quests=snapshot.quests.filter(q=>[29406,29524].includes(q.id));
   return snapshot;
 };
@@ -161,10 +162,10 @@ test('batch review excludes later/unmarked translations, unsupported tokens and 
 });
 
 test('reviewed dialogue ships only the selected fingerprints with pinned source provenance',()=>{
-  const manifest=JSON.parse(fs.readFileSync(new URL('../sources.json',import.meta.url),'utf8'));
-  const spec=manifest.reviewedQuestDialogue,bytes=fs.readFileSync(new URL('../'+spec.file,import.meta.url));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url),'utf8'));
+  const spec=manifest.reviewedQuestDialogue,bytes=readFixtureFile(new URL('../'+spec.file,import.meta.url));
   assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),spec.sha256);
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/reviewed-quest-dialogue-audit.json',import.meta.url),'utf8'));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/reviewed-quest-dialogue-audit.json',import.meta.url),'utf8'));
   assert.equal(audit.sha256,spec.sha256);assert.equal(audit.rejected,0);
   assert.deepEqual(audit.sources,JSON.parse(bytes).sources);
   assert.equal(audit.verification.rows,29258);
@@ -173,6 +174,6 @@ test('reviewed dialogue ships only the selected fingerprints with pinned source 
   assert.deepEqual(audit.byLocale,{zhCN:15,zhTW:37});
   assert.equal(audit.candidates.filter(row=>row.selected).length,52);
   assert.ok(audit.candidates.filter(row=>row.selected).every(row=>row.build===18414&&!row.alreadyCovered));
-  const reviews=fs.readFileSync(new URL('../'+audit.reviews.file,import.meta.url));
+  const reviews=readFixtureFile(new URL('../'+audit.reviews.file,import.meta.url));
   assert.equal(crypto.createHash('sha256').update(reviews).digest('hex'),audit.reviews.sha256);
 });

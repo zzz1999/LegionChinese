@@ -60,6 +60,6 @@
     }
   },
   "generatedFiles": [
-    "Data\\DungeonNames.lua"
+    "Data\\Maps\\DungeonNames.lua"
   ]
 }

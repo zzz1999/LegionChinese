@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -13,8 +14,8 @@ import {luaString} from '../scripts/text.mjs';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
 function shipped(prefix,needle){
-  for(const f of fs.readdirSync(data).filter(f=>f.startsWith(prefix+'_'))){
-    const row=fs.readFileSync(new URL(f,data),'utf8').split('\n').find(l=>l.startsWith(needle));
+  for(const f of listFixtureFiles(data).filter(f=>f.startsWith(prefix+'_'))){
+    const row=readFixtureFile(new URL(f,data),'utf8').split('\n').find(l=>l.startsWith(needle));
     if(row)return row;
   }
   assert.fail('Missing generated '+needle);
@@ -27,12 +28,12 @@ function run(code,{before='',rows='',fixtures=[]}={}){
   };
   try{
     for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','MapTooltips.lua','ExtraTooltips.lua','ItemTooltips.lua','ClientDescriptions.lua','DialogueSurfaces.lua'])
-      exec(fs.readFileSync(new URL(file,addon),'utf8'));
+      exec(readFixtureFile(new URL(file,addon),'utf8'));
     exec('local D=LegionChineseDB\n'+rows);
-    exec(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
-    for(const f of fixtures)exec(fs.readFileSync(new URL(f,import.meta.url),'utf8'));
+    exec(readFixtureFile(new URL('ui-fixture.lua',import.meta.url),'utf8'));
+    for(const f of fixtures)exec(readFixtureFile(new URL(f,import.meta.url),'utf8'));
     exec(before);
-    exec(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    exec(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     exec('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
@@ -365,7 +366,7 @@ test('description imports verify build and bytes and omit ambiguous field-only l
     const opts={root:folder,input:folder,manifest,version:'1.2.16'};
     const result=buildClientDescriptions(opts);
     assert.equal(result.audit.counts.Achievement.Description.zhTW,1);
-    const generated=result.generated.map(f=>fs.readFileSync(path.join(folder,'AddOns/LegionChinese',f.replaceAll('\\','/')),'utf8')).join('\n');
+    const generated=result.generated.map(f=>readFixtureFile(path.join(folder,'AddOns/LegionChinese',f.replaceAll('\\','/')),'utf8')).join('\n');
     assert.ok(!generated.includes(`D.ClientTextIndex.Achievement.Description["${nameKey('Same text')}"]`));
     assert.ok(generated.includes(`D.ClientTextIndex.Achievement.Description["${nameKey('Another text')}"]=3`));
     manifest.extraLinkTables[0].build='8.0.1.27843';

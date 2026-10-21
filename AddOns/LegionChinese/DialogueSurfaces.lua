@@ -1,6 +1,5 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A=LegionChinese
-local writing=setmetatable({}, {__mode="k"})
 local installed=false
 local pending,playerText={},{}
 local elapsed=0
@@ -14,12 +13,7 @@ local function dialogue(source)
     local text,changed=A.Translate("Gossip",source)
     if changed and not text:find("%%s") then return text end
 end
-local function write(widget,text)
-    if not text or not safe(widget) or not widget.SetText or writing[widget] then return end
-    writing[widget]=true
-    A.SetFont(widget);widget:SetText(text)
-    writing[widget]=nil
-end
+local function write(widget,text) return A.WriteText(widget,text) end
 
 function A.UpdateNPCSubtitle(frame,event,message,sender,language,channel,target,flag,zone,localID,name,instanceID,lineID,guid,bnID,mobile,isSubtitle,hideSender)
     if (event~="CHAT_MSG_MONSTER_SAY" and event~="CHAT_MSG_MONSTER_YELL") or not isSubtitle
@@ -108,10 +102,10 @@ function A.InstallDialogueSurfaces(hook,hookMethod,hookScript)
     local text=head and head.TextFrame and head.TextFrame.Text
     local name=head and head.NameFrame and head.NameFrame.Name
     hookMethod(text,"SetText",function(widget,source)
-        if not writing[widget] then write(widget,dialogue(source)) end
+        if not A.IsWriting(widget) then write(widget,dialogue(source)) end
     end)
     hookMethod(name,"SetText",function(widget,source)
-        if writing[widget] then return end
+        if A.IsWriting(widget) then return end
         local translated,changed=A.Translate("NPCNames",source)
         if changed then write(widget,translated) end
     end)

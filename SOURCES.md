@@ -246,6 +246,12 @@ NPC 说话、喊话、密语、首领密语复用已有 BroadcastText / Gossip �
 
 所有新增 AddOns 数据只保留中文、数字 ID 与匹配指纹，不携带原始 SQL、CSV 或外文正文。未通过来源或格式核对的内容保持原文，范围及后续缺口见 `docs/TRANSLATION-COVERAGE.md`。
 
+## 1.3.1 资源组织与一致性
+
+本版按功能目录组织资源，并将地图、收藏、专业、声望、要塞等界面处理拆成独立模块。资料来源、语言优先级和匹配索引保持不变；只有重复且实际能节省源码体积的中文进入共享字符串池，原有 ID 继续指向相同译文，不合并不同语义的索引。
+
+资源目录、分片顺序与运行模块由 `scripts/resource-layout.mjs` 统一登记。共享中文在加载时解析为普通字符串，之后释放临时池表。构建在独立临时目录完成，生成清单和哈希、检查 Lua 5.1 语法与共享引用后才替换正式目录；替换失败会回滚，无法完成回滚时保留恢复备份。重构期间逐条核对与 1.3.0 的资源赋值，结果在 `docs/refactor-equivalence.json`，基线在 `docs/refactor-baseline-1.3.0.json`，资源明细在 `docs/resource-manifest.json`。结构和构建流程见 `docs/ARCHITECTURE.md`。这些检查不代替游戏内字形、布局和兼容性验收。
+
 ## 1.3.0 本地中文客户端提取
 
 本次从用户提供的 **7.3.5.26972、cn、zhCN** 客户端 CASC 资源中只读提取。活动 Build Key 为 `3b0517b51edbe0b96f6ac5ea7eaaed38`，Root CKey 为 `7f4cefa93ecc032a4d33d422764a8cf5`。每份 DB2 解包后要求 MD5 与 CASC CKey 一致，并记录 SHA-256；不启动游戏、不修改客户端，也不将服务器写入的 ADB/WDB 缓存视为官方译文。

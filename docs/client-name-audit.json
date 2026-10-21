@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "build": "7.3.5.26972",
   "provenance": "client-db2-via-wago",
   "sources": [
@@ -144,20 +144,20 @@
     "No Chinese mapping found for randomized pet proper names."
   ],
   "generatedFiles": [
-    "Data\\NameStrings_01.lua",
-    "Data\\NameStrings_02.lua",
-    "Data\\NameStrings_03.lua",
-    "Data\\NameStrings_04.lua",
-    "Data\\CreatureFamilies_01.lua",
-    "Data\\CreatureFamilyNames_01.lua",
-    "Data\\Creatures_01.lua",
-    "Data\\SpellNames_01.lua",
-    "Data\\SpellNames_02.lua",
-    "Data\\SpellNames_03.lua",
-    "Data\\SpellNames_04.lua",
-    "Data\\Spells_01.lua",
-    "Data\\Spells_02.lua",
-    "Data\\Spells_03.lua",
-    "Data\\Spells_04.lua"
+    "Data\\Shared\\NameStrings_01.lua",
+    "Data\\Shared\\NameStrings_02.lua",
+    "Data\\Shared\\NameStrings_03.lua",
+    "Data\\Shared\\NameStrings_04.lua",
+    "Data\\Creatures\\CreatureFamilies_01.lua",
+    "Data\\Creatures\\CreatureFamilyNames_01.lua",
+    "Data\\Creatures\\Creatures_01.lua",
+    "Data\\Spells\\SpellNames_01.lua",
+    "Data\\Spells\\SpellNames_02.lua",
+    "Data\\Spells\\SpellNames_03.lua",
+    "Data\\Spells\\SpellNames_04.lua",
+    "Data\\Spells\\Spells_01.lua",
+    "Data\\Spells\\Spells_02.lua",
+    "Data\\Spells\\Spells_03.lua",
+    "Data\\Spells\\Spells_04.lua"
   ]
 }

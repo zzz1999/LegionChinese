@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -74,15 +75,7 @@ export function buildClientDescriptions({root,input,manifest,version}){
       for(const [key,value]of index)if(!value.ambiguous)lines.push(`D.ClientTextIndex.${kind}.${field}[${luaString(key)}]=${value.id}`);
     }
   }
-  let buffer=[],size=0,part=0;
-  const flush=()=>{
-    if(!buffer.length)return;
-    const file='ClientTexts_'+String(++part).padStart(2,'0')+'.lua';
-    fs.writeFileSync(path.join(out,file),'-- 自动生成：7.3.5.26972 已有中文与原文指纹，来源见 SOURCES.md。\nlocal D=LegionChineseDB\n'+buffer.join('\n')+'\n');
-    generated.push('Data\\'+file);buffer=[];size=0;
-  };
-  for(const line of lines){if(size+Buffer.byteLength(line)>900000)flush();buffer.push(line);size+=Buffer.byteLength(line)+1;}flush();
-  for(const file of fs.readdirSync(out))if(/^ClientTexts_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(out,file));
+  generated.push(...writeResourceChunks({root,name:'ClientTexts',lines,header:'7.3.5.26972 已有中文与原文指纹，来源见 SOURCES.md。'}));
   fs.writeFileSync(path.join(root,'docs/client-descriptions-audit.json'),JSON.stringify(audit,null,2)+'\n');
   return {generated,audit};
 }

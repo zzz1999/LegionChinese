@@ -67,7 +67,7 @@ function A.UpdateItemTooltip(tooltip)
     elseif not item and state then id=state.fallbackID end
     local entries=id and D.ItemDescriptions[id]
     local itemName=id and D.ItemNames and D.ItemNames[id]
-    local localText=id and id>0 and A.FindLocalClient and D.LocalClientTexts and D.LocalClientTexts.Item
+    local localText=id and id>0 and A.FindCatalog and D.CatalogTexts and D.CatalogTexts.Item
     if not entries and not itemName and not localText then A.ClearItemTooltip(tooltip);return end
     if not state or state.itemID~=id then
         state={itemID=id,fallbackID=state and state.fallbackID,lines={}};states[tooltip]=state
@@ -84,8 +84,8 @@ function A.UpdateItemTooltip(tooltip)
                 else
                     if entries then translated=translateLine(source,entries) end
                     if not translated and localText then
-                        translated=A.FindLocalClient("Item",source) or A.FindLocalClient("System",source)
-                        if not translated and id==138019 then translated=A.FindLocalClient("GroupFinder",source) end
+                        translated=A.FindCatalog("Item",source) or A.FindCatalog("System",source)
+                        if not translated and id==138019 then translated=A.FindCatalog("GroupFinder",source) end
                         translated=translated and A.Render(translated)
                         if translated then
                             local color=source:match("^(|c%x%x%x%x%x%x%x%x)")
@@ -113,7 +113,7 @@ end
 local function setFallback(tooltip,id)
     local state=states[tooltip]
     if id and id>0 and (D.ItemDescriptions[id] or D.ItemNames and D.ItemNames[id]
-        or A.FindLocalClient and D.LocalClientTexts and D.LocalClientTexts.Item) then
+        or A.FindCatalog and D.CatalogTexts and D.CatalogTexts.Item) then
         -- OnTooltipSetItem can already have translated the lines inside the
         -- native setter. Keep its line cache until the tooltip changes.
         if not state or state.itemID~=id then state={lines={}} end

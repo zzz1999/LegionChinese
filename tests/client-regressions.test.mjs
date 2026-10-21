@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,12 +8,12 @@ import {withQuestSources} from './quest-fixture.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
-const files=fs.readdirSync(data);
-const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n')).map(withQuestSources);
+const files=listFixtureFiles(data);
+const readLines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>readFixtureFile(new URL(f,data),'utf8').split('\n')).map(withQuestSources);
 const bookText='Welcome to the Scourge. Now that you have entered your true service, you may find immense relief in your liberation from various mortal inconveniences. No bothersome sleeping to take up your time anymore, nor any great need for shelter from the elements, and you are even free from the mild irritation of cutting hair and nails! How delightful!';
 
 test('Shang Xi screenshot dialogue translates with a Chinese player name through native progress and reward handlers',()=>{
-  const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
+  const snapshot=JSON.parse(readFixtureFile(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
   const index=readLines('QuestDialogue').filter(line=>/^D\.QuestDialogue\[(29406|29524)\]=/.test(line));
   assert.equal(index.length,2);
   const ids=new Set(index.flatMap(line=>[...line.matchAll(/\]=(\d+)/g)].map(m=>m[1])));
@@ -24,10 +25,10 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`local D=LegionChineseDB\n${[...quests,...index,...strings].join('\n')}`);
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(`
       playerName="包括"
       function UnitName(unit) if unit=="player" then return playerName end end
@@ -41,7 +42,7 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
         QuestInfoRewardText:SetText(GetRewardText())
       end
     `);
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     for(const quest of snapshot.quests.filter(q=>[29406,29524].includes(q.id)))for(const [field,record] of Object.entries(quest.fields)){
       const reward=field==='Completion',widget=reward?'QuestInfoRewardText':'QuestProgressText';
       const refresh=reward?'QuestInfo_Display()':'QuestFrameProgressPanel:Fire("OnShow")';
@@ -77,8 +78,8 @@ test('Shang Xi screenshot dialogue translates with a Chinese player name through
 });
 
 test('every shipped batch dialogue uses its quest and stage, with Traditional fallback and original-text guards',()=>{
-  const snapshot=JSON.parse(fs.readFileSync(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/reviewed-quest-dialogue-audit.json',import.meta.url),'utf8'));
+  const snapshot=JSON.parse(readFixtureFile(new URL('../data/reviewed-quest-dialogue.json',import.meta.url),'utf8'));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/reviewed-quest-dialogue-audit.json',import.meta.url),'utf8'));
   const index=readLines('QuestDialogue').filter(line=>line.startsWith('D.QuestDialogue['));
   const ids=new Set(index.flatMap(line=>[...line.matchAll(/\]=(\d+)/g)].map(m=>m[1])));
   const strings=readLines('Strings').filter(line=>ids.has(line.match(/^D\.Strings\[(\d+)\]=/)?.[1]));
@@ -88,7 +89,7 @@ test('every shipped batch dialogue uses its quest and stage, with Traditional fa
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`local D=LegionChineseDB\n${[...index,...strings].join('\n')}`);
     execute(`
       function UnitName() return "包括" end
@@ -96,7 +97,7 @@ test('every shipped batch dialogue uses its quest and stage, with Traditional fa
       function UnitRace() return "熊猫人","Pandaren" end
       function UnitSex() return 3 end
     `);
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
     const selected=audit.candidates.filter(r=>r.selected);
     assert.equal(selected.length,52);
     for(const candidate of selected){
@@ -141,10 +142,10 @@ test('Much to Learn journal description and objectives translate for all eight q
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`local D=LegionChineseDB\n${quests.join('\n')}`);
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     execute(`
       function GetLocale() return "zhCN" end
       function GetQuestLogTitle(index)
@@ -158,7 +159,7 @@ test('Much to Learn journal description and objectives translate for all eight q
         QuestInfoObjectivesText:SetText(journalObjectives)
       end
     `);
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute(`
       questID=99999 -- Stale NPC quest ID must not be used for the journal.
       for _,id in ipairs({29404,30039,30040,30041,30042,30043,30044,30045}) do
@@ -210,11 +211,11 @@ test('reported death knight book and quest progress translate through XML-bound 
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try {
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`local D=LegionChineseDB\n${bookRow}\n${stringRow}\n${questRow}`);
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute(`
       bookText=${luaString(bookText)}
       ItemTextFrame:Fire("OnEvent","ITEM_TEXT_READY")
@@ -239,10 +240,10 @@ test('Blingtron daily reward body translates after the native reward population 
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`local D=LegionChineseDB\n${quests.join('\n')}`);
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
     // 7.3.5 QuestInfo_ShowRewardText fills this widget through GetRewardText.
     // Populate before installing the addon, as Blizzard's template does.
     execute(`
@@ -256,7 +257,7 @@ test('Blingtron daily reward body translates after the native reward population 
         QuestInfoRewardText:SetText(GetRewardText())
       end
     `);
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute(`
       questID=34774;rewardTitle="布林顿5000"
       local original="You will accept this gift, and you will like it.  To do otherwise will automatically engage my organic incineration weapons.  Thank you."

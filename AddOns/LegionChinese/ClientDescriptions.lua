@@ -1,6 +1,5 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A,D=LegionChinese,LegionChineseDB
-local writing=setmetatable({}, {__mode="k"})
 
 local function usable(widget)
     return widget and not (widget.IsForbidden and widget:IsForbidden())
@@ -27,13 +26,7 @@ function A.ResolveClientText(kind,id,field,source,expressions)
     if value and (expressions or not value:find("[%[%]]")) then return value end
 end
 
-local function set(widget,text)
-    if not text or not usable(widget) or not widget.SetText or writing[widget] then return false end
-    writing[widget]=true
-    A.SetFont(widget);widget:SetText(text)
-    writing[widget]=nil
-    return true
-end
+local function set(widget,text) return A.WriteText(widget,text) end
 
 function A.ApplyClientText(widget,kind,id,field)
     if not usable(widget) or not widget.GetText then return false end
@@ -52,7 +45,7 @@ local function bind(hookMethod,widget,kind,field,id)
         return translated
     end
     hookMethod(widget,"SetText",function(self,source)
-        if writing[self] then return end
+        if A.IsWriting(self) then return end
         set(self,resolve(source))
     end)
     return widget.GetText and set(widget,resolve(widget:GetText()))

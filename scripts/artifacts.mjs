@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -138,8 +139,7 @@ export function buildArtifacts({root,input,manifest,version}){
     const options=[...choice.Options].map(([responseID,option])=>'['+responseID+']={'+Object.entries(option).map(([field,map])=>field+'='+textMap(map)).join(',')+'}');
     lines.push('D.ArtifactChoices['+id+']={Question='+textMap(choice.Question)+',Options={'+options.join(',')+'}}');
   }
-  const file='Artifacts.lua';generated.push('Data\\'+file);
-  fs.writeFileSync(path.join(root,'AddOns/LegionChinese/Data',file),'-- 自动生成：7.3.5 神器中文与原文指纹。来源和逐条核验见 SOURCES.md。\nlocal D=LegionChineseDB\n'+lines.join('\n')+'\n');
+  generated.push(...writeResourceChunks({root,name:'Artifacts',lines,numbered:false,header:'7.3.5 神器中文与原文指纹。来源和逐条核验见 SOURCES.md。'}));
   fs.writeFileSync(path.join(root,'docs/artifact-data-audit.json'),JSON.stringify(audit,null,2)+'\n');
   return {generated,audit};
 }

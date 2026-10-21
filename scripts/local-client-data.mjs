@@ -1,3 +1,5 @@
+import {writeResourceChunks} from './resource-writer.mjs';
+import {catalogFamilies} from './resource-layout.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -153,7 +155,7 @@ export function buildLocalClientData({root,manifest,version,baseIndexes={}}){
     const key=[pair.table,pair.id,pair.field,pair.locale].join(':');if(seen.has(key))throw Error('Duplicate local-client pair');seen.add(key);
     (indexes[pair.scope]??=new ChineseTextIndex()).add(pair.locale,pair.source,pair.text);
   }
-  const strings=[],ids=new Map(),lines=[],counts={};
+  const strings=[],ids=new Map(),scopeLines=new Map(),counts={};
   for(const [scope,index]of Object.entries(indexes).sort(([a],[b])=>a.localeCompare(b,'en'))){
     index.finish();let alreadyPresent=0,baseAmbiguous=0;
     const base=baseIndexes[scope];
@@ -164,21 +166,15 @@ export function buildLocalClientData({root,manifest,version,baseIndexes={}}){
     const locales={zhCN:0,zhTW:0};for(const key of index.entries.keys())locales[index.localeFor(key)]++;
     counts[scope]={fingerprints:index.entries.size,ambiguous:index.ambiguous.size,alreadyPresent,baseAmbiguous,locales};
     if(!index.entries.size)continue;
-    lines.push('D.LocalClientTexts.'+scope+'={}');
+    const lines=[];scopeLines.set(scope,lines);
+    lines.push('D.CatalogTexts.'+scope+'={}');
     for(const [key,text]of [...index.entries].sort(([a],[b])=>a.localeCompare(b,'en'))){
       if(!ids.has(text)){ids.set(text,strings.length+1);strings.push(text);}
-      lines.push('D.LocalClientTexts.'+scope+'['+luaString(key)+']='+ids.get(text));
+      lines.push('D.CatalogTexts.'+scope+'['+luaString(key)+']='+ids.get(text));
     }
   }
-  const out=path.join(root,'AddOns/LegionChinese/Data'),generated=[];
-  let part=0,buffer=[],size=0;
-  const flush=()=>{if(!buffer.length)return;const file='LocalClient_'+String(++part).padStart(2,'0')+'.lua';
-    fs.writeFileSync(path.join(out,file),'-- 自动生成：本地 7.3.5.26972 简中与同版繁中补缺。来源与核验见 SOURCES.md。\nlocal D=LegionChineseDB\n'+buffer.join('\n')+'\n');
-    generated.push('Data\\'+file);buffer=[];size=0;};
-  for(const line of [...strings.map((text,i)=>'D.LocalClientValues['+(i+1)+']='+luaString(text)),...lines]){
-    if(size+Buffer.byteLength(line)>900000)flush();buffer.push(line);size+=Buffer.byteLength(line)+1;
-  }flush();
-  for(const file of fs.readdirSync(out))if(/^LocalClient_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(out,file));
+  const generated=writeResourceChunks({root,name:'CatalogStrings',lines:strings.map((text,i)=>'D.CatalogStrings['+(i+1)+']='+luaString(text))});
+  for(const [scope,lines]of scopeLines)generated.push(...writeResourceChunks({root,name:catalogFamilies[scope],lines}));
   const audit={version,build:snapshot.build,buildKey:snapshot.buildKey,rootCKey:snapshot.rootCKey,snapshot:spec.file,sha256:spec.sha256,
     tools:snapshot.tools,tables:snapshot.tables,counts,chineseStrings:strings.length,exclusions:snapshot.exclusions};
   fs.writeFileSync(path.join(root,'docs/local-client-data-audit.json'),JSON.stringify(audit,null,2)+'\n');

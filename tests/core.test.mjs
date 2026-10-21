@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,16 +12,16 @@ const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 function runLua(code,ui=false){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
-  execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+  execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
   execute(`playerName="Alice"; playerSex=2
     function UnitName() return playerName end
     function UnitClass() return "Mage","MAGE" end
     function UnitRace() return "Human","Human" end
     function UnitSex() return playerSex end`);
-  execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+  execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
   if(ui){
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
   }
   execute(code);lua.lua_close(L);
 }
@@ -120,5 +121,5 @@ test('book signatures keep their underscores while matching player-name and gend
 });
 
 test('UI hooks respect Chinese fields, task switching and book pages while ignoring legacy disabled settings',()=>{
-  runLua(fs.readFileSync(new URL('./ui-cases.lua',import.meta.url),'utf8'),true);
+  runLua(readFixtureFile(new URL('./ui-cases.lua',import.meta.url),'utf8'),true);
 });

@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -6,9 +7,9 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {selectItemDescriptions} from '../scripts/item-descriptions.mjs';
 import {nameKey} from '../scripts/client-names.mjs';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
-const source=JSON.parse(fs.readFileSync(new URL('../data/item-descriptions.json',import.meta.url)));
-const descriptionFiles=fs.readFileSync(new URL('LegionChinese.toc',addon),'utf8').split(/\r?\n/)
-  .filter(file=>/^Data\\ItemDescriptions_\d+\.lua$/.test(file)).map(file=>file.replaceAll('\\','/'));
+const source=JSON.parse(readFixtureFile(new URL('../data/item-descriptions.json',import.meta.url)));
+const descriptionFiles=readFixtureFile(new URL('LegionChinese.toc',addon),'utf8').split(/\r?\n/)
+  .filter(file=>/^Data\\Items\\ItemDescriptions_\d+\.lua$/.test(file)).map(file=>file.replaceAll('\\','/'));
 
 test('reviewed item descriptions prefer Simplified, fall back to Traditional, and exclude later or conflicting text',()=>{
   const choose=translations=>selectItemDescriptions({schema:1,records:[{...source.records[0],translations}]});
@@ -24,15 +25,15 @@ test('reviewed item descriptions prefer Simplified, fall back to Traditional, an
 });
 
 test('shipped keystone description matches its hashed source and keeps unverified build provenance explicit',()=>{
-  const manifest=JSON.parse(fs.readFileSync(new URL('../sources.json',import.meta.url)));
-  const body=fs.readFileSync(new URL('../'+manifest.itemDescriptions.file,import.meta.url));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url)));
+  const body=readFixtureFile(new URL('../'+manifest.itemDescriptions.file,import.meta.url));
   assert.equal(crypto.createHash('sha256').update(body).digest('hex'),manifest.itemDescriptions.sha256);
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/item-description-audit.json',import.meta.url)));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/item-description-audit.json',import.meta.url)));
   assert.deepEqual(audit.records,selectItemDescriptions(source));
   assert.equal(audit.records[0].itemID,138019);
   assert.equal(audit.records[0].locale,'zhTW');assert.equal(audit.records[0].source.verifiedBuild,null);
   assert.equal(audit.records[0].key,nameKey(source.records[0].original));
-  const data=descriptionFiles.map(file=>fs.readFileSync(new URL(file,addon),'utf8')).join('\n');
+  const data=descriptionFiles.map(file=>readFixtureFile(new URL(file,addon),'utf8')).join('\n');
   assert.ok(data.includes(audit.records[0].text));assert.ok(!data.includes(source.records[0].original));
   assert.ok(audit.counts.client.selected>16000);assert.equal(audit.sources.length,3);
   assert.equal(audit.counts.entries,audit.clientRecords.length+audit.records.length);
@@ -44,9 +45,9 @@ function run(code){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=text=>{const status=lauxlib.luaL_dostring(L,to_luastring(text));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua',...descriptionFiles,'Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
-    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','item-tooltip-fixture.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    for(const file of ['Bootstrap.lua',...descriptionFiles,'Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua'])execute(readFixtureFile(new URL(file,addon),'utf8'));
+    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','item-tooltip-fixture.lua'])execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }

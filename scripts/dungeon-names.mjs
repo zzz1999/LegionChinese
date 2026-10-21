@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -53,14 +54,13 @@ export function buildDungeonNames({root,input,manifest}){
     const rows=parseDungeonTable(data.toString('utf8'),source.table);
     tables[source.table][source.locale]=rows;sources.push({...source,records:rows.size});
   }
-  const counts={},lines=['-- 自动生成：7.3.5.26972 客户端副本名称，仅含中文。来源见 SOURCES.md。','local D = LegionChineseDB'];
+  const counts={},lines=[];
   for(const [table,category] of [['JournalInstance','JournalInstances'],['Map','InstanceMaps']]){
     for(const locale of ['zhCN','zhTW'])if(!tables[table]?.[locale])throw Error(`Missing ${table}/${locale}`);
     const chosen=selectDungeonNames(table,tables[table]);counts[table]=chosen.counts;
     for(const [id,name]of chosen.names)lines.push(`D.${category}[${id}]=${luaString(name)}`);
   }
-  const generated=['Data\\DungeonNames.lua'];
-  fs.writeFileSync(path.join(root,'AddOns/LegionChinese/Data/DungeonNames.lua'),lines.join('\n')+'\n');
+  const generated=writeResourceChunks({root,name:'DungeonNames',lines,numbered:false,header:'7.3.5.26972 客户端副本名称，仅含中文。来源见 SOURCES.md。'});
   const audit={build:CLIENT_BUILD,provenance:'client-db2-via-wago',sources,counts,generatedFiles:generated};
   fs.writeFileSync(path.join(root,'docs/dungeon-name-audit.json'),JSON.stringify(audit,null,2)+'\n');
   return {generated,audit};

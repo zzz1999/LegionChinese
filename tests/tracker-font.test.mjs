@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,8 +8,8 @@ import {compatibleLegacyQuest} from '../scripts/dialogue.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
-const files=fs.readdirSync(data);
-const lines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n'));
+const files=listFixtureFiles(data);
+const lines=prefix=>files.filter(f=>f.startsWith(prefix+'_')).flatMap(f=>readFixtureFile(new URL(f,data),'utf8').split('\n'));
 const completion="Return to Salanar the Horseman at Death's Breach in Plaguelands: The Scarlet Enclave.";
 function shippedCompletion(){
   const key=fingerprint(normalize(completion));
@@ -22,7 +23,7 @@ function shippedCompletion(){
 function run(code,{tracker=false,welcome=false,rows=''}={}){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
-  const read=url=>fs.readFileSync(url,'utf8');
+  const read=url=>readFixtureFile(url,'utf8');
   try{
     execute(read(new URL('Bootstrap.lua',addon)));
     execute('local D=LegionChineseDB\n'+rows);

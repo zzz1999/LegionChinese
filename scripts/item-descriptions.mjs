@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -120,24 +121,8 @@ export function buildItemDescriptions({root,input=path.join(root,'.cache'),manif
     if(row.origin==='client')counts.client.selected++;else counts.reviewed++;
   }
   counts.items=items.size;
-  const output=path.join(root,'AddOns/LegionChinese/Data'),generated=[];
-  let lines=[],size=0;
-  const flush=()=>{
-    if(!lines.length)return;
-    const file=`ItemDescriptions_${String(generated.length+1).padStart(2,'0')}.lua`;
-    fs.writeFileSync(path.join(output,file),
-      '-- 自动生成：物品说明中文译文与匹配指纹。来源见 SOURCES.md。\nlocal D = LegionChineseDB\n'+lines.join('\n')+'\n');
-    generated.push('Data\\'+file);lines=[];size=0;
-  };
-  for(const [id,rows]of items){
-    const line=`D.ItemDescriptions[${id}]={${rows.map(r=>`[${luaString(r.key)}]=${luaString(r.text)}`).join(',')}}`;
-    if(size+Buffer.byteLength(line)>900000)flush();
-    lines.push(line);size+=Buffer.byteLength(line)+1;
-  }
-  flush();
-  // Restrict cleanup to this generator's numbered shards in the data folder.
-  for(const file of fs.readdirSync(output))
-    if(/^ItemDescriptions_\d+\.lua$/.test(file)&&!generated.includes('Data\\'+file))fs.unlinkSync(path.join(output,file));
+  const lines=[...items].map(([id,rows])=>`D.ItemDescriptions[${id}]={${rows.map(r=>`[${luaString(r.key)}]=${luaString(r.text)}`).join(',')}}`);
+  const generated=writeResourceChunks({root,name:'ItemDescriptions',lines,header:'物品说明中文译文与匹配指纹。来源见 SOURCES.md。'});
   const audit={version,build:CLIENT_BUILD,reviewedSource:spec,sources,counts,
     records:records.filter(row=>row.origin==='reviewed').map(({origin,...row})=>row),
     clientRecords:records.filter(row=>row.origin==='client').map(({itemID,key,locale})=>({itemID,key,locale})),

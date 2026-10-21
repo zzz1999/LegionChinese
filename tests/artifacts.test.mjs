@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -10,8 +11,8 @@ import {luaString,normalize,fingerprint} from '../scripts/text.mjs';
 import {nameKey} from '../scripts/client-names.mjs';
 
 const root=new URL('../',import.meta.url),addon=new URL('AddOns/LegionChinese/',root);
-const snapshot=JSON.parse(fs.readFileSync(new URL('data/artifact-choice-reviews.json',root)));
-const manifest=JSON.parse(fs.readFileSync(new URL('sources.json',root)));
+const snapshot=JSON.parse(readFixtureFile(new URL('data/artifact-choice-reviews.json',root)));
+const manifest=JSON.parse(readFixtureFile(new URL('sources.json',root)));
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 
 test('every collected choice has a field decision; only six complete descriptions pass review',()=>{
@@ -28,7 +29,7 @@ test('every collected choice has a field decision; only six complete description
   const index=choices.get(265).Options.get(586).Description;
   assert.equal(index.get(fingerprint(normalize(frost.original))).text,frost.text);
   assert.equal(index.has(fingerprint(normalize(frost.sourceOriginal))),false,'never match a truncated English prefix');
-  assert.equal(sha(fs.readFileSync(new URL(manifest.artifactChoiceReviews.file,root))),manifest.artifactChoiceReviews.sha256);
+  assert.equal(sha(readFixtureFile(new URL(manifest.artifactChoiceReviews.file,root))),manifest.artifactChoiceReviews.sha256);
   for(const source of manifest.artifactTables)assert.equal(source.build,ARTIFACT_BUILD);
 });
 
@@ -78,7 +79,7 @@ test('artifact builds join IDs and locales, verify checksums and reject later cl
   const f=fixtureBuild();try{
     const result=f.run();assert.deepEqual(result.audit.counts.artifacts,{ids:1,zhCN:0,zhTW:1});
     assert.equal(result.audit.counts.traitSpellIDs,2);
-    const output=fs.readFileSync(path.join(f.folder,'AddOns/LegionChinese/Data/Artifacts.lua'),'utf8');
+    const output=readFixtureFile(path.join(f.folder,'AddOns/LegionChinese/Data/Artifacts.lua'),'utf8');
     assert.ok(output.includes('神兵之刃'));assert.ok(output.includes('D.ArtifactPowerSpells[5]={[7]=true,[9]=true}'));
     assert.ok(!output.includes('D.ArtifactPowerSpells[99]'));
     f.m.artifactTables[0].build='8.0.1.27843';assert.throws(f.run,/Unsupported/);f.m.artifactTables[0].build=ARTIFACT_BUILD;
@@ -89,7 +90,7 @@ test('artifact builds join IDs and locales, verify checksums and reject later cl
 test('locale rows with changed artifact identity cannot supply names',()=>{
   const f=fixtureBuild();try{
     const source=f.m.artifactTables.find(s=>s.table==='ArtifactAppearance'&&s.locale==='zhCN');
-    const file=path.join(f.folder,source.file),bytes=fs.readFileSync(file,'utf8').replace('"2","4"','"9","4"');
+    const file=path.join(f.folder,source.file),bytes=readFixtureFile(file,'utf8').replace('"2","4"','"9","4"');
     fs.writeFileSync(file,bytes);source.sha256=sha(bytes);assert.throws(f.run,/metadata mismatch/);
   }finally{f.cleanup();}
 });
@@ -98,9 +99,9 @@ function run(code,before=''){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Data/Artifacts.lua','Core.lua','ClientNames.lua','ExtraTooltips.lua','Artifacts.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
-    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','artifact-fixture.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
-    execute(before);execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    for(const file of ['Bootstrap.lua','Data/Artifacts.lua','Core.lua','ClientNames.lua','ExtraTooltips.lua','Artifacts.lua'])execute(readFixtureFile(new URL(file,addon),'utf8'));
+    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','artifact-fixture.lua'])execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
+    execute(before);execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }

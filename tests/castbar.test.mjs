@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -12,7 +13,7 @@ function run(code){
   try{
     for(const file of ['../AddOns/LegionChinese/Bootstrap.lua','../AddOns/LegionChinese/Core.lua',
       './ui-fixture.lua','./castbar-fixture.lua','../AddOns/LegionChinese/UI.lua']){
-      execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
+      execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
     }
     execute('local A=LegionChinese\n'+code);
   }finally{lua.lua_close(L);}

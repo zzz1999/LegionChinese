@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -5,7 +6,7 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {renderChangelog} from '../scripts/changelog.mjs';
 import {luaString} from '../scripts/text.mjs';
 
-const version=JSON.parse(fs.readFileSync(new URL('../package.json',import.meta.url),'utf8')).version;
+const version=JSON.parse(readFixtureFile(new URL('../package.json',import.meta.url),'utf8')).version;
 
 function run(code){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
@@ -15,7 +16,7 @@ function run(code){
   };
   try {
     for(const file of ['../AddOns/LegionChinese/Bootstrap.lua','../AddOns/LegionChinese/Core.lua','./ui-fixture.lua',
-      './welcome-fixture.lua','../AddOns/LegionChinese/Changelog.lua','../AddOns/LegionChinese/Welcome.lua','../AddOns/LegionChinese/UI.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
+      './welcome-fixture.lua','../AddOns/LegionChinese/Changelog.lua','../AddOns/LegionChinese/Welcome.lua','../AddOns/LegionChinese/UI.lua'])execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
     execute(code);
   } finally {lua.lua_close(L);}
 }

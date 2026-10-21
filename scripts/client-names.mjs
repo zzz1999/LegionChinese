@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -90,16 +91,7 @@ export function buildClientNames({root,input,manifest,version}){
   }
   const output=path.join(root,'AddOns/LegionChinese/Data'),generated=[],strings=[],ids=new Map();
   const stringID=text=>{if(!ids.has(text)){strings.push(text);ids.set(text,strings.length);}return ids.get(text);};
-  const write=(name,rows)=>{
-    let part=0,lines=[],size=0;
-    const flush=()=>{
-      if(!lines.length)return;
-      const file=`${name}_${String(++part).padStart(2,'0')}.lua`;
-      fs.writeFileSync(path.join(output,file),'-- 自动生成：7.3.5.26972 客户端名称，仅含中文与匹配指纹。来源见 SOURCES.md。\nlocal D = LegionChineseDB\n'+lines.join('\n')+'\n');
-      generated.push('Data\\'+file);lines=[];size=0;
-    };
-    for(const line of rows){if(size+Buffer.byteLength(line)>900000)flush();lines.push(line);size+=Buffer.byteLength(line)+1;}flush();
-  };
+  const write=(name,lines)=>generated.push(...writeResourceChunks({root,name,lines,header:'7.3.5.26972 客户端名称，仅含中文与匹配指纹。来源见 SOURCES.md。'}));
   for(const [table,category]of [['Spell','Spells'],['CreatureFamily','CreatureFamilies']]){
     write(category,[...chosen[table].byID].map(([id,r])=>`D.${category}[${id}]=${stringID(r.text)}`));
     write(category==='Spells'?'SpellNames':'CreatureFamilyNames',[...chosen[table].byName].sort((a,b)=>a[0].localeCompare(b[0],'en'))

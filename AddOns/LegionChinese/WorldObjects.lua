@@ -33,7 +33,7 @@ function A.UpdateWorldObjectTooltip(tooltip)
     if source~=cachedSource then
         cachedSource=source
         cachedTranslation=D.WorldObjects[A.NameFingerprint(source)]
-            or A.FindLocalClient and A.FindLocalClient("World",source)
+            or A.FindCatalog and A.FindCatalog("World",source)
     end
     if not cachedTranslation then return end
     A.SetFont(widget)

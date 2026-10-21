@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ChineseTextIndex,chooseChineseFields} from '../scripts/fallback.mjs';
@@ -62,7 +63,7 @@ test('generated locale choice round-trips through Lua and preserves original Chi
     const status=lauxlib.luaL_dostring(L,to_luastring(code));
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
-  for(const file of ['Bootstrap.lua','Core.lua'])execute(fs.readFileSync(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
+  for(const file of ['Bootstrap.lua','Core.lua'])execute(readFixtureFile(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
   let id=0;
   for(const [key,text] of index.entries){
     id++;execute(`LegionChineseDB.Strings[${id}]=${luaString(text)}; LegionChineseDB.Gossip[${luaString(key)}]=${id}`);

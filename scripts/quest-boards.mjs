@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -44,10 +45,8 @@ export function buildQuestBoards({root,input,manifest,version}){
     audit.headers.push({...row,locale:selected.locale,text:selected.text,fingerprint:selected.key});
   }
   const questionKey=fingerprint(normalize(review.question));
-  const code='-- 自动生成：仅含已核实的 7.3.5 征令板地区名称。来源见 SOURCES.md。\nlocal D=LegionChineseDB\n'
-    +'D.QuestBoardHeaders['+luaString(questionKey)+']={'
-    +[...headers].map(([key,text])=>'['+luaString(key)+']='+luaString(text)).join(',')+'}\n';
-  fs.writeFileSync(path.join(root,'AddOns/LegionChinese/Data/QuestBoards.lua'),code);
+  const lines=['D.QuestBoardHeaders['+luaString(questionKey)+']={'+[...headers].map(([key,text])=>'['+luaString(key)+']='+luaString(text)).join(',')+'}'];
+  const generated=writeResourceChunks({root,name:'QuestBoards',lines,numbered:false,header:'仅含已核实的 7.3.5 征令板地区名称。来源见 SOURCES.md。'});
   fs.writeFileSync(path.join(root,'docs/map-ui-audit.json'),JSON.stringify(audit,null,2)+'\n');
-  return {generated:['Data\\QuestBoards.lua'],audit};
+  return {generated,audit};
 }

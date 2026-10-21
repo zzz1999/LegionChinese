@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -6,8 +7,8 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 function questRows(ids){
   const wanted=new Set(ids),rows=[];
-  for(const file of fs.readdirSync(new URL('Data/',addon)).filter(f=>f.startsWith('Quests_'))){
-    for(const line of fs.readFileSync(new URL('Data/'+file,addon),'utf8').split('\n')){
+  for(const file of listFixtureFiles(new URL('Data/',addon)).filter(f=>f.startsWith('Quests_'))){
+    for(const line of readFixtureFile(new URL('Data/'+file,addon),'utf8').split('\n')){
       const id=Number(line.match(/^D\.Quests\[(\d+)\]/)?.[1]);
       if(wanted.delete(id))rows.push(withQuestSources(line));
     }
@@ -15,13 +16,13 @@ function questRows(ids){
   assert.equal(wanted.size,0,'screenshot quests must be shipped');
   return 'local D=LegionChineseDB\n'+rows.join('\n');
 }
-const dungeonData=()=>fs.readFileSync(new URL('Data/DungeonNames.lua',addon),'utf8');
+const dungeonData=()=>readFixtureFile(new URL('Data/DungeonNames.lua',addon),'utf8');
 function run(code,{native=false,beforeUI=''}={}){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=text=>{const status=lauxlib.luaL_dostring(L,to_luastring(text));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ChatLinks.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
-    execute(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
+    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ChatLinks.lua'])execute(readFixtureFile(new URL(file,addon),'utf8'));
+    execute(readFixtureFile(new URL('ui-fixture.lua',import.meta.url),'utf8'));
     execute(`filters={};itemNames={};queries={};mapNames={};mapQueries={};mapRequests=0
       function ChatFrame_AddMessageEventFilter(event,filter)
         filters[event]=filters[event] or {};table.insert(filters[event],filter)
@@ -30,9 +31,9 @@ function run(code,{native=false,beforeUI=''}={}){
       C_ChallengeMode={GetMapInfo=function(id) mapQueries[#mapQueries+1]=id;return mapNames[id] end,
         RequestMapInfo=function() mapRequests=mapRequests+1 end}
       function SendChatMessage() error("Must not send or change chat messages") end`);
-    if(native)execute(fs.readFileSync(new URL('chat-frame-fixture.lua',import.meta.url),'utf8'));
+    if(native)execute(readFixtureFile(new URL('chat-frame-fixture.lua',import.meta.url),'utf8'));
     if(beforeUI)execute(beforeUI);
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A=LegionChinese\n'+code);
   }finally{lua.lua_close(L);}
 }

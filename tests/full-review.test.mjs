@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,11 +8,11 @@ import {normalize,fingerprint,luaString,supportsTokens,TextIndex} from '../scrip
 import {chooseChinese,chooseChineseFields} from '../scripts/fallback.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url),data=new URL('Data/',addon);
-const files=fs.readdirSync(data);
+const files=listFixtureFiles(data);
 function shippedRow(category,key){
   const prefix=`D.${category}[${typeof key==='number'?key:luaString(key)}]=`;
   for(const file of files.filter(f=>f.startsWith(category+'_'))){
-    const source=fs.readFileSync(new URL(file,data),'utf8'),offset=source.indexOf('\n'+prefix);
+    const source=readFixtureFile(new URL(file,data),'utf8'),offset=source.indexOf('\n'+prefix);
     if(offset>=0)return source.slice(offset+1,source.indexOf('\n',offset+1));
   }
   assert.fail(`Missing shipped row ${prefix}`);
@@ -27,15 +28,15 @@ function runLua(code,rows=''){
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`playerName="Alice";playerClass="法师";classToken="MAGE";playerRace="人类";raceToken="Human"
       function UnitName() return playerName end
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end`);
     execute('local D=LegionChineseDB\n'+rows.split('\n').map(withQuestSources).join('\n'));
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }

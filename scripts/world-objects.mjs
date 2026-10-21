@@ -1,3 +1,4 @@
+import {writeResourceChunks} from './resource-writer.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -66,13 +67,12 @@ export function buildWorldObjectNames({root,input,manifest,version,sqlRows}){
   // client DB2 IDs or different SQL releases with possibly changed identities.
   candidates.push(...pairSQLWorldObjectNames(sqlRows));
   const {index,records}=selectWorldObjectNames(candidates);
-  const output=path.join(root,'AddOns/LegionChinese/Data'),file='WorldObjects_01.lua';
   const lines=[...index.entries].sort((a,b)=>a[0].localeCompare(b[0],'en')).map(([key,text])=>`D.WorldObjects[${luaString(key)}]=${luaString(text)}`);
-  fs.writeFileSync(path.join(output,file),'-- 自动生成：场景物件中文名称与匹配指纹。来源见 SOURCES.md。\nlocal D = LegionChineseDB\n'+lines.join('\n')+'\n');
+  const generated=writeResourceChunks({root,name:'WorldObjects',lines,header:'场景物件中文名称与匹配指纹。来源见 SOURCES.md。'});
   const quality={};for(const row of records)quality[row.quality]=(quality[row.quality]??0)+1;
   const sqlFiles=new Set(sqlRows.map(r=>r.source));
   const audit={version,build:CLIENT_BUILD,sources,sqlSources:manifest.sql.filter(s=>sqlFiles.has(s.file)),counts:{fingerprints:index.entries.size,locales:index.localeCounts,
     ambiguousSkipped:index.ambiguous.size,quality},records:records.sort((a,b)=>a.key.localeCompare(b.key,'en'))};
   fs.writeFileSync(path.join(root,'docs/world-object-audit.json'),JSON.stringify(audit,null,2)+'\n');
-  return {generated:['Data\\'+file],audit};
+  return {generated,audit};
 }

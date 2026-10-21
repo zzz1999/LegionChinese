@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -24,16 +25,16 @@ function run(code){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
-    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    for(const file of ['Bootstrap.lua','Data/WorldObjects_01.lua','Core.lua','ClientNames.lua','WorldObjects.lua'])execute(readFixtureFile(new URL(file,addon),'utf8'));
+    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua'])execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
 test('shipped world-name data includes the reported gate and agrees with its pinned sources',()=>{
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/world-object-audit.json',import.meta.url)));
-  const manifest=JSON.parse(fs.readFileSync(new URL('../sources.json',import.meta.url)));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/world-object-audit.json',import.meta.url)));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url)));
   const gate=audit.records.find(r=>r.key===nameKey('Death Gate'));
   assert.equal(gate.text,'死亡之门');assert.equal(gate.id,190942);assert.equal(gate.verifiedBuild,18019);
   assert.equal(gate.quality,'build-marked');
@@ -45,7 +46,7 @@ test('shipped world-name data includes the reported gate and agrees with its pin
   assert.equal(audit.sources.length,3);
   for(const source of audit.sources)assert.equal(source.sha256,manifest.worldObjectTables.find(s=>s.file===source.file).sha256);
   for(const source of audit.sqlSources)assert.equal(source.sha256,manifest.sql.find(s=>s.file===source.file).sha256);
-  const data=fs.readFileSync(new URL('Data/WorldObjects_01.lua',addon),'utf8');
+  const data=readFixtureFile(new URL('Data/WorldObjects_01.lua',addon),'utf8');
   assert.equal(data.split('\n').filter(l=>l.startsWith('D.')).length,audit.counts.fingerprints);
 });
 

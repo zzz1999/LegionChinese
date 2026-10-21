@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,24 +12,24 @@ import {ChineseTextIndex} from '../scripts/fallback.mjs';
 import {QuestSourceIndex,addValidatedQuestTitles} from '../scripts/quest-sources.mjs';
 
 const root=new URL('../',import.meta.url),addon=new URL('AddOns/LegionChinese/',root);
-const review=JSON.parse(fs.readFileSync(new URL('data/quest-board-reviews.json',root)));
-const manifest=JSON.parse(fs.readFileSync(new URL('sources.json',root)));
+const review=JSON.parse(readFixtureFile(new URL('data/quest-board-reviews.json',root)));
+const manifest=JSON.parse(readFixtureFile(new URL('sources.json',root)));
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const key=fingerprint(normalize('A Recent Discovery'));
 let shippedTitle;
 function titleFixture(){
   if(shippedTitle)return shippedTitle;
-  const dir=new URL('Data/',addon),files=fs.readdirSync(dir);
+  const dir=new URL('Data/',addon),files=listFixtureFiles(dir);
   let titleLine;
   for(const file of files.filter(f=>f.startsWith('Titles_'))){
-    titleLine=fs.readFileSync(new URL(file,dir),'utf8').split('\n').find(line=>line.includes('"'+key+'"'));
+    titleLine=readFixtureFile(new URL(file,dir),'utf8').split('\n').find(line=>line.includes('"'+key+'"'));
     if(titleLine)break;
   }
   assert.ok(titleLine,'the validated English title must be in the shipped lookup index');
   const id=titleLine.match(/=(\d+)$/)?.[1];assert.ok(id);
   let valueLine;
   for(const file of files.filter(f=>f.startsWith('Strings_'))){
-    valueLine=fs.readFileSync(new URL(file,dir),'utf8').split('\n').find(line=>line.startsWith('D.Strings['+id+']='));
+    valueLine=readFixtureFile(new URL(file,dir),'utf8').split('\n').find(line=>line.startsWith('D.Strings['+id+']='));
     if(valueLine)break;
   }
   assert.ok(valueLine?.includes('近期发现'));
@@ -43,11 +44,11 @@ function run(code,before=''){
   };
   try{
     for(const file of ['Bootstrap.lua','Data/QuestBoards.lua','Core.lua','ClientNames.lua','QuestBoards.lua','Artifacts.lua','MapTooltips.lua'])
-      execute(fs.readFileSync(new URL(file,addon),'utf8'));
+      execute(readFixtureFile(new URL(file,addon),'utf8'));
     execute(titleFixture());
     for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','artifact-fixture.lua','map-ui-fixture.lua'])
-      execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
-    execute(before);execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+      execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
+    execute(before);execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
@@ -175,11 +176,11 @@ test('board lookup checks the live context and never imports different descripti
 `));
 
 test('board audit keeps only verified names and records all other reported fields as deferred',()=>{
-  const audit=JSON.parse(fs.readFileSync(new URL('docs/map-ui-audit.json',root)));
+  const audit=JSON.parse(readFixtureFile(new URL('docs/map-ui-audit.json',root)));
   assert.deepEqual(audit.headers.map(r=>r.text),['艾萨拉','北贫瘠之地','银松森林']);
   assert.equal(audit.deferred.length,8);
   assert.ok(audit.deferred.some(r=>r.original==='Orgrimmar Portals'));
-  assert.equal(hash(fs.readFileSync(new URL(manifest.questBoardReviews.file,root))),manifest.questBoardReviews.sha256);
+  assert.equal(hash(readFixtureFile(new URL(manifest.questBoardReviews.file,root))),manifest.questBoardReviews.sha256);
   for(const s of audit.sources){
     assert.equal(s.build,BOARD_BUILD);
     assert.deepEqual(s,manifest.questBoardTables.find(r=>r.locale===s.locale));
@@ -190,7 +191,7 @@ test('board imports validate identity and build, with per-field Traditional fall
   const folder=fs.mkdtempSync(path.join(os.tmpdir(),'lcn-map-ui-'));
   try{
     fs.mkdirSync(path.join(folder,'AddOns/LegionChinese/Data'),{recursive:true});fs.mkdirSync(path.join(folder,'docs'));
-    const bytes=fs.readFileSync(new URL('data/quest-board-reviews.json',root));fs.writeFileSync(path.join(folder,'review.json'),bytes);
+    const bytes=readFixtureFile(new URL('data/quest-board-reviews.json',root));fs.writeFileSync(path.join(folder,'review.json'),bytes);
     const m={questBoardReviews:{file:'review.json',sha256:hash(bytes)},questBoardTables:[]};
     for(const locale of ['enUS','zhCN','zhTW']){
       const rows=review.headers.map(r=>[r.id,locale==='zhTW'?'繁體名稱'+r.id:r.original,r.questID,r.mapAreaID,'Not the board description'].join(','));
@@ -200,10 +201,10 @@ test('board imports validate identity and build, with per-field Traditional fall
     }
     const build=()=>buildQuestBoards({root:folder,input:folder,manifest:m,version:'test'});
     const result=build();assert.ok(result.audit.headers.every(h=>h.locale==='zhTW'));
-    assert.ok(!fs.readFileSync(path.join(folder,'AddOns/LegionChinese/Data/QuestBoards.lua'),'utf8').includes('Not the board description'));
+    assert.ok(!readFixtureFile(path.join(folder,'AddOns/LegionChinese/Data/QuestBoards.lua'),'utf8').includes('Not the board description'));
     m.questBoardTables[0].build='8.0.1.27843';assert.throws(build,/Unsupported/);m.questBoardTables[0].build=BOARD_BUILD;
     const source=m.questBoardTables[1],file=path.join(folder,source.file);
-    const changed=fs.readFileSync(file,'utf8').replace('28496','99999');fs.writeFileSync(file,changed);source.sha256=hash(changed);
+    const changed=readFixtureFile(file,'utf8').replace('28496','99999');fs.writeFileSync(file,changed);source.sha256=hash(changed);
     assert.throws(build,/metadata mismatch/);
     source.sha256='bad';assert.throws(build,/checksum/);
   }finally{

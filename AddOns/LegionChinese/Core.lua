@@ -1,5 +1,8 @@
 -- SPDX-License-Identifier: GPL-2.0-or-later
 local A, D = LegionChinese, LegionChineseDB
+-- Resources resolve shared literals during loading, before Core.lua. Runtime
+-- lookups hold ordinary strings; the temporary pool table can be collected.
+D.SharedStrings=nil
 local tags = { html=true, body=true, p=true, br=true, h1=true, h2=true, h3=true, h4=true, h5=true, h6=true, font=true, img=true }
 local classes = { WARRIOR="战士", PALADIN="圣骑士", HUNTER="猎人", ROGUE="潜行者", PRIEST="牧师", DEATHKNIGHT="死亡骑士", SHAMAN="萨满祭司", MAGE="法师", WARLOCK="术士", MONK="武僧", DRUID="德鲁伊", DEMONHUNTER="恶魔猎手" }
 local races = { Human="人类", Orc="兽人", Dwarf="矮人", NightElf="暗夜精灵", Scourge="亡灵", Tauren="牛头人", Gnome="侏儒", Troll="巨魔", Goblin="地精", BloodElf="血精灵", Draenei="德莱尼", Worgen="狼人", Pandaren="熊猫人", Nightborne="夜之子", HighmountainTauren="至高岭牛头人", VoidElf="虚空精灵", LightforgedDraenei="光铸德莱尼" }
@@ -248,9 +251,9 @@ function A.MatchesQuestSource(id,field,text)
     return findText(quest and quest[field],text,acceptedQuestSource)==true
 end
 
-function A.FindLocalClient(scope,text,dynamic)
-    local index=D.LocalClientTexts and D.LocalClientTexts[scope]
-    local values=D.LocalClientValues
+function A.FindCatalog(scope,text,dynamic)
+    local index=D.CatalogTexts and D.CatalogTexts[scope]
+    local values=D.CatalogStrings
     if not index or not values or type(text)~="string" or text=="" or #text>32768 or A.IsChinese(text) then return end
     if dynamic then return findText(index,text,values) end
     local id=index[A.Fingerprint(A.Normalize(text,false))]
@@ -262,7 +265,7 @@ function A.Find(category, text)
     local translated=findText(D[category],text)
     if translated then return translated end
     local scope=localCategories[category]
-    return scope and A.FindLocalClient(scope,text,true)
+    return scope and A.FindCatalog(scope,text,true)
 end
 
 function A.FindQuestExtra(id,field,text)

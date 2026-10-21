@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -51,8 +52,8 @@ test('description build pins version and hashes, prefers client wording and keep
     const result=buildItemDescriptions({root,manifest,version:'1.2.11'});
     assert.deepEqual(result.generated,['Data\\ItemDescriptions_01.lua']);
     assert.equal(result.audit.counts.items,1);assert.equal(result.audit.counts.client.selected,1);
-    assert.equal(result.audit.counts.reviewed,0);assert.ok(!fs.existsSync(stale));assert.equal(fs.readFileSync(other,'utf8'),'untouched');
-    const content=fs.readFileSync(path.join(root,'AddOns/LegionChinese/Data/ItemDescriptions_01.lua'),'utf8');
+    assert.equal(result.audit.counts.reviewed,0);assert.ok(!fs.existsSync(stale));assert.equal(readFixtureFile(other,'utf8'),'untouched');
+    const content=readFixtureFile(path.join(root,'AddOns/LegionChinese/Data/ItemDescriptions_01.lua'),'utf8');
     assert.ok(content.includes('客户端简体说明'));assert.ok(content.includes(nameKey('Original wording')));
     assert.ok(!content.includes('Original wording')&&!content.includes('旧社区译文'));
     const changed=structuredClone(manifest);changed.itemDescriptionTables[0].build='8.0.1.28153';

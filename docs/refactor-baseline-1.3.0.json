@@ -1,0 +1,162 @@
+{
+  "ArtifactAppearances": {
+    "assignments": 880,
+    "sha256Sum": "aa6a88903849fc27b9727436eac3d5ff3adc2198c8228adaf1e6fa1823ebc46b"
+  },
+  "ArtifactAppearanceSets": {
+    "assignments": 222,
+    "sha256Sum": "d89c01c6c7143c0a5e389a3ab9366d2ba72ebc6826b7fab26481a213c5edde4a"
+  },
+  "ArtifactChoices": {
+    "assignments": 5,
+    "sha256Sum": "e69391aea5b88b01296b06f434440ef61e5f4ce34bcfef34fce195988b298364"
+  },
+  "ArtifactConditions": {
+    "assignments": 163,
+    "sha256Sum": "11b6d59f76394868d627b2488391c88f3aaec799828294d9a6a34044023e7689"
+  },
+  "ArtifactNames": {
+    "assignments": 43,
+    "sha256Sum": "983a9dcab5b24220ed1c66e1edc248f1ac9d3278b38647df5df0dc2c794d1f4a"
+  },
+  "ArtifactPowerSpells": {
+    "assignments": 952,
+    "sha256Sum": "ef1a20799f8bdc488f3e5d49df28454579a7f3bcaebd23fe3ac734260e9fa69d"
+  },
+  "ArtifactTitleNames": {
+    "assignments": 1,
+    "sha256Sum": "f981e54375b28d3792a0555ebb08e5ae654a6a8ad7d6355fc1e392fb40045e7c"
+  },
+  "BookContexts": {
+    "assignments": 28,
+    "sha256Sum": "c163c2a13bb92cf4be57a42a69b9314eab7af3713dd2da963dfa2b7c3cefbff5"
+  },
+  "Books": {
+    "assignments": 1684,
+    "sha256Sum": "4f4a5f67c0651d4879bc1f02e1ae2c7459ef38e58a895179e46fc7ffa5302670"
+  },
+  "ClientTextIndex": {
+    "assignments": 21947,
+    "sha256Sum": "7b64b273434c6cce8bf004ad7d6462ac0b725e0cbcec2d8edfe8220568c960cf"
+  },
+  "ClientTexts": {
+    "assignments": 18649,
+    "sha256Sum": "87fbd600798f03293a13ab3f0fad2762305517471de9096f9b715bc6857e0ae5"
+  },
+  "Completions": {
+    "assignments": 2605,
+    "sha256Sum": "e59dc721c1e8c4c12ff601b16aa102864c6d60bb54cb627c9db8b5788efb726b"
+  },
+  "CreatureFamilies": {
+    "assignments": 75,
+    "sha256Sum": "9dfb59c44fe41f9d6ffce3b0ef9f4790846f946c1b54d202acd09b999343b7f4"
+  },
+  "CreatureFamilyNames": {
+    "assignments": 75,
+    "sha256Sum": "a728a662c5e2e3d8884f80105c53e899fb0ce7a2c4fbe48d3f025093bf39f841"
+  },
+  "Creatures": {
+    "assignments": 9281,
+    "sha256Sum": "2b5dd1b63332143b87621c78cda1d29b49853cf2a66dcdb5730db917d2671c15"
+  },
+  "DynamicSpellTexts": {
+    "assignments": 23730,
+    "sha256Sum": "1424b78e20335f35e1c1a4008913d8a672182c67a7b8319b4ff317d1cd6175a0"
+  },
+  "Gossip": {
+    "assignments": 1001350,
+    "sha256Sum": "7a888f03716f892ec1f018e8b8ffddfaea0bf9ece01c68fa553336e2c634f776"
+  },
+  "InstanceMaps": {
+    "assignments": 150,
+    "sha256Sum": "31d52c47fcf4e11cb04cfc50e55eefcc58648d58a897f2f6f54dbb8ceba21fe5"
+  },
+  "ItemDescriptions": {
+    "assignments": 16326,
+    "sha256Sum": "632184d2e8e8924569c66b0f0b1753a954cbdc74aa8d61d65040a046cc151473"
+  },
+  "ItemNames": {
+    "assignments": 103910,
+    "sha256Sum": "6b36dacf4ea7244ccf9833e7372c1b47f6dac8259feea3b44b6acdda28d9e65f"
+  },
+  "JournalInstances": {
+    "assignments": 136,
+    "sha256Sum": "67d5c93ca1618bed63129772bdc44a313ea089797aa9e032c692ea0f25d337c4"
+  },
+  "LinkNames": {
+    "assignments": 18726,
+    "sha256Sum": "8847af3ae8b77602fa2884e17b0b0bcf24a550b0d67d822ad2a09c955b14b114"
+  },
+  "LocalClientTexts": {
+    "assignments": 60867,
+    "sha256Sum": "30e124827e1ca091ea2f384646554c3df918fb1072e6bd9f29f1b22aaab67d25"
+  },
+  "LocalClientValues": {
+    "assignments": 53605,
+    "sha256Sum": "f26a7ee4699b8673ec34a3255473ea864f88849966fedfbc60916680ca46ec9d"
+  },
+  "NameStrings": {
+    "assignments": 80174,
+    "sha256Sum": "e0cf6f7f71b56b347efbb407917aafaf7b4aabeab0d91e2977e0cd1ea23c0c7c"
+  },
+  "NPCLabelNames": {
+    "assignments": 95761,
+    "sha256Sum": "a961ce2e913263d3d165fd1086556b276ef58867f4ff2b1da7a0ed1768558836"
+  },
+  "NPCNames": {
+    "assignments": 64801,
+    "sha256Sum": "dd61c5ab357268e0dcfe17181d19c24e16671f647d43e33569a067714ab3b179"
+  },
+  "NPCTitles": {
+    "assignments": 16947,
+    "sha256Sum": "e27d266a8d8357fff6e3e86bf158e704ce9230042bcf8e5bafd18dfb0b1466c0"
+  },
+  "Objectives": {
+    "assignments": 7312,
+    "sha256Sum": "cb7d2dccfb6bc3554e92b31ef8c6d93493f04cb343fe4a0171f4dbc95822cbb6"
+  },
+  "QuestBoardHeaders": {
+    "assignments": 1,
+    "sha256Sum": "22857c6b0e63d92f363493ea2563fc4b5f4777a91f6339daccc150845a9dc854"
+  },
+  "QuestDialogue": {
+    "assignments": 36,
+    "sha256Sum": "a5a770d98afc356f2c92b8de448a2ea79f08e0b513a18548a53d766d6100e84e"
+  },
+  "QuestExtras": {
+    "assignments": 4579,
+    "sha256Sum": "95457d1d54613fbc2f12859e49c53ccb5f4aa30721e2be3ed4752819f2fc5872"
+  },
+  "Quests": {
+    "assignments": 22703,
+    "sha256Sum": "bb5ee45af9d1affa052d4247b8ff9b38fce465bce8ab4238c89251c4a2cb7a3b"
+  },
+  "QuestSources": {
+    "assignments": 22703,
+    "sha256Sum": "0ea926c6871ca32c87607dc1f687eec64db77dcc44a01b5e332867cde81e8b2e"
+  },
+  "SpellNames": {
+    "assignments": 76935,
+    "sha256Sum": "67654399d63c23e3e057deac8cdabb573435519607dbfab8c74f2b7d9666b26f"
+  },
+  "Spells": {
+    "assignments": 160721,
+    "sha256Sum": "5e3c92ae1ca2d7561233f696c3ee3375957350385bd3ffab9c901063dbdd1620"
+  },
+  "SpellTexts": {
+    "assignments": 43728,
+    "sha256Sum": "e074354dfc7efa7ece74c429cfd358d580fab5cbaf1ba0fb8458a8c1068a26de"
+  },
+  "Strings": {
+    "assignments": 209302,
+    "sha256Sum": "4508f017bca3f46d1fb44b8854211f1d78c534bef0524f1c73b5ba0564e3c39e"
+  },
+  "Titles": {
+    "assignments": 125588,
+    "sha256Sum": "6aec177cb633934c8c1ff6f5f8acb9477688f3569cbf8af63c180e53812e488a"
+  },
+  "WorldObjects": {
+    "assignments": 6306,
+    "sha256Sum": "65ca40517cb425d14e94c03ff83d8653ff3daf545037a816526f1b61569ad9a8"
+  }
+}

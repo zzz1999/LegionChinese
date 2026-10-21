@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -7,11 +8,11 @@ import {normalize,fingerprint,luaString,supportsTokens} from '../scripts/text.mj
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
 const data=new URL('Data/',addon);
-const files=fs.readdirSync(data);
+const files=listFixtureFiles(data);
 function shippedRow(category,key){
   const start=`D.${category}[${typeof key==='number'?key:luaString(key)}]=`;
   for(const file of files.filter(file=>file.startsWith(category+'_'))){
-    const source=fs.readFileSync(new URL(file,data),'utf8');
+    const source=readFixtureFile(new URL(file,data),'utf8');
     const position=source.indexOf('\n'+start);
     if(position>=0)return source.slice(position+1,source.indexOf('\n',position+1));
   }
@@ -29,16 +30,16 @@ function runLua(code,rows=''){
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    execute(fs.readFileSync(new URL('Bootstrap.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Bootstrap.lua',addon),'utf8'));
     execute(`playerName="Alice";playerClass="法师";classToken="MAGE";playerRace="人类";raceToken="Human";playerSex=2
       function UnitName() return playerName end
       function UnitClass() return playerClass,classToken end
       function UnitRace() return playerRace,raceToken end
       function UnitSex() return playerSex end`);
     execute('local D=LegionChineseDB\n'+rows.split('\n').map(withQuestSources).join('\n'));
-    execute(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
-    execute(fs.readFileSync(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
-    execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('Core.lua',addon),'utf8'));
+    execute(readFixtureFile(new URL('./ui-fixture.lua',import.meta.url),'utf8'));
+    execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }

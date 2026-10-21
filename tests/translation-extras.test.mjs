@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -69,9 +70,9 @@ function run(code,before=''){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=text=>{const status=lauxlib.luaL_dostring(L,to_luastring(text));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ItemTooltips.lua','ExtraTooltips.lua','ChatLinks.lua'])execute(fs.readFileSync(new URL(file,addon),'utf8'));
-    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','item-tooltip-fixture.lua'])execute(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
-    execute(before);execute(fs.readFileSync(new URL('UI.lua',addon),'utf8'));execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
+    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ItemTooltips.lua','ExtraTooltips.lua','ChatLinks.lua'])execute(readFixtureFile(new URL(file,addon),'utf8'));
+    for(const file of ['ui-fixture.lua','world-tooltip-fixture.lua','item-tooltip-fixture.lua'])execute(readFixtureFile(new URL(file,import.meta.url),'utf8'));
+    execute(before);execute(readFixtureFile(new URL('UI.lua',addon),'utf8'));execute('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
 
@@ -183,7 +184,7 @@ test('7.3.5 aura setters choose the eleventh API result and translate ranks on t
 
 test('reviewed context exceptions remain bound to the precise before-and-after quest context',async()=>{
   const {importReviewedDialogue}=await import('../scripts/quest-dialogue.mjs');
-  const all=JSON.parse(fs.readFileSync(new URL('data/reviewed-quest-dialogue.json',root)));
+  const all=JSON.parse(readFixtureFile(new URL('data/reviewed-quest-dialogue.json',root)));
   all.quests=all.quests.filter(q=>[26177,26488,29412,30027].includes(q.id));
   const base=new Map(all.quests.map(q=>[String(q.id),{ID:q.id,VerifiedBuild:26972,LogTitle:q.identity.title,LogDescription:q.identity.objectives,QuestDescription:q.identity.description}]));
   assert.equal(importReviewedDialogue(all,base).audit.fields,7);
@@ -193,8 +194,8 @@ test('reviewed context exceptions remain bound to the precise before-and-after q
 });
 
 test('shipped quest extras resolve required quantities, class titles and portrait fields through Lua',()=>{
-  const snapshot=JSON.parse(fs.readFileSync(new URL('data/translation-extras.json',root)));
-  const audit=JSON.parse(fs.readFileSync(new URL('docs/translation-extras-audit.json',root)));
+  const snapshot=JSON.parse(readFixtureFile(new URL('data/translation-extras.json',root)));
+  const audit=JSON.parse(readFixtureFile(new URL('docs/translation-extras-audit.json',root)));
   const wanted=new Map();
   for(const field of Object.keys(audit.byField)){
     const r=audit.records.find(r=>r.field===field);wanted.set(r.id+':'+field,r);
@@ -203,12 +204,12 @@ test('shipped quest extras resolve required quantities, class titles and portrai
     wanted.set(r.locale==='zhTW'?'traditional':r.id+':'+r.field,r);
   }
   const ids=new Set([...wanted.values()].map(r=>r.id));
-  const rows=fs.readFileSync(new URL('Data/QuestExtras_01.lua',addon),'utf8').split('\n').filter(line=>ids.has(+line.match(/^D\.QuestExtras\[(\d+)\]=/)?.[1]));
+  const rows=readFixtureFile(new URL('Data/QuestExtras_01.lua',addon),'utf8').split('\n').filter(line=>ids.has(+line.match(/^D\.QuestExtras\[(\d+)\]=/)?.[1]));
   assert.equal(rows.length,ids.size);
   const stringIDs=new Set(rows.flatMap(row=>[...row.matchAll(/\]=([0-9]+)/g)].map(m=>+m[1])));
   const strings=[];
-  for(const file of fs.readdirSync(new URL('Data/',addon)).filter(f=>/^Strings_/.test(f))){
-    for(const line of fs.readFileSync(new URL('Data/'+file,addon),'utf8').split('\n'))
+  for(const file of listFixtureFiles(new URL('Data/',addon)).filter(f=>/^Strings_/.test(f))){
+    for(const line of readFixtureFile(new URL('Data/'+file,addon),'utf8').split('\n'))
       if(stringIDs.has(+line.match(/^D\.Strings\[(\d+)\]=/)?.[1]))strings.push(line);
   }
   assert.equal(strings.length,stringIDs.size);
@@ -233,20 +234,20 @@ test('shipped quest extras resolve required quantities, class titles and portrai
 });
 
 test('generated client dictionaries and quest extras retain exact input checksums and declared counts',()=>{
-  const manifest=JSON.parse(fs.readFileSync(new URL('sources.json',root)));
-  const audit=JSON.parse(fs.readFileSync(new URL('docs/extra-client-data-audit.json',root)));
+  const manifest=JSON.parse(readFixtureFile(new URL('sources.json',root)));
+  const audit=JSON.parse(readFixtureFile(new URL('docs/extra-client-data-audit.json',root)));
   const sources=[...manifest.itemDescriptionTables,...manifest.clientTables,...manifest.extraLinkTables];
   for(const source of audit.sources){
     assert.equal(source.build,'7.3.5.26972');
     assert.deepEqual(source,sources.find(s=>s.table===source.table&&s.locale===source.locale));
   }
   const rows={items:0,titles:0,names:0,Description:0,Aura:0,Rank:0};
-  for(const file of fs.readdirSync(new URL('Data/',addon)).filter(f=>/^(ItemNames|NPCTitles|NPCLabelNames|SpellTexts)_/.test(f))){
-    const text=fs.readFileSync(new URL('Data/'+file,addon),'utf8');
+  for(const file of listFixtureFiles(new URL('Data/',addon)).filter(f=>/^(ItemNames|NPCTitles|NPCLabelNames|SpellTexts)_/.test(f))){
+    const text=readFixtureFile(new URL('Data/'+file,addon),'utf8');
     for(const [pattern,key]of [[/^D\.ItemNames\[/gm,'items'],[/^D\.NPCTitles\[/gm,'titles'],[/^D\.NPCLabelNames\[/gm,'names'],[/Description=\{/g,'Description'],[/Aura=\{/g,'Aura'],[/Rank=\{/g,'Rank']])rows[key]+=[...text.matchAll(pattern)].length;
   }
   assert.equal(rows.items,audit.counts.items.ids);assert.equal(rows.titles,audit.counts.npcs.titles);assert.equal(rows.names,audit.counts.npcs.names);
   for(const field of ['Description','Aura','Rank'])assert.equal(rows[field],audit.counts.spells[field].ids);
-  const bytes=fs.readFileSync(new URL(manifest.translationExtras.file,root));
+  const bytes=readFixtureFile(new URL(manifest.translationExtras.file,root));
   assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),manifest.translationExtras.sha256);
 });

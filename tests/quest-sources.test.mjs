@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -62,7 +63,7 @@ test('live quest translation requires full matching text and preserves changed s
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    for(const file of ['Bootstrap.lua','Core.lua'])run(fs.readFileSync(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
+    for(const file of ['Bootstrap.lua','Core.lua'])run(readFixtureFile(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
     run(`local D=LegionChineseDB
       D.Quests[101]={${Object.entries(chinese).map(([field,text])=>`${field}=${luaString(text)}`).join(',')}}
       D.QuestSources[101]={${Object.entries(row).map(([field,keys])=>`${field}={${keys.map(key=>`[${luaString(key)}]=true`).join(',')}}`).join(',')}}
@@ -86,11 +87,11 @@ test('live quest translation requires full matching text and preserves changed s
 
 test('the shipped Totem of Infliction data cannot replace a modified 12-fang requirement with 10',()=>{
   const folder=new URL('../AddOns/LegionChinese/Data/',import.meta.url);
-  const rows=fs.readdirSync(folder).filter(file=>file.startsWith('Quests_'))
-    .flatMap(file=>fs.readFileSync(new URL(file,folder),'utf8').split('\n'));
+  const rows=listFixtureFiles(folder).filter(file=>file.startsWith('Quests_'))
+    .flatMap(file=>readFixtureFile(new URL(file,folder),'utf8').split('\n'));
   const row=rows.find(line=>line.startsWith('D.Quests[101]='));
   assert.ok(row);
-  const record=JSON.parse(fs.readFileSync(new URL('../data/quest-supplement-735.json',import.meta.url),'utf8'))
+  const record=JSON.parse(readFixtureFile(new URL('../data/quest-supplement-735.json',import.meta.url),'utf8'))
     .quests.find(quest=>quest.id===101).fields.Objectives;
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const run=source=>{
@@ -98,7 +99,7 @@ test('the shipped Totem of Infliction data cannot replace a modified 12-fang req
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    for(const file of ['Bootstrap.lua','Core.lua'])run(fs.readFileSync(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
+    for(const file of ['Bootstrap.lua','Core.lua'])run(readFixtureFile(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8'));
     run(`local D=LegionChineseDB
       ${withQuestSources(row)}
       local A=LegionChinese

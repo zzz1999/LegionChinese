@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -44,11 +45,11 @@ try {
     const content=JSON.parse(read.stdout);
     assert.match(content['LegionChinese/LegionChinese.toc'],/## Version: 1\.2\.15/);
     assert.equal(content['LegionChinese/Changelog.lua'],renderReleaseChangelog(metadata.notes,metadata.version));
-    assert.equal(fs.readFileSync(path.join(addon,'LegionChinese.toc'),'utf8'),oldToc);
-    assert.equal(fs.readFileSync(path.join(addon,'Changelog.lua'),'utf8'),oldNotes);
-    const digest=()=>crypto.createHash('sha256').update(fs.readFileSync(archive)).digest('hex');
+    assert.equal(readFixtureFile(path.join(addon,'LegionChinese.toc'),'utf8'),oldToc);
+    assert.equal(readFixtureFile(path.join(addon,'Changelog.lua'),'utf8'),oldNotes);
+    const digest=()=>crypto.createHash('sha256').update(readFixtureFile(archive)).digest('hex');
     const before=digest();
-    assert.equal(fs.readFileSync(archive+'.sha256','utf8'),`${before}  LegionChinese-1.2.15.zip\n`);
+    assert.equal(readFixtureFile(archive+'.sha256','utf8'),`${before}  LegionChinese-1.2.15.zip\n`);
     fs.writeFileSync(notes,JSON.stringify({...metadata,version:'1.2.16'}));
     assert.notEqual(pack('-ReleaseNotesPath',notes).status,0,'mismatched notes must fail');
     assert.notEqual(pack().status,0,'missing actual-version notes must fail');

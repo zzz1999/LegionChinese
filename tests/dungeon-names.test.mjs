@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -27,15 +28,15 @@ test('dungeon import refuses mismatched locale records, invalid IDs and unsafe n
 
 test('shipped dungeon table and loader contain verified Legion IDs in separate namespaces',()=>{
   const addon=new URL('../AddOns/LegionChinese/',import.meta.url);
-  const data=fs.readFileSync(new URL('Data/DungeonNames.lua',addon),'utf8');
+  const data=readFixtureFile(new URL('Data/DungeonNames.lua',addon),'utf8');
   assert.match(data,/D\.JournalInstances\[721\]="英灵殿"/);
   assert.match(data,/D\.InstanceMaps\[1477\]="英灵殿"/);
   assert.match(data,/D\.JournalInstances\[786\]="暗夜要塞"/);
   assert.match(data,/D\.InstanceMaps\[1530\]="暗夜要塞"/);
-  const toc=fs.readFileSync(new URL('LegionChinese.toc',addon),'utf8');
-  assert(toc.indexOf('Bootstrap.lua')<toc.indexOf('Data\\DungeonNames.lua'));
-  assert(toc.indexOf('Data\\DungeonNames.lua')<toc.indexOf('ChatLinks.lua'));
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/dungeon-name-audit.json',import.meta.url),'utf8'));
+  const toc=readFixtureFile(new URL('LegionChinese.toc',addon),'utf8');
+  assert(toc.indexOf('Bootstrap.lua')<toc.indexOf('Data\\Maps\\DungeonNames.lua'));
+  assert(toc.indexOf('Data\\Maps\\DungeonNames.lua')<toc.indexOf('ChatLinks.lua'));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/dungeon-name-audit.json',import.meta.url),'utf8'));
   assert.equal(audit.build,'7.3.5.26972');
   assert.equal(audit.sources.length,4);
   assert(audit.sources.every(s=>s.build==='7.3.5.26972'&&['zhCN','zhTW'].includes(s.locale)&&/^[a-f0-9]{64}$/.test(s.sha256)));

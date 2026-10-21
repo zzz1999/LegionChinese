@@ -1,0 +1,1704 @@
+{
+  "version": "1.3.1",
+  "schema": 1,
+  "resources": [
+    {
+      "path": "Data/Shared/SharedStrings_01.lua",
+      "family": "SharedStrings",
+      "group": "Shared",
+      "bytes": 900098,
+      "sha256": "c57f1bd1b423e4d4a5948ba67b94412187a95aec2e2327f893db9911fd7b3042"
+    },
+    {
+      "path": "Data/Shared/SharedStrings_02.lua",
+      "family": "SharedStrings",
+      "group": "Shared",
+      "bytes": 900100,
+      "sha256": "244ed4cca4d7287575c3fee21758b652aaea786ad967300911d5f57f4d2d420b"
+    },
+    {
+      "path": "Data/Shared/SharedStrings_03.lua",
+      "family": "SharedStrings",
+      "group": "Shared",
+      "bytes": 211288,
+      "sha256": "6139dc9827c13a05fefce1611d8308c7b2f75b7abacaa87f457e87d4aa0890af"
+    },
+    {
+      "path": "Data/Shared/Strings_01.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 895902,
+      "sha256": "d662f955f879f7db564ed0a4d68108613a4a61c01ea29f3e807b7a34f2421dde"
+    },
+    {
+      "path": "Data/Shared/Strings_02.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899941,
+      "sha256": "4869e7dc6288f494d4cbdaa40a915bb9617db2cf29ca657994101c2dcd4e9eed"
+    },
+    {
+      "path": "Data/Shared/Strings_03.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899887,
+      "sha256": "e1a1381f1947f2fc1cba3d900bb3c286cd28522fa476257d1b7067a9df2618bc"
+    },
+    {
+      "path": "Data/Shared/Strings_04.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899962,
+      "sha256": "a5cde997c485cd6c8320c7645c935fb3e7b2e1c343f98282fa3400e81615701c"
+    },
+    {
+      "path": "Data/Shared/Strings_05.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899986,
+      "sha256": "dc5e23c21966aaa4a1ccdaab914122449bb1216a4e86ec0a836a5055ae2fa6f7"
+    },
+    {
+      "path": "Data/Shared/Strings_06.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 900096,
+      "sha256": "5751045acb5696b383d9bc89dca1168fc8677f67846541b2cc09395e87282ee1"
+    },
+    {
+      "path": "Data/Shared/Strings_07.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899963,
+      "sha256": "e9f2ac32ea9811698474a89df48ab39a673ae3c937b72995942a2bf0a98c78db"
+    },
+    {
+      "path": "Data/Shared/Strings_08.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899771,
+      "sha256": "05e34dcac59970163614821ec42b6703d61b78ef5669ca84387aabfdc249121d"
+    },
+    {
+      "path": "Data/Shared/Strings_09.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899961,
+      "sha256": "8c06fb86b4b7e5ca0aea52334ac27e0fc0d7dce5def6212b8ace9965645592c7"
+    },
+    {
+      "path": "Data/Shared/Strings_10.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 900039,
+      "sha256": "ec57b52cc17f909d966066cc77ccb9cefea52f450da99664e929088f925c1974"
+    },
+    {
+      "path": "Data/Shared/Strings_11.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 899893,
+      "sha256": "fe71859daa9b25704d4b499b3382329c6cca39e66281505b9fda27e9f1367d26"
+    },
+    {
+      "path": "Data/Shared/Strings_12.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 874122,
+      "sha256": "de23614e9844a738cd0e709d8db1dbc74104ca913af0c2d42a5f77df2bda97ff"
+    },
+    {
+      "path": "Data/Shared/Strings_13.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 881056,
+      "sha256": "032a5c97ca916588cb1493871998cc39ae897c37757fc188ef2bdb06be320920"
+    },
+    {
+      "path": "Data/Shared/Strings_14.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 862264,
+      "sha256": "d798e5650f3ec24900e7dec19d01b4ecf707a4784dc52f29b6321f5c7127e36d"
+    },
+    {
+      "path": "Data/Shared/Strings_15.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 877273,
+      "sha256": "8a6c6d25be0c5ec9c86dbb854693dd6e1127384f1e55b414c0117eed2c193e66"
+    },
+    {
+      "path": "Data/Shared/Strings_16.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 878536,
+      "sha256": "ebbe4323280f71e9195c70989878d365c0a916a46377b6142885bcf3a11d7aa3"
+    },
+    {
+      "path": "Data/Shared/Strings_17.lua",
+      "family": "Strings",
+      "group": "Shared",
+      "bytes": 344277,
+      "sha256": "cb0d5211a2fd6387439b6350db96b728cdc79996592c3785ed89f62ec9b94478"
+    },
+    {
+      "path": "Data/Shared/NameStrings_01.lua",
+      "family": "NameStrings",
+      "group": "Shared",
+      "bytes": 895803,
+      "sha256": "1866c4122900e16439a17bd9df68414c2e43e223a3e812a6566bac6438090cdd"
+    },
+    {
+      "path": "Data/Shared/NameStrings_02.lua",
+      "family": "NameStrings",
+      "group": "Shared",
+      "bytes": 896925,
+      "sha256": "753fa3b28bb8581f96971d402f423bdd277f98850c6d51bc15cc7178874c709d"
+    },
+    {
+      "path": "Data/Shared/NameStrings_03.lua",
+      "family": "NameStrings",
+      "group": "Shared",
+      "bytes": 891812,
+      "sha256": "4154dcfd6838592a771f95c514eba43b5dd491b16b7cf4b0dfab229f863bbee2"
+    },
+    {
+      "path": "Data/Shared/NameStrings_04.lua",
+      "family": "NameStrings",
+      "group": "Shared",
+      "bytes": 578245,
+      "sha256": "b0572cc4b926e7124d9f988b9d9727aa8ed3f46c6fc255605906fa2e9e6c29e9"
+    },
+    {
+      "path": "Data/Shared/CatalogStrings_01.lua",
+      "family": "CatalogStrings",
+      "group": "Shared",
+      "bytes": 877795,
+      "sha256": "cdf453961b29be658ad0de04a3dc6d067cd3d623bb6a06b526fe6903f206a631"
+    },
+    {
+      "path": "Data/Shared/CatalogStrings_02.lua",
+      "family": "CatalogStrings",
+      "group": "Shared",
+      "bytes": 811068,
+      "sha256": "f5530eedd39121438311b2776d405a179f765ec7bb4f19ebb9cfe0e942a43bc7"
+    },
+    {
+      "path": "Data/Shared/CatalogStrings_03.lua",
+      "family": "CatalogStrings",
+      "group": "Shared",
+      "bytes": 868641,
+      "sha256": "83bfd7df518dd05c90746c60b56592aeae144f1e0bcb1503bcac3a5258702a68"
+    },
+    {
+      "path": "Data/Shared/CatalogStrings_04.lua",
+      "family": "CatalogStrings",
+      "group": "Shared",
+      "bytes": 706513,
+      "sha256": "fae83c9e1abcdc01d2a52a556d0e54a0dcd12b80119ebbb89b429a51913a2e61"
+    },
+    {
+      "path": "Data/Quests/Quests_01.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 861803,
+      "sha256": "94627f548d4c3d168823620800811fd1c7f56b8d747fa30721b0769c08a9ebaf"
+    },
+    {
+      "path": "Data/Quests/Quests_02.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 806125,
+      "sha256": "a11dd1aeac273b9c29a7e8877a8820687e8c2b8e4a1c043bd24dcd3a447baecf"
+    },
+    {
+      "path": "Data/Quests/Quests_03.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 704120,
+      "sha256": "d84fd184d75f9a99fce48076653c0a2daafe7619aa24e1eb61f5a65c93f3b235"
+    },
+    {
+      "path": "Data/Quests/Quests_04.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 735328,
+      "sha256": "050c0fa606f79305004e61a6ec495d1097368db115cc69455095befe96d0eece"
+    },
+    {
+      "path": "Data/Quests/Quests_05.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 821117,
+      "sha256": "97e719da227ec0d5c4e0afe03aa49416b4a289deafeb48374d3215c36e2812de"
+    },
+    {
+      "path": "Data/Quests/Quests_06.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 835038,
+      "sha256": "e8250909ddbc94db6f13a07ecaf8db072bd544f7e4dc5b5e136c50daf5a62cb3"
+    },
+    {
+      "path": "Data/Quests/Quests_07.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 733593,
+      "sha256": "8df08f25749811ab743bccbef44b64d7c69853695a8dabbce2f9a2bc6eaa431a"
+    },
+    {
+      "path": "Data/Quests/Quests_08.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 808141,
+      "sha256": "32c28c03ab38491a4e3cd71c8aa81d6c21049decd264b3adb52cc7cfae9f9728"
+    },
+    {
+      "path": "Data/Quests/Quests_09.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 842433,
+      "sha256": "4874b5d59c0f2676332ecf22bf07f174f4005fa361cac562a3ee6a965cd3dc1e"
+    },
+    {
+      "path": "Data/Quests/Quests_10.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 793277,
+      "sha256": "19f768692b3e8acf20ed872191229032c79dfa8c5dd9afaa201fb0c6d11d2114"
+    },
+    {
+      "path": "Data/Quests/Quests_11.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 789416,
+      "sha256": "d41c30c68ac1fdb39552af9fe03b39e5fb10bceca008325fe5610c546190c3a2"
+    },
+    {
+      "path": "Data/Quests/Quests_12.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 752466,
+      "sha256": "08b39f3e558e5e46e52b791c28baef55b1d6b69e9214eb24638a299cec25930a"
+    },
+    {
+      "path": "Data/Quests/Quests_13.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 815132,
+      "sha256": "456284e618276e9ae54c0f0fd42657d8e03083ad6d31f9a442abb0cc063498a5"
+    },
+    {
+      "path": "Data/Quests/Quests_14.lua",
+      "family": "Quests",
+      "group": "Quests",
+      "bytes": 447127,
+      "sha256": "70ca0a8a95511f6b90d595759b0fe640bea195d51b88d8e044307386b89dabea"
+    },
+    {
+      "path": "Data/Quests/QuestSources_01.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899518,
+      "sha256": "a1af6a63475a311f350b91032c123f6e9f71aa8f634f5302c1d9ca4a77bd2394"
+    },
+    {
+      "path": "Data/Quests/QuestSources_02.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899733,
+      "sha256": "c3f91cd3ea024a82486bf862da38108af0823311fe763f937ffcfbddf13b6e76"
+    },
+    {
+      "path": "Data/Quests/QuestSources_03.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899754,
+      "sha256": "94df8740c9474bebbd0a57abbff7fe811c9aed1db1f3e16b732283d2307d52b9"
+    },
+    {
+      "path": "Data/Quests/QuestSources_04.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899425,
+      "sha256": "934a6343a72c79dfb1345951aa21af09fa94eea0b2c7d38f99aea4b9228609e1"
+    },
+    {
+      "path": "Data/Quests/QuestSources_05.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899335,
+      "sha256": "c4dbeafd7536fc87b0950bef45700c0ad9170cecd833d216acb9b4f45399bbba"
+    },
+    {
+      "path": "Data/Quests/QuestSources_06.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899993,
+      "sha256": "be0f7e9a4f2d2b85e55a93b671ff3068be09cbfdc2f9339d747c85badac823cc"
+    },
+    {
+      "path": "Data/Quests/QuestSources_07.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899769,
+      "sha256": "5a863e6ef881b93ba8b51500b256b0a256d759b1437f0a030afe53edceae18ed"
+    },
+    {
+      "path": "Data/Quests/QuestSources_08.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899837,
+      "sha256": "da565d820207452b21c4254bf96b621fed70faa1dd43f97acce755dedeea657d"
+    },
+    {
+      "path": "Data/Quests/QuestSources_09.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899641,
+      "sha256": "db9d69f9608ace2b1d4780b343d333815fea7ce21eed6aec3f54ab0ad148f56c"
+    },
+    {
+      "path": "Data/Quests/QuestSources_10.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 900047,
+      "sha256": "37c9fb3607f3a91f2c95462cfb1cf571d8bf94c956d5cf6d41cc1bdf0a34c73a"
+    },
+    {
+      "path": "Data/Quests/QuestSources_11.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899960,
+      "sha256": "439d9f58def4672cebce32fc560d7fe8f1b11d8d591e1cfd75f4d26e580a5ab7"
+    },
+    {
+      "path": "Data/Quests/QuestSources_12.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899696,
+      "sha256": "cd9467dc9b8e4590787e935e498d2e862d7585f0fa9d0ccf7e1b04d288e5dfed"
+    },
+    {
+      "path": "Data/Quests/QuestSources_13.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899614,
+      "sha256": "81cb723cbfb41176083ceb4554c1ffe647b36304334bf4fa22436c644f78d028"
+    },
+    {
+      "path": "Data/Quests/QuestSources_14.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899867,
+      "sha256": "ce695568c84cd8c9adaff6ef5ea4fa1357885944bcc01c160ecb7a41d07cf1a5"
+    },
+    {
+      "path": "Data/Quests/QuestSources_15.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 900094,
+      "sha256": "0a3e58bbc539c743507045e3279eece0ee90f8dd50501d8581ca1180f8da0c61"
+    },
+    {
+      "path": "Data/Quests/QuestSources_16.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899985,
+      "sha256": "852276cd5969fff1dab77da96240ec0755438b9c66f57304f02ff799fa64ddd8"
+    },
+    {
+      "path": "Data/Quests/QuestSources_17.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899927,
+      "sha256": "e48af44f3104d8f63e8c6fcba5ef0965f6395148d6d28bd4a97b8c9bcb8e2161"
+    },
+    {
+      "path": "Data/Quests/QuestSources_18.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 899891,
+      "sha256": "4f613902af0b7571574b7bedd57caea978e01ba171e2ab9dd6355cfbf582f9a4"
+    },
+    {
+      "path": "Data/Quests/QuestSources_19.lua",
+      "family": "QuestSources",
+      "group": "Quests",
+      "bytes": 487329,
+      "sha256": "4071c414acaabf99095d4c367518eeeaadbee60d0ec753a97955ecdc3f7c9718"
+    },
+    {
+      "path": "Data/Quests/Titles_01.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 900101,
+      "sha256": "92522a8be9dadce957556ede7add57e73c9ec26b874cf089c9e87eca7d5a0bdf"
+    },
+    {
+      "path": "Data/Quests/Titles_02.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 900089,
+      "sha256": "f06116e4f863681193d49103ef2d7ce3fe4484be37bec31c4e3c4902cc2575ca"
+    },
+    {
+      "path": "Data/Quests/Titles_03.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 900067,
+      "sha256": "979aec7b184118ad00e6e4e951a3e1a14e35d844cee8cdc9783703fede45bbd9"
+    },
+    {
+      "path": "Data/Quests/Titles_04.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 900080,
+      "sha256": "6b5419a68032b6bad37a9b310df1e0dead724d031136844d8cbe9b93ad4492e8"
+    },
+    {
+      "path": "Data/Quests/Titles_05.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 900071,
+      "sha256": "bceae090d49d95a50c2ff7a0937b73d40b7edc17133afbecc01538bac8f361d8"
+    },
+    {
+      "path": "Data/Quests/Titles_06.lua",
+      "family": "Titles",
+      "group": "Quests",
+      "bytes": 394562,
+      "sha256": "577c49a9d6bdc8b0a68e33661298806358c40d07c3176c8374fabc32f9f999a5"
+    },
+    {
+      "path": "Data/Quests/Objectives_01.lua",
+      "family": "Objectives",
+      "group": "Quests",
+      "bytes": 314384,
+      "sha256": "85380a7b3fdf2f38d11b4ae066dd8dcd5fddb107c7bfe9e425ffba465e1aeb7b"
+    },
+    {
+      "path": "Data/Quests/Completions_01.lua",
+      "family": "Completions",
+      "group": "Quests",
+      "bytes": 114737,
+      "sha256": "0b5d5b8057e72460eecfa2265757da70fa6d3c37abc01fe09ab62216f83ad006"
+    },
+    {
+      "path": "Data/Quests/QuestDialogue_01.lua",
+      "family": "QuestDialogue",
+      "group": "Quests",
+      "bytes": 3289,
+      "sha256": "6b1efc9c73e15f1c5f2206c399afe87e2bb5a305622a9dd158bb7b67f56fe5af"
+    },
+    {
+      "path": "Data/Quests/QuestExtras_01.lua",
+      "family": "QuestExtras",
+      "group": "Quests",
+      "bytes": 390074,
+      "sha256": "eab91f441a0c0f995aca3dbbbe010a42ba77d0b8831280f7ebd177d67dd2f103"
+    },
+    {
+      "path": "Data/Quests/CatalogTitles_01.lua",
+      "family": "CatalogTitles",
+      "group": "Quests",
+      "bytes": 95891,
+      "sha256": "c11e1365d9d8fa4de32a8d6069f4195171984d55a60854ca9584a714126d4f1d"
+    },
+    {
+      "path": "Data/Quests/CatalogObjectives_01.lua",
+      "family": "CatalogObjectives",
+      "group": "Quests",
+      "bytes": 900072,
+      "sha256": "484301cac69ffb74fc91c1ea5687145dfc6528292f13a9dd6a6c0a6c32119025"
+    },
+    {
+      "path": "Data/Quests/CatalogObjectives_02.lua",
+      "family": "CatalogObjectives",
+      "group": "Quests",
+      "bytes": 247191,
+      "sha256": "0df9640de0e786a68f5ead5cffd6348eb49f8d4ef71be8b91d65b12a7e9a7487"
+    },
+    {
+      "path": "Data/Quests/QuestBoards.lua",
+      "family": "QuestBoards",
+      "group": "Quests",
+      "bytes": 276,
+      "sha256": "f66469403a0721e474b546818561caee0bece60583508a907cd30f4d697713e7"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_01.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900101,
+      "sha256": "40f0dc2d751287b4e350127431f74a74621a2c919c99950231f402897d7a192a"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_02.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900096,
+      "sha256": "6d41374bb7b4a1a2037a39f5584ff9d150f6ed7521daec653aa19e9f8fd4a220"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_03.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900093,
+      "sha256": "7246eb9c21db54b5f45175c0471dbb82460b2b44005e5be3908124bd3a7e6806"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_04.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900099,
+      "sha256": "3c8ba48da20c42bc3e03a7412457245ec1b50c0a9b00519df28ba2a208c78529"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_05.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900084,
+      "sha256": "5caa6b4809803043c9d5673a69fe4711fb2a9d4c3db3a9485ed130fbe481aac1"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_06.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900102,
+      "sha256": "63e9fa4db87b6bca558c470c8f5f7c2d2d8356ef9b989d8e7de79c6316008ed0"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_07.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900098,
+      "sha256": "47727efd0c1379f6e11d0d5d9c5edfc3697749d5f60c774d86f2cfd1d2dd730a"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_08.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900083,
+      "sha256": "f4db8839b5924bfefa586e13b23debc4beceb511c831b5dc4e82ea3785dde2bc"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_09.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900087,
+      "sha256": "2b26e0e92ba0949158947f2a7475085f58b59124ca18cc70ca59db26bddef037"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_10.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900096,
+      "sha256": "32c64b14b70d329117a5771fe1ea524fcdee9b03f967b32b8e049fcdc9a10c71"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_11.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900072,
+      "sha256": "29747ecc6f88e65c4c54b3130c254ef04f951c5d06b9a00ad46592b0a7e93ccc"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_12.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900084,
+      "sha256": "a36e96ea190c401e2368174de2a25f502f3378a417bf9e4b36e6604641a4a7d0"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_13.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900072,
+      "sha256": "dc9543ea4902f75478e456bcf892512c7ad6b18417b786aad3ddb8876dfcf936"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_14.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900083,
+      "sha256": "8d016aadedceb06dd863450c4d476ed7cf818d1ffc00a53aea8387634d086007"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_15.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900084,
+      "sha256": "653ca8fce071a476d951aafa75c821c9ace63c91aa366841b4ccb07887c1d47c"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_16.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900089,
+      "sha256": "ab771a8b87dce9e40d30cba7bd61c2dac47e3c0799296a67f9bf9e90b88fed82"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_17.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900086,
+      "sha256": "baa4d891a9b6dff9dddc2ecd6be6060b690ccbeb74c983d5d563e1fcb076ae9d"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_18.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900069,
+      "sha256": "5664c853f2ab5de3749db9fcde70f68c8ad887030848e8f58e9820ed44e33dae"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_19.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900068,
+      "sha256": "481d8b16777c8edf15e3a1ad39c1c6dab7310b493e808484fbbaae7d07dada65"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_20.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900092,
+      "sha256": "a37088ad4c3eb9586263a2f2fdb880393f2966e8e787798da2e70f984b6b358f"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_21.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900085,
+      "sha256": "b6d9aabcadc4a04a55a98590b949405403c1ccc937ecd2e357686ce74a483106"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_22.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900073,
+      "sha256": "d668bbee2efe3882289472802a135fe3d463dd304ecc07f14e7f91899bef1b29"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_23.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900092,
+      "sha256": "a20028a57063f11138f862345f77b5aee757ac28eba2dceed29daacbcbfb5ae1"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_24.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900081,
+      "sha256": "a6d7ef9d30b85362b2551d24c164e5e5ec00be70f81edec26289b59c0ecba7f8"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_25.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900076,
+      "sha256": "c508fb32ca5963b8665dc8ae2c4c625e284ae767f895a87dc6dc74cfb7ceeba6"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_26.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900102,
+      "sha256": "ff83561c61318842d3d254c4822bf68909ccc7e4f4bab03826767a20135ad2e4"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_27.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900075,
+      "sha256": "bcb169a1fa99119c0e161f3123838f7ec4a805080bcd13462bf3106b38ad055e"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_28.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900081,
+      "sha256": "8859c8c4a3a2a39ff0609770af7bd38ffa624fe3708c3a41e4c6f8e2d99d2434"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_29.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900071,
+      "sha256": "ebeb4d545576e4d3190cbb7bbf7b8c08bbf2afdf6a17ce9a3ef2b2b37d6300b8"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_30.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900072,
+      "sha256": "453c64b48f8c730567c30fec7555d3aee0989a1959896b7030f6d7bcda3b542a"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_31.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900093,
+      "sha256": "0b9352b198cc8dbec26ed872b121ea78aa62a6228f59a5aae49b4a1f0d508a45"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_32.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900090,
+      "sha256": "1ca4f1b8dd00da842ba3eac9fd9192b393409a7b5116a1ff8cba55d731858e59"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_33.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900083,
+      "sha256": "98dac9330997983733d2464b9ac1e50eb2c61514c803a693529e2d9492d36962"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_34.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900096,
+      "sha256": "7e8ef9a136d9a4cfe25a94f64b073b48a06e96b6f74afc9252d32631ddf4dcfe"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_35.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900068,
+      "sha256": "593261c37c8b04985d7ad36ed21d481bfcaf25cd71049ddcac4e03188906fca5"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_36.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900093,
+      "sha256": "7be278652d60be0505b569b7e4a6ab120e450aec3e250ef8f537a4089b359177"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_37.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900067,
+      "sha256": "b6a311db77922eefa8d8d07f6cf2233f57905a675e88de71dcab71144974a811"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_38.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900098,
+      "sha256": "361a7b6b52e0283b7b8f06bf948078010dc8b851c2a6e826ed44898d5bdd742d"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_39.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900073,
+      "sha256": "5934c052d41d22bf23c488f892b093717da8e1edb89aec165f193423730d184e"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_40.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900081,
+      "sha256": "708f874afe1e7db14ae7f30943d6ecfa3e255a34a4313e7db4b718b0f32a176a"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_41.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900077,
+      "sha256": "5efc47dd85e3e65963aab361899f14b0a76e676a466f2cad182ab55d5f8e7f1d"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_42.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 900094,
+      "sha256": "982339798798eec2116d863f260a2fdf408d46a60bba063bcb794f503076d344"
+    },
+    {
+      "path": "Data/Dialogue/Gossip_43.lua",
+      "family": "Gossip",
+      "group": "Dialogue",
+      "bytes": 474387,
+      "sha256": "d4485fffc5d6d6779deb3096f3ece97ebbe4a570333719895e560ae965b665e1"
+    },
+    {
+      "path": "Data/Dialogue/NPCNames_01.lua",
+      "family": "NPCNames",
+      "group": "Dialogue",
+      "bytes": 900094,
+      "sha256": "6c2836d7edaebdfd205ccfe6603d8f56a19f5ae3927b6260937083a45672ff6a"
+    },
+    {
+      "path": "Data/Dialogue/NPCNames_02.lua",
+      "family": "NPCNames",
+      "group": "Dialogue",
+      "bytes": 900069,
+      "sha256": "5da4e8f261d4c5f64acb431bba95b13f27f0a9f8e0a4ddc68c9e6f98656fbd6d"
+    },
+    {
+      "path": "Data/Dialogue/NPCNames_03.lua",
+      "family": "NPCNames",
+      "group": "Dialogue",
+      "bytes": 846433,
+      "sha256": "dc1e3859c50a850b8f4cad00382e73d2415876cffaad6344313e401070a04f0d"
+    },
+    {
+      "path": "Data/Books/Books_01.lua",
+      "family": "Books",
+      "group": "Books",
+      "bytes": 65663,
+      "sha256": "72aed42de55fd7ed2af3881972fe7be7e72bccf4edb082219f58469685f167f6"
+    },
+    {
+      "path": "Data/Books/BookContexts_01.lua",
+      "family": "BookContexts",
+      "group": "Books",
+      "bytes": 3351,
+      "sha256": "3d25798a8e51951bdc3b6425377edab986e00d2f8d9292ea35e02c8afaab633a"
+    },
+    {
+      "path": "Data/Items/ItemNames_01.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 894660,
+      "sha256": "4ac6724ec1d8e80e90b971d0100241b53fb8e8f3898c2a1616553255af984a42"
+    },
+    {
+      "path": "Data/Items/ItemNames_02.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 893513,
+      "sha256": "c111a9d6da5a349aa055d72e77617fd8ca2ecd0f2b3379d4a41ae381e88fbb93"
+    },
+    {
+      "path": "Data/Items/ItemNames_03.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 890885,
+      "sha256": "40993012343b7937248c541ba5400ae540c050b647ac4fae41f454285e27731b"
+    },
+    {
+      "path": "Data/Items/ItemNames_04.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 872969,
+      "sha256": "ddb2668a3a372665b0695253a57f0d8007f2a54603e592bec92b39d88e6cda8a"
+    },
+    {
+      "path": "Data/Items/ItemNames_05.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 802489,
+      "sha256": "7c4870e0fec07978abc385e5c0649f946264fd1a2d936ee2f4f9dbd8775b8b4f"
+    },
+    {
+      "path": "Data/Items/ItemNames_06.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 869328,
+      "sha256": "f6a5d242b8fbb2ba0f0dbee7ebba7e1abceedef38605dcf8c307938e82743807"
+    },
+    {
+      "path": "Data/Items/ItemNames_07.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 837582,
+      "sha256": "b16f002eaabe8d4585cf6f9aab8c74d701a13fe4da1aea03d2874209494b578d"
+    },
+    {
+      "path": "Data/Items/ItemNames_08.lua",
+      "family": "ItemNames",
+      "group": "Items",
+      "bytes": 467363,
+      "sha256": "95b9771b6dbedfdee8a3658782a176423d80483e05703a5a783495561db022ce"
+    },
+    {
+      "path": "Data/Items/ItemDescriptions_01.lua",
+      "family": "ItemDescriptions",
+      "group": "Items",
+      "bytes": 789921,
+      "sha256": "a59269710a2525505dee472eaaeafeb53f99a178ff8817705cb55d80a44bae17"
+    },
+    {
+      "path": "Data/Items/ItemDescriptions_02.lua",
+      "family": "ItemDescriptions",
+      "group": "Items",
+      "bytes": 729518,
+      "sha256": "f759af3b265cee4b8149595f44cb6f3fad37ec5bf8191e0f5d299f9c3f9f0973"
+    },
+    {
+      "path": "Data/Items/ItemTexts_01.lua",
+      "family": "ItemTexts",
+      "group": "Items",
+      "bytes": 93636,
+      "sha256": "99c3a6c94d1ec75e5fb42f4b731c67558ae2dff2be6f565fadcd032068641d2c"
+    },
+    {
+      "path": "Data/Spells/Spells_01.lua",
+      "family": "Spells",
+      "group": "Spells",
+      "bytes": 900123,
+      "sha256": "165ea9f4af47185775646424de4047df71f064274e427c1d4d50e8678632801e"
+    },
+    {
+      "path": "Data/Spells/Spells_02.lua",
+      "family": "Spells",
+      "group": "Spells",
+      "bytes": 900120,
+      "sha256": "96ba26b1e339043e3bd2abeb471e46b138fe44ef0041de91e26eb38fc7867c39"
+    },
+    {
+      "path": "Data/Spells/Spells_03.lua",
+      "family": "Spells",
+      "group": "Spells",
+      "bytes": 900118,
+      "sha256": "e206c49524a5528dfe4922dc2dceca18abc057f8ccfbe7e3da11d92220ba08e0"
+    },
+    {
+      "path": "Data/Spells/Spells_04.lua",
+      "family": "Spells",
+      "group": "Spells",
+      "bytes": 889284,
+      "sha256": "cda3a6f9a85cda2bd829f571ea879caa654081699ba2b490c5d50b171de3a569"
+    },
+    {
+      "path": "Data/Spells/SpellNames_01.lua",
+      "family": "SpellNames",
+      "group": "Spells",
+      "bytes": 900121,
+      "sha256": "8cb06e216ce01ff0ad6b765b09be21ab8d5ea82479595e4dd772b5b86645970d"
+    },
+    {
+      "path": "Data/Spells/SpellNames_02.lua",
+      "family": "SpellNames",
+      "group": "Spells",
+      "bytes": 900107,
+      "sha256": "1acedad5f7ac6cea67b43c79a98db02667f5832282d33ecff8ffa67a1c99d6da"
+    },
+    {
+      "path": "Data/Spells/SpellNames_03.lua",
+      "family": "SpellNames",
+      "group": "Spells",
+      "bytes": 900112,
+      "sha256": "f18cf78b08cec553cf58196941d8163f7416105dec5561f885690ae2f93f04bc"
+    },
+    {
+      "path": "Data/Spells/SpellNames_04.lua",
+      "family": "SpellNames",
+      "group": "Spells",
+      "bytes": 511674,
+      "sha256": "920642d84a74fccfd5b3bf9c43b8e25bec304e53d9f765b572dc0372f5bb5055"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_01.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 801151,
+      "sha256": "33e8c2cadd2a93ea205cde2230fd50bd59dc8e4a40a762c6f4b19d487c257e0d"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_02.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 783407,
+      "sha256": "aeddf3b277510bcbe050bbd7461e2b39e93dcc7778c20f89e8556a7636e9e9c6"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_03.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 770497,
+      "sha256": "5880a01ea2dc7d089eb76d9e14f3fa46a886ac81af30b3f5a02637807ac5a405"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_04.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 768275,
+      "sha256": "5749a939fdbf8dbf5bac39cced4b1a609a0e062cf9cea6d2edbf5f315074da13"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_05.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 782706,
+      "sha256": "381a34fae86b4544db305102a766aa752e13a434554d77fb04a6c7173e91cd67"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_06.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 607201,
+      "sha256": "54b19278d43ffaf70c17c2356d394e903ba7fa8d7e313b0100a90b24154c3a21"
+    },
+    {
+      "path": "Data/Spells/SpellTexts_07.lua",
+      "family": "SpellTexts",
+      "group": "Spells",
+      "bytes": 174062,
+      "sha256": "681107930a4967b5662cd0c0a0c2cc099d8738096d915ba04a6fcf91ca627a9c"
+    },
+    {
+      "path": "Data/Spells/DynamicSpellTexts_01.lua",
+      "family": "DynamicSpellTexts",
+      "group": "Spells",
+      "bytes": 743614,
+      "sha256": "4730acbade6a7536373bfd4179752bf52b126b40a8464b222c690cd5c66ad921"
+    },
+    {
+      "path": "Data/Spells/DynamicSpellTexts_02.lua",
+      "family": "DynamicSpellTexts",
+      "group": "Spells",
+      "bytes": 744430,
+      "sha256": "e01e92d70c2cb9f426a3a7c3153be297163dd3841de50856d4e53150e47a69eb"
+    },
+    {
+      "path": "Data/Spells/DynamicSpellTexts_03.lua",
+      "family": "DynamicSpellTexts",
+      "group": "Spells",
+      "bytes": 777571,
+      "sha256": "e8c06cfc6473e0cc40f3dedb447e04feefe50d9fe693c21f4d90f49e8871534d"
+    },
+    {
+      "path": "Data/Spells/DynamicSpellTexts_04.lua",
+      "family": "DynamicSpellTexts",
+      "group": "Spells",
+      "bytes": 809039,
+      "sha256": "a423e1a69798128f9694fe2d3ddfde9394edf72165d815efbb816fb19056fe6f"
+    },
+    {
+      "path": "Data/Spells/DynamicSpellTexts_05.lua",
+      "family": "DynamicSpellTexts",
+      "group": "Spells",
+      "bytes": 635963,
+      "sha256": "6fad9b11f064adc9afb58526b8fa36773dd0ce0af13c2f871d911e297a0b4250"
+    },
+    {
+      "path": "Data/Creatures/CreatureFamilies_01.lua",
+      "family": "CreatureFamilies",
+      "group": "Creatures",
+      "bytes": 2316,
+      "sha256": "fcb59cbcadbdd515fe45c8aebca9fdc158e54fdd13eff607dfeb80a4fa42e03b"
+    },
+    {
+      "path": "Data/Creatures/CreatureFamilyNames_01.lua",
+      "family": "CreatureFamilyNames",
+      "group": "Creatures",
+      "bytes": 3895,
+      "sha256": "e7c1554dea587ce919b7827b02381886332ded16060ba5d9eed30fda3039590c"
+    },
+    {
+      "path": "Data/Creatures/Creatures_01.lua",
+      "family": "Creatures",
+      "group": "Creatures",
+      "bytes": 474884,
+      "sha256": "9515f73df437805ef4fd07c57e6a2ca91ab302fe4170c711ef056e7a1b371612"
+    },
+    {
+      "path": "Data/Creatures/NPCTitles_01.lua",
+      "family": "NPCTitles",
+      "group": "Creatures",
+      "bytes": 815234,
+      "sha256": "4f4694abda36f2733f5e42a2acb5feb416283be2f32f84d4615612e27b6c1ff4"
+    },
+    {
+      "path": "Data/Creatures/NPCTitles_02.lua",
+      "family": "NPCTitles",
+      "group": "Creatures",
+      "bytes": 145175,
+      "sha256": "723c56f1ce06ef0078a25bc4dbcbb19b8e5b95cae34be7534a021c2a0045ef69"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_01.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 891795,
+      "sha256": "2f6c381fe0354177949ee3e4ff67c4701ad4be608c1f5440310b30deef149d5a"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_02.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 881253,
+      "sha256": "cdd848c6a28699c4dde4c1f2deab4d5a978bd1c63739f77f31eeb6f1411bac7f"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_03.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 862176,
+      "sha256": "3fe35d6fd878a510d887ef6fdc24f805827e4ee8504118e60c40767eb05254a2"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_04.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 867144,
+      "sha256": "19fceca303ce0a5a6b8b87219b983d865ecaf80e6a4b572a0f85f3aecfe15996"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_05.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 863316,
+      "sha256": "3065966c4ec86ac9e7152648dfa8ea4b66811f014653ceb48ae0806f56b2a224"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_06.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 850442,
+      "sha256": "5366ecd410852b13925c149728a501afaa7cb32f77590e5e6ecd8fc1ae8568b4"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_07.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 848614,
+      "sha256": "6b29f1af9cf639663441d0d1d22e07a9fa613cf62ee9bdde54fdc011c35fb1b9"
+    },
+    {
+      "path": "Data/Creatures/NPCLabelNames_08.lua",
+      "family": "NPCLabelNames",
+      "group": "Creatures",
+      "bytes": 188239,
+      "sha256": "b1c53dca253301ba1364b3bb5e005d82caa8e7d24f01b7d930135749edbc7fe0"
+    },
+    {
+      "path": "Data/Maps/WorldObjects_01.lua",
+      "family": "WorldObjects",
+      "group": "Maps",
+      "bytes": 364660,
+      "sha256": "49b586fbc8c19aa09acd1d24d50391c8de889bdab106a8765bb3406d79ac7d25"
+    },
+    {
+      "path": "Data/Maps/DungeonNames.lua",
+      "family": "DungeonNames",
+      "group": "Maps",
+      "bytes": 10571,
+      "sha256": "e953af27d3edaee2a47b565d11d9ff397093ab7fc92b9432d9dfa1e586a808bc"
+    },
+    {
+      "path": "Data/Maps/WorldTexts_01.lua",
+      "family": "WorldTexts",
+      "group": "Maps",
+      "bytes": 508274,
+      "sha256": "d00b9851084bcab4e8ff4d4977e46072509c86156e669d327cee3544b07d39c1"
+    },
+    {
+      "path": "Data/Maps/GroupFinderTexts_01.lua",
+      "family": "GroupFinderTexts",
+      "group": "Maps",
+      "bytes": 59926,
+      "sha256": "84bd7c456303e31d2ca0d2965796b8776f40d5872442b277d01988d1fe310092"
+    },
+    {
+      "path": "Data/Collections/CollectionTexts_01.lua",
+      "family": "CollectionTexts",
+      "group": "Collections",
+      "bytes": 139541,
+      "sha256": "f4a1c1aa823726b2288284bc0e0f874b1b9b0598ab2bf03cd451212ed040114e"
+    },
+    {
+      "path": "Data/Professions/ProfessionTexts_01.lua",
+      "family": "ProfessionTexts",
+      "group": "Professions",
+      "bytes": 226069,
+      "sha256": "3c5492372c708e03311499e934f16ae3f42b25b276c5731be0055ed9d9ba7b04"
+    },
+    {
+      "path": "Data/Reputation/FactionTexts_01.lua",
+      "family": "FactionTexts",
+      "group": "Reputation",
+      "bytes": 40669,
+      "sha256": "7209a17a412f459c68fe7ea782fced9687b4d9e27e7023522721e4d3d4daf897"
+    },
+    {
+      "path": "Data/Garrison/GarrisonTexts_01.lua",
+      "family": "GarrisonTexts",
+      "group": "Garrison",
+      "bytes": 304656,
+      "sha256": "e30f03b7bba80512c04bdbc0dc44bb8e5c3b5a9bb3f0c7d51ecfacc7776845be"
+    },
+    {
+      "path": "Data/System/ExtraLinkNames_01.lua",
+      "family": "ExtraLinkNames",
+      "group": "System",
+      "bytes": 830151,
+      "sha256": "1923730113c178130920c7a796f721c96c34c5f89d04d86c3705f5c71200e8e5"
+    },
+    {
+      "path": "Data/System/ExtraLinkNames_02.lua",
+      "family": "ExtraLinkNames",
+      "group": "System",
+      "bytes": 47808,
+      "sha256": "310feef1caf5ef8ccdaa42dc0ffea6b0ce30822ea22fab61abf2f8323b727457"
+    },
+    {
+      "path": "Data/System/ClientTexts_01.lua",
+      "family": "ClientTexts",
+      "group": "System",
+      "bytes": 751401,
+      "sha256": "27955e912be0684ecfd8d890a157488005f49b77bf17f8f83bfcc6e3c86f7ac0"
+    },
+    {
+      "path": "Data/System/ClientTexts_02.lua",
+      "family": "ClientTexts",
+      "group": "System",
+      "bytes": 878504,
+      "sha256": "da15ce5c4f747405c852d570db8ec8fb07aa3f6925ccfe6e60069ad33f0504ea"
+    },
+    {
+      "path": "Data/System/ClientTexts_03.lua",
+      "family": "ClientTexts",
+      "group": "System",
+      "bytes": 862957,
+      "sha256": "dbe5768d3c72058198c32fb5f585b932aece3a4fdd96b4430e2e11791187ad4a"
+    },
+    {
+      "path": "Data/System/ClientTexts_04.lua",
+      "family": "ClientTexts",
+      "group": "System",
+      "bytes": 878632,
+      "sha256": "67972c48cd9992fd03f38f37918ee2d00ad84c08e26caf67f1ae32228718bd20"
+    },
+    {
+      "path": "Data/System/ClientTexts_05.lua",
+      "family": "ClientTexts",
+      "group": "System",
+      "bytes": 825659,
+      "sha256": "c4da652de2983042feb3306c1fa9d1518a223124efffcd434f0a93f1d9fe4504"
+    },
+    {
+      "path": "Data/System/SystemTexts_01.lua",
+      "family": "SystemTexts",
+      "group": "System",
+      "bytes": 563456,
+      "sha256": "0d8649ddfa84f770f5a578b29f57b8d1870ff628ecbb2f6e2cc5116c684359fd"
+    },
+    {
+      "path": "Data/Artifacts/Artifacts.lua",
+      "family": "Artifacts",
+      "group": "Artifacts",
+      "bytes": 167498,
+      "sha256": "a9f70445001654fa5a776fc438a750d7228f6ec0ce783003a10440de5226b642"
+    }
+  ],
+  "runtime": [
+    {
+      "path": "Core.lua",
+      "after": [
+        "Bootstrap.lua"
+      ]
+    },
+    {
+      "path": "Hooks.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "Bindings.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "ClientNames.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "WorldObjects.lua",
+      "after": [
+        "Core.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "ItemTooltips.lua",
+      "after": [
+        "Core.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "ExtraTooltips.lua",
+      "after": [
+        "Core.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "ClientDescriptions.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "Modules/Maps.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Collections.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Professions.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Reputation.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Garrison.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/GroupFinder.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Scenario.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "Modules/Achievements.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua"
+      ]
+    },
+    {
+      "path": "QuestBoards.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "Artifacts.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua",
+        "QuestBoards.lua"
+      ]
+    },
+    {
+      "path": "MapTooltips.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "ChatLinks.lua",
+      "after": [
+        "Core.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "DialogueSurfaces.lua",
+      "after": [
+        "Core.lua",
+        "Bindings.lua",
+        "ClientNames.lua"
+      ]
+    },
+    {
+      "path": "Changelog.lua",
+      "after": [
+        "Core.lua"
+      ]
+    },
+    {
+      "path": "Welcome.lua",
+      "after": [
+        "Core.lua",
+        "Changelog.lua"
+      ]
+    },
+    {
+      "path": "UI.lua",
+      "after": [
+        "Core.lua",
+        "Hooks.lua",
+        "Bindings.lua",
+        "ClientNames.lua",
+        "WorldObjects.lua",
+        "ItemTooltips.lua",
+        "ExtraTooltips.lua",
+        "ClientDescriptions.lua",
+        "Modules/Maps.lua",
+        "Modules/Collections.lua",
+        "Modules/Professions.lua",
+        "Modules/Reputation.lua",
+        "Modules/Garrison.lua",
+        "Modules/GroupFinder.lua",
+        "Modules/Scenario.lua",
+        "Modules/Achievements.lua",
+        "QuestBoards.lua",
+        "Artifacts.lua",
+        "MapTooltips.lua",
+        "ChatLinks.lua",
+        "DialogueSurfaces.lua",
+        "Changelog.lua",
+        "Welcome.lua"
+      ]
+    }
+  ],
+  "order": [
+    "Bootstrap.lua",
+    "Data/Shared/SharedStrings_01.lua",
+    "Data/Shared/SharedStrings_02.lua",
+    "Data/Shared/SharedStrings_03.lua",
+    "Data/Shared/Strings_01.lua",
+    "Data/Shared/Strings_02.lua",
+    "Data/Shared/Strings_03.lua",
+    "Data/Shared/Strings_04.lua",
+    "Data/Shared/Strings_05.lua",
+    "Data/Shared/Strings_06.lua",
+    "Data/Shared/Strings_07.lua",
+    "Data/Shared/Strings_08.lua",
+    "Data/Shared/Strings_09.lua",
+    "Data/Shared/Strings_10.lua",
+    "Data/Shared/Strings_11.lua",
+    "Data/Shared/Strings_12.lua",
+    "Data/Shared/Strings_13.lua",
+    "Data/Shared/Strings_14.lua",
+    "Data/Shared/Strings_15.lua",
+    "Data/Shared/Strings_16.lua",
+    "Data/Shared/Strings_17.lua",
+    "Data/Shared/NameStrings_01.lua",
+    "Data/Shared/NameStrings_02.lua",
+    "Data/Shared/NameStrings_03.lua",
+    "Data/Shared/NameStrings_04.lua",
+    "Data/Shared/CatalogStrings_01.lua",
+    "Data/Shared/CatalogStrings_02.lua",
+    "Data/Shared/CatalogStrings_03.lua",
+    "Data/Shared/CatalogStrings_04.lua",
+    "Data/Quests/Quests_01.lua",
+    "Data/Quests/Quests_02.lua",
+    "Data/Quests/Quests_03.lua",
+    "Data/Quests/Quests_04.lua",
+    "Data/Quests/Quests_05.lua",
+    "Data/Quests/Quests_06.lua",
+    "Data/Quests/Quests_07.lua",
+    "Data/Quests/Quests_08.lua",
+    "Data/Quests/Quests_09.lua",
+    "Data/Quests/Quests_10.lua",
+    "Data/Quests/Quests_11.lua",
+    "Data/Quests/Quests_12.lua",
+    "Data/Quests/Quests_13.lua",
+    "Data/Quests/Quests_14.lua",
+    "Data/Quests/QuestSources_01.lua",
+    "Data/Quests/QuestSources_02.lua",
+    "Data/Quests/QuestSources_03.lua",
+    "Data/Quests/QuestSources_04.lua",
+    "Data/Quests/QuestSources_05.lua",
+    "Data/Quests/QuestSources_06.lua",
+    "Data/Quests/QuestSources_07.lua",
+    "Data/Quests/QuestSources_08.lua",
+    "Data/Quests/QuestSources_09.lua",
+    "Data/Quests/QuestSources_10.lua",
+    "Data/Quests/QuestSources_11.lua",
+    "Data/Quests/QuestSources_12.lua",
+    "Data/Quests/QuestSources_13.lua",
+    "Data/Quests/QuestSources_14.lua",
+    "Data/Quests/QuestSources_15.lua",
+    "Data/Quests/QuestSources_16.lua",
+    "Data/Quests/QuestSources_17.lua",
+    "Data/Quests/QuestSources_18.lua",
+    "Data/Quests/QuestSources_19.lua",
+    "Data/Quests/Titles_01.lua",
+    "Data/Quests/Titles_02.lua",
+    "Data/Quests/Titles_03.lua",
+    "Data/Quests/Titles_04.lua",
+    "Data/Quests/Titles_05.lua",
+    "Data/Quests/Titles_06.lua",
+    "Data/Quests/Objectives_01.lua",
+    "Data/Quests/Completions_01.lua",
+    "Data/Quests/QuestDialogue_01.lua",
+    "Data/Quests/QuestExtras_01.lua",
+    "Data/Quests/CatalogTitles_01.lua",
+    "Data/Quests/CatalogObjectives_01.lua",
+    "Data/Quests/CatalogObjectives_02.lua",
+    "Data/Quests/QuestBoards.lua",
+    "Data/Dialogue/Gossip_01.lua",
+    "Data/Dialogue/Gossip_02.lua",
+    "Data/Dialogue/Gossip_03.lua",
+    "Data/Dialogue/Gossip_04.lua",
+    "Data/Dialogue/Gossip_05.lua",
+    "Data/Dialogue/Gossip_06.lua",
+    "Data/Dialogue/Gossip_07.lua",
+    "Data/Dialogue/Gossip_08.lua",
+    "Data/Dialogue/Gossip_09.lua",
+    "Data/Dialogue/Gossip_10.lua",
+    "Data/Dialogue/Gossip_11.lua",
+    "Data/Dialogue/Gossip_12.lua",
+    "Data/Dialogue/Gossip_13.lua",
+    "Data/Dialogue/Gossip_14.lua",
+    "Data/Dialogue/Gossip_15.lua",
+    "Data/Dialogue/Gossip_16.lua",
+    "Data/Dialogue/Gossip_17.lua",
+    "Data/Dialogue/Gossip_18.lua",
+    "Data/Dialogue/Gossip_19.lua",
+    "Data/Dialogue/Gossip_20.lua",
+    "Data/Dialogue/Gossip_21.lua",
+    "Data/Dialogue/Gossip_22.lua",
+    "Data/Dialogue/Gossip_23.lua",
+    "Data/Dialogue/Gossip_24.lua",
+    "Data/Dialogue/Gossip_25.lua",
+    "Data/Dialogue/Gossip_26.lua",
+    "Data/Dialogue/Gossip_27.lua",
+    "Data/Dialogue/Gossip_28.lua",
+    "Data/Dialogue/Gossip_29.lua",
+    "Data/Dialogue/Gossip_30.lua",
+    "Data/Dialogue/Gossip_31.lua",
+    "Data/Dialogue/Gossip_32.lua",
+    "Data/Dialogue/Gossip_33.lua",
+    "Data/Dialogue/Gossip_34.lua",
+    "Data/Dialogue/Gossip_35.lua",
+    "Data/Dialogue/Gossip_36.lua",
+    "Data/Dialogue/Gossip_37.lua",
+    "Data/Dialogue/Gossip_38.lua",
+    "Data/Dialogue/Gossip_39.lua",
+    "Data/Dialogue/Gossip_40.lua",
+    "Data/Dialogue/Gossip_41.lua",
+    "Data/Dialogue/Gossip_42.lua",
+    "Data/Dialogue/Gossip_43.lua",
+    "Data/Dialogue/NPCNames_01.lua",
+    "Data/Dialogue/NPCNames_02.lua",
+    "Data/Dialogue/NPCNames_03.lua",
+    "Data/Books/Books_01.lua",
+    "Data/Books/BookContexts_01.lua",
+    "Data/Items/ItemNames_01.lua",
+    "Data/Items/ItemNames_02.lua",
+    "Data/Items/ItemNames_03.lua",
+    "Data/Items/ItemNames_04.lua",
+    "Data/Items/ItemNames_05.lua",
+    "Data/Items/ItemNames_06.lua",
+    "Data/Items/ItemNames_07.lua",
+    "Data/Items/ItemNames_08.lua",
+    "Data/Items/ItemDescriptions_01.lua",
+    "Data/Items/ItemDescriptions_02.lua",
+    "Data/Items/ItemTexts_01.lua",
+    "Data/Spells/Spells_01.lua",
+    "Data/Spells/Spells_02.lua",
+    "Data/Spells/Spells_03.lua",
+    "Data/Spells/Spells_04.lua",
+    "Data/Spells/SpellNames_01.lua",
+    "Data/Spells/SpellNames_02.lua",
+    "Data/Spells/SpellNames_03.lua",
+    "Data/Spells/SpellNames_04.lua",
+    "Data/Spells/SpellTexts_01.lua",
+    "Data/Spells/SpellTexts_02.lua",
+    "Data/Spells/SpellTexts_03.lua",
+    "Data/Spells/SpellTexts_04.lua",
+    "Data/Spells/SpellTexts_05.lua",
+    "Data/Spells/SpellTexts_06.lua",
+    "Data/Spells/SpellTexts_07.lua",
+    "Data/Spells/DynamicSpellTexts_01.lua",
+    "Data/Spells/DynamicSpellTexts_02.lua",
+    "Data/Spells/DynamicSpellTexts_03.lua",
+    "Data/Spells/DynamicSpellTexts_04.lua",
+    "Data/Spells/DynamicSpellTexts_05.lua",
+    "Data/Creatures/CreatureFamilies_01.lua",
+    "Data/Creatures/CreatureFamilyNames_01.lua",
+    "Data/Creatures/Creatures_01.lua",
+    "Data/Creatures/NPCTitles_01.lua",
+    "Data/Creatures/NPCTitles_02.lua",
+    "Data/Creatures/NPCLabelNames_01.lua",
+    "Data/Creatures/NPCLabelNames_02.lua",
+    "Data/Creatures/NPCLabelNames_03.lua",
+    "Data/Creatures/NPCLabelNames_04.lua",
+    "Data/Creatures/NPCLabelNames_05.lua",
+    "Data/Creatures/NPCLabelNames_06.lua",
+    "Data/Creatures/NPCLabelNames_07.lua",
+    "Data/Creatures/NPCLabelNames_08.lua",
+    "Data/Maps/WorldObjects_01.lua",
+    "Data/Maps/DungeonNames.lua",
+    "Data/Maps/WorldTexts_01.lua",
+    "Data/Maps/GroupFinderTexts_01.lua",
+    "Data/Collections/CollectionTexts_01.lua",
+    "Data/Professions/ProfessionTexts_01.lua",
+    "Data/Reputation/FactionTexts_01.lua",
+    "Data/Garrison/GarrisonTexts_01.lua",
+    "Data/System/ExtraLinkNames_01.lua",
+    "Data/System/ExtraLinkNames_02.lua",
+    "Data/System/ClientTexts_01.lua",
+    "Data/System/ClientTexts_02.lua",
+    "Data/System/ClientTexts_03.lua",
+    "Data/System/ClientTexts_04.lua",
+    "Data/System/ClientTexts_05.lua",
+    "Data/System/SystemTexts_01.lua",
+    "Data/Artifacts/Artifacts.lua",
+    "Core.lua",
+    "Hooks.lua",
+    "Bindings.lua",
+    "ClientNames.lua",
+    "WorldObjects.lua",
+    "ItemTooltips.lua",
+    "ExtraTooltips.lua",
+    "ClientDescriptions.lua",
+    "Modules/Maps.lua",
+    "Modules/Collections.lua",
+    "Modules/Professions.lua",
+    "Modules/Reputation.lua",
+    "Modules/Garrison.lua",
+    "Modules/GroupFinder.lua",
+    "Modules/Scenario.lua",
+    "Modules/Achievements.lua",
+    "QuestBoards.lua",
+    "Artifacts.lua",
+    "MapTooltips.lua",
+    "ChatLinks.lua",
+    "DialogueSurfaces.lua",
+    "Changelog.lua",
+    "Welcome.lua",
+    "UI.lua"
+  ],
+  "pooling": {
+    "strings": 22185,
+    "references": 131372,
+    "beforeBytes": 139759260,
+    "afterBytes": 137030542,
+    "savedBytes": 2728718,
+    "generated": [
+      "Data\\Shared\\SharedStrings_01.lua",
+      "Data\\Shared\\SharedStrings_02.lua",
+      "Data\\Shared\\SharedStrings_03.lua"
+    ]
+  }
+}

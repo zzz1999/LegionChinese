@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -14,16 +15,16 @@ function run(code,before=''){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const exec=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
   try{
-    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ItemTooltips.lua','LocalClient.lua'])exec(fs.readFileSync(new URL(file,addon),'utf8'));
-    exec(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
+    for(const file of ['Bootstrap.lua','Core.lua','ClientNames.lua','ItemTooltips.lua'])exec(readFixtureFile(new URL(file,addon),'utf8'));
+    exec(readFixtureFile(new URL('ui-fixture.lua',import.meta.url),'utf8'));
     exec('function UnitName() return "Alice" end');
     exec(`function LocalRow(scope,source,text)
-      local D=LegionChineseDB;local id=#D.LocalClientValues+1;D.LocalClientValues[id]=text
-      D.LocalClientTexts[scope]=D.LocalClientTexts[scope] or {}
-      D.LocalClientTexts[scope][LegionChinese.Fingerprint(LegionChinese.Normalize(source))]=id
+      local D=LegionChineseDB;local id=#D.CatalogStrings+1;D.CatalogStrings[id]=text
+      D.CatalogTexts[scope]=D.CatalogTexts[scope] or {}
+      D.CatalogTexts[scope][LegionChinese.Fingerprint(LegionChinese.Normalize(source))]=id
     end`);
     exec(before);
-    exec(fs.readFileSync(new URL('UI.lua',addon),'utf8'));
+    exec(readFixtureFile(new URL('UI.lua',addon),'utf8'));
     exec('local A,D=LegionChinese,LegionChineseDB\n'+code);
   }finally{lua.lua_close(L);}
 }
@@ -114,7 +115,7 @@ test('shared item metadata preserves color and counts, caches writes, and checks
   GameTooltip:Fire("OnTooltipCleared");GameTooltip.itemLink=nil;GameTooltip.item=nil
   GameTooltipTextLeft6:SetText("Set bonus");GameTooltip:Fire("OnUpdate",0.1)
   assert(GameTooltipTextLeft6:GetText()=="Set bonus")
-`, ['world-tooltip-fixture.lua','item-tooltip-fixture.lua'].map(file=>fs.readFileSync(new URL(file,import.meta.url),'utf8')).join('\n')+
+`, ['world-tooltip-fixture.lua','item-tooltip-fixture.lua'].map(file=>readFixtureFile(new URL(file,import.meta.url),'utf8')).join('\n')+
   '\nLocalRow("Item","Set bonus","套装奖励")\n'));
 
 test('map location tooltip checks a genuine native POI and leaves timer and reward lines intact',()=>run(`
@@ -172,13 +173,13 @@ test('client snapshot rejects modified provenance, deduplicates existing keys, a
     {table:'Scenario',id:2,field:'Name_lang',scope:'Title',source:'Traditional scene',text:'繁體場景',locale:'zhTW'},
   ]};
   const file=path.join(root,'snapshot.json');fs.writeFileSync(file,JSON.stringify(snapshot));
-  const manifest={localClientSnapshot:{file:'snapshot.json',sha256:hash(fs.readFileSync(file)),buildKey:snapshot.buildKey,rootCKey:snapshot.rootCKey}};
+  const manifest={localClientSnapshot:{file:'snapshot.json',sha256:hash(readFixtureFile(file)),buildKey:snapshot.buildKey,rootCKey:snapshot.rootCKey}};
   const base=new ChineseTextIndex();base.add('zhCN','Known scene','原有场景');base.finish();
   try{
     const built=buildLocalClientData({root,manifest,version:'1.3.0',baseIndexes:{Title:base}});
     assert.equal(built.audit.counts.Title.alreadyPresent,1);
     assert.deepEqual(built.audit.counts.Title.locales,{zhCN:0,zhTW:1});
-    assert.ok(fs.readFileSync(path.join(root,'AddOns/LegionChinese',built.generated[0].replaceAll('\\','/')),'utf8').includes('繁體場景'));
+    assert.ok(readFixtureFile(path.join(root,'AddOns/LegionChinese',built.generated[0].replaceAll('\\','/')),'utf8').includes('繁體場景'));
     fs.appendFileSync(file,' ');
     assert.throws(()=>buildLocalClientData({root,manifest,version:'1.3.0'}),/checksum/);
   }finally{

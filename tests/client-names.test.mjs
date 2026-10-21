@@ -1,3 +1,4 @@
+import {readFixtureFile,listFixtureFiles} from './addon-fixture.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -5,8 +6,8 @@ import {lua,lauxlib,lualib,to_luastring,to_jsstring} from 'fengari';
 import {csvRows,parseNameTable,selectNames,nameKey,CLIENT_BUILD} from '../scripts/client-names.mjs';
 
 const addon=new URL('../AddOns/LegionChinese/',import.meta.url),data=new URL('Data/',addon);
-const generated=fs.readdirSync(data).filter(f=>/^(NameStrings|Spells|SpellNames|Creatures|CreatureFamilies|CreatureFamilyNames)_/.test(f));
-const rows=generated.flatMap(f=>fs.readFileSync(new URL(f,data),'utf8').split('\n')).filter(l=>l.startsWith('D.'));
+const generated=listFixtureFiles(data).filter(f=>/^(NameStrings|Spells|SpellNames|Creatures|CreatureFamilies|CreatureFamilyNames)_/.test(f));
+const rows=generated.flatMap(f=>readFixtureFile(new URL(f,data),'utf8').split('\n')).filter(l=>l.startsWith('D.'));
 const byPrefix=new Map(rows.map(row=>[row.slice(0,row.indexOf('=')),row]));
 function shipped(category,keys){
   const selected=[];
@@ -25,7 +26,7 @@ const petRows=()=>shipped('Creatures',[416,417,1860,1863,17252])+'\n'+
 function run(code,{pets=false,imported='',before=''}={}){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const s=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(s,lua.LUA_OK,s===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
-  const read=url=>fs.readFileSync(url,'utf8');
+  const read=url=>readFixtureFile(url,'utf8');
   try{
     execute(read(new URL('Bootstrap.lua',addon)));execute('local D=LegionChineseDB\n'+imported);
     execute(read(new URL('Core.lua',addon)));execute(read(new URL('ClientNames.lua',addon)));
@@ -62,8 +63,8 @@ test('all shipped client-name references resolve and source versions and counts 
     if(row.startsWith('D.NameStrings['))continue;
     assert.ok(byPrefix.has(`D.NameStrings[${row.match(/=\{?(\d+)/)[1]}]`),row);
   }
-  const audit=JSON.parse(fs.readFileSync(new URL('../docs/client-name-audit.json',import.meta.url)));
-  const manifest=JSON.parse(fs.readFileSync(new URL('../sources.json',import.meta.url)));
+  const audit=JSON.parse(readFixtureFile(new URL('../docs/client-name-audit.json',import.meta.url)));
+  const manifest=JSON.parse(readFixtureFile(new URL('../sources.json',import.meta.url)));
   assert.equal(audit.build,CLIENT_BUILD);assert.equal(audit.sources.length,9);
   assert.ok(audit.sources.every(r=>r.build===CLIENT_BUILD&&r.sha256===manifest.clientTables.find(s=>s.file===r.file)?.sha256));
   assert.equal(rows.filter(r=>r.startsWith('D.Spells[')).length,audit.counts.Spell.ids);
