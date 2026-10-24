@@ -21,7 +21,7 @@ D.NPCLabelNames[61]={["8ecd2a9022aa5d29:18"]="索罗斯·莱特芬格"}
 D.NPCLabelNames[62]={["5c1ed12af491b48d:12"]="大蜡烛伽格"}
 D.NPCLabelNames[65]={["ec4d2e530e6e7fa2:12"]="农妇"}
 D.NPCLabelNames[66]={["2f13eb261e5bc479:13"]="萨瑞恩·博丁"}
-D.NPCLabelNames[68]={["e9c8a15845527da9:18"]=S[14190]}
+D.NPCLabelNames[68]={["e9c8a15845527da9:18"]=S[14191]}
 D.NPCLabelNames[69]={["a48c87029cdb9871:18"]="染病的森林狼"}
 D.NPCLabelNames[73]={["101bb43c1dc555c9:20"]="药剂师维莱纳"}
 D.NPCLabelNames[74]={["1afdd31a72ff8311:12"]="库兰·斯蒂利"}
@@ -123,8 +123,8 @@ D.NPCLabelNames[255]={["f54c5a86baedaae1:12"]="葛拉德·提勒"}
 D.NPCLabelNames[257]={["8ac2563a85a04547:12"]="狗头人劳工"}
 D.NPCLabelNames[258]={["82a968b87c1c73c5:13"]="乔舒·马科伦"}
 D.NPCLabelNames[261]={["ecf17a249e2da389:11"]="卫兵托马斯"}
-D.NPCLabelNames[263]={["5b37d9340e0e415f:17"]=S[18213]}
-D.NPCLabelNames[264]={["e99b3e9c8563908b:24"]=S[12281]}
+D.NPCLabelNames[263]={["5b37d9340e0e415f:17"]=S[18214]}
+D.NPCLabelNames[264]={["e99b3e9c8563908b:24"]=S[12282]}
 D.NPCLabelNames[265]={["0bfc002634474d27:9"]="伊瓦夫人"}
 D.NPCLabelNames[266]={["96539fcdf0ec03fc:13"]="黑衣威利"}
 D.NPCLabelNames[267]={["7a163d8629036861:11"]="书记员达尔塔"}
@@ -171,7 +171,7 @@ D.NPCLabelNames[328]={["d7f33f74dca0b073:16"]="扎尔迪玛·维夫希尔特"}
 D.NPCLabelNames[329]={["63a89c301308063d:14"]="土元素"}
 D.NPCLabelNames[330]={["1cdbb24c2ef2a2c9:8"]="公主"}
 D.NPCLabelNames[331]={["15b6718c3415bcf3:12"]="玛吉诺·仲马"}
-D.NPCLabelNames[332]={["7e17b72bbd38d45c:17"]=S[21621]}
+D.NPCLabelNames[332]={["7e17b72bbd38d45c:17"]=S[21622]}
 D.NPCLabelNames[334]={["95cd705c23fa3171:11"]="加塞尔佐格"}
 D.NPCLabelNames[335]={["105b777bcf0c0ef6:5"]="森格"}
 D.NPCLabelNames[338]={["4d8361a60e2ad8f3:14"]="马森·马克纳迪尔"}
@@ -186,7 +186,7 @@ D.NPCLabelNames[347]={["f01d73886ee618f5:15"]="格里兹尔"}
 D.NPCLabelNames[348]={["1c6882d5f1cab386:10"]="泽姆·里瓦尔德"}
 D.NPCLabelNames[349]={["bfd17ce61a6c65d5:15"]="基沙恩下士"}
 D.NPCLabelNames[351]={["a3ef3d11459c76e0:7"]="农夫"}
-D.NPCLabelNames[352]={["3722aeae0e02bc41:15"]=S[14715]}
+D.NPCLabelNames[352]={["3722aeae0e02bc41:15"]=S[14716]}
 D.NPCLabelNames[353]={["788ae33aa79963dd:11"]="安东尼奥斯·达特"}
 D.NPCLabelNames[356]={["4f18bcda904b4551:9"]="黑狼"}
 D.NPCLabelNames[358]={["d53ff9e0325b77a9:10"]="森林狼"}
@@ -237,7 +237,7 @@ D.NPCLabelNames[434]={["4664566353953138:20"]="疯狂的暗皮豺狼人"}
 D.NPCLabelNames[435]={["36b14c008a6d202d:17"]="黑石勇士"}
 D.NPCLabelNames[436]={["aa128b1995f12df0:21"]="黑石暗影法师"}
 D.NPCLabelNames[437]={["455b482cf01ae189:17"]="黑石叛节者"}
-D.NPCLabelNames[440]={["1c6aa7e1f5beed8c:14"]=S[22123]}
+D.NPCLabelNames[440]={["1c6aa7e1f5beed8c:14"]=S[22124]}
 D.NPCLabelNames[441]={["675fb13df796a946:16"]="黑龙雏龙"}
 D.NPCLabelNames[442]={["712cfeb1b5fe1a08:9"]="狼蛛"}
 D.NPCLabelNames[444]={["c010c77b1c98ca02:10"]="小猪大人"}
@@ -257,7 +257,7 @@ D.NPCLabelNames[461]={["453d7268ec9d230b:15"]="德米赛特·克劳斯"}
 D.NPCLabelNames[462]={["97e71604cf730f6f:7"]="乌尔图斯"}
 D.NPCLabelNames[464]={["03a69ac108f423cc:18"]="卫兵队长帕克"}
 D.NPCLabelNames[465]={["5e003980ef2429eb:14"]="酒吧老板杜宾斯"}
-D.NPCLabelNames[466]={["6fd0f9e1599b3e64:21"]=S[21612]}
+D.NPCLabelNames[466]={["6fd0f9e1599b3e64:21"]=S[21613]}
 D.NPCLabelNames[467]={["4ec532770f092d6a:16"]="迪菲亚叛徒"}
 D.NPCLabelNames[468]={["fb3488c2a1e7f8f5:9"]="城镇公告员"}
 D.NPCLabelNames[469]={["3a5c11f6ad34a8f9:15"]="多伦上尉"}
@@ -290,7 +290,7 @@ D.NPCLabelNames[504]={["c088500f2686335a:13"]="迪菲亚捕兽者"}
 D.NPCLabelNames[505]={["e7f4da3bbb9e750e:16"]="巨型狼蛛"}
 D.NPCLabelNames[506]={["d7a71875f20ea2fc:17"]="利爪队长"}
 D.NPCLabelNames[507]={["fd2f2532d86fefc7:6"]="芬罗斯"}
-D.NPCLabelNames[510]={["480e70bf24b13210:14"]=S[15495]}
+D.NPCLabelNames[510]={["480e70bf24b13210:14"]=S[15496]}
 D.NPCLabelNames[511]={["3a74d5e21e2a2b3b:11"]="疯狂的食尸鬼"}
 D.NPCLabelNames[513]={["52222dc9a946583a:12"]="撒网鱼人"}
 D.NPCLabelNames[514]={["6181196c2372f2b1:10"]="铁匠阿古斯"}
@@ -364,7 +364,7 @@ D.NPCLabelNames[633]={["875f6c9bef3da6c4:13"]="艾莱尼·卡尔文"}
 D.NPCLabelNames[634]={["71ac93fc43c596e9:14"]="迪菲亚监工"}
 D.NPCLabelNames[636]={["878e50415ed87d7c:16"]="迪菲亚恶棍"}
 D.NPCLabelNames[638]={["790d9ac66634759f:15"]="地精雇佣兵"}
-D.NPCLabelNames[639]={["a96ded00e20db657:13"]=S[18216]}
+D.NPCLabelNames[639]={["a96ded00e20db657:13"]=S[18217]}
 D.NPCLabelNames[641]={["d2af987c2f614e93:16"]="地精木匠"}
 D.NPCLabelNames[642]={["8a94261f93836b2a:15"]="斯尼德的伐木机"}
 D.NPCLabelNames[643]={["105e0ed4b33d96a9:5"]="斯尼德"}
@@ -400,7 +400,7 @@ D.NPCLabelNames[679]={["167eacf8b9e8838d:14"]="莫什奥格萨满祭司"}
 D.NPCLabelNames[680]={["7d11531149acc6b4:12"]="莫什奥格领主"}
 D.NPCLabelNames[681]={["d4d3585d4839f3a2:23"]="荆棘谷猛虎幼崽"}
 D.NPCLabelNames[682]={["bc7af16b759e93ea:18"]="荆棘谷猛虎"}
-D.NPCLabelNames[683]={["db6cec499dfa6646:12"]=S[16611]}
+D.NPCLabelNames[683]={["db6cec499dfa6646:12"]=S[16612]}
 D.NPCLabelNames[684]={["80cad9e2f77a3d3b:16"]="深喉猎豹"}
 D.NPCLabelNames[685]={["46a338c8e451eb0b:19"]="荆棘谷迅猛龙"}
 D.NPCLabelNames[686]={["b306c5cf24649010:14"]="鞭尾迅猛龙"}
@@ -430,7 +430,7 @@ D.NPCLabelNames[711]={["40645c66501c7b23:11"]="阿尔多·泥爪"}
 D.NPCLabelNames[712]={["3bf3d8ec73b0c55f:16"]="赤脊山鞭笞者"}
 D.NPCLabelNames[713]={["0fe8cd974eeb8db4:16"]="巴尔林·霜锤"}
 D.NPCLabelNames[714]={["2e64f483880014ca:12"]="塔林·锐眼"}
-D.NPCLabelNames[715]={["4938b329be60add0:18"]=S[19641]}
+D.NPCLabelNames[715]={["4938b329be60add0:18"]=S[19642]}
 D.NPCLabelNames[716]={["c2ebe899b7fe1dce:14"]="巴尼尔·石罐"}
 D.NPCLabelNames[717]={["b1166408f1c88e95:11"]="艾耶克·罗欧克"}
 D.NPCLabelNames[718]={["a7713b523aeb1f4b:15"]="埃尔加丁爵士"}
@@ -585,7 +585,7 @@ D.NPCLabelNames[890]={["7c96aa91b9f229b2:4"]="小鹿"}
 D.NPCLabelNames[891]={["fa67165c3114d897:22"]="裂拳控火者"}
 D.NPCLabelNames[892]={["31a49d8b4a2a16b8:22"]="裂拳工头"}
 D.NPCLabelNames[893]={["7c99f437d1160cf6:4"]="拉尔斯"}
-D.NPCLabelNames[894]={["2e04492d8c741668:15"]=S[21430]}
+D.NPCLabelNames[894]={["2e04492d8c741668:15"]=S[21431]}
 D.NPCLabelNames[895]={["b028515cdf6b1321:14"]="索加斯·格瑞姆森"}
 D.NPCLabelNames[896]={["1b6febcf8a4be3d0:15"]="维尔丹·莱弗特"}
 D.NPCLabelNames[898]={["ff2f7c87e5558024:15"]="夜行狼人"}
@@ -610,10 +610,10 @@ D.NPCLabelNames[920]={["5044f580fa3e31d3:19"]="夜行堕落狼人"}
 D.NPCLabelNames[921]={["dfae6c6e60285b39:20"]="风险投资公司伐木工"}
 D.NPCLabelNames[922]={["8488d6310b46e596:11"]="淤泥蟹"}
 D.NPCLabelNames[923]={["b5e9f23c77eff9b3:17"]="黑色破坏者幼崽"}
-D.NPCLabelNames[925]={["082a1d6f994bafae:14"]=S[18606]}
+D.NPCLabelNames[925]={["082a1d6f994bafae:14"]=S[18607]}
 D.NPCLabelNames[926]={["9891fb040ffd5fa3:14"]=S[10281]}
 D.NPCLabelNames[927]={["4ea73bed6ef20a98:14"]=S[8714]}
-D.NPCLabelNames[928]={["f518a85bc8d38692:24"]=S[14847]}
+D.NPCLabelNames[928]={["f518a85bc8d38692:24"]=S[14848]}
 D.NPCLabelNames[929]={["b119dc62b9449ed5:17"]="恐惧魔王玛尔加尼斯"}
 D.NPCLabelNames[930]={["87e590ded8fe639b:19"]="小型黑寡妇蜘蛛"}
 D.NPCLabelNames[931]={["316cfb69b988ee3a:18"]="艾蕾娜·斯托姆法瑟"}
@@ -808,7 +808,7 @@ D.NPCLabelNames[1154]={["d924d2c16a81d51a:14"]="马雷克·铁心"}
 D.NPCLabelNames[1155]={["471c1618b58aab0b:12"]="科尔特·托马森"}
 D.NPCLabelNames[1156]={["cb644d1c7c9e2767:14"]="维林·疾风"}
 D.NPCLabelNames[1157]={["b5cacb35bedbc446:12"]="被诅咒的水手"}
-D.NPCLabelNames[1158]={["a7d0b9e7db13a4b4:12"]=S[19059]}
+D.NPCLabelNames[1158]={["a7d0b9e7db13a4b4:12"]=S[19060]}
 D.NPCLabelNames[1159]={["b70db1e29dc78753:16"]="大副斯涅利格"}
 D.NPCLabelNames[1160]={["812bf84667dccca3:15"]="哈林多尔船长"}
 D.NPCLabelNames[1161]={["3b6918a21bbcd33f:18"]="碎石穴居人"}
@@ -874,7 +874,7 @@ D.NPCLabelNames[1228]={["68520df8f38e0153:16"]="玛济斯·石衣"}
 D.NPCLabelNames[1229]={["f821875401080f3d:14"]="格兰尼斯·快斧"}
 D.NPCLabelNames[1230]={["707b3139a437905c:17"]="莱克辛·黑兹"}
 D.NPCLabelNames[1231]={["ef15429108617874:13"]="格瑞夫"}
-D.NPCLabelNames[1232]={["2a4943ea83feae67:16"]=S[21197]}
+D.NPCLabelNames[1232]={["2a4943ea83feae67:16"]=S[21198]}
 D.NPCLabelNames[1233]={["d9496dc7fbccb040:23"]="[UNUSED]珊希斯‧橡木"}
 D.NPCLabelNames[1234]={["7892a3aa2f9c80a9:12"]="霍格拉尔·巴坎"}
 D.NPCLabelNames[1235]={["67eebcee40b99cbf:24"]="玛尔扬·紫足"}
@@ -961,8 +961,8 @@ D.NPCLabelNames[1321]={["4daf43057cdea0b2:14"]="奥琳萨·格瑞菲斯"}
 D.NPCLabelNames[1322]={["fe7f620b9d5cb898:12"]="玛克斯顿·斯坦恩"}
 D.NPCLabelNames[1323]={["2f403b7481d2c911:11"]="奥斯瑞克·斯图恩"}
 D.NPCLabelNames[1324]={["f156e41812d6c867:13"]="亨里克·斯通"}
-D.NPCLabelNames[1325]={["53a3fce1d1fa6c6c:9"]=S[19575]}
-D.NPCLabelNames[1326]={["ceccf1bd35cdec74:10"]=S[13193]}
+D.NPCLabelNames[1325]={["53a3fce1d1fa6c6c:9"]=S[19576]}
+D.NPCLabelNames[1326]={["ceccf1bd35cdec74:10"]=S[13194]}
 D.NPCLabelNames[1327]={["5773e29f9aed6252:13"]="瑞斯·朗斯顿"}
 D.NPCLabelNames[1328]={["8dc0e781f9219ec2:12"]="艾丽·朗斯顿"}
 D.NPCLabelNames[1329]={["fe6725968439c19f:16"]="巡山人纳尔"}
@@ -1040,14 +1040,14 @@ D.NPCLabelNames[1412]={["b052d05cb8b27eb9:8"]="松鼠"}
 D.NPCLabelNames[1413]={["3bd1d91fa30b08d4:11"]="詹尼·安希普"}
 D.NPCLabelNames[1414]={["d0217534ccd76c0b:11"]="利珊·皮尔斯"}
 D.NPCLabelNames[1415]={["b1eb3a698de4b97c:7"]="苏姗妮"}
-D.NPCLabelNames[1416]={["40c6efebdc84b504:13"]=S[14811]}
+D.NPCLabelNames[1416]={["40c6efebdc84b504:13"]=S[14812]}
 D.NPCLabelNames[1417]={["62ffa90253657fa7:22"]="湿地鳄鱼幼崽"}
 D.NPCLabelNames[1418]={["d186150c8ea9a3f3:14"]="蓝腮袭击者"}
 D.NPCLabelNames[1419]={["ad45e8ec2dc74f77:7"]="菲尔"}
 D.NPCLabelNames[1420]={["7c9e908d4c2067be:4"]="蟾蜍"}
 D.NPCLabelNames[1421]={["d9f1ef958a9d9230:12"]="默尔下士"}
 D.NPCLabelNames[1422]={["28acdf97c948c03c:15"]="塞斯曼下士"}
-D.NPCLabelNames[1423]={["07caac1f791d21b4:14"]=S[14190]}
+D.NPCLabelNames[1423]={["07caac1f791d21b4:14"]=S[14191]}
 D.NPCLabelNames[1424]={["bfd6cfe3ec0450d4:12"]="掘地工头目"}
 D.NPCLabelNames[1425]={["7c99bac9ac586e4a:4"]="卡布"}
 D.NPCLabelNames[1426]={["6e93ec50bc2f3ec5:13"]="河爪矿工"}
@@ -1121,7 +1121,7 @@ D.NPCLabelNames[1498]={["a72486ec19efb8ad:14"]="比索·埃斯沙德"}
 D.NPCLabelNames[1499]={["0eb5d22905e5488e:16"]="执政官塞弗伦"}
 D.NPCLabelNames[1500]={["f81210b7cf29aeac:15"]="库勒曼·法席恩"}
 D.NPCLabelNames[1501]={["79b7822aee9f95d1:14"]="无脑的僵尸"}
-D.NPCLabelNames[1502]={["e7446bba3b8d8f97:13"]=S[13621]}
+D.NPCLabelNames[1502]={["e7446bba3b8d8f97:13"]=S[13622]}
 D.NPCLabelNames[1504]={["b48261b6803673f9:19"]="小夜行蜘蛛"}
 D.NPCLabelNames[1505]={["ac5ba3c4ce085c41:14"]="夜行蜘蛛"}
 D.NPCLabelNames[1506]={["d29cfd5471334919:14"]="血色信徒"}
@@ -1143,12 +1143,12 @@ D.NPCLabelNames[1523]={["9ead9acfc6100b5e:19"]="碎颅士兵"}
 D.NPCLabelNames[1525]={["8039e33a31e6f5e9:11"]="腐烂的死者"}
 D.NPCLabelNames[1526]={["6712706b6cc33c48:13"]="破碎的尸体"}
 D.NPCLabelNames[1527]={["be0b535a7d0e0213:13"]="饥饿的死尸"}
-D.NPCLabelNames[1528]={["ef9abe7631b8d5e1:15"]=S[19794]}
+D.NPCLabelNames[1528]={["ef9abe7631b8d5e1:15"]=S[19795]}
 D.NPCLabelNames[1529]={["f77ff29b43168412:14"]="可怕的血僵尸"}
 D.NPCLabelNames[1530]={["f99109ebc3a4c3b8:15"]="腐烂的古尸"}
 D.NPCLabelNames[1531]={["9caec2aa82ccbe37:8"]="失落的灵魂"}
 D.NPCLabelNames[1532]={["ef4782ff312c0c06:15"]="游荡的幽灵"}
-D.NPCLabelNames[1533]={["f4ee3352388fa685:15"]=S[16993]}
+D.NPCLabelNames[1533]={["f4ee3352388fa685:15"]=S[16994]}
 D.NPCLabelNames[1534]={["fbc2b44fe1d35fc8:15"]="哀嚎的先祖"}
 D.NPCLabelNames[1535]={["b5c7c4b94dac1008:14"]="血色战士"}
 D.NPCLabelNames[1536]={["d4fc1ec12f582936:17"]="血色传教士"}
@@ -1237,7 +1237,7 @@ D.NPCLabelNames[1695]={["14333f9eee240d0b:24"]="瑞恩多尔"}
 D.NPCLabelNames[1696]={["d8cf17a7e589c676:15"]="可怕的塔格尔"}
 D.NPCLabelNames[1697]={["8d0c6661a7466c4a:8"]="基格·吉布恩"}
 D.NPCLabelNames[1698]={["f284a728e8687bb1:11"]="弗拉斯特·多克南"}
-D.NPCLabelNames[1699]={["4f3a20404c239253:15"]=S[14846]}
+D.NPCLabelNames[1699]={["4f3a20404c239253:15"]=S[14847]}
 D.NPCLabelNames[1700]={["7401df40ff46b639:12"]="帕克斯顿·冈特尔"}
 D.NPCLabelNames[1701]={["390e0a13bcada6c8:14"]="丹克·利刃"}
 D.NPCLabelNames[1702]={["d4a95621c9215332:15"]="布隆克"}
@@ -1286,7 +1286,7 @@ D.NPCLabelNames[1752]={["04034c5889df23cb:17"]="卡雷德拉·晨风"}
 D.NPCLabelNames[1753]={["011615477d945a18:9"]="蛆眼"}
 D.NPCLabelNames[1754]={["998147db24ad4206:18"]="葛瑞格·莱斯科瓦公爵"}
 D.NPCLabelNames[1755]={["871ea8c403e31cad:20"]="沉默之刃马尔松"}
-D.NPCLabelNames[1756]={["8af08f26511fde4f:19"]=S[14201]}
+D.NPCLabelNames[1756]={["8af08f26511fde4f:19"]=S[14202]}
 D.NPCLabelNames[1757]={["2d92b7f32a15ce2c:10"]="大兔子"}
 D.NPCLabelNames[1763]={["ffcb853c9f41ebff:6"]="基尔尼格"}
 D.NPCLabelNames[1764]={["e107447400ac3055:18"]="大型野性幽魂"}
@@ -1363,11 +1363,11 @@ D.NPCLabelNames[1849]={["a29cf627ffc0e468:12"]="恐怖耳语者"}
 D.NPCLabelNames[1850]={["d598960e0a56b869:9"]="普特迪乌斯"}
 D.NPCLabelNames[1851]={["df1a5981fa920fb6:7"]="哈斯克"}
 D.NPCLabelNames[1852]={["8f2242ba3979c865:15"]="召唤者阿拉基"}
-D.NPCLabelNames[1853]={["23da8eb704c9e2de:18"]=S[22105]}
+D.NPCLabelNames[1853]={["23da8eb704c9e2de:18"]=S[22106]}
 D.NPCLabelNames[1854]={["e216d5bf14ff5d90:20"]="高阶牧师赛尔丹尼斯"}
-D.NPCLabelNames[1855]={["54e7891574737196:14"]=S[12489]}
+D.NPCLabelNames[1855]={["54e7891574737196:14"]=S[12490]}
 D.NPCLabelNames[1859]={["07b30e5602aba5f7:21"]="奈恩·长风"}
-D.NPCLabelNames[1860]={["a9f008ddb254d5aa:10"]=S[18684]}
+D.NPCLabelNames[1860]={["a9f008ddb254d5aa:10"]=S[18685]}
 D.NPCLabelNames[1861]={["f9b355a76fd13c24:17"]="强效虚空行者"}
 D.NPCLabelNames[1862]={["b526bffffbe08b34:18"]="次级虚无行者"}
 D.NPCLabelNames[1863]={["b9d3b8326e78a66d:8"]="魅魔"}
@@ -1459,7 +1459,7 @@ D.NPCLabelNames[1972]={["ca365187de2f2bb8:14"]="白毛狼人格瑞姆森"}
 D.NPCLabelNames[1973]={["40f83ad36e9fff20:17"]="鸦爪守护者"}
 D.NPCLabelNames[1974]={["156c1ab5048374c8:16"]="鸦爪苦工"}
 D.NPCLabelNames[1975]={["0616beda957e642b:18"]="东谷伐木工"}
-D.NPCLabelNames[1976]={["503b867a4a117cb1:22"]=S[14193]}
+D.NPCLabelNames[1976]={["503b867a4a117cb1:22"]=S[14194]}
 D.NPCLabelNames[1977]={["932caffdd53ec992:22"]="参议员梅尔·圣石"}
 D.NPCLabelNames[1978]={["31b8ea573765bb50:18"]="亡灵哨兵埃兰德"}
 D.NPCLabelNames[1981]={["6db62296b00daddf:16"]="黑铁伏击者"}
@@ -1560,7 +1560,7 @@ D.NPCLabelNames[2096]={["67a48ca85b3e59c9:16"]="塔雷尔·石纹"}
 D.NPCLabelNames[2097]={["87bd87fabfda5501:12"]="哈尔罗·巴纳比"}
 D.NPCLabelNames[2098]={["0b88a4c53883ffbe:3"]="山羊"}
 D.NPCLabelNames[2099]={["9e4061793d67cfb0:21"]="处女号的船员"}
-D.NPCLabelNames[2102]={["6c566df5d0e27780:14"]=S[22171]}
+D.NPCLabelNames[2102]={["6c566df5d0e27780:14"]=S[22172]}
 D.NPCLabelNames[2103]={["6d2741b34323550e:14"]="龙喉斥候"}
 D.NPCLabelNames[2104]={["0eee4f5aa3d87d0d:16"]="斯托菲队长"}
 D.NPCLabelNames[2105]={["b4faf7acf2d9c755:17"]="巡山人多克金"}
@@ -1623,7 +1623,7 @@ D.NPCLabelNames[2173]={["cf5ea70593a6cf08:10"]="暗礁狂鱼"}
 D.NPCLabelNames[2174]={["6e3e3daac3b83975:13"]="近海狂鱼"}
 D.NPCLabelNames[2175]={["fb3a81d242b8a6df:10"]="影爪"}
 D.NPCLabelNames[2176]={["8579bae1817b0fc8:15"]="被诅咒的上层精灵"}
-D.NPCLabelNames[2177]={["68193b8708adc9da:17"]=S[16991]}
+D.NPCLabelNames[2177]={["68193b8708adc9da:17"]=S[16992]}
 D.NPCLabelNames[2178]={["3fe947e6ba7af465:16"]="哀嚎的上层精灵鬼魂"}
 D.NPCLabelNames[2179]={["fa60f38b489e63e0:19"]="雷鳞御浪者"}
 D.NPCLabelNames[2180]={["99bb3d63616141c4:15"]="雷鳞海妖"}
@@ -1654,7 +1654,7 @@ D.NPCLabelNames[2211]={["1d29abe427bcca87:19"]="被俘虏的巡山人"}
 D.NPCLabelNames[2212]={["83e63147360ff7c6:14"]="戴瑟雷萨特"}
 D.NPCLabelNames[2213]={["652f6610ce6dfdb3:22"]="戴瑟雷巡影者"}
 D.NPCLabelNames[2214]={["e7d8c6cd26645a46:16"]="亡灵哨兵莱什"}
-D.NPCLabelNames[2215]={["5f571afe9cc4fb97:21"]=S[21842]}
+D.NPCLabelNames[2215]={["5f571afe9cc4fb97:21"]=S[21843]}
 D.NPCLabelNames[2216]={["bc46595b1667e280:15"]="药剂师林度恩"}
 D.NPCLabelNames[2217]={["4b2012a32b2b68d0:18"]="不死族德魯伊訓練師"}
 D.NPCLabelNames[2218]={["63658361e119db58:19"]="不死族獵人訓練師"}
@@ -1666,7 +1666,7 @@ D.NPCLabelNames[2224]={["0409904d3932c652:9"]="驭风者"}
 D.NPCLabelNames[2225]={["b091295bc8916112:11"]="佐拉·古斯雷克"}
 D.NPCLabelNames[2226]={["b397ed8ca94c5507:10"]="卡洛斯·拉佐克"}
 D.NPCLabelNames[2227]={["28f2ebadfb8adc68:10"]="沙琳德拉"}
-D.NPCLabelNames[2228]={["baab0676c55634c3:24"]=S[15791]}
+D.NPCLabelNames[2228]={["baab0676c55634c3:24"]=S[15792]}
 D.NPCLabelNames[2229]={["0fcfc23555e4dd26:5"]="克鲁斯克"}
 D.NPCLabelNames[2230]={["7c9f166079ba1d31:4"]="乌比"}
 D.NPCLabelNames[2231]={["a9e11291cae66974:16"]="小潮行蟹"}
@@ -1699,7 +1699,7 @@ D.NPCLabelNames[2257]={["355f2b8cddc14779:8"]="玛格索尔"}
 D.NPCLabelNames[2258]={["0017d9b26fe84a37:9"]="玛格拉克"}
 D.NPCLabelNames[2260]={["5da5476b6487fa7e:14"]="辛迪加盗贼"}
 D.NPCLabelNames[2261]={["6359423cd3321847:17"]="辛迪加卫士"}
-D.NPCLabelNames[2263]={["bc56729532ad8dd8:14"]=S[15740]}
+D.NPCLabelNames[2263]={["bc56729532ad8dd8:14"]=S[15741]}
 D.NPCLabelNames[2264]={["5ebea4e51a1acff8:15"]="希尔斯布莱德裁缝"}
 D.NPCLabelNames[2265]={["35d9fce7c6dc151a:29"]="希尔斯布莱德见习铁匠"}
 D.NPCLabelNames[2266]={["3e1b5e7786dee248:15"]="希尔斯布莱德农夫"}
@@ -1711,11 +1711,11 @@ D.NPCLabelNames[2271]={["7ad927e4422c154f:18"]="达拉然持盾守卫"}
 D.NPCLabelNames[2272]={["bed4d5d75ab6ba24:16"]="达拉然法师"}
 D.NPCLabelNames[2274]={["add8c485317689b2:7"]="斯坦雷"}
 D.NPCLabelNames[2275]={["653c573b4ca7ab44:14"]="暴怒的斯坦雷"}
-D.NPCLabelNames[2276]={["dc7df8ddbfa609d4:20"]=S[19639]}
+D.NPCLabelNames[2276]={["dc7df8ddbfa609d4:20"]=S[19640]}
 D.NPCLabelNames[2277]={["f69ed6e7c0c606f6:15"]=S[4026]}
 D.NPCLabelNames[2278]={["760ed2133aea8752:8"]="梅里萨拉"}
 D.NPCLabelNames[2279]={["cb39244dd4549076:19"]="联盟卫兵"}
-D.NPCLabelNames[2280]={["0b83142685183ee1:16"]=S[20754]}
+D.NPCLabelNames[2280]={["0b83142685183ee1:16"]=S[20755]}
 D.NPCLabelNames[2281]={["d976f001206220c2:16"]="拜里斯·霜刺"}
 D.NPCLabelNames[2282]={["caf7439bd279a828:17"]="[PH] 歐格朗冰川"}
 D.NPCLabelNames[2283]={["0915b00d753e3b66:15"]="鸦爪摄政者"}
@@ -1767,7 +1767,7 @@ D.NPCLabelNames[2334]={["577994bf9a9fdc38:17"]="事件生成器001"}
 D.NPCLabelNames[2335]={["a9224a52cd1a30dd:18"]="波恩塞德镇长"}
 D.NPCLabelNames[2336]={["9c8945a953177aa4:17"]="暗滩狂热者"}
 D.NPCLabelNames[2337]={["2306f098effa285b:20"]="暗滩唤魔师"}
-D.NPCLabelNames[2338]={["0e2702be67bf6505:16"]=S[13809]}
+D.NPCLabelNames[2338]={["0e2702be67bf6505:16"]=S[13810]}
 D.NPCLabelNames[2339]={["2c924c498c644536:12"]="暮光暴徒"}
 D.NPCLabelNames[2344]={["522165e72a4e7d6e:19"]="丹加洛克巡山人"}
 D.NPCLabelNames[2345]={["a4ddc86e09527aa9:16"]="丹加洛克火枪手"}
@@ -1802,7 +1802,7 @@ D.NPCLabelNames[2375]={["43a34999d5532432:18"]="碎鳍滩行鱼人"}
 D.NPCLabelNames[2376]={["2cb210dbf3ac81f2:13"]="碎鳍智者"}
 D.NPCLabelNames[2377]={["b94f0d41d6d89c4a:17"]="碎鳍潮行鱼人"}
 D.NPCLabelNames[2378]={["89c35db509a44f92:13"]="昆迪瑞克·赞德恩"}
-D.NPCLabelNames[2379]={["95dccb865c68c91d:17"]=S[17100]}
+D.NPCLabelNames[2379]={["95dccb865c68c91d:17"]=S[17101]}
 D.NPCLabelNames[2380]={["d746e8cc9fddc3db:13"]="南达·布拉森"}
 D.NPCLabelNames[2381]={["435f10f781f4df68:10"]="米沙·杨斯"}
 D.NPCLabelNames[2382]={["faccc8ad5e079f56:12"]="达伦·玛尔维"}
@@ -1813,7 +1813,7 @@ D.NPCLabelNames[2386]={["7173d21174a6d96e:13"]="联盟卫兵"}
 D.NPCLabelNames[2387]={["e061dfc32d41649e:19"]="希尔斯布莱德议员"}
 D.NPCLabelNames[2388]={["ce3dd3fb256fb748:13"]="旅店老板沙恩"}
 D.NPCLabelNames[2389]={["2b8ffb7339e6c510:6"]="扎瑞斯"}
-D.NPCLabelNames[2390]={["87e1a1c299b7213f:16"]=S[21147]}
+D.NPCLabelNames[2390]={["87e1a1c299b7213f:16"]=S[21148]}
 D.NPCLabelNames[2391]={["b31e2ed13d692e00:11"]="瑟尔格·希诺特"}
 D.NPCLabelNames[2392]={["ecc16ca10f3e96b4:11"]="德莉亚·维拉纳"}
 D.NPCLabelNames[2393]={["21eb7edbe258e3c4:17"]=S[2671]}
@@ -1848,18 +1848,18 @@ D.NPCLabelNames[2421]={["30d7d4382f54efb9:8"]="玛克拉克"}
 D.NPCLabelNames[2422]={["00717769ff04c668:7"]="戈洛姆斯"}
 D.NPCLabelNames[2423]={["80e1228116ca6c00:19"]="奥里登·匹瑞诺德领主"}
 D.NPCLabelNames[2424]={["dccde9adca7d0adc:11"]=S[2734]}
-D.NPCLabelNames[2425]={["63cf4b07dd8316ba:11"]=S[16824]}
+D.NPCLabelNames[2425]={["63cf4b07dd8316ba:11"]=S[16825]}
 D.NPCLabelNames[2427]={["906f20afb6eab7a8:11"]="狱卒埃斯顿"}
 D.NPCLabelNames[2428]={["a6692cac5d777dc5:13"]="狱卒玛尔根"}
 D.NPCLabelNames[2429]={["f205e998a9ba2dd3:14"]="学徒塞万德"}
 D.NPCLabelNames[2430]={["f8a69ce31c500c0a:10"]="厨师杰森"}
 D.NPCLabelNames[2431]={["784ed3bdacda26ba:13"]="看守员博胡恩"}
-D.NPCLabelNames[2432]={["3b56f9b2e7ee4fed:11"]=S[19847]}
+D.NPCLabelNames[2432]={["3b56f9b2e7ee4fed:11"]=S[19848]}
 D.NPCLabelNames[2433]={["1a1b1e5e8ff15bff:17"]="赫尔库拉的遗骸"}
 D.NPCLabelNames[2434]={["260bf829eff0573e:15"]="暗影刺客"}
 D.NPCLabelNames[2435]={["13940dae784f4227:15"]="南海镇公告员"}
 D.NPCLabelNames[2436]={["e4cb87f416c33d03:10"]="农夫肯特"}
-D.NPCLabelNames[2437]={["084c0c79d9fc6afa:15"]=S[17099]}
+D.NPCLabelNames[2437]={["084c0c79d9fc6afa:15"]=S[17100]}
 D.NPCLabelNames[2438]={["c819d01f3bdb893c:15"]=S[10245]}
 D.NPCLabelNames[2439]={["f61db775b976ae7c:14"]="萨缪尔森少校"}
 D.NPCLabelNames[2440]={["1765f6290e676ef8:14"]="醉酒的劫匪"}
@@ -1948,7 +1948,7 @@ D.NPCLabelNames[2530]={["59a402285b6b1407:7"]="耶尼库"}
 D.NPCLabelNames[2531]={["9e6c31eb798d0920:13"]="杜内的爪牙"}
 D.NPCLabelNames[2532]={["0f4f5315eb626416:5"]="冬娜"}
 D.NPCLabelNames[2533]={["c8dee01422d65a03:7"]="威廉"}
-D.NPCLabelNames[2534]={["e428d281d8d55432:16"]=S[15887]}
+D.NPCLabelNames[2534]={["e428d281d8d55432:16"]=S[15888]}
 D.NPCLabelNames[2535]={["05535a167bdf37f9:22"]="“畸形足”玛雷·维尔金斯"}
 D.NPCLabelNames[2536]={["0707723cdaea5663:14"]="火柴棍乔乔"}
 D.NPCLabelNames[2537]={["f14b4c4a7dfc80c9:17"]="拇指苏克"}
@@ -2028,7 +2028,7 @@ D.NPCLabelNames[2615]={["781b92c531211a8e:23"]="空軍警告機器人 (部落)"}
 D.NPCLabelNames[2616]={["066beed873c82aa5:13"]="海盗格罗伊"}
 D.NPCLabelNames[2618]={["9a07f870ef0862b5:14"]="落锤苦工"}
 D.NPCLabelNames[2619]={["da6b64ce3242eaaf:15"]="落锤步兵"}
-D.NPCLabelNames[2620]={["02dd838b814f8f38:10"]=S[18365]}
+D.NPCLabelNames[2620]={["02dd838b814f8f38:10"]=S[18366]}
 D.NPCLabelNames[2621]={["365acb494a985f72:18"]="落锤卫士"}
 D.NPCLabelNames[2622]={["b94c5c3687c4bb2b:10"]="斯莱·加瑞特"}
 D.NPCLabelNames[2623]={["3e55a154f80a76df:11"]="上古之魂"}
@@ -2110,7 +2110,7 @@ D.NPCLabelNames[2707]={["1bb122b860bb8ae7:6"]="沙德拉"}
 D.NPCLabelNames[2708]={["8da34aae66f47cf5:13"]="大法师马林"}
 D.NPCLabelNames[2709]={["c63302e0e9ec16c9:10"]="小鬼训练师"}
 D.NPCLabelNames[2710]={["11d22b7216f2b4cb:17"]="虛無行者訓練師"}
-D.NPCLabelNames[2711]={["51991d24f779d573:10"]=S[19568]}
+D.NPCLabelNames[2711]={["51991d24f779d573:10"]=S[19569]}
 D.NPCLabelNames[2712]={["7c9d04f1c3805288:4"]="奎艾"}
 D.NPCLabelNames[2713]={["d5d26f922b4f483f:8"]="基恩洛"}
 D.NPCLabelNames[2714]={["303e1b578e0b7a90:15"]="被遗忘者信使"}
@@ -2177,8 +2177,8 @@ D.NPCLabelNames[2780]={["04dca0037b4a7a4c:15"]="管理员奈夫林"}
 D.NPCLabelNames[2781]={["19d98b57bb3bf0c8:15"]="管理员温斯顿"}
 D.NPCLabelNames[2782]={["e6fcd0e368656070:15"]="管理员奥拉瑞克"}
 D.NPCLabelNames[2783]={["4bea45b95e32aa14:9"]="玛雷兹·考尔"}
-D.NPCLabelNames[2784]={["7f8f94c85cd280df:20"]=S[22025]}
-D.NPCLabelNames[2785]={["7d2895d7c9bcae0a:16"]=S[20341]}
+D.NPCLabelNames[2784]={["7f8f94c85cd280df:20"]=S[22026]}
+D.NPCLabelNames[2785]={["7d2895d7c9bcae0a:16"]=S[20342]}
 D.NPCLabelNames[2786]={["c374975b83065292:14"]="葛利·硬骨"}
 D.NPCLabelNames[2787]={["10d5d2d238526381:5"]="萨鲁克"}
 D.NPCLabelNames[2788]={["0962a9cdab93631c:16"]="学徒克里汀"}
@@ -2348,7 +2348,7 @@ D.NPCLabelNames[2989]={["7dddc299416ae20e:14"]="巴尔丹掘地工"}
 D.NPCLabelNames[2990]={["ddf36e0e7bee786b:17"]="巴尔丹鉴定官"}
 D.NPCLabelNames[2991]={["a8cf52c4e817c505:19"]="鹰风酋长的母亲"}
 D.NPCLabelNames[2992]={["78ff2b814f443940:12"]="治疗结界 V"}
-D.NPCLabelNames[2993]={["75f39b807d31a7f7:14"]=S[19546]}
+D.NPCLabelNames[2993]={["75f39b807d31a7f7:14"]=S[19547]}
 D.NPCLabelNames[2994]={["9e575b9da5a8683e:15"]="先祖之魂"}
 D.NPCLabelNames[2995]={["0b88ad4639801ebf:3"]="塔尔"}
 D.NPCLabelNames[2996]={["7c9e92c84c316bf7:4"]="托恩"}
@@ -2396,7 +2396,7 @@ D.NPCLabelNames[3038]={["9fc8166d46eb73ca:15"]="卡瑞·雷角"}
 D.NPCLabelNames[3039]={["2279e80d8adbcff8:15"]="浩特·雷角"}
 D.NPCLabelNames[3040]={["3ab39ccdeecf0884:15"]="乌瑞克·雷角"}
 D.NPCLabelNames[3041]={["0a6f0aef71a4f61e:13"]="托姆·暴怒图腾"}
-D.NPCLabelNames[3042]={["05abc3de8aed4e2d:13"]=S[18567]}
+D.NPCLabelNames[3042]={["05abc3de8aed4e2d:13"]=S[18568]}
 D.NPCLabelNames[3043]={["89b857afd078e25c:12"]="科尔·暴怒图腾"}
 D.NPCLabelNames[3044]={["d49bac027b8893f5:10"]="麦尔斯·威尔什"}
 D.NPCLabelNames[3045]={["7680cd7fdc695ed6:12"]="马拉凯·克罗斯"}
@@ -2405,7 +2405,7 @@ D.NPCLabelNames[3047]={["8e13ec2b4a9936bc:13"]="大法师山姆"}
 D.NPCLabelNames[3048]={["79e036a28554f809:10"]="奥松·格鲁尔"}
 D.NPCLabelNames[3049]={["7abe23d8c5491b11:12"]="瑟斯顿·科萨恩"}
 D.NPCLabelNames[3050]={["f6b64d2fca36c0c0:16"]="维尔伦·陆行者"}
-D.NPCLabelNames[3051]={["665ff1db95a77fc0:21"]=S[18547]}
+D.NPCLabelNames[3051]={["665ff1db95a77fc0:21"]=S[18548]}
 D.NPCLabelNames[3052]={["292f04eabb9dea9f:15"]="斯考恩·白云"}
 D.NPCLabelNames[3053]={["1fc186b551a33d0c:23"]="赛恩格"}
 D.NPCLabelNames[3054]={["d494736d90ec4998:16"]="扎尔曼·双月"}
@@ -2576,7 +2576,7 @@ D.NPCLabelNames[3226]={["4c1129514237570c:16"]="堕落蝎"}
 D.NPCLabelNames[3227]={["15509ca0550dd48b:28"]="堕落的血爪锐齿龙"}
 D.NPCLabelNames[3228]={["97ab1eed6d0236b2:20"]="堕落海浪蟹"}
 D.NPCLabelNames[3229]={["470091d701ea5230:21"]="“尖叫者”刺鬃"}
-D.NPCLabelNames[3230]={["02643838bcae9859:7"]=S[17834]}
+D.NPCLabelNames[3230]={["02643838bcae9859:7"]=S[17835]}
 D.NPCLabelNames[3231]={["1a1a2dcbde831c0c:26"]="堕落的巨齿鳄鱼"}
 D.NPCLabelNames[3232]={["8b606e0f27852298:21"]="刺背干涉者"}
 D.NPCLabelNames[3233]={["05c60c26d0b59005:19"]=S[4025]}
@@ -2641,7 +2641,7 @@ D.NPCLabelNames[3293]={["193385ee0dd3e72f:6"]="雷兹拉克"}
 D.NPCLabelNames[3294]={["1016d25c0213eaad:5"]="奥菲克"}
 D.NPCLabelNames[3295]={["8a60855af84184fd:13"]="淤泥畸体"}
 D.NPCLabelNames[3296]={["40633f05099a0e84:14"]=S[8491]}
-D.NPCLabelNames[3297]={["ff2611e1671842d8:14"]=S[14899]}
+D.NPCLabelNames[3297]={["ff2611e1671842d8:14"]=S[14900]}
 D.NPCLabelNames[3298]={["cc4afa708bf2feef:14"]="加布雷·凯斯"}
 D.NPCLabelNames[3300]={["0f12d5c51adcb1ae:5"]="蝰蛇"}
 D.NPCLabelNames[3301]={["829e1cf6f1cae1b3:14"]="摩根·拉迪莫尔"}
@@ -2757,7 +2757,7 @@ D.NPCLabelNames[3417]={["7a7447b308b85bea:11"]="活火"}
 D.NPCLabelNames[3418]={["3d7379ba39180cf1:14"]="基尔格·锐角"}
 D.NPCLabelNames[3419]={["bd36abc675120ab7:15"]="药剂师扎玛"}
 D.NPCLabelNames[3420]={["4c705ebce1bea6bb:24"]="先祖看守者"}
-D.NPCLabelNames[3421]={["c34a712d26170332:20"]=S[19030]}
+D.NPCLabelNames[3421]={["c34a712d26170332:20"]=S[19031]}
 D.NPCLabelNames[3424]={["33af8fb1b89aa5fa:23"]="雷鹰破云者"}
 D.NPCLabelNames[3425]={["6f5e0a404b984e8f:15"]="草原徘徊者"}
 D.NPCLabelNames[3426]={["c06bbf514bdb0af0:13"]="冲锋斑马"}
@@ -2780,7 +2780,7 @@ D.NPCLabelNames[3442]={["cec5691ae2f32fab:12"]="斯布特瓦夫"}
 D.NPCLabelNames[3443]={["7c977ef5f0d60178:4"]="格拉布"}
 D.NPCLabelNames[3444]={["f8c95d80760af0a3:6"]="掘地鼠"}
 D.NPCLabelNames[3445]={["eb400c14a5410301:19"]="鲁格维兹主管"}
-D.NPCLabelNames[3446]={["56afa9e914e959aa:13"]=S[22018]}
+D.NPCLabelNames[3446]={["56afa9e914e959aa:13"]=S[22019]}
 D.NPCLabelNames[3447]={["ff257f89aceb706c:14"]="帕维·迷雾行者"}
 D.NPCLabelNames[3448]={["69a6f32127dd43da:14"]="图加·符文图腾"}
 D.NPCLabelNames[3449]={["2ca1e780a04b9a03:17"]="达索克·快刀"}
@@ -2802,7 +2802,7 @@ D.NPCLabelNames[3464]={["ff42804f0d3c9dea:6"]="加兹罗格"}
 D.NPCLabelNames[3465]={["724c704335ae4ef6:18"]="基尔萨瑞斯·火枝"}
 D.NPCLabelNames[3466]={["d229f8d83b71d9c9:13"]="漫游斑马"}
 D.NPCLabelNames[3467]={["cb4b8a2831548cff:14"]="巴隆·朗绍尔"}
-D.NPCLabelNames[3468]={["28e4c44e76b683c5:13"]=S[17167]}
+D.NPCLabelNames[3468]={["28e4c44e76b683c5:13"]=S[17168]}
 D.NPCLabelNames[3469]={["e9f797c6d7ef4bb9:12"]=S[11731]}
 D.NPCLabelNames[3470]={["328d7ded38422490:9"]="拉索利安"}
 D.NPCLabelNames[3471]={["3ce921c576803118:16"]="工匠斯尼格斯"}
@@ -2835,7 +2835,7 @@ D.NPCLabelNames[3497]={["0fcaad35aebdfc2e:5"]="基尔克斯"}
 D.NPCLabelNames[3498]={["06421b7853ac3c39:6"]="加吉克"}
 D.NPCLabelNames[3499]={["1044fc3a16eb2a81:5"]="拉尼克"}
 D.NPCLabelNames[3500]={["1d9103bcb4606ea1:6"]="塔霍斯"}
-D.NPCLabelNames[3501]={["9621132a617e9859:10"]=S[20754]}
+D.NPCLabelNames[3501]={["9621132a617e9859:10"]=S[20755]}
 D.NPCLabelNames[3502]={["7492bd2c882fc6e3:14"]="棘齿城卫兵"}
 D.NPCLabelNames[3503]={["63ac9421fa6c6f10:17"]="异种护卫者"}
 D.NPCLabelNames[3504]={["0b8877013321572a:3"]="吉尔"}
@@ -2859,7 +2859,7 @@ D.NPCLabelNames[3522]={["485491e5b2c40202:18"]="康斯坦茨·布里斯博埃斯
 D.NPCLabelNames[3523]={["b373b6a2e5d392c1:14"]="博文·布里斯博埃斯"}
 D.NPCLabelNames[3524]={["28b1cbd8fdab4b83:10"]="幽灵狼"}
 D.NPCLabelNames[3525]={["3d473486b9474d6d:21"]="海龟训练师"}
-D.NPCLabelNames[3527]={["a85111b281acc5e7:18"]=S[15747]}
+D.NPCLabelNames[3527]={["a85111b281acc5e7:18"]=S[15748]}
 D.NPCLabelNames[3528]={["792038b6ddcb2643:15"]="焚木村盔甲师"}
 D.NPCLabelNames[3529]={["7e33add5d95bb0be:15"]="月怒盔甲师"}
 D.NPCLabelNames[3530]={["e13464897d79cc5c:14"]="焚木村裁缝"}
@@ -2875,8 +2875,8 @@ D.NPCLabelNames[3539]={["0b889a7c371cd5ef:3"]="奥特"}
 D.NPCLabelNames[3540]={["41a70f2af6ab1fbf:13"]="哈尔·马克奥里斯特"}
 D.NPCLabelNames[3541]={["605c80feef97f12f:13"]="莎拉·雷克劳夫特"}
 D.NPCLabelNames[3542]={["5ffab20c2dc752f3:12"]="杰森·兰达"}
-D.NPCLabelNames[3543]={["b876d1193e1dbd78:15"]=S[17971]}
-D.NPCLabelNames[3544]={["69a02f19ddcdeef8:12"]=S[19577]}
+D.NPCLabelNames[3543]={["b876d1193e1dbd78:15"]=S[17972]}
+D.NPCLabelNames[3544]={["69a02f19ddcdeef8:12"]=S[19578]}
 D.NPCLabelNames[3545]={["4d68b464360c76ed:13"]="克劳德·艾尔克辛"}
 D.NPCLabelNames[3546]={["7526066a03d3283b:13"]="波尼·海斯坦"}
 D.NPCLabelNames[3547]={["85db3d8881025813:12"]="哈姆林·埃金斯"}
@@ -2995,7 +2995,7 @@ D.NPCLabelNames[3672]={["0f2aea0d5d1cdb1a:5"]="博艾恩"}
 D.NPCLabelNames[3673]={["f7f4c9132f1bcb50:13"]="瑟芬迪斯"}
 D.NPCLabelNames[3674]={["7c9df5c51bb55df0:4"]="斯卡姆"}
 D.NPCLabelNames[3678]={["0ff5a8d76b464a6a:5"]="穆约"}
-D.NPCLabelNames[3679]={["01d01070832e5edd:7"]=S[17836]}
+D.NPCLabelNames[3679]={["01d01070832e5edd:7"]=S[17837]}
 D.NPCLabelNames[3680]={["31471a91ff1efbf8:17"]="花丛蛇"}
 D.NPCLabelNames[3681]={["7ca01e88d4d2816f:4"]=S[10063]}
 D.NPCLabelNames[3682]={["5a5bc56096c9e6c3:13"]="弗朗恩·凝血"}
@@ -3076,7 +3076,7 @@ D.NPCLabelNames[3789]={["e0947ad3389dbf62:20"]="恐狼撕裂者"}
 D.NPCLabelNames[3791]={["8d21151fd85db686:21"]="恐狼影法师"}
 D.NPCLabelNames[3792]={["9e6f1d7fa17a14a4:17"]="恐狼族长"}
 D.NPCLabelNames[3793]={["aba31c349a473ba9:13"]="见习德鲁伊"}
-D.NPCLabelNames[3794]={["a7c77291bce95226:15"]=S[16650]}
+D.NPCLabelNames[3794]={["a7c77291bce95226:15"]=S[16651]}
 D.NPCLabelNames[3795]={["afb714bab57a8b77:14"]=S[3606]}
 D.NPCLabelNames[3796]={["afc200e35693ae82:14"]="野性德鲁伊"}
 D.NPCLabelNames[3797]={["4c922036a6f4df47:17"]="塞纳里奥保卫者"}
@@ -3196,9 +3196,9 @@ D.NPCLabelNames[3928]={["8889b44682424943:12"]="腐烂的泥浆怪"}
 D.NPCLabelNames[3931]={["b31a500c242860dd:18"]="沼泽兽智者"}
 D.NPCLabelNames[3932]={["7856b85619b70c77:15"]="血牙守卫"}
 D.NPCLabelNames[3933]={["333034679732fd90:7"]="海赞"}
-D.NPCLabelNames[3934]={["727273c47112f1fd:26"]=S[13431]}
+D.NPCLabelNames[3934]={["727273c47112f1fd:26"]=S[13432]}
 D.NPCLabelNames[3935]={["da9dd7f9de6d773a:8"]="托德瑞克"}
-D.NPCLabelNames[3936]={["1d8400f90275568a:19"]=S[16741]}
+D.NPCLabelNames[3936]={["1d8400f90275568a:19"]=S[16742]}
 D.NPCLabelNames[3937]={["6966aa9ad8be6789:13"]="基拉·桑塞恩"}
 D.NPCLabelNames[3938]={["090d02bfa7e1f518:14"]="罗斯·布朗特布雷德"}
 D.NPCLabelNames[3939]={["4a8883ac96d6786b:13"]="钢鬃狼"}
@@ -3234,13 +3234,13 @@ D.NPCLabelNames[3969]={["821c23fc47294f11:17"]="法兰·沉默之刃"}
 D.NPCLabelNames[3970]={["0fde3aad78ca2054:5"]="蓝纳"}
 D.NPCLabelNames[3974]={["fb748766914a7285:17"]="驯犬者洛克希"}
 D.NPCLabelNames[3975]={["0f924a772bc8f6ea:5"]="赫洛德"}
-D.NPCLabelNames[3976]={["8031227b9600afea:24"]=S[18885]}
+D.NPCLabelNames[3976]={["8031227b9600afea:24"]=S[18886]}
 D.NPCLabelNames[3977]={["14f3f7de2678dcb1:23"]=S[8044]}
 D.NPCLabelNames[3978]={["8383ae5b4b7467c4:15"]="圣者图希克"}
 D.NPCLabelNames[3979]={["68c1d3cec8367015:20"]="图书馆员麦伊·苍尘"}
 D.NPCLabelNames[3980]={["ce0d00b9e652ede8:16"]="虔诚的莱雷恩"}
 D.NPCLabelNames[3981]={["952e456fc9aa79d0:13"]="沃瑞尔·森加斯"}
-D.NPCLabelNames[3982]={["251b8114b3493b5d:13"]=S[18430]}
+D.NPCLabelNames[3982]={["251b8114b3493b5d:13"]=S[18431]}
 D.NPCLabelNames[3983]={["d2a862330a3fe27e:18"]="审讯员韦沙斯"}
 D.NPCLabelNames[3984]={["a962de0c7548f88b:11"]="南希·韦沙斯"}
 D.NPCLabelNames[3985]={["906ab11056d7a937:13"]="韦沙斯老爷爷"}
@@ -3301,7 +3301,7 @@ D.NPCLabelNames[4041]={["4bf329a2ff3e98e1:16"]="炭色石化蜥蜴"}
 D.NPCLabelNames[4042]={["b1d00d91e3f4ecd8:14"]="焦黑石化蜥蜴"}
 D.NPCLabelNames[4043]={["e69630558290e35c:7"]="加尔萨克"}
 D.NPCLabelNames[4044]={["303fae305d7f1291:17"]="黑色石化蜥蜴"}
-D.NPCLabelNames[4046]={["49015e304f11e8f3:16"]=S[16675]}
+D.NPCLabelNames[4046]={["49015e304f11e8f3:16"]=S[16676]}
 D.NPCLabelNames[4047]={["2dda3d9e13ed0775:11"]="佐尔·孤树"}
 D.NPCLabelNames[4048]={["7f67dfaae2aad261:36"]="法芬德尔"}
 D.NPCLabelNames[4049]={["ca44f6635ad15b94:17"]="希雷斯·碎石"}
@@ -3491,7 +3491,7 @@ D.NPCLabelNames[4258]={["2db8169a42f1fc61:15"]="本古斯·深炉"}
 D.NPCLabelNames[4259]={["834c7c1452a6bfe7:17"]="索格拉姆·深炉"}
 D.NPCLabelNames[4260]={["bf0497bfa3cdc2e4:18"]="风险投资公司伐木机"}
 D.NPCLabelNames[4261]={["c91ba3ebbc3b7bca:21"]="熊形態(牛頭人德魯伊)"}
-D.NPCLabelNames[4262]={["4eeb539b7db2c5ea:17"]=S[19868]}
+D.NPCLabelNames[4262]={["4eeb539b7db2c5ea:17"]=S[19869]}
 D.NPCLabelNames[4263]={["62610e57e7bb7aa8:17"]="深苔幼蛛"}
 D.NPCLabelNames[4264]={["cbd8da009c5ad2ff:17"]="深苔雌蜘蛛"}
 D.NPCLabelNames[4265]={["1009c809645f50d8:5"]="奈欧玛"}
@@ -3507,8 +3507,8 @@ D.NPCLabelNames[4274]={["6542bc25ae0603f4:17"]="吞噬者芬鲁斯"}
 D.NPCLabelNames[4275]={["27473f19ed71b556:14"]="大法师阿鲁高"}
 D.NPCLabelNames[4276]={["14d1a03af230c1af:6"]="匹兹尼克"}
 D.NPCLabelNames[4277]={["173b28cc55814da3:12"]=S[7801]}
-D.NPCLabelNames[4278]={["2c6237d640ba3029:19"]=S[12262]}
-D.NPCLabelNames[4279]={["5428fc3f3a7a663e:18"]=S[17075]}
+D.NPCLabelNames[4278]={["2c6237d640ba3029:19"]=S[12263]}
+D.NPCLabelNames[4279]={["5428fc3f3a7a663e:18"]=S[17076]}
 D.NPCLabelNames[4280]={["e11d5751df4bb9ec:16"]="血色医师"}
 D.NPCLabelNames[4281]={["71aa8261d2c2fe84:12"]="血色斥候"}
 D.NPCLabelNames[4282]={["19df0a0c5d493683:15"]="血色魔法师"}
@@ -3527,7 +3527,7 @@ D.NPCLabelNames[4294]={["f256c558a3ea8dc1:15"]="血色魔术师"}
 D.NPCLabelNames[4295]={["6b4913e289a9d6bb:15"]="血色仆从"}
 D.NPCLabelNames[4296]={["70652a8135b984ec:12"]="血色老兵"}
 D.NPCLabelNames[4297]={["256c47a5de0b9442:15"]="血色咒术师"}
-D.NPCLabelNames[4298]={["fcdfe9f0d1d07f3d:15"]=S[18891]}
+D.NPCLabelNames[4298]={["fcdfe9f0d1d07f3d:15"]=S[18892]}
 D.NPCLabelNames[4299]={["eca8e8b3cf05f8c8:15"]="血色牧师"}
 D.NPCLabelNames[4300]={["b0c1b744c2ac2385:13"]="血色巫师"}
 D.NPCLabelNames[4301]={["afb6684ab52ef9e9:16"]="血色百夫长"}
@@ -3695,10 +3695,10 @@ D.NPCLabelNames[4501]={["f2764bee84bc8165:9"]="德拉兹辛比"}
 D.NPCLabelNames[4502]={["106ccdbbde15d662:5"]="萨尔格"}
 D.NPCLabelNames[4503]={["d46246f32ac30060:16"]="马德克拉什"}
 D.NPCLabelNames[4504]={["f0ac41f8c3bc281f:8"]="霜喉雪人"}
-D.NPCLabelNames[4505]={["3c74c2d0746cf4c3:17"]=S[18862]}
+D.NPCLabelNames[4505]={["3c74c2d0746cf4c3:17"]=S[18863]}
 D.NPCLabelNames[4506]={["3ee06786e9ca2227:15"]="血帆水兵"}
 D.NPCLabelNames[4507]={["1ea4da69f7bbcf98:23"]="黛西"}
-D.NPCLabelNames[4508]={["dfe5ff5152ecb642:17"]=S[20276]}
+D.NPCLabelNames[4508]={["dfe5ff5152ecb642:17"]=S[20277]}
 D.NPCLabelNames[4509]={["82b65d8fc3d244f2:7"]="萨迦斯"}
 D.NPCLabelNames[4510]={["2811f51058ad3703:19"]="赫尔拉斯·静水"}
 D.NPCLabelNames[4511]={["25ebbc55b1abd4e6:7"]="阿迦玛"}
@@ -3719,7 +3719,7 @@ D.NPCLabelNames[4528]={["2844f587c283afdc:12"]="石行者"}
 D.NPCLabelNames[4530]={["77e6ceaa30b99ca9:15"]="剃刀沼泽训练师"}
 D.NPCLabelNames[4531]={["e53362701b6a88f7:20"]="剃刀沼泽驯兽师"}
 D.NPCLabelNames[4532]={["edb269c7ec456440:19"]="剃刀沼泽兽王"}
-D.NPCLabelNames[4534]={["1541f8e5b6c942c8:10"]=S[19110]}
+D.NPCLabelNames[4534]={["1541f8e5b6c942c8:10"]=S[19111]}
 D.NPCLabelNames[4535]={["de3d42f04f9d3e55:15"]="被驯服的斗猪"}
 D.NPCLabelNames[4538]={["6d6cd0bbcadedce4:8"]="沼泽蝙蝠"}
 D.NPCLabelNames[4539]={["618263056759605e:15"]="巨型沼泽蝙蝠"}
@@ -3789,7 +3789,7 @@ D.NPCLabelNames[4602]={["10fd68745475927f:13"]="本尼亚·芬奈尔"}
 D.NPCLabelNames[4603]={["14ea96e4cec6e88f:14"]="尼古拉斯·阿特伍德"}
 D.NPCLabelNames[4604]={["278707a9bafa44a2:13"]="阿比盖恩·萨叶尔"}
 D.NPCLabelNames[4605]={["9fe4a506511762af:9"]="巴兹尔·弗莱伊"}
-D.NPCLabelNames[4606]={["6ddd962510c8c392:11"]=S[18268]}
+D.NPCLabelNames[4606]={["6ddd962510c8c392:11"]=S[18269]}
 D.NPCLabelNames[4607]={["1d1b45c815cd6fc5:15"]="兰克斯特神父"}
 D.NPCLabelNames[4608]={["3a72d1e1de732918:13"]="拉扎鲁斯神父"}
 D.NPCLabelNames[4609]={["5081af2b00f7cc94:11"]="马尔什医生"}
@@ -3884,7 +3884,7 @@ D.NPCLabelNames[4701]={["b8951bade59922dc:9"]="濒死的科多兽"}
 D.NPCLabelNames[4702]={["8af5ef340ee6b6e7:11"]="远古科多兽"}
 D.NPCLabelNames[4703]={["cec4c62aedafe979:10"]="暴怒的科多兽"}
 D.NPCLabelNames[4704]={["393b0d54dc12cd97:19"]="玛洛迪驯犬者"}
-D.NPCLabelNames[4705]={["92f5d3f07878adb5:19"]=S[16149]}
+D.NPCLabelNames[4705]={["92f5d3f07878adb5:19"]=S[16150]}
 D.NPCLabelNames[4706]={["d79f2b993cbfdbd0:26"]="拉泽瑞克"}
 D.NPCLabelNames[4707]={["28a1e2b9fb9740d2:25"]="祖祖比"}
 D.NPCLabelNames[4708]={["1bba77d2782073f9:6"]="史瑞夫"}
@@ -3942,9 +3942,9 @@ D.NPCLabelNames[4805]={["c3cb0d79a597dfe4:19"]="黑暗深渊海巫"}
 D.NPCLabelNames[4807]={["64bf4a70586a218d:19"]="黑暗深渊仆从"}
 D.NPCLabelNames[4809]={["2282c3225e63341b:15"]="暮光侍僧"}
 D.NPCLabelNames[4810]={["956b3d761c4adda5:14"]="暮光劫掠者"}
-D.NPCLabelNames[4811]={["128bffcf0fb8f202:18"]=S[13823]}
+D.NPCLabelNames[4811]={["128bffcf0fb8f202:18"]=S[13824]}
 D.NPCLabelNames[4812]={["d36d57026da55c4b:18"]="暮光寻知者"}
-D.NPCLabelNames[4813]={["baec2771b431d242:18"]=S[13822]}
+D.NPCLabelNames[4813]={["baec2771b431d242:18"]=S[13823]}
 D.NPCLabelNames[4814]={["d83a45f8e91d7b13:20"]="暮光元素法师"}
 D.NPCLabelNames[4815]={["3dd01697caf07ddc:19"]="巨钳黑泥龙虾人"}
 D.NPCLabelNames[4816]={["997d07b049ac8f7f:20"]="厚壳黑泥龙虾人"}
@@ -4199,7 +4199,7 @@ D.NPCLabelNames[5143]={["86a155d3fb33e3dc:15"]="托德雷·铁矿"}
 D.NPCLabelNames[5144]={["7c9499e903be6084:4"]="彬克"}
 D.NPCLabelNames[5145]={["153a60f798af3a94:15"]="朱莉·雷线"}
 D.NPCLabelNames[5146]={["cfeba1934b148cee:20"]="尼特布尔·火花"}
-D.NPCLabelNames[5147]={["fe8941f54dd4712e:15"]=S[16789]}
+D.NPCLabelNames[5147]={["fe8941f54dd4712e:15"]=S[16790]}
 D.NPCLabelNames[5148]={["b72cf2b79a3b978e:15"]="贝尔杜克·凝眉"}
 D.NPCLabelNames[5149]={["3b1ce465053c5992:17"]=S[10268]}
 D.NPCLabelNames[5150]={["09f2eff22f4a2889:14"]="尼莎·火石"}
@@ -4433,7 +4433,7 @@ D.NPCLabelNames[5469]={["b9ae2c24a84b88a1:11"]="沙丘重击者"}
 D.NPCLabelNames[5470]={["167f35bc39c9fa77:17"]="暴怒的沙丘重击者"}
 D.NPCLabelNames[5471]={["f85a3aed3d771b9e:12"]="砂槌食人魔"}
 D.NPCLabelNames[5472]={["84e48534432f8603:16"]="砂槌执行者"}
-D.NPCLabelNames[5473]={["bfe559073ff09890:16"]=S[17183]}
+D.NPCLabelNames[5473]={["bfe559073ff09890:16"]=S[17184]}
 D.NPCLabelNames[5474]={["02bc7142ca4123a3:13"]="砂槌蛮兵"}
 D.NPCLabelNames[5475]={["cc429e13240aae60:15"]="砂槌术士"}
 D.NPCLabelNames[5476]={["ed5a94dfdcc68390:12"]="卫兵比格斯"}
@@ -4448,7 +4448,7 @@ D.NPCLabelNames[5485]={["ec24018d8526ecce:22"]="灌木塑根者"}
 D.NPCLabelNames[5489]={["130b27052d9abe06:13"]="乔舒修士"}
 D.NPCLabelNames[5490]={["d44d4523906085ce:19"]="长瘤的灌木兽"}
 D.NPCLabelNames[5491]={["fe86028f6ffed4ea:17"]="虔诚的亚瑟"}
-D.NPCLabelNames[5492]={["483ba27ddb14ed80:16"]=S[17817]}
+D.NPCLabelNames[5492]={["483ba27ddb14ed80:16"]=S[17818]}
 D.NPCLabelNames[5493]={["47747615cf37ac2e:12"]="阿诺德·利兰"}
 D.NPCLabelNames[5494]={["22ac586831b75c05:15"]="凯瑟琳·利兰"}
 D.NPCLabelNames[5495]={["efff64120eb808e9:12"]="厄苏拉·德林"}
@@ -4518,7 +4518,7 @@ D.NPCLabelNames[5591]={["0b88693c319f26b5:3"]="达尔"}
 D.NPCLabelNames[5592]={["efb7377858195285:7"]="托克卡尔"}
 D.NPCLabelNames[5593]={["0fc669383e60ec8f:5"]="卡塔尔"}
 D.NPCLabelNames[5594]={["c65d8ca92173aabc:19"]="炼金师匹斯特苏格"}
-D.NPCLabelNames[5595]={["78b7ff23511a2ce6:14"]=S[20969]}
+D.NPCLabelNames[5595]={["78b7ff23511a2ce6:14"]=S[20970]}
 D.NPCLabelNames[5597]={["d95a5d48bb517683:10"]="步兵库马克"}
 D.NPCLabelNames[5598]={["2489546f9b299cbe:12"]="阿塔莱流放者"}
 D.NPCLabelNames[5599]={["300dbf9f49878b40:13"]="康·黄眼"}
@@ -4556,7 +4556,7 @@ D.NPCLabelNames[5632]={["12702b4b116a5fe4:38"]="塞拉摩入侵大師控制程�
 D.NPCLabelNames[5633]={["803a31c4842b6bff:16"]="巴克斯特中尉"}
 D.NPCLabelNames[5634]={["5b188dd3519a9222:18"]="拉普索迪·铁铲"}
 D.NPCLabelNames[5635]={["14d33b6eb5375ae5:17"]=S[10538]}
-D.NPCLabelNames[5636]={["2f40cd5437026fb7:21"]=S[16599]}
+D.NPCLabelNames[5636]={["2f40cd5437026fb7:21"]=S[16600]}
 D.NPCLabelNames[5637]={["2c953b49f8ca3bba:18"]="罗顿·石锤"}
 D.NPCLabelNames[5638]={["c36f26d2e3257c9d:12"]="克雷迪格·安戈尔"}
 D.NPCLabelNames[5639]={["991054346bd0c1b7:10"]="克拉文·德洛克"}
@@ -4595,7 +4595,7 @@ D.NPCLabelNames[5671]={["4f39c57dc620cf04:22"]="劳伦斯·萨叶尔"}
 D.NPCLabelNames[5672]={["0fb2b7144a248239:22"]="查尔斯·布鲁顿"}
 D.NPCLabelNames[5674]={["dd9745b704af8d2c:14"]="箭靶"}
 D.NPCLabelNames[5675]={["a48fa6d83c4c04b1:14"]="凯伦丁·哈加尔"}
-D.NPCLabelNames[5676]={["d063b005fc0a902a:18"]=S[18684]}
+D.NPCLabelNames[5676]={["d063b005fc0a902a:18"]=S[18685]}
 D.NPCLabelNames[5677]={["bd63755a0303a0ed:16"]="魅魔"}
 D.NPCLabelNames[5679]={["908c564137c6a492:13"]="利斯塔·班克劳弗特"}
 D.NPCLabelNames[5680]={["03772749ebdb4716:16"]="被俘虏的男人"}
@@ -4611,7 +4611,7 @@ D.NPCLabelNames[5690]={["eaf45b715df79674:11"]="克莱德·凯林"}
 D.NPCLabelNames[5691]={["c0dc185212ef9a27:26"]="达林·弗治维特的镜像"}
 D.NPCLabelNames[5692]={["33b89a425684ea5d:22"]="科马·韦拉德的幻像"}
 D.NPCLabelNames[5693]={["c0ca16a3b2ad30a4:13"]="高德瑞克·法杉"}
-D.NPCLabelNames[5694]={["1e9b38e81cc83133:21"]=S[21872]}
+D.NPCLabelNames[5694]={["1e9b38e81cc83133:21"]=S[21873]}
 D.NPCLabelNames[5695]={["961d69ee0c6b87f5:15"]="范斯·安德格鲁姆"}
 D.NPCLabelNames[5696]={["8c292f78814ab465:15"]="杰勒德·阿博纳斯"}
 D.NPCLabelNames[5697]={["df1f9131c3f53f12:7"]="瑟雷萨"}
@@ -4627,7 +4627,7 @@ D.NPCLabelNames[5706]={["336ca10078c7ce39:13"]="达维特·希克森"}
 D.NPCLabelNames[5707]={["d73ab4382183e67f:17"]="雷金纳德·格瑞姆斯弗特"}
 D.NPCLabelNames[5708]={["0b97f455114875dc:13"]="哈卡的后代"}
 D.NPCLabelNames[5709]={["65d1d5417d2e58be:15"]=S[1305]}
-D.NPCLabelNames[5710]={["49484070956d68f5:19"]=S[21491]}
+D.NPCLabelNames[5710]={["49484070956d68f5:19"]=S[21492]}
 D.NPCLabelNames[5711]={["933bbc2e123b6689:15"]="可悲的奥戈姆"}
 D.NPCLabelNames[5712]={["7ca1dc4963544ef8:4"]="祖罗"}
 D.NPCLabelNames[5713]={["ff3e7ddfc2964b3c:6"]="加什尔"}
@@ -4691,7 +4691,7 @@ D.NPCLabelNames[5771]={["0527f6648cc0df6f:14"]="祖格卡"}
 D.NPCLabelNames[5772]={["b7dac4131b259826:19"]="魔王阿兹雷索克的幻影"}
 D.NPCLabelNames[5773]={["2d985c2153c04a20:21"]="祖格卡的幻影"}
 D.NPCLabelNames[5774]={["ade9651acba28f27:10"]="骑乘用狼"}
-D.NPCLabelNames[5775]={["66781601770e7bca:19"]=S[15654]}
+D.NPCLabelNames[5775]={["66781601770e7bca:19"]=S[15655]}
 D.NPCLabelNames[5776]={["0bacc223abb7b8b4:22"]="大型软浆怪（红）"}
 D.NPCLabelNames[5777]={["9129f079ff97d242:24"]="大型软浆怪（绿）"}
 D.NPCLabelNames[5778]={["851157e53e154f46:24"]="大型软浆怪（黑）"}
@@ -4708,7 +4708,7 @@ D.NPCLabelNames[5788]={["3960ea98a1439b07:16"]="基尔加·厄炉"}
 D.NPCLabelNames[5789]={["3231d1f62ff9219b:17"]="瑟拉·山岭"}
 D.NPCLabelNames[5790]={["0ec32c183c61770b:18"]="里兹·滑链"}
 D.NPCLabelNames[5791]={["c39b24886db3c0d9:16"]="考布萊恩蛇形態"}
-D.NPCLabelNames[5792]={["1fed5cf5456e3e3a:34"]=S[12185]}
+D.NPCLabelNames[5792]={["1fed5cf5456e3e3a:34"]=S[12186]}
 D.NPCLabelNames[5793]={["4fade52616de58f9:16"]="阿米斯迪斯队长"}
 D.NPCLabelNames[5794]={["a353713318f57e6e:18"]="虔诚的瑟蒙德"}
 D.NPCLabelNames[5795]={["33f737c45183625b:16"]="格拉什·雷酒"}
@@ -4765,7 +4765,7 @@ D.NPCLabelNames[5851]={["127a1322535d6385:22"]="基洛戈·锤趾队长"}
 D.NPCLabelNames[5852]={["b465ebadf7b2b4f8:16"]="地狱元素"}
 D.NPCLabelNames[5853]={["7fed40f91c002464:16"]="温和的作战傀儡"}
 D.NPCLabelNames[5854]={["7e49a960319e8fcb:13"]="重型作战傀儡"}
-D.NPCLabelNames[5855]={["6162795f6f4ce3c0:14"]=S[16368]}
+D.NPCLabelNames[5855]={["6162795f6f4ce3c0:14"]=S[16369]}
 D.NPCLabelNames[5856]={["8cf435447ab45e5d:14"]="晶网蜘蛛"}
 D.NPCLabelNames[5857]={["bcc47df9efbd53c4:17"]="灼热熔岩蜘蛛"}
 D.NPCLabelNames[5858]={["829d9f9acf8baa1f:17"]="巨型熔岩蜘蛛"}
@@ -4787,7 +4787,7 @@ D.NPCLabelNames[5874]={["a5fefb264e228b2f:20"]="大地之力图腾"}
 D.NPCLabelNames[5875]={["53cc7cfba1c8aeb8:14"]="莫达克·黑拳"}
 D.NPCLabelNames[5876]={["5da60e87cbea9acc:14"]="格鲁摩尔"}
 D.NPCLabelNames[5878]={["40f21ea7b0d92764:17"]="索恩格瑞姆·火眼"}
-D.NPCLabelNames[5879]={["b682cddba893ebf8:18"]=S[16173]}
+D.NPCLabelNames[5879]={["b682cddba893ebf8:18"]=S[16174]}
 D.NPCLabelNames[5880]={["ecb70398d63f95fd:8"]="安苏瓦"}
 D.NPCLabelNames[5881]={["7c5906ceed704d4b:14"]="被诅咒的塞卡摩"}
 D.NPCLabelNames[5882]={["44165d9c0c482c6b:8"]="皮菲瑞多"}
@@ -4837,7 +4837,7 @@ D.NPCLabelNames[5925]={["98d5f0bb63ee8726:14"]="根基图腾"}
 D.NPCLabelNames[5926]={["69921acde4554fa4:20"]="抗寒图腾"}
 D.NPCLabelNames[5927]={["5a2b2016f349e021:24"]="元素抵抗图腾"}
 D.NPCLabelNames[5928]={["10bafac6340dd52f:10"]="悲哀之翼"}
-D.NPCLabelNames[5929]={["d11358d1defc4bda:10"]=S[16370]}
+D.NPCLabelNames[5929]={["d11358d1defc4bda:10"]=S[16371]}
 D.NPCLabelNames[5930]={["4f10848379907444:11"]="瑞雯"}
 D.NPCLabelNames[5931]={["84d8d96d2da4a942:13"]="工头里格尔"}
 D.NPCLabelNames[5932]={["e592bc98ee5b6953:18"]="工头维普弗恩"}
@@ -4956,7 +4956,7 @@ D.NPCLabelNames[6074]={["b3a967fb640c5fd4:17"]="条纹霜刃豹"}
 D.NPCLabelNames[6075]={["f1141d975b36693a:13"]="绿色迅猛龙"}
 D.NPCLabelNames[6076]={["ee2e923664202151:24"]="骑乘用陆行鸟（黄色）"}
 D.NPCLabelNames[6086]={["f721aed6f795f09b:17"]="奥伯丁卫兵"}
-D.NPCLabelNames[6087]={["8b14c064cb031f99:17"]=S[21215]}
+D.NPCLabelNames[6087]={["8b14c064cb031f99:17"]=S[21216]}
 D.NPCLabelNames[6089]={["26c650d334abccf8:14"]="哈里·伯加德"}
 D.NPCLabelNames[6090]={["2a13f31a0ce70b91:8"]="巴特莱比"}
 D.NPCLabelNames[6091]={["27f816946792ef7b:8"]="德林拉尔"}
@@ -4966,7 +4966,7 @@ D.NPCLabelNames[6094]={["9ce4610063100ebb:7"]="拜恩希"}
 D.NPCLabelNames[6106]={["464d01ef2758b272:14"]="次级幻影"}
 D.NPCLabelNames[6107]={["105ab36a9a1b73ed:5"]="影魔"}
 D.NPCLabelNames[6108]={["fc8ae16bd15869e6:15"]="巨型幻影"}
-D.NPCLabelNames[6109]={["c9198975ca0c771c:8"]=S[18259]}
+D.NPCLabelNames[6109]={["c9198975ca0c771c:8"]=S[18260]}
 D.NPCLabelNames[6110]={["626dbe8dc1d68a38:20"]="火焰新星图腾 II"}
 D.NPCLabelNames[6111]={["b02590963e040431:21"]="火焰新星图腾 II"}
 D.NPCLabelNames[6112]={["15bd266679a4a5c3:13"]="风怒图腾"}
@@ -5011,7 +5011,7 @@ D.NPCLabelNames[6167]={["c8ea725ae9876d11:17"]="雌奇美拉"}
 D.NPCLabelNames[6168]={["19e26018b2e25c67:6"]="鲁古格"}
 D.NPCLabelNames[6169]={["cf62842463ab9041:20"]="科罗莫特·钢尺"}
 D.NPCLabelNames[6170]={["cf8457199c240d46:8"]="加特斯比尔"}
-D.NPCLabelNames[6171]={["13d5a11ee782655d:13"]=S[19864]}
+D.NPCLabelNames[6171]={["13d5a11ee782655d:13"]=S[19865]}
 D.NPCLabelNames[6172]={["f5a1d27221456b1d:10"]="亨兹·法奥克"}
 D.NPCLabelNames[6173]={["af84451309b94b72:11"]="贾森·坦诺姆"}
 D.NPCLabelNames[6174]={["a646aea695770a2f:15"]="斯蒂芬妮·特纳"}
@@ -5019,7 +5019,7 @@ D.NPCLabelNames[6175]={["89638d344174b555:10"]="约翰·特纳"}
 D.NPCLabelNames[6176]={["fd52df079c97ed48:22"]="捕风者巴斯拉"}
 D.NPCLabelNames[6177]={["d1a511063a13becb:9"]="纳姆·法奥克"}
 D.NPCLabelNames[6178]={["d716e6b7a1b2f620:19"]="穆里顿·热炉"}
-D.NPCLabelNames[6179]={["1ab0c1ec94314f13:15"]=S[18626]}
+D.NPCLabelNames[6179]={["1ab0c1ec94314f13:15"]=S[18627]}
 D.NPCLabelNames[6180]={["a2e48cc8b96e4acd:12"]="迪菲亚袭击者"}
 D.NPCLabelNames[6181]={["790c09f3c8202d76:14"]="乔丹·斯迪威尔"}
 D.NPCLabelNames[6182]={["8e0dab05ff5a039e:14"]="达芙妮·斯迪威尔"}
@@ -5061,7 +5061,7 @@ D.NPCLabelNames[6225]={["4f4d097b09432232:12"]="步行坦克"}
 D.NPCLabelNames[6226]={["95c6a2185f57dfc1:19"]="机械烈焰行者"}
 D.NPCLabelNames[6227]={["1908c38171b6f552:19"]="机械冰霜行者"}
 D.NPCLabelNames[6228]={["b101103c8713210f:18"]="黑铁大使"}
-D.NPCLabelNames[6229]={["5bc1ec17000c6994:17"]=S[17990]}
+D.NPCLabelNames[6229]={["5bc1ec17000c6994:17"]=S[17991]}
 D.NPCLabelNames[6230]={["29473abc3d7cd9cd:23"]="动力保安装甲"}
 D.NPCLabelNames[6231]={["d7f65d4e26d50671:7"]="尖端机器人"}
 D.NPCLabelNames[6232]={["110f8321ab65a320:19"]="施法者克星X-21"}
@@ -5158,12 +5158,12 @@ D.NPCLabelNames[6427]={["c94e64dfba2f8d0c:16"]="鬼魅幻影"}
 D.NPCLabelNames[6446]={["df1fea0cce4883b5:7"]="瑟祖克"}
 D.NPCLabelNames[6466]={["0f7deb372b4b0772:5"]="加摩尔"}
 D.NPCLabelNames[6467]={["9d3eceb295a10081:12"]="米奈特·卡加德"}
-D.NPCLabelNames[6486]={["a05ca39875caa6a5:18"]=S[22144]}
+D.NPCLabelNames[6486]={["a05ca39875caa6a5:18"]=S[22145]}
 D.NPCLabelNames[6487]={["26f847fc42c08523:12"]="奥法师杜安"}
 D.NPCLabelNames[6488]={["d7c143c68de0a38d:14"]="死灵勇士"}
 D.NPCLabelNames[6489]={["57efb6bca96bc0db:9"]="铁脊死灵"}
 D.NPCLabelNames[6490]={["4db0e4e73633ee16:18"]="永醒的艾希尔"}
-D.NPCLabelNames[6491]={["f89bea3116f0cf66:12"]=S[16215]}
+D.NPCLabelNames[6491]={["f89bea3116f0cf66:12"]=S[16216]}
 D.NPCLabelNames[6492]={["7b31e40353549a56:9"]="裂隙怒灵"}
 D.NPCLabelNames[6493]={["c04fc7fc82a0e053:19"]="幻象之影"}
 D.NPCLabelNames[6494]={["10695f43a4a4a09a:5"]="塔赞"}
@@ -5180,7 +5180,7 @@ D.NPCLabelNames[6504]={["cac089d546d46964:20"]="雷霆剑龙"}
 D.NPCLabelNames[6505]={["f631da2acff31b45:8"]="暴掠龙"}
 D.NPCLabelNames[6506]={["e22acf6413751215:14"]="疾奔暴掠龙"}
 D.NPCLabelNames[6507]={["cad752a038ada2a5:14"]="狩猎暴掠龙"}
-D.NPCLabelNames[6508]={["373ecd099da36dc4:17"]=S[15481]}
+D.NPCLabelNames[6508]={["373ecd099da36dc4:17"]=S[15482]}
 D.NPCLabelNames[6509]={["410f340a978e10e7:16"]="血瓣花鞭笞者"}
 D.NPCLabelNames[6510]={["33cdb74ec090389b:16"]="血瓣花掠夺者"}
 D.NPCLabelNames[6511]={["3c0eccf09be68b59:18"]="血瓣花猛击者"}
@@ -5216,8 +5216,8 @@ D.NPCLabelNames[6567]={["da6cb189ea34a848:8"]="格鲁克卡恩"}
 D.NPCLabelNames[6568]={["5e1c84c60a7eb7fd:9"]="维兹格里克"}
 D.NPCLabelNames[6569]={["00276eca781671f5:6"]="诺恩"}
 D.NPCLabelNames[6570]={["4e3826114345afc6:14"]="芬维克·萨托斯"}
-D.NPCLabelNames[6571]={["b3367171c15822ba:7"]=S[16612]}
-D.NPCLabelNames[6572]={["b3367171c15822ba:7"]=S[16612]}
+D.NPCLabelNames[6571]={["b3367171c15822ba:7"]=S[16613]}
+D.NPCLabelNames[6572]={["b3367171c15822ba:7"]=S[16613]}
 D.NPCLabelNames[6573]={["ea1b4770a0f08211:17"]="旅行形態 (德魯伊)"}
 D.NPCLabelNames[6574]={["07a40fc24af1d83d:6"]="祖恩哈"}
 D.NPCLabelNames[6575]={["f548451b211a5eee:14"]="血色预备兵"}
@@ -5274,7 +5274,7 @@ D.NPCLabelNames[6767]={["ff3e105d978ae92a:6"]="迦罗娜"}
 D.NPCLabelNames[6768]={["8079ce646aa743d3:20"]=S[943]}
 D.NPCLabelNames[6769]={["315eec72179928af:26"]="拉文霍德驯鹰者"}
 D.NPCLabelNames[6770]={["cf6bc892c5dce9f5:29"]="拉文霍德驯犬者"}
-D.NPCLabelNames[6771]={["ced1e981cc10862a:18"]=S[12166]}
+D.NPCLabelNames[6771]={["ced1e981cc10862a:18"]=S[12167]}
 D.NPCLabelNames[6772]={["5b9f62dbc241821c:11"]="猎犬"}
 D.NPCLabelNames[6773]={["fb3d13b62606156d:10"]="暗鹰"}
 D.NPCLabelNames[6774]={["7b7c5c076a3608e6:19"]="法尔坎·伊森斯泰德"}
@@ -5315,7 +5315,7 @@ D.NPCLabelNames[6912]={["6bdfcdc3eb1bc2e0:17"]="圣骑士的遗体"}
 D.NPCLabelNames[6913]={["416afac3f5223e0e:19"]="失落裂隙行者"}
 D.NPCLabelNames[6927]={["f37f21e011139ed1:10"]="码头工人"}
 D.NPCLabelNames[6928]={["9524e44c96d4a621:14"]="旅店老板格罗斯克"}
-D.NPCLabelNames[6929]={["72a41dbfe14e47de:16"]=S[13432]}
+D.NPCLabelNames[6929]={["72a41dbfe14e47de:16"]=S[13433]}
 D.NPCLabelNames[6930]={["7e5ce1d1a19a7742:16"]="旅店老板卡拉库尔"}
 D.NPCLabelNames[6932]={["320933889f3b8131:11"]="沼泽之魂"}
 D.NPCLabelNames[6946]={["41856a57c7899610:15"]=S[224]}
@@ -5325,7 +5325,7 @@ D.NPCLabelNames[6987]={["d7fe61cb5a07f340:14"]="玛尔顿·杜佛斯"}
 D.NPCLabelNames[7006]={["d613c2b668a76a69:17"]="黑石刺客"}
 D.NPCLabelNames[7007]={["aef26097209f7072:11"]="提夫·摩杜恩"}
 D.NPCLabelNames[7008]={["c2724d5649c8f9f9:15"]="黑石劫掠者"}
-D.NPCLabelNames[7009]={["3f965036fa0d7f1f:7"]=S[16014]}
+D.NPCLabelNames[7009]={["3f965036fa0d7f1f:7"]=S[16015]}
 D.NPCLabelNames[7010]={["daee82fa79943637:16"]="基尔兹宾·鼓眼"}
 D.NPCLabelNames[7011]={["526b598e4abfe871:18"]="土灵碎岩者"}
 D.NPCLabelNames[7012]={["d0b4c22812e4a721:15"]="土灵雕刻者"}
@@ -5387,7 +5387,7 @@ D.NPCLabelNames[7087]={["744fbd776a79d10a:12"]="基里安·哈根"}
 D.NPCLabelNames[7088]={["106d2371e7f40dae:5"]="苏尔德"}
 D.NPCLabelNames[7089]={["7f6de0c6ff5a6fbf:8"]="莫兰塔"}
 D.NPCLabelNames[7091]={["29728ed5c4c84d88:19"]="暗炉伏击者"}
-D.NPCLabelNames[7092]={["010da0ab0d28edac:11"]=S[19026]}
+D.NPCLabelNames[7092]={["010da0ab0d28edac:11"]=S[19027]}
 D.NPCLabelNames[7093]={["f7fdea128c559d17:8"]="邪恶的软泥怪"}
 D.NPCLabelNames[7094]={["cc4c928dd8151c6e:10"]="疯狂的雄鹿"}
 D.NPCLabelNames[7095]={["0989c546f4ea6cc3:12"]="狂暴的雄鹿"}
@@ -5434,7 +5434,7 @@ D.NPCLabelNames[7137]={["2280880053fea477:9"]="伊姆拉图斯"}
 D.NPCLabelNames[7138]={["65362ec510f3e500:16"]="铁木游荡者"}
 D.NPCLabelNames[7139]={["77b075f740aaf2b8:15"]="铁木践踏者"}
 D.NPCLabelNames[7143]={["3c1842f7d8829da8:14"]="腐朽的树人"}
-D.NPCLabelNames[7144]={["5758486f8a288272:14"]=S[14766]}
+D.NPCLabelNames[7144]={["5758486f8a288272:14"]=S[14767]}
 D.NPCLabelNames[7146]={["99a64bf5977853b2:15"]="树人保卫者"}
 D.NPCLabelNames[7149]={["bb8c92c337be7240:17"]="枯萎的保护者"}
 D.NPCLabelNames[7150]={["6dfc676cc0783ea3:16"]="枯萎的守卫者"}
@@ -5451,11 +5451,11 @@ D.NPCLabelNames[7166]={["20f24d421b44ee71:28"]="维尼克斯的机械设备"}
 D.NPCLabelNames[7167]={["102870751978b8ba:5"]="波利"}
 D.NPCLabelNames[7168]={["102870751978b8ba:5"]="波利"}
 D.NPCLabelNames[7170]={["e03230a4711c8d6b:8"]="斯拉格姆"}
-D.NPCLabelNames[7172]={["9857dfb8f24435eb:21"]=S[19510]}
+D.NPCLabelNames[7172]={["9857dfb8f24435eb:21"]=S[19511]}
 D.NPCLabelNames[7173]={["c21d942fedcba1c8:26"]="世界武器鍛造訓練師"}
 D.NPCLabelNames[7174]={["783fa6865194c409:25"]="世界護甲鍛造訓練師"}
 D.NPCLabelNames[7175]={["7c3f8b5101f5770e:18"]="石窟伏击者"}
-D.NPCLabelNames[7206]={["2c52bd0c19eb539f:18"]=S[20287]}
+D.NPCLabelNames[7206]={["2c52bd0c19eb539f:18"]=S[20288]}
 D.NPCLabelNames[7207]={["0f96f664038cc9db:13"]="道克·米希匹克斯"}
 D.NPCLabelNames[7208]={["100411628c3b519b:5"]="诺拉姆"}
 D.NPCLabelNames[7209]={["c0b5ca00269c7c63:13"]="黑曜石碎片"}
@@ -5480,9 +5480,9 @@ D.NPCLabelNames[7271]={["26a20c4d21e4275e:18"]=S[10220]}
 D.NPCLabelNames[7272]={["e11a4832bddb0cf9:14"]="殉教者塞卡"}
 D.NPCLabelNames[7273]={["06580bca913a678f:10"]="加兹瑞拉"}
 D.NPCLabelNames[7274]={["72507ebc7ecc86eb:19"]="沙怒刽子手"}
-D.NPCLabelNames[7275]={["2d6b44728d3d7a55:20"]=S[13760]}
+D.NPCLabelNames[7275]={["2d6b44728d3d7a55:20"]=S[13761]}
 D.NPCLabelNames[7276]={["a15d867a04ff3cb9:18"]="祖尔法拉克阵亡英雄"}
-D.NPCLabelNames[7286]={["d0c2cc2447c339e1:16"]=S[17267]}
+D.NPCLabelNames[7286]={["d0c2cc2447c339e1:16"]=S[17268]}
 D.NPCLabelNames[7287]={["6d4a273974f03718:14"]="工头希里克斯"}
 D.NPCLabelNames[7288]={["b06bc5bd2df5484c:25"]="大工头普兹克·加里维克斯"}
 D.NPCLabelNames[7290]={["b0e83ac01299eac9:23"]="暗炉狙击手"}
@@ -5509,7 +5509,7 @@ D.NPCLabelNames[7319]={["615cc2fa863f5e8d:11"]="萨丝拉"}
 D.NPCLabelNames[7320]={["21e1440063ea7865:16"]="石窟虐待者"}
 D.NPCLabelNames[7321]={["81c4b6a9d9fe3276:21"]="石窟织炎者"}
 D.NPCLabelNames[7322]={["c71d5349750636e8:15"]="黑色夜刃豹"}
-D.NPCLabelNames[7323]={["c544e0194a6a8f4a:13"]=S[16029]}
+D.NPCLabelNames[7323]={["c544e0194a6a8f4a:13"]=S[16030]}
 D.NPCLabelNames[7324]={["260035054f4bdda6:14"]="西蒙尼·坎提瑞尔"}
 D.NPCLabelNames[7325]={["082eecf26c6885f1:10"]="康恩"}
 D.NPCLabelNames[7327]={["029cd5671371d1d0:15"]="枯萎战士"}
@@ -5536,7 +5536,7 @@ D.NPCLabelNames[7353]={["3359723aaacda505:14"]="寒冰之灵"}
 D.NPCLabelNames[7354]={["30cb7e903f3e458b:11"]="拉戈斯诺特"}
 D.NPCLabelNames[7355]={["b77b3f03bbacfd16:10"]="图特卡什"}
 D.NPCLabelNames[7356]={["98484b50b7446a45:19"]="腐烂的普雷莫尔"}
-D.NPCLabelNames[7357]={["39cdbfd232f37ebf:15"]=S[16187]}
+D.NPCLabelNames[7357]={["39cdbfd232f37ebf:15"]=S[16188]}
 D.NPCLabelNames[7358]={["33b64b011797e33e:22"]=S[9019]}
 D.NPCLabelNames[7360]={["77a638926f3d6d2b:15"]="丹加洛克士兵"}
 D.NPCLabelNames[7361]={["0ed6c5b31657a234:7"]="格鲁比斯"}
@@ -5652,7 +5652,7 @@ D.NPCLabelNames[7504]={["70fa651b9dbaa6be:21"]="眼之詛咒 (女性)"}
 D.NPCLabelNames[7505]={["0db54e568c3d5781:16"]="血法师德拉吉亚"}
 D.NPCLabelNames[7506]={["86c01676207fdf89:16"]="血法师莱诺雷"}
 D.NPCLabelNames[7523]={["4261afc4b5b4d907:18"]="受难的上层精灵"}
-D.NPCLabelNames[7524]={["6d4d2f930eb84ed8:18"]=S[16991]}
+D.NPCLabelNames[7524]={["6d4d2f930eb84ed8:18"]=S[16992]}
 D.NPCLabelNames[7525]={["d819ca346a22ada1:58"]=S[814]}
 D.NPCLabelNames[7526]={["8077e03f03757ac8:35"]="世界製皮元素訓練師"}
 D.NPCLabelNames[7527]={["e204022883e88b35:14"]="地精暗雷"}
@@ -5675,7 +5675,7 @@ D.NPCLabelNames[7560]={["0044dd4feead5128:14"]="雪兔"}
 D.NPCLabelNames[7561]={["c574f94cb798740d:11"]="白鳞蛇"}
 D.NPCLabelNames[7562]={["e2f7bf3f5fab0b8a:10"]="棕色蟒蛇"}
 D.NPCLabelNames[7563]={["57c2347a4def96c7:9"]="蓝鳞蛇"}
-D.NPCLabelNames[7564]={["55b745b4303806a3:17"]=S[21614]}
+D.NPCLabelNames[7564]={["55b745b4303806a3:17"]=S[21615]}
 D.NPCLabelNames[7565]={["a9bb2c5da3e445ca:14"]="黑色王蛇"}
 D.NPCLabelNames[7566]={["71b04da5cb9f1b26:12"]="血纹蛇"}
 D.NPCLabelNames[7567]={["7663a852b62e3b81:12"]="赤练蛇"}
@@ -5709,7 +5709,7 @@ D.NPCLabelNames[7687]={["623d272358c5830e:17"]="斑点霜刃豹"}
 D.NPCLabelNames[7689]={["b96273cf2b2e197a:17"]="斑点夜刃豹"}
 D.NPCLabelNames[7690]={["0aceb4a73674f640:17"]="条纹夜刃豹"}
 D.NPCLabelNames[7703]={["d4a379e6c62fff71:14"]="黑色迅猛龙"}
-D.NPCLabelNames[7704]={["9d190c315e38b8be:16"]=S[14697]}
+D.NPCLabelNames[7704]={["9d190c315e38b8be:16"]=S[14698]}
 D.NPCLabelNames[7706]={["a5e24ed663dbda9f:11"]="白色迅猛龙"}
 D.NPCLabelNames[7707]={["a9ed358e1b95bf97:15"]="青色迅猛龙"}
 D.NPCLabelNames[7708]={["a94e0c10a52845b5:12"]="紫色迅猛龙"}
@@ -5734,7 +5734,7 @@ D.NPCLabelNames[7735]={["ffd6b253904bb8fe:8"]="费尔库拉"}
 D.NPCLabelNames[7736]={["550fd7f6f812d2e1:15"]="旅店老板希瑞亚"}
 D.NPCLabelNames[7737]={["9524ba0591ea0b96:14"]="旅店老板格鲁尔"}
 D.NPCLabelNames[7738]={["683f2f9d1f5a3dde:14"]="燃烧仆从"}
-D.NPCLabelNames[7739]={["cd0d9ed84bc78dc5:17"]=S[17800]}
+D.NPCLabelNames[7739]={["cd0d9ed84bc78dc5:17"]=S[17801]}
 D.NPCLabelNames[7740]={["9a85c52ed15932d7:18"]="格拉希娜·灵风"}
 D.NPCLabelNames[7743]={["1c1dcab17d904a52:29"]="世界不死族骸骨戰馬騎術訓練師"}
 D.NPCLabelNames[7744]={["bae4fce9169712be:17"]="旅店老板苏弗拉姆"}
@@ -5742,7 +5742,7 @@ D.NPCLabelNames[7745]={["833a04d767d12158:24"]="世界迅猛龍騎術訓練師"}
 D.NPCLabelNames[7746]={["b3df3a5ace73d3f9:30"]="世界機械陸行鳥騎術訓練師"}
 D.NPCLabelNames[7747]={["7a7805cea31807af:16"]="世界坐騎商人"}
 D.NPCLabelNames[7748]={["9cd2c19ccba34953:16"]="世界馬匹商人"}
-D.NPCLabelNames[7749]={["ce7123e5900c2e4e:18"]=S[18640]}
+D.NPCLabelNames[7749]={["ce7123e5900c2e4e:18"]=S[18641]}
 D.NPCLabelNames[7750]={["b8bf58a2f823e219:22"]="桑德·裂蹄"}
 D.NPCLabelNames[7763]={["b57f65eedcde00a1:16"]="克格尔·曲藤"}
 D.NPCLabelNames[7764]={["50b79bbd9649f1d6:16"]="特洛亚斯·月风"}
@@ -5752,7 +5752,7 @@ D.NPCLabelNames[7767]={["74cc31c548f0a862:19"]="枯木地狱猎犬"}
 D.NPCLabelNames[7768]={["0eb52b92aa9b67e5:19"]="枯木血虫"}
 D.NPCLabelNames[7769]={["250b4d3166c99e2c:15"]="哈扎里寄生虫"}
 D.NPCLabelNames[7770]={["251f1adc5d977203:6"]="温琪"}
-D.NPCLabelNames[7771]={["fe499d61e52d6a9c:17"]=S[16677]}
+D.NPCLabelNames[7771]={["fe499d61e52d6a9c:17"]=S[16678]}
 D.NPCLabelNames[7772]={["5cddfb646a7bbbf3:15"]="卡林·风程"}
 D.NPCLabelNames[7773]={["6587588fdf0c0ff2:15"]="玛里"}
 D.NPCLabelNames[7774]={["6a86f22c5460d21b:14"]="沙恩·飘叶"}
@@ -5762,9 +5762,9 @@ D.NPCLabelNames[7777]={["133553a91e28c184:8"]="洛卡·奥哈恩"}
 D.NPCLabelNames[7778]={["60afd86bc613f662:14"]="多兰·刚翼"}
 D.NPCLabelNames[7779]={["e5992e6d18900600:16"]="女牧师泰莉欧娜"}
 D.NPCLabelNames[7780]={["19742f08cd426eaf:6"]="林吉"}
-D.NPCLabelNames[7783]={["159971abf9688b4c:17"]=S[15865]}
+D.NPCLabelNames[7783]={["159971abf9688b4c:17"]=S[15866]}
 D.NPCLabelNames[7784]={["7617cf6974de2280:20"]="自动导航机器人OOX-17/TN"}
-D.NPCLabelNames[7785]={["41f0a3e6ef4e09f1:13"]=S[17268]}
+D.NPCLabelNames[7785]={["41f0a3e6ef4e09f1:13"]=S[17269]}
 D.NPCLabelNames[7786]={["6e43759d36e014c0:17"]="祖穆拉恩骷髅"}
 D.NPCLabelNames[7787]={["5092090c05dca81d:13"]="沙怒奴隶"}
 D.NPCLabelNames[7788]={["404d07ccfe081f35:14"]="沙怒苦工"}
@@ -5779,7 +5779,7 @@ D.NPCLabelNames[7796]={["6f31a605de90bf14:15"]="耐克鲁姆"}
 D.NPCLabelNames[7797]={["1a528d1c6ae79f51:6"]="卢兹鲁"}
 D.NPCLabelNames[7798]={["519b32c26d845d01:13"]="巨锤汉克"}
 D.NPCLabelNames[7799]={["b3d489405165f807:11"]="吉布索恩"}
-D.NPCLabelNames[7800]={["86f232dcd13ff10b:20"]=S[14421]}
+D.NPCLabelNames[7800]={["86f232dcd13ff10b:20"]=S[14422]}
 D.NPCLabelNames[7801]={["565e88767cb449af:19"]="基沃拉丁·猎日者"}
 D.NPCLabelNames[7802]={["84253421e7af25f8:16"]="加尔文"}
 D.NPCLabelNames[7803]={["07f5a4bd1de68628:19"]="沙漠掘洞蝎"}
@@ -5876,15 +5876,15 @@ D.NPCLabelNames[7975]={["5ec94648cf098c43:16"]="纳拉其营地卫士"}
 D.NPCLabelNames[7976]={["5f295b8d6bdc0462:18"]="萨古斯·雷拳"}
 D.NPCLabelNames[7977]={["2151d21c12afa9cf:9"]="加莫里塔"}
 D.NPCLabelNames[7978]={["6bb883448749edc5:15"]="比布尔"}
-D.NPCLabelNames[7980]={["ca7aac3120d0d0a2:15"]=S[17749]}
+D.NPCLabelNames[7980]={["ca7aac3120d0d0a2:15"]=S[17750]}
 D.NPCLabelNames[7995]={["1226af740428aa77:17"]="邪恶祭司海克斯"}
 D.NPCLabelNames[7996]={["a10f3685e8851c20:14"]="守护者奇尔加"}
 D.NPCLabelNames[7997]={["423d6e56eeb198af:20"]="被俘获的小精龙"}
 D.NPCLabelNames[7998]={["7c3443c50531cab6:23"]="爆破专家艾米·短线"}
-D.NPCLabelNames[7999]={["ea8827b011b78c6f:18"]=S[15835]}
+D.NPCLabelNames[7999]={["ea8827b011b78c6f:18"]=S[15836]}
 D.NPCLabelNames[8015]={["b309941ee3570107:17"]="灰谷哨兵"}
 D.NPCLabelNames[8016]={["a7562c65f8d80f9a:12"]="贫瘠之地卫兵"}
-D.NPCLabelNames[8017]={["f813085ec96a49f5:15"]=S[14900]}
+D.NPCLabelNames[8017]={["f813085ec96a49f5:15"]=S[14901]}
 D.NPCLabelNames[8018]={["7dfc7c41941091a0:18"]="戈斯鲁姆"}
 D.NPCLabelNames[8019]={["7c289eb137ab92b2:18"]="菲尔迪恩·月羽"}
 D.NPCLabelNames[8020]={["1c5207536b050576:12"]="夏恩"}
@@ -5909,7 +5909,7 @@ D.NPCLabelNames[8121]={["19c62aa925679f10:12"]="加克希尔·斯巴克斯"}
 D.NPCLabelNames[8122]={["b7a4528d817221de:12"]="基沙克·斯巴克斯"}
 D.NPCLabelNames[8123]={["74d1c58ef16e653f:17"]="掘金者里克"}
 D.NPCLabelNames[8124]={["1726fbe70e45dcfa:6"]="奇兹克"}
-D.NPCLabelNames[8125]={["5e1f8a1a481b1465:15"]=S[20322]}
+D.NPCLabelNames[8125]={["5e1f8a1a481b1465:15"]=S[20323]}
 D.NPCLabelNames[8126]={["8ccf458a7dc22ef9:18"]="尼克斯·斯普克斯宾"}
 D.NPCLabelNames[8127]={["2b1e059836ea3211:8"]="安图苏尔"}
 D.NPCLabelNames[8128]={["14c95a2536d358b2:6"]="皮库尔"}
@@ -6015,7 +6015,7 @@ D.NPCLabelNames[8361]={["0f393dee5d59c4d9:5"]="切比"}
 D.NPCLabelNames[8362]={["0fd15ad7e001215e:5"]="库鲁克"}
 D.NPCLabelNames[8363]={["7e5c1fa503f4263e:15"]="沙迪·迷雾行者"}
 D.NPCLabelNames[8364]={["1020c0398da64164:5"]="帕克瓦"}
-D.NPCLabelNames[8376]={["f24f633fd471efe6:17"]=S[14419]}
+D.NPCLabelNames[8376]={["f24f633fd471efe6:17"]=S[14420]}
 D.NPCLabelNames[8377]={["8809c077d0212ebc:16"]="暗影大厅的安迪"}
 D.NPCLabelNames[8378]={["cabcc6910ffb6d54:15"]="亚历山大·布拉森"}
 D.NPCLabelNames[8379]={["8e7780ccaebc22eb:13"]=S[8046]}
@@ -6074,7 +6074,7 @@ D.NPCLabelNames[8496]={["294fd257152bf84c:12"]="莉芙·雷兹菲克斯"}
 D.NPCLabelNames[8497]={["c0a26d2a98328697:19"]="噩梦镇压者"}
 D.NPCLabelNames[8503]={["894b39ea54726ff5:10"]="吉波维特"}
 D.NPCLabelNames[8504]={["ee12e8e464a0d53d:14"]="黑铁斥候"}
-D.NPCLabelNames[8505]={["5cd625e7c4108c00:14"]=S[20317]}
+D.NPCLabelNames[8505]={["5cd625e7c4108c00:14"]=S[20318]}
 D.NPCLabelNames[8506]={["58f30e9464cbc9c9:18"]="被禁锢的伊兰尼库斯"}
 D.NPCLabelNames[8507]={["107652e0faef6c6b:5"]="法师泰摩尔"}
 D.NPCLabelNames[8508]={["fe66ed4d7f2e2494:12"]="格雷塔·甘特"}
@@ -6173,7 +6173,7 @@ D.NPCLabelNames[8660]={["5627041ee57d6f0f:12"]="伊夫卡尔"}
 D.NPCLabelNames[8661]={["e07dd601bcc0550e:16"]="拍卖师比尔杜"}
 D.NPCLabelNames[8662]={["818357327bef6caf:18"]="塑像烤箱火焰目標"}
 D.NPCLabelNames[8663]={["b7e955edca56c882:17"]="碎骨精英"}
-D.NPCLabelNames[8664]={["d45c393a5aec2011:14"]=S[16274]}
+D.NPCLabelNames[8664]={["d45c393a5aec2011:14"]=S[16275]}
 D.NPCLabelNames[8665]={["050a6722f6d1e579:8"]="夏琳奈尔"}
 D.NPCLabelNames[8666]={["be77b476104c3615:8"]="利尔·迪米"}
 D.NPCLabelNames[8667]={["d83d208e2a406fe1:13"]="狂风漩涡"}
@@ -6201,7 +6201,7 @@ D.NPCLabelNames[8722]={["ed4f17fa673bc6c5:16"]="拍卖师古雷姆"}
 D.NPCLabelNames[8723]={["afd60cd5d94f4040:18"]="拍卖师戈洛萨斯"}
 D.NPCLabelNames[8736]={["b8ee526466b3190f:18"]="巴兹克·布拉斯温"}
 D.NPCLabelNames[8737]={["0b765be669af4443:6"]="林克"}
-D.NPCLabelNames[8738]={["6f6eeac6b3ff8199:17"]=S[16817]}
+D.NPCLabelNames[8738]={["6f6eeac6b3ff8199:17"]=S[16818]}
 D.NPCLabelNames[8756]={["18eab98cd38c166f:6"]="雷塔夫"}
 D.NPCLabelNames[8757]={["91d785650ebae6be:7"]="沙希莱尔"}
 D.NPCLabelNames[8758]={["10d5bafc35c81113:5"]="撒曼"}
@@ -6260,7 +6260,7 @@ D.NPCLabelNames[8912]={["8279cc2c177a75a9:24"]="暮光之锤拷问者"}
 D.NPCLabelNames[8913]={["1824f93e8e6e34d7:16"]="暮光使者"}
 D.NPCLabelNames[8914]={["241fc472d00d9b53:17"]="暮光保镖"}
 D.NPCLabelNames[8915]={["531178425bdc1733:26"]="暮光之锤特使"}
-D.NPCLabelNames[8916]={["fcaf9da1cab92b48:14"]=S[17577]}
+D.NPCLabelNames[8916]={["fcaf9da1cab92b48:14"]=S[17578]}
 D.NPCLabelNames[8917]={["64aee4641f1c89bb:11"]="挖掘场奴隶"}
 D.NPCLabelNames[8920]={["ff2fb625a3ed6100:16"]="武器技师"}
 D.NPCLabelNames[8921]={["a82171332b38498a:10"]="血犬"}
@@ -6271,7 +6271,7 @@ D.NPCLabelNames[8925]={["e89bc6d5d5fd41be:10"]="掘泥虫"}
 D.NPCLabelNames[8926]={["985b64fffa33d762:11"]="深渊钉刺者"}
 D.NPCLabelNames[8927]={["f9c4b53bacf4e81e:13"]="黑暗尖啸者"}
 D.NPCLabelNames[8928]={["2ec1f9b73c242a36:21"]="洞穴雷霆蜥蜴"}
-D.NPCLabelNames[8929]={["3d99a89242f1b809:24"]=S[20967]}
+D.NPCLabelNames[8929]={["3d99a89242f1b809:24"]=S[20968]}
 D.NPCLabelNames[8931]={["9f9989e767902d6a:16"]="旅店老板希瑟尔"}
 D.NPCLabelNames[8932]={["02450bd0bfa7093d:11"]="钻孔甲虫"}
 D.NPCLabelNames[8933]={["c3a87e2a942b0a01:11"]="洞穴爬行者"}
@@ -6295,23 +6295,23 @@ D.NPCLabelNames[8980]={["3a154ffbc23b1bb4:14"]="火腹军官"}
 D.NPCLabelNames[8981]={["201cf4e863301707:20"]="失控的掠夺者"}
 D.NPCLabelNames[8982]={["10a172c3fa68df68:16"]="铁手卫士"}
 D.NPCLabelNames[8983]={["93a0a32eae9387f5:18"]=S[2564]}
-D.NPCLabelNames[8996]={["a9c8f32764313fa0:16"]=S[18685]}
+D.NPCLabelNames[8996]={["a9c8f32764313fa0:16"]=S[18686]}
 D.NPCLabelNames[8997]={["f20d1628d9c33277:20"]="戈沙拉·夜语"}
 D.NPCLabelNames[9016]={["0b0a511a43e7fe97:8"]="贝尔加"}
 D.NPCLabelNames[9017]={["1db3c038b7f9ffb5:13"]="伊森迪奥斯"}
 D.NPCLabelNames[9018]={["03eace6163c54d78:24"]=S[8979]}
-D.NPCLabelNames[9019]={["fd20628e7d32cd99:23"]=S[19862]}
+D.NPCLabelNames[9019]={["fd20628e7d32cd99:23"]=S[19863]}
 D.NPCLabelNames[9020]={["73983b312bcd0994:17"]="指挥官哥沙克"}
 D.NPCLabelNames[9021]={["4ed6cd0dcad8f022:17"]="卡兰·巨锤"}
 D.NPCLabelNames[9022]={["58363844666e2837:15"]="杜格哈尔·雷翼"}
 D.NPCLabelNames[9023]={["473cf1533bf7be50:14"]="温德索尔元帅"}
-D.NPCLabelNames[9024]={["073ccb88181380a9:19"]=S[12458]}
+D.NPCLabelNames[9024]={["073ccb88181380a9:19"]=S[12459]}
 D.NPCLabelNames[9025]={["c525553e21fbfa75:10"]="洛考尔"}
 D.NPCLabelNames[9026]={["f4a127c53b8a7912:15"]="征服者派隆"}
 D.NPCLabelNames[9027]={["cdec87ed02dee822:16"]="修行者高罗什"}
 D.NPCLabelNames[9028]={["0e0b2f2c4fbb34d7:7"]="格里兹尔"}
 D.NPCLabelNames[9029]={["071dc6ccbaca86eb:11"]="剜眼者"}
-D.NPCLabelNames[9030]={["b8b3cae025f16add:17"]=S[17189]}
+D.NPCLabelNames[9030]={["b8b3cae025f16add:17"]=S[17190]}
 D.NPCLabelNames[9031]={["a05dfd5f694087ce:10"]="阿努希尔"}
 D.NPCLabelNames[9032]={["f70bfd716a05ec80:16"]="爬行者赫杜姆"}
 D.NPCLabelNames[9033]={["229b10434f0254c8:17"]="怒炉将军"}
@@ -6332,7 +6332,7 @@ D.NPCLabelNames[9047]={["0fb668afb19b737e:5"]="耶纳尔"}
 D.NPCLabelNames[9056]={["e60130d654fa498f:15"]=S[10549]}
 D.NPCLabelNames[9076]={["0f819e626cff3de5:5"]="格德"}
 D.NPCLabelNames[9077]={["e247fc3b4bce9ab0:16"]="军官高图斯"}
-D.NPCLabelNames[9078]={["96153c34fb3df2eb:23"]=S[13787]}
+D.NPCLabelNames[9078]={["96153c34fb3df2eb:23"]=S[13788]}
 D.NPCLabelNames[9079]={["4824984f63a82d60:28"]="塞朵拉·穆瓦丹尼"}
 D.NPCLabelNames[9080]={["71a2e30fc8666ac4:7"]="雷克斯洛特"}
 D.NPCLabelNames[9081]={["8c1e08194c518d92:18"]="神射手贾拉玛弗"}
@@ -6375,7 +6375,7 @@ D.NPCLabelNames[9216]={["93ff1f2cbad42ff7:17"]="尖石军阀"}
 D.NPCLabelNames[9217]={["67adb73fb9e9d9f6:19"]="尖石首席法师"}
 D.NPCLabelNames[9218]={["7c4a199ea9bac633:20"]="尖石统帅"}
 D.NPCLabelNames[9219]={["723e721ec6622fed:17"]="尖石屠夫"}
-D.NPCLabelNames[9236]={["8c8007117d4169dc:22"]=S[13754]}
+D.NPCLabelNames[9236]={["8c8007117d4169dc:22"]=S[13755]}
 D.NPCLabelNames[9237]={["9a1476623a214023:14"]="指挥官沃恩"}
 D.NPCLabelNames[9238]={["725633d3a4e27612:25"]="奎恩丁"}
 D.NPCLabelNames[9239]={["2caa5f5f7595fcc4:18"]="燃棘秘法师"}
@@ -6406,10 +6406,10 @@ D.NPCLabelNames[9296]={["dcc4318266b5ad6d:12"]="米莉·奥斯沃斯"}
 D.NPCLabelNames[9297]={["f5860206313fe81b:13"]="暴怒的飞龙"}
 D.NPCLabelNames[9298]={["89756f4aa81eb8b3:13"]="多诺瓦·雪山"}
 D.NPCLabelNames[9299]={["a8e48a15126999a4:8"]="加里杨"}
-D.NPCLabelNames[9316]={["a41541dc819cbd01:17"]=S[17920]}
+D.NPCLabelNames[9316]={["a41541dc819cbd01:17"]=S[17921]}
 D.NPCLabelNames[9317]={["ebddada4949e19db:14"]="雷里·格里斯高布"}
 D.NPCLabelNames[9318]={["a1f681607af1c81d:11"]="熏火龙"}
-D.NPCLabelNames[9319]={["efabf82f9ce009d0:18"]=S[21639]}
+D.NPCLabelNames[9319]={["efabf82f9ce009d0:18"]=S[21640]}
 D.NPCLabelNames[9336]={["1b63937d34b99294:14"]="考博普拉格"}
 D.NPCLabelNames[9356]={["ce807e67fce5957c:17"]="旅店老板舒尔卡"}
 D.NPCLabelNames[9376]={["d90c1f2d68809892:11"]="火焰使者"}
@@ -6454,7 +6454,7 @@ D.NPCLabelNames[9500]={["b01b4fd6aafa32a7:15"]="娜玛拉小姐"}
 D.NPCLabelNames[9501]={["2abf760fb15d8a6a:15"]="旅店老板埃德瓦"}
 D.NPCLabelNames[9502]={["aaeae0514271e568:7"]="法拉克斯"}
 D.NPCLabelNames[9503]={["b5532800f0a734ab:14"]="罗克诺特下士"}
-D.NPCLabelNames[9516]={["e72dd081a38f4eba:14"]=S[21966]}
+D.NPCLabelNames[9516]={["e72dd081a38f4eba:14"]=S[21967]}
 D.NPCLabelNames[9517]={["5f09748d233b0a02:17"]="暗影领主费尔丹"}
 D.NPCLabelNames[9518]={["353a4a96fee5504b:7"]="拉凯雅"}
 D.NPCLabelNames[9520]={["198f211d336d6b14:12"]="格拉克·洛克鲁布"}
@@ -6467,14 +6467,14 @@ D.NPCLabelNames[9526]={["c68a8202cf9408b7:14"]="暴怒的狮鹫"}
 D.NPCLabelNames[9527]={["a6b61265941568a6:17"]="暴怒的角鹰兽"}
 D.NPCLabelNames[9528]={["eca812e2275f7ecb:20"]="阿拉珊蒂丝·银空"}
 D.NPCLabelNames[9529]={["d5b853be47451ebf:18"]="梅贝丝·河风"}
-D.NPCLabelNames[9536]={["099bb0e3d3add8f2:16"]=S[22020]}
-D.NPCLabelNames[9537]={["387e3db104b3ae44:17"]=S[21427]}
+D.NPCLabelNames[9536]={["099bb0e3d3add8f2:16"]=S[22021]}
+D.NPCLabelNames[9537]={["387e3db104b3ae44:17"]=S[21428]}
 D.NPCLabelNames[9538]={["63e8fe6b6881602c:21"]="执行官努兹拉克"}
 D.NPCLabelNames[9539]={["fc95218aa14b250d:15"]="雷克斯洛特的阴影"}
 D.NPCLabelNames[9540]={["3c8f90ccc2921b93:17"]="恩诺哈尔·雷酒"}
 D.NPCLabelNames[9541]={["168d0603d5e993cc:16"]="黑须的亲信"}
 D.NPCLabelNames[9542]={["6a03b41f4472eca6:17"]="弗兰克罗恩的灵魂"}
-D.NPCLabelNames[9543]={["17f43083227f12d0:17"]=S[21369]}
+D.NPCLabelNames[9543]={["17f43083227f12d0:17"]=S[21370]}
 D.NPCLabelNames[9544]={["fe0a2e397dab9f62:15"]=S[10091]}
 D.NPCLabelNames[9545]={["6f4363682b8b5cbd:10"]="恐怖的奴隶主"}
 D.NPCLabelNames[9546]={["fac8f1bdb53cd990:17"]="信使拉斯卡尔"}
@@ -6495,7 +6495,7 @@ D.NPCLabelNames[9561]={["21b5a7fdeb5fe7fc:12"]="加琳达"}
 D.NPCLabelNames[9562]={["2681c7f0c944d0d9:17"]="赫林迪斯·河角"}
 D.NPCLabelNames[9563]={["1f9b099e7f82b479:10"]="狼狈不堪的约翰"}
 D.NPCLabelNames[9564]={["fe1597b7acaeeac8:6"]="弗雷萨"}
-D.NPCLabelNames[9565]={["7d8e9cf5cf236650:16"]=S[16669]}
+D.NPCLabelNames[9565]={["7d8e9cf5cf236650:16"]=S[16670]}
 D.NPCLabelNames[9566]={["9d690ddec3739185:7"]="飞艇管理员萨匹塔"}
 D.NPCLabelNames[9568]={["2117e0d673eb3ecf:18"]="维姆萨拉克"}
 D.NPCLabelNames[9576]={["6c1e7fa09e8e023f:21"]="暴風城天賦大師"}
@@ -6664,11 +6664,11 @@ D.NPCLabelNames[10158]={["d54ee020740a2fef:7"]="月夜枭兽"}
 D.NPCLabelNames[10159]={["15354a5280289637:12"]="小月夜枭兽"}
 D.NPCLabelNames[10160]={["8faaddb8d55837c5:13"]="狂暴的月夜枭兽"}
 D.NPCLabelNames[10161]={["09197fd04ec99445:12"]="群居雏龙"}
-D.NPCLabelNames[10162]={["65c9a54ae83cfaa3:18"]=S[17918]}
+D.NPCLabelNames[10162]={["65c9a54ae83cfaa3:18"]=S[17919]}
 D.NPCLabelNames[10176]={["1a7f59bfe19c6534:7"]="卡尔图克"}
 D.NPCLabelNames[10177]={["073bad1472eaffa1:11"]="黑石塔甲虫"}
-D.NPCLabelNames[10178]={["13cf5b18e1cae96f:30"]=S[17945]}
-D.NPCLabelNames[10179]={["0c9e7f6014dbcf3d:23"]=S[17006]}
+D.NPCLabelNames[10178]={["13cf5b18e1cae96f:30"]=S[17946]}
+D.NPCLabelNames[10179]={["0c9e7f6014dbcf3d:23"]=S[17007]}
 D.NPCLabelNames[10180]={["1afc300547b0ab98:23"]=S[4207]}
 D.NPCLabelNames[10181]={["d5eebc4c3be3c871:22"]=S[10313]}
 D.NPCLabelNames[10182]={["19e014b3f5cfbbb0:6"]="罗卡鲁"}
@@ -6808,9 +6808,9 @@ D.NPCLabelNames[10433]={["0a09546048abb7ff:15"]="马杜克·布莱克波尔"}
 D.NPCLabelNames[10435]={["657efb308abbd165:19"]=S[10256]}
 D.NPCLabelNames[10436]={["62ed68551acf9e36:16"]=S[8806]}
 D.NPCLabelNames[10437]={["8511cc35f1e2a7b0:11"]="奈鲁布恩坎"}
-D.NPCLabelNames[10438]={["f24baf8f878f2772:15"]=S[18303]}
+D.NPCLabelNames[10438]={["f24baf8f878f2772:15"]=S[18304]}
 D.NPCLabelNames[10439]={["7085bdef98642ad0:17"]=S[5928]}
-D.NPCLabelNames[10440]={["5f75e017c1e59106:14"]=S[16769]}
+D.NPCLabelNames[10440]={["5f75e017c1e59106:14"]=S[16770]}
 D.NPCLabelNames[10441]={["b4b5294eed82ead3:10"]="天灾鼠"}
 D.NPCLabelNames[10442]={["401b26ff2aaab9c0:14"]="多彩雏龙"}
 D.NPCLabelNames[10445]={["ffbe92f7cff7b050:13"]="萨琳娜·杜洛曼"}
@@ -6861,7 +6861,7 @@ D.NPCLabelNames[10498]={["d9b67fa1b6daa832:13"]="鬼灵导师"}
 D.NPCLabelNames[10499]={["b4e74da77127e7cc:18"]="鬼灵研究员"}
 D.NPCLabelNames[10500]={["faa3de9f1c7b437e:15"]="鬼灵教师"}
 D.NPCLabelNames[10502]={["8d0ddd8cdff839f5:16"]="伊露希亚·巴罗夫"}
-D.NPCLabelNames[10503]={["0131f92d45284b7c:12"]=S[19350]}
+D.NPCLabelNames[10503]={["0131f92d45284b7c:12"]=S[19351]}
 D.NPCLabelNames[10504]={["eed9a068c868d9e3:15"]="阿雷克斯·巴罗夫领主"}
 D.NPCLabelNames[10505]={["aac333524c1c434d:17"]="讲师玛丽希亚"}
 D.NPCLabelNames[10506]={["9b93664fa3036a52:17"]=S[1376]}
@@ -6963,9 +6963,9 @@ D.NPCLabelNames[10759]={["8d0f2c71d318c3a6:34"]="恐怖图腾践踏者"}
 D.NPCLabelNames[10760]={["bed094f84c4cf4cf:36"]="恐怖图腾地卜师"}
 D.NPCLabelNames[10761]={["105e078ce47d5bed:33"]="恐怖图腾抢夺者"}
 D.NPCLabelNames[10762]={["6bbc5435418fe3b4:13"]="黑手暴徒"}
-D.NPCLabelNames[10776]={["d50cb7915ce1f674:13"]=S[18294]}
+D.NPCLabelNames[10776]={["d50cb7915ce1f674:13"]=S[18295]}
 D.NPCLabelNames[10778]={["6e0c0f2f1eee0c2c:14"]="詹妮丝·费尔斯通"}
-D.NPCLabelNames[10779]={["7de511fed3e34d8d:16"]=S[18992]}
+D.NPCLabelNames[10779]={["7de511fed3e34d8d:16"]=S[18993]}
 D.NPCLabelNames[10780]={["7d546127299ee4a2:12"]="被感染的鹿"}
 D.NPCLabelNames[10781]={["d79e4f00822ccfd3:20"]="皇家管理人巴哈乌斯"}
 D.NPCLabelNames[10782]={["8bf84752f3b830af:20"]="皇家代理人巴瑟罗尔"}
@@ -6996,7 +6996,7 @@ D.NPCLabelNames[10806]={["211a5d907c43ff31:6"]="尤西乌斯"}
 D.NPCLabelNames[10807]={["4d2f2ac16d8580e2:8"]="布鲁米兰"}
 D.NPCLabelNames[10808]={["4dfd79b1e1930680:13"]="悲惨的提米"}
 D.NPCLabelNames[10809]={["46daef2dde90be3e:10"]="石脊"}
-D.NPCLabelNames[10811]={["dce455e1c177f650:17"]=S[14860]}
+D.NPCLabelNames[10811]={["dce455e1c177f650:17"]=S[14861]}
 D.NPCLabelNames[10812]={["d920482376b4e49e:22"]="大十字军战士达索汉"}
 D.NPCLabelNames[10813]={["8ffacfeaa0017371:9"]=S[10257]}
 D.NPCLabelNames[10814]={["0fc418a58356702a:19"]="多彩精英卫士"}
@@ -7070,7 +7070,7 @@ D.NPCLabelNames[10951]={["30f6f129c6140a8c:15"]="肆虐的尸体"}
 D.NPCLabelNames[10952]={["bc096982528f141d:17"]="肆虐的骷髅"}
 D.NPCLabelNames[10953]={["5f10adb5baec7d22:15"]="霍古斯的仆从"}
 D.NPCLabelNames[10954]={["b4eed2c5724874e0:11"]="放血者"}
-D.NPCLabelNames[10955]={["40d16be74c9c6c90:22"]=S[18950]}
+D.NPCLabelNames[10955]={["40d16be74c9c6c90:22"]=S[18951]}
 D.NPCLabelNames[10956]={["67d6211de1dd1918:9"]="纳迦海妖"}
 D.NPCLabelNames[10976]={["068a343a5af7aee9:6"]="耶兹巴"}
 D.NPCLabelNames[10977]={["16cfe6f991e0e868:7"]="奎克希尔"}
@@ -7098,8 +7098,8 @@ D.NPCLabelNames[11018]={["20145c91a24da832:10"]="亚科纳琳"}
 D.NPCLabelNames[11019]={["21a7fcb63fec3665:13"]="杰希尔·月弓"}
 D.NPCLabelNames[11020]={["0cf32ff8f80b8841:23"]="特雷·莱弗治的残骸"}
 D.NPCLabelNames[11021]={["2f2069ec82dc4b8f:22"]="冬泉霜刃豹"}
-D.NPCLabelNames[11022]={["29863052ed2e0bef:10"]=S[21256]}
-D.NPCLabelNames[11023]={["58207228a7da6dd5:11"]=S[17923]}
+D.NPCLabelNames[11022]={["29863052ed2e0bef:10"]=S[21257]}
+D.NPCLabelNames[11023]={["58207228a7da6dd5:11"]=S[17924]}
 D.NPCLabelNames[11024]={["0f49ce8719201d20:5"]="戴拉"}
 D.NPCLabelNames[11025]={["e30012d41b893e7b:7"]="穆德拉克"}
 D.NPCLabelNames[11026]={["eb9a1063b386e1c4:18"]="斯普莱特"}
@@ -7108,11 +7108,11 @@ D.NPCLabelNames[11028]={["ee4d795b29b3c9c0:15"]="耶玛"}
 D.NPCLabelNames[11029]={["5d000c86d8445763:16"]="特里克希"}
 D.NPCLabelNames[11030]={["6df6bad59a8a2668:14"]="无脑的亡灵"}
 D.NPCLabelNames[11031]={["14c69fbe4d513b7b:13"]="弗兰克林·洛伊德"}
-D.NPCLabelNames[11032]={["504b8e76f54275e3:14"]=S[12271]}
+D.NPCLabelNames[11032]={["504b8e76f54275e3:14"]=S[12272]}
 D.NPCLabelNames[11033]={["4edba076c472f423:11"]="烟鬼拉鲁恩"}
-D.NPCLabelNames[11034]={["5df1d979cc4082b2:18"]=S[16672]}
+D.NPCLabelNames[11034]={["5df1d979cc4082b2:18"]=S[16673]}
 D.NPCLabelNames[11035]={["2ab09efe26e46097:16"]="贝蒂娜·比格辛克"}
-D.NPCLabelNames[11036]={["2c2632846831516d:27"]=S[18437]}
+D.NPCLabelNames[11036]={["2c2632846831516d:27"]=S[18438]}
 D.NPCLabelNames[11037]={["a26017d749ac72e6:15"]="洁娜·雷姆尼利"}
 D.NPCLabelNames[11038]={["143199b78219822e:13"]="护理者奥林"}
 D.NPCLabelNames[11039]={["877f79fc6e085d33:22"]=S[10105]}
@@ -7173,7 +7173,7 @@ D.NPCLabelNames[11118]={["5c2218c7b0fba26a:15"]="旅店老板维兹奇"}
 D.NPCLabelNames[11119]={["5402a066e90e4471:7"]="阿兹雷比"}
 D.NPCLabelNames[11120]={["74602a850e20ba58:16"]="复生的铸锤师"}
 D.NPCLabelNames[11121]={["e1b18ca99ab2bd6c:20"]="黑衣守卫铸剑师"}
-D.NPCLabelNames[11122]={["7adb433d8366d5e0:12"]=S[15512]}
+D.NPCLabelNames[11122]={["7adb433d8366d5e0:12"]=S[15513]}
 D.NPCLabelNames[11136]={["e2a7e68e9e980a8b:9"]="被解放的灵魂"}
 D.NPCLabelNames[11137]={["06189978e244e67d:9"]="塞安德尔"}
 D.NPCLabelNames[11138]={["329311403acb4ab5:8"]="麦瑟蕾亚"}
@@ -7185,16 +7185,16 @@ D.NPCLabelNames[11143]={["f19371259c98c170:16"]="邮差马龙"}
 D.NPCLabelNames[11144]={["a8782d62448795ab:12"]="预言之球"}
 D.NPCLabelNames[11145]={["7e789f1e6d092867:16"]="米洛尔·怒斩"}
 D.NPCLabelNames[11146]={["12d301a4231be521:15"]="埃隆努斯·冷钢"}
-D.NPCLabelNames[11147]={["a2d8426edba703b7:19"]=S[17943]}
-D.NPCLabelNames[11148]={["f977a4759af22610:20"]=S[17785]}
-D.NPCLabelNames[11149]={["3b8f06d3e81a92b4:24"]=S[17806]}
+D.NPCLabelNames[11147]={["a2d8426edba703b7:19"]=S[17944]}
+D.NPCLabelNames[11148]={["f977a4759af22610:20"]=S[17786]}
+D.NPCLabelNames[11149]={["3b8f06d3e81a92b4:24"]=S[17807]}
 D.NPCLabelNames[11150]={["d9a08cab6b57bdcc:25"]=S[2864]}
 D.NPCLabelNames[11151]={["4851100a0b11b6a3:32"]="騎乘用機械陸行鳥 (黃色/綠色)"}
 D.NPCLabelNames[11152]={["6034aaf69b1a8c4b:18"]="天灾之锅"}
-D.NPCLabelNames[11153]={["5e713156fdd9c813:16"]=S[17804]}
-D.NPCLabelNames[11154]={["75c1c8c37e37754a:17"]=S[18646]}
-D.NPCLabelNames[11155]={["2fb541e3b72fc6ee:18"]=S[14893]}
-D.NPCLabelNames[11156]={["c44d23b616ffc8d1:21"]=S[17947]}
+D.NPCLabelNames[11153]={["5e713156fdd9c813:16"]=S[17805]}
+D.NPCLabelNames[11154]={["75c1c8c37e37754a:17"]=S[18647]}
+D.NPCLabelNames[11155]={["2fb541e3b72fc6ee:18"]=S[14894]}
+D.NPCLabelNames[11156]={["c44d23b616ffc8d1:21"]=S[17948]}
 D.NPCLabelNames[11176]={["f03aef5ee339fe61:17"]="克拉索克·火拳"}
 D.NPCLabelNames[11177]={["dc239f35a501b6d2:16"]="奥克索斯·铁怒"}
 D.NPCLabelNames[11178]={["ad9838d2bad6f3a7:17"]="伯古什"}
@@ -7230,7 +7230,7 @@ D.NPCLabelNames[11257]={["d6073e4f6588c948:18"]="通灵学院管理者"}
 D.NPCLabelNames[11258]={["6fcd5678c0b81225:13"]="脆弱的骷髅"}
 D.NPCLabelNames[11259]={["335a34fc402ab995:14"]="纳塔卡·长角"}
 D.NPCLabelNames[11260]={["324fcc575186525e:17"]="北郡农夫"}
-D.NPCLabelNames[11261]={["c30026e02053938f:22"]=S[16776]}
+D.NPCLabelNames[11261]={["c30026e02053938f:22"]=S[16777]}
 D.NPCLabelNames[11262]={["7e5ea68bc6150dc0:12"]="奥妮克希亚雏龙"}
 D.NPCLabelNames[11263]={["6f4e4fa0deaccd73:18"]="鬼灵幻象"}
 D.NPCLabelNames[11276]={["3faf315190465286:15"]="艾萨拉哨兵"}
@@ -7246,7 +7246,7 @@ D.NPCLabelNames[11285]={["7c9d7a11ef23ca84:4"]="罗瑞"}
 D.NPCLabelNames[11286]={["0dee3cffcb14d032:17"]="马杜克镇长"}
 D.NPCLabelNames[11287]={["76506e86ec7c5cb7:14"]="面包师玛斯特森"}
 D.NPCLabelNames[11288]={["dfdcab6132d6636a:16"]="鬼灵背叛者"}
-D.NPCLabelNames[11289]={["96d3a560220cf687:16"]=S[21899]}
+D.NPCLabelNames[11289]={["96d3a560220cf687:16"]=S[21900]}
 D.NPCLabelNames[11290]={["fee9ed50da9a4e13:16"]="烂苔僵尸"}
 D.NPCLabelNames[11291]={["dbc90996eb269d4f:18"]="不死的烂苔巨魔"}
 D.NPCLabelNames[11292]={["0679386fc16cbe3a:19"]="烂苔狂暴者"}
@@ -7256,7 +7256,7 @@ D.NPCLabelNames[11317]={["43cd7cee341802df:12"]="吉纳泽林"}
 D.NPCLabelNames[11318]={["1e0d112d1e1cd9ce:13"]="怒焰穴居人"}
 D.NPCLabelNames[11319]={["dc9d8502fd0e73f1:14"]="怒焰萨满祭司"}
 D.NPCLabelNames[11320]={["0178f99304d13e48:10"]="钻土虫"}
-D.NPCLabelNames[11321]={["d920bb8bfa32c114:15"]=S[16368]}
+D.NPCLabelNames[11321]={["d920bb8bfa32c114:15"]=S[16369]}
 D.NPCLabelNames[11322]={["223583ae07b09417:19"]="燃刃信徒"}
 D.NPCLabelNames[11323]={["183d357aa5a78889:20"]="燃刃执行者"}
 D.NPCLabelNames[11324]={["f7835d992dcbaa5a:19"]="燃刃术士"}
@@ -7307,7 +7307,7 @@ D.NPCLabelNames[11378]={["499277ec18c7f7fd:16"]="工头塔兹利尔"}
 D.NPCLabelNames[11379]={["8818a471c520eaa4:17"]="尼克雷斯"}
 D.NPCLabelNames[11380]={["06a0fef581fbceb8:15"]="妖术师金度"}
 D.NPCLabelNames[11381]={["0b8883c6349b85af:3"]="吉恩"}
-D.NPCLabelNames[11382]={["e4f04dbb1e427c3e:17"]=S[18896]}
+D.NPCLabelNames[11382]={["e4f04dbb1e427c3e:17"]=S[18897]}
 D.NPCLabelNames[11383]={["879f80fbad2459e2:22"]="高阶祭司海瓦纳"}
 D.NPCLabelNames[11384]={["b1aa13b28fc5192b:21"]="提卡沙长老"}
 D.NPCLabelNames[11385]={["5b3bdb77e995ebc2:25"]="无情的莫格维"}
@@ -7395,7 +7395,7 @@ D.NPCLabelNames[11488]={["59400214620b88b9:16"]="伊琳娜·暗木"}
 D.NPCLabelNames[11489]={["9eca2c716be91faa:15"]="特迪斯·扭木"}
 D.NPCLabelNames[11490]={["ccc9eb3950004e4a:15"]="瑟雷姆·刺蹄"}
 D.NPCLabelNames[11491]={["2d07a9bcd0ea44e7:11"]="埃隆巴克"}
-D.NPCLabelNames[11492]={["d384f4714849465c:19"]=S[18371]}
+D.NPCLabelNames[11492]={["d384f4714849465c:19"]=S[18372]}
 D.NPCLabelNames[11493]={["8f54bb7c1a9817e3:15"]="森提乌斯"}
 D.NPCLabelNames[11494]={["e1e52d4521cc30be:13"]="因萨提斯"}
 D.NPCLabelNames[11495]={["4fe8c2bd23d77c5a:14"]="埃维杜斯"}
@@ -7405,12 +7405,12 @@ D.NPCLabelNames[11498]={["a1ef612a1028991d:14"]="沮丧的斯卡尔"}
 D.NPCLabelNames[11499]={["b622417e5d664e09:24"]="指挥官格莫尔"}
 D.NPCLabelNames[11500]={["a318099f86bffd20:24"]="巴格罗什"}
 D.NPCLabelNames[11501]={["2276ffd43ac0e5ad:10"]="戈多克大王"}
-D.NPCLabelNames[11502]={["d4162002b938944b:8"]=S[12169]}
+D.NPCLabelNames[11502]={["d4162002b938944b:8"]=S[12170]}
 D.NPCLabelNames[11516]={["d8b4e9724cf327f5:15"]="木喉游荡者"}
 D.NPCLabelNames[11517]={["4f6e5d106ee78e41:10"]="奥格弗林特"}
 D.NPCLabelNames[11518]={["3163b0167cbad0fd:17"]="祈求者耶戈什"}
 D.NPCLabelNames[11519]={["3d23e098597ac397:8"]="巴扎兰"}
-D.NPCLabelNames[11520]={["2ab3b992a9d8b26d:20"]=S[21583]}
+D.NPCLabelNames[11520]={["2ab3b992a9d8b26d:20"]=S[21584]}
 D.NPCLabelNames[11521]={["4460638935aeecba:14"]="科多幽灵"}
 D.NPCLabelNames[11536]={["25cc3c03a6c70cb2:30"]="军需官米兰达·布利洛克"}
 D.NPCLabelNames[11546]={["5c7c97263dce4943:12"]="加克·斯德林"}
@@ -7472,8 +7472,8 @@ D.NPCLabelNames[11626]={["93dd6b7112b7ed78:14"]="里格·基泽尔顿"}
 D.NPCLabelNames[11627]={["f8e4727d92e38ace:9"]="被驯服的科多兽"}
 D.NPCLabelNames[11628]={["1441a815f80b8ee4:14"]="干枯的尸体"}
 D.NPCLabelNames[11629]={["3f34968f7030c5ea:14"]="杰希卡·雷德帕斯"}
-D.NPCLabelNames[11636]={["d1aca3e0a97994ed:20"]=S[17924]}
-D.NPCLabelNames[11637]={["34f70b0aa9db9ed7:19"]=S[21257]}
+D.NPCLabelNames[11636]={["d1aca3e0a97994ed:20"]=S[17925]}
+D.NPCLabelNames[11637]={["34f70b0aa9db9ed7:19"]=S[21258]}
 D.NPCLabelNames[11656]={["db1ec9b86a408fb1:11"]="战歌苦工"}
 D.NPCLabelNames[11657]={["d5842119e4b3e7f8:7"]="莫洛克"}
 D.NPCLabelNames[11658]={["0da08c8726282152:11"]="熔核巨人"}
@@ -7615,7 +7615,7 @@ D.NPCLabelNames[11818]={["38960a6372d955ba:9"]="奥利坎多"}
 D.NPCLabelNames[11819]={["c234040cb8d7ad2d:8"]="肖萨加"}
 D.NPCLabelNames[11820]={["e9d2d012c21b8d4b:10"]="洛克·奥卡尔"}
 D.NPCLabelNames[11821]={["ebf892ba4904f4d7:13"]="达恩·鹰爪"}
-D.NPCLabelNames[11822]={["873aa73c96fdd481:15"]=S[14266]}
+D.NPCLabelNames[11822]={["873aa73c96fdd481:15"]=S[14267]}
 D.NPCLabelNames[11823]={["9ade691e0ce3d0dd:14"]="瓦克·战痕"}
 D.NPCLabelNames[11824]={["b62a0b2dd5e19b78:10"]="艾瑞克·菲利克斯"}
 D.NPCLabelNames[11825]={["f589ec683c53d25f:11"]="派格·菲利克斯"}
@@ -7637,7 +7637,7 @@ D.NPCLabelNames[11840]={["a6275903d4c7f4c2:12"]="蛮爪突击队员"}
 D.NPCLabelNames[11856]={["e91fc47ec820f9f5:12"]="卡雅·扁蹄"}
 D.NPCLabelNames[11857]={["8d4b133519778580:14"]="玛卡巴·扁蹄"}
 D.NPCLabelNames[11858]={["4c55afaeba4fca01:16"]="格鲁迪格·黑云"}
-D.NPCLabelNames[11859]={["499050c7402ab8fc:9"]=S[14376]}
+D.NPCLabelNames[11859]={["499050c7402ab8fc:9"]=S[14377]}
 D.NPCLabelNames[11860]={["c0afe22a7558c6e9:18"]="马格兰"}
 D.NPCLabelNames[11861]={["a659beaff55324be:9"]="摩罗加尔"}
 D.NPCLabelNames[11862]={["36da310c4249bd51:8"]="苏纳曼"}
@@ -7656,7 +7656,7 @@ D.NPCLabelNames[11874]={["07af1cdbc76a44a0:11"]="马萨特·坦德"}
 D.NPCLabelNames[11875]={["be66d5b4a12d57a5:21"]="迫击炮小队活动假人"}
 D.NPCLabelNames[11876]={["cd40dcb3a3303cbc:11"]="恶魔灵魂"}
 D.NPCLabelNames[11877]={["2ebb733473b2c411:12"]="鲁恩·蛮鬃"}
-D.NPCLabelNames[11878]={["5e247a6e9d167257:20"]=S[17857]}
+D.NPCLabelNames[11878]={["5e247a6e9d167257:20"]=S[17858]}
 D.NPCLabelNames[11880]={["4e209c59b0943c86:15"]="暮光复仇者"}
 D.NPCLabelNames[11881]={["f50a561d8acef216:15"]="暮光地王"}
 D.NPCLabelNames[11882]={["b10fcdad1eb716e0:19"]="暮光唤石者"}
@@ -7704,7 +7704,7 @@ D.NPCLabelNames[11944]={["1f3db1f0ef5d9d0b:11"]="沃恩·星眼"}
 D.NPCLabelNames[11945]={["dc6974caed9c974b:14"]="克莱尔·韦洛"}
 D.NPCLabelNames[11946]={["035e8da1791c9218:9"]="德雷克塔尔"}
 D.NPCLabelNames[11947]={["2a492f98a09c4f03:16"]="加尔范上尉"}
-D.NPCLabelNames[11948]={["14cb7aade203dd92:16"]=S[18352]}
+D.NPCLabelNames[11948]={["14cb7aade203dd92:16"]=S[18353]}
 D.NPCLabelNames[11949]={["bca2fd75778b845c:25"]=S[10253]}
 D.NPCLabelNames[11956]={["5a1fa28df42b0552:15"]="巨熊之灵"}
 D.NPCLabelNames[11957]={["6f5a106b008fa69a:14"]="巨豹之灵"}
@@ -7712,17 +7712,17 @@ D.NPCLabelNames[11958]={["8b98b4480b464815:19"]="格拉库·斯比莱特"}
 D.NPCLabelNames[11959]={["64eb3d4814b48155:23"]="黑曜石毁灭者"}
 D.NPCLabelNames[11978]={["eb818a530d262336:19"]="奈萨里安"}
 D.NPCLabelNames[11979]={["6fa75066901a1c5b:15"]="金姆·布雷登"}
-D.NPCLabelNames[11980]={["c3fd573e2fc8d769:17"]=S[16984]}
+D.NPCLabelNames[11980]={["c3fd573e2fc8d769:17"]=S[16985]}
 D.NPCLabelNames[11981]={["01b1b83233f670d7:8"]="弗莱格尔"}
 D.NPCLabelNames[11982]={["36baa1bf3f00e00e:8"]="玛格曼达"}
 D.NPCLabelNames[11983]={["aca9a4b03dcf464d:7"]="费尔默"}
-D.NPCLabelNames[11988]={["eea0cda74a936c8a:22"]=S[16341]}
+D.NPCLabelNames[11988]={["eea0cda74a936c8a:22"]=S[16342]}
 D.NPCLabelNames[11994]={["e10741e8aab76851:15"]="罗比·布雷登"}
 D.NPCLabelNames[11996]={["c7bf43ebc7d86dd6:18"]="阿什雷"}
 D.NPCLabelNames[11997]={["6e47a253e9791d80:15"]="雷矛传令官"}
 D.NPCLabelNames[11998]={["94139dfb0ad4a9ba:15"]="霜狼传令官"}
 D.NPCLabelNames[12017]={["09952ff1e9209b9e:18"]="勒什雷尔"}
-D.NPCLabelNames[12018]={["adba980373215fd4:17"]=S[17704]}
+D.NPCLabelNames[12018]={["adba980373215fd4:17"]=S[17705]}
 D.NPCLabelNames[12019]={["f83e74a0511649b1:6"]="达尔贡"}
 D.NPCLabelNames[12020]={["4de47ed30ad06d30:23"]="月光林地鍊金術訓練師"}
 D.NPCLabelNames[12021]={["dd8e912247bed027:17"]="黛欧琳·夏叶"}
@@ -7754,19 +7754,19 @@ D.NPCLabelNames[12047]={["a07bec0a9562ce29:20"]="雷矛巡山人"}
 D.NPCLabelNames[12048]={["b5b1f360362a8a9b:16"]="联盟哨兵"}
 D.NPCLabelNames[12050]={["51fdd0401a8b3e5f:17"]="雷矛防御者"}
 D.NPCLabelNames[12051]={["17c506586c7bd3d9:20"]="霜狼军团士兵"}
-D.NPCLabelNames[12052]={["8fe591b19d66eaac:16"]=S[21440]}
+D.NPCLabelNames[12052]={["8fe591b19d66eaac:16"]=S[21441]}
 D.NPCLabelNames[12053]={["a45cacf6cca55cc7:17"]="霜狼守卫者"}
 D.NPCLabelNames[12054]={["c19543251b9c5698:10"]="晨逐者"}
 D.NPCLabelNames[12056]={["dc0374e84b66bf6f:11"]="迦顿男爵"}
 D.NPCLabelNames[12057]={["7c973651e873f93a:4"]="加尔"}
-D.NPCLabelNames[12076]={["7b42e2c0c550ea07:13"]=S[16368]}
+D.NPCLabelNames[12076]={["7b42e2c0c550ea07:13"]=S[16369]}
 D.NPCLabelNames[12096]={["1a81373345e91812:22"]="雷矛军需官"}
 D.NPCLabelNames[12097]={["04d885dbb304d158:22"]="霜狼军需官"}
-D.NPCLabelNames[12098]={["2edda9757aa891ce:17"]=S[18579]}
+D.NPCLabelNames[12098]={["2edda9757aa891ce:17"]=S[18580]}
 D.NPCLabelNames[12099]={["7e1e21247818bab1:9"]="火誓者"}
 D.NPCLabelNames[12100]={["2fba062ea5615e75:10"]="熔岩掠夺者"}
 D.NPCLabelNames[12101]={["3339c98109e4a3e4:10"]="熔岩奔腾者"}
-D.NPCLabelNames[12116]={["377a7ad55ff62208:16"]=S[18283]}
+D.NPCLabelNames[12116]={["377a7ad55ff62208:16"]=S[18284]}
 D.NPCLabelNames[12118]={["446b82a7de7bbf9a:8"]="鲁西弗隆"}
 D.NPCLabelNames[12119]={["7e5d8d8618711677:19"]="火妖护卫"}
 D.NPCLabelNames[12120]={["1feb671cad0b3f51:17"]="天灾白蚁"}
@@ -7775,7 +7775,7 @@ D.NPCLabelNames[12122]={["0f52ae92048486e5:5"]="杜洛斯"}
 D.NPCLabelNames[12123]={["5c83b740463a0c31:9"]="暗礁鲨鱼"}
 D.NPCLabelNames[12124]={["2d14b5f17de3caf8:10"]="大鲨鱼"}
 D.NPCLabelNames[12125]={["56c1287134db11b6:12"]="巨型鲨鱼"}
-D.NPCLabelNames[12126]={["fc8a05862dd4ee0b:18"]=S[12489]}
+D.NPCLabelNames[12126]={["fc8a05862dd4ee0b:18"]=S[12490]}
 D.NPCLabelNames[12127]={["500dbea578fff470:18"]="雷矛卫兵"}
 D.NPCLabelNames[12128]={["75655bb3a62ce634:12"]="红衣精英"}
 D.NPCLabelNames[12129]={["49bbca504a54e4a1:13"]="奥妮克希亚守卫"}
@@ -7785,7 +7785,7 @@ D.NPCLabelNames[12138]={["5d81bd1c246a229b:8"]="月爪枭兽"}
 D.NPCLabelNames[12140]={["fc6aea9e62db113d:15"]="艾露恩的卫士"}
 D.NPCLabelNames[12141]={["1b8413dfa1723016:8"]="冰图腾"}
 D.NPCLabelNames[12142]={["836795cff1461cac:18"]="火妖卫兵"}
-D.NPCLabelNames[12143]={["628cb86fd74813ea:10"]=S[16279]}
+D.NPCLabelNames[12143]={["628cb86fd74813ea:10"]=S[16280]}
 D.NPCLabelNames[12144]={["f8e1a197404669ec:14"]="月爪枭兽的灵魂"}
 D.NPCLabelNames[12145]={["23161ebd6b2c372e:17"]="骑乘用科多兽（黑色）"}
 D.NPCLabelNames[12146]={["416de1ff08f8d272:17"]="科多獸坐騎 (橄欖綠)"}
@@ -7798,7 +7798,7 @@ D.NPCLabelNames[12152]={["fc40090995f4ebfc:12"]="艾露恩之音"}
 D.NPCLabelNames[12156]={["7e700120f9957ba1:18"]="冰斧掷斧者"}
 D.NPCLabelNames[12157]={["84116b33109df87c:20"]="冰斧暗影猎手"}
 D.NPCLabelNames[12158]={["a8bfa3cda780983c:14"]="冰斧猎头者"}
-D.NPCLabelNames[12159]={["bbaff2f1d94111ce:19"]=S[18865]}
+D.NPCLabelNames[12159]={["bbaff2f1d94111ce:19"]=S[18866]}
 D.NPCLabelNames[12160]={["1d2a92d34f25f712:18"]="幽影谷哨兵"}
 D.NPCLabelNames[12176]={["b9fb4e99f0d5de74:8"]="温驯的科多兽"}
 D.NPCLabelNames[12177]={["2acc7da7081e1c46:15"]="凯勒·布莱索恩"}
@@ -7810,7 +7810,7 @@ D.NPCLabelNames[12197]={["f4593b4c30ed17f3:18"]="格罗杜姆·钢须"}
 D.NPCLabelNames[12198]={["be8dae48c77cb8d9:13"]="马丁·林塞"}
 D.NPCLabelNames[12199]={["e9713bbf77668440:16"]="珀月的阴影"}
 D.NPCLabelNames[12200]={["ef3df3073afe1ba6:16"]="蔚蓝龙族"}
-D.NPCLabelNames[12201]={["8222d82a7ce3a037:17"]=S[16782]}
+D.NPCLabelNames[12201]={["8222d82a7ce3a037:17"]=S[16783]}
 D.NPCLabelNames[12202]={["e2a646c9d172b490:10"]="人类徽记"}
 D.NPCLabelNames[12203]={["a0b5e0f5e0802cc6:9"]="兰斯利德"}
 D.NPCLabelNames[12204]={["88037509a35e22fe:15"]="恶鞭掠夺者"}
@@ -7827,7 +7827,7 @@ D.NPCLabelNames[12221]={["93ee3654b8bf1c2d:12"]="毒性软泥怪"}
 D.NPCLabelNames[12222]={["58ed10b67da31827:14"]="爬行污泥怪"}
 D.NPCLabelNames[12223]={["ee219f19efe7baf8:12"]="洞窟潜伏者"}
 D.NPCLabelNames[12224]={["629852d293da1181:14"]="洞窟游荡者"}
-D.NPCLabelNames[12225]={["eddfe4cd666d53a6:17"]=S[19057]}
+D.NPCLabelNames[12225]={["eddfe4cd666d53a6:17"]=S[19058]}
 D.NPCLabelNames[12236]={["67270128674ecc95:14"]="维利塔恩"}
 D.NPCLabelNames[12237]={["4a264e2de6ed0c00:19"]="收割者麦什洛克"}
 D.NPCLabelNames[12238]={["284d8b81f5441b64:14"]="扎尔塔的灵魂"}
@@ -7873,9 +7873,9 @@ D.NPCLabelNames[12337]={["d20e409916487cce:14"]="红衣信使"}
 D.NPCLabelNames[12338]={["9551b27669729d87:18"]="葬影村卫兵"}
 D.NPCLabelNames[12339]={["29cbf050bca302ef:8"]="德米提雅"}
 D.NPCLabelNames[12340]={["133afc7e972ec33b:18"]="杜泽加尔"}
-D.NPCLabelNames[12341]={["75c1c8c37e37754a:17"]=S[18646]}
-D.NPCLabelNames[12342]={["2fb541e3b72fc6ee:18"]=S[14893]}
-D.NPCLabelNames[12343]={["5e713156fdd9c813:16"]=S[17804]}
+D.NPCLabelNames[12341]={["75c1c8c37e37754a:17"]=S[18647]}
+D.NPCLabelNames[12342]={["2fb541e3b72fc6ee:18"]=S[14894]}
+D.NPCLabelNames[12343]={["5e713156fdd9c813:16"]=S[17805]}
 D.NPCLabelNames[12344]={["aac5bdd931bcebd4:23"]="迅捷绿色骸骨军马"}
 D.NPCLabelNames[12345]={["3746915130be916c:20"]="杂斑赤色迅猛龙"}
 D.NPCLabelNames[12346]={["ffa20a54784feb2f:19"]="绿色迅猛龙坐骑"}
@@ -7895,11 +7895,11 @@ D.NPCLabelNames[12359]={["7ac06840b0756cd9:23"]="骑乘用斑点霜刃豹"}
 D.NPCLabelNames[12360]={["2351f5c48e24e00b:23"]="骑乘用条纹夜刃豹"}
 D.NPCLabelNames[12361]={["785b2b8983c35fbe:16"]="骑乘用夜刃豹"}
 D.NPCLabelNames[12362]={["2135deddb15ac952:16"]="骑乘用霜刃豹"}
-D.NPCLabelNames[12363]={["ce7123e5900c2e4e:18"]=S[18640]}
+D.NPCLabelNames[12363]={["ce7123e5900c2e4e:18"]=S[18641]}
 D.NPCLabelNames[12364]={["d9a08cab6b57bdcc:25"]=S[2864]}
-D.NPCLabelNames[12365]={["cd0d9ed84bc78dc5:17"]=S[17800]}
+D.NPCLabelNames[12365]={["cd0d9ed84bc78dc5:17"]=S[17801]}
 D.NPCLabelNames[12366]={["7a82311d50123ae0:24"]="原色机械陆行鸟X型"}
-D.NPCLabelNames[12367]={["a2d8426edba703b7:19"]=S[17943]}
+D.NPCLabelNames[12367]={["a2d8426edba703b7:19"]=S[17944]}
 D.NPCLabelNames[12368]={["0c9e7f5f14dbcf3c:23"]="白色机械陆行鸟A型"}
 D.NPCLabelNames[12369]={["55d59303ea2ded62:11"]="科拉加鲁"}
 D.NPCLabelNames[12370]={["4ff8e6e21cf97f5f:8"]="黑山羊"}
@@ -7940,11 +7940,11 @@ D.NPCLabelNames[12431]={["fbf9a4aedea9deaf:8"]="血牙狼人"}
 D.NPCLabelNames[12432]={["dbf7f7ed4a8e3f24:10"]="维斯迦尔"}
 D.NPCLabelNames[12433]={["be259be5767df6e4:23"]="暗网编织者克雷希斯"}
 D.NPCLabelNames[12434]={["5ec727f734ff226e:27"]="怪物生成器"}
-D.NPCLabelNames[12435]={["6795c5afb1167b1e:19"]=S[16510]}
+D.NPCLabelNames[12435]={["6795c5afb1167b1e:19"]=S[16511]}
 D.NPCLabelNames[12457]={["38116aab9d3ccbe8:20"]="黑翼缚法者"}
 D.NPCLabelNames[12458]={["09a886568aa5e831:19"]="黑翼工头"}
 D.NPCLabelNames[12459]={["5c5a7e2a0da74049:16"]="黑翼管理者"}
-D.NPCLabelNames[12460]={["f9fbe76b80ea2f1e:19"]=S[15059]}
+D.NPCLabelNames[12460]={["f9fbe76b80ea2f1e:19"]=S[15060]}
 D.NPCLabelNames[12461]={["72180034ffbfe5fd:18"]="死爪监工"}
 D.NPCLabelNames[12462]={["1db58bccd9eff0fb:25"]="黑翼督军"}
 D.NPCLabelNames[12463]={["5546a13636065a41:20"]="死爪火鳞龙人"}
@@ -7962,7 +7962,7 @@ D.NPCLabelNames[12476]={["a8003e12b7bf1c41:15"]="翡翠智者"}
 D.NPCLabelNames[12477]={["b9f5513d40637876:20"]="青绿护卫者"}
 D.NPCLabelNames[12478]={["9148de4b48156e18:16"]="青绿神谕者"}
 D.NPCLabelNames[12479]={["24a6456a7f4193c1:20"]="青绿守树者"}
-D.NPCLabelNames[12480]={["318dd8626c6f2043:13"]=S[14868]}
+D.NPCLabelNames[12480]={["318dd8626c6f2043:13"]=S[14869]}
 D.NPCLabelNames[12481]={["317f938a5e453b13:15"]="加斯汀·德玛利"}
 D.NPCLabelNames[12496]={["20b8b2ba0c54d395:12"]="寻梦者"}
 D.NPCLabelNames[12497]={["22e72d997c543bbe:11"]="睡梦咆哮者"}
@@ -8005,7 +8005,7 @@ D.NPCLabelNames[12757]={["5d54b471a2949888:13"]="卡拉恩·阿玛卡"}
 D.NPCLabelNames[12758]={["0c7a3451018ac3c2:13"]="奧妮克希亞觸發器"}
 D.NPCLabelNames[12759]={["0cd275081b700529:8"]="泰德雷斯"}
 D.NPCLabelNames[12776]={["0f9923dc80488a89:5"]="赫劳格"}
-D.NPCLabelNames[12777]={["7a2504aa1eb37e0d:18"]=S[20324]}
+D.NPCLabelNames[12777]={["7a2504aa1eb37e0d:18"]=S[20325]}
 D.NPCLabelNames[12778]={["a9eaa93d59cbdeae:22"]="拉切尔·瓦卡"}
 D.NPCLabelNames[12779]={["340c174ac46c41d3:14"]="大法师盖曼"}
 D.NPCLabelNames[12780]={["67f0c8b49cc39831:22"]="赫尔特·天影"}
@@ -8020,7 +8020,7 @@ D.NPCLabelNames[12788]={["3db907ffdf8776b8:16"]="军团士兵蒂娜"}
 D.NPCLabelNames[12789]={["fddba8fe4319ea1d:19"]="血卫士希尼瓦纳"}
 D.NPCLabelNames[12790]={["7f8a69a42f080003:17"]="顾问威灵顿"}
 D.NPCLabelNames[12791]={["ecc4bc61baed2690:18"]="酋长泰恩·地鸣"}
-D.NPCLabelNames[12792]={["55bf918a54b7ad7d:13"]=S[16090]}
+D.NPCLabelNames[12792]={["55bf918a54b7ad7d:13"]=S[16091]}
 D.NPCLabelNames[12793]={["7a9cf91826293527:14"]="卫兵布莱恩·石皮"}
 D.NPCLabelNames[12794]={["d511cff53a587a3c:14"]="石头守卫扎尔格"}
 D.NPCLabelNames[12795]={["f2622d70acc54947:22"]="一等军士长霍拉麦"}
@@ -8060,10 +8060,10 @@ D.NPCLabelNames[12898]={["4a6a44c5d570bb74:15"]="范迪姆的幻象"}
 D.NPCLabelNames[12899]={["f2e075ed8b45fb20:6"]="埃克托兹"}
 D.NPCLabelNames[12900]={["1c368dca6f7388bb:6"]="索姆努斯"}
 D.NPCLabelNames[12902]={["b35fc7383d643b31:10"]="洛古斯·杰特"}
-D.NPCLabelNames[12903]={["f8cba1f92a7c6f7a:17"]=S[17235]}
+D.NPCLabelNames[12903]={["f8cba1f92a7c6f7a:17"]=S[17236]}
 D.NPCLabelNames[12904]={["5b115dac6c971373:18"]="救赎之魂"}
 D.NPCLabelNames[12918]={["d20e28e8601e9b21:11"]="穆戈特酋长"}
-D.NPCLabelNames[12919]={["4185de71cf9dd02e:8"]=S[17851]}
+D.NPCLabelNames[12919]={["4185de71cf9dd02e:8"]=S[17852]}
 D.NPCLabelNames[12920]={["33464a06590ae551:19"]="格里高利·维克托医生"}
 D.NPCLabelNames[12921]={["1dbd501e461bc5fd:16"]="被激怒的污林熊怪"}
 D.NPCLabelNames[12922]={["049594d535c97e22:9"]="小鬼爪牙"}
@@ -8107,7 +8107,7 @@ D.NPCLabelNames[13079]={["08d407a1a57e9ada:6"]="基塔尔"}
 D.NPCLabelNames[13080]={["792d534e2ff56ab1:13"]="深铁矿洞守卫"}
 D.NPCLabelNames[13081]={["b71ab9f24ad9b0cb:14"]="深铁矿洞掠夺者"}
 D.NPCLabelNames[13082]={["f6cada074e19c85a:11"]="米尔顿·比斯"}
-D.NPCLabelNames[13083]={["938f49538d7d3a96:16"]=S[21142]}
+D.NPCLabelNames[13083]={["938f49538d7d3a96:16"]=S[21143]}
 D.NPCLabelNames[13084]={["3d36b4f680dabcb3:14"]="比克斯"}
 D.NPCLabelNames[13085]={["23f8f83c273fc9df:17"]="麦洛克斯"}
 D.NPCLabelNames[13086]={["04f4ec174cb1b738:15"]="埃其"}
@@ -8118,8 +8118,8 @@ D.NPCLabelNames[13096]={["d73a3221a07a04d6:16"]="冰冷矿洞探险者"}
 D.NPCLabelNames[13097]={["e13f09bf0ebdb1d4:16"]="冰冷矿洞测量者"}
 D.NPCLabelNames[13098]={["eec3e5aa6d73f0b1:16"]="深铁矿洞测量者"}
 D.NPCLabelNames[13099]={["e4bf0e0cff3043b3:16"]="深铁矿洞探险者"}
-D.NPCLabelNames[13116]={["4531f5277e4c69f4:19"]=S[18042]}
-D.NPCLabelNames[13117]={["857be5002f10185f:16"]=S[20753]}
+D.NPCLabelNames[13116]={["4531f5277e4c69f4:19"]=S[18043]}
+D.NPCLabelNames[13117]={["857be5002f10185f:16"]=S[20754]}
 D.NPCLabelNames[13118]={["0dbec941cf256cc4:16"]="红衣保镖"}
 D.NPCLabelNames[13136]={["fe76b9b5bfe60ace:14"]="亚什雄蝎"}
 D.NPCLabelNames[13137]={["3b5c840f75dd142c:15"]="鲁格巴中尉"}
@@ -8166,7 +8166,7 @@ D.NPCLabelNames[13256]={["e66550a4363ccbbd:18"]="冰雪之王洛克霍拉"}
 D.NPCLabelNames[13257]={["0727df945f6aff19:15"]="莫高特·深炉"}
 D.NPCLabelNames[13276]={["bbd3ffe492a1087b:12"]="荒野小鬼"}
 D.NPCLabelNames[13277]={["ce1a13bdbba3682a:11"]="达恩·皮尔斯"}
-D.NPCLabelNames[13278]={["5f248b7aa9af180b:12"]=S[15933]}
+D.NPCLabelNames[13278]={["5f248b7aa9af180b:12"]=S[15934]}
 D.NPCLabelNames[13279]={["1426bc963de76d33:15"]="混乱巨浪"}
 D.NPCLabelNames[13280]={["853d2a949014850b:10"]="海多斯博恩"}
 D.NPCLabelNames[13281]={["0f76dece8c57436d:5"]="弗雷斯"}
@@ -8234,7 +8234,7 @@ D.NPCLabelNames[13436]={["9cc51a599762b656:18"]="古奇"}
 D.NPCLabelNames[13437]={["ca923c2025aec739:19"]="空军指挥官艾克曼"}
 D.NPCLabelNames[13438]={["33abf2e2da90a601:20"]="空军指挥官斯里多尔"}
 D.NPCLabelNames[13439]={["e9564d0552bd9a92:19"]="空军指挥官维波里"}
-D.NPCLabelNames[13440]={["21ee7659facc99f2:18"]=S[21445]}
+D.NPCLabelNames[13440]={["21ee7659facc99f2:18"]=S[21446]}
 D.NPCLabelNames[13441]={["bcd2278fb33da0a6:27"]="霜狼骑兵指挥官"}
 D.NPCLabelNames[13442]={["480cd98af2394b0f:17"]="大德鲁伊雷弗拉尔"}
 D.NPCLabelNames[13443]={["a6e59416625d8bfb:15"]="树林德鲁伊"}
@@ -8319,7 +8319,7 @@ D.NPCLabelNames[13739]={["4f953401a66aec16:8"]="玛拉多斯"}
 D.NPCLabelNames[13740]={["0fea650dbfe3e522:5"]="玛格拉"}
 D.NPCLabelNames[13741]={["7c974688ea6635bd:4"]="吉尔克"}
 D.NPCLabelNames[13742]={["7c99a296a96e13c3:4"]="考尔克"}
-D.NPCLabelNames[13743]={["74fb9767910e289c:20"]=S[18127]}
+D.NPCLabelNames[13743]={["74fb9767910e289c:20"]=S[18128]}
 D.NPCLabelNames[13756]={["caf27b9d0d469fc8:24"]="PvP墓地标记"}
 D.NPCLabelNames[13776]={["5d7a3181a5dd7258:23"]="提卡·血牙"}
 D.NPCLabelNames[13777]={["4de37de1df2ca2e4:23"]="杜尔根·雷矛"}
@@ -8331,7 +8331,7 @@ D.NPCLabelNames[13816]={["3c307f9aed8d6331:20"]=S[3963]}
 D.NPCLabelNames[13817]={["520ebfb9e4d3a8a6:15"]="沃加·死爪"}
 D.NPCLabelNames[13836]={["3e88f731de19b01a:21"]="火刃梦魇"}
 D.NPCLabelNames[13837]={["fff6f50372df8086:16"]="被俘获的种马"}
-D.NPCLabelNames[13839]={["182dfa5fbf96b1f2:15"]=S[17038]}
+D.NPCLabelNames[13839]={["182dfa5fbf96b1f2:15"]=S[17039]}
 D.NPCLabelNames[13840]={["0f1de6e9314918b2:17"]="拉格隆德"}
 D.NPCLabelNames[13841]={["e93f4fa708c5992c:19"]="哈格丁中尉"}
 D.NPCLabelNames[13842]={["7c972711f1789e4e:28"]="霜狼大使"}
@@ -8450,18 +8450,18 @@ D.NPCLabelNames[14310]={["9cddaf420bc3deb3:20"]="綠色龍獸生成器"}
 D.NPCLabelNames[14311]={["0d6cf90186f8775c:21"]="青銅龍獸生成器"}
 D.NPCLabelNames[14312]={["3b92bf999b4059dc:19"]="藍色龍獸生成器"}
 D.NPCLabelNames[14321]={["cc1254806a940c3b:11"]="卫兵芬古斯"}
-D.NPCLabelNames[14322]={["eacc91bd2b9b3622:12"]=S[19785]}
+D.NPCLabelNames[14322]={["eacc91bd2b9b3622:12"]=S[19786]}
 D.NPCLabelNames[14323]={["28f724f64d449fcb:13"]=S[4100]}
-D.NPCLabelNames[14324]={["31b121917ada6172:19"]=S[19218]}
+D.NPCLabelNames[14324]={["31b121917ada6172:19"]=S[19219]}
 D.NPCLabelNames[14325]={["7eb0ff83c50c5372:16"]="克罗卡斯"}
 D.NPCLabelNames[14326]={["8040909ecd945b33:12"]="卫兵摩尔达"}
 D.NPCLabelNames[14327]={["5ecf106b86487268:11"]="蕾瑟塔蒂丝"}
 D.NPCLabelNames[14329]={["5f7659c45606209b:12"]="黑色战狼"}
-D.NPCLabelNames[14330]={["09cf34645ceda29f:14"]=S[22136]}
-D.NPCLabelNames[14331]={["514b42a072602bdf:19"]=S[17803]}
+D.NPCLabelNames[14330]={["09cf34645ceda29f:14"]=S[22137]}
+D.NPCLabelNames[14331]={["514b42a072602bdf:19"]=S[17804]}
 D.NPCLabelNames[14332]={["4dfbd0a1219a317a:13"]="黑色战驹"}
-D.NPCLabelNames[14333]={["5f6fc43927ac55b8:12"]=S[22135]}
-D.NPCLabelNames[14334]={["36cd19fb6c89a6a2:18"]=S[22137]}
+D.NPCLabelNames[14333]={["5f6fc43927ac55b8:12"]=S[22136]}
+D.NPCLabelNames[14334]={["36cd19fb6c89a6a2:18"]=S[22138]}
 D.NPCLabelNames[14335]={["77418e8ca3613195:11"]="黑色战羊"}
 D.NPCLabelNames[14336]={["4e07e98766b7b756:13"]="黑色战虎"}
 D.NPCLabelNames[14337]={["d419c93d00110b44:17"]=S[2536]}
@@ -8509,7 +8509,7 @@ D.NPCLabelNames[14380]={["f62171d3809924d4:18"]="女猎手莉莱尔·绿叶"}
 D.NPCLabelNames[14381]={["eca2b611ce7a3736:15"]="博学者亚沃"}
 D.NPCLabelNames[14382]={["ece5f9e6f1783b9b:15"]="博学者麦库斯"}
 D.NPCLabelNames[14383]={["e1353d066a279561:18"]="博学者基尔达斯"}
-D.NPCLabelNames[14385]={["44fe02918dc307f2:15"]=S[14376]}
+D.NPCLabelNames[14385]={["44fe02918dc307f2:15"]=S[14377]}
 D.NPCLabelNames[14386]={["e135facb9addda58:21"]="游荡的基尔罗格之眼"}
 D.NPCLabelNames[14387]={["33562d6d8ee19fce:15"]="洛索斯·天痕"}
 D.NPCLabelNames[14388]={["e70330aba49bb588:15"]="游荡的黑龙"}
@@ -8530,7 +8530,7 @@ D.NPCLabelNames[14402]={["2fe035a9f25f2200:14"]="搜寻者克罗维尔"}
 D.NPCLabelNames[14403]={["51fbf50df9ec6142:10"]="搜寻者纳赫尔"}
 D.NPCLabelNames[14404]={["de755e5c2a16c339:14"]="搜寻者索姆森"}
 D.NPCLabelNames[14406]={["056e6d670721b7b8:10"]="漫游的科多兽"}
-D.NPCLabelNames[14421]={["c371ed33474d624e:15"]=S[14892]}
+D.NPCLabelNames[14421]={["c371ed33474d624e:15"]=S[14893]}
 D.NPCLabelNames[14422]={["ddd0d2f14a1c1224:10"]="BRD 觸發器"}
 D.NPCLabelNames[14423]={["e6296c4338fcc88a:12"]="军官雅克森"}
 D.NPCLabelNames[14424]={["c7814b84188bbfc5:7"]="米尔洛"}
@@ -8543,9 +8543,9 @@ D.NPCLabelNames[14430]={["99f7b0f2f1378b23:11"]="暮色巡游者"}
 D.NPCLabelNames[14431]={["ba2f4afc1a3a640f:10"]="愤怒的谢尔达"}
 D.NPCLabelNames[14432]={["e07a701b7cd98c6a:8"]="瑟雷基尔"}
 D.NPCLabelNames[14433]={["2f0ef8c9320d79aa:8"]="斯拉丁"}
-D.NPCLabelNames[14434]={["b7ee4c203317890d:11"]=S[12143]}
+D.NPCLabelNames[14434]={["b7ee4c203317890d:11"]=S[12144]}
 D.NPCLabelNames[14435]={["e45510b05eee85f3:16"]="桑德兰王子"}
-D.NPCLabelNames[14436]={["73ad0a8e0205aa7f:19"]=S[18433]}
+D.NPCLabelNames[14436]={["73ad0a8e0205aa7f:19"]=S[18434]}
 D.NPCLabelNames[14437]={["768be90bf3b6589a:16"]="戈瑟奇·邪眼"}
 D.NPCLabelNames[14438]={["03eec4cebc77294f:14"]="军官普米洛"}
 D.NPCLabelNames[14439]={["e5a19775252f45f0:12"]="军官布莱德"}
@@ -8609,23 +8609,23 @@ D.NPCLabelNames[14497]={["d666ec957ca8796c:8"]="瑟伦尼"}
 D.NPCLabelNames[14498]={["fd62336176aafbd8:8"]="托萨米纳"}
 D.NPCLabelNames[14499]={["6cbe831f31150ab4:11"]="部落孤儿"}
 D.NPCLabelNames[14500]={["45b30660707ba779:7"]="耶维尔"}
-D.NPCLabelNames[14501]={["b8045f5135ea4842:40"]=S[18906]}
+D.NPCLabelNames[14501]={["b8045f5135ea4842:40"]=S[18907]}
 D.NPCLabelNames[14502]={["42143436e4ebe157:19"]="克索诺斯恐惧战马"}
 D.NPCLabelNames[14503]={["5b0be70044f9ee45:10"]="清洁者"}
 D.NPCLabelNames[14504]={["d96ef755cd1bb65a:16"]="恐惧战马的灵魂"}
 D.NPCLabelNames[14505]={["fba91c5a37567409:10"]="恐惧战马"}
-D.NPCLabelNames[14506]={["62af3da821cd6a17:14"]=S[19636]}
-D.NPCLabelNames[14507]={["8737568870846fd1:17"]=S[21886]}
+D.NPCLabelNames[14506]={["62af3da821cd6a17:14"]=S[19637]}
+D.NPCLabelNames[14507]={["8737568870846fd1:17"]=S[21887]}
 D.NPCLabelNames[14508]={["59d899fd7f82f13e:16"]="小个子约翰·米斯瑞尔"}
 D.NPCLabelNames[14509]={["45715c55c8339946:16"]="高阶祭司塞卡尔"}
-D.NPCLabelNames[14510]={["dc59a123ca67e60a:19"]=S[21887]}
+D.NPCLabelNames[14510]={["dc59a123ca67e60a:19"]=S[21888]}
 D.NPCLabelNames[14511]={["cfd6950f918534d0:14"]="暗影之灵"}
 D.NPCLabelNames[14512]={["6fd132b8e9116c3d:15"]="堕落之灵"}
 D.NPCLabelNames[14513]={["81d9c5e61ab401c7:15"]="恶毒之灵"}
 D.NPCLabelNames[14514]={["a14b80de4c6fc14b:11"]="陈腐之灵"}
 D.NPCLabelNames[14515]={["c18d420b4f501db8:19"]="高阶祭司娅尔罗"}
 D.NPCLabelNames[14516]={["1c230577775e57ac:21"]="死亡骑士达克雷尔"}
-D.NPCLabelNames[14517]={["d59fd7c173dbb622:19"]=S[21888]}
+D.NPCLabelNames[14517]={["d59fd7c173dbb622:19"]=S[21889]}
 D.NPCLabelNames[14518]={["1d9a974efa40be43:16"]="陈腐之貌"}
 D.NPCLabelNames[14519]={["3498a22f2833b88a:18"]="堕落之貌"}
 D.NPCLabelNames[14520]={["a98ce2a5c276e642:14"]="恶毒之貌"}
@@ -8650,22 +8650,22 @@ D.NPCLabelNames[14539]={["999ca08d4fabd3dc:15"]="迅捷森林狼"}
 D.NPCLabelNames[14540]={["e60c87d2bfa197d5:14"]="迅捷棕狼"}
 D.NPCLabelNames[14541]={["2e6d377db2645c08:13"]="迅捷灰狼"}
 D.NPCLabelNames[14542]={["b1ae40c646c8d94b:14"]=S[8015]}
-D.NPCLabelNames[14543]={["e0264dc94f58769e:16"]=S[19897]}
-D.NPCLabelNames[14544]={["5748f0466dda3537:17"]=S[19878]}
-D.NPCLabelNames[14545]={["146ccb324645f923:15"]=S[19904]}
+D.NPCLabelNames[14543]={["e0264dc94f58769e:16"]=S[19898]}
+D.NPCLabelNames[14544]={["5748f0466dda3537:17"]=S[19879]}
+D.NPCLabelNames[14545]={["146ccb324645f923:15"]=S[19905]}
 D.NPCLabelNames[14546]={["b1a332da90524bdb:13"]="迅捷棕山羊"}
 D.NPCLabelNames[14547]={["03091d139f8bd448:13"]="迅捷白山羊"}
 D.NPCLabelNames[14548]={["7d8719254f1c4ae8:12"]="迅捷灰山羊"}
 D.NPCLabelNames[14549]={["338b0f6dff334678:14"]=S[8010]}
 D.NPCLabelNames[14550]={["5789b2589b0a561f:13"]=S[8012]}
-D.NPCLabelNames[14551]={["fd7559263c4a283b:25"]=S[19907]}
-D.NPCLabelNames[14552]={["a9beaeeb57cd8f8a:24"]=S[19880]}
-D.NPCLabelNames[14553]={["a3f3bbbb346e5a44:24"]=S[19895]}
+D.NPCLabelNames[14551]={["fd7559263c4a283b:25"]=S[19908]}
+D.NPCLabelNames[14552]={["a9beaeeb57cd8f8a:24"]=S[19881]}
+D.NPCLabelNames[14553]={["a3f3bbbb346e5a44:24"]=S[19896]}
 D.NPCLabelNames[14554]={["caec0b354065c13e:27"]="迅捷斑纹机械陆行鸟"}
 D.NPCLabelNames[14555]={["c64c921c79de37d1:14"]="迅捷雾刃豹"}
 D.NPCLabelNames[14556]={["918d8dcd12547290:15"]="迅捷霜刃豹"}
 D.NPCLabelNames[14557]={["71c7f149c90a6e5a:14"]="迅捷晨刃豹"}
-D.NPCLabelNames[14558]={["404d237dcaad4eaa:22"]=S[17787]}
+D.NPCLabelNames[14558]={["404d237dcaad4eaa:22"]=S[17788]}
 D.NPCLabelNames[14559]={["790ddf71ad9fb8e4:13"]="迅捷褐色马"}
 D.NPCLabelNames[14560]={["e9e11ce8c6b8aaad:15"]="迅捷白马"}
 D.NPCLabelNames[14561]={["a757c06f961688c0:15"]="迅捷棕马"}
@@ -8676,7 +8676,7 @@ D.NPCLabelNames[14565]={["c2392d217c58081e:7"]="军马"}
 D.NPCLabelNames[14566]={["ecf50ae96aa51e60:19"]="上古圣马之魂"}
 D.NPCLabelNames[14567]={["b78d9fd4d556dd6f:17"]="德罗泰恩"}
 D.NPCLabelNames[14568]={["174901b4488fcc03:25"]="达克雷尔的堕落战马"}
-D.NPCLabelNames[14581]={["e38b7daf5262b91e:19"]=S[21397]}
+D.NPCLabelNames[14581]={["e38b7daf5262b91e:19"]=S[21398]}
 D.NPCLabelNames[14601]={["4f2a086da5ea39aa:7"]="埃博诺克"}
 D.NPCLabelNames[14602]={["51c17554488e348b:15"]="迅捷雷刃豹"}
 D.NPCLabelNames[14603]={["4df7fd676e7901f2:18"]="被缩小的海岸巨人"}
@@ -8689,7 +8689,7 @@ D.NPCLabelNames[14623]={["d44925216e2e38e0:24"]="战歌峡谷指挥官"}
 D.NPCLabelNames[14624]={["0b88f43e52190a5d:20"]="大铁匠博恩奈特"}
 D.NPCLabelNames[14625]={["da1ad2eaa4eeeca3:15"]="工头奥菲斯特"}
 D.NPCLabelNames[14626]={["822b8187fb759526:17"]="监工斯克兰格"}
-D.NPCLabelNames[14627]={["fd5c3eeb6f8cb9a2:16"]=S[15660]}
+D.NPCLabelNames[14627]={["fd5c3eeb6f8cb9a2:16"]=S[15661]}
 D.NPCLabelNames[14628]={["1bc546e4697bf35f:17"]="艾沃奈斯"}
 D.NPCLabelNames[14629]={["2a72f2eb4d0830e6:17"]="圆头钳嘴龟"}
 D.NPCLabelNames[14630]={["88a809af9e00a706:18"]="硬皮钳嘴龟"}
@@ -8752,7 +8752,7 @@ D.NPCLabelNames[14715]={["ce2350e29e1f419b:15"]="银翼精英"}
 D.NPCLabelNames[14717]={["95f8150a3adb0027:10"]="部落精英"}
 D.NPCLabelNames[14718]={["f4ff453eba86ea91:12"]="部落劳工"}
 D.NPCLabelNames[14719]={["4a73ab5809bc0bdf:27"]="[PH] 聯盟哨塔中尉"}
-D.NPCLabelNames[14720]={["061f450969639c2a:20"]=S[18614]}
+D.NPCLabelNames[14720]={["061f450969639c2a:20"]=S[18615]}
 D.NPCLabelNames[14721]={["ad395733a8b1395a:21"]="艾法希比元帅"}
 D.NPCLabelNames[14722]={["4a448f63eec81680:18"]="克拉维斯·纳文哈姆"}
 D.NPCLabelNames[14723]={["dbfc4fb083f803b5:18"]="米斯蒂娜·钢盾"}
@@ -8776,8 +8776,8 @@ D.NPCLabelNames[14740]={["13befe2a6ad3bca1:15"]="钓鱼者卡图姆"}
 D.NPCLabelNames[14741]={["4551a8671bf2e5a4:15"]="猎户马克霍尔"}
 D.NPCLabelNames[14742]={["c9047690532fed7b:13"]="扎普·法弗林"}
 D.NPCLabelNames[14743]={["f6a72fc506bb7942:14"]="雷戈·水炉"}
-D.NPCLabelNames[14744]={["94cb7edca0161c5f:15"]=S[21435]}
-D.NPCLabelNames[14745]={["5cab4cfb7aaf490a:22"]=S[21372]}
+D.NPCLabelNames[14744]={["94cb7edca0161c5f:15"]=S[21436]}
+D.NPCLabelNames[14745]={["5cab4cfb7aaf490a:22"]=S[21373]}
 D.NPCLabelNames[14746]={["957c6db1b77ee05e:24"]="[PH] 部落哨塔中尉"}
 D.NPCLabelNames[14748]={["0b5516c153372958:19"]="邪枝绑架者"}
 D.NPCLabelNames[14750]={["e0d0b4dc094e24a9:17"]="觅血者前锋"}
@@ -8808,7 +8808,7 @@ D.NPCLabelNames[14776]={["e0870476fb825d63:19"]="哨塔高地将领"}
 D.NPCLabelNames[14777]={["2488c5841a7231a3:22"]="西部霜狼将领"}
 D.NPCLabelNames[14781]={["d649aacb229c3428:19"]="沙塔尔·碎颅"}
 D.NPCLabelNames[14801]={["a8b1e566b39a5023:19"]="野外变形目标"}
-D.NPCLabelNames[14821]={["de7b0d49eeb14df8:14"]=S[12161]}
+D.NPCLabelNames[14821]={["de7b0d49eeb14df8:14"]=S[12162]}
 D.NPCLabelNames[14822]={["1057433e60403389:5"]="塞格"}
 D.NPCLabelNames[14823]={["cdc44e1cb396657f:13"]="希拉斯·暗月"}
 D.NPCLabelNames[14824]={["886e2ce9b0e8b0b6:10"]="主人"}
@@ -8817,7 +8817,7 @@ D.NPCLabelNames[14826]={["a7deca9fdc4dae7e:15"]="祭品巨魔"}
 D.NPCLabelNames[14827]={["0f2e7e2a7cb0ca13:5"]="布尔斯"}
 D.NPCLabelNames[14828]={["bc03515c155a99a7:15"]="吉瓦斯·格里加特"}
 D.NPCLabelNames[14829]={["98fb6d6c1abb6987:13"]="亚布·尼比盖尔"}
-D.NPCLabelNames[14830]={["b32dee5addcc4cfd:26"]=S[15899]}
+D.NPCLabelNames[14830]={["b32dee5addcc4cfd:26"]=S[15900]}
 D.NPCLabelNames[14832]={["5473dd345c1bb67b:10"]="克莉·希克斯"}
 D.NPCLabelNames[14833]={["c36b47a176f253f0:7"]="克洛诺斯"}
 D.NPCLabelNames[14834]={["018f4fb76602540a:6"]="哈卡"}
@@ -8858,7 +8858,7 @@ D.NPCLabelNames[14875]={["d51bd4eabdf9ca61:7"]="莫托尔"}
 D.NPCLabelNames[14876]={["eda72c6a5000362f:20"]="赞达拉精神医师"}
 D.NPCLabelNames[14877]={["b97392b83361c2db:32"]="高阶祭司温诺希斯幻象"}
 D.NPCLabelNames[14878]={["fb72be70a58e198d:7"]="加布林"}
-D.NPCLabelNames[14879]={["60f952f3f3ad044e:23"]=S[21205]}
+D.NPCLabelNames[14879]={["60f952f3f3ad044e:23"]=S[21206]}
 D.NPCLabelNames[14880]={["2c70592e0b5e1809:17"]="拉扎什诱捕者"}
 D.NPCLabelNames[14881]={["1c46482cf44805c5:6"]="蜘蛛"}
 D.NPCLabelNames[14882]={["e98801f2db0a7f01:15"]="阿塔莱侍女"}
@@ -8960,12 +8960,12 @@ D.NPCLabelNames[15086]={["ad32f794720d600f:16"]="阿卡希马夫"}
 D.NPCLabelNames[15087]={["87c672b40bd47807:18"]="被遗忘者马夫"}
 D.NPCLabelNames[15088]={["7d55a261491a0ec0:13"]="藏宝海湾精英"}
 D.NPCLabelNames[15089]={["e3a71fdedf300467:18"]="被遗忘者伐木工"}
-D.NPCLabelNames[15090]={["38f54276363c972b:19"]=S[12161]}
+D.NPCLabelNames[15090]={["38f54276363c972b:19"]=S[12162]}
 D.NPCLabelNames[15091]={["f90d52b23d89d615:23"]="祖爾格拉布黑豹觸發器"}
 D.NPCLabelNames[15101]={["f1e43803662724ea:13"]="祖利安徘徊者"}
 D.NPCLabelNames[15102]={["b88ebafcdd95d8ff:18"]="银翼大使"}
 D.NPCLabelNames[15103]={["ae110ef04f9ba263:17"]="雷矛大使"}
-D.NPCLabelNames[15104]={["e1b4e220326a9f87:16"]=S[19883]}
+D.NPCLabelNames[15104]={["e1b4e220326a9f87:16"]=S[19884]}
 D.NPCLabelNames[15105]={["3e3600f7709d0b7a:12"]="战歌大使"}
 D.NPCLabelNames[15106]={["fc897f7cdebc1c61:14"]="霜狼大使"}
 D.NPCLabelNames[15107]={["b3697c9fd003cd78:11"]="阿拉希骏马"}
@@ -8978,7 +8978,7 @@ D.NPCLabelNames[15113]={["92009fa2bc5623a3:11"]="荣耀的英雄"}
 D.NPCLabelNames[15114]={["0653b1231dff005a:10"]="加兹兰卡"}
 D.NPCLabelNames[15115]={["f639a6937522a63c:15"]="荣耀的先祖"}
 D.NPCLabelNames[15116]={["0e045ad11a068354:7"]="格林克"}
-D.NPCLabelNames[15117]={["9ba8ebacb7532db1:13"]=S[19043]}
+D.NPCLabelNames[15117]={["9ba8ebacb7532db1:13"]=S[19044]}
 D.NPCLabelNames[15118]={["281d90be80981625:16"]="鱼形态"}
 D.NPCLabelNames[15119]={["f39452f42a2e333d:6"]="巴鲁斯"}
 D.NPCLabelNames[15121]={["79f89125e90d9200:16"]="骷髅魔法大师"}
@@ -9020,7 +9020,7 @@ D.NPCLabelNames[15181]={["b4ad3f14d0222a91:18"]="指挥官玛尔利斯"}
 D.NPCLabelNames[15182]={["1949effb3438da4c:9"]="维斯·库鲁兹"}
 D.NPCLabelNames[15183]={["aada08c55b0a8004:18"]="地质学家拉克斯班"}
 D.NPCLabelNames[15184]={["5f861946973983b7:20"]="塞纳里奥要塞步兵"}
-D.NPCLabelNames[15185]={["6be1ce0ec8c0e7c1:15"]=S[19500]}
+D.NPCLabelNames[15185]={["6be1ce0ec8c0e7c1:15"]=S[19501]}
 D.NPCLabelNames[15186]={["0ff58a9d67cfdcf8:5"]=S[8215]}
 D.NPCLabelNames[15187]={["bc076b6e12bab6ab:24"]="塞纳里奥使者安亚·碧月"}
 D.NPCLabelNames[15188]={["d424682a3f31a6ab:25"]="塞纳里奥使者托尔·黑蹄"}
@@ -9048,7 +9048,7 @@ D.NPCLabelNames[15209]={["d6c6e295f66c1aea:14"]="赤红圣殿骑士"}
 D.NPCLabelNames[15211]={["362f6b418782e77a:12"]="碧蓝圣殿骑士"}
 D.NPCLabelNames[15212]={["f62c7a1d5d4dcc28:12"]="苍白圣殿骑士"}
 D.NPCLabelNames[15213]={["fe19169e9938c899:16"]="暮光霸主"}
-D.NPCLabelNames[15214]={["06d433808d2b707f:16"]=S[21317]}
+D.NPCLabelNames[15214]={["06d433808d2b707f:16"]=S[21318]}
 D.NPCLabelNames[15215]={["1d88f49255235695:24"]="纳塔莉亚·玛尔利斯"}
 D.NPCLabelNames[15216]={["7cb7c509374418c2:9"]="男性幽灵"}
 D.NPCLabelNames[15217]={["31207c340f609d03:11"]="女性幽灵"}
@@ -9091,7 +9091,7 @@ D.NPCLabelNames[15259]={["39678e249e4289dd:23"]="其拉统治者"}
 D.NPCLabelNames[15260]={["2fa78fde2a538c75:19"]="狂乱的德鲁伊之魂"}
 D.NPCLabelNames[15261]={["3e9edf855ddcb95c:11"]="灵魂之影"}
 D.NPCLabelNames[15262]={["dd5da3ac127bbf1b:18"]="黑曜石清除者"}
-D.NPCLabelNames[15263]={["96f70e2ba18eb1d4:16"]=S[21489]}
+D.NPCLabelNames[15263]={["96f70e2ba18eb1d4:16"]=S[21490]}
 D.NPCLabelNames[15264]={["6cf45106bfcc19d5:17"]="阿努比萨斯哨兵"}
 D.NPCLabelNames[15270]={["092902b5ad22a91a:12"]="霍姆·蛮鬃"}
 D.NPCLabelNames[15271]={["1dd7212707ee65b4:6"]="树人嫩苗"}
@@ -9153,9 +9153,9 @@ D.NPCLabelNames[15334]={["4d268eab6d6e27de:16"]="巨眼触须"}
 D.NPCLabelNames[15335]={["1a3f1f8d81884674:11"]="血肉猎手"}
 D.NPCLabelNames[15336]={["14515b2f1243bf34:19"]="佐拉鞭尾蝎"}
 D.NPCLabelNames[15338]={["31f9886fe00babcc:17"]="黑曜石毁灭者"}
-D.NPCLabelNames[15339]={["fa106bb59a8b5484:20"]=S[13618]}
+D.NPCLabelNames[15339]={["fa106bb59a8b5484:20"]=S[13619]}
 D.NPCLabelNames[15340]={["7c9ab9ef0670b28e:4"]="莫阿姆"}
-D.NPCLabelNames[15341]={["812dedb1b930cfae:13"]=S[12178]}
+D.NPCLabelNames[15341]={["812dedb1b930cfae:13"]=S[12179]}
 D.NPCLabelNames[15343]={["4fb8ede2d2ccbd13:16"]="其拉虫群卫士"}
 D.NPCLabelNames[15344]={["84d92a2120ac0956:17"]="虫群守卫钉刺者"}
 D.NPCLabelNames[15348]={["e0974e8d97e54160:9"]="库林纳克斯"}
@@ -9172,13 +9172,13 @@ D.NPCLabelNames[15358]={["0fe3721c23e37df7:5"]="乐奇"}
 D.NPCLabelNames[15359]={["d6406a277035d302:14"]="粉色小鱼人"}
 D.NPCLabelNames[15360]={["2548f006613e4d2f:15"]="绿色小鱼人"}
 D.NPCLabelNames[15361]={["0ff58a8d67cfdce8:5"]="霸波尔奔"}
-D.NPCLabelNames[15362]={["7bdb4be67088a2d9:18"]=S[16686]}
-D.NPCLabelNames[15363]={["3eb51fa9f0d4f470:11"]=S[16217]}
+D.NPCLabelNames[15362]={["7bdb4be67088a2d9:18"]=S[16687]}
+D.NPCLabelNames[15363]={["3eb51fa9f0d4f470:11"]=S[16218]}
 D.NPCLabelNames[15364]={["d9607cef5b2fbafa:16"]="玩具蒸汽坦克"}
 D.NPCLabelNames[15366]={["cb9becfad3294877:12"]="魔泉山猫幼崽"}
 D.NPCLabelNames[15367]={["92f71477c7332952:20"]="放逐者菲伦德雷"}
 D.NPCLabelNames[15368]={["f26d5d4aaf08cbab:8"]="高爆地雷"}
-D.NPCLabelNames[15369]={["b3ac2f331d6a020c:16"]=S[16592]}
+D.NPCLabelNames[15369]={["b3ac2f331d6a020c:16"]=S[16593]}
 D.NPCLabelNames[15370]={["84eb986ab6b079e5:13"]="吞咽者布鲁"}
 D.NPCLabelNames[15371]={["0489e9a3dc5892be:18"]="逐日岛卫兵"}
 D.NPCLabelNames[15372]={["3f1e8eabe4616d70:13"]="魔泉山猫"}
@@ -9233,7 +9233,7 @@ D.NPCLabelNames[15422]={["24744053f09bff90:10"]="其拉坦克"}
 D.NPCLabelNames[15423]={["a1dcf27ba0da9c82:16"]="卡多雷步兵"}
 D.NPCLabelNames[15424]={["f81ea762ca603125:18"]="阿努比萨斯征服者"}
 D.NPCLabelNames[15426]={["448cb6eee34e52b5:16"]="安其拉觸發器"}
-D.NPCLabelNames[15427]={["0179cb23f3ec5282:14"]=S[22028]}
+D.NPCLabelNames[15427]={["0179cb23f3ec5282:14"]=S[22029]}
 D.NPCLabelNames[15428]={["daf6eed3fe98e472:10"]="沙尘旋涡"}
 D.NPCLabelNames[15429]={["f53d520daa029806:18"]=S[11118]}
 D.NPCLabelNames[15430]={["49d3ad9936e65504:19"]="土元素图腾"}
@@ -9289,7 +9289,7 @@ D.NPCLabelNames[15479]={["07d209d8b1a0f009:27"]="大地之力图腾 VI"}
 D.NPCLabelNames[15480]={["97934e92eea44ded:20"]="灼热图腾 VII"}
 D.NPCLabelNames[15481]={["47f90765abdf8a24:16"]="艾索雷苟斯之魂"}
 D.NPCLabelNames[15482]={["626dc03ac1e38d6b:20"]="火焰新星图腾 VI"}
-D.NPCLabelNames[15483]={["003099a83b3b129f:13"]=S[16173]}
+D.NPCLabelNames[15483]={["003099a83b3b129f:13"]=S[16174]}
 D.NPCLabelNames[15484]={["b33ffeda3938e0f5:16"]="熔岩图腾 V"}
 D.NPCLabelNames[15485]={["d4dbbaeecab5d745:22"]="火舌图腾 V"}
 D.NPCLabelNames[15486]={["fcabad9f0c41c6d8:27"]="抗寒图腾 IV"}
@@ -9316,7 +9316,7 @@ D.NPCLabelNames[15506]={["ae26427fe8e1fb5a:7"]="斯图沃尔"}
 D.NPCLabelNames[15507]={["fe31245acf9443c7:28"]="變形後的『暴食者』布魯"}
 D.NPCLabelNames[15508]={["8e51714c550071f9:18"]="蝙蝠骑士比雷凯基"}
 D.NPCLabelNames[15509]={["003af367cbcec29c:15"]="哈霍兰公主"}
-D.NPCLabelNames[15510]={["735fcc5f17c52730:21"]=S[21484]}
+D.NPCLabelNames[15510]={["735fcc5f17c52730:21"]=S[21485]}
 D.NPCLabelNames[15511]={["8885723c9869392d:7"]="克里勋爵"}
 D.NPCLabelNames[15512]={["bc178d0ff6d22830:15"]="药剂师耶泽尔"}
 D.NPCLabelNames[15513]={["e890a6687b7db039:13"]="游侠萨琳娜"}
@@ -9354,7 +9354,7 @@ D.NPCLabelNames[15546]={["ec81a167351d5118:16"]="扎拉虫群"}
 D.NPCLabelNames[15547]={["e50d851fdf8ebc5a:15"]="鬼灵战马"}
 D.NPCLabelNames[15548]={["e62c8c094ea5bb8c:16"]="鬼灵骏马"}
 D.NPCLabelNames[15549]={["fe65076bfefbda34:13"]="黎明长者"}
-D.NPCLabelNames[15550]={["1475cf326a1d99a9:18"]=S[16610]}
+D.NPCLabelNames[15550]={["1475cf326a1d99a9:18"]=S[16611]}
 D.NPCLabelNames[15551]={["216cf159ed61852e:18"]="鬼灵马夫"}
 D.NPCLabelNames[15552]={["784a47b8e183f365:12"]="维维尔博士"}
 D.NPCLabelNames[15553]={["b7445042a4c084a7:11"]="安保机器人"}
@@ -9436,7 +9436,7 @@ D.NPCLabelNames[15629]={["fbda9100bfa855cb:17"]="梦魇幻象"}
 D.NPCLabelNames[15630]={["7feb6924060d7601:15"]="范克瑞斯的爪牙"}
 D.NPCLabelNames[15631]={["19c4df63052ba234:9"]="聚光燈"}
 D.NPCLabelNames[15633]={["07a9545c9d54327b:7"]="泰兰德"}
-D.NPCLabelNames[15634]={["783795b652d70895:18"]=S[14261]}
+D.NPCLabelNames[15634]={["783795b652d70895:18"]=S[14262]}
 D.NPCLabelNames[15635]={["9b7bddf0c6290f87:14"]="永歌嫩苗"}
 D.NPCLabelNames[15636]={["a2cf179be649dce2:19"]="永歌护卫者"}
 D.NPCLabelNames[15637]={["82628e6e7eeff0c3:19"]="枯萎的护卫者"}
@@ -9445,7 +9445,7 @@ D.NPCLabelNames[15639]={["fb13a4f4be3403ef:12"]="奥术守望者"}
 D.NPCLabelNames[15640]={["3f74e48373f0ea16:14"]="奥术执行者"}
 D.NPCLabelNames[15641]={["b4c22e14c26c3255:15"]="阿曼尼掷斧者"}
 D.NPCLabelNames[15642]={["aa12a4c8bbc3894f:17"]="阿曼尼暗影祭司"}
-D.NPCLabelNames[15643]={["f645361076760e17:14"]=S[21224]}
+D.NPCLabelNames[15643]={["f645361076760e17:14"]=S[21225]}
 D.NPCLabelNames[15644]={["f1284504e05acad5:14"]="失心者匪徒"}
 D.NPCLabelNames[15645]={["73a45b3308a39134:12"]="失心者暴徒"}
 D.NPCLabelNames[15646]={["1f5ae20fca6e347e:17"]="法力榨取者"}
@@ -9467,7 +9467,7 @@ D.NPCLabelNames[15661]={["a918a15cab21d14f:9"]="鲨鱼宝宝"}
 D.NPCLabelNames[15663]={["ebd22b5947af2896:18"]="战备志愿者"}
 D.NPCLabelNames[15664]={["f95fd0a7b09da230:17"]="驯鹿梅森"}
 D.NPCLabelNames[15665]={["362a70afd488bb7e:15"]="驯鹿"}
-D.NPCLabelNames[15666]={["93e996d72f3948c2:20"]=S[18636]}
+D.NPCLabelNames[15666]={["93e996d72f3948c2:20"]=S[18637]}
 D.NPCLabelNames[15667]={["5cf91168d4689c4b:14"]="维希度斯水滴"}
 D.NPCLabelNames[15668]={["c03fae2e51e46c51:15"]="暗鳞鱼人"}
 D.NPCLabelNames[15669]={["c4aa3cd29712a8d9:15"]="暗鳞先知"}
@@ -9485,9 +9485,9 @@ D.NPCLabelNames[15684]={["78ac932a608dcb13:17"]="拍卖师特里特"}
 D.NPCLabelNames[15685]={["44df416f11568fa4:17"]="南海绑匪"}
 D.NPCLabelNames[15686]={["0613b509447daba4:16"]="拍卖师雷克尔"}
 D.NPCLabelNames[15687]={["0e3a5a1ad379608d:6"]="莫罗斯"}
-D.NPCLabelNames[15688]={["b5af9821df894996:16"]=S[16477]}
+D.NPCLabelNames[15688]={["b5af9821df894996:16"]=S[16478]}
 D.NPCLabelNames[15689]={["0592e5f064c31f25:11"]="虚空幽龙"}
-D.NPCLabelNames[15690]={["04ebef1e9d4b8fe9:16"]=S[16670]}
+D.NPCLabelNames[15690]={["04ebef1e9d4b8fe9:16"]=S[16671]}
 D.NPCLabelNames[15691]={["70f5ae0682888c05:10"]="馆长"}
 D.NPCLabelNames[15692]={["88aec07d780c22e8:17"]="黑铁绑匪"}
 D.NPCLabelNames[15693]={["b2590bad29f1b2a8:20"]="天启者乔纳森"}
@@ -9507,11 +9507,11 @@ D.NPCLabelNames[15707]={["77657acf8f9b4e3c:24"]="军士长菲兹伯特"}
 D.NPCLabelNames[15708]={["a538a79359d608c0:21"]="军士长玛克卢尔"}
 D.NPCLabelNames[15709]={["9c94c52982dc8bec:24"]="军士长希德·月影"}
 D.NPCLabelNames[15710]={["57741a2c08d04b77:11"]="雪孩子"}
-D.NPCLabelNames[15711]={["6842fd8cadc70ba7:21"]=S[22138]}
+D.NPCLabelNames[15711]={["6842fd8cadc70ba7:21"]=S[22139]}
 D.NPCLabelNames[15712]={["b7b1c37b15ae8d62:9"]="土堆"}
-D.NPCLabelNames[15714]={["23110e2bc7e4f8fc:22"]=S[22033]}
-D.NPCLabelNames[15715]={["1e927ba0646df9ab:21"]=S[17939]}
-D.NPCLabelNames[15716]={["ab909a8abfce5cb9:19"]=S[17795]}
+D.NPCLabelNames[15714]={["23110e2bc7e4f8fc:22"]=S[22034]}
+D.NPCLabelNames[15715]={["1e927ba0646df9ab:21"]=S[17940]}
+D.NPCLabelNames[15716]={["ab909a8abfce5cb9:19"]=S[17796]}
 D.NPCLabelNames[15717]={["da5c3ddef1903af5:11"]="奧羅觸發器"}
 D.NPCLabelNames[15718]={["dc6b72b6edd22585:10"]="奥罗甲虫"}
 D.NPCLabelNames[15719]={["8d037703912316f0:19"]="雷霆崖狂欢者"}
@@ -9634,7 +9634,7 @@ D.NPCLabelNames[15854]={["7ef4cd367edcfd17:24"]="奥格瑞玛精英骑兵"}
 D.NPCLabelNames[15855]={["1e6662223fb4ad05:14"]="牛头人火枪手"}
 D.NPCLabelNames[15856]={["398553e9ce51b5a6:15"]="牛头人部族祭司"}
 D.NPCLabelNames[15857]={["2b87d17a23881141:19"]="暴风城骑兵"}
-D.NPCLabelNames[15858]={["47977473388393dc:20"]=S[14195]}
+D.NPCLabelNames[15858]={["47977473388393dc:20"]=S[14196]}
 D.NPCLabelNames[15859]={["5d6e6e240770cc19:17"]="暴风城大法师"}
 D.NPCLabelNames[15860]={["86e4aaaae3622ee9:16"]="卡多雷神射手"}
 D.NPCLabelNames[15861]={["4bdffa77f1a2b40e:20"]="铁炉堡步兵"}
@@ -9644,7 +9644,7 @@ D.NPCLabelNames[15864]={["c4e28e31369cde9c:15"]="瓦拉达尔·星歌"}
 D.NPCLabelNames[15865]={["788cea9f4924649e:20"]="卡利姆多联军少校"}
 D.NPCLabelNames[15866]={["3bef3bc8c576fa01:29"]="高级指挥官莱诺尔·风矛"}
 D.NPCLabelNames[15867]={["b6680cfe977c97a3:23"]="卡利姆多联军大法师"}
-D.NPCLabelNames[15868]={["32f98f866169a869:23"]=S[14705]}
+D.NPCLabelNames[15868]={["32f98f866169a869:23"]=S[14706]}
 D.NPCLabelNames[15869]={["2252838f33665060:19"]="参谋玛拉加夫"}
 D.NPCLabelNames[15870]={["7be5247b7f41ed74:19"]=S[8437]}
 D.NPCLabelNames[15871]={["354b7cbf6ce6ab2c:16"]="铜须长者"}
@@ -9695,7 +9695,7 @@ D.NPCLabelNames[15915]={["a5f7f808cefe90f1:33"]="派特的煙火束 (白色大�
 D.NPCLabelNames[15916]={["855633c3ce7ea7be:34"]="派特的煙火束 (黃色大型)"}
 D.NPCLabelNames[15917]={["db10767a9a3b3109:20"]="春节狂欢者"}
 D.NPCLabelNames[15918]={["727b1bcef0e41145:30"]="派特的煙火束(伊露恩)"}
-D.NPCLabelNames[15919]={["ccec06eb2f3ce8ac:7"]=S[17249]}
+D.NPCLabelNames[15919]={["ccec06eb2f3ce8ac:7"]=S[17250]}
 D.NPCLabelNames[15920]={["532fe974796f7fb9:17"]="哈斯温里奥"}
 D.NPCLabelNames[15921]={["9633f7e77a07b9b2:17"]="凯莉森德拉船长"}
 D.NPCLabelNames[15922]={["57c707a3ee33445c:15"]="維希度斯觸發器"}
@@ -9709,10 +9709,10 @@ D.NPCLabelNames[15929]={["add77d28cf003e15:7"]="斯塔拉格"}
 D.NPCLabelNames[15930]={["fd32cbbf18aaf7fa:6"]="费尔根"}
 D.NPCLabelNames[15931]={["51c8183a6094aad9:9"]="格罗布鲁斯"}
 D.NPCLabelNames[15932]={["0f8416092f0b7ce4:5"]="格拉斯"}
-D.NPCLabelNames[15933]={["557f63741e0fc00d:11"]=S[15473]}
+D.NPCLabelNames[15933]={["557f63741e0fc00d:11"]=S[15474]}
 D.NPCLabelNames[15934]={["dd7693d683ee9cdf:15"]="扎拉黄蜂"}
 D.NPCLabelNames[15935]={["ed66707e36c38b99:14"]="真银野猪"}
-D.NPCLabelNames[15936]={["c8b43818abda4007:16"]=S[18067]}
+D.NPCLabelNames[15936]={["c8b43818abda4007:16"]=S[18068]}
 D.NPCLabelNames[15937]={["052a349bf201a50a:12"]="呜啦哇啦"}
 D.NPCLabelNames[15938]={["9689376d8b98ff88:14"]="永歌游侠"}
 D.NPCLabelNames[15939]={["4b40fc6bc4d30ac4:14"]="游侠戴戈利恩"}
@@ -9728,8 +9728,8 @@ D.NPCLabelNames[15949]={["b784fd10c39a7a93:18"]="饥饿者泰里斯"}
 D.NPCLabelNames[15950]={["739c950b01fff85a:13"]="暗鳞先知"}
 D.NPCLabelNames[15951]={["c8f5300bced26840:18"]="魔导师达斯维瑟"}
 D.NPCLabelNames[15952]={["b3f765f76e111aa4:7"]="迈克斯纳"}
-D.NPCLabelNames[15953]={["b51481ddbb9f1066:18"]=S[22040]}
-D.NPCLabelNames[15954]={["5a2c3ee642a4d2f1:20"]=S[18397]}
+D.NPCLabelNames[15953]={["b51481ddbb9f1066:18"]=S[22041]}
+D.NPCLabelNames[15954]={["5a2c3ee642a4d2f1:20"]=S[18398]}
 D.NPCLabelNames[15955]={["cb313ab6a122a585:16"]="黑钻石螃蟹"}
 D.NPCLabelNames[15956]={["a9936d2bed36fa2a:11"]="阿努布雷坎"}
 D.NPCLabelNames[15957]={["882fcfaabb890a65:11"]="奧羅之子"}
@@ -9775,7 +9775,7 @@ D.NPCLabelNames[16009]={["5ec4e5a8b12d85a3:16"]="托麦克·石河"}
 D.NPCLabelNames[16011]={["875a8944fc9cc44f:7"]="洛欧塞布"}
 D.NPCLabelNames[16012]={["0e36a0b5913816de:6"]="莫克瓦尔"}
 D.NPCLabelNames[16013]={["08f5f5b3557d3656:7"]="德莉亚娜"}
-D.NPCLabelNames[16014]={["66aca7f7d671a5ce:16"]=S[17418]}
+D.NPCLabelNames[16014]={["66aca7f7d671a5ce:16"]=S[17419]}
 D.NPCLabelNames[16015]={["109092bc77d8debb:5"]="维尔"}
 D.NPCLabelNames[16016]={["dfad135ba751bada:13"]="安泰恩·哈尔蒙"}
 D.NPCLabelNames[16017]={["4fde98ac6fe7e8f3:14"]="缝补傀儡"}
@@ -9817,10 +9817,10 @@ D.NPCLabelNames[16056]={["835626461998a581:14"]="疾病之蛆"}
 D.NPCLabelNames[16057]={["8af90b2b8768af5e:13"]="腐烂的蛆虫"}
 D.NPCLabelNames[16058]={["233563c480ea89f3:6"]="沃莉达"}
 D.NPCLabelNames[16059]={["c2a4949bb1e16c92:8"]="塞尔德林"}
-D.NPCLabelNames[16060]={["5ae1ade04bcfa603:18"]=S[12605]}
-D.NPCLabelNames[16061]={["01d0db9a13e8c033:19"]=S[13154]}
+D.NPCLabelNames[16060]={["5ae1ade04bcfa603:18"]=S[12606]}
+D.NPCLabelNames[16061]={["01d0db9a13e8c033:19"]=S[13155]}
 D.NPCLabelNames[16062]={["7961efa8939d9003:16"]="大领主莫格莱尼"}
-D.NPCLabelNames[16063]={["9868b8f74851d06a:9"]=S[16784]}
+D.NPCLabelNames[16063]={["9868b8f74851d06a:9"]=S[16785]}
 D.NPCLabelNames[16064]={["14587cb9382871b8:14"]=S[10453]}
 D.NPCLabelNames[16065]={["ffed2b72aee97fe3:12"]=S[8537]}
 D.NPCLabelNames[16066]={["25cb25a8efc95dc9:16"]="鬼灵刺客"}
@@ -9864,7 +9864,7 @@ D.NPCLabelNames[16110]={["2a61ed5afe024061:14"]="安娜利丝·雷伦特"}
 D.NPCLabelNames[16111]={["a297ab4b6d99b5b8:8"]="爱情娃娃"}
 D.NPCLabelNames[16112]={["a0e3f58d833f9252:22"]="十字军指挥官科尔法克斯"}
 D.NPCLabelNames[16113]={["7173861b540b9502:17"]="英尼戈·蒙托尔神父"}
-D.NPCLabelNames[16114]={["0304c5ca3db0c76b:23"]=S[18890]}
+D.NPCLabelNames[16114]={["0304c5ca3db0c76b:23"]=S[18891]}
 D.NPCLabelNames[16115]={["38a77f371fe61220:33"]=S[3989]}
 D.NPCLabelNames[16116]={["7166545038bafe0b:22"]=S[8063]}
 D.NPCLabelNames[16117]={["b6c2bd6d2d1a71aa:12"]="天灾野猪"}
@@ -9882,7 +9882,7 @@ D.NPCLabelNames[16129]={["115ecd4cc0a1f5a5:13"]="暗影裂隙"}
 D.NPCLabelNames[16131]={["5b3947036204b57e:16"]="杀手洛汗"}
 D.NPCLabelNames[16132]={["01789fe2bec5de93:15"]="猎手雷奥普德"}
 D.NPCLabelNames[16133]={["a06960390213d954:20"]="愤怒者玛塔乌斯"}
-D.NPCLabelNames[16134]={["11a7131f1ca4ab22:19"]=S[21368]}
+D.NPCLabelNames[16134]={["11a7131f1ca4ab22:19"]=S[21369]}
 D.NPCLabelNames[16135]={["10452ba41c5ad641:5"]="莱茵"}
 D.NPCLabelNames[16136]={["491ac68e25342759:13"]="死灵碎片"}
 D.NPCLabelNames[16137]={["894d8d65a7dbf714:32"]="納克薩瑪斯軍事副首領觸發器"}
@@ -9892,13 +9892,13 @@ D.NPCLabelNames[16142]={["a7690485d616b326:10"]="胆汁软泥怪"}
 D.NPCLabelNames[16143]={["cf7524af8d328e40:12"]="末日之影"}
 D.NPCLabelNames[16144]={["8295fd1e1e90998d:13"]="萨瑟利尔男爵"}
 D.NPCLabelNames[16145]={["960568305e737c03:18"]="死亡骑士队长"}
-D.NPCLabelNames[16146]={["1409a790a9aac3a1:11"]=S[15050]}
+D.NPCLabelNames[16146]={["1409a790a9aac3a1:11"]=S[15051]}
 D.NPCLabelNames[16147]={["c8789ea0cadab9d3:17"]="埃莉萨拉·射日者"}
 D.NPCLabelNames[16148]={["b925ce8e3513bbdd:19"]="鬼灵死亡骑士"}
 D.NPCLabelNames[16149]={["d8da07446fa53199:13"]="鬼灵战马"}
 D.NPCLabelNames[16150]={["d98b74b9f8c526b6:13"]="鬼灵骑兵"}
 D.NPCLabelNames[16151]={["97a3971967774590:8"]="午夜"}
-D.NPCLabelNames[16152]={["1475cf326a1d99a9:18"]=S[16610]}
+D.NPCLabelNames[16152]={["1475cf326a1d99a9:18"]=S[16611]}
 D.NPCLabelNames[16153]={["5dfae059b06e2004:8"]="伯特霍德"}
 D.NPCLabelNames[16154]={["a8ede7df06a8a3ea:11"]="复活的侍从"}
 D.NPCLabelNames[16156]={["7dc49a3927d520ba:18"]="黑暗战士"}
@@ -9956,7 +9956,7 @@ D.NPCLabelNames[16208]={["bbc1bb8d3da19ffe:15"]="药剂师恩尼斯"}
 D.NPCLabelNames[16209]={["d84504f3c7430350:13"]="游侠维多兰"}
 D.NPCLabelNames[16210]={["fbe0c1f6b8e9cca1:26"]="魔导师兰德拉·晨行者"}
 D.NPCLabelNames[16211]={["08a9481a10df82f7:20"]="纳克萨玛斯作战假人"}
-D.NPCLabelNames[16212]={["dd1aa9cbd452a9fc:21"]=S[16467]}
+D.NPCLabelNames[16212]={["dd1aa9cbd452a9fc:21"]=S[16468]}
 D.NPCLabelNames[16213]={["3055bacb8eeba5e4:15"]="游侠莱瑟瓦林"}
 D.NPCLabelNames[16214]={["09d0a8071868a62a:20"]="浮空城控制器"}
 D.NPCLabelNames[16215]={["faa04e582bc477d3:11"]="邪恶法杖"}
@@ -10025,7 +10025,7 @@ D.NPCLabelNames[16278]={["82db2a917c1f0f08:7"]="萨瑟林"}
 D.NPCLabelNames[16279]={["bcede5539a8c9ef6:8"]="塔娜莉亚"}
 D.NPCLabelNames[16280]={["62ff8d08b4c5b125:10"]="佩拉斯卡米"}
 D.NPCLabelNames[16281]={["81f5d543ddb3a20e:16"]="名单登记员"}
-D.NPCLabelNames[16283]={["3d42b235538a6052:22"]=S[21622]}
+D.NPCLabelNames[16283]={["3d42b235538a6052:22"]=S[21623]}
 D.NPCLabelNames[16284]={["7e5396c8a8e97411:11"]="银色医师"}
 D.NPCLabelNames[16285]={["a64df2d34ae7f35c:14"]="银色特使"}
 D.NPCLabelNames[16286]={["105f53ce1544d665:5"]="孢子"}
@@ -10037,7 +10037,7 @@ D.NPCLabelNames[16291]={["93e659e802f2f517:18"]="魔导师奎尔林提斯"}
 D.NPCLabelNames[16292]={["76fc6d55b8cb2e26:9"]="阿奎艾森"}
 D.NPCLabelNames[16293]={["b54b134579b4d958:19"]="学徒沙塔瑞亚"}
 D.NPCLabelNames[16294]={["8b5640235b8f2dbc:18"]="鲁莽的奥尔达隆"}
-D.NPCLabelNames[16295]={["e05c6803574de586:13"]=S[16044]}
+D.NPCLabelNames[16295]={["e05c6803574de586:13"]=S[16045]}
 D.NPCLabelNames[16296]={["28f1de022cc875e5:15"]="永歌森林啟動器"}
 D.NPCLabelNames[16297]={["ae54b729713646b6:11"]="变异幼虫"}
 D.NPCLabelNames[16298]={["c5c4d6553e3916be:15"]="鬼灵士兵"}
@@ -10126,13 +10126,13 @@ D.NPCLabelNames[16381]={["81d5364dee988cbc:24"]="大法师塔希斯·基莫迪�
 D.NPCLabelNames[16382]={["69534b96099c3ced:15"]="缝补恶徒"}
 D.NPCLabelNames[16383]={["02bf1279c949f03c:12"]="烈焰震击者"}
 D.NPCLabelNames[16384]={["48c01f472dd34c02:18"]="银色黎明新兵"}
-D.NPCLabelNames[16385]={["4e8b6cd238112657:14"]=S[21058]}
+D.NPCLabelNames[16385]={["4e8b6cd238112657:14"]=S[21059]}
 D.NPCLabelNames[16386]={["0d068d80d4a8dc03:15"]="浮空城中继者"}
 D.NPCLabelNames[16387]={["f291d4e37566be44:6"]="埃提耶什"}
 D.NPCLabelNames[16388]={["0fce0e84c8c838f7:5"]="库雷恩"}
 D.NPCLabelNames[16389]={["9e91b38e13e92795:18"]="鬼灵徒工"}
 D.NPCLabelNames[16390]={["b7cb85ba959c4961:17"]="死寒仆从"}
-D.NPCLabelNames[16392]={["4845dcb956339732:19"]=S[21218]}
+D.NPCLabelNames[16392]={["4845dcb956339732:19"]=S[21219]}
 D.NPCLabelNames[16393]={["2f33f4f4cdfaf3df:19"]="冰冷怨灵"}
 D.NPCLabelNames[16394]={["17a2d6d76c92e976:12"]="苍白者"}
 D.NPCLabelNames[16395]={["c8972dc9a34fe5ba:17"]="银色黎明圣骑士"}
@@ -10248,7 +10248,7 @@ D.NPCLabelNames[16505]={["900760823feda6fb:17"]="纳克萨玛斯追随者"}
 D.NPCLabelNames[16506]={["872c6c6b747d8764:19"]="纳克萨玛斯膜拜者"}
 D.NPCLabelNames[16507]={["19af024919b96e26:19"]="碎手斥候"}
 D.NPCLabelNames[16508]={["7dfed4e72d7e9c08:11"]="银色骏马"}
-D.NPCLabelNames[16509]={["bb698891e2cf5faa:14"]=S[20995]}
+D.NPCLabelNames[16509]={["bb698891e2cf5faa:14"]=S[20996]}
 D.NPCLabelNames[16510]={["669c4782a9fbdf49:13"]="银色军马"}
 D.NPCLabelNames[16511]={["7e595b998291a464:11"]="银色坐骑"}
 D.NPCLabelNames[16512]={["9c313b61b734b8a4:16"]="银色亡灵马"}
@@ -10277,7 +10277,7 @@ D.NPCLabelNames[16535]={["48ec61fc0948a131:15"]="守备官奥达尔"}
 D.NPCLabelNames[16537]={["a95e29cd6f2d7fca:13"]="变异的枭兽"}
 D.NPCLabelNames[16538]={["ef60321b8ac89682:15"]="血精灵遗体"}
 D.NPCLabelNames[16539]={["2a2c2e78284b90b9:10"]="矮劣魔"}
-D.NPCLabelNames[16540]={["66ecd9bb9d912a4c:14"]=S[13744]}
+D.NPCLabelNames[16540]={["66ecd9bb9d912a4c:14"]=S[13745]}
 D.NPCLabelNames[16541]={["b4e0cc4793f3464a:18"]="幽魂之地守卫者"}
 D.NPCLabelNames[16542]={["7df06b080d76a6d1:16"]="旅店老板卡拉林"}
 D.NPCLabelNames[16543]={["58b1b3a2182af079:13"]="加隆·哈金斯"}
@@ -10326,7 +10326,7 @@ D.NPCLabelNames[16589]={["861efd5c3d40f991:19"]="卫兵队长克拉格塔"}
 D.NPCLabelNames[16590]={["788efeed03bd84f6:21"]="受伤的萨尔玛步兵"}
 D.NPCLabelNames[16591]={["b397163e20a045cf:13"]="萨尔玛苦工"}
 D.NPCLabelNames[16592]={["42d495fda8dd2760:16"]="仲夏篝火"}
-D.NPCLabelNames[16593]={["505a9db3bfba72ac:20"]=S[17232]}
+D.NPCLabelNames[16593]={["505a9db3bfba72ac:20"]=S[17233]}
 D.NPCLabelNames[16594]={["3c5221f5748dceaa:17"]="影月侍僧"}
 D.NPCLabelNames[16595]={["ba849746d09d09cb:10"]="血肉兽"}
 D.NPCLabelNames[16596]={["0a47e4108e197045:17"]="大型血肉兽"}
@@ -10521,7 +10521,7 @@ D.NPCLabelNames[16785]={["ea5a1ddf969994b8:18"]="天灾软泥（绿）"}
 D.NPCLabelNames[16786]={["2cc700f6592b5e59:19"]="银色军需官"}
 D.NPCLabelNames[16787]={["8eba66ec9b450fa9:15"]="银色物资官"}
 D.NPCLabelNames[16788]={["0d1f26e47379c68d:19"]="节日护火者"}
-D.NPCLabelNames[16789]={["05c36a673efe1f32:21"]=S[16046]}
+D.NPCLabelNames[16789]={["05c36a673efe1f32:21"]=S[16047]}
 D.NPCLabelNames[16790]={["7981e141fb2b58ec:23"]="驯鹰者德蕾娜·河风"}
 D.NPCLabelNames[16791]={["37ce2c0921dfed98:16"]="阴沉的利亚森"}
 D.NPCLabelNames[16792]={["bef09b10831810dd:26"]="奥术师卡雷希斯·晨星"}
@@ -10534,13 +10534,13 @@ D.NPCLabelNames[16798]={["2821592ff3e5f238:15"]="供给者阿妮尔"}
 D.NPCLabelNames[16799]={["7c9877684a5d318f:4"]="伊坎"}
 D.NPCLabelNames[16800]={["d58b4fe51b42a108:20"]=S[8072]}
 D.NPCLabelNames[16801]={["e4c1ec97e5cac572:18"]=S[6104]}
-D.NPCLabelNames[16802]={["99e5e94ac63ad845:16"]=S[15869]}
+D.NPCLabelNames[16802]={["99e5e94ac63ad845:16"]=S[15870]}
 D.NPCLabelNames[16803]={["92b912c730e634f2:21"]="死亡骑士学员"}
 D.NPCLabelNames[16804]={["fff1f882c66237a3:14"]="暗夜精灵的尸体"}
 D.NPCLabelNames[16805]={["f1d616abe7a4ae22:14"]="破碎的骷髅"}
 D.NPCLabelNames[16806]={["c16152d71ef4e55e:9"]="埃伯洛克"}
-D.NPCLabelNames[16807]={["8a7168a2d1693c67:22"]=S[21875]}
-D.NPCLabelNames[16808]={["016541fe7a714b0f:24"]=S[20773]}
+D.NPCLabelNames[16807]={["8a7168a2d1693c67:22"]=S[21876]}
+D.NPCLabelNames[16808]={["016541fe7a714b0f:24"]=S[20774]}
 D.NPCLabelNames[16809]={["071d482a2fb5f21b:17"]=S[11729]}
 D.NPCLabelNames[16810]={["94fa6014a641b6fd:21"]="噬骨碎脊者"}
 D.NPCLabelNames[16811]={["de6e5b3f5a265944:9"]="塞巴斯蒂安"}
@@ -10574,7 +10574,7 @@ D.NPCLabelNames[16838]={["5f0a740dfbe33fd6:14"]="荣耀堡矿工"}
 D.NPCLabelNames[16839]={["8f20fa9097bb590d:15"]="位面占卜者克雷夫"}
 D.NPCLabelNames[16840]={["3552aa5c74e2308b:12"]="顾问塞维尔"}
 D.NPCLabelNames[16841]={["2c626eb12d410a20:32"]=S[8781]}
-D.NPCLabelNames[16842]={["2589e64f224861ac:17"]=S[18372]}
+D.NPCLabelNames[16842]={["2589e64f224861ac:17"]=S[18373]}
 D.NPCLabelNames[16843]={["6632b1009c937c99:19"]="荣耀堡骑兵"}
 D.NPCLabelNames[16844]={["759eecdd04fee246:12"]="硬壳穿地虫"}
 D.NPCLabelNames[16845]={["bc91fa6d239753d0:15"]="格尔坎·血拳"}
@@ -10596,8 +10596,8 @@ D.NPCLabelNames[16860]={["e023d906456095f1:7"]="基尔兰妮"}
 D.NPCLabelNames[16861]={["fb5acbc8eae4407d:17"]="[UNUSED]死亡領主"}
 D.NPCLabelNames[16862]={["94effbcbcce2f876:7"]="西尔兰娜"}
 D.NPCLabelNames[16863]={["0bed1d9ca18fb9e5:15"]="疯狂的地狱野猪"}
-D.NPCLabelNames[16864]={["9215cf37664e24de:17"]=S[14195]}
-D.NPCLabelNames[16865]={["9176d428187466bd:24"]=S[19554]}
+D.NPCLabelNames[16864]={["9215cf37664e24de:17"]=S[14196]}
+D.NPCLabelNames[16865]={["9176d428187466bd:24"]=S[19555]}
 D.NPCLabelNames[16866]={["2178702a0bc8ee2d:26"]="受伤的守望堡步兵"}
 D.NPCLabelNames[16867]={["9b1c1fb4ba5fe7c9:18"]="碎手步兵"}
 D.NPCLabelNames[16868]={["251f3ee86197f1ef:6"]="闻巽"}
@@ -10614,13 +10614,13 @@ D.NPCLabelNames[16878]={["e4f2d26910ead500:22"]="碎手狂战士"}
 D.NPCLabelNames[16879]={["20d9c23049206b8f:15"]="饥饿的地狱野猪"}
 D.NPCLabelNames[16880]={["c6be4c54e4d845b7:14"]="笨拙的地狱野猪"}
 D.NPCLabelNames[16881]={["600b52283b364cf7:14"]="魔血恐惧元素"}
-D.NPCLabelNames[16882]={["d5407f383ef494df:16"]=S[13162]}
+D.NPCLabelNames[16882]={["d5407f383ef494df:16"]=S[13163]}
 D.NPCLabelNames[16883]={["1d2bd8db93fa9ada:11"]="希拉斯的坐骑"}
 D.NPCLabelNames[16884]={["8aa32210d0526c15:8"]="战马"}
 D.NPCLabelNames[16885]={["afad444562f5fdc2:18"]="阿米希尔·迷雾行者"}
-D.NPCLabelNames[16886]={["054581380f948e53:17"]=S[12959]}
+D.NPCLabelNames[16886]={["054581380f948e53:17"]=S[12960]}
 D.NPCLabelNames[16887]={["91ea3beaa184daa1:14"]="荣耀堡之眼"}
-D.NPCLabelNames[16888]={["0f99309bbd81936e:16"]=S[16704]}
+D.NPCLabelNames[16888]={["0f99309bbd81936e:16"]=S[16705]}
 D.NPCLabelNames[16889]={["a1ec1b1c6d065b8b:18"]="暴风城司仪"}
 D.NPCLabelNames[16890]={["9f9350209442f4bd:18"]="铁炉堡司仪"}
 D.NPCLabelNames[16891]={["10ceafcf96de4f76:5"]="尤里"}
@@ -10740,7 +10740,7 @@ D.NPCLabelNames[17005]={["793b174dafb9137e:14"]="斗技者拉雷尼斯"}
 D.NPCLabelNames[17006]={["66be975a2e1ee09f:7"]="艾尔萨娜"}
 D.NPCLabelNames[17007]={["a14095e49e44607d:18"]=S[5569]}
 D.NPCLabelNames[17008]={["151310273d6f6fe8:7"]=S[5101]}
-D.NPCLabelNames[17009]={["2eb8ac4270448c33:7"]=S[14717]}
+D.NPCLabelNames[17009]={["2eb8ac4270448c33:7"]=S[14718]}
 D.NPCLabelNames[17010]={["0f50c088708d0c09:5"]=S[10773]}
 D.NPCLabelNames[17011]={["9dbbdc3f557bb124:21"]="毁灭者黑手"}
 D.NPCLabelNames[17012]={["10f7f8fe0fd3c1a1:16"]=S[8479]}
@@ -10820,7 +10820,7 @@ D.NPCLabelNames[17095]={["d8947374f0b1ada7:18"]="巴尔兰达·亮星"}
 D.NPCLabelNames[17096]={["702e791631abac73:11"]="星界光芒"}
 D.NPCLabelNames[17097]={["2cf8353e42864675:15"]="顾问萨洛法斯"}
 D.NPCLabelNames[17098]={["ae384f740e851841:20"]="银月大使帕拉·晨歌"}
-D.NPCLabelNames[17099]={["8ea3fe802f560a57:15"]=S[22022]}
+D.NPCLabelNames[17099]={["8ea3fe802f560a57:15"]=S[22023]}
 D.NPCLabelNames[17100]={["277caa6cfe14057b:15"]="顾问萨苏恩·誓日"}
 D.NPCLabelNames[17101]={["5a1caf27ca7e6276:8"]="迪泰娜"}
 D.NPCLabelNames[17102]={["ac85a958444817d7:11"]="愤怒的鱼人"}
@@ -10915,13 +10915,13 @@ D.NPCLabelNames[17194]={["f23761223c8d8a91:18"]="怒鳞侍从"}
 D.NPCLabelNames[17195]={["203d2c94a9493935:15"]="怒鳞海妖"}
 D.NPCLabelNames[17196]={["917b1de73b263eee:11"]="根须诱捕者"}
 D.NPCLabelNames[17197]={["e5fad10e8a7629ab:12"]="根须痛击者"}
-D.NPCLabelNames[17198]={["31bf9cbf465b1b1c:16"]=S[12344]}
+D.NPCLabelNames[17198]={["31bf9cbf465b1b1c:16"]=S[12345]}
 D.NPCLabelNames[17199]={["c61255011cd7b162:15"]="成型的掠食者"}
 D.NPCLabelNames[17200]={["63e22bc6a56a3c87:13"]="月痕雄鹿"}
 D.NPCLabelNames[17201]={["63d8dddc8ef66fdb:13"]="月痕巨鹿"}
 D.NPCLabelNames[17202]={["748592400a44ec51:24"]="感染的夜行豹幼崽"}
 D.NPCLabelNames[17203]={["bef608958ad212f4:12"]="夜行豹"}
-D.NPCLabelNames[17204]={["503b52820829a0af:14"]=S[21488]}
+D.NPCLabelNames[17204]={["503b52820829a0af:14"]=S[21489]}
 D.NPCLabelNames[17205]={["1dd6c7d2df504f01:6"]="坦普"}
 D.NPCLabelNames[17206]={["34333ce3ba90fa6a:7"]="赫图尔"}
 D.NPCLabelNames[17207]={["0ffc83f104bb5f08:5"]="奈亚斯"}
@@ -11001,7 +11001,7 @@ D.NPCLabelNames[17282]={["db8e860e514b7d53:17"]="猎鹰岗哨游侠"}
 D.NPCLabelNames[17283]={["711be92d5ec7c282:11"]="星界火花"}
 D.NPCLabelNames[17284]={["610bd29e0900aadd:24"]="羅特立專員 [DND]"}
 D.NPCLabelNames[17285]={["56da20a729377eda:9"]="拉格纳萝丝"}
-D.NPCLabelNames[17286]={["fedde1069805fd0d:12"]=S[21316]}
+D.NPCLabelNames[17286]={["fedde1069805fd0d:12"]=S[21317]}
 D.NPCLabelNames[17287]={["ab034ae161902d96:25"]="哨兵卢希尔·星语"}
 D.NPCLabelNames[17288]={["f4c5c91be4b8beee:20"]="兰迪·维兹普罗克"}
 D.NPCLabelNames[17289]={["111afb792a6f358c:18"]="火枪手布隆恩·棕须"}
@@ -11023,7 +11023,7 @@ D.NPCLabelNames[17304]={["80bc1a609afb5095:15"]="监工古尔萨克"}
 D.NPCLabelNames[17305]={["7ff880dcdfe42607:22"]="西洋棋棋盤, 黑色(DND)"}
 D.NPCLabelNames[17306]={["97e29eb4dc6d77b1:20"]=S[10165]}
 D.NPCLabelNames[17307]={["d5e691250df25e3a:17"]=S[1378]}
-D.NPCLabelNames[17308]={["cf23f0ea213d5e47:16"]=S[13617]}
+D.NPCLabelNames[17308]={["cf23f0ea213d5e47:16"]=S[13618]}
 D.NPCLabelNames[17309]={["04eec8deb1424e29:15"]="地狱火哨兵"}
 D.NPCLabelNames[17310]={["0f84d979823de7d4:5"]="纳亚尔"}
 D.NPCLabelNames[17311]={["f6e974eddce5794a:6"]="库雷"}
@@ -11206,7 +11206,7 @@ D.NPCLabelNames[17489]={["5601adc384845630:11"]="洛根·丹尼尔"}
 D.NPCLabelNames[17490]={["2dcf14d5d4d11dec:18"]="止松部族的厄尔"}
 D.NPCLabelNames[17491]={["042a3bc1115ec27e:18"]="嘲颅盗贼"}
 D.NPCLabelNames[17492]={["53a522fe13e6076b:13"]="疯乱的野枭兽"}
-D.NPCLabelNames[17493]={["e2d8b9bafffcdd29:18"]=S[17174]}
+D.NPCLabelNames[17493]={["e2d8b9bafffcdd29:18"]=S[17175]}
 D.NPCLabelNames[17494]={["2bdab30508100b3e:6"]="塞弗拉克斯"}
 D.NPCLabelNames[17495]={["c2c853307eff6d4f:15"]="止松袭击者"}
 D.NPCLabelNames[17496]={["38e3e03d310337be:8"]="克鲁芬"}
@@ -11425,10 +11425,10 @@ D.NPCLabelNames[17712]={["8808aa8b90d08304:18"]="艾德华·汉斯船长"}
 D.NPCLabelNames[17713]={["5f1f61920493c859:15"]="血咒纳迦"}
 D.NPCLabelNames[17714]={["be016bd83b219427:18"]="血咒航海者"}
 D.NPCLabelNames[17715]={["8e791298003733cf:19"]="血咒者埃托弗"}
-D.NPCLabelNames[17716]={["49f6d87da3f35a60:18"]=S[14856]}
-D.NPCLabelNames[17717]={["f2af23fcd8561dbf:21"]=S[21760]}
+D.NPCLabelNames[17716]={["49f6d87da3f35a60:18"]=S[14857]}
+D.NPCLabelNames[17717]={["f2af23fcd8561dbf:21"]=S[21761]}
 D.NPCLabelNames[17718]={["da50812091201039:25"]="魔导师阿斯塔洛·血誓"}
-D.NPCLabelNames[17719]={["873b278d4523e574:21"]=S[20970]}
+D.NPCLabelNames[17719]={["873b278d4523e574:21"]=S[20971]}
 D.NPCLabelNames[17720]={["dba81f96851baf21:20"]="奥格瑞玛飞龙骑士"}
 D.NPCLabelNames[17721]={["f0e1a1359cf71c52:16"]="盘牙工程师"}
 D.NPCLabelNames[17722]={["984bb84193f44968:17"]="盘牙巫师"}
@@ -11504,9 +11504,9 @@ D.NPCLabelNames[17792]={["906c847c1fb1f377:24"]="外域風蛇, 白色"}
 D.NPCLabelNames[17793]={["a272a097a88388e6:25"]="外域風蛇, 黃色"}
 D.NPCLabelNames[17794]={["b1bed0296b022752:19"]="联盟哨塔支援者"}
 D.NPCLabelNames[17795]={["f208c0021bc5d5bd:16"]="部落哨塔支援者"}
-D.NPCLabelNames[17796]={["a8db35b6947e5fbb:20"]=S[14420]}
-D.NPCLabelNames[17797]={["e76f2b6fcee8db60:18"]=S[15502]}
-D.NPCLabelNames[17798]={["86844b6fab82398c:17"]=S[17146]}
+D.NPCLabelNames[17796]={["a8db35b6947e5fbb:20"]=S[14421]}
+D.NPCLabelNames[17797]={["e76f2b6fcee8db60:18"]=S[15503]}
+D.NPCLabelNames[17798]={["86844b6fab82398c:17"]=S[17147]}
 D.NPCLabelNames[17799]={["8d89db4ce1014ccb:13"]="残冠奴隶"}
 D.NPCLabelNames[17800]={["bb9f449703e072c4:16"]="盘牙侍从"}
 D.NPCLabelNames[17801]={["ba69bc2956240ac2:13"]="盘牙海妖"}
@@ -11532,7 +11532,7 @@ D.NPCLabelNames[17822]={["e4b6c7270e9b9be6:14"]="兰登·斯蒂维尔"}
 D.NPCLabelNames[17823]={["1a6a1b7c10ef2269:20"]="疯狂的狼人"}
 D.NPCLabelNames[17824]={["4969918ddfff334a:20"]="被抓住的炎鹰间谍"}
 D.NPCLabelNames[17825]={["ab3a730c79ae1b3d:18"]="审讯者埃莉西亚"}
-D.NPCLabelNames[17826]={["8f02ca7b7e88add0:17"]=S[15776]}
+D.NPCLabelNames[17826]={["8f02ca7b7e88add0:17"]=S[15777]}
 D.NPCLabelNames[17827]={["7c95316c33b25c9f:4"]="克劳恩"}
 D.NPCLabelNames[17828]={["a5aad3dafaf1cfdd:13"]="[UNUSED] 伏納特"}
 D.NPCLabelNames[17829]={["545ea9c8c12b2061:14"]="莱库尔幼虫"}
@@ -11548,7 +11548,7 @@ D.NPCLabelNames[17838]={["21d0f209e4eaab32:8"]="时间裂隙"}
 D.NPCLabelNames[17839]={["3a056c2bea41ab7a:8"]="裂隙领主"}
 D.NPCLabelNames[17840]={["3ec51f9b7dbaa354:22"]="敦霍尔德猎犬"}
 D.NPCLabelNames[17841]={["d6c590e5b84c4e9a:15"]="伊谢尔·风歌"}
-D.NPCLabelNames[17842]={["52a4e615e237aedc:7"]=S[21150]}
+D.NPCLabelNames[17842]={["52a4e615e237aedc:7"]=S[21151]}
 D.NPCLabelNames[17843]={["49a683cc5a348a73:15"]=S[8755]}
 D.NPCLabelNames[17844]={["48e8ccedcb09d7f4:15"]=S[8752]}
 D.NPCLabelNames[17845]={["fccbbe48a45e0949:16"]="血精灵魔导师"}
@@ -11567,7 +11567,7 @@ D.NPCLabelNames[17858]={["32652d8e87eb9fe5:12"]="监护者哈穆特"}
 D.NPCLabelNames[17859]={["7312cd21b7c98f08:24"]="艾力克斯測試任務旗幟npc"}
 D.NPCLabelNames[17860]={["301b8bff5d3eeec6:16"]="敦霍尔德精兵"}
 D.NPCLabelNames[17861]={["56d861ab42e77ad6:34"]="抽水機調查獎勵標誌"}
-D.NPCLabelNames[17862]={["4a2b9494fd833cf3:14"]=S[13182]}
+D.NPCLabelNames[17862]={["4a2b9494fd833cf3:14"]=S[13183]}
 D.NPCLabelNames[17863]={["c77996a00f65575d:17"]="瑪提斯獎勵標誌"}
 D.NPCLabelNames[17864]={["425e5d55b868ee76:15"]="低级末日守卫"}
 D.NPCLabelNames[17865]={["0fea9b43c641ac8a:5"]="玛提斯"}
@@ -11584,12 +11584,12 @@ D.NPCLabelNames[17875]={["3572df8cdd7ec609:15"]="阿古斯之手的猎人"}
 D.NPCLabelNames[17876]={["1e0f904c8c5b98e3:6"]="萨尔"}
 D.NPCLabelNames[17877]={["fd6a515a457834fd:6"]="弗沃尔"}
 D.NPCLabelNames[17878]={["caa44c97a309e982:20"]="天灾攻城技师"}
-D.NPCLabelNames[17879]={["306609b3dbcf4b30:14"]=S[13671]}
+D.NPCLabelNames[17879]={["306609b3dbcf4b30:14"]=S[13672]}
 D.NPCLabelNames[17880]={["eead8fa4f0502335:8"]="坦普卢斯"}
 D.NPCLabelNames[17881]={["f185d63096269dc1:6"]="埃欧努斯"}
-D.NPCLabelNames[17882]={["f61c02b9ee6504be:15"]=S[22143]}
+D.NPCLabelNames[17882]={["f61c02b9ee6504be:15"]=S[22144]}
 D.NPCLabelNames[17883]={["c51e319541e01324:17"]="維倫事件啟動器"}
-D.NPCLabelNames[17884]={["edeab3dbcab54f80:12"]=S[19221]}
+D.NPCLabelNames[17884]={["edeab3dbcab54f80:12"]=S[19222]}
 D.NPCLabelNames[17885]={["274ac8a5618f2114:16"]="缚地者雷葛"}
 D.NPCLabelNames[17886]={["29367c6ab79d3363:28"]="[DND]太陽之鷹傳送門控制器"}
 D.NPCLabelNames[17887]={["0bdafc9454708773:11"]="虚空幼体"}
@@ -11623,7 +11623,7 @@ D.NPCLabelNames[17915]={["137d8ec4444a10a9:27"]="[PH] 隱形聖騎士任務獎�
 D.NPCLabelNames[17916]={["1cda20d2911b30bf:10"]="恶魔猎犬"}
 D.NPCLabelNames[17917]={["d224b4028fa73d13:22"]="盘牙水元素"}
 D.NPCLabelNames[17918]={["c93889f081e217ff:10"]="时光守卫者"}
-D.NPCLabelNames[17919]={["43b60cd2508a43d5:15"]=S[18055]}
+D.NPCLabelNames[17919]={["43b60cd2508a43d5:15"]=S[18056]}
 D.NPCLabelNames[17920]={["a8c840637a884ae4:14"]="联盟骑士"}
 D.NPCLabelNames[17921]={["ea1cd22c60613d69:16"]="联盟火枪手"}
 D.NPCLabelNames[17922]={["b27dc157c7ee1b94:17"]="联盟巫师"}
@@ -11636,7 +11636,7 @@ D.NPCLabelNames[17928]={["b4ba6675f82690d6:14"]="联盟牧师"}
 D.NPCLabelNames[17929]={["0fcab89fb02e282c:5"]="基欧妮"}
 D.NPCLabelNames[17930]={["0ffc66a6014cf375:5"]="纳贝克"}
 D.NPCLabelNames[17931]={["2d2ac14ae52c0ec9:15"]="联盟农夫"}
-D.NPCLabelNames[17932]={["961fc2a7dfbf5b44:10"]=S[20766]}
+D.NPCLabelNames[17932]={["961fc2a7dfbf5b44:10"]=S[20767]}
 D.NPCLabelNames[17933]={["dc9d679afc8ef34f:13"]="牛头人战士"}
 D.NPCLabelNames[17934]={["df29edff2fb9d04c:15"]="部落猎头者"}
 D.NPCLabelNames[17935]={["365c72a11a92b3fa:16"]="部落巫医"}
@@ -11652,8 +11652,8 @@ D.NPCLabelNames[17944]={["0f5125597c547dae:5"]="树妖"}
 D.NPCLabelNames[17945]={["266bf852d840e8ed:16"]="暗夜精灵女猎手"}
 D.NPCLabelNames[17946]={["8afc6c2a3a532687:11"]="上古小精灵"}
 D.NPCLabelNames[17947]={["7a77c00e529ff5e1:15"]="红水晶兔"}
-D.NPCLabelNames[17948]={["ea8827b011b78c6f:18"]=S[15835]}
-D.NPCLabelNames[17949]={["7bdb4be67088a2d9:18"]=S[16686]}
+D.NPCLabelNames[17948]={["ea8827b011b78c6f:18"]=S[15836]}
+D.NPCLabelNames[17949]={["7bdb4be67088a2d9:18"]=S[16687]}
 D.NPCLabelNames[17950]={["f56ab9595008803a:25"]="[PH] 隱形靜刃獎勵"}
 D.NPCLabelNames[17951]={["44db7f57788139b8:19"]="斯蒂里格技师"}
 D.NPCLabelNames[17952]={["79c214b3da391d80:18"]="暗水鳄鱼"}
@@ -11671,17 +11671,17 @@ D.NPCLabelNames[17963]={["089f95ea895cc027:16"]="荒土奴隶"}
 D.NPCLabelNames[17964]={["26266349c3fa1e2e:17"]="荒土工人"}
 D.NPCLabelNames[17965]={["da3c4c1080f54087:16"]="開啟傳送門目標"}
 D.NPCLabelNames[17967]={["ab7270e3e4082230:11"]="墓穴甲虫"}
-D.NPCLabelNames[17968]={["3d1808dfab7a731a:10"]=S[21139]}
+D.NPCLabelNames[17968]={["3d1808dfab7a731a:10"]=S[21140]}
 D.NPCLabelNames[17969]={["32fab5ce6acc9fd9:13"]="凯拉·长鬃"}
 D.NPCLabelNames[17970]={["b680998604698961:14"]="风暴乌鸦形态"}
 D.NPCLabelNames[17971]={["5705f3092069c9a2:29"]="被俘虜的太陽之鷹密探變形"}
 D.NPCLabelNames[17972]={["8cfb1c1143007d58:21"]="隱形的坐騎"}
 D.NPCLabelNames[17973]={["0e8f873a5a2eef5d:15"]="伊谢尔的幻像"}
 D.NPCLabelNames[17974]={["d853a0a6c3834e15:36"]="被俘虜的太陽之鷹密探隱形啟動器"}
-D.NPCLabelNames[17975]={["a9f402fb3d29cc0a:20"]=S[21847]}
-D.NPCLabelNames[17976]={["5515cd1a983024ff:17"]=S[12278]}
+D.NPCLabelNames[17975]={["a9f402fb3d29cc0a:20"]=S[21848]}
+D.NPCLabelNames[17976]={["5515cd1a983024ff:17"]=S[12279]}
 D.NPCLabelNames[17977]={["37ae9e50ad75b635:12"]="迁跃扭木"}
-D.NPCLabelNames[17978]={["c2a68ba32fe6055e:18"]=S[17111]}
+D.NPCLabelNames[17978]={["c2a68ba32fe6055e:18"]=S[17112]}
 D.NPCLabelNames[17979]={["f4d9b9c2c437abdf:18"]="秘血电磁圈"}
 D.NPCLabelNames[17980]={["0b888b3c358fa2b5:3"]="拉伊"}
 D.NPCLabelNames[17981]={["984ad18091e07467:9"]="空灵爪牙"}
@@ -11722,7 +11722,7 @@ D.NPCLabelNames[18016]={["b40ee437c550c87e:7"]="玛加沙"}
 D.NPCLabelNames[18017]={["7749ea63c530f8f6:10"]="先知亚尼迪"}
 D.NPCLabelNames[18018]={["cc36d92be60fd6d6:7"]="苏尔加亚"}
 D.NPCLabelNames[18019]={["ecc797738e9f5966:14"]="迪莫斯·丹尼斯"}
-D.NPCLabelNames[18020]={["1a7394e4f0fb1fbd:16"]=S[21106]}
+D.NPCLabelNames[18020]={["1a7394e4f0fb1fbd:16"]=S[21107]}
 D.NPCLabelNames[18021]={["5bc0e8a90cdc1c88:14"]="防御者凯伊甘"}
 D.NPCLabelNames[18022]={["30886b25c01f6436:12"]="防御者乌尔希"}
 D.NPCLabelNames[18023]={["5cf27750d8f3989b:14"]="防御者克拉诺斯"}
@@ -11765,8 +11765,8 @@ D.NPCLabelNames[18071]={["60ad02ddc83cfc00:18"]="元素师温塔格"}
 D.NPCLabelNames[18072]={["cd02789c116816f7:19"]="元素师沙尔瓦克"}
 D.NPCLabelNames[18073]={["3897f1dfbe8959f0:17"]="元素师鲁艾普"}
 D.NPCLabelNames[18074]={["38ab4a29276a452e:17"]="元素师莫格"}
-D.NPCLabelNames[18075]={["2c40ec1b9bd180ac:9"]=S[16697]}
-D.NPCLabelNames[18076]={["a99e87435fe68ade:18"]=S[14830]}
+D.NPCLabelNames[18075]={["2c40ec1b9bd180ac:9"]=S[16698]}
+D.NPCLabelNames[18076]={["a99e87435fe68ade:18"]=S[14831]}
 D.NPCLabelNames[18077]={["52f1596b786ebad4:14"]="暗泽神谕者"}
 D.NPCLabelNames[18078]={["9f952c6a993ad33f:13"]="坏兔子"}
 D.NPCLabelNames[18079]={["1011b764b7ea17d5:12"]="暗泽先知"}
@@ -11867,7 +11867,7 @@ D.NPCLabelNames[18176]={["ec2b60076887c8cc:21"]="被污染的地缚图腾"}
 D.NPCLabelNames[18177]={["d26e77d561dd1c20:21"]="被污染的石肤图腾"}
 D.NPCLabelNames[18178]={["7828da9d9e1b0bca:16"]="被污染的火焰图腾"}
 D.NPCLabelNames[18179]={["55247b7a8a92b229:18"]=S[7815]}
-D.NPCLabelNames[18180]={["45f845bffdc97a56:15"]=S[19640]}
+D.NPCLabelNames[18180]={["45f845bffdc97a56:15"]=S[19641]}
 D.NPCLabelNames[18181]={["9ea60e2c64db1273:13"]="古罗克的爪牙"}
 D.NPCLabelNames[18182]={["4f497904c0413bb1:15"]="侵占者古罗克"}
 D.NPCLabelNames[18183]={["3ae77db74c147ad8:8"]="阿雷克隆"}
@@ -12015,12 +12015,12 @@ D.NPCLabelNames[18334]={["692b8261a5f49974:9"]="野生雷象"}
 D.NPCLabelNames[18335]={["3b07796d34d0754a:19"]="星界财团招募员"}
 D.NPCLabelNames[18336]={["e39fd3af7d65ed92:18"]="银月城魔导师"}
 D.NPCLabelNames[18337]={["9bb53d4b984bc700:14"]="牧师卡斯玛"}
-D.NPCLabelNames[18338]={["d98f0a09ec37db2e:13"]=S[21965]}
+D.NPCLabelNames[18338]={["d98f0a09ec37db2e:13"]=S[21966]}
 D.NPCLabelNames[18340]={["8dc135ec1cbf898b:17"]="蒸汽泵监工"}
 D.NPCLabelNames[18341]={["883ccca8121c72b9:11"]="潘德莫努斯"}
 D.NPCLabelNames[18342]={["5fa1337048b3b33d:16"]="影院灯光"}
 D.NPCLabelNames[18343]={["cff5f9bd9adfd156:7"]="塔瓦洛克"}
-D.NPCLabelNames[18344]={["13a5d741a8a85106:19"]=S[18292]}
+D.NPCLabelNames[18344]={["13a5d741a8a85106:19"]=S[18293]}
 D.NPCLabelNames[18345]={["071ffc91893bc566:29"]="骑乘双足飞龙"}
 D.NPCLabelNames[18346]={["d3c2678584abbe6a:18"]="星界财团保卫者"}
 D.NPCLabelNames[18347]={["12a97f2192c9ddc2:6"]="奥里雷"}
@@ -12037,8 +12037,8 @@ D.NPCLabelNames[18358]={["c278cf18e13deea5:14"]="孢子村幼体"}
 D.NPCLabelNames[18359]={["40bdfe0cc660af6f:12"]="雪色狮鹫"}
 D.NPCLabelNames[18360]={["f1c42d6597381cdc:13"]="金色狮鹫"}
 D.NPCLabelNames[18361]={["3cee28f0e88120b9:31"]="外域有護甲的獅鷲獸(舊)"}
-D.NPCLabelNames[18362]={["25d31ef16ef1aab6:18"]=S[19887]}
-D.NPCLabelNames[18363]={["026498e09a51103d:14"]=S[18355]}
+D.NPCLabelNames[18362]={["25d31ef16ef1aab6:18"]=S[19888]}
+D.NPCLabelNames[18363]={["026498e09a51103d:14"]=S[18356]}
 D.NPCLabelNames[18364]={["137f7bd5e8005818:13"]="蓝色驭风者"}
 D.NPCLabelNames[18365]={["f79e20be38cf4f6f:14"]="绿色驭风者"}
 D.NPCLabelNames[18366]={["9bd4c95d0aa61042:9"]="測試符印"}
@@ -12046,16 +12046,16 @@ D.NPCLabelNames[18367]={["9527dc34a25e7cef:25"]="[UNUSED] 德萊尼靈魂 [PH]"}
 D.NPCLabelNames[18368]={["7b48e08af75b4c3f:10"]="虚空召唤者"}
 D.NPCLabelNames[18369]={["0f3d4b3da96b4264:5"]="考尔奇"}
 D.NPCLabelNames[18370]={["67ec3fdc7a2a9e7b:17"]="强力暗影裂缝"}
-D.NPCLabelNames[18371]={["c3abb3168627f825:21"]=S[15039]}
+D.NPCLabelNames[18371]={["c3abb3168627f825:21"]=S[15040]}
 D.NPCLabelNames[18372]={["16f734a92eb2e470:16"]="劣质石像"}
 D.NPCLabelNames[18373]={["3945e0d313c082e0:14"]=S[7977]}
 D.NPCLabelNames[18374]={["aa48ad2b06dcc5ce:9"]="集中火力"}
-D.NPCLabelNames[18375]={["d8ebb56ad882e175:17"]=S[19896]}
-D.NPCLabelNames[18376]={["10f635d4c6672867:15"]=S[19892]}
-D.NPCLabelNames[18377]={["b6c498d5aba68694:17"]=S[19894]}
-D.NPCLabelNames[18378]={["521855eb805a98a2:19"]=S[19899]}
-D.NPCLabelNames[18379]={["76803d32d9f6d163:20"]=S[19890]}
-D.NPCLabelNames[18380]={["b8cc2476353ec5eb:20"]=S[19908]}
+D.NPCLabelNames[18375]={["d8ebb56ad882e175:17"]=S[19897]}
+D.NPCLabelNames[18376]={["10f635d4c6672867:15"]=S[19893]}
+D.NPCLabelNames[18377]={["b6c498d5aba68694:17"]=S[19895]}
+D.NPCLabelNames[18378]={["521855eb805a98a2:19"]=S[19900]}
+D.NPCLabelNames[18379]={["76803d32d9f6d163:20"]=S[19891]}
+D.NPCLabelNames[18380]={["b8cc2476353ec5eb:20"]=S[19909]}
 D.NPCLabelNames[18381]={["05d6d2ebfe3dd540:11"]="虚空龙宝宝"}
 D.NPCLabelNames[18382]={["0ff77af71a7e34de:5"]="麦卡"}
 D.NPCLabelNames[18383]={["7b0028cd18850dce:8"]="库加托克"}
@@ -12081,7 +12081,7 @@ D.NPCLabelNames[18402]={["356ac62d86fe767c:15"]="战槌勇士"}
 D.NPCLabelNames[18403]={["55f516e55c0f0d10:8"]="孢子蝠"}
 D.NPCLabelNames[18404]={["f0c324f45112fd3d:18"]="血警卫管理者"}
 D.NPCLabelNames[18405]={["2f2e9f4176de88d4:24"]="风暴锻铸护卫者"}
-D.NPCLabelNames[18406]={["7b8dd5212f342c78:16"]=S[19903]}
+D.NPCLabelNames[18406]={["7b8dd5212f342c78:16"]=S[19904]}
 D.NPCLabelNames[18407]={["dfc0ee41fb4bb7b6:13"]="监护者布罗克"}
 D.NPCLabelNames[18408]={["49e80f0bdfcd1dfc:17"]="监护者莫布吉尔"}
 D.NPCLabelNames[18409]={["722678de169ca65d:16"]="大型幽暗蝠"}
@@ -12142,7 +12142,7 @@ D.NPCLabelNames[18468]={["fa441c97bcb8da24:8"]="泰罗巨蛾"}
 D.NPCLabelNames[18469]={["32b635de3f3f49ab:13"]="华丽的巨蛾"}
 D.NPCLabelNames[18470]={["29bb22682d5e68fb:10"]="白骨秃鹫"}
 D.NPCLabelNames[18471]={["0a64bad3a656b040:9"]=S[5107]}
-D.NPCLabelNames[18472]={["98d336794d1e6d80:14"]=S[22098]}
+D.NPCLabelNames[18472]={["98d336794d1e6d80:14"]=S[22099]}
 D.NPCLabelNames[18473]={["d1608faf2b930df2:14"]=S[3603]}
 D.NPCLabelNames[18474]={["89676cfc8b9ca04d:20"]="乐色"}
 D.NPCLabelNames[18475]={["e29610b6f05b5ddb:7"]="穆格高克"}
@@ -12161,7 +12161,7 @@ D.NPCLabelNames[18487]={["03bf9b5a04857181:24"]="暗夜精灵古树卫士"}
 D.NPCLabelNames[18488]={["663857f5fe8230ea:14"]="塔拉监护者"}
 D.NPCLabelNames[18489]={["c023ef343954600f:15"]="加拉达尔卫士"}
 D.NPCLabelNames[18490]={["cd43fb2f6d7ac3de:11"]="死去的德鲁伊"}
-D.NPCLabelNames[18491]={["0c700b7a07702bfd:15"]=S[15719]}
+D.NPCLabelNames[18491]={["0c700b7a07702bfd:15"]=S[15720]}
 D.NPCLabelNames[18492]={["957e244334b267b8:13"]="塔弗格伦的科多兽"}
 D.NPCLabelNames[18493]={["4e82731d2e93149c:18"]=S[8522]}
 D.NPCLabelNames[18494]={["f8821605c3751988:6"]="迪鲁姆"}
@@ -12268,7 +12268,7 @@ D.NPCLabelNames[18651]={["be77baf84eec84a5:12"]="小马布兰契"}
 D.NPCLabelNames[18652]={["2b8a8b1e6a12c9a3:6"]="萨恩莉亚"}
 D.NPCLabelNames[18653]={["7c9ddc1918c000a6:4"]="塞瑟"}
 D.NPCLabelNames[18654]={["7548ba2cbb1530db:17"]="一些低語協助者"}
-D.NPCLabelNames[18655]={["1d6ccf82cacab8f1:10"]=S[19577]}
+D.NPCLabelNames[18655]={["1d6ccf82cacab8f1:10"]=S[19578]}
 D.NPCLabelNames[18656]={["98531775a16ef38c:14"]="朱丽·哈尼维尔"}
 D.NPCLabelNames[18657]={["f838eb5c544cdc83:19"]="塔伦米尔渔夫"}
 D.NPCLabelNames[18658]={["3881eb79d5137fea:19"]="基尔索罗仪祭者"}
@@ -12280,7 +12280,7 @@ D.NPCLabelNames[18663]={["429100ec96b9e65f:18"]="戒律魔女"}
 D.NPCLabelNames[18664]={["830d34fa49a0b113:17"]="老迈的达拉然巫师"}
 D.NPCLabelNames[18665]={["d45e52fd6f777ac8:13"]="超越的目標"}
 D.NPCLabelNames[18666]={["7df82a11d8fa059e:16"]="达拉然女巫"}
-D.NPCLabelNames[18667]={["7e523c8583dc9a8c:20"]=S[16347]}
+D.NPCLabelNames[18667]={["7e523c8583dc9a8c:20"]=S[16348]}
 D.NPCLabelNames[18668]={["6e4874dc448bcc87:12"]="瓦尔隆·科玛"}
 D.NPCLabelNames[18669]={["58d98d60bc83ab2d:16"]="泰瑞克·暖风"}
 D.NPCLabelNames[18670]={["a86561bf5d5d8838:7"]="铁腭"}
@@ -12340,9 +12340,9 @@ D.NPCLabelNames[18727]={["ee2f108283ede633:8"]="拉瑟恩"}
 D.NPCLabelNames[18728]={["1be34491d050babe:14"]="末日领主卡扎克"}
 D.NPCLabelNames[18729]={["69380a9a3257b38d:22"]="地狱火雨"}
 D.NPCLabelNames[18730]={["8daae7568528adfb:10"]="希里纳诺"}
-D.NPCLabelNames[18731]={["f4c5804cf1fdfdb5:17"]=S[19638]}
+D.NPCLabelNames[18731]={["f4c5804cf1fdfdb5:17"]=S[19639]}
 D.NPCLabelNames[18732]={["e2fce499bd5c2bc8:17"]="沃匹尔大师"}
-D.NPCLabelNames[18733]={["1c83260153f393c2:9"]=S[21973]}
+D.NPCLabelNames[18733]={["1c83260153f393c2:9"]=S[21974]}
 D.NPCLabelNames[18734]={["fbfbb681d4dd489a:17"]="粗糙石像"}
 D.NPCLabelNames[18735]={["81cfb1c1674552c2:16"]="沉重石像"}
 D.NPCLabelNames[18736]={["e8daf15f1a7809fe:16"]="坚固石像"}
@@ -12547,10 +12547,10 @@ D.NPCLabelNames[18942]={["9ef78f4164eb2b6c:7"]="因娜丽雅"}
 D.NPCLabelNames[18943]={["85d070f6cc9b8cb3:23"]="奥雷柏尔营地卫兵"}
 D.NPCLabelNames[18944]={["11f2f7ae9832ba95:10"]="魔能士兵"}
 D.NPCLabelNames[18945]={["937e36a810fadc1d:12"]="深渊指挥官"}
-D.NPCLabelNames[18946]={["99ea1c9d14d5c1ca:20"]=S[12912]}
+D.NPCLabelNames[18946]={["99ea1c9d14d5c1ca:20"]=S[12913]}
 D.NPCLabelNames[18947]={["a2eeeef951e83ec2:7"]="索拉尼"}
-D.NPCLabelNames[18948]={["b3a1981e3adc7fb1:16"]=S[14192]}
-D.NPCLabelNames[18949]={["e8f99646dc4b3a83:13"]=S[14196]}
+D.NPCLabelNames[18948]={["b3a1981e3adc7fb1:16"]=S[14193]}
+D.NPCLabelNames[18949]={["e8f99646dc4b3a83:13"]=S[14197]}
 D.NPCLabelNames[18950]={["40633f05099a0e84:14"]=S[8491]}
 D.NPCLabelNames[18951]={["fbc262db49a7ef48:6"]="艾瑞丽亚"}
 D.NPCLabelNames[18952]={["b6ca98a5a531c1fe:19"]="噬骨清理者"}
@@ -12577,7 +12577,7 @@ D.NPCLabelNames[18974]={["2772bb90950610bf:6"]="兹克拉"}
 D.NPCLabelNames[18975]={["56790a1e0fe8722b:10"]=S[11436]}
 D.NPCLabelNames[18976]={["43873c0fca401bf0:7"]="乌加兹"}
 D.NPCLabelNames[18977]={["afeea910b47f132f:17"]=S[11264]}
-D.NPCLabelNames[18978]={["84ba2db8a8627e57:17"]=S[20707]}
+D.NPCLabelNames[18978]={["84ba2db8a8627e57:17"]=S[20708]}
 D.NPCLabelNames[18979]={["0ff1fafe48bbfdf9:5"]="姆巴兹"}
 D.NPCLabelNames[18980]={["2eb43662f9aabd5d:7"]="杜尔古斯"}
 D.NPCLabelNames[18981]={["faf2264d0b26bbc6:13"]="厄运耳语者"}
@@ -12813,17 +12813,17 @@ D.NPCLabelNames[19213]={["7c963e6a8f4dd189:4"]="伊恩"}
 D.NPCLabelNames[19214]={["857809e77601d102:17"]="魔王之手"}
 D.NPCLabelNames[19215]={["14192f2dddf92014:23"]="煉獄火接力 (地獄火)"}
 D.NPCLabelNames[19216]={["f5ffb878143e85b1:21"]="资深学者奥蒙纳"}
-D.NPCLabelNames[19217]={["bc1453e381126e60:9"]=S[12165]}
+D.NPCLabelNames[19217]={["bc1453e381126e60:9"]=S[12166]}
 D.NPCLabelNames[19218]={["d80b1a8e4029992b:20"]="看守者盖罗基尔"}
-D.NPCLabelNames[19219]={["79a5f0fb640ad780:21"]=S[14428]}
-D.NPCLabelNames[19220]={["7bbeb52c68a94d7f:22"]=S[19378]}
-D.NPCLabelNames[19221]={["91772c2243bf9525:21"]=S[16211]}
+D.NPCLabelNames[19219]={["79a5f0fb640ad780:21"]=S[14429]}
+D.NPCLabelNames[19220]={["7bbeb52c68a94d7f:22"]=S[19379]}
+D.NPCLabelNames[19221]={["91772c2243bf9525:21"]=S[16212]}
 D.NPCLabelNames[19222]={["f008dca9a734220c:14"]="熔岩涌动图腾"}
 D.NPCLabelNames[19223]={["3e00841956a30740:11"]="史密斯奶奶"}
-D.NPCLabelNames[19224]={["9a9cb389e99ece00:10"]=S[18674]}
+D.NPCLabelNames[19224]={["9a9cb389e99ece00:10"]=S[18675]}
 D.NPCLabelNames[19225]={["3aa888e848a970f1:23"]="风暴之力图腾"}
 D.NPCLabelNames[19226]={["250c80dc4346059b:12"]="虚空旅者"}
-D.NPCLabelNames[19227]={["0e001caaaa338633:7"]=S[14838]}
+D.NPCLabelNames[19227]={["0e001caaaa338633:7"]=S[14839]}
 D.NPCLabelNames[19228]={["4a864b38a7c882c5:11"]="派瑞·加奈尔"}
 D.NPCLabelNames[19229]={["4fb3c303376fcac8:14"]="指挥官杜隆"}
 D.NPCLabelNames[19231]={["87de8e8082c8cb0d:15"]="能源舰打击者"}
@@ -12876,7 +12876,7 @@ D.NPCLabelNames[19277]={["8fad87e12349d47e:18"]="军团感应器：狂乱"}
 D.NPCLabelNames[19278]={["8fa80dc45212b03b:18"]="军团感应器：仇恨"}
 D.NPCLabelNames[19279]={["8fa703a0f6ea4821:18"]="军团感应器：畏惧"}
 D.NPCLabelNames[19280]={["24dfe668be6e729b:14"]="红色陆行鸟"}
-D.NPCLabelNames[19281]={["d65cdacc804cb9a3:20"]=S[19885]}
+D.NPCLabelNames[19281]={["d65cdacc804cb9a3:20"]=S[19886]}
 D.NPCLabelNames[19282]={["b509ccf004f4d66b:18"]="征服者希亚兹"}
 D.NPCLabelNames[19283]={["68e40db85aeff231:7"]="流浪者"}
 D.NPCLabelNames[19284]={["3c049e1f059ae9c6:16"]="入侵的恶魔卫士"}
@@ -12895,11 +12895,11 @@ D.NPCLabelNames[19296]={["2d763ff778e77a40:15"]="旅店老板贝莉比"}
 D.NPCLabelNames[19297]={["c1e1f257bbeefb30:18"]="[PH]火藥目標"}
 D.NPCLabelNames[19298]={["f107232e15ffa987:19"]="战争使者阿利萨玛尔"}
 D.NPCLabelNames[19299]={["e81df0a46484cf3b:14"]="死亡耳语者"}
-D.NPCLabelNames[19300]={["7e523c8583dc9a8c:20"]=S[16347]}
-D.NPCLabelNames[19301]={["7e523c8583dc9a8c:20"]=S[16347]}
-D.NPCLabelNames[19302]={["7e523c8583dc9a8c:20"]=S[16347]}
-D.NPCLabelNames[19303]={["7e523c8583dc9a8c:20"]=S[16347]}
-D.NPCLabelNames[19304]={["7e523c8583dc9a8c:20"]=S[16347]}
+D.NPCLabelNames[19300]={["7e523c8583dc9a8c:20"]=S[16348]}
+D.NPCLabelNames[19301]={["7e523c8583dc9a8c:20"]=S[16348]}
+D.NPCLabelNames[19302]={["7e523c8583dc9a8c:20"]=S[16348]}
+D.NPCLabelNames[19303]={["7e523c8583dc9a8c:20"]=S[16348]}
+D.NPCLabelNames[19304]={["7e523c8583dc9a8c:20"]=S[16348]}
 D.NPCLabelNames[19305]={["b655490a1ba4038f:9"]="葛利安索恩"}
 D.NPCLabelNames[19306]={["0db044c34df53a8a:9"]="法力蛭"}
 D.NPCLabelNames[19307]={["103a0496864be533:11"]="节点恐魔"}
@@ -12989,7 +12989,7 @@ D.NPCLabelNames[19394]={["23aa15dd1e96a6f4:17"]="巴里莫克·蛮须"}
 D.NPCLabelNames[19395]={["7415fe96c8a51d15:14"]="布隆·金锤"}
 D.NPCLabelNames[19397]={["38b9abedba966b44:14"]="莫尔葛监工"}
 D.NPCLabelNames[19398]={["637bceceed6474d7:11"]="甘尔葛苦工"}
-D.NPCLabelNames[19399]={["f94462b9509a852a:9"]=S[20718]}
+D.NPCLabelNames[19399]={["f94462b9509a852a:9"]=S[20719]}
 D.NPCLabelNames[19400]={["b8651c46249fd081:15"]="魔能机甲哨兵"}
 D.NPCLabelNames[19401]={["7a09fc937aaf09ac:18"]="空军指挥官布拉克"}
 D.NPCLabelNames[19402]={["d1f3d46ab8fff6dd:15"]="枯萎的沼泽领主"}
@@ -13217,7 +13217,7 @@ D.NPCLabelNames[19629]={["f8848c39a3bd26e8:6"]="德纳斯"}
 D.NPCLabelNames[19630]={["f87da2994d4b56c2:6"]="迪安斯"}
 D.NPCLabelNames[19631]={["01934420af2475c5:6"]="哈拉姆"}
 D.NPCLabelNames[19632]={["4bd9c832b9bc4219:12"]="莱库尔钉刺者"}
-D.NPCLabelNames[19633]={["6c9f0e552e25957e:17"]=S[18893]}
+D.NPCLabelNames[19633]={["6c9f0e552e25957e:17"]=S[18894]}
 D.NPCLabelNames[19634]={["0dbbf8503b70ce1d:21"]="首席工兵布拉斯特菲兹"}
 D.NPCLabelNames[19635]={["f0e8747ce4d48695:14"]="阿拉森上尉"}
 D.NPCLabelNames[19636]={["d6bc492c8458802b:16"]="德莱尼火焰图腾"}
@@ -13256,8 +13256,8 @@ D.NPCLabelNames[19670]={["a08055823e3fdb9b:19"]="技师莫法鲁斯"}
 D.NPCLabelNames[19671]={["0cc6a63f0ebad4b8:21"]="低温工程师沙赫恩"}
 D.NPCLabelNames[19672]={["d7ea1c7f00f0adbc:17"]="星界财团劳工"}
 D.NPCLabelNames[19673]={["5350f56570d46810:18"]="星界财团工程师"}
-D.NPCLabelNames[19674]={["b5c21ef4771c1091:19"]=S[18290]}
-D.NPCLabelNames[19675]={["b5c21ef4771c1091:19"]=S[18290]}
+D.NPCLabelNames[19674]={["b5c21ef4771c1091:19"]=S[18291]}
+D.NPCLabelNames[19675]={["b5c21ef4771c1091:19"]=S[18291]}
 D.NPCLabelNames[19676]={["2b33b492ca0b60f5:15"]="“上尉”卡弗提兹"}
 D.NPCLabelNames[19677]={["7f421dda87e243e1:21"]="星界财团法术标记者"}
 D.NPCLabelNames[19678]={["fce6ca5cc9b09045:6"]="芬提"}

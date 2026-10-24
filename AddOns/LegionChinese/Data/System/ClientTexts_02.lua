@@ -144,9 +144,9 @@ D.ClientTexts.Achievement[10995]={Name={["4690e1af09b5c7ac:11"]="为了威望"},
 D.ClientTexts.Achievement[10996]={Name={["677ce4dc6c022491:15"]="图鉴收集大师"},Description={["f0f34cb8e82ce0c1:78"]=S[2328]}}
 D.ClientTexts.Achievement[10997]={Name={["6a8a9a33c3a4024c:19"]="血仇争斗者"},Description={["fea424c8a77f7b7d:54"]=S[6474]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
 D.ClientTexts.Achievement[10998]={Name={["6a8a9a33c3a4024c:19"]="血仇争斗者"},Description={["fea424c8a77f7b7d:54"]=S[6474]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
-D.ClientTexts.Achievement[10999]={Name={["b37f415b642c80c0:32"]=S[18840]},Description={["7bd6547a20b5d7f7:64"]="在《军团再临》竞技场第1赛季获得血仇角斗士的风暴巨龙。"}}
-D.ClientTexts.Achievement[11000]={Name={["ae12b95bce2bc142:30"]=S[13598]},Description={["4fcec51b91c3bd34:62"]="在《军团再临》竞技场第2赛季获得无畏角斗士的风暴巨龙。"}}
-D.ClientTexts.Achievement[11001]={Name={["a6f5c621e3193f66:27"]=S[15288]},Description={["d2617c024587cee7:59"]="在《军团再临》竞技场第3赛季获得残虐角斗士的风暴巨龙。"}}
+D.ClientTexts.Achievement[10999]={Name={["b37f415b642c80c0:32"]=S[18841]},Description={["7bd6547a20b5d7f7:64"]="在《军团再临》竞技场第1赛季获得血仇角斗士的风暴巨龙。"}}
+D.ClientTexts.Achievement[11000]={Name={["ae12b95bce2bc142:30"]=S[13599]},Description={["4fcec51b91c3bd34:62"]="在《军团再临》竞技场第2赛季获得无畏角斗士的风暴巨龙。"}}
+D.ClientTexts.Achievement[11001]={Name={["a6f5c621e3193f66:27"]=S[15289]},Description={["d2617c024587cee7:59"]="在《军团再临》竞技场第3赛季获得残虐角斗士的风暴巨龙。"}}
 D.ClientTexts.Achievement[11002]={Name={["f0793fb5b5f9cf24:31"]=S[3195]},Description={["8823de3784a017e8:63"]="在《军团再临》竞技场第4赛季获得凶猛角斗士的风暴巨龙。"}}
 D.ClientTexts.Achievement[11003]={Name={["c01b1233475dbb4a:17"]="无畏争斗者"},Description={["fea424e9a7807bbc:54"]=S[6476]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
 D.ClientTexts.Achievement[11004]={Name={["c01b1233475dbb4a:17"]="无畏争斗者"},Description={["fea424e9a7807bbc:54"]=S[6476]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
@@ -207,7 +207,7 @@ D.ClientTexts.Achievement[11060]={Name={["4169d8efbfa0a2cc:24"]="挑战者：《
 D.ClientTexts.Achievement[11061]={Name={["f6ff251107cd8274:23"]="角斗士：《军团再临》第4赛季"},Description={["e77f9c47992a3834:102"]="以竞技场排名前0.5%的战绩结束《军团再临》PvP第4赛季的战斗（需要你在当前阵营下在《军团再临》第4赛季赢得150场战斗）。"},Reward={["46f44f7d60ad8404:21"]=S[8162]}}
 D.ClientTexts.Achievement[11062]={Name={["a1b21a202e741349:32"]="凶猛角斗士：《军团再临》第4赛季"},Description={["a76fb843574b8030:102"]="以竞技场排名前0.1%的战绩结束《军团再临》PvP第4赛季的战斗（需要你在当前阵营下在《军团再临》第4赛季赢得150场战斗）。"},Reward={["63704b6cef0e7c7f:30"]="头衔奖励：凶猛角斗士"}}
 D.ClientTexts.Achievement[11063]={Name={["a136695e343ad745:39"]="隐藏追踪 - 1+ 采集线完成"},Description={["dc1ac6484b3be0ef:68"]="完成1个任意专精的收集线，最终得到冒险指南。"}}
-D.ClientTexts.Achievement[11064]={Name={["8b89339c0b7e1311:30"]="典藏版：小温斯顿"},Description={["7f7ffbf3103315cc:70"]=S[12211]}}
+D.ClientTexts.Achievement[11064]={Name={["8b89339c0b7e1311:30"]="典藏版：小温斯顿"},Description={["7f7ffbf3103315cc:70"]=S[12212]}}
 D.ClientTexts.Achievement[11065]={Name={["9c913e7ed8db4d77:18"]="原来如此"},Description={["36701e29ac4c4a50:67"]="在《军团再临》上线前夕事件中，从末日预言者处收集全部12种小册子。"}}
 D.ClientTexts.Achievement[11066]={Name={["ac4cd5976264498e:16"]="下水道大亨"},Description={["8d81ce15f19f6caa:45"]="在达拉然下水道拾取20000个盲目之眼。"},Reward={["abcd65842d144e9b:23"]="坐骑奖励：骑乘巨鼠"}}
 D.ClientTexts.Achievement[11124]={Name={["5bf16775074c1528:15"]="苏拉玛楷模"},Description={["0670e78242ae3159:40"]="完成下列苏拉玛故事线。"}}
@@ -240,7 +240,7 @@ D.ClientTexts.Achievement[11168]={Name={["af881f0c21fc0a17:14"]="屠杀纹章"},
 D.ClientTexts.Achievement[11169]={Name={["555e107d9531a25a:18"]="毁灭纹章"},Description={["9d32003b8cafdebe:46"]=S[8716]}}
 D.ClientTexts.Achievement[11170]={Name={["555e107d9531a25a:18"]="毁灭纹章"},Description={["9d32003b8cafdebe:46"]=S[8716]}}
 D.ClientTexts.Achievement[11171]={Name={["5503a2eda17e4198:14"]="重装上阵"},Description={["0e198b52df1a7b05:40"]="获得你的职业可以拿到的所有神器。"}}
-D.ClientTexts.Achievement[11173]={Name={["1fd7043681b5eabd:26"]=S[21500]},Description={["b858e4194a0a248c:59"]="解锁神器的全部4个战火外观配色。"}}
+D.ClientTexts.Achievement[11173]={Name={["1fd7043681b5eabd:26"]=S[21501]},Description={["b858e4194a0a248c:59"]="解锁神器的全部4个战火外观配色。"}}
 D.ClientTexts.Achievement[11174]={Description={["6a5e103f484c2742:61"]="完成2个以上的收集线，最终得到冒险指南。"}}
 D.ClientTexts.Achievement[11175]={Name={["24b9a91ff894dfa0:25"]="次元进修"},Description={["0da8c3181a941727:82"]="阅读散落在阿苏纳的《空间漂移新手指南》的七个章节。"},Reward={["dfc706a38c7d5ebc:39"]="奖励：空间漂移能手指南"}}
 D.ClientTexts.Achievement[11176]={Name={["365fa94a2378a5b7:15"]="大家一起玩"},Description={["7fe0547b66d2cab0:15"]="收集300个玩具。"},Reward={["6f0e309f17534694:32"]="奖励：机械化木材采集器"}}
@@ -260,7 +260,7 @@ D.ClientTexts.Achievement[11192]={Name={["6de779d4547396bb:19"]="千钧一发：
 D.ClientTexts.Achievement[11194]={Name={["4c5596ed1084c91e:22"]="引领潮流：萨维斯"},Description={["d19126d6d34348b9:91"]="在暗夜要塞开放前击败翡翠梦魇的萨维斯（英雄或更高难度）。"}}
 D.ClientTexts.Achievement[11195]={Name={["e838280fadfaade4:23"]="引领潮流：古尔丹"},Description={["eb9d03be291579bd:90"]="在萨格拉斯之墓开放前击败暗夜要塞的古尔丹（英雄或更高难度）。"}}
 D.ClientTexts.Achievement[11200]={Name={["35cb3425af9a2be0:21"]="反抗军团"},Description={["08f4c9c34aa59274:83"]="在《军团再临》上线前夕事件中完成一次入侵事件，抵御燃烧军团。"}}
-D.ClientTexts.Achievement[11201]={Name={["a132db062ff14d1d:33"]=S[18230]},Description={["6c3b2bd57a101e22:79"]="在《军团再临》上线前夕事件中抵御燃烧军团的所有袭击。"}}
+D.ClientTexts.Achievement[11201]={Name={["a132db062ff14d1d:33"]=S[18231]},Description={["6c3b2bd57a101e22:79"]="在《军团再临》上线前夕事件中抵御燃烧军团的所有袭击。"}}
 D.ClientTexts.Achievement[11210]={Name={["34ee8b7896f9ae0f:19"]="为联盟而战"},Description={["bde4cb9b87a250d0:67"]=S[6493]},Reward={["f8c7257f4b06cc50:38"]="奖励：仿制的雄狮之牙和雄狮之心"}}
 D.ClientTexts.Achievement[11211]={Name={["e09c5f3113b4f3f4:16"]="为部落而战"},Description={["bde4cb9b87a250d0:67"]=S[6493]},Reward={["eb0d72e1c55b9aae:50"]="奖励：仿制的血卫士斩斧和古尔丹之杖"}}
 D.ClientTexts.Achievement[11212]={Name={["084c7fa1a763c3d6:11"]="大军压境"},Description={["c1e3fbfa4cdeef31:16"]="招募20支部队。"}}
@@ -341,7 +341,7 @@ D.ClientTexts.Achievement[11416]={Name={["286543a670893181:30"]="击杀海拉（
 D.ClientTexts.Achievement[11417]={Name={["d3cd3bf70aabd054:30"]="击杀海拉（英雄勇气试炼）"}}
 D.ClientTexts.Achievement[11418]={Name={["b20ba0ab615bac8e:30"]="击杀海拉（史诗勇气试炼）"}}
 D.ClientTexts.Achievement[11419]={Description={["39b3ebc78d2fa774:53"]="玩家必须击败暗夜要塞的时空畸体。"}}
-D.ClientTexts.Achievement[11425]={Name={["0a94db2290ebdd3b:14"]="烈焰使徒"},Description={["84fd652bc18fc076:64"]=S[20400]}}
+D.ClientTexts.Achievement[11425]={Name={["0a94db2290ebdd3b:14"]="烈焰使徒"},Description={["84fd652bc18fc076:64"]=S[20401]}}
 D.ClientTexts.Achievement[11426]={Name={["e8916fee55a490dd:19"]="勇气试炼（英雄难度）"},Description={["d7b0af4884f89b1f:72"]="在勇气试炼中击败下列首领（英雄或更高难度）。"}}
 D.ClientTexts.Achievement[11427]={Name={["d2419ff8e6a8cec9:19"]="咸鱼翻身"},Description={["8d69fc48a7f46b4b:34"]="完成下列奔波尔霸的任务。"},Reward={["8a459c7f26dccc3c:22"]="物品奖励：鱼人号角"}}
 D.ClientTexts.Achievement[11428]={Name={["b1d733a25c8a6da3:24"]="重返卡拉赞（公会版）"},Description={["2fbcae42ee5b0191:80"]="在公会队伍中击败重返卡拉赞的监视者维兹艾德姆（史诗难度）。"}}
@@ -361,16 +361,16 @@ D.ClientTexts.Achievement[11475]={Name={["d996e093e86b9aee:19"]="任务完成"},
 D.ClientTexts.Achievement[11476]={Name={["885c8b6b470df6d6:10"]="鞍马劳顿"},Description={["577735f35b14ccfa:29"]="完成20次“无鞍斗殴”。"}}
 D.ClientTexts.Achievement[11477]={Name={["c4e3d08f8bdfd92c:13"]="攻城拔寨"},Description={["fd6aaaaff70b91f6:31"]="完成20次“黑鸦大乱斗”。"}}
 D.ClientTexts.Achievement[11478]={Name={["3d7e7561335a5ab8:14"]="达布尔克星"},Description={["b43f432e3780ab37:29"]="完成20次“达布尔竞技场”。"}}
-D.ClientTexts.Achievement[11543]={Name={["396f06268f7ada85:18"]="探索破碎海滩"},Description={["b91e918fc2e34848:60"]=S[12396]}}
+D.ClientTexts.Achievement[11543]={Name={["396f06268f7ada85:18"]="探索破碎海滩"},Description={["b91e918fc2e34848:60"]=S[12397]}}
 D.ClientTexts.Achievement[11544]={Name={["3c33a9793793bce4:24"]="破碎群岛保卫者"},Description={["053b7e0dfc453332:70"]="击退阿苏纳、至高岭、风暴峡湾和瓦尔莎拉的军团突袭。"}}
 D.ClientTexts.Achievement[11545]={Name={["83b0a2785b017de3:19"]="抗魔联军指挥官"},Description={["d87010ba6ef03745:43"]="在抗魔联军阵营中达到崇敬声望。"}}
 D.ClientTexts.Achievement[11546]={Name={["4ebee63bd16a9050:16"]="突袭墓穴"},Description={["e42ef6aa941a0f31:30"]="完成抗魔联军战役。"}}
-D.ClientTexts.Achievement[11558]={Name={["b41a8b7970c98666:28"]=S[12528]},Description={["e06f81af6a89c832:51"]=S[5061]}}
-D.ClientTexts.Achievement[11559]={Name={["b41a8b7970c98666:28"]=S[12528]},Description={["6d78ebdd3d73cfd8:63"]=S[5062]}}
+D.ClientTexts.Achievement[11558]={Name={["b41a8b7970c98666:28"]=S[12529]},Description={["e06f81af6a89c832:51"]=S[5061]}}
+D.ClientTexts.Achievement[11559]={Name={["b41a8b7970c98666:28"]=S[12529]},Description={["6d78ebdd3d73cfd8:63"]=S[5062]}}
 D.ClientTexts.Achievement[11560]={Description={["799bdcfad51be94d:10"]="赢得一场拳赛。"}}
 D.ClientTexts.Achievement[11561]={Description={["799bdcfad51be94d:10"]="赢得一场拳赛。"}}
-D.ClientTexts.Achievement[11563]={Name={["e2328a4dbcf3de8c:29"]=S[12525]},Description={["bbe33e8c386d0cd1:30"]="在比兹莫搏击俱乐部中达到4级。"},Reward={["fb1b2397614bbcfa:21"]=S[8218]}}
-D.ClientTexts.Achievement[11564]={Name={["e2328a4dbcf3de8c:29"]=S[12525]},Description={["23160c5291b20783:29"]="在搏击竞技场中达到4级。"},Reward={["fb1b2397614bbcfa:21"]=S[8218]}}
+D.ClientTexts.Achievement[11563]={Name={["e2328a4dbcf3de8c:29"]=S[12526]},Description={["bbe33e8c386d0cd1:30"]="在比兹莫搏击俱乐部中达到4级。"},Reward={["fb1b2397614bbcfa:21"]=S[8218]}}
+D.ClientTexts.Achievement[11564]={Name={["e2328a4dbcf3de8c:29"]=S[12526]},Description={["23160c5291b20783:29"]="在搏击竞技场中达到4级。"},Reward={["fb1b2397614bbcfa:21"]=S[8218]}}
 D.ClientTexts.Achievement[11565]={Name={["7fe1f3991a662fd0:14"]="俱乐部之王"},Description={["00172890210c78d5:30"]="在比兹莫搏击俱乐部中达到8级。"},Reward={["ade01c680d4ce82d:20"]=S[8156]}}
 D.ClientTexts.Achievement[11566]={Name={["7fe1f3991a662fd0:14"]="俱乐部之王"},Description={["53b2c5d6a8635a7f:29"]="在搏击竞技场中达到8级。"},Reward={["ade01c680d4ce82d:20"]=S[8156]}}
 D.ClientTexts.Achievement[11567]={Name={["cc061ae7878ccd10:32"]="钱不是万能的"},Description={["be95449dcb343b36:26"]="获得20000枚拳手的金币。"}}
@@ -413,7 +413,7 @@ D.ClientTexts.Achievement[11696]={Name={["3d4cd2bf42ff1de6:13"]="咬牙坚持"},
 D.ClientTexts.Achievement[11697]={Name={["014c6a33980d1b66:10"]="残虐精英"},Description={["34dcfaeead3437a9:48"]=S[6477]}}
 D.ClientTexts.Achievement[11698]={Name={["a1b95947faeac428:14"]="凶猛精英"},Description={["34dcfaefad3437aa:48"]=S[6479]}}
 D.ClientTexts.Achievement[11699]={Name={["f5897fad8abea44c:12"]="决战“鳍”兵"},Description={["93ccd3454bd6297e:104"]="在萨格拉斯之墓使用鱼人号角召唤瞎眼长老，然后击败他和哈亚坦（普通或更高难度）。"}}
-D.ClientTexts.Achievement[11700]={Name={["a29899e73ae6ea9e:23"]=S[15642]},Description={["19021c497f66fa7e:50"]="击败永夜大教堂的孟菲斯托斯。"}}
+D.ClientTexts.Achievement[11700]={Name={["a29899e73ae6ea9e:23"]=S[15643]},Description={["19021c497f66fa7e:50"]="击败永夜大教堂的孟菲斯托斯。"}}
 D.ClientTexts.Achievement[11701]={Name={["d3fe28db99a6a518:30"]="永夜大教堂（英雄难度）"},Description={["e9cdb7ae40d24eed:69"]="击败永夜大教堂的孟菲斯托斯（英雄或更高难度）。"}}
 D.ClientTexts.Achievement[11702]={Name={["0b13b50fbe93085e:30"]="永夜大教堂（史诗难度）"},Description={["bef153aaca5af879:61"]="击败永夜大教堂的孟菲斯托斯（史诗难度）。"}}
 D.ClientTexts.Achievement[11703]={Name={["046a1fbfe501227a:15"]="暗影大师"},Description={["aed54e705a330659:117"]="在使用阿格拉玛之盾抵挡20次暗影冲击后击败永夜大教堂的孟菲斯托斯（史诗难度）。"}}
@@ -492,7 +492,7 @@ D.ClientTexts.Achievement[11790]={Name={["48194f85551944e4:14"]="欺诈者之陨
 D.ClientTexts.Achievement[11796]={Name={["df15e27863363287:18"]="抗魔联军"},Description={["2dc1437409ed2b8b:43"]="在抗魔联军阵营中达到崇拜声望。"}}
 D.ClientTexts.Achievement[11802]={Name={["24922f4761a92566:21"]="带你回家"},Description={["afc1f36ebeac1277:44"]="在下列区域各使用一个森提纳克斯信标。"}}
 D.ClientTexts.Achievement[11841]={Name={["d08369ccf7da7e77:10"]="下一个受害者"},Description={["b91214c80893a7a9:77"]="在破碎海滩击杀森提纳克斯号能够召唤的所有恶魔军官。"}}
-D.ClientTexts.Achievement[11846]={Name={["e60b85795d42e196:21"]=S[12100]},Description={["fc305ddf67dfa3ba:81"]="完成任务“抗魔联军勇士”，招募你的抗魔联军战役追随者。"}}
+D.ClientTexts.Achievement[11846]={Name={["e60b85795d42e196:21"]=S[12101]},Description={["fc305ddf67dfa3ba:81"]="完成任务“抗魔联军勇士”，招募你的抗魔联军战役追随者。"}}
 D.ClientTexts.Achievement[11847]={Name={["52203d4b6ee064a6:21"]="7.2.0发布50个产品订单"},Description={["bc1e7036acd0da69:16"]="发布50个产品订单"}}
 D.ClientTexts.Achievement[11848]={Name={["52dbff0ec4cd48ef:20"]="魔兽世界十三周年"},Description={["fe298aee4145aeb7:35"]=S[7669]}}
 D.ClientTexts.Achievement[11856]={Name={["ace8d1f14add9c6e:28"]=S[8939]},Description={["f0234c35838bce9c:38"]="完成死亡矿井的宠物对战挑战。"},Reward={["2ef29c593aa854ae:19"]="奖励：挖矿的猴子"}}
@@ -548,7 +548,7 @@ D.ClientTexts.Achievement[11930]={Name={["afde9c5fc09e9942:11"]="蠕虫杀手"},
 D.ClientTexts.Achievement[11931]={Name={["8631cf7bee295016:10"]="战争座驾"},Description={["ba8526aeacd82679:76"]="拥有2017年暴雪嘉年华赠送的暴风城逐天战机和奥格瑞玛拦截飞艇。"}}
 D.ClientTexts.Achievement[11941]={Name={["e0ef6a1e40c0cd3b:12"]="克罗米的死党"},Description={["9ff7aff6de54a66f:44"]="与克罗米的友谊达到“时光领主”级别。"},Reward={["e14c134674bbebd5:20"]="头衔奖励：时光领主"}}
 D.ClientTexts.Achievement[11948]={Name={["7ea09b9d3c21a42e:15"]="良宵作伴"},Description={["a130ec2c67c4ea8b:105"]="在不触发黑暗独行的情况下击败安托鲁斯，燃烧王座的瓦里玛萨斯（普通或更高难度）。"}}
-D.ClientTexts.Achievement[11949]={Name={["5adbb01374b93224:10"]="大难不死"},Description={["0fb8f2938e9f3f12:113"]=S[19345]}}
+D.ClientTexts.Achievement[11949]={Name={["5adbb01374b93224:10"]="大难不死"},Description={["0fb8f2938e9f3f12:113"]=S[19346]}}
 D.ClientTexts.Achievement[11954]={Name={["0b0e8c2e49953de9:56"]=S[3239]}}
 D.ClientTexts.Achievement[11955]={Name={["373c85ff53cdc3bc:56"]=S[3240]}}
 D.ClientTexts.Achievement[11956]={Name={["510398b3cd4031f6:56"]=S[3238]}}
@@ -678,7 +678,7 @@ D.ClientTexts.Achievement[12134]={Name={["c79906cd4db0cd36:31"]="专横角斗士
 D.ClientTexts.Achievement[12135]={Name={["d456a9323261af93:13"]="专横精英"},Description={["34dcfaf1ad3437ac:48"]=S[6483]}}
 D.ClientTexts.Achievement[12136]={Name={["eabd8bb80932cf53:17"]="专横争斗者"},Description={["fea4256da7847cb8:54"]=S[6484]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
 D.ClientTexts.Achievement[12137]={Name={["eabd8bb80932cf53:17"]="专横争斗者"},Description={["fea4256da7847cb8:54"]=S[6484]},Reward={["52fabcd3eedbff30:20"]=S[8220]}}
-D.ClientTexts.Achievement[12138]={Name={["c57bf8342f27744b:28"]=S[13966]},Description={["227be0b7c21508a8:60"]="在《军团再临》竞技场第5赛季获得暴烈角斗士的风暴巨龙。"}}
+D.ClientTexts.Achievement[12138]={Name={["c57bf8342f27744b:28"]=S[13967]},Description={["227be0b7c21508a8:60"]="在《军团再临》竞技场第5赛季获得暴烈角斗士的风暴巨龙。"}}
 D.ClientTexts.Achievement[12139]={Name={["b38fc300a9d8ea79:30"]=S[789]},Description={["52534da40176e139:62"]="在《军团再临》竞技场第6赛季获得专横角斗士的风暴巨龙。"}}
 D.ClientTexts.Achievement[12140]={Name={["bf5963e58c7b8bde:29"]=S[11379]},Description={["7cb0b54a3cde0f6b:61"]="在《军团再临》竞技场第7赛季获得恶魔角斗士的风暴巨龙。"}}
 D.ClientTexts.Achievement[12167]={Name={["f6ff251307cd8276:23"]="角斗士：《军团再临》第6赛季"},Description={["0553118b7d6b20b4:102"]="以竞技场排名前0.5%的战绩结束《军团再临》PvP第6赛季的战斗（需要你在当前阵营下在《军团再临》第6赛季赢得150场战斗）。"},Reward={["46f44f7d60ad8404:21"]=S[8162]}}
@@ -698,7 +698,7 @@ D.ClientTexts.Achievement[12180]={Name={["6ecb2b7816f5fdb7:18"]="勇攀22层"},D
 D.ClientTexts.Achievement[12181]={Name={["effaec0ae49baf7f:11"]="第23条军规"},Description={["716a9b564899295f:21"]="威望等级达到23级。"}}
 D.ClientTexts.Achievement[12182]={Name={["32e75cbf9396ed22:18"]="二十四罗汉"},Description={["716a9b77489a299e:21"]="威望等级达到24级。"}}
 D.ClientTexts.Achievement[12183]={Name={["1f7f79d8ec4af0eb:21"]="威望军需官"},Description={["716a9b98489b29dd:21"]="威望等级达到25级。"}}
-D.ClientTexts.Achievement[12184]={Name={["71b3a9c916a4fb30:46"]=S[18667]}}
+D.ClientTexts.Achievement[12184]={Name={["71b3a9c916a4fb30:46"]=S[18668]}}
 D.ClientTexts.Achievement[12185]={Name={["4c96c453b51b8512:30"]="恶魔角斗士：《军团再临》第7赛季"},Description={["542ce829adacdcf0:102"]="以竞技场排名前0.1%的战绩结束《军团再临》PvP第7赛季的战斗（需要你在当前阵营下在《军团再临》第7赛季赢得150场战斗）。"},Reward={["770b7d5c7dfdecc5:28"]="头衔奖励：恶魔角斗士"}}
 D.ClientTexts.Achievement[12186]={Name={["583b4b97421d7852:21"]="决斗者：《军团再临》第7赛季"},Description={["92d490fca0e37407:99"]="以竞技场排名前3%的战绩结束《军团再临》PvP第7赛季的战斗（需要你在当前阵营下在《军团再临》第7赛季赢得50场战斗）。"},Reward={["1491608037195edf:19"]=S[8154]}}
 D.ClientTexts.Achievement[12187]={Name={["4169d8f2bfa0a2cf:24"]="挑战者：《军团再临》第7赛季"},Description={["2afcb551927c21e8:100"]="以竞技场排名前35%的战绩结束《军团再临》PvP第7赛季的战斗（需要你在当前阵营下在《军团再临》第7赛季赢得50场战斗）。"},Reward={["b2788afb255d2c82:22"]=S[8157]}}
@@ -719,8 +719,8 @@ D.ClientTexts.Achievement[12243]={Name={["b13fa5bfd6be296c:30"]=S[5583]},Descrip
 D.ClientTexts.Achievement[12244]={Name={["93a84c6894e50f23:22"]=S[5584]},Description={["1331fc63b64b61f8:37"]="完成解锁夜之子的任务线。"},Reward={["7c9dbac4d46078c3:29"]="奖励：解锁夜之子种族"}}
 D.ClientTexts.Achievement[12245]={Name={["3b188592086b1ca1:30"]=S[5585]},Description={["8f65408d17f04576:45"]="完成解锁至高岭牛头人的任务线。"},Reward={["7890eeee9cb87441:37"]="奖励：解锁至高岭牛头人种族"}}
 D.ClientTexts.Achievement[12257]={Name={["d8c7426be5af0732:17"]="星尘远征军"},Description={["8a6e640f4522af3e:123"]="在5秒内收集20个泰坦能量微粒，然后击败安托鲁斯，燃烧王座的寂灭者阿古斯（普通或更高难度）。"}}
-D.ClientTexts.Achievement[12258]={Name={["c9bf98151929168e:26"]=S[14346]},Description={["9b87f6d3ea042312:107"]="在公会队伍中，成为本服务器首个在史诗难度的安托鲁斯，燃烧王座中成功击杀寂灭者阿古斯的公会。"}}
-D.ClientTexts.Achievement[12266]={Name={["da94447c29eea251:33"]=S[21171]}}
+D.ClientTexts.Achievement[12258]={Name={["c9bf98151929168e:26"]=S[14347]},Description={["9b87f6d3ea042312:107"]="在公会队伍中，成为本服务器首个在史诗难度的安托鲁斯，燃烧王座中成功击杀寂灭者阿古斯的公会。"}}
+D.ClientTexts.Achievement[12266]={Name={["da94447c29eea251:33"]=S[21172]}}
 D.ClientTexts.Achievement[12279]={Name={["bc22f4995fa63444:17"]="机械格斗家"},Description={["5be83bfa0ed03557:72"]="通过搜寻战斗功能，以全队25级机械宠物赢得10场PVP宠物战斗。"}}
 D.ClientTexts.Achievement[12280]={Name={["f228887cf7da0ea1:14"]="水栖格斗家"},Description={["01cf5cdd09982adc:69"]="通过搜寻战斗功能，以全队25级水栖宠物赢得10场PVP宠物战斗。"}}
 D.ClientTexts.Achievement[12281]={Name={["25f1f9a3d84d0734:12"]="野兽格斗家"},Description={["31d2e6c49fffa6ef:67"]="通过搜寻战斗功能，以全队25级野兽宠物赢得10场PVP宠物战斗。"}}
@@ -814,7 +814,7 @@ D.ClientTexts.Achievement[12411]={Name={["17e4d72eb922ef61:12"]="血染黄沙"},
 D.ClientTexts.Achievement[12412]={Name={["07f5e03e4d874af9:21"]="涌泉海滩主宰"},Description={["9b0a6cff1c779918:48"]="完成下列涌泉海滩成就。"},Reward={["cfffd4b21f238dd1:16"]="头衔：勘探员"}}
 D.ClientTexts.Achievement[12413]={Name={["a57462749ae84f7f:23"]="夜之子的传承"},Description={["022b8e25053adb82:47"]="将新创建的夜之子角色升到110级。"},Reward={["8ed9d01e562d3131:30"]="奖励：夜之子传承护甲"}}
 D.ClientTexts.Achievement[12414]={Name={["529bcb93f6b80e18:24"]=S[2629]},Description={["6599a23c18745b4b:55"]="将新创建的光铸德莱尼角色升到110级。"},Reward={["7838cad58c01fc28:38"]="奖励：光铸德莱尼传承护甲"}}
-D.ClientTexts.Achievement[12415]={Name={["184105eed1d30ac5:22"]=S[18171]},Description={["cabea5cf24d45a00:55"]="将新创建的至高岭牛头人角色升到110级。"},Reward={["093389889f521533:38"]="奖励：至高岭牛头人传承护甲"}}
+D.ClientTexts.Achievement[12415]={Name={["184105eed1d30ac5:22"]=S[18172]},Description={["cabea5cf24d45a00:55"]="将新创建的至高岭牛头人角色升到110级。"},Reward={["093389889f521533:38"]="奖励：至高岭牛头人传承护甲"}}
 D.ClientTexts.Achievement[12416]={Name={["34432bb66109ae93:15"]="打包寄件"},Description={["33f61a62f999ab79:44"]="找到达拉然的邮政长并帮助他。"}}
 D.ClientTexts.Achievement[12429]={Name={["dcd1c64c5c3e9d13:14"]="湿地任务"},Description={["bd0c39a9244daefe:41"]="完成下列湿地故事线。"}}
 D.ClientTexts.Achievement[12430]={Name={["283d84fab7568847:14"]="暮色森林任务"},Description={["044b9457a97eca32:41"]="完成下列暮色森林故事线。"}}
@@ -11284,7 +11284,7 @@ D.ClientTexts.Currency[81]={Name={["ccb86cea1f956e81:16"]="美食家奖章"},Des
 D.ClientTexts.Currency[101]={Name={["7b8b7b8351549d18:15"]="英雄纹章"}}
 D.ClientTexts.Currency[102]={Name={["3b288b90ed2ce173:13"]="勇气纹章"}}
 D.ClientTexts.Currency[103]={Name={["f1c806e9cc61350a:11"]="竞技场点数"}}
-D.ClientTexts.Currency[104]={Name={["32ceacb907ae8600:21"]="荣誉点数"},Description={["aac167c50cce06e8:42"]=S[18103]}}
+D.ClientTexts.Currency[104]={Name={["32ceacb907ae8600:21"]="荣誉点数"},Description={["aac167c50cce06e8:42"]=S[18104]}}
 D.ClientTexts.Currency[121]={Name={["1212b19490ecd20f:24"]=S[8504]}}
 D.ClientTexts.Currency[122]={Name={["508bee110839cb72:22"]="阿拉希盆地荣誉奖章"}}
 D.ClientTexts.Currency[123]={Name={["c354f919967a7506:24"]="风暴之眼荣誉奖章"}}
@@ -11292,7 +11292,7 @@ D.ClientTexts.Currency[124]={Name={["5081bc82139cb917:30"]="远古海滩荣誉�
 D.ClientTexts.Currency[125]={Name={["f6f3327f18485260:23"]="战歌峡谷荣誉奖章"}}
 D.ClientTexts.Currency[126]={Name={["752a83a179696d38:22"]="冬拥湖荣誉奖章"}}
 D.ClientTexts.Currency[161]={Name={["897bcd369c2f7ddb:18"]="岩石守卫者的碎片"}}
-D.ClientTexts.Currency[181]={Name={["8ca4440b69f2fa32:22"]="榮譽點數DEPRECATED2"},Description={["aac167c50cce06e8:42"]=S[18103]}}
+D.ClientTexts.Currency[181]={Name={["8ca4440b69f2fa32:22"]="榮譽點數DEPRECATED2"},Description={["aac167c50cce06e8:42"]=S[18104]}}
 D.ClientTexts.Currency[201]={Name={["574350b79d95e2c4:11"]="风险硬币"}}
 D.ClientTexts.Currency[221]={Name={["484e0bbe25d9ac11:16"]="征服纹章"}}
 D.ClientTexts.Currency[241]={Name={["fc9dead3e89c7552:14"]="冠军的徽记"},Description={["e88a88187da50bf9:45"]="表彰你在十字军演武场中展示的武勇。"}}
@@ -11358,7 +11358,7 @@ D.ClientTexts.Currency[1173]={Name={["4e08da21a4f64398:37"]="至高岭牛头人�
 D.ClientTexts.Currency[1174]={Name={["ed0b4d4625803d95:26"]="恶魔考古碎片"}}
 D.ClientTexts.Currency[1191]={Name={["108d568925a68904:5"]="勇气点数"},Description={["1e1c0623c28c31fa:111"]="用于强化来自地狱火堡垒、塔纳安丛林、德拉诺地下城以及强大的制造物品能力的货币。"}}
 D.ClientTexts.Currency[1220]={Name={["54286fbc6a0b9d17:14"]="职业大厅资源"},Description={["3d60585ce62fb359:68"]="用来招募部队，执行任务和研究职业大厅的升级选项。"}}
-D.ClientTexts.Currency[1226]={Name={["058e609dec9a1ca6:11"]=S[18682]},Description={["e11bba720af66825:57"]="虚空的结晶碎片，由燃烧军团带到艾泽拉斯。"}}
+D.ClientTexts.Currency[1226]={Name={["058e609dec9a1ca6:11"]=S[18683]},Description={["e11bba720af66825:57"]="虚空的结晶碎片，由燃烧军团带到艾泽拉斯。"}}
 D.ClientTexts.Currency[1268]={Name={["1a20ea88cf30d873:16"]="上古神器"},Description={["8af5d9499e5d4e8c:97"]=S[302]}}
 D.ClientTexts.Currency[1273]={Name={["ecef1a8081c43ab5:16"]="破碎命运印记"},Description={["6ca623a635075ab5:90"]="扭转命运，可给你一次在《军团再临》团队副本和史诗地下城的首领处获得额外宝物的机会。"}}
 D.ClientTexts.Currency[1275]={Name={["9747f1b854bfd9b5:11"]="古怪硬币"},Description={["5df4fad51a60a862:98"]="这种特别的货币摸上去热乎乎的，并在你手中轻轻震动着。可以用来向达拉然的苏伊奥斯购买物品。"}}
@@ -11544,7 +11544,7 @@ D.ClientTexts.BattlePet[44]={Description={["d5b564a476f43c5b:58"]="它漂亮的�
 D.ClientTexts.BattlePet[45]={Description={["8575d069dc5be2d4:60"]="睡懒觉是这只猫的第二大嗜好。第一大嗜好是打哈欠。"}}
 D.ClientTexts.BattlePet[46]={Description={["88680262b9408251:123"]="‘皇后有三只猫。第一只猫给她抓来了肥硕的老鼠；第二只猫给她弄来了美味的野兔；而最后那只她最爱的白猫，给她送上了仇敌的头颅。’"}}
 D.ClientTexts.BattlePet[47]={Description={["ce5e2ac3fede3d94:77"]="有人说这只聪明的鸟能学会说话——但它很机灵，知道什么叫沉默是金。"}}
-D.ClientTexts.BattlePet[49]={Description={["4a070c672eaedd26:93"]="丛林巨魔训练这些鸟儿模仿呼救声，引诱那些无知的旅行者并将他们引入陷阱。"},Source={["972c826877360a85:63"]=S[12322]}}
+D.ClientTexts.BattlePet[49]={Description={["4a070c672eaedd26:93"]="丛林巨魔训练这些鸟儿模仿呼救声，引诱那些无知的旅行者并将他们引入陷阱。"},Source={["972c826877360a85:63"]=S[12323]}}
 D.ClientTexts.BattlePet[50]={Description={["79df622d150bee8e:107"]="这种五彩缤纷的小鸟是迪菲亚海盗喜爱的宠物，擅长记忆口令，购物清单和爆竹配方。"},Source={["f4ca14264152557f:34"]="掉落：迪菲亚海盗\n地区：死亡矿井"}}
 D.ClientTexts.BattlePet[51]={Description={["d8caa30082c24875:119"]="深受藏宝海湾地精们所喜爱的一个宠物，这只色彩艳丽的小鸟不仅会数钱，还会讨价还价，而且撒谎从不脸红。"}}
 D.ClientTexts.BattlePet[52]={Description={["eb4f6c2bf698a2f4:31"]="在它看来，你吃上去也像鸡肉。"}}
@@ -11571,9 +11571,9 @@ D.ClientTexts.BattlePet[86]={Description={["17a5f5526de81b83:124"]="这个微小
 D.ClientTexts.BattlePet[87]={Description={["0c9e1c41f8b027d2:84"]="这些可爱的小家伙在经过一天的野蛮、血腥的战斗后，最喜欢和它们的主人依偎在一起。"},Source={["4c67aa65a64b2e98:26"]="掉落：世界掉落\n地区：菲拉斯"}}
 D.ClientTexts.BattlePet[89]={Description={["adbc3805a8d48f64:70"]="座狼是兽人们喜爱的伙伴，并在战场上极其忠诚。"},Source={["e7f4060a50aa0c75:48"]="掉落：军需官兹格雷斯\n地区：黑石塔下层"}}
 D.ClientTexts.BattlePet[90]={Description={["4e6fee23070434ae:94"]="虽然出生在温暖的黑石塔高层，但烟网小蜘蛛能够适应绝大部分环境。"},Source={["30de0925d91f5c16:45"]="掉落：烟网蛛后\n地区：黑石塔下层"}}
-D.ClientTexts.BattlePet[92]={Description={["29da283fa7bc8ba8:96"]="这只迷你熊猫幼崽尽管天生嗜睡，却广受艾泽拉斯冒险者的追捧。"},Source={["96dffb0a234283cf:43"]=S[16475]}}
-D.ClientTexts.BattlePet[93]={Description={["473fa7e9b89131ee:85"]="天穹将要震颤，凡人注定悲泣，而末日将会——等等，你怎么这么高？"},Source={["9b242363bc4116ee:42"]=S[16475]}}
-D.ClientTexts.BattlePet[94]={Description={["ef7178729df0838b:93"]="异虫大军的成员，体型微小却凶猛善战，千万不要低估了跳虫的实力。如果成批来袭，是非常危险的。"},Source={["9b242363bc4116ee:42"]=S[16475]}}
+D.ClientTexts.BattlePet[92]={Description={["29da283fa7bc8ba8:96"]="这只迷你熊猫幼崽尽管天生嗜睡，却广受艾泽拉斯冒险者的追捧。"},Source={["96dffb0a234283cf:43"]=S[16476]}}
+D.ClientTexts.BattlePet[93]={Description={["473fa7e9b89131ee:85"]="天穹将要震颤，凡人注定悲泣，而末日将会——等等，你怎么这么高？"},Source={["9b242363bc4116ee:42"]=S[16476]}}
+D.ClientTexts.BattlePet[94]={Description={["ef7178729df0838b:93"]="异虫大军的成员，体型微小却凶猛善战，千万不要低估了跳虫的实力。如果成批来袭，是非常危险的。"},Source={["9b242363bc4116ee:42"]=S[16476]}}
 D.ClientTexts.BattlePet[95]={Description={["1e3a298a425f179b:96"]="天赋异禀的工程师们制造出了林蛙的精密复制体——成本仅相当于真品价格的十倍。"},Source={["f18900d2ac976b15:22"]=S[678]}}
 D.ClientTexts.BattlePet[106]={Description={["0695c2081978659b:102"]="许多人认为传说中的醉蛙已经灭绝了，直到暗月马戏团的怪味酒把它们都吸引了出来。"},Source={["89ba93cb2797c5d8:24"]="世界事件：暗月马戏团"}}
 D.ClientTexts.BattlePet[107]={Description={["f4706778dca64701:68"]="这只可爱又隐居避世的鱼人，其外表一定能吸引大批围观者。"},Source={["fc4bf3b8c0943a1d:22"]="特殊：2005年暴雪嘉年华"}}

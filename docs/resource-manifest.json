@@ -1,5 +1,5 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "schema": 1,
   "resources": [
     {
@@ -13,71 +13,71 @@
       "path": "Data/Shared/SharedStrings_02.lua",
       "family": "SharedStrings",
       "group": "Shared",
-      "bytes": 900100,
-      "sha256": "244ed4cca4d7287575c3fee21758b652aaea786ad967300911d5f57f4d2d420b"
+      "bytes": 900105,
+      "sha256": "622326c0b7b40c1529520993e0986a72b5795bf67cf4357510832faa170f82da"
     },
     {
       "path": "Data/Shared/SharedStrings_03.lua",
       "family": "SharedStrings",
       "group": "Shared",
-      "bytes": 211288,
-      "sha256": "6139dc9827c13a05fefce1611d8308c7b2f75b7abacaa87f457e87d4aa0890af"
+      "bytes": 211484,
+      "sha256": "153fd5ce674ea7d7c5c2360c6582be36b91c85dbd1c44c54831b1ebe700f0a96"
     },
     {
       "path": "Data/Shared/Strings_01.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 895902,
-      "sha256": "d662f955f879f7db564ed0a4d68108613a4a61c01ea29f3e807b7a34f2421dde"
+      "sha256": "1a719744e40ae029d00baf9f179f08034fd6521c6e069161ad7a15b1d7ee0b2c"
     },
     {
       "path": "Data/Shared/Strings_02.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899941,
-      "sha256": "4869e7dc6288f494d4cbdaa40a915bb9617db2cf29ca657994101c2dcd4e9eed"
+      "sha256": "4d7b9baf0a809d14d160452781ab7cdaed3d108811902f1dc1edfc763d0bb363"
     },
     {
       "path": "Data/Shared/Strings_03.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899887,
-      "sha256": "e1a1381f1947f2fc1cba3d900bb3c286cd28522fa476257d1b7067a9df2618bc"
+      "sha256": "7ea903eb7bd5a4c552d9edc1513088e680316226e4ba86c8f25c5e79ff62dab5"
     },
     {
       "path": "Data/Shared/Strings_04.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899962,
-      "sha256": "a5cde997c485cd6c8320c7645c935fb3e7b2e1c343f98282fa3400e81615701c"
+      "sha256": "4ce12e791ebde6bd6cef6488d85a5c1ef7820dca4ade8c02745f668a616f5760"
     },
     {
       "path": "Data/Shared/Strings_05.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899986,
-      "sha256": "dc5e23c21966aaa4a1ccdaab914122449bb1216a4e86ec0a836a5055ae2fa6f7"
+      "sha256": "3843508302692829e8fd3824956055316d7c4577b2d58b43e08cf8fd3d265c5b"
     },
     {
       "path": "Data/Shared/Strings_06.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 900096,
-      "sha256": "5751045acb5696b383d9bc89dca1168fc8677f67846541b2cc09395e87282ee1"
+      "sha256": "b2395d127384385c6ecb0ff2350ddce357453eb2d791c32128cf5a3a36303f44"
     },
     {
       "path": "Data/Shared/Strings_07.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899963,
-      "sha256": "e9f2ac32ea9811698474a89df48ab39a673ae3c937b72995942a2bf0a98c78db"
+      "sha256": "ced14039ddc943275106192814445d836f38eb914dd13cd6b2e19040af812162"
     },
     {
       "path": "Data/Shared/Strings_08.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 899771,
-      "sha256": "05e34dcac59970163614821ec42b6703d61b78ef5669ca84387aabfdc249121d"
+      "sha256": "dd010a3b37690c1aa886185ade59afc995045dbee52ec5a6330271b869bea449"
     },
     {
       "path": "Data/Shared/Strings_09.lua",
@@ -98,203 +98,203 @@
       "family": "Strings",
       "group": "Shared",
       "bytes": 899893,
-      "sha256": "fe71859daa9b25704d4b499b3382329c6cca39e66281505b9fda27e9f1367d26"
+      "sha256": "82a03e41b08756b2f6bc5007fae1f27ca9dc0df2f99e5a5b6ae80a9b3b1dc158"
     },
     {
       "path": "Data/Shared/Strings_12.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 874122,
-      "sha256": "de23614e9844a738cd0e709d8db1dbc74104ca913af0c2d42a5f77df2bda97ff"
+      "sha256": "1d74351bc95b666495cc3779ad4936e3637cff05cd91bd64b1c2429508425540"
     },
     {
       "path": "Data/Shared/Strings_13.lua",
       "family": "Strings",
       "group": "Shared",
-      "bytes": 881056,
-      "sha256": "032a5c97ca916588cb1493871998cc39ae897c37757fc188ef2bdb06be320920"
+      "bytes": 881029,
+      "sha256": "b5ecf8ef7bb6b7c0f00d22e399eb4707c36d29b48354d9d09fc31cb87c9bef3b"
     },
     {
       "path": "Data/Shared/Strings_14.lua",
       "family": "Strings",
       "group": "Shared",
-      "bytes": 862264,
-      "sha256": "d798e5650f3ec24900e7dec19d01b4ecf707a4784dc52f29b6321f5c7127e36d"
+      "bytes": 862258,
+      "sha256": "d4b12c09596fc35ef9b595d1553bf632f86659bd87f1b43701e0f3c5b1c1d8e1"
     },
     {
       "path": "Data/Shared/Strings_15.lua",
       "family": "Strings",
       "group": "Shared",
-      "bytes": 877273,
-      "sha256": "8a6c6d25be0c5ec9c86dbb854693dd6e1127384f1e55b414c0117eed2c193e66"
+      "bytes": 877298,
+      "sha256": "e6bdce5f70beb947761bb83b6a736db9c7b9b487c39d4df52837e38c49111d41"
     },
     {
       "path": "Data/Shared/Strings_16.lua",
       "family": "Strings",
       "group": "Shared",
-      "bytes": 878536,
-      "sha256": "ebbe4323280f71e9195c70989878d365c0a916a46377b6142885bcf3a11d7aa3"
+      "bytes": 878577,
+      "sha256": "214fcc62d621dc304fb8b39c1330d9b0de1ff68735f9d09fe56c2931bd8a2d23"
     },
     {
       "path": "Data/Shared/Strings_17.lua",
       "family": "Strings",
       "group": "Shared",
       "bytes": 344277,
-      "sha256": "cb0d5211a2fd6387439b6350db96b728cdc79996592c3785ed89f62ec9b94478"
+      "sha256": "3c991b02aa0fa062e0df4b24f98db54899160488a4ee8550808894ca0ad4ae52"
     },
     {
       "path": "Data/Shared/NameStrings_01.lua",
       "family": "NameStrings",
       "group": "Shared",
       "bytes": 895803,
-      "sha256": "1866c4122900e16439a17bd9df68414c2e43e223a3e812a6566bac6438090cdd"
+      "sha256": "694dadbd9c537e446e56087fbbbe1aa65cd9b369ba2ebb5170df82d6fa8c4ac2"
     },
     {
       "path": "Data/Shared/NameStrings_02.lua",
       "family": "NameStrings",
       "group": "Shared",
       "bytes": 896925,
-      "sha256": "753fa3b28bb8581f96971d402f423bdd277f98850c6d51bc15cc7178874c709d"
+      "sha256": "8f84fac4790bbeaaf47fdf7e5c702af55f681651889ec98324721f92c9c54733"
     },
     {
       "path": "Data/Shared/NameStrings_03.lua",
       "family": "NameStrings",
       "group": "Shared",
       "bytes": 891812,
-      "sha256": "4154dcfd6838592a771f95c514eba43b5dd491b16b7cf4b0dfab229f863bbee2"
+      "sha256": "8df1b52aa7e4ce938babceff6f3f34592341675be8a2e54f28c7b73828853474"
     },
     {
       "path": "Data/Shared/NameStrings_04.lua",
       "family": "NameStrings",
       "group": "Shared",
       "bytes": 578245,
-      "sha256": "b0572cc4b926e7124d9f988b9d9727aa8ed3f46c6fc255605906fa2e9e6c29e9"
+      "sha256": "77aab075233ca49cd393c66f9de967db47f019436f94e617fafaa322c832516d"
     },
     {
       "path": "Data/Shared/CatalogStrings_01.lua",
       "family": "CatalogStrings",
       "group": "Shared",
       "bytes": 877795,
-      "sha256": "cdf453961b29be658ad0de04a3dc6d067cd3d623bb6a06b526fe6903f206a631"
+      "sha256": "0b9de271e62ad371869bacde88b908290013b36c77e2ac5e3835a977d63ce07b"
     },
     {
       "path": "Data/Shared/CatalogStrings_02.lua",
       "family": "CatalogStrings",
       "group": "Shared",
       "bytes": 811068,
-      "sha256": "f5530eedd39121438311b2776d405a179f765ec7bb4f19ebb9cfe0e942a43bc7"
+      "sha256": "e2775b41f744c0e09b6bb0e44572b30a77133f0a4b72d9a34746876ac68bba9b"
     },
     {
       "path": "Data/Shared/CatalogStrings_03.lua",
       "family": "CatalogStrings",
       "group": "Shared",
       "bytes": 868641,
-      "sha256": "83bfd7df518dd05c90746c60b56592aeae144f1e0bcb1503bcac3a5258702a68"
+      "sha256": "cef3536d6ac54a164c32aa1aeb3a15e4ab06edb73b566718032cdee37f81b8be"
     },
     {
       "path": "Data/Shared/CatalogStrings_04.lua",
       "family": "CatalogStrings",
       "group": "Shared",
       "bytes": 706513,
-      "sha256": "fae83c9e1abcdc01d2a52a556d0e54a0dcd12b80119ebbb89b429a51913a2e61"
+      "sha256": "48709149b1ae59c479d91605e9ac64da81fd5bc4ab68c274a144793080f8fc84"
     },
     {
       "path": "Data/Quests/Quests_01.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 861803,
-      "sha256": "94627f548d4c3d168823620800811fd1c7f56b8d747fa30721b0769c08a9ebaf"
+      "sha256": "4c51e3951c73d34d9a1e1c5f7862492dacf52103b1b2b1cfe286250d4b051562"
     },
     {
       "path": "Data/Quests/Quests_02.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 806125,
-      "sha256": "a11dd1aeac273b9c29a7e8877a8820687e8c2b8e4a1c043bd24dcd3a447baecf"
+      "sha256": "0706e49b812c7533733d8e200fc7958e8a2f6e77f238cd4cc74ed07567b78bb2"
     },
     {
       "path": "Data/Quests/Quests_03.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 704120,
-      "sha256": "d84fd184d75f9a99fce48076653c0a2daafe7619aa24e1eb61f5a65c93f3b235"
+      "sha256": "ffbffea2d4183cf81586fdc7cdf6e1228b2bff2bad5a9422a699d6d11484163c"
     },
     {
       "path": "Data/Quests/Quests_04.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 735328,
-      "sha256": "050c0fa606f79305004e61a6ec495d1097368db115cc69455095befe96d0eece"
+      "sha256": "a6fef32e2769394285843c3093b6e2bb2f50cc8fdf68fe5c0b60465e04b7659a"
     },
     {
       "path": "Data/Quests/Quests_05.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 821117,
-      "sha256": "97e719da227ec0d5c4e0afe03aa49416b4a289deafeb48374d3215c36e2812de"
+      "sha256": "b6e211d10e42d916856964eac4ddc6f6cdbf50155524f62bf58f6fcf87c51f08"
     },
     {
       "path": "Data/Quests/Quests_06.lua",
       "family": "Quests",
       "group": "Quests",
       "bytes": 835038,
-      "sha256": "e8250909ddbc94db6f13a07ecaf8db072bd544f7e4dc5b5e136c50daf5a62cb3"
+      "sha256": "63159caae760af1c01ca4a09f43d49c71d0e6a155fd691669bfa642c27940624"
     },
     {
       "path": "Data/Quests/Quests_07.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 733593,
-      "sha256": "8df08f25749811ab743bccbef44b64d7c69853695a8dabbce2f9a2bc6eaa431a"
+      "bytes": 734007,
+      "sha256": "2c7fff2a6de4a9e41e4db4a297137e646bda2daed551e37cebc1418b87d9b368"
     },
     {
       "path": "Data/Quests/Quests_08.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 808141,
-      "sha256": "32c28c03ab38491a4e3cd71c8aa81d6c21049decd264b3adb52cc7cfae9f9728"
+      "bytes": 807672,
+      "sha256": "498363ae1bc8555db443817cc02f7d5dd886a50f64580c5f2d10dcf163a4caf4"
     },
     {
       "path": "Data/Quests/Quests_09.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 842433,
-      "sha256": "4874b5d59c0f2676332ecf22bf07f174f4005fa361cac562a3ee6a965cd3dc1e"
+      "bytes": 842308,
+      "sha256": "27b4c2eecae9161dc77fb119e3abbe295aa32142a28138abbf6b4f04cbed7580"
     },
     {
       "path": "Data/Quests/Quests_10.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 793277,
-      "sha256": "19f768692b3e8acf20ed872191229032c79dfa8c5dd9afaa201fb0c6d11d2114"
+      "bytes": 793616,
+      "sha256": "3c2fba317c2debef80976f2232b18dc7c1a9e9d3387dfbe71f7e1b442c74c4f5"
     },
     {
       "path": "Data/Quests/Quests_11.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 789416,
-      "sha256": "d41c30c68ac1fdb39552af9fe03b39e5fb10bceca008325fe5610c546190c3a2"
+      "bytes": 789205,
+      "sha256": "8bd8e1c8a092d9dae9c584b190f64ae88dc104217119c753110fdf20bbbacba4"
     },
     {
       "path": "Data/Quests/Quests_12.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 752466,
-      "sha256": "08b39f3e558e5e46e52b791c28baef55b1d6b69e9214eb24638a299cec25930a"
+      "bytes": 752306,
+      "sha256": "c037a3d4813d97fdf2310e7c771280011b1e7aa9db313eecd3d2e5442113b39a"
     },
     {
       "path": "Data/Quests/Quests_13.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 815132,
-      "sha256": "456284e618276e9ae54c0f0fd42657d8e03083ad6d31f9a442abb0cc063498a5"
+      "bytes": 814917,
+      "sha256": "6942c4c8b60d1b4ac7619ebfd7f5ae21552d98f3eae90adaf18b7f981f8d1c7d"
     },
     {
       "path": "Data/Quests/Quests_14.lua",
       "family": "Quests",
       "group": "Quests",
-      "bytes": 447127,
-      "sha256": "70ca0a8a95511f6b90d595759b0fe640bea195d51b88d8e044307386b89dabea"
+      "bytes": 450175,
+      "sha256": "144e9f149529a1f104740e8f5bfad4b6519d00942e8e669fcd78932081bb77a0"
     },
     {
       "path": "Data/Quests/QuestSources_01.lua",
@@ -335,169 +335,169 @@
       "path": "Data/Quests/QuestSources_06.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899993,
-      "sha256": "be0f7e9a4f2d2b85e55a93b671ff3068be09cbfdc2f9339d747c85badac823cc"
+      "bytes": 899167,
+      "sha256": "5833768310653672d5006704a3d6a0349bd5bf0ccbab1ec3a66fe6f8db0a760f"
     },
     {
       "path": "Data/Quests/QuestSources_07.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899769,
-      "sha256": "5a863e6ef881b93ba8b51500b256b0a256d759b1437f0a030afe53edceae18ed"
+      "bytes": 899048,
+      "sha256": "f72286b4d746905b56049f357bfada775e1aa1cedf025a542190702a51fb8d8a"
     },
     {
       "path": "Data/Quests/QuestSources_08.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899837,
-      "sha256": "da565d820207452b21c4254bf96b621fed70faa1dd43f97acce755dedeea657d"
+      "bytes": 899846,
+      "sha256": "04586bc50bef60294c6d36fae3861e4135779f0cf7dc44c7dcc8faf38807423e"
     },
     {
       "path": "Data/Quests/QuestSources_09.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899641,
-      "sha256": "db9d69f9608ace2b1d4780b343d333815fea7ce21eed6aec3f54ab0ad148f56c"
+      "bytes": 899756,
+      "sha256": "800f0fff8d4d11458bedc98aadf887d48b74430bc491f3bed9d06e188d8c6acd"
     },
     {
       "path": "Data/Quests/QuestSources_10.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 900047,
-      "sha256": "37c9fb3607f3a91f2c95462cfb1cf571d8bf94c956d5cf6d41cc1bdf0a34c73a"
+      "bytes": 899963,
+      "sha256": "de343c794aad6db8aacc93f6649fb1cfa8f6b577afa146402d0bf79138cc6253"
     },
     {
       "path": "Data/Quests/QuestSources_11.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899960,
-      "sha256": "439d9f58def4672cebce32fc560d7fe8f1b11d8d591e1cfd75f4d26e580a5ab7"
+      "bytes": 900049,
+      "sha256": "2d79b72cef275e98e6db238883be527b276c445d38af39047d56ad7cff19e903"
     },
     {
       "path": "Data/Quests/QuestSources_12.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899696,
-      "sha256": "cd9467dc9b8e4590787e935e498d2e862d7585f0fa9d0ccf7e1b04d288e5dfed"
+      "bytes": 899698,
+      "sha256": "e4c0e8ec6a54f7d1176f24cd75f8d5bade4cead9750d3f635a322e446a3bb527"
     },
     {
       "path": "Data/Quests/QuestSources_13.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899614,
-      "sha256": "81cb723cbfb41176083ceb4554c1ffe647b36304334bf4fa22436c644f78d028"
+      "bytes": 899878,
+      "sha256": "9414a6a6c81d5e88d88e231740c4766956105116c46575aa5ef0863065634aa6"
     },
     {
       "path": "Data/Quests/QuestSources_14.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899867,
-      "sha256": "ce695568c84cd8c9adaff6ef5ea4fa1357885944bcc01c160ecb7a41d07cf1a5"
+      "bytes": 900015,
+      "sha256": "2c980fe2d630a9707128096bc6982e41b5df75a760472049abb45b26b6ca27ae"
     },
     {
       "path": "Data/Quests/QuestSources_15.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 900094,
-      "sha256": "0a3e58bbc539c743507045e3279eece0ee90f8dd50501d8581ca1180f8da0c61"
+      "bytes": 899192,
+      "sha256": "5d1b90aaaabae61c7d9094f210f8459027b02437add689660bcf89d8b77eb90e"
     },
     {
       "path": "Data/Quests/QuestSources_16.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899985,
-      "sha256": "852276cd5969fff1dab77da96240ec0755438b9c66f57304f02ff799fa64ddd8"
+      "bytes": 899898,
+      "sha256": "8b0566c013fa70f259c15dc8380ad106dfa55fc51b2081242ae7c0ab7c6d2b66"
     },
     {
       "path": "Data/Quests/QuestSources_17.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899927,
-      "sha256": "e48af44f3104d8f63e8c6fcba5ef0965f6395148d6d28bd4a97b8c9bcb8e2161"
+      "bytes": 899884,
+      "sha256": "5c34b3bd206e9485f6857d8c16aed3ff3f4b27457b31a68fb8f4729365806b15"
     },
     {
       "path": "Data/Quests/QuestSources_18.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 899891,
-      "sha256": "4f613902af0b7571574b7bedd57caea978e01ba171e2ab9dd6355cfbf582f9a4"
+      "bytes": 899150,
+      "sha256": "86fd7ee6c2f9a185130b94b4fb98ab4f2df81cd4c7523f6e40f9abe886b572f4"
     },
     {
       "path": "Data/Quests/QuestSources_19.lua",
       "family": "QuestSources",
       "group": "Quests",
-      "bytes": 487329,
-      "sha256": "4071c414acaabf99095d4c367518eeeaadbee60d0ec753a97955ecdc3f7c9718"
+      "bytes": 491487,
+      "sha256": "6768f1a8a978d0b8e409cfb89f316cfe5a78e2e9be44a2646b370be6235503a5"
     },
     {
       "path": "Data/Quests/Titles_01.lua",
       "family": "Titles",
       "group": "Quests",
       "bytes": 900101,
-      "sha256": "92522a8be9dadce957556ede7add57e73c9ec26b874cf089c9e87eca7d5a0bdf"
+      "sha256": "10b8a9b6803d863758013630e310644d4c91d0c8352d7309dc99b2c7b5731eef"
     },
     {
       "path": "Data/Quests/Titles_02.lua",
       "family": "Titles",
       "group": "Quests",
       "bytes": 900089,
-      "sha256": "f06116e4f863681193d49103ef2d7ce3fe4484be37bec31c4e3c4902cc2575ca"
+      "sha256": "ddee07de466cc15f0338a0ac28c326c8fd943b575acb70f6addea48e887c3eef"
     },
     {
       "path": "Data/Quests/Titles_03.lua",
       "family": "Titles",
       "group": "Quests",
       "bytes": 900067,
-      "sha256": "979aec7b184118ad00e6e4e951a3e1a14e35d844cee8cdc9783703fede45bbd9"
+      "sha256": "7c71f67ecdfb7163a63aa1758f9c3dec30d4352cc6449e9d1bd414d273cc65d9"
     },
     {
       "path": "Data/Quests/Titles_04.lua",
       "family": "Titles",
       "group": "Quests",
       "bytes": 900080,
-      "sha256": "6b5419a68032b6bad37a9b310df1e0dead724d031136844d8cbe9b93ad4492e8"
+      "sha256": "688d0f63181becddca93c9ff3d9ffbaaf87200de0ddf4589af62350b0555aa3e"
     },
     {
       "path": "Data/Quests/Titles_05.lua",
       "family": "Titles",
       "group": "Quests",
       "bytes": 900071,
-      "sha256": "bceae090d49d95a50c2ff7a0937b73d40b7edc17133afbecc01538bac8f361d8"
+      "sha256": "93e5ccbcf473f9c6a8fdd79301e8877b79c217cd0b5ea6ba82d52af10b428b7f"
     },
     {
       "path": "Data/Quests/Titles_06.lua",
       "family": "Titles",
       "group": "Quests",
-      "bytes": 394562,
-      "sha256": "577c49a9d6bdc8b0a68e33661298806358c40d07c3176c8374fabc32f9f999a5"
+      "bytes": 394601,
+      "sha256": "9fe54c10ec1c7b2e61f9b373a82ff7283da02a23e9afb58a9e1228e419e1409b"
     },
     {
       "path": "Data/Quests/Objectives_01.lua",
       "family": "Objectives",
       "group": "Quests",
       "bytes": 314384,
-      "sha256": "85380a7b3fdf2f38d11b4ae066dd8dcd5fddb107c7bfe9e425ffba465e1aeb7b"
+      "sha256": "23262e6b2bbb206cb99b45ed1a10299ffd3b89f0254558c225c1850a336b0a24"
     },
     {
       "path": "Data/Quests/Completions_01.lua",
       "family": "Completions",
       "group": "Quests",
       "bytes": 114737,
-      "sha256": "0b5d5b8057e72460eecfa2265757da70fa6d3c37abc01fe09ab62216f83ad006"
+      "sha256": "5229de2de54f4d41f5d32c920f8fc7f8054610fa08607bb3865db189010a9154"
     },
     {
       "path": "Data/Quests/QuestDialogue_01.lua",
       "family": "QuestDialogue",
       "group": "Quests",
       "bytes": 3289,
-      "sha256": "6b1efc9c73e15f1c5f2206c399afe87e2bb5a305622a9dd158bb7b67f56fe5af"
+      "sha256": "e1d435d87bec6b992d3b4e24f07febc521622fc746ac4dbb4959a92ed9711992"
     },
     {
       "path": "Data/Quests/QuestExtras_01.lua",
       "family": "QuestExtras",
       "group": "Quests",
       "bytes": 390074,
-      "sha256": "eab91f441a0c0f995aca3dbbbe010a42ba77d0b8831280f7ebd177d67dd2f103"
+      "sha256": "2c3ce337cf1ee2cfe3779ee63a9bdf2cf27a6b2318f558a84b50a86c521e722b"
     },
     {
       "path": "Data/Quests/CatalogTitles_01.lua",
@@ -833,21 +833,21 @@
       "family": "NPCNames",
       "group": "Dialogue",
       "bytes": 900094,
-      "sha256": "6c2836d7edaebdfd205ccfe6603d8f56a19f5ae3927b6260937083a45672ff6a"
+      "sha256": "57917d1fa26265f63d6365659b731d0d0bd8c24786593760541a6127c2cf5851"
     },
     {
       "path": "Data/Dialogue/NPCNames_02.lua",
       "family": "NPCNames",
       "group": "Dialogue",
       "bytes": 900069,
-      "sha256": "5da4e8f261d4c5f64acb431bba95b13f27f0a9f8e0a4ddc68c9e6f98656fbd6d"
+      "sha256": "3c29cabb24ab3056e7213e8fb82c0afb4a5c40e8e3018023521558b65b971f8c"
     },
     {
       "path": "Data/Dialogue/NPCNames_03.lua",
       "family": "NPCNames",
       "group": "Dialogue",
       "bytes": 846433,
-      "sha256": "dc1e3859c50a850b8f4cad00382e73d2415876cffaad6344313e401070a04f0d"
+      "sha256": "99a9f9ea203b1869421ce853bd6374290ffaf7af7c299d953ca1772ab8c86d96"
     },
     {
       "path": "Data/Books/Books_01.lua",
@@ -861,77 +861,77 @@
       "family": "BookContexts",
       "group": "Books",
       "bytes": 3351,
-      "sha256": "3d25798a8e51951bdc3b6425377edab986e00d2f8d9292ea35e02c8afaab633a"
+      "sha256": "b47314dae01a9bbabf89f9f9abd7c571c7b801998f5c7eedb2b8208df596681a"
     },
     {
       "path": "Data/Items/ItemNames_01.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 894660,
-      "sha256": "4ac6724ec1d8e80e90b971d0100241b53fb8e8f3898c2a1616553255af984a42"
+      "sha256": "410684b9287e6117031b0941b6a411deb19381f94e3548dbc744db2eeae45c89"
     },
     {
       "path": "Data/Items/ItemNames_02.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 893513,
-      "sha256": "c111a9d6da5a349aa055d72e77617fd8ca2ecd0f2b3379d4a41ae381e88fbb93"
+      "sha256": "c64b6b7986968bc89a178f1f3477eddc611f1a1e2f17e94a1f9e5eb82418af0d"
     },
     {
       "path": "Data/Items/ItemNames_03.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 890885,
-      "sha256": "40993012343b7937248c541ba5400ae540c050b647ac4fae41f454285e27731b"
+      "sha256": "25900abb628b99513badb0ba27cf051ca20394d288c693a78618051f67239840"
     },
     {
       "path": "Data/Items/ItemNames_04.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 872969,
-      "sha256": "ddb2668a3a372665b0695253a57f0d8007f2a54603e592bec92b39d88e6cda8a"
+      "sha256": "8409749fd893ac53022ff855d8a7e06e385b45d40428ff29b3c167484e53537d"
     },
     {
       "path": "Data/Items/ItemNames_05.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 802489,
-      "sha256": "7c4870e0fec07978abc385e5c0649f946264fd1a2d936ee2f4f9dbd8775b8b4f"
+      "sha256": "62ceb85a9be76daff1baaa558959a62a9c1ac62d5957f9166cfca28ae1f65ce0"
     },
     {
       "path": "Data/Items/ItemNames_06.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 869328,
-      "sha256": "f6a5d242b8fbb2ba0f0dbee7ebba7e1abceedef38605dcf8c307938e82743807"
+      "sha256": "5f5c7a16c6afbe03778c42dd626a691cb11d7239d5e6cb3a37d604e4aa2646ca"
     },
     {
       "path": "Data/Items/ItemNames_07.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 837582,
-      "sha256": "b16f002eaabe8d4585cf6f9aab8c74d701a13fe4da1aea03d2874209494b578d"
+      "sha256": "f0c78dea4d5f33214929d5d829d0482939d5ba098e7b776e4aa067f737eb7427"
     },
     {
       "path": "Data/Items/ItemNames_08.lua",
       "family": "ItemNames",
       "group": "Items",
       "bytes": 467363,
-      "sha256": "95b9771b6dbedfdee8a3658782a176423d80483e05703a5a783495561db022ce"
+      "sha256": "75be24da9b8684dd932ae9c3c69a76d3305e14b247bf52d1ffe21543d17fda16"
     },
     {
       "path": "Data/Items/ItemDescriptions_01.lua",
       "family": "ItemDescriptions",
       "group": "Items",
       "bytes": 789921,
-      "sha256": "a59269710a2525505dee472eaaeafeb53f99a178ff8817705cb55d80a44bae17"
+      "sha256": "4b6930138a6475d68d1c3e73b984331a42ebd3a9a985ad8fcb0453fd844e0a84"
     },
     {
       "path": "Data/Items/ItemDescriptions_02.lua",
       "family": "ItemDescriptions",
       "group": "Items",
       "bytes": 729518,
-      "sha256": "f759af3b265cee4b8149595f44cb6f3fad37ec5bf8191e0f5d299f9c3f9f0973"
+      "sha256": "acf7679bef5648041844458b51c0440eebc2fddd5e86f9dbec3526f78c0411b4"
     },
     {
       "path": "Data/Items/ItemTexts_01.lua",
@@ -1001,84 +1001,84 @@
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 801151,
-      "sha256": "33e8c2cadd2a93ea205cde2230fd50bd59dc8e4a40a762c6f4b19d487c257e0d"
+      "sha256": "7811117648a2329745b8f7cc6b73b77e6a9734e859a766cf69c3d47992651182"
     },
     {
       "path": "Data/Spells/SpellTexts_02.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 783407,
-      "sha256": "aeddf3b277510bcbe050bbd7461e2b39e93dcc7778c20f89e8556a7636e9e9c6"
+      "sha256": "0f2d3b913ec455ab04726611cedf08df8b0e921acb2155cceffc5bec98ce8752"
     },
     {
       "path": "Data/Spells/SpellTexts_03.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 770497,
-      "sha256": "5880a01ea2dc7d089eb76d9e14f3fa46a886ac81af30b3f5a02637807ac5a405"
+      "sha256": "856d3b943cbca463c53eb4dbd2699771dd60bddb285a4a035eec99aeff660f4c"
     },
     {
       "path": "Data/Spells/SpellTexts_04.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 768275,
-      "sha256": "5749a939fdbf8dbf5bac39cced4b1a609a0e062cf9cea6d2edbf5f315074da13"
+      "sha256": "a131beb73c655ae20da98cdd1949b675acd8314f638fb25e8d7eedfed5972f18"
     },
     {
       "path": "Data/Spells/SpellTexts_05.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 782706,
-      "sha256": "381a34fae86b4544db305102a766aa752e13a434554d77fb04a6c7173e91cd67"
+      "sha256": "f90d66b9c670e3060289ac5a1dd5517f619aacaa3ef8b9df67c9f6a056be4979"
     },
     {
       "path": "Data/Spells/SpellTexts_06.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 607201,
-      "sha256": "54b19278d43ffaf70c17c2356d394e903ba7fa8d7e313b0100a90b24154c3a21"
+      "sha256": "452f43d2ab10f12043625cfe0e3076395d446e39cc82843091263752a694e937"
     },
     {
       "path": "Data/Spells/SpellTexts_07.lua",
       "family": "SpellTexts",
       "group": "Spells",
       "bytes": 174062,
-      "sha256": "681107930a4967b5662cd0c0a0c2cc099d8738096d915ba04a6fcf91ca627a9c"
+      "sha256": "682b47c3911224253f4ceef27fbdd5d239d3c45b8be233cc23d04d8821fabca5"
     },
     {
       "path": "Data/Spells/DynamicSpellTexts_01.lua",
       "family": "DynamicSpellTexts",
       "group": "Spells",
       "bytes": 743614,
-      "sha256": "4730acbade6a7536373bfd4179752bf52b126b40a8464b222c690cd5c66ad921"
+      "sha256": "05a14e090db8a6ebcb18e580ca5993ba00a43f38df0b85d4e46627cbbc93f5c5"
     },
     {
       "path": "Data/Spells/DynamicSpellTexts_02.lua",
       "family": "DynamicSpellTexts",
       "group": "Spells",
       "bytes": 744430,
-      "sha256": "e01e92d70c2cb9f426a3a7c3153be297163dd3841de50856d4e53150e47a69eb"
+      "sha256": "1eaf33c3705a1b579eb4dfb08a886aae208f032cccf9b3f1e27dc1a2834c3e16"
     },
     {
       "path": "Data/Spells/DynamicSpellTexts_03.lua",
       "family": "DynamicSpellTexts",
       "group": "Spells",
       "bytes": 777571,
-      "sha256": "e8c06cfc6473e0cc40f3dedb447e04feefe50d9fe693c21f4d90f49e8871534d"
+      "sha256": "a61793ecb1692256950fb43047f18ee19f9ee7621457492eb1b77e6f8cafe8da"
     },
     {
       "path": "Data/Spells/DynamicSpellTexts_04.lua",
       "family": "DynamicSpellTexts",
       "group": "Spells",
       "bytes": 809039,
-      "sha256": "a423e1a69798128f9694fe2d3ddfde9394edf72165d815efbb816fb19056fe6f"
+      "sha256": "2ab04caab7c7081cf21981784e611c73ec61e308db17b496ddf3c6c4eae7cc65"
     },
     {
       "path": "Data/Spells/DynamicSpellTexts_05.lua",
       "family": "DynamicSpellTexts",
       "group": "Spells",
       "bytes": 635963,
-      "sha256": "6fad9b11f064adc9afb58526b8fa36773dd0ce0af13c2f871d911e297a0b4250"
+      "sha256": "67a9481779b161f84d43a57af1316506549f9b7de9ef0a6c7961a88b46e86eb6"
     },
     {
       "path": "Data/Creatures/CreatureFamilies_01.lua",
@@ -1106,84 +1106,84 @@
       "family": "NPCTitles",
       "group": "Creatures",
       "bytes": 815234,
-      "sha256": "4f4694abda36f2733f5e42a2acb5feb416283be2f32f84d4615612e27b6c1ff4"
+      "sha256": "4bdf4b1bfbe653b17ad96db2c9faf57e85dfec141aaf1fc8b323da09dbf33d35"
     },
     {
       "path": "Data/Creatures/NPCTitles_02.lua",
       "family": "NPCTitles",
       "group": "Creatures",
       "bytes": 145175,
-      "sha256": "723c56f1ce06ef0078a25bc4dbcbb19b8e5b95cae34be7534a021c2a0045ef69"
+      "sha256": "e58ba2b0ec6b5b8be183e0b2922c7aae547ddc982b87a5c552c2bf1d1a95b126"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_01.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 891795,
-      "sha256": "2f6c381fe0354177949ee3e4ff67c4701ad4be608c1f5440310b30deef149d5a"
+      "sha256": "a93f58f6ab4b3569b459f74704b4c7b19fadf909389434fa7f978ab63b332432"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_02.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 881253,
-      "sha256": "cdd848c6a28699c4dde4c1f2deab4d5a978bd1c63739f77f31eeb6f1411bac7f"
+      "sha256": "89619cc64200ef46d876664c35948d603627e70581eb2fb8006b92e8717ffdfe"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_03.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 862176,
-      "sha256": "3fe35d6fd878a510d887ef6fdc24f805827e4ee8504118e60c40767eb05254a2"
+      "sha256": "a0a449e587dca0ce051f5be542e5c2910a051f76439d7ff48a27dc37bad81306"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_04.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 867144,
-      "sha256": "19fceca303ce0a5a6b8b87219b983d865ecaf80e6a4b572a0f85f3aecfe15996"
+      "sha256": "04a5ba368492739795fdddbb2c2c230d0a5986cc77559a4b2754f80245b3ee46"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_05.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 863316,
-      "sha256": "3065966c4ec86ac9e7152648dfa8ea4b66811f014653ceb48ae0806f56b2a224"
+      "sha256": "368761d2bbd6051823e31e70e6f60d44ee3de9c271d368972cfd399b1056bfdb"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_06.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 850442,
-      "sha256": "5366ecd410852b13925c149728a501afaa7cb32f77590e5e6ecd8fc1ae8568b4"
+      "sha256": "a788d81ba2ade5df3434da48dae95850343a4f69f74ac4b18d61b65959dd1371"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_07.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 848614,
-      "sha256": "6b29f1af9cf639663441d0d1d22e07a9fa613cf62ee9bdde54fdc011c35fb1b9"
+      "sha256": "2e876197b2a60d6cf34f717087a6c2a17f8506c3a8e7cbdafe86e4a8e2fc6bf8"
     },
     {
       "path": "Data/Creatures/NPCLabelNames_08.lua",
       "family": "NPCLabelNames",
       "group": "Creatures",
       "bytes": 188239,
-      "sha256": "b1c53dca253301ba1364b3bb5e005d82caa8e7d24f01b7d930135749edbc7fe0"
+      "sha256": "a5518f9e0db407fccd6f85950fb01e58de26fc9bf2dea7363da34d17308777fd"
     },
     {
       "path": "Data/Maps/WorldObjects_01.lua",
       "family": "WorldObjects",
       "group": "Maps",
       "bytes": 364725,
-      "sha256": "da9170dfda401b545734968a32548a762b538aa98c89c3c4f4d3e1a5bb3a5cab"
+      "sha256": "0bd0c0f114ae7d7de0ae6778d2892c4041e3c3dc3960a28674e70f72c4ba2fc0"
     },
     {
       "path": "Data/Maps/DungeonNames.lua",
       "family": "DungeonNames",
       "group": "Maps",
       "bytes": 10571,
-      "sha256": "e953af27d3edaee2a47b565d11d9ff397093ab7fc92b9432d9dfa1e586a808bc"
+      "sha256": "2962b0b5ebe63946f2f43b50088b781220261d6b6bed27db1cbde059baf6dc7a"
     },
     {
       "path": "Data/Maps/WorldTexts_01.lua",
@@ -1232,49 +1232,49 @@
       "family": "ExtraLinkNames",
       "group": "System",
       "bytes": 830151,
-      "sha256": "1923730113c178130920c7a796f721c96c34c5f89d04d86c3705f5c71200e8e5"
+      "sha256": "bdb1693a66d98450f13874244a678496379df2f793e7f78ca2e72f8399231fe1"
     },
     {
       "path": "Data/System/ExtraLinkNames_02.lua",
       "family": "ExtraLinkNames",
       "group": "System",
       "bytes": 47808,
-      "sha256": "310feef1caf5ef8ccdaa42dc0ffea6b0ce30822ea22fab61abf2f8323b727457"
+      "sha256": "ca27a108f5d9373ac3f9fd71820fba1c132254ecb9bb14c7b27cf8aa1b7b5caa"
     },
     {
       "path": "Data/System/ClientTexts_01.lua",
       "family": "ClientTexts",
       "group": "System",
       "bytes": 751401,
-      "sha256": "27955e912be0684ecfd8d890a157488005f49b77bf17f8f83bfcc6e3c86f7ac0"
+      "sha256": "879ad1862006200e20f1cea24b11d74c2b95337d6e5bb69819d1670a8623e569"
     },
     {
       "path": "Data/System/ClientTexts_02.lua",
       "family": "ClientTexts",
       "group": "System",
       "bytes": 878504,
-      "sha256": "da15ce5c4f747405c852d570db8ec8fb07aa3f6925ccfe6e60069ad33f0504ea"
+      "sha256": "03f75f2e85717f6a0710bb37d454858e056cb45b474f78fd0bc91c62c8ddeec4"
     },
     {
       "path": "Data/System/ClientTexts_03.lua",
       "family": "ClientTexts",
       "group": "System",
       "bytes": 862957,
-      "sha256": "dbe5768d3c72058198c32fb5f585b932aece3a4fdd96b4430e2e11791187ad4a"
+      "sha256": "9960238f21307448245a430456c783c1b00b0ec0504c6636abe44bc2898dfd7d"
     },
     {
       "path": "Data/System/ClientTexts_04.lua",
       "family": "ClientTexts",
       "group": "System",
       "bytes": 878632,
-      "sha256": "67972c48cd9992fd03f38f37918ee2d00ad84c08e26caf67f1ae32228718bd20"
+      "sha256": "f3c766b69d55ca25016c4a939e7fcdfee86f1afd5dd4325d78a2ba9f4b2c63e0"
     },
     {
       "path": "Data/System/ClientTexts_05.lua",
       "family": "ClientTexts",
       "group": "System",
       "bytes": 825659,
-      "sha256": "c4da652de2983042feb3306c1fa9d1518a223124efffcd434f0a93f1d9fe4504"
+      "sha256": "fa8897fa4e467ee012aca28d688560dadc162650a9ff4b51a1aaab6d7efaba34"
     },
     {
       "path": "Data/System/SystemTexts_01.lua",
@@ -1288,7 +1288,7 @@
       "family": "Artifacts",
       "group": "Artifacts",
       "bytes": 167498,
-      "sha256": "a9f70445001654fa5a776fc438a750d7228f6ec0ce783003a10440de5226b642"
+      "sha256": "4d4169bc8c6025684bec5d901b5420fe619a7827dae22a8bba56c2fa477b66b4"
     }
   ],
   "runtime": [
@@ -1747,11 +1747,11 @@
     "UI.lua"
   ],
   "pooling": {
-    "strings": 22185,
-    "references": 131372,
-    "beforeBytes": 139759396,
-    "afterBytes": 137030678,
-    "savedBytes": 2728718,
+    "strings": 22186,
+    "references": 131374,
+    "beforeBytes": 139763808,
+    "afterBytes": 137034953,
+    "savedBytes": 2728855,
     "generated": [
       "Data\\Shared\\SharedStrings_01.lua",
       "Data\\Shared\\SharedStrings_02.lua",

@@ -1,11 +1,11 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "counts": {
     "quests": 22703,
     "questFields": {
-      "Title": 21322,
-      "Objectives": 18977,
-      "Description": 19412,
+      "Title": 21323,
+      "Objectives": 18983,
+      "Description": 19417,
       "CompletionLog": 2151,
       "Completion": 8728,
       "Progress": 6240
@@ -17,9 +17,9 @@
     "bookPageCandidates": 1830,
     "bookPagesWithoutSource": 0,
     "questTraditionalFields": {
-      "Description": 194,
-      "Objectives": 204,
-      "Title": 227,
+      "Description": 197,
+      "Objectives": 207,
+      "Title": 228,
       "CompletionLog": 75,
       "Completion": 295,
       "Progress": 71
@@ -58,19 +58,19 @@
     "gossipOptions": 4288,
     "gossipOptionsWithoutSource": 58,
     "questSupplement": {
-      "fields": 13729,
-      "quests": 4431,
+      "fields": 13741,
+      "quests": 4434,
       "byField": {
-        "Title": 4016,
-        "Objectives": 3970,
-        "Description": 3987,
+        "Title": 4017,
+        "Objectives": 3976,
+        "Description": 3992,
         "CompletionLog": 1311,
         "Progress": 128,
         "Completion": 317
       },
       "byLocale": {
-        "zhCN": 12773,
-        "zhTW": 956
+        "zhCN": 12778,
+        "zhTW": 963
       }
     },
     "npcReferencedBroadcastRecords": 24217,
@@ -81,8 +81,8 @@
     },
     "questSourceValidation": {
       "quests": 22703,
-      "fields": 76801,
-      "fingerprints": 517819,
+      "fields": 76813,
+      "fingerprints": 517860,
       "unmatchedFields": [
         {
           "id": 44232,
@@ -219,11 +219,11 @@
       }
     },
     "Titles": {
-      "fingerprints": 125588,
+      "fingerprints": 125589,
       "ambiguousSkipped": 1145,
       "locales": {
         "zhCN": 124216,
-        "zhTW": 1372
+        "zhTW": 1373
       }
     },
     "Objectives": {

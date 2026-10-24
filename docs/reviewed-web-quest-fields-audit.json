@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-24",
+  "source": "cnwow-wowhead-crosschecked-20261024",
+  "officialChineseVerified": false,
+  "records": [
+    {
+      "id": 12774,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "text": "拉莎莉尔主教要你将光明圣物交给暴风城的安度因·乌瑞恩国王。",
+      "english": "Bishop Lazaril wants you to bring the Light-infused Artifact to King Anduin Wrynn in Stormwind.",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0,
+      "match": "same-id-complete-original-and-crosschecked-chinese",
+      "englishSource": "legion",
+      "originalBuild": 25549,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://110.cnwow.cn/quest/12774/",
+      "corroboratingUrl": "https://www.wowhead.com/cn/quest=12774/暴风城"
+    },
+    {
+      "id": 26398,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "text": "把血蹄的印记带到奥格瑞玛，交给格罗玛什要塞里的萨鲁法尔大王。$B$B你可以跟双足飞龙管理员塔尔交谈飞到那里，也可以等飞艇。",
+      "english": "Take the Mark of Bloodhoof to High Overlord Saurfang, located in Grommash Hold in Orgrimmar.$B$BYou may speak with Tal the Wind Rider Master to travel there, or wait for the zeppelin.",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0,
+      "match": "same-id-complete-original-and-crosschecked-chinese",
+      "englishSource": "legion",
+      "originalBuild": 23360,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://110.cnwow.cn/quest/26398/",
+      "corroboratingUrl": "https://www.wowhead.com/cn/quest=26398/与大地母亲同行"
+    },
+    {
+      "id": 26398,
+      "field": "Description",
+      "locale": "zhCN",
+      "text": "你英勇地与我并肩作战，$n，还为我的人民做了不少事。如果每个$r都和你一样高尚，我就不用如此担忧部落的未来了。$B$B我想请你进一步减轻我的烦恼。到奥格瑞玛去，告诉萨鲁法尔大王，恐怖图腾是如何被赶出去的。让他知道我们的骄傲和纪律，我们的力量和悲哀。$B$B天空塔的塔尔会送你上路。一路平安，朋友。",
+      "english": "You have fought bravely alongside me, $n, and done much for my people. If every $r could be as noble, the future of the Horde might not disturb me so much.$B$BI would ask you to ease my worries further. Go to Orgrimmar. Tell High Overlord Saurfang how the Grimtotem were driven out. Let him know our pride and discipline, our strength and sorrow.$B$BTal at the Skytower will send you on your way. Go in peace, friend.",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.details",
+      "build": 0,
+      "match": "same-id-complete-original-and-crosschecked-chinese",
+      "englishSource": "legion",
+      "originalBuild": 23360,
+      "originalColumn": "quest_template.QuestDescription",
+      "url": "https://110.cnwow.cn/quest/26398/",
+      "corroboratingUrl": "https://www.wowhead.com/cn/quest=26398/与大地母亲同行"
+    },
+    {
+      "id": 37841,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "text": "在你的要塞中与阵营领袖谈话，完成船坞的建造。船坞建好后，卡德加会在那儿与你会面。",
+      "english": "Speak with your faction leader in your garrison and complete the quests to build a shipyard. Khadgar will meet you there when it's built.",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0,
+      "match": "same-id-complete-original-and-crosschecked-chinese",
+      "englishSource": "legion",
+      "originalBuild": 25549,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://110.cnwow.cn/quest/37841/",
+      "corroboratingUrl": "https://www.wowhead.com/cn/quest=37841/最后突击"
+    },
+    {
+      "id": 37841,
+      "field": "Description",
+      "locale": "zhCN",
+      "text": "我们在德拉诺的战役遇到了意想不到的转折。古尔丹控制了钢铁部落，历史总是惊人的相似——我们的世界再次陷入了空前的危机之中。$b$b现在是时候了，调集你要塞中全部的力量，向塔纳安丛林发动进攻吧。你需要在要塞中建立一座船坞！我会在新的船坞和你见面的，到时候我们再继续讨论下面的计划。",
+      "english": "Our campaign in Draenor has taken an unexpected turn. With Gul'dan assuming power over the Iron Horde, history is poised to repeat itself - our world is in more peril than ever.$b$bIt's time to bring the full might of your garrison to bear against Tanaan Jungle. Build a shipyard for your garrison! I will meet you at your new shipyard and we will discuss our next move from there.",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.details",
+      "build": 0,
+      "match": "same-id-complete-original-and-crosschecked-chinese",
+      "englishSource": "legion",
+      "originalBuild": 25549,
+      "originalColumn": "quest_template.QuestDescription",
+      "url": "https://110.cnwow.cn/quest/37841/",
+      "corroboratingUrl": "https://www.wowhead.com/cn/quest=37841/最后突击"
+    }
+  ],
+  "excluded": [
+    {
+      "id": 14135,
+      "field": "Completion",
+      "reason": "No reliable Chinese completion found."
+    },
+    {
+      "id": 27921,
+      "field": "Completion",
+      "reason": "Candidate is still English."
+    },
+    {
+      "id": 7491,
+      "field": "Description",
+      "reason": "NPC identity varies between online Chinese sources; not adopted."
+    },
+    {
+      "id": 39692,
+      "field": "Description",
+      "reason": "Candidate describes the Alliance while the pinned original describes the Horde; not adopted."
+    }
+  ]
+}

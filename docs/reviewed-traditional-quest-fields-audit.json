@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-24",
+  "source": "trinity-27869-zhtw-reviewed",
+  "sourceUrl": "https://github.com/TrinityCore/TrinityCore/issues/27869",
+  "sourceBranch": "3.3.5",
+  "targetBuild": "7.3.5.26972",
+  "officialChineseVerified": false,
+  "records": [
+    {
+      "id": 13381,
+      "field": "Title",
+      "locale": "zhTW",
+      "text": "下個目標",
+      "english": "Watts My Target",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Title",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 20182,
+      "originalColumn": "quest_template.LogTitle",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 13381,
+      "field": "Description",
+      "locale": "zhTW",
+      "text": "帶好你的幸運符，$n，選篇你最喜歡的禱告辭。下個任務就要測試你的反應跟耐性，好像你丈母娘要來一樣! $B$B找凱倫·諾談話再索取一架轟炸機。駕著它飛越轟炸地深入逝望山谷。這次的目標更多，天上飛的跟地上爬的都有。看好你的護盾，子彈通通上膛，$n！結束以後回來找我。",
+      "english": "Put on your lucky socks, $n, and say your favorite prayers.  This next mission will test your wit and fortitude like a visit from the in-laws!$B$BRequest another bomber from Karen No.  Take it beyond The Bombardment and over the Valley of Lost Hope.  You have more targets this time, both on the land an in the air.  Keep your shields charged and your ammo loaded, $n!  I'll see you when it's over.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 20182,
+      "originalColumn": "quest_template.QuestDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 13381,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "text": "碁伯里·基羅赫茲要你殺掉轟炸地步兵、石像鬼伏擊者、霜育哨兵與天譴戰爭機器。",
+      "english": "Kibli Killohertz wants you to kill Bombardment Infantry, Gargoyle Ambushers, Frostbrood Sentries and Scourge War Machines.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 20182,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 14167,
+      "field": "Description",
+      "locale": "zhTW",
+      "text": "真高興能再次見到朋友和親人，不過也許我做得有些太誇張了……我已經吃光了他們為我準備的一切！$B$B能不能幫我一個忙，再給我拿來一些那種美味的悼念糕餅？我會非常感激你的……$B$B我想，那邊的查普曼正在出售食譜。",
+      "english": "It's good to visit with friends and family again, though I may have overdone it... I've already eaten everything they made for me!$B$BMight I trouble you for some more of that delicious Bread of the Dead? I'd be most grateful...$B$BChapman there sells the recipe, I think.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 25549,
+      "originalColumn": "quest_template.QuestDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 14167,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "text": "弄到悼念糕餅，並把它交給鐵爐堡墓地的歡快的矮人靈魂。$B$B你必須使用一朵橙菊，才能看到那個隱形的靈魂。",
+      "english": "Acquire some Bread of the Dead and give it to the Cheerful Dwarf Spirit in Ironforge's graveyard.$B$BUse an Orange Marigold to see the otherwise invisible spirit.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 25549,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 14350,
+      "field": "Description",
+      "locale": "zhTW",
+      "text": "我們不能直接攻擊血色十字軍的指揮官，他們身邊的防禦力量太強大了。不過，抓住貓的辦法並不只一個。如果沒有了軍隊，他們也就沒有了作惡的力量。$B$B亡靈哨兵們一直在搜索那些十字軍在斯坦索姆週邊進行活動的情報。每天都有一份報告從他們的指揮中心被送往提爾之手。$r,那些報告就是我們取勝的關鍵！找到紅衣信使，取得那份報告。將它交給納薩諾斯。",
+      "english": "We cannot attack the Scarlet Crusade's command directly; they are too well defended. But there's more than one way to skin a cat. They'll be nothing without their main force.$B$BThe Deathstalkers have been collecting data on the activity of the Crusade outside of Stratholme. Each day, a report is sent from their central command to Tyr's Hand. This report is the key, $r! Find the Crimson Courier and recover that report. Bring it to Nathanos.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 15595,
+      "originalColumn": "quest_template.QuestDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    },
+    {
+      "id": 14350,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "text": "返回東瘟疫之地，找到並殺死紅衣信使，拿到大十字軍的命令。$B$B把命令交給納薩諾斯·凋零者，並等待進一步的指示。",
+      "english": "Return to Eastern Plaguelands and track down the Crimson Courier. Kill the Courier and recover the Grand Crusader's Command.$B$BTake the command to Nathanos Blightcaller for further instruction.",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0,
+      "match": "reviewed-legacy-field-with-pinned-legion-original",
+      "englishSource": "legion",
+      "originalBuild": 15595,
+      "originalColumn": "quest_template.LogDescription",
+      "url": "https://github.com/TrinityCore/TrinityCore/issues/27869"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": 14135,
+      "field": "Completion",
+      "reason": "No reliable Chinese translation found."
+    },
+    {
+      "id": 27921,
+      "field": "Completion",
+      "reason": "No reliable Chinese translation found."
+    }
+  ],
+  "reviewNotes": {
+    "13381": "核对轰炸机、凯伦·诺、两处地区、地面／空中四种敌人、护盾、弹药及返回要求；保留角色名变量。",
+    "14167": "亡者节矮人版本；核对铁炉堡墓地、矮人灵魂、食物、花和查普曼，未采用其他主城或种族的目标。",
+    "14350": "核对血色十字军、亡灵哨兵、斯坦索姆、提尔之手、红衣信使、命令和纳萨诺斯，保留种族变量。"
+  }
+}

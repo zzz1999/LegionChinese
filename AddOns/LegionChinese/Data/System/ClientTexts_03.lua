@@ -6,7 +6,7 @@ D.ClientTexts.BattlePet[163]={Description={["fa120cc91b439562:91"]="鳄鱼的皮
 D.ClientTexts.BattlePet[164]={Description={["828d1e8dda6e6704:71"]="毒皮和其它鳄鱼一样，除了具有超常的幽默感。"},Source={["43d8a4d880a82b6d:32"]=S[680]}}
 D.ClientTexts.BattlePet[165]={Description={["61fd58136b2e69d8:65"]="阿曼尼巫医将许多牺牲者变成了青蛙。其中的某些人再也没能恢复过来。"},Source={["ebb0aacaf32861f1:28"]="掉落：森林蛙\n地区：祖阿曼"}}
 D.ClientTexts.BattlePet[166]={Description={["d3f618e8a835641f:114"]="粉色雷象是一种害羞的生物，它只会出现在曾经帮助过它的，或是已醉得不省人事的人身边。"}}
-D.ClientTexts.BattlePet[167]={Description={["49c5423b10310848:80"]=S[20868]}}
+D.ClientTexts.BattlePet[167]={Description={["49c5423b10310848:80"]=S[20869]}}
 D.ClientTexts.BattlePet[168]={Description={["84bd9f8cbab68515:127"]="当燃烧军团入侵外域时，兰德鲁·郎绍特捐献出了这个设计用于对抗强敌。联盟和部落都接连开始了生产。"},Source={["c06c39db47f350a8:32"]="集换式卡牌：燃烧军团的进攻"}}
 D.ClientTexts.BattlePet[169]={Description={["b831eaaa49a6aeb1:27"]="比真龙要安静得多。"},Source={["c06c39db47f350a8:32"]="集换式卡牌：燃烧军团的进攻"}}
 D.ClientTexts.BattlePet[170]={Description={["e4a368f4e3083c5b:60"]="这只金猪以赠与同伴好运的方式，为其祖先增光添彩。"},Source={["79a4707712881b10:26"]="特殊：战友招募/猪年春节庆祝\n"}}
@@ -26,10 +26,10 @@ D.ClientTexts.BattlePet[190]={Description={["f404e40e6439e3e9:84"]="当它感应
 D.ClientTexts.BattlePet[191]={Description={["78f4cd03a219ea48:98"]="这个机器人战士是冬幕节上最受欢迎的礼物。虽然没附带电池，但火箭弹肯定是有的！"},Source={["d00fbada955d933f:28"]=S[811]}}
 D.ClientTexts.BattlePet[192]={Description={["6f8a139970331bbc:74"]="小叽的外表能让人联想到更为文明的时代，那时决斗者都身穿燕尾服战斗。"},Source={["01b6ed83eeb8922c:35"]="特殊：魔兽世界/暴雪游戏通行证绑定"}}
 D.ClientTexts.BattlePet[193]={Description={["552b84083910f6b7:70"]="你不会愿意在黑暗的巷路里与这只老鼠狭路相逢。或者说，在哪里都一样。"},Source={["9e3bf2780252cc6b:30"]="专业技能：钓鱼\n地区：达拉然"}}
-D.ClientTexts.BattlePet[194]={Description={["422c1d6953703d6e:81"]="和鳄鱼人吉恩大部分‘神秘的卵’不同，这个卵里真的有一只活物。"},Source={["5f98136b1cc9145c:18"]=S[12324]}}
-D.ClientTexts.BattlePet[195]={Description={["f73e00411c556cba:119"]="稀有的白色食虱鸟在神谕者中备受尊重。它们被视为暴雨来临，幼虫丰收以及狼獾人冬眠的预兆。"},Source={["5f98136b1cc9145c:18"]=S[12324]}}
-D.ClientTexts.BattlePet[196]={Description={["ed2f602c92bd907f:92"]="这些贪吃的幼兽生长速度十分惊人，而且每天都能吞下相当于其体重两倍的生肉。"},Source={["5f98136b1cc9145c:18"]=S[12324]}}
-D.ClientTexts.BattlePet[197]={Description={["28544bd8cf33bc0d:69"]="艾泽拉斯的眼镜蛇以其快速发作的毒液和迅猛的攻击而著称。"},Source={["5f98136b1cc9145c:18"]=S[12324]}}
+D.ClientTexts.BattlePet[194]={Description={["422c1d6953703d6e:81"]="和鳄鱼人吉恩大部分‘神秘的卵’不同，这个卵里真的有一只活物。"},Source={["5f98136b1cc9145c:18"]=S[12325]}}
+D.ClientTexts.BattlePet[195]={Description={["f73e00411c556cba:119"]="稀有的白色食虱鸟在神谕者中备受尊重。它们被视为暴雨来临，幼虫丰收以及狼獾人冬眠的预兆。"},Source={["5f98136b1cc9145c:18"]=S[12325]}}
+D.ClientTexts.BattlePet[196]={Description={["ed2f602c92bd907f:92"]="这些贪吃的幼兽生长速度十分惊人，而且每天都能吞下相当于其体重两倍的生肉。"},Source={["5f98136b1cc9145c:18"]=S[12325]}}
+D.ClientTexts.BattlePet[197]={Description={["28544bd8cf33bc0d:69"]="艾泽拉斯的眼镜蛇以其快速发作的毒液和迅猛的攻击而著称。"},Source={["5f98136b1cc9145c:18"]=S[12325]}}
 D.ClientTexts.BattlePet[198]={Description={["27a15245ea3dae32:35"]="它大大的眼睛和时髦的滑步特别引人注目。"}}
 D.ClientTexts.BattlePet[199]={Description={["8a836a5b32c79fbc:180"]="为了防止学徒们依靠魔仆来完成功课，大法师举行仪式，将能够召唤这种生物的法术书页藏在了达拉然的几处角落。"},Source={["5004ab85808c0fc4:42"]="成就：进修\n分类：综合"}}
 D.ClientTexts.BattlePet[200]={Description={["b44beab79951c578:60"]="春兔象征着多产，而且它们很乐意展现这一点。"}}
@@ -65,23 +65,23 @@ D.ClientTexts.BattlePet[235]={Description={["a6ca6cfb4a77ab5a:96"]="这个“跳
 D.ClientTexts.BattlePet[236]={Description={["d79167fd47725a26:113"]="这只幼崽因拥有独特的颜色而令人艳羡不已。尽管布琳妮悉心调教，但迅猛龙凶狠的天性难改。"}}
 D.ClientTexts.BattlePet[237]={Description={["01e72bdbfb641278:103"]="这些雏龙的体型比其他迅猛龙幼崽更大，能够长成极具破坏性的巨型爬行动物。"},Source={["b235bc806d653835:46"]="掉落：暴掠龙女王的卵\n地区：安戈洛环形山"}}
 D.ClientTexts.BattlePet[238]={Description={["0667951f4533518a:89"]="刺喉龙的卵由刺喉雌龙严密看守。它们娇小的体格掩饰了其凶猛的天性。"},Source={["8ecfab0e05d46edf:41"]="掉落：刺喉雌龙的卵\n地区：湿地"}}
-D.ClientTexts.BattlePet[239]={Description={["089aa6d12dbcff1a:94"]="拉扎什迅猛龙是丛林中最聪明的掠食者之一，并因此受到了古拉巴什巨魔的喜爱。"},Source={["972c826877360a85:63"]=S[12322]}}
+D.ClientTexts.BattlePet[239]={Description={["089aa6d12dbcff1a:94"]="拉扎什迅猛龙是丛林中最聪明的掠食者之一，并因此受到了古拉巴什巨魔的喜爱。"},Source={["972c826877360a85:63"]=S[12323]}}
 D.ClientTexts.BattlePet[240]={Description={["5d3fc5ab101077dc:78"]="墨玉猎豹在夜间隐形，犹如潜行的暗影，随着黎明的到来而消失得无影无踪。"},Source={["41639cc2863cf2bb:25"]="特殊：韩国活动"}}
 D.ClientTexts.BattlePet[241]={Description={["af3b64f4eaa2a741:78"]="看到这些风筝高飞在诺森德岸边的天空中，就知道附近有海象人。"},Source={["b3a4125ecf9fe905:26"]="集换式卡牌：天灾战争"}}
 D.ClientTexts.BattlePet[242]={Description={["e66cd9b2a41df1b1:73"]="与人亲近又好奇心十足，这些小虎崽似乎找到了最特别的藏身之所。"},Source={["b3a4125ecf9fe905:26"]="集换式卡牌：天灾战争"}}
 D.ClientTexts.BattlePet[243]={Description={["6006ac2532164c34:103"]="奥妮克希亚的雏龙，这条年轻的小龙已经决心不再重蹈父辈们的毁灭覆辙。"},Source={["dbd40291793d0fa4:55"]="成就：魔兽世界五周年\n分类：光辉事迹"}}
 D.ClientTexts.BattlePet[244]={Description={["724b0a036faa427c:94"]="熔火恶犬生活在火焰之地和熔火之心，血统可追溯到首领玛格曼达。"},Source={["07054a7ca7dc0ecb:34"]="特殊：绑定电子安全令\n"}}
-D.ClientTexts.BattlePet[245]={Description={["6e0aa182db22b8fb:144"]="作为蛮锤矮人赠与联盟英雄的礼物，这些幼崽是弗斯塔德和随从进入格瑞姆巴托时骑乘的狮鹫所生。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
-D.ClientTexts.BattlePet[246]={Description={["0aabf4b594cba1dc:68"]="索基佐格从没把那句古老的兽人格言当回事——‘不要拉扯双足飞龙的尾巴’。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[245]={Description={["6e0aa182db22b8fb:144"]="作为蛮锤矮人赠与联盟英雄的礼物，这些幼崽是弗斯塔德和随从进入格瑞姆巴托时骑乘的狮鹫所生。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
+D.ClientTexts.BattlePet[246]={Description={["0aabf4b594cba1dc:68"]="索基佐格从没把那句古老的兽人格言当回事——‘不要拉扯双足飞龙的尾巴’。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[247]={Description={["2dfdd9a6d8838241:121"]="罕见的虎族成员，很多人认为（也许是谬误），其独特的颜色也许是由残存魔法或其它经历造成的。"},Source={["79a4707712881b10:26"]="特殊：战友招募/中国充值促销活动"}}
-D.ClientTexts.BattlePet[248]={Description={["263dcfd63ca11181:124"]="熊猫人僧侣是大无畏的旅行同伴，不断磨练着自己的战技……除非你请他喝酒。他认为拒绝是粗鲁的行为。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
-D.ClientTexts.BattlePet[249]={Description={["8b0530103acc35d7:120"]="生时，克尔苏加德背叛了肯瑞托，成立了诅咒教派。死后，他以纳克萨玛斯巫妖领主的身份效命于天灾军团。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[248]={Description={["263dcfd63ca11181:124"]="熊猫人僧侣是大无畏的旅行同伴，不断磨练着自己的战技……除非你请他喝酒。他认为拒绝是粗鲁的行为。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
+D.ClientTexts.BattlePet[249]={Description={["8b0530103acc35d7:120"]="生时，克尔苏加德背叛了肯瑞托，成立了诅咒教派。死后，他以纳克萨玛斯巫妖领主的身份效命于天灾军团。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[250]={Description={["3c7e439557f200b4:47"]="虽然个头很小，但小狗们被激怒时也是很危险的。"},Source={["7e7729469afb1c6f:55"]="成就：1Q24，来的密\n分类：地下城和团队"}}
 D.ClientTexts.BattlePet[251]={Description={["95ee4db8b340fdc7:79"]="这个看似‘可爱’的小家伙想和小动物玩耍。千万别让它们靠太近。"},Source={["ef4382ef188d400c:25"]="世界事件：情人节"}}
 D.ClientTexts.BattlePet[253]={Description={["ec25ffe50223f484:133"]="不同于它们极具毁灭性的主人——冰霜之王埃霍恩，霜娃娃喜欢和毫无防备冒险者嬉闹，向他们丢雪球。"},Source={["dc26cc20b3a70eb3:32"]="世界事件：仲夏火焰节"}}
 D.ClientTexts.BattlePet[254]={Description={["7dab4062b65c8a7d:113"]="耶比托当季最畅销的热门玩具，这个打架机器人的全新蓝色底盘让整个艾泽拉斯的孩子们为之疯狂。"}}
 D.ClientTexts.BattlePet[255]={Description={["d8f047da2f6e0b33:147"]="作为世界上首屈一指的珍奇宠物收藏家，达拉然的布琳妮只会将神秘的星界灵龙奖励给那些和她一样热爱宠物的收藏家。"},Source={["5bfa92f08d00e6e5:46"]="成就：小小宠物店\n分类：宠物对战"}}
-D.ClientTexts.BattlePet[256]={Description={["c55245bdf673746a:90"]="根据奥杜尔的巨大泰坦原型仿制而成，这个狂躁的小东西可决不会对它的玩具们手软。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[256]={Description={["c55245bdf673746a:90"]="根据奥杜尔的巨大泰坦原型仿制而成，这个狂躁的小东西可决不会对它的玩具们手软。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[257]={Description={["c334d6c807833619:64"]="莫叽姆斯是所有鱼人竞技场战士中最厉害的一个。也是唯一的一个。"}}
 D.ClientTexts.BattlePet[258]={Description={["c0d40eca2b6e9797:78"]="人类军队中的强大火炮。雷神总是冲锋在先，撤退殿后！"},Source={["57bc2e814605d760:54"]="特殊：星际争霸2：自由之翼典藏版"}}
 D.ClientTexts.BattlePet[259]={Description={["c624ce935cc9224c:95"]="与它的金色伙伴不同，蓝色小矛骑兵在戳对手眼球时，身手更加悠闲从容。"},Source={["77e6cd1812dc61d3:28"]="任务：砸蛋\n地区：海加尔山\n\n"}}
@@ -112,7 +112,7 @@ D.ClientTexts.BattlePet[292]={Description={["3ba9eb9cd2ebac59:61"]="幽冥火，
 D.ClientTexts.BattlePet[293]={Description={["ecae1c6e3102c8f7:102"]="晶簇常被矿工们误认为稀有的宝石。最初，人们是靠它们散发出的优美振鸣声才认识到这一物种的存在的。"},Source={["2df13755406019e8:75"]="掉落：源质矿、富源质矿\n地区：深岩之洲、暮光高地、奥丹姆"}}
 D.ClientTexts.BattlePet[294]={Description={["df2938e0cc695919:112"]="死亡之翼的出现把整个艾泽拉斯搅得天翻地覆，就连深居海洋的鱼人也无法免疫他的腐化影响。"},Source={["fc4bf3d4c0953a57:22"]="特殊：2010年暴雪嘉年华"}}
 D.ClientTexts.BattlePet[296]={Description={["ecd4c3ec10a802e5:108"]="月夜枭兽受到了艾露恩的祝福，无论走到哪里都不忘散播自然的恩赐。这种欢乐的禽鸟总是乐于翩翩起舞。"},Source={["5dcfa0f044e4a581:20"]="游戏商城：联盟"}}
-D.ClientTexts.BattlePet[297]={Description={["56021d06d414f457:57"]="召唤恐怖火焰之王的小小化身，永远都不算为时过早。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[297]={Description={["56021d06d414f457:57"]="召唤恐怖火焰之王的小小化身，永远都不算为时过早。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[298]={Description={["7f3733d7528a3b36:66"]="月夜枭兽与众不同的咆哮声是大自然中最可怖的声音之一。"},Source={["d440a7a9049fa702:17"]="游戏商城：部落"}}
 D.ClientTexts.BattlePet[301]={Description={["374f97dd191026c8:68"]="它抬头用那双乌溜溜的大眼睛望着你，仿佛在问：‘你是我妈妈么？’"},Source={["336494db63abda8a:48"]="任务：善心之举\n地区：北荆棘谷\n\n"}}
 D.ClientTexts.BattlePet[302]={Description={["15780a956fb386aa:125"]="兰德鲁·郎绍特最初是怎么拥有这个小巫妖的，至今仍是个谜，可他却迫不及待地把它当成了卡牌游戏的赌注。"},Source={["d5684380972cca31:28"]="集换式卡牌：灭世者"}}
@@ -122,8 +122,8 @@ D.ClientTexts.BattlePet[307]={Description={["27dc656681cd527b:119"]="生于荆�
 D.ClientTexts.BattlePet[308]={Description={["afcd2085e7c27dc2:93"]="野生的泥沼游荡者极具攻击性，非常危险。可一旦被驯服，它们就会表现出极大的忠诚和依赖。"},Source={["eb109ad84f45d1f1:25"]=S[810]}}
 D.ClientTexts.BattlePet[309]={Description={["2cba7d72797ba705:131"]="翼手龙的龙蛋被置于祖先的化石下孵化，使龙宝宝得以吸收祖先的凶猛和才智。"},Source={["460985159ae8a4ac:22"]=S[679]}}
 D.ClientTexts.BattlePet[310]={Description={["dbfe013d8894bf6c:86"]="巫毒雕像通常会从魔精、巨魔的汗水和部族敌人的血肉中汲取能量。"},Source={["460985159ae8a4ac:22"]=S[679]}}
-D.ClientTexts.BattlePet[311]={Description={["e0ecde8e0d048a09:74"]="尽管仍然略显笨拙，这只长翅膀的小狮子正在学习如何成为最棒的坐骑！"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
-D.ClientTexts.BattlePet[316]={Description={["f779d47b5a2a185e:154"]="还没发育成凶残的成年角鹰兽，塞纳里奥角鹰兽宝宝有着看似无害的外表，往往会让塞纳里奥议会的新成员疏于防范。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[311]={Description={["e0ecde8e0d048a09:74"]="尽管仍然略显笨拙，这只长翅膀的小狮子正在学习如何成为最棒的坐骑！"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
+D.ClientTexts.BattlePet[316]={Description={["f779d47b5a2a185e:154"]="还没发育成凶残的成年角鹰兽，塞纳里奥角鹰兽宝宝有着看似无害的外表，往往会让塞纳里奥议会的新成员疏于防范。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[317]={Description={["0902ee4edfbe69c9:129"]="这些海加尔的幼崽在经历大地的裂变时饱受痛苦折磨。但从好的方面来看，正是这些苦难让他们学会了不畏艰险、勇敢拼搏的精神。"}}
 D.ClientTexts.BattlePet[318]={Description={["2a5724b38a976656:102"]="鞭笞者原产于火焰之地的灰烬土壤中，后经由海加尔守护者的帮助，被移植到了艾泽拉斯。"}}
 D.ClientTexts.BattlePet[319]={Description={["3954f53a38208275:61"]="与月亮（和这个蓬头垢面、胡子拉碴的女巫）同行，徜徉在死亡的夜晚！"}}
@@ -147,7 +147,7 @@ D.ClientTexts.BattlePet[341]={Description={["d8fbb207cdbff0ee:116"]="这些魔�
 D.ClientTexts.BattlePet[342]={Description={["1425abd01d8ca315:139"]="灯笼里透出的光都代表着对先祖之魂的敬意。每逢春节期间，这些幽灵般的长老们便会将他们的智慧传承给下一代。"}}
 D.ClientTexts.BattlePet[343]={Description={["62f4957cadeb5d55:89"]="这只可爱的猫咪喜欢嬉闹，但有时候它追逐的东西并不真实存在。"}}
 D.ClientTexts.BattlePet[346]={Description={["1f2e18b09ce2188b:154"]="魔卒萨满因亡故祖先魂灵的庇佑而变得强大。这些邪恶的灵魂就在萨满的部族长矛里。控制了长矛，就等于控制了萨满。"},Source={["34ef327160d5d0f8:35"]="特殊：暗黑破坏神3典藏版"}}
-D.ClientTexts.BattlePet[347]={Description={["3167400ba9102ec4:134"]="守护巨龙之魂据说有着多变的情绪，时而隐忍沉着，时而怪异莫测，时而多情忧郁。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[347]={Description={["3167400ba9102ec4:134"]="守护巨龙之魂据说有着多变的情绪，时而隐忍沉着，时而怪异莫测，时而多情忧郁。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[348]={Description={["7593ce0035491675:29"]="时刻监视。时刻裁断。"},Source={["a59044336c3aa522:44"]="集换式卡牌：时空行者：上古之战\n"}}
 D.ClientTexts.BattlePet[374]={Description={["8cee347949d56862:69"]="作为黑绵羊的后代，黑羔羊只生活在艾尔文森林里。"},Source={["41d31754e6732d89:22"]="宠物对战：艾尔文森林"}}
 D.ClientTexts.BattlePet[378]={Description={["c5b0fd8627bfad7f:47"]="当你拥有两只兔子时，你恐怕很快就会得到第三只了。"},Source={["cbcbc70e877040c7:338"]="宠物对战：艾萨拉、刀锋山、晶歌森林、黑海岸、丹莫罗、暮色森林、艾尔文森林、永歌森林、菲拉斯、至高岭、希尔斯布莱德丘陵、嚎风峡湾、月光林地、海加尔山、莫高雷、纳格兰、赤脊山、银月城、银松森林、石爪山脉、暴风城、提瑞斯法林地、西瘟疫之地、西部荒野、湿地"}}
@@ -442,7 +442,7 @@ D.ClientTexts.BattlePet[1062]={Description={["f7fce79c9ff3904b:109"]="人们偶�
 D.ClientTexts.BattlePet[1063]={Description={["6dc7d86d2e54366c:31"]="现在就连欺骗的念头都不要有了。"},Source={["5010482d48ad85aa:24"]="掉落： 暗月宠物补给袋\n"}}
 D.ClientTexts.BattlePet[1068]={Description={["67537feb734855fa:73"]="虽然比臭名昭著的吉尔尼斯渡鸦要小一些，但在智力和狡诈程度上毫不逊色。"},Source={["94d57290ecbe9f45:82"]="宠物对战：偶尔在暗月岛上的战斗中与其它生物一起出现。"}}
 D.ClientTexts.BattlePet[1073]={Description={["8236871963539992:74"]="塔吉是一只可爱又隐居避世的鱼人，相对于新朋友，她更喜欢和密友们在一起。"},Source={["129a04fa5d457db1:19"]="掉落：白色鱼人卵"}}
-D.ClientTexts.BattlePet[1117]={Description={["8f292cdcfcfd0d0f:71"]="一只淘气、喜欢喵喵叫的放火狂。千万别在不戴防火手套的情况下抚摸这些小猫！"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[1117]={Description={["8f292cdcfcfd0d0f:71"]="一只淘气、喜欢喵喵叫的放火狂。千万别在不戴防火手套的情况下抚摸这些小猫！"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[1124]={Description={["bda386e7a117beca:98"]="虽然它看似和燃烬猫仔是远亲，但这两种生物其实并不是来自同一个祖先。"},Source={["1716bc7ebda339a7:51"]=S[1295]}}
 D.ClientTexts.BattlePet[1125]={Description={["ca1ef18d3157c12a:57"]="这些古灵代表了潘达利亚元素力量的核心。"},Source={["1716bc7ebda339a7:51"]=S[1295]}}
 D.ClientTexts.BattlePet[1126]={Description={["ef00dd5c52d9f7c9:72"]="只要家园不受到威胁，潘达利亚的元素都是既可爱又淘气的。"},Source={["1716bc7ebda339a7:51"]=S[1295]}}
@@ -479,7 +479,7 @@ D.ClientTexts.BattlePet[1176]={Description={["9f2eb054ac01912b:34"]="你能相�
 D.ClientTexts.BattlePet[1177]={Description={["f110b26179461a9a:70"]="本是沙粒，这些危险的生物能在转瞬间成形并消散。"},Source={["6c5078d365ee107a:20"]="掉落：雷电王座\n\n"}}
 D.ClientTexts.BattlePet[1178]={Description={["9ad09a6becfd2178:77"]="这些小型构造体自诞生以来就忠于夺日者，威力不容小觑。"},Source={["45b46ebf0b012aac:48"]="掉落：错乱的夺日者构造体\n地区：雷神岛"}}
 D.ClientTexts.BattlePet[1179]={Description={["22aa7f4d4e1e2dcc:51"]="在它周身上下，从头至尾都有闪电在涌动。"},Source={["3c8e8ce06b29c4c7:23"]=S[8966]}}
-D.ClientTexts.BattlePet[1180]={Description={["dee9b38f9b239bce:97"]="这只独特的迅猛龙出生在赞达拉岛屿上，随赞达拉大军一同来到了这里。"},Source={["ea68a688732efd55:41"]=S[12325]}}
+D.ClientTexts.BattlePet[1180]={Description={["dee9b38f9b239bce:97"]="这只独特的迅猛龙出生在赞达拉岛屿上，随赞达拉大军一同来到了这里。"},Source={["ea68a688732efd55:41"]=S[12326]}}
 D.ClientTexts.BattlePet[1181]={Description={["1e4fbcc22013937f:49"]="这些蛇因能一口吞下侏儒而闻名。"},Source={["3c8e8ce06b29c4c7:23"]=S[8966]}}
 D.ClientTexts.BattlePet[1182]={Description={["c3dad3102224a80b:25"]="最好别去碰它。"},Source={["3c8e8ce06b29c4c7:23"]=S[8966]}}
 D.ClientTexts.BattlePet[1183]={Description={["4c40cd98212686e7:77"]="在雷电王座锻铸而成，这些小家伙效命于伟大的黑暗意志。"},Source={["46d6e63632bf3291:31"]="掉落：意志\n地区：雷电王座"}}
@@ -497,9 +497,9 @@ D.ClientTexts.BattlePet[1206]={Description={["87140848331e0287:158"]="这些鱼�
 D.ClientTexts.BattlePet[1207]={Description={["2702294bb74f2d4c:144"]="这些小家伙生活在永恒岛的水域中，或是在珍宝斑马鱼和红腹鳜鱼附近游动。专注的渔人有时能和某一只建立好感。"},Source={["fd34c68f272323ec:18"]="专业技能： 钓鱼"}}
 D.ClientTexts.BattlePet[1208]={Description={["aae9c4e7a54279d2:189"]="人们相信，这种绿色小金鱼的绿皮肤和条纹，让他们在翡翠林、四风谷和卡桑琅丛林的水域中穿梭时好似身穿天然迷彩装。专注的渔人有时能和某一只建立好感。"},Source={["fd34c68f272323ec:18"]="专业技能： 钓鱼"}}
 D.ClientTexts.BattlePet[1209]={Description={["01a22ea217148c4b:182"]="这些适应性极强的鱼类能在各种气候环境下存活下来，从冰雪覆盖的昆莱山到潘达利亚各地温暖的咸水水域。专注的渔人有时能和某一只建立好感。"},Source={["fd34c68f272323ec:18"]="专业技能： 钓鱼\n"}}
-D.ClientTexts.BattlePet[1211]={Description={["ed0ef07659985b6f:97"]="这些赞达拉巨魔的小兵们擅长躲在赞达拉巨型战船的货箱里完成偷渡。"},Source={["ea68a688732efd55:41"]=S[12325]}}
-D.ClientTexts.BattlePet[1212]={Description={["4074847e50b8fe27:71"]="即便只有这么大，这些迅猛龙也能在十秒之内把一整只奶牛开膛破肚。"},Source={["ea68a688732efd55:41"]=S[12325]}}
-D.ClientTexts.BattlePet[1213]={Description={["ed8fb800bff32a29:77"]="这些可爱的野兽既惹人喜爱又让人不禁想去拥抱它们，前提是你不在乎面子问题。"},Source={["ea68a688732efd55:41"]=S[12325]}}
+D.ClientTexts.BattlePet[1211]={Description={["ed0ef07659985b6f:97"]="这些赞达拉巨魔的小兵们擅长躲在赞达拉巨型战船的货箱里完成偷渡。"},Source={["ea68a688732efd55:41"]=S[12326]}}
+D.ClientTexts.BattlePet[1212]={Description={["4074847e50b8fe27:71"]="即便只有这么大，这些迅猛龙也能在十秒之内把一整只奶牛开膛破肚。"},Source={["ea68a688732efd55:41"]=S[12326]}}
+D.ClientTexts.BattlePet[1213]={Description={["ed8fb800bff32a29:77"]="这些可爱的野兽既惹人喜爱又让人不禁想去拥抱它们，前提是你不在乎面子问题。"},Source={["ea68a688732efd55:41"]=S[12326]}}
 D.ClientTexts.BattlePet[1226]={Description={["e18962466246a7df:79"]="大灰狼经常被人忘记的后代，躲在一篮子甜食里狼吞虎咽，呼呼大睡。"},Source={["422cc6cc0d96a3b1:31"]="掉落：大灰狼\n地区：卡拉赞"}}
 D.ClientTexts.BattlePet[1227]={Description={["b0a2645bdaeabd70:162"]="主要职责包括打扫麦迪文的众多魔法神器，在莫罗斯之前，不少看管者都为此献出了生命、心智或身体。"},Source={["8824067b668b0bfe:28"]="掉落：馆长\n地区：卡拉赞"}}
 D.ClientTexts.BattlePet[1228]={Description={["03b269bf56c827ea:162"]="在离开虚空异界时，玛克扎尔的深渊魔被卡拉赞的魔法结界诡异地扭曲了，体型变得微小，不易自动爆发烈焰。"},Source={["e42b55d3fe153d9a:34"]="掉落：玛克扎尔王子\n地区：卡拉赞"}}
@@ -551,7 +551,7 @@ D.ClientTexts.BattlePet[1348]={Description={["6a82488b22b057f8:71"]="玉火之�
 D.ClientTexts.BattlePet[1349]={Description={["d7e99eb4da94a619:171"]="厌倦了长时低薪的工作，并且不愿再忍受冒险者对劣质冬幕节礼物无休止的抱怨，这些淘气的小家伙逃出了它们的魔法工作间，和讨厌的格林奇走到了一起。"},Source={["d00fbada955d933f:28"]="世界事件：冬幕节\n"}}
 D.ClientTexts.BattlePet[1350]={Description={["59c3c87687334ddb:81"]="风筝里的一支蜡烛燃热了空气，使其可以在无风的情况下升上高空。"},Source={["910b1fbf7c33c024:29"]="商人出售：莫苦\n地区：永恒岛"}}
 D.ClientTexts.BattlePet[1351]={Description={["9e94ad708b3073e3:77"]="异想天开的亡者鬼魂为这些被附身的小傀儡赋予了有如生者的外表。"},Source={["c5bcd66ba3de5c94:23"]="世界事件：悼念日"}}
-D.ClientTexts.BattlePet[1363]={Description={["f5110d39df9f7944:163"]="身为营救类獒犬，奥特兰克负酒犬的血统以搜救被大雪掩埋的登山客而著称……当然它们那流不完的哈喇子也颇有名声。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[1363]={Description={["f5110d39df9f7944:163"]="身为营救类獒犬，奥特兰克负酒犬的血统以搜救被大雪掩埋的登山客而著称……当然它们那流不完的哈喇子也颇有名声。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[1364]={Description={["991554a9ef39f55e:101"]="圣教威名传万古，\r\n亦善征战亦善舞。\r\n朝夕演兵军歌扬，\r\n此阵世间何人睹。"},Source={["fc4bf3d7c0953a5a:22"]="特殊：2013年暴雪嘉年华"}}
 D.ClientTexts.BattlePet[1365]={Description={["8032b631b12dad22:19"]="看好你的钱包。"},Source={["6e0901357f4c6bb8:49"]="特殊：暗黑破坏神3：夺魂之镰典藏版"}}
 D.ClientTexts.BattlePet[1384]={Description={["ceb8c1adafdcc462:75"]="强大的霍格斯既顽强又可怕，会毫不犹豫地消灭弱小的敌人。"},Source={["1c2dbb9c833a4055:46"]="成就：我打！\n分类：暗月马戏团"}}
@@ -583,7 +583,7 @@ D.ClientTexts.BattlePet[1448]={Description={["dd20e2c49132a0a5:48"]="这只海�
 D.ClientTexts.BattlePet[1449]={Description={["341eeb5c2fbb33c7:83"]="这个刚出生的小家伙有着不同寻常的感知力，可以发现并跟随领头的捕食者。"}}
 D.ClientTexts.BattlePet[1450]={Description={["8262d5cc74725881:133"]="尽管这些微型机械守卫的制造初衷是为了保护家养雷象免受害虫的侵扰，但事实证明，它们还是按摩的高手。"},Source={["89803231364c0732:50"]="商人出售：守备官努瑞姆\n声望：主教议会\n"}}
 D.ClientTexts.BattlePet[1451]={Description={["da3890afe4dd9a92:62"]="喜欢跟小鬼混在一起，在岩浆里打滚，依偎在元素领主身边。"},Source={["2df8a03dbd4241da:56"]="成就：魔兽世界十周年\n分类：光辉事迹"}}
-D.ClientTexts.BattlePet[1453]={Description={["406e78fb93d667a6:74"]=S[19032]}}
+D.ClientTexts.BattlePet[1453]={Description={["406e78fb93d667a6:74"]=S[19033]}}
 D.ClientTexts.BattlePet[1454]={Description={["5543af69c6cf70fe:100"]="在啃过古尔丹的胫骨后，这个好动的恶魔猎手就被他的哥哥鱼鹿囚禁了10000年。"},Source={["fc4bf3d9c0953a5c:22"]="特殊：2015年暴雪嘉年华\n\n"}}
 D.ClientTexts.BattlePet[1455]={Description={["22ad939607cd3def:78"]="伪装成苔藓的样子，这个小飞掠者会躲在树丛里，从天而降般地跳到目标身上。"},Source={["105b541085ec72c3:26"]=S[8947]}}
 D.ClientTexts.BattlePet[1456]={Description={["e782cfa82106ff41:107"]="这小家伙凭借着颇具欺骗性的可爱外表吸引猎物，然后疾风骤雨般地将它们席卷。拥抱要小心。"},Source={["e37f284e86bdfde9:22"]=S[8947]}}
@@ -614,13 +614,13 @@ D.ClientTexts.BattlePet[1530]={Description={["d1da85fa3e90b5c7:118"]="小狼领�
 D.ClientTexts.BattlePet[1531]={Description={["41e7fd44508110e7:69"]="这个上古巢穴守卫在设计时被灌注了不可思议的构想：恨猫。"},Source={["460985159ae8a4ac:22"]=S[679]}}
 D.ClientTexts.BattlePet[1532]={Description={["f807ed78a854a199:98"]="卡利鸟的雏鸟在刚出生时以蛆虫为食，翅膀硬了之后却能吃掉任何比自己小的东西。"},Source={["db910b163d58da83:32"]="任务：伊奇的蛋\n地区：阿兰卡峰林"}}
 D.ClientTexts.BattlePet[1533]={Description={["999b76ae4fd0c741:94"]="没人知道兰提克究竟是生活在黑翼血环深处的哪个区域，但那里肯定臭烘烘的。"},Source={["273d124732b194d6:41"]="掉落：兰提克\n地区：黑石塔上层"}}
-D.ClientTexts.BattlePet[1536]={Description={["9877305045b4406b:108"]="在德拉诺，赞加海会把成千上万个这种孢子释放到海岸上，从而渐渐蚕食陆地。"},Source={["5dbcc6303dd173bf:44"]=S[12328]}}
+D.ClientTexts.BattlePet[1536]={Description={["9877305045b4406b:108"]="在德拉诺，赞加海会把成千上万个这种孢子释放到海岸上，从而渐渐蚕食陆地。"},Source={["5dbcc6303dd173bf:44"]=S[12329]}}
 D.ClientTexts.BattlePet[1537]={Description={["fdddcd3fca6dcb34:101"]="一种采摘自赤红沼泽的孢子，那是戈尔隆德的一个地区，在德拉诺被虚空魔法撕裂时被吞灭了。"},Source={["26ff2c49f8f7976a:30"]="掉落：奇异孢子\n地区：戈尔隆德\n"}}
 D.ClientTexts.BattlePet[1538]={Description={["3bf7de11fbca9e70:56"]="深蓝色的暗泽后来成了破碎者部族的家园。"},Source={["c2d4949345a67a3a:38"]="掉落：奇异孢子\n地区：影月谷\n"}}
-D.ClientTexts.BattlePet[1539]={Description={["c549966ce822b9b1:92"]="一种来自赞加拉的孢子，那是赞加海侵蚀的中心地区，后来发展成了赞加沼泽。"},Source={["5dbcc6303dd173bf:44"]=S[12328]}}
+D.ClientTexts.BattlePet[1539]={Description={["c549966ce822b9b1:92"]="一种来自赞加拉的孢子，那是赞加海侵蚀的中心地区，后来发展成了赞加沼泽。"},Source={["5dbcc6303dd173bf:44"]=S[12329]}}
 D.ClientTexts.BattlePet[1540]={Description={["3af227fe4bf3ad7f:117"]="一种极为罕见的明亮孢子，可以在深受赞加真菌侵蚀的最黑暗的角落里找到，藏在德拉诺的波涛深处。"},Source={["fd2a73dd0f0d8e0e:28"]="掉落：烂菌\n地区：阿兰卡峰林"}}
 D.ClientTexts.BattlePet[1541]={Description={["62acb532ac30e123:85"]="养这只小多头蛇的成本十分高昂，因为它一次能吃掉三碗饲料。"},Source={["7c0f96b4542b9d71:32"]="掉落：瓦拉沙的卵\n地区：阿兰卡峰林"}}
-D.ClientTexts.BattlePet[1542]={Description={["6b35b9abe6030396:83"]=S[20077]},Source={["fa61cfb914e199e2:36"]="商人出售：贝斯卡·赤牙\n阵营：霜狼\n\n"}}
+D.ClientTexts.BattlePet[1542]={Description={["6b35b9abe6030396:83"]=S[20078]},Source={["fa61cfb914e199e2:36"]="商人出售：贝斯卡·赤牙\n阵营：霜狼\n\n"}}
 D.ClientTexts.BattlePet[1543]={Description={["69377ec1173eaf34:47"]="饲养这种母牛的初衷只是为了给侏儒提供更加美味的牛奶。"},Source={["a66bf752004697f9:26"]="掉落：要塞，畜棚，3级"}}
 D.ClientTexts.BattlePet[1544]={Description={["7d06451ab46ac539:29"]="小身材并不会使他的仇恨减少半分。"},Source={["87e64ae62ebca14d:59"]="掉落：炎魔拉格纳罗斯\n地区：熔火之心（周年庆版本）"}}
 D.ClientTexts.BattlePet[1545]={Description={["d57a5ff2ebcb5d3b:44"]="别把纸放到她笼子边上，除非你想来场大火。"},Source={["b6bd5649814b521c:27"]=S[1294]}}
@@ -653,25 +653,25 @@ D.ClientTexts.BattlePet[1590]={Description={["4a39d0ee1d16be95:82"]="学者们�
 D.ClientTexts.BattlePet[1591]={Description={["f300d0547ab79707:70"]="这些萤火虫通过采食紫色的花朵和花蜜来保持自己身上发出的紫色光芒。"},Source={["5f77501c2b38e06d:22"]="宠物对战：塔纳安丛林\n"}}
 D.ClientTexts.BattlePet[1592]={Description={["fc7d6fc56d3380a6:79"]="由于这种萤火虫身上的光泽与上等蓝玉十分接近，故又被称作‘会飞的宝石’。"},Source={["e37f284e86bdfde9:22"]=S[8965]}}
 D.ClientTexts.BattlePet[1593]={Description={["512a2cca8bedb351:82"]="这种水荧利用水面来反射肚子上发出的光芒，从而吸引伴侣。"},Source={["991f10a728726b7a:47"]="宠物对战： 影月谷、塔拉多、塔纳安丛林"}}
-D.ClientTexts.BattlePet[1594]={Description={["406e78fb93d667a6:74"]=S[19032]},Source={["da50bec6b58ae1f3:18"]=S[8949]}}
-D.ClientTexts.BattlePet[1595]={Description={["406e78fb93d667a6:74"]=S[19032]},Source={["ddbe3e4bdf819e42:17"]=S[8945]}}
-D.ClientTexts.BattlePet[1596]={Description={["8bfe4e2c36622933:70"]=S[16934]}}
-D.ClientTexts.BattlePet[1597]={Description={["847252838c5a6ca0:69"]=S[16934]}}
-D.ClientTexts.BattlePet[1598]={Description={["49c5423b10310848:80"]=S[20868]},Source={["a1a329699b9068d0:50"]=S[6140]}}
-D.ClientTexts.BattlePet[1599]={Description={["49c5423b10310848:80"]=S[20868]},Source={["ddbe3e4bdf819e42:17"]=S[8945]}}
+D.ClientTexts.BattlePet[1594]={Description={["406e78fb93d667a6:74"]=S[19033]},Source={["da50bec6b58ae1f3:18"]=S[8949]}}
+D.ClientTexts.BattlePet[1595]={Description={["406e78fb93d667a6:74"]=S[19033]},Source={["ddbe3e4bdf819e42:17"]=S[8945]}}
+D.ClientTexts.BattlePet[1596]={Description={["8bfe4e2c36622933:70"]=S[16935]}}
+D.ClientTexts.BattlePet[1597]={Description={["847252838c5a6ca0:69"]=S[16935]}}
+D.ClientTexts.BattlePet[1598]={Description={["49c5423b10310848:80"]=S[20869]},Source={["a1a329699b9068d0:50"]=S[6140]}}
+D.ClientTexts.BattlePet[1599]={Description={["49c5423b10310848:80"]=S[20869]},Source={["ddbe3e4bdf819e42:17"]=S[8945]}}
 D.ClientTexts.BattlePet[1600]={Description={["a4d18e3b254188d6:106"]="幼年骨蛇会钻进活物的脑袋里吃他们的脑子。所以你最好戴一顶睡帽。"},Source={["9f326b162b0d9605:43"]="宠物对战：收藏家爱瑞斯，库拉·雷蹄"}}
 D.ClientTexts.BattlePet[1601]={Description={["b34e22ccd53b5b9d:73"]="当戴米多斯为其它虚空领主举办派对时，制造出了不少仆从。"},Source={["9989733b4cb2c00e:33"]="掉落：戴米多斯\n地区：影月谷"}}
 D.ClientTexts.BattlePet[1602]={Description={["7742ce0be7076df0:48"]="如论他如何尖叫，千万不要给他恶魔之血。"},Source={["fc4bf3d8c0953a5b:22"]="特殊：2014年暴雪嘉年华"}}
-D.ClientTexts.BattlePet[1603]={Description={["aa5dc156e2da8a97:89"]="总被人发现正在咀嚼不该吃的东西，山羊最初被认作是埃索达覆灭的罪魁祸首。"},Source={["13ced4bd7d391b10:11"]=S[16052]}}
+D.ClientTexts.BattlePet[1603]={Description={["aa5dc156e2da8a97:89"]="总被人发现正在咀嚼不该吃的东西，山羊最初被认作是埃索达覆灭的罪魁祸首。"},Source={["13ced4bd7d391b10:11"]=S[16053]}}
 D.ClientTexts.BattlePet[1604]={Description={["ca793dcb1fe37b16:82"]="是哪位达拉然法师遗失的魔法灯笼，还是一支性格热情的活化蜡烛？你说了算。"},Source={["b43aa1eebabdec7f:12"]="地区：达拉然\n"}}
 D.ClientTexts.BattlePet[1605]={Description={["f9c0212c19e03531:54"]="一种魔法小伙伴，由等量的冒险精神和勇气凝聚而成。"},Source={["6d35e0db5c3e1bac:33"]="成就：超级大冒险"}}
 D.ClientTexts.BattlePet[1615]={Description={["03afa37822d24389:29"]="它不仅迅如闪电，而且声如洪钟！"},Source={["da50bec6b58ae1f3:18"]=S[8949]}}
 D.ClientTexts.BattlePet[1622]={Description={["31ba00cfbd95dcc4:97"]="一幢阴郁建筑上的小型石像鬼，将雨水引向别处，防止陵墓被水淹没。"},Source={["5b8c9411d3134b54:28"]="掉落：阿兹加洛\n地区：海加尔峰"}}
 D.ClientTexts.BattlePet[1623]={Description={["384462ee95d11b79:84"]="黑暗神殿的下水道系统中深绿色的腐水赋予了这些多头蛇鲜亮的色彩。"},Source={["6591637845a4e9e7:41"]="掉落：高阶督军纳因图斯\n地区：黑暗神殿"}}
 D.ClientTexts.BattlePet[1624]={Description={["64cde1640cd941ad:103"]="作为巨大的深渊魔苏普雷姆斯的碎片，深渊小魔怪所蕴含的火焰精华足以将你的口袋烧穿一个洞。"},Source={["c5b54ff2b20166f3:29"]="掉落：苏普雷姆斯\n地区：黑暗神殿"}}
-D.ClientTexts.BattlePet[1625]={Description={["f64a905171e9ce72:19"]="它只是有一点疯。"},Source={["8fe02104b5ab7333:39"]=S[12326]}}
-D.ClientTexts.BattlePet[1626]={Description={["6f9a655f9439194c:24"]="它只是有点生气。"},Source={["8fe02104b5ab7333:39"]=S[12326]}}
-D.ClientTexts.BattlePet[1627]={Description={["899bc6ab092e956a:27"]="它只是有点兴趣。"},Source={["8fe02104b5ab7333:39"]=S[12326]}}
+D.ClientTexts.BattlePet[1625]={Description={["f64a905171e9ce72:19"]="它只是有一点疯。"},Source={["8fe02104b5ab7333:39"]=S[12327]}}
+D.ClientTexts.BattlePet[1626]={Description={["6f9a655f9439194c:24"]="它只是有点生气。"},Source={["8fe02104b5ab7333:39"]=S[12327]}}
+D.ClientTexts.BattlePet[1627]={Description={["899bc6ab092e956a:27"]="它只是有点兴趣。"},Source={["8fe02104b5ab7333:39"]=S[12327]}}
 D.ClientTexts.BattlePet[1628]={Description={["487a0f1e6a6040c7:48"]="她是你肩头的恶魔，在你耳边窃窃私语。"},Source={["c1433d8e9bca381f:34"]="掉落：莎赫拉丝主母\n地区：黑暗神殿"}}
 D.ClientTexts.BattlePet[1629]={Description={["297f42a033eed1ab:16"]="那是什么味儿？"},Source={["d1a83de5d984f0d0:30"]="掉落：安纳塞隆\n地区：海加尔峰"}}
 D.ClientTexts.BattlePet[1631]={Description={["a516a76695d6ff43:75"]="数百只这样的小精灵聚集在一起，保护海加尔免受阿克蒙德的侵袭。它们拯救了世界。"},Source={["3fe1407b42f2b528:31"]="掉落：阿克蒙德\n地区：海加尔峰"}}
@@ -683,11 +683,11 @@ D.ClientTexts.BattlePet[1636]={Description={["3c00ce787c6ff77b:68"]="暗月竞�
 D.ClientTexts.BattlePet[1639]={Description={["001ad1b2a959f227:194"]="在一次对鬼灵矿的突袭中，一队英雄只收到了一个精华。结果召唤出的魔像体型太小，没法对敌人的塔造成多少伤害。这头魔像最后游荡进了时空枢纽，最终来到了艾泽拉斯。"},Source={["d072bbf73cfe684e:26"]="特殊：风暴英雄\n"}}
 D.ClientTexts.BattlePet[1655]={Description={["d86a767bff5e17b4:97"]="德拉诺的河流中生活着许多鳗鱼。它们是邪恶的掠食者，会攻击一切进入水域的生物。"},Source={["9f326b162b0d9605:43"]=S[8950]}}
 D.ClientTexts.BattlePet[1656]={Description={["c4c76b9adcf871e5:43"]="塔布羊的犄角在幼年时就已经完全长成了。"},Source={["9f326b162b0d9605:43"]=S[8950]}}
-D.ClientTexts.BattlePet[1660]={Description={["6b35b9abe6030396:83"]=S[20077]},Source={["00614204b7213425:39"]="任务：我的邪能小幼崽\n地区：塔纳安丛林\n\n"}}
+D.ClientTexts.BattlePet[1660]={Description={["6b35b9abe6030396:83"]=S[20078]},Source={["00614204b7213425:39"]="任务：我的邪能小幼崽\n地区：塔纳安丛林\n\n"}}
 D.ClientTexts.BattlePet[1661]={Description={["587e15f48fa90a93:88"]="传说，有一些被虚空感染的野兽就生活在两个相邻世界之间的空间中。"},Source={["a1a329699b9068d0:50"]=S[6140]}}
 D.ClientTexts.BattlePet[1662]={Description={["bb53d8f349129abe:102"]="这只狼崽被发现时，正在黑石铸造厂的黑色熔炉里啃着一块焦黑的骨头。它可以迅速让你暖和起来。"},Source={["15dc7d5002bf571d:28"]="要塞任务：烈焰之友\n"}}
-D.ClientTexts.BattlePet[1663]={Description={["02b9961e2f7b3f55:95"]="这些顽皮的小淡水兽喜欢含一大口水，然后互相喷着玩。"},Source={["5dbcc6303dd173bf:44"]=S[12328]}}
-D.ClientTexts.BattlePet[1664]={Description={["63f1a03c52278f65:126"]="曾是德莱尼祭司用来安抚灵魂的圣器，被愤怒的灵魂赋予生命后，就常被充斥着死亡和腐蚀的地方吸引。"},Source={["5dbcc6303dd173bf:44"]=S[12328]}}
+D.ClientTexts.BattlePet[1663]={Description={["02b9961e2f7b3f55:95"]="这些顽皮的小淡水兽喜欢含一大口水，然后互相喷着玩。"},Source={["5dbcc6303dd173bf:44"]=S[12329]}}
+D.ClientTexts.BattlePet[1664]={Description={["63f1a03c52278f65:126"]="曾是德莱尼祭司用来安抚灵魂的圣器，被愤怒的灵魂赋予生命后，就常被充斥着死亡和腐蚀的地方吸引。"},Source={["5dbcc6303dd173bf:44"]=S[12329]}}
 D.ClientTexts.BattlePet[1665]={Description={["32bac66a7f42e3c9:88"]="这些螃蟹进化出了更高级的伪装形态，使它们的皮肤看起来像是透明的。"},Source={["57e356938206f758:39"]=S[6139]}}
 D.ClientTexts.BattlePet[1666]={Description={["86b4a4eb3f543976:79"]="这种鱼似乎对你的命令毫无反应，也根本意识不到你的存在，真的。"},Source={["57e356938206f758:39"]=S[6139]}}
 D.ClientTexts.BattlePet[1672]={Description={["82189365216ea5e4:74"]="腐化的巢穴守卫和煎蛋卷的大厨没什么两样。"},Source={["b6a8fd89c60fae72:41"]="掉落：暗影领主艾斯卡\n地区：地狱火堡垒\n"}}
@@ -828,14 +828,14 @@ D.ClientTexts.BattlePet[1969]={Description={["45514e798a86e706:37"]="最终，�
 D.ClientTexts.BattlePet[1974]={Description={["0d46b1504aad757f:116"]="雪羽隼龙的幼崽在受到威胁时，会凭借本能逃到成年隼龙身边去。这个品种的隼龙特别偏爱大型猎物。"},Source={["41790bf7495b0bc0:23"]="角色：失怙的雪羽龙\n"}}
 D.ClientTexts.BattlePet[1975]={Description={["5626417e4b8e5cef:154"]="恐嘴隼龙比其他品种的隼龙更加健壮，但嗅觉没有那么灵敏。它们喜欢刺激性的食物，经常吃已经在太阳下暴晒了数天的腐肉。"},Source={["2220e168b751d1a5:20"]="角色：失怙的恐嘴龙\n"}}
 D.ClientTexts.BattlePet[1976]={Description={["eaba432a53eed693:101"]="利爪隼龙完全能够靠少量坚果和浆果存活，它们的爪子通常都是用来防身的。"},Source={["500e998d29ea4f74:22"]="角色：失怙的利爪龙\n"}}
-D.ClientTexts.BattlePet[1977]={Description={["9c00dba138c974a4:103"]=S[18701]},Source={["c50ebc9aa1cac2d3:22"]="角色：失怙的血眼龙\n"}}
+D.ClientTexts.BattlePet[1977]={Description={["9c00dba138c974a4:103"]=S[18702]},Source={["c50ebc9aa1cac2d3:22"]="角色：失怙的血眼龙\n"}}
 D.ClientTexts.BattlePet[1978]={Description={["a1506bfb4e7f6080:71"]="在见证了你在战斗时的英姿后，这位侍从就决定向你效忠了。"},Source={["25a5ff1d6a81a762:18"]="PvP：威望奖励"}}
 D.ClientTexts.BattlePet[1979]={Description={["c1cf511c4e9161c9:74"]="在见证了你在战斗时的英姿后，这个蛮兵就决定向你效忠了。"},Source={["25a5ff1d6a81a762:18"]="PvP：威望奖励"}}
 D.ClientTexts.BattlePet[1984]={Description={["e966eda81d7348df:76"]="克丽萨在旅行过程中收集了许多珍惜的鸟类，而这只雏鸟就是其中最稀有的一只。"},Source={["7623db0c9efb353d:26"]="掉落：撕碎的宠物补给袋\n"}}
 D.ClientTexts.BattlePet[1997]={Description={["9a219102d6831d8b:118"]="他们说舰队上将特塞斯忠诚的鹦鹉从来不离开他的身边——或者他的肩膀。特塞斯吹个口哨他就会出现了。"},Source={["ce62f26b0bf5eef0:23"]="职业大厅：暗影大厅"}}
-D.ClientTexts.BattlePet[1998]={Description={["f8602493ce2751b0:56"]="在哀嚎洞穴的丰饶土地上，生命不会真正逝去。"},Source={["ecf7a9f4545674a1:20"]=S[12323]}}
-D.ClientTexts.BattlePet[1999]={Description={["1657e08a2616f131:94"]="这条蛇似乎很习惯呆在你身边，也许它以前是另一只利爪德鲁伊的伙伴。"},Source={["ecf7a9f4545674a1:20"]=S[12323]}}
-D.ClientTexts.BattlePet[2000]={Description={["21b5231fbaff7f0c:63"]="并没有被哀嚎洞穴中的诅咒触碰过。"},Source={["ecf7a9f4545674a1:20"]=S[12323]}}
+D.ClientTexts.BattlePet[1998]={Description={["f8602493ce2751b0:56"]="在哀嚎洞穴的丰饶土地上，生命不会真正逝去。"},Source={["ecf7a9f4545674a1:20"]=S[12324]}}
+D.ClientTexts.BattlePet[1999]={Description={["1657e08a2616f131:94"]="这条蛇似乎很习惯呆在你身边，也许它以前是另一只利爪德鲁伊的伙伴。"},Source={["ecf7a9f4545674a1:20"]=S[12324]}}
+D.ClientTexts.BattlePet[2000]={Description={["21b5231fbaff7f0c:63"]="并没有被哀嚎洞穴中的诅咒触碰过。"},Source={["ecf7a9f4545674a1:20"]=S[12324]}}
 D.ClientTexts.BattlePet[2001]={Description={["525d7fe0f5fd4415:101"]="这个小机器人擅长钻洞、固定以及从脑子里发射闪电，一看就是侏儒的发明。"},Source={["c8c18a7376813c98:29"]="掉落：麻风宠物补给袋\n"}}
 D.ClientTexts.BattlePet[2002]={Description={["ae3f767c5e363a03:71"]="它一直在呕吐瘟疫液体。它来自哪里？去向何方？"}}
 D.ClientTexts.BattlePet[2003]={Description={["0059791d00701bf8:2"]="尚不可用"}}
@@ -848,7 +848,7 @@ D.ClientTexts.BattlePet[2036]={Description={["be55bcecee9984c9:87"]="在死亡�
 D.ClientTexts.BattlePet[2037]={Description={["97dec60d6ccee712:27"]="属于生化危害。请戴手套触摸。"}}
 D.ClientTexts.BattlePet[2041]={Description={["5c4f0a959f98e8c2:89"]="重拳先生一直都把这个放在后备箱里，但遇事还是喜欢拿上他的锤子。现在看来，这实在是个错误。"},Source={["9dc2f82264848585:39"]=S[6138]}}
 D.ClientTexts.BattlePet[2042]={Description={["65ac50764cd327f1:48"]="他是个懦弱的伙伴，因为他没有胆……"},Source={["b2f5ec0b696d41d2:43"]="掉落：可疑的虫语者箱子\n地区：破碎海滩"}}
-D.ClientTexts.BattlePet[2046]={Description={["9c00dba138c974a4:103"]=S[18701]},Source={["c50ebc9aa1cac2d3:22"]="角色：失怙的血眼龙\n"}}
+D.ClientTexts.BattlePet[2046]={Description={["9c00dba138c974a4:103"]=S[18702]},Source={["c50ebc9aa1cac2d3:22"]="角色：失怙的血眼龙\n"}}
 D.ClientTexts.BattlePet[2047]={Description={["6c8b2d7e75446769:120"]="请允许我介绍，雪怒家族最年轻的成员！班禄之女，雪福的侄女，至尊天神雪怒的孙女……她就是班福！"}}
 D.ClientTexts.BattlePet[2048]={Description={["4764f9da38e36e19:13"]="真是个好孩子。"},Source={["2782806c74009ca3:7"]="掉落：占位符\n\n"}}
 D.ClientTexts.BattlePet[2049]={Description={["22d4b6ed27471246:78"]="他非常友善，但任何形式的拥抱都会令你遭受严重的电击。"},Source={["a3cc0787207e83b8:45"]="成就：宠物对战挑战：哀嚎洞穴"}}
@@ -860,8 +860,8 @@ D.ClientTexts.BattlePet[2062]={Description={["ffc965f8f948ff05:88"]="这只顽�
 D.ClientTexts.BattlePet[2063]={Description={["421ef7e7fadba5d4:52"]="这只土拨鼠一直陪伴着你。他太棒了。"},Source={["f25dd9a14e2fcc82:15"]="掉落：搜索\n"}}
 D.ClientTexts.BattlePet[2064]={Description={["2d33e0e233d7a609:30"]="最好让他远离一切火炮。"},Source={["3420e634407afd59:40"]="成就：宠物对战挑战：死亡矿井"}}
 D.ClientTexts.BattlePet[2065]={Description={["f0436cd5829b8eea:73"]="潜行者常常在口袋里放上一些以防万一。别问我为什么。"},Source={["f25dd9a14e2fcc82:15"]="掉落：搜索\n"}}
-D.ClientTexts.BattlePet[2071]={Description={["9ec8110f7fe42824:72"]="只有在最特殊的时间线里才能找到青铜始祖龙宝宝。"},Source={["105c5c9fb292e438:47"]=S[12327]}}
-D.ClientTexts.BattlePet[2072]={Description={["e42e1dc775c354d2:92"]="这头特别的幼龙旅行时，年龄虽然没有改变，但体型却发生了变化。"},Source={["105c5c9fb292e438:47"]=S[12327]}}
+D.ClientTexts.BattlePet[2071]={Description={["9ec8110f7fe42824:72"]="只有在最特殊的时间线里才能找到青铜始祖龙宝宝。"},Source={["105c5c9fb292e438:47"]=S[12328]}}
+D.ClientTexts.BattlePet[2072]={Description={["e42e1dc775c354d2:92"]="这头特别的幼龙旅行时，年龄虽然没有改变，但体型却发生了变化。"},Source={["105c5c9fb292e438:47"]=S[12328]}}
 D.ClientTexts.BattlePet[2077]={Description={["1a3ad5c533cdb910:120"]="艾萨拉女王对阿苏纳居民的诅咒影响的不只是暗夜精灵。这头鲨鱼也遭受了永恒的厄运，被无尽的饥饿所折磨。"}}
 D.ClientTexts.BattlePet[2078]={Description={["f445d815ab625600:112"]="在与黑龙军团旷日持久的战争中，矮人尝试过建造一些不容易被打中的小型魔像。"},Source={["10b288c8dd25af85:35"]="掉落：熔岩金刚\n地区：黑翼血环"}}
 D.ClientTexts.BattlePet[2079]={Description={["c1f521fffbae0cb2:77"]="马洛拉克以足智多谋著称，他不会浪费任何一点血肉。"},Source={["b5b242b2e16ece9b:34"]="掉落：马洛拉克\n地区：黑翼血环"}}
@@ -2425,7 +2425,7 @@ D.ClientTexts.BattlePetAbility[122]={Name={["d6657593f9ae38bc:9"]="扫尾"},Desc
 D.ClientTexts.BattlePetAbility[123]={Name={["1af07630f132f5b3:11"]="治疗波"},Description={["520d48eacc65252d:45"]=S[866]}}
 D.ClientTexts.BattlePetAbility[124]={Name={["356694023cb9ceed:7"]="狂暴"}}
 D.ClientTexts.BattlePetAbility[135]={Name={["cb14aeea59cff585:12"]="原始陷阱"},Description={["314103482c07b783:78"]="尝试抓住一只生命值低于35%的宠物。你每失败一次，抓捕几率即可提高30%。"}}
-D.ClientTexts.BattlePetAbility[151]={Name={["0298b739bc618d7c:10"]="剧毒长牙"},Description={["eb0eb0f50ca77bea:62"]=S[15465]}}
+D.ClientTexts.BattlePetAbility[151]={Name={["0298b739bc618d7c:10"]="剧毒长牙"},Description={["eb0eb0f50ca77bea:62"]=S[15466]}}
 D.ClientTexts.BattlePetAbility[152]={Name={["0298b739bc618d7c:10"]="剧毒长牙"}}
 D.ClientTexts.BattlePetAbility[153]={Name={["562ad60a9f54e20b:15"]="攻击降低"},Description={["e097d775662082ca:78"]="造成的伤害降低[abs(abilityStateMod( STATE_Mod_DamageDealtPercent, 153 ))]%。"}}
 D.ClientTexts.BattlePetAbility[154]={Name={["24db8fc3874c842c:14"]="减速"},Description={["f8050c2c44c7402f:46"]="速度降低[abs(abilityStateMod(25,154))]%。"}}
@@ -2439,7 +2439,7 @@ D.ClientTexts.BattlePetAbility[162]={Name={["10e429dab0d0cd55:14"]="激素刺激
 D.ClientTexts.BattlePetAbility[163]={Name={["68e16bd82bf7c203:8"]="奔踏"}}
 D.ClientTexts.BattlePetAbility[164]={Name={["f71b816938e09b5a:6"]="蜷伏"},Description={["2105a8f2bc5a23f7:63"]="你所受到的伤害降低[abs(abilityStateMod(24,164))]%。"}}
 D.ClientTexts.BattlePetAbility[165]={Name={["f71b816938e09b5a:6"]="蜷伏"}}
-D.ClientTexts.BattlePetAbility[166]={Name={["9f4b14b01cc63b73:10"]="坚果弹幕"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[166]={Name={["9f4b14b01cc63b73:10"]="坚果弹幕"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[167]={Name={["9f4b14b01cc63b73:10"]="坚果弹幕"}}
 D.ClientTexts.BattlePetAbility[168]={Name={["77d14be2c406dcf9:12"]="愈体之焰"},Description={["00546ca394490c20:70"]=S[6284]}}
 D.ClientTexts.BattlePetAbility[169]={Name={["8f3c3c19df77308c:10"]="深呼吸"},Description={["9ecbcb070239b842:161"]="[StandardAccuracy(2,1)] 命中几率\r\n\r\n利用1轮进行深呼吸。\r\n\r\n使用者会在下一轮施放毁灭性的吐息攻击，造成[StandardDamage(2,1)]点[School()]伤害。"}}
@@ -2447,10 +2447,10 @@ D.ClientTexts.BattlePetAbility[170]={Name={["b057e17ca49e1f0d:8"]="离地升空"
 D.ClientTexts.BattlePetAbility[171]={Name={["f8e7c444180abff3:13"]="灼燃大地"},Description={["d9d4f51371d52198:98"]="每轮对双方队伍位于前排的宠物造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n所有宠物都被视作正在燃烧。"}}
 D.ClientTexts.BattlePetAbility[172]={Name={["f8e7c444180abff3:13"]="灼燃大地"}}
 D.ClientTexts.BattlePetAbility[173]={Name={["c786115112dcd00a:9"]="灸灼"},Description={["00546ca394490c20:70"]=S[6284]}}
-D.ClientTexts.BattlePetAbility[174]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13466]}}
+D.ClientTexts.BattlePetAbility[174]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13467]}}
 D.ClientTexts.BattlePetAbility[175]={Name={["89de87572b14e372:7"]="火山"}}
 D.ClientTexts.BattlePetAbility[176]={Name={["89de87572b14e372:7"]="火山"},Description={["f83d0ba812a94bf3:225"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n使敌人队伍脚下的大地震颤。\r\n\r\n在2轮过后，地面爆裂，使当前敌方宠物受到[StandardDamage(3,1,175)]点[School()]伤害，持续2轮，并有25%的几率在接下来的1轮中陷入昏迷。"}}
-D.ClientTexts.BattlePetAbility[177]={Name={["2f9749ddc8041aec:8"]="献祭"},Description={["57a4dac146f11b6c:59"]=S[15469]}}
+D.ClientTexts.BattlePetAbility[177]={Name={["2f9749ddc8041aec:8"]="献祭"},Description={["57a4dac146f11b6c:59"]=S[15470]}}
 D.ClientTexts.BattlePetAbility[178]={Name={["2f9749ddc8041aec:8"]="献祭"}}
 D.ClientTexts.BattlePetAbility[179]={Name={["d1ea3eeb3d1acb4e:11"]="焚烧"},Description={["171b081e5faaeaa7:148"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果目标正在燃烧则可造成额外[StandardDamage(1,3)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[184]={Name={["17f6945f1f849c0e:6"]="飞羽"},Description={["2f94e6f0b35230eb:151"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n朝敌人掷出1-2根飞羽，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击1次。"}}
@@ -2468,7 +2468,7 @@ D.ClientTexts.BattlePetAbility[196]={Name={["c040b4f1cbbbb6be:16"]="肾上腺"},
 D.ClientTexts.BattlePetAbility[197]={Name={["9e9afc3589b62224:13"]="肾上腺"}}
 D.ClientTexts.BattlePetAbility[198]={Name={["3b7f6ec911c2ef0e:12"]="跳虫冲刺"},Description={["317f1a4b704ef37a:253"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n开始跳虫冲刺，造成[FormatDamage(SimpleDamage(1,1)+SimpleDamage(1,2)+SimpleDamage(1,3))]点[School()]伤害。\r\n\r\n被冲刺击中的对手会在[duration(1,4)]轮内受到双倍伤害。\r\n\r\n跳虫冲刺可持续[numTurns()]轮。"}}
 D.ClientTexts.BattlePetAbility[202]={Name={["1e0f912f8c629a98:6"]="痛击"},Description={["73b6efc55ae26e02:156"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n疯狂打击敌人1-2次，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击1次。"}}
-D.ClientTexts.BattlePetAbility[203]={Name={["4e7bfe9eda5d90bf:14"]=S[21080]},Description={["860c8294b07bd293:148"]="所有宠物在每次攻击时都可造成额外[StandardDamage(getProcIndex(PROC_ON_DAMAGE_DEALT ),1)]点[School()]伤害。\r\n\r\n机械技能造成额外25%的伤害。"}}
+D.ClientTexts.BattlePetAbility[203]={Name={["4e7bfe9eda5d90bf:14"]=S[21081]},Description={["860c8294b07bd293:148"]="所有宠物在每次攻击时都可造成额外[StandardDamage(getProcIndex(PROC_ON_DAMAGE_DEALT ),1)]点[School()]伤害。\r\n\r\n机械技能造成额外25%的伤害。"}}
 D.ClientTexts.BattlePetAbility[204]={Name={["a1bc3e4540bd33ec:13"]="召唤闪电"}}
 D.ClientTexts.BattlePetAbility[205]={Name={["644a53079a314a34:8"]="暴风雪"},Description={["af16f3756c8be822:28"]="所有宠物都被视作被冰冻。"}}
 D.ClientTexts.BattlePetAbility[206]={Name={["906c7e036b3702f2:12"]="召唤暴风雪"},Description={["ccc3f9ef9ea39294:161"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害并引起持续[duration(1,2)]轮的暴风雪。\r\n\r\n在暴风雪期间，所有宠物都被视作被冰冻。"}}
@@ -2495,7 +2495,7 @@ D.ClientTexts.BattlePetAbility[227]={Name={["2669221cb6afdb55:12"]="幻灭踢"}}
 D.ClientTexts.BattlePetAbility[228]={Name={["21b0ad3fdffab74e:10"]="毒舌鞭笞"},Description={["b96a66b657868269:147"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n舔舐敌人1-2次，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击一次。"}}
 D.ClientTexts.BattlePetAbility[229]={Name={["b4c980a3dd6e0f8c:13"]="净化之雨"},Description={["c724ddea8ee7d1fb:79"]="有害的持续伤害法术存在的时间缩短1轮。\r\n\r\n水栖技能造成的伤害提高25%。"}}
 D.ClientTexts.BattlePetAbility[230]={Name={["b4c980a3dd6e0f8c:13"]="净化之雨"},Description={["0b7a4a25e16a61d0:213"]="为你的队伍回复[StandardHealing(1,1)]点生命值，并降下净化之雨，持续[duration(1,4)]轮。\r\n\r\n在净化之雨持续期间，有害的持续伤害法术存在的时间缩短1轮且水栖技能可造成额外25%的伤害。"}}
-D.ClientTexts.BattlePetAbility[231]={Name={["a9623c57cdbce0a2:12"]="蝇群"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[231]={Name={["a9623c57cdbce0a2:12"]="蝇群"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[1064]={Name={["d5231d05f96a6510:10"]="信息素"},Description={["7354275fe125650c:62"]="对所有非激活宠物造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[232]={Name={["a9623c57cdbce0a2:12"]="蝇群"}}
 D.ClientTexts.BattlePetAbility[233]={Name={["efce1dcdf00423c2:8"]="青蛙的吻"}}
@@ -2574,7 +2574,7 @@ D.ClientTexts.BattlePetAbility[313]={Name={["0d3ab0595e877126:6"]="裂伤"},Desc
 D.ClientTexts.BattlePetAbility[314]={Name={["0d3ab0595e877126:6"]="裂伤"}}
 D.ClientTexts.BattlePetAbility[315]={Name={["0361b51acef0cf3b:10"]="尖刺体肤"}}
 D.ClientTexts.BattlePetAbility[316]={Name={["0361b51acef0cf3b:10"]="尖刺体肤"},Description={["cb34c5cc9f99f1ff:174"]="使你从每次攻击中受到的伤害最多降低[abs(abilityStateMod(71,316))*AttackBonus()]点，并使你每次受到直接伤害时，造成[FormatDamage(SimpleDamage(1,1),nil,AURAENEMY)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[317]={Name={["1e0e33c309282ebc:6"]="荆棘术"},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[317]={Name={["1e0e33c309282ebc:6"]="荆棘术"},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[318]={Name={["1e0e33c309282ebc:6"]="荆棘术"}}
 D.ClientTexts.BattlePetAbility[319]={Name={["0e1945bbd54aa300:9"]="熔岩波"},Description={["84f1145453221d47:125"]=S[185]}}
 D.ClientTexts.BattlePetAbility[320]={Name={["4fbee547191e6842:15"]="邪恶飞升"},Description={["1f9f2e85c6b2d7c6:67"]="受到的所有伤害提高[abs(abilityStateMod(24,320))]%。\r\n\r\n被缠身。"}}
@@ -2583,14 +2583,14 @@ D.ClientTexts.BattlePetAbility[322]={Name={["c54524e7d6895f9a:9"]="浮空"},Desc
 D.ClientTexts.BattlePetAbility[323]={Name={["0d77f26b6de5f44e:7"]="引力"}}
 D.ClientTexts.BattlePetAbility[324]={Name={["0d77f26b6de5f44e:7"]="引力"}}
 D.ClientTexts.BattlePetAbility[325]={Name={["052e6d8c3a78a5cb:9"]="筑堤"},Description={["447157229ac01199:77"]="筑起一道木质壁垒，格挡2次攻击。敌人和盟友的攻击都将被格挡。"}}
-D.ClientTexts.BattlePetAbility[326]={Name={["052e6d8c3a78a5cb:9"]="筑堤"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[326]={Name={["052e6d8c3a78a5cb:9"]="筑堤"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[327]={Name={["ca2fe7eab43ba5fd:10"]="幼雏"}}
 D.ClientTexts.BattlePetAbility[328]={Name={["7c9635ab8e4fb20e:4"]="孵蛋"},Description={["49e52e3e596b2a0f:56"]="放置在战场上的龙蛋会在不久后完成孵化，并攻击它们的敌人。"}}
 D.ClientTexts.BattlePetAbility[329]={Name={["ca2fe7eab43ba5fd:10"]="幼雏"},Description={["7378a3d1e68c5ad6:87"]="于每轮攻击对手，造成[FormatDamage(SimpleDamage(1,1)*3)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[330]={Name={["765f4ee35e28685a:14"]=S[16279]}}
+D.ClientTexts.BattlePetAbility[330]={Name={["765f4ee35e28685a:14"]=S[16280]}}
 D.ClientTexts.BattlePetAbility[331]={Name={["bd8b19038063128c:9"]="没入烈焰"},Description={["6eee3991aaed90a2:10"]="没入烈焰。"}}
-D.ClientTexts.BattlePetAbility[332]={Name={["765f4ee35e28685a:14"]=S[16279]},Description={["6a95ebcd4eff174e:102"]=S[15463]}}
-D.ClientTexts.BattlePetAbility[333]={Name={["0f49a8b914b4926c:5"]="诱饵"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[332]={Name={["765f4ee35e28685a:14"]=S[16280]},Description={["6a95ebcd4eff174e:102"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[333]={Name={["0f49a8b914b4926c:5"]="诱饵"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[334]={Name={["0f49a8b914b4926c:5"]="诱饵"},Description={["e3451cefc346ea9e:54"]="生成一个木质诱饵，保护你的队伍躲过2次攻击。"}}
 D.ClientTexts.BattlePetAbility[338]={Name={["24cffdee1b25a16d:6"]="被网住"},Description={["58da5f897628df68:30"]="该宠物无法被切换。\r\n\r\n被网住。"}}
 D.ClientTexts.BattlePetAbility[339]={Name={["d53e04dabfdd012b:9"]="粘性之网"}}
@@ -2602,14 +2602,14 @@ D.ClientTexts.BattlePetAbility[1409]={Name={["be69de48756db131:9"]="重铸"},Des
 D.ClientTexts.BattlePetAbility[348]={Name={["7c947883ffd2e5b4:4"]="猛击"}}
 D.ClientTexts.BattlePetAbility[349]={Name={["105d734182cc8b5c:5"]="撞击"},Description={["022ed39fdceba452:91"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n撞击敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[350]={Name={["cc824b5ea11365b3:7"]="痛殴"}}
-D.ClientTexts.BattlePetAbility[351]={Name={["26332f3a948ffd3b:13"]="香蕉弹幕"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[351]={Name={["26332f3a948ffd3b:13"]="香蕉弹幕"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[352]={Name={["26332f3a948ffd3b:13"]="香蕉弹幕"}}
 D.ClientTexts.BattlePetAbility[353]={Name={["f89258b2bbf9cafd:11"]="桶已就绪"},Description={["efbde6f4de34eff5:22"]="桶已就绪，等待掷出。"}}
 D.ClientTexts.BattlePetAbility[354]={Name={["551cfac690639581:10"]="掷桶"},Description={["fe5df01785949fce:125"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n首次使用：装满一只桶。\r\n\r\n再次使用：掷出这只桶，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[355]={Name={["81ae98a735e6ea48:10"]="三连击"},Description={["3c13a28772a1f916:114"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n疯狂打击敌人1-3次，每一击造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[356]={Name={["7c9dfff71d1b878a:4"]="猛咬"},Description={["8d50181d12b7e232:93"]=S[191]}}
 D.ClientTexts.BattlePetAbility[357]={Name={["875fa4e295049fc7:7"]="尖啸"}}
-D.ClientTexts.BattlePetAbility[358]={Name={["10616b4acc67bb61:5"]="钉刺"},Description={["eb0eb0f50ca77bea:62"]=S[15465]}}
+D.ClientTexts.BattlePetAbility[358]={Name={["10616b4acc67bb61:5"]="钉刺"},Description={["eb0eb0f50ca77bea:62"]=S[15466]}}
 D.ClientTexts.BattlePetAbility[359]={Name={["10616b4acc67bb61:5"]="钉刺"}}
 D.ClientTexts.BattlePetAbility[360]={Name={["fdb1a7c9f9993eca:6"]="乱舞"},Description={["1ccbe5cf62567cae:158"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n疾速攻击敌人1-2次，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击一次。"}}
 D.ClientTexts.BattlePetAbility[362]={Name={["7c97fedf1de4a43c:4"]="嚎叫"},Description={["3ce16af032b01adf:139"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n一声遥远的嚎叫使目标受到惊吓，受到下次攻击的伤害提高100%，持续[duration(1,1)]轮。"}}
@@ -2625,7 +2625,7 @@ D.ClientTexts.BattlePetAbility[375]={Name={["fecc7a084fa098fb:13"]="鼓动之击
 D.ClientTexts.BattlePetAbility[376]={Name={["beb97336b6f35fd3:8"]="迎头冲撞"},Description={["470aa300e04a6c2b:106"]=S[205]}}
 D.ClientTexts.BattlePetAbility[377]={Name={["f628357aaec1249f:7"]="践踏"},Description={["7d05bca763f863ee:144"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n践踏目标，造成[StandardDamage(1,1)]点[School()]伤害，外加相当于目标生命值[points(1,2)]%的额外伤害。"}}
 D.ClientTexts.BattlePetAbility[378]={Name={["1c93af97a9332772:6"]="打击"},Description={["27af26cb6d14fd44:116"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n打击敌人，造成[StandardDamage(1,1)]点[petTypeName(abilityPetType())]伤害。"}}
-D.ClientTexts.BattlePetAbility[379]={Name={["364e2f8632c20347:8"]="中毒"},Description={["eb0eb0f50ca77bea:62"]=S[15465]}}
+D.ClientTexts.BattlePetAbility[379]={Name={["364e2f8632c20347:8"]="中毒"},Description={["eb0eb0f50ca77bea:62"]=S[15466]}}
 D.ClientTexts.BattlePetAbility[380]={Name={["02a0175d20980e90:10"]="毒液喷吐"}}
 D.ClientTexts.BattlePetAbility[381]={Name={["7f745039d90fff62:14"]="尖网"},Description={["f72c4d8bc04c530a:68"]="每次攻击即会受到[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n被网住。"}}
 D.ClientTexts.BattlePetAbility[382]={Name={["7f745039d90fff62:14"]="尖网"}}
@@ -2643,20 +2643,20 @@ D.ClientTexts.BattlePetAbility[393]={Name={["62c104b0de0b2bd3:11"]="暗影烈焰
 D.ClientTexts.BattlePetAbility[394]={Name={["7c99f44dd1170d2a:4"]="鞭笞"},Description={["636cdd03efa3053a:149"]=S[211]}}
 D.ClientTexts.BattlePetAbility[395]={Name={["3b76190038b4a0fb:13"]="抚慰之雾"},Description={["addc724d32d369c4:49"]="每轮回复[StandardDamage(1,1,395)]点生命值。"}}
 D.ClientTexts.BattlePetAbility[396]={Name={["3b76190038b4a0fb:13"]="抚慰之雾"}}
-D.ClientTexts.BattlePetAbility[397]={Name={["029c0225d38f7332:10"]="剧毒鞭笞"},Description={["eb0eb0f50ca77bea:62"]=S[15465]}}
+D.ClientTexts.BattlePetAbility[397]={Name={["029c0225d38f7332:10"]="剧毒鞭笞"},Description={["eb0eb0f50ca77bea:62"]=S[15466]}}
 D.ClientTexts.BattlePetAbility[398]={Name={["029c0225d38f7332:10"]="剧毒鞭笞"}}
-D.ClientTexts.BattlePetAbility[399]={Name={["02e058a3acc5ba4c:15"]=S[17791]},Description={["1157ae123b787497:155"]="当该效果结束时，你的当前宠物会受到[StandardDamage(2,1)]点[School()]伤害，且在[duration(2,2)]轮内无法逃跑。\r\n\r\n[StandardAccuracy(2,1)] 命中几率"}}
-D.ClientTexts.BattlePetAbility[400]={Name={["02e058a3acc5ba4c:15"]=S[17791]},Description={["e17cf044e590f2af:203"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n使敌人的队伍周围长出茂密的藤蔓。\r\n\r\n在下一轮中，对手的宠物将受到[StandardDamage(2,1,399)]点[School()]伤害，并被定身，持续[duration(2,2,399)]轮。"}}
+D.ClientTexts.BattlePetAbility[399]={Name={["02e058a3acc5ba4c:15"]=S[17792]},Description={["1157ae123b787497:155"]="当该效果结束时，你的当前宠物会受到[StandardDamage(2,1)]点[School()]伤害，且在[duration(2,2)]轮内无法逃跑。\r\n\r\n[StandardAccuracy(2,1)] 命中几率"}}
+D.ClientTexts.BattlePetAbility[400]={Name={["02e058a3acc5ba4c:15"]=S[17792]},Description={["e17cf044e590f2af:203"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n使敌人的队伍周围长出茂密的藤蔓。\r\n\r\n在下一轮中，对手的宠物将受到[StandardDamage(2,1,399)]点[School()]伤害，并被定身，持续[duration(2,2,399)]轮。"}}
 D.ClientTexts.BattlePetAbility[401]={Name={["979c5630b6f12c6b:8"]="昏晕之种"}}
 D.ClientTexts.BattlePetAbility[402]={Name={["979c5630b6f12c6b:8"]="昏晕之种"}}
 D.ClientTexts.BattlePetAbility[403]={Name={["d445bc20088c4645:8"]="晴天"},Description={["cbc73b9990f1f2f6:122"]="使所有宠物的最大生命值提高[abs(abilityStateMod(99,403))]%。\r\n\r\n造成的治疗效果提高[abs(abilityStateMod(65,403))]%。"}}
 D.ClientTexts.BattlePetAbility[404]={Name={["d418d2b399c7ac8a:8"]="太阳光"},Description={["6c0fb7fc716606e7:310"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n一道烈日光束击向敌人，造成[StandardDamage(1,1)]点[School()]伤害，并将天气变成晴天，持续[duration(1,4)]轮。\r\n\r\n在晴天，所有宠物的最大生命值都会提高[abs(abilityStateMod(99,403))]%，且造成的治疗效果提高[abs(abilityStateMod(65,403))]%。"}}
 D.ClientTexts.BattlePetAbility[405]={Name={["4abc224ddff85868:14"]="先发优势"},Description={["ddfc6b9663694421:137"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[petTypeName(abilityPetType())]伤害。\r\n\r\n如果使用者的生命值较低，则可造成双倍伤害。"}}
 D.ClientTexts.BattlePetAbility[406]={Name={["0f3efe2a3681e51b:5"]="粉碎"},Description={["765dbf485dd5fb91:91"]=S[196]}}
-D.ClientTexts.BattlePetAbility[407]={Name={["64666823707bf8de:12"]=S[15889]},Description={["99719d5009cd1519:147"]="[StandardAccuracy(2,1)] 命中几率\r\n\r\n升上高空，在1轮内无法攻击。\r\n\r\n在下一轮，你发动攻击，造成[StandardDamage(2, 1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[408]={Name={["729154de4a34beaf:10"]="自燃"},Description={["0e6c2116a3eb0c59:62"]=S[15460]}}
+D.ClientTexts.BattlePetAbility[407]={Name={["64666823707bf8de:12"]=S[15890]},Description={["99719d5009cd1519:147"]="[StandardAccuracy(2,1)] 命中几率\r\n\r\n升上高空，在1轮内无法攻击。\r\n\r\n在下一轮，你发动攻击，造成[StandardDamage(2, 1)]点[School()]伤害。"}}
+D.ClientTexts.BattlePetAbility[408]={Name={["729154de4a34beaf:10"]="自燃"},Description={["0e6c2116a3eb0c59:62"]=S[15461]}}
 D.ClientTexts.BattlePetAbility[409]={Name={["729154de4a34beaf:10"]="自燃"}}
-D.ClientTexts.BattlePetAbility[410]={Name={["34cc7f0913d47b84:11"]="刨花"},Description={["cd27c3808dc256c5:61"]=S[15466]}}
+D.ClientTexts.BattlePetAbility[410]={Name={["34cc7f0913d47b84:11"]="刨花"},Description={["cd27c3808dc256c5:61"]=S[15467]}}
 D.ClientTexts.BattlePetAbility[411]={Name={["34cc7f0913d47b84:11"]="刨花"}}
 D.ClientTexts.BattlePetAbility[412]={Name={["7c976b72eec9be9d:4"]="啮咬"},Description={["eae5b354f79aae3f:137"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，如果使用者率先攻击，则造成额外[StandardDamage(1,3)]点伤害。"}}
 D.ClientTexts.BattlePetAbility[413]={Name={["1aeb88b9f3b97010:8"]="冰枪术"},Description={["9b36e51a84c6ebc5:175"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用冰冻伤害袭击敌人，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果目标被冰冻则造成额外[StandardDamage(1,2)]点伤害。"}}
@@ -2679,16 +2679,16 @@ D.ClientTexts.BattlePetAbility[430]={Name={["6a6ee2ce3cd8caf5:8"]="玉肤术"},D
 D.ClientTexts.BattlePetAbility[431]={Name={["6a6ee2ce3cd8caf5:8"]="玉肤术"}}
 D.ClientTexts.BattlePetAbility[432]={Name={["6a66200054e1cc97:8"]="玉爪"},Description={["b75ae543907b3bdc:104"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用玉爪抓挠敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[433]={Name={["c4c1d32007d2e8ff:11"]="玉石屏障"},Description={["4480f05e1729fdbd:68"]="生成一道玉石屏障，阻挡2次攻击。同伴与敌人的攻击都计算在内。"}}
-D.ClientTexts.BattlePetAbility[434]={Name={["c4c1d32007d2e8ff:11"]="玉石屏障"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[434]={Name={["c4c1d32007d2e8ff:11"]="玉石屏障"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[435]={Name={["bc542083042eee62:9"]="石肤术"},Description={["d44b976f811147be:86"]="使你每次被击中时受到的伤害降低最多[abs(abilityStateMod(71,435))*AttackBonus()]点。"}}
 D.ClientTexts.BattlePetAbility[436]={Name={["bc542083042eee62:9"]="石肤术"}}
 D.ClientTexts.BattlePetAbility[437]={Name={["22b7ee3710a96e76:8"]="玛瑙之咬"},Description={["715df71eab666a39:104"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用玛瑙利齿猛咬敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[438]={Name={["22c34f23ddc01028:8"]="玛瑙壁垒"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[438]={Name={["22c34f23ddc01028:8"]="玛瑙壁垒"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[439]={Name={["22c34f23ddc01028:8"]="玛瑙壁垒"},Description={["17ae156e1f4d90e9:83"]="生成一道坚石壁垒，使你的队伍无法攻击，但却能保护你的队伍躲避2次攻击。"}}
 D.ClientTexts.BattlePetAbility[440]={Name={["7f806f8591a89e82:11"]="隐没"},Description={["6e16bef8f02729a9:81"]="遁入一团迷雾之中，使你的躲闪几率提高100%。\r\n\r\n持续[duration(1,1)]轮。"}}
 D.ClientTexts.BattlePetAbility[441]={Name={["7c9d4eeeea332e69:4"]="撕裂"},Description={["963697f6d74e9e47:152"]=S[211]}}
 D.ClientTexts.BattlePetAbility[442]={Name={["0e1dffd5eddfa436:14"]="幽灵打击"},Description={["a0d58139957194a2:152"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用幽灵兽的力量打击敌人，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果目标被致盲，则总能命中。"}}
-D.ClientTexts.BattlePetAbility[443]={Name={["7b4b9858cc8fd949:16"]="棱光屏障"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[443]={Name={["7b4b9858cc8fd949:16"]="棱光屏障"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[444]={Name={["7b4b9858cc8fd949:16"]="棱光屏障"},Description={["959a3a6c09f2d1e7:71"]="生成一道水晶壁垒，阻挡2次攻击。同伴与敌人的攻击都计算在内。"}}
 D.ClientTexts.BattlePetAbility[445]={Name={["87e8ca853a5d3994:9"]="软泥之触"},Description={["3d4992d3c5b89e38:95"]=S[182]}}
 D.ClientTexts.BattlePetAbility[446]={Name={["c83c2e2324b27e98:9"]="腐蚀"},Description={["cb5664a83e748c0b:123"]="每轮造成[StandardDamage(1,1)]点[School()]伤害。\r\n受到的伤害最多提高[abs(abilityStateMod(71,446))*AttackBonus()]点。"}}
@@ -2709,9 +2709,9 @@ D.ClientTexts.BattlePetAbility[460]={Name={["e292fc79f385dfec:10"]="照亮"},Des
 D.ClientTexts.BattlePetAbility[461]={Name={["0fdcae5df02409b6:5"]="朗照"},Description={["63fe675bc351a580:146"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用强光笼罩敌人，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果目标被致盲，则造成双倍伤害。"}}
 D.ClientTexts.BattlePetAbility[462]={Name={["e82d9a09d40c2886:16"]="半盲"},Description={["7e14816de31a2858:64"]="你的命中几率降低[abs(abilityStateMod( 41 , 462 ))]%。\r\n\r\n被致盲。"}}
 D.ClientTexts.BattlePetAbility[463]={Name={["0f71a853e144e790:5"]="闪光"}}
-D.ClientTexts.BattlePetAbility[464]={Name={["e7cfc687d481fb50:18"]="幻象屏障"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[464]={Name={["e7cfc687d481fb50:18"]="幻象屏障"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[465]={Name={["e7cfc687d481fb50:18"]="幻象屏障"},Description={["6e49b4576593eff6:69"]="生成幻象，阻挡2次攻击。同伴与敌人的攻击都计算在内。"}}
-D.ClientTexts.BattlePetAbility[466]={Name={["2eb00d2c491f8263:10"]=S[18672]},Description={["e7fbae7ba2d118ac:115"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并迫使对手的一只宠物出战。"}}
+D.ClientTexts.BattlePetAbility[466]={Name={["2eb00d2c491f8263:10"]=S[18673]},Description={["e7fbae7ba2d118ac:115"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并迫使对手的一只宠物出战。"}}
 D.ClientTexts.BattlePetAbility[467]={Name={["ab1d07c4114f33a5:12"]="魔法克隆"}}
 D.ClientTexts.BattlePetAbility[468]={Name={["0f14aae3abe4d0b4:5"]="痛苦"}}
 D.ClientTexts.BattlePetAbility[469]={Name={["0f14aae3abe4d0b4:5"]="痛苦"},Description={["1a3f8c31d1868c06:32"]="每轮造成更高的伤害。"}}
@@ -2725,7 +2725,7 @@ D.ClientTexts.BattlePetAbility[476]={Name={["0b88a69a38920337:3"]="腐烂"}}
 D.ClientTexts.BattlePetAbility[477]={Name={["bc596fe7774f8c02:8"]="雪球"},Description={["28a8966f81267ebc:105"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用一发雪球攻击敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[478]={Name={["367369838e55438e:8"]="魔法帽子"},Description={["818cf48ea532ed27:121"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n朝敌人掷出他的帽子，造成[StandardDamage(1,1)]点[petTypeName(abilityPetType())]伤害。"}}
 D.ClientTexts.BattlePetAbility[479]={Name={["827af59d442a258c:10"]="寒冰壁垒"},Description={["a4f5e0c9db9f3682:68"]="生成一道寒冰屏障，阻挡2次攻击。同伴与敌人的攻击都计算在内。"}}
-D.ClientTexts.BattlePetAbility[480]={Name={["827af59d442a258c:10"]="寒冰壁垒"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[480]={Name={["827af59d442a258c:10"]="寒冰壁垒"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[481]={Name={["9890f0643a26f503:10"]="深度冻结"}}
 D.ClientTexts.BattlePetAbility[482]={Name={["0fd87dfc81d33d0b:5"]="激光"},Description={["f4e2a04c6f6c37a5:115"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用奥术能量激光冲击敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[483]={Name={["1c59ba2ec333de23:12"]="心灵冲击"},Description={["ac4ad7bc7531d119:171"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n控制目标的心智，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果是奥术之风天气，则可造成[StandardDamage(1,2)]点额外伤害。"}}
@@ -2736,18 +2736,18 @@ D.ClientTexts.BattlePetAbility[487]={Name={["4b519ad8bd8506b9:12"]="魔法增效
 D.ClientTexts.BattlePetAbility[488]={Name={["4b519ad8bd8506b9:12"]="魔法增效"}}
 D.ClientTexts.BattlePetAbility[489]={Name={["0e37ee281843aa07:9"]="法力澎湃"}}
 D.ClientTexts.BattlePetAbility[490]={Name={["4d8d83622f5a70f9:10"]="偏斜"},Description={["3b11f8b0675a57a7:72"]="在使用该技能时，可避开敌人在本轮发起的攻击。\r\n\r\n该技能总能取得先手。"}}
-D.ClientTexts.BattlePetAbility[491]={Name={["596dbf1fb37284c8:8"]="流血"},Description={["cd27c3808dc256c5:61"]=S[15466]}}
+D.ClientTexts.BattlePetAbility[491]={Name={["596dbf1fb37284c8:8"]="流血"},Description={["cd27c3808dc256c5:61"]=S[15467]}}
 D.ClientTexts.BattlePetAbility[492]={Name={["7c9d3d88e837efa9:4"]="斜掠"},Description={["906bec89930ae03c:111"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并使目标下一次攻击造成的伤害降低50%。"}}
 D.ClientTexts.BattlePetAbility[493]={Name={["7c97fdd11ddca23e:4"]="重蹄"},Description={["47f3b749062257a0:92"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n重踩敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[494]={Name={["562ad60a9f54e20b:15"]="攻击减免"},Description={["f1ecd24179a95f52:80"]="造成的伤害降低[abs(abilityStateMod( STATE_Mod_DamageDealtPercent, 494 ))]%。"}}
 D.ClientTexts.BattlePetAbility[496]={Name={["f970b4ad50191f9c:6"]="困倦"},Description={["142d80fe7903ec85:50"]="感觉困倦……下一轮将进入睡眠状态，除非受到伤害。"}}
 D.ClientTexts.BattlePetAbility[497]={Name={["1c37be57cf6883fe:6"]="安抚"},Description={["9d6c153f6710066e:131"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n对着目标歌唱，使其变得昏昏欲睡。\r\n\r\n困倦的目标会在下一轮结束时进入睡眠状态，除非被击中。"}}
-D.ClientTexts.BattlePetAbility[498]={Name={["f2815fbfbd00ce16:6"]="昏睡"},Description={["c8c22b4d284de9c8:43"]=S[13467]}}
+D.ClientTexts.BattlePetAbility[498]={Name={["f2815fbfbd00ce16:6"]="昏睡"},Description={["c8c22b4d284de9c8:43"]=S[13468]}}
 D.ClientTexts.BattlePetAbility[499]={Name={["fcce764b712c2ec0:12"]="疾病之咬"},Description={["673ff2cf5ec63594:93"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n感染敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[500]={Name={["c9992c60e35d7a53:11"]=S[16285]},Description={["3b2df57b5f3515d6:60"]="每轮造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n燃烧"}}
-D.ClientTexts.BattlePetAbility[501]={Name={["c9992c60e35d7a53:11"]=S[16285]}}
-D.ClientTexts.BattlePetAbility[502]={Name={["4ff660559f747ec0:12"]=S[16287]},Description={["8c78915975a8ee78:76"]=S[15462]}}
-D.ClientTexts.BattlePetAbility[503]={Name={["4ff660559f747ec0:12"]=S[16287]}}
+D.ClientTexts.BattlePetAbility[500]={Name={["c9992c60e35d7a53:11"]=S[16286]},Description={["3b2df57b5f3515d6:60"]="每轮造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n燃烧"}}
+D.ClientTexts.BattlePetAbility[501]={Name={["c9992c60e35d7a53:11"]=S[16286]}}
+D.ClientTexts.BattlePetAbility[502]={Name={["4ff660559f747ec0:12"]=S[16288]},Description={["8c78915975a8ee78:76"]=S[15463]}}
+D.ClientTexts.BattlePetAbility[503]={Name={["4ff660559f747ec0:12"]=S[16288]}}
 D.ClientTexts.BattlePetAbility[504]={Name={["58b54b3d1a6aacd0:11"]="空袭"},Description={["91d4079b3afa8ea0:152"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n勇猛出击，造成[StandardDamage(1,1)]点[School()]伤害，如果使用者率先攻击，则可造成额外[StandardDamage(1,3)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[505]={Name={["94d424b9cad2388c:10"]="丝茧"},Description={["9b6ed9652e8e3f9e:86"]="你将格挡住下一次对你发起的攻击。\r\n速度降低[abs(abilityStateMod(25,505))]%。"}}
 D.ClientTexts.BattlePetAbility[506]={Name={["c4c3aab80ef31049:12"]="茧缚之击"}}
@@ -2795,7 +2795,7 @@ D.ClientTexts.BattlePetAbility[565]={Name={["91e84a72d3e2143f:11"]="遁地"},Des
 D.ClientTexts.BattlePetAbility[566]={Name={["154adf6d9c74a084:9"]="强力球"},Description={["424f7b0ba2cb5e3c:187"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n滚向敌人，造成[StandardDamage(1,1)]点[School()]伤害，并使你的速度提高[statechange(1,2)]%。\r\n\r\n你每使用一次强力球，你的速度即可持续得到提高。"}}
 D.ClientTexts.BattlePetAbility[567]={Name={["7c9d93a7f21927b8:4"]="突进"},Description={["3b71bf3c806402fb:126"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n冲向敌人，造成[StandardDamage(1,1)]点[School()]伤害，并令使用者在下一轮中率先攻击。"}}
 D.ClientTexts.BattlePetAbility[568]={Name={["ae8d1f949a107663:10"]="假死"},Description={["8a925b525c2f5f69:101"]="使用者假死，躲避对手的攻击。然后使用者会自动切换至生命值最高的宠物。"}}
-D.ClientTexts.BattlePetAbility[569]={Name={["991f2f8223a09001:13"]=S[15498]}}
+D.ClientTexts.BattlePetAbility[569]={Name={["991f2f8223a09001:13"]=S[15499]}}
 D.ClientTexts.BattlePetAbility[570]={Name={["935ca1765571540f:11"]="魔帚之击"},Description={["e1adb95192e77ce0:147"]="跳到一把魔法扫帚上，飞向敌人，造成[StandardDamage(1,1)]点[School()]伤害，并有[accuracy(1,3)]%的几率迫使对手转向另一只宠物。"}}
 D.ClientTexts.BattlePetAbility[571]={Name={["8f7d8074aae5630b:10"]="角击"},Description={["cf6712627eeed1ef:166"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者比目标快，则目标有[accuracy(1,3)]%的几率被践踏，并失去自己的回合。"}}
 D.ClientTexts.BattlePetAbility[572]={Name={["33ba97bc51a4ded5:8"]="泥石流"},Description={["b21cb3c9ba19474a:218"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n召唤泥石流，造成[StandardDamage(1,1)]点[School()]伤害，并引发污浊天气，持续[duration(1,2)]轮。\r\n\r\n污浊天气会阻止战场上的任何宠物被切换出阵。"}}
@@ -2823,9 +2823,9 @@ D.ClientTexts.BattlePetAbility[594]={Name={["5dff04376c45ba0e:11"]="困倦毒气
 D.ClientTexts.BattlePetAbility[595]={Name={["7f282724d5d2b977:8"]="月火术"},Description={["35c3c8ffa02961da:221"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并将天气变为月光，持续[duration(1,2)]轮。\r\n\r\n在月光期间，所有宠物可获得额外25%的治疗效果，魔法技能可造成额外10%的伤害。"}}
 D.ClientTexts.BattlePetAbility[596]={Name={["649970b6ea7534f5:9"]="月光"},Description={["7813736f07c0aa26:68"]="受到的治疗效果提高25%。\r\n\r\n魔法技能额外造成10%伤害。"}}
 D.ClientTexts.BattlePetAbility[597]={Name={["b0ebe754d92a05df:15"]="翡翠灵气"}}
-D.ClientTexts.BattlePetAbility[598]={Name={["d7ce56a81343e09f:12"]=S[18003]},Description={["e4b2b03f25d9b7e8:200"]="进入睡眠状态，首轮回复[StandardHealing(1,1,246)]点生命值，第二轮回复[StandardHealing(2,1,246)]点生命值，第三轮回复[StandardHealing(3,1, 246)]点生命值。\r\n\r\n处于翡翠梦境中时，你不能切换宠物。"}}
-D.ClientTexts.BattlePetAbility[599]={Name={["d7ce56a81343e09f:12"]=S[18003]},Description={["126c90abac5cdd2c:44"]="正在做梦。\r\n每轮回复越来越多的生命值。"}}
-D.ClientTexts.BattlePetAbility[600]={Name={["21d1ae5a18e528af:8"]=S[13674]}}
+D.ClientTexts.BattlePetAbility[598]={Name={["d7ce56a81343e09f:12"]=S[18004]},Description={["e4b2b03f25d9b7e8:200"]="进入睡眠状态，首轮回复[StandardHealing(1,1,246)]点生命值，第二轮回复[StandardHealing(2,1,246)]点生命值，第三轮回复[StandardHealing(3,1, 246)]点生命值。\r\n\r\n处于翡翠梦境中时，你不能切换宠物。"}}
+D.ClientTexts.BattlePetAbility[599]={Name={["d7ce56a81343e09f:12"]=S[18004]},Description={["126c90abac5cdd2c:44"]="正在做梦。\r\n每轮回复越来越多的生命值。"}}
+D.ClientTexts.BattlePetAbility[600]={Name={["21d1ae5a18e528af:8"]=S[13675]}}
 D.ClientTexts.BattlePetAbility[601]={Name={["21c84654ff78fdef:8"]=S[8930]}}
 D.ClientTexts.BattlePetAbility[602]={Name={["21c84654ff78fdef:8"]=S[8930]}}
 D.ClientTexts.BattlePetAbility[603]={Name={["27058d7e4601862b:13"]="短时增效"}}
@@ -2834,14 +2834,14 @@ D.ClientTexts.BattlePetAbility[605]={Name={["6044926bcd72d09a:14"]="源质箭"}}
 D.ClientTexts.BattlePetAbility[606]={Name={["6044926bcd72d09a:14"]="源质箭"}}
 D.ClientTexts.BattlePetAbility[607]={Name={["4e129886003efdbf:9"]="大灾变"},Description={["421225a098dad9d3:97"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n摧毁目标，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[710]={Name={["6d67741b64a4f95e:11"]="建造炮塔"}}
-D.ClientTexts.BattlePetAbility[608]={Name={["045cf1c1240410e0:11"]=S[18675]},Description={["b4cc2de0a0ceeba9:268"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用喷薄而出的奥术力量冲击敌人，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n每次使用都会令伤害提高[FormatDamage(pointsincreaseperuse(1,1)*AttackBonus())]点。最多可造成[FormatDamage(pointsmax(1,1)*AttackBonus())]点[School()]伤害。"}}
+D.ClientTexts.BattlePetAbility[608]={Name={["045cf1c1240410e0:11"]=S[18676]},Description={["b4cc2de0a0ceeba9:268"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用喷薄而出的奥术力量冲击敌人，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n每次使用都会令伤害提高[FormatDamage(pointsincreaseperuse(1,1)*AttackBonus())]点。最多可造成[FormatDamage(pointsmax(1,1)*AttackBonus())]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[609]={Name={["d3c95bd154c5bfe4:11"]="动荡"},Description={["17c7686d4b497abc:75"]=S[199]}}
 D.ClientTexts.BattlePetAbility[610]={Name={["b3a19e7ec12a7f1f:15"]="上古赐福"},Description={["11b722de95c076f5:76"]="使你每级的最大生命值提高[abs(abilityStateMod(2,610))/100]点。"}}
 D.ClientTexts.BattlePetAbility[611]={Name={["b3a19e7ec12a7f1f:15"]="上古赐福"},Description={["00fa161fcc359756:138"]="为使用者治疗[StandardHealing(1,5)]点生命值，并使你当前激活宠物的最大生命值每级提高[points(1,1,610)]点，持续[duration(1,1)]轮。"}}
 D.ClientTexts.BattlePetAbility[612]={Name={["bc991df8fbcf2eb7:12"]="原始之击"},Description={["e71172dad983c581:144"]="[StandardAccuracy(2,1)] 命中几率\r\n\r\n向上高飞，在1轮内无法攻击。\r\n\r\n在下一轮，你发动攻击，造成[StandardDamage(2, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[613]={Name={["25253f69d5dd1640:17"]="争强好胜"},Description={["a13eb6de1feca24f:75"]=S[1416]}}
 D.ClientTexts.BattlePetAbility[614]={Name={["25253f69d5dd1640:17"]="争强好胜"}}
-D.ClientTexts.BattlePetAbility[615]={Name={["649248391c5ed128:16"]=S[15854]}}
+D.ClientTexts.BattlePetAbility[615]={Name={["649248391c5ed128:16"]=S[15855]}}
 D.ClientTexts.BattlePetAbility[616]={Name={["39fc4647eb66c3ce:11"]="一闪"},Description={["19cfca1a302db4bf:117"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n闪到敌人身边，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n这个招式总能取得先手。"}}
 D.ClientTexts.BattlePetAbility[617]={Name={["105f18460e5ffd5d:5"]="火花"},Description={["2ce174bc70f9babd:145"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n喷射火花1-2次，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击1次。"}}
 D.ClientTexts.BattlePetAbility[621]={Name={["bc53bff0da9ebb1d:9"]="巨石奔袭"},Description={["9a6ab83942de2fba:152"]=S[193]}}
@@ -2849,17 +2849,17 @@ D.ClientTexts.BattlePetAbility[623]={Name={["84b66c488333545b:7"]=S[9018]}}
 D.ClientTexts.BattlePetAbility[624]={Name={["84b66c488333545b:7"]=S[9018]}}
 D.ClientTexts.BattlePetAbility[625]={Name={["1b7259b286a7f8bb:8"]="冰刺"},Description={["81c7cdafd14debfe:94"]="穿刺目标，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n该技能有很高的未命中几率。"}}
 D.ClientTexts.BattlePetAbility[626]={Name={["996e872ba46376fe:7"]="飞掠"},Description={["5a761c252f9e4b70:91"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n猛刺敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[627]={Name={["3d49d768eab9e55b:11"]="岩石弹幕"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[627]={Name={["3d49d768eab9e55b:11"]="岩石弹幕"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[628]={Name={["3d49d768eab9e55b:11"]="岩石弹幕"}}
 D.ClientTexts.BattlePetAbility[630]={Name={["61d0c4f46a580be9:14"]="毒枝"}}
 D.ClientTexts.BattlePetAbility[631]={Name={["a8916a50d0c6e9e3:14"]="超黏焦油"}}
 D.ClientTexts.BattlePetAbility[632]={Name={["abdb0036fb7b8401:14"]="困惑之刺"}}
-D.ClientTexts.BattlePetAbility[633]={Name={["abdb0036fb7b8401:14"]="困惑之刺"},Description={["11ab34552b552866:211"]=S[15467]}}
+D.ClientTexts.BattlePetAbility[633]={Name={["abdb0036fb7b8401:14"]="困惑之刺"},Description={["11ab34552b552866:211"]=S[15468]}}
 D.ClientTexts.BattlePetAbility[634]={Name={["78a92df2e1ce58a7:9"]="雷区"},Description={["957c2e5abade5993:153"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n在对手身后布下雷区。下一只被切换进入战斗的宠物将受到[StandardDamage(1,1,635)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[635]={Name={["78a92df2e1ce58a7:9"]="雷区"},Description={["70afc12798e7e892:87"]=S[20168]}}
+D.ClientTexts.BattlePetAbility[635]={Name={["78a92df2e1ce58a7:9"]="雷区"},Description={["70afc12798e7e892:87"]=S[20169]}}
 D.ClientTexts.BattlePetAbility[636]={Name={["eb2c6b12cf5cc645:13"]="黏性手雷"},Description={["cbf05c1a2d199607:279"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n朝目标掷出一发黏性手雷。\r\n\r\n手雷在3轮后爆炸，造成[StandardDamage(getProcIndex(PROC_ON_AURA_REMOVED , 637),1,637)]点[School()]伤害。该伤害无法被躲闪、格挡或避开。\r\n\r\n每个敌方宠物同一时间内只能受到一个黏性手雷的影响。"}}
 D.ClientTexts.BattlePetAbility[637]={Name={["eb2c6b12cf5cc645:13"]="黏性手雷"},Description={["1a36cbe339bcfe50:218"]="朝目标掷出一发黏性手雷。手雷在3轮后爆炸，造成[StandardDamage(getProcIndex(PROC_ON_AURA_REMOVED),1)]点[School()]伤害。该伤害无法被躲闪、格挡或避开。\r\n\r\n[StandardAccuracy(2,1)] 命中几率"}}
-D.ClientTexts.BattlePetAbility[639]={Name={["cd38ba2b48338938:10"]="毒烟"},Description={["76104866c8b50bfd:53"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[639]={Name={["cd38ba2b48338938:10"]="毒烟"},Description={["76104866c8b50bfd:53"]=S[15465]}}
 D.ClientTexts.BattlePetAbility[640]={Name={["cd38ba2b48338938:10"]="毒烟"}}
 D.ClientTexts.BattlePetAbility[641]={Name={["1cc5fd0c0d6afc7b:10"]="蛋幕"},Description={["3e6e88e2eb465af3:65"]="每轮对当前宠物造成[StandardDamage(1,1)]点小动物伤害。"}}
 D.ClientTexts.BattlePetAbility[642]={Name={["1cc5fd0c0d6afc7b:10"]="蛋幕"}}
@@ -2872,26 +2872,26 @@ D.ClientTexts.BattlePetAbility[649]={Name={["01ccc23e19dbc0e5:9"]="骨头风暴"
 D.ClientTexts.BattlePetAbility[650]={Name={["343e19c43cf2c28f:10"]="骨牢"}}
 D.ClientTexts.BattlePetAbility[651]={Description={["52d33420bc8f1ed1:50"]="造成[StandardDamage(1,1)]点随机类型伤害。"}}
 D.ClientTexts.BattlePetAbility[652]={Name={["0f9025a57326e242:5"]="鬼影缠身"},Description={["a8bc27c201161f95:190"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n使用者变成邪恶的鬼魂，附在目标身上，每轮造成[StandardDamage(1,1,653)]点[School()]伤害。\r\n\r\n纠缠目标时，使用者被视作死亡。"}}
-D.ClientTexts.BattlePetAbility[653]={Name={["0f9025a57326e242:5"]="鬼影缠身"},Description={["76104866c8b50bfd:53"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[653]={Name={["0f9025a57326e242:5"]="鬼影缠身"},Description={["76104866c8b50bfd:53"]=S[15465]}}
 D.ClientTexts.BattlePetAbility[654]={Name={["c19f1673a0803634:11"]="幽魂之咬"},Description={["22a5e30a2c00a3d1:113"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并令使用者昏迷[duration(1,2)]轮。"}}
 D.ClientTexts.BattlePetAbility[655]={Name={["44ff4364d4e2be15:11"]="恐怖噬咬"},Description={["67ece6eae4b8c5e3:94"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n噬咬敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[657]={Name={["b5892e57ad9287a8:12"]="疫病之血"}}
 D.ClientTexts.BattlePetAbility[658]={Name={["b5892e57ad9287a8:12"]="疫病之血"},Description={["0d61ae8300647308:32"]="当受到伤害时，攻击者会获得治疗。"}}
 D.ClientTexts.BattlePetAbility[659]={Description={["c1ec740eb05b9857:177"]="造成[StandardDamage(1,1)]点[School()]伤害，并使目标感染疫病，造成[StandardDamage(1,1,123)]点[School()]伤害两次，然后跳到一只友方宠物身上。最多可跳跃3次。"}}
-D.ClientTexts.BattlePetAbility[660]={Name={["cd03c60194fe1664:18"]="散播感染"},Description={["0d9dbdc595e64662:79"]=S[15468]}}
+D.ClientTexts.BattlePetAbility[660]={Name={["cd03c60194fe1664:18"]="散播感染"},Description={["0d9dbdc595e64662:79"]=S[15469]}}
 D.ClientTexts.BattlePetAbility[662]={Name={["cd03c60194fe1664:18"]="散播感染"},Description={["f245ad9b8e3f9352:42"]="每轮造成[StandardDamage(1,1)]点伤害。"}}
 D.ClientTexts.BattlePetAbility[663]={Name={["17aef912167825d9:15"]="邪爆"}}
 D.ClientTexts.BattlePetAbility[664]={Name={["17aef912167825d9:15"]="邪爆"},Description={["504c0a5a5a6bcfcd:75"]="每轮造成相当于目标生命值[points(1,1)]%的[School()]伤害。\r\n\r\n中毒"}}
 D.ClientTexts.BattlePetAbility[665]={Name={["997f994be5bfac98:13"]="吞食尸体"},Description={["65c4426f1b9ae506:116"]="[StandardAccuracy(1,2)] 命中几率\r\n\r\n吞食一具同伴的尸体，恢复总生命值的[points(1,2)]%。\r\n\r\n尸体只能被使用一次。"}}
 D.ClientTexts.BattlePetAbility[666]={Name={["7bcb7539e60012e0:11"]="狂乱之击"},Description={["b65e29bbcac17eae:196"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并使目标陷入狂乱，持续[duration(1,2)]轮。\r\n\r\n在狂乱状态下，目标可造成额外25%的伤害，并受到额外50%的伤害。"}}
-D.ClientTexts.BattlePetAbility[667]={Name={["ec423f35719f47ba:8"]="陈年蛋黄"},Description={["0c04c30914c3a592:37"]=S[17410]}}
+D.ClientTexts.BattlePetAbility[667]={Name={["ec423f35719f47ba:8"]="陈年蛋黄"},Description={["0c04c30914c3a592:37"]=S[17411]}}
 D.ClientTexts.BattlePetAbility[668]={Name={["c03265e26571c2c3:14"]="恐怖吐息"}}
 D.ClientTexts.BattlePetAbility[669]={Name={["06708981494e8b94:8"]="后空翻"},Description={["1b4fe5c7c5c91174:138"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n纵身翻滚，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可打断对手该轮的进攻。"}}
 D.ClientTexts.BattlePetAbility[670]={Name={["9b3cb14eb33a53d7:8"]="阻行陷阱"}}
 D.ClientTexts.BattlePetAbility[671]={Name={["9b3cb14eb33a53d7:8"]="阻行陷阱"}}
 D.ClientTexts.BattlePetAbility[677]={Name={["6a6fbbbae5665f21:9"]="狂风"},Description={["8501ad8213f1474b:66"]="当前宠物每轮受到[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[681]={Name={["96e97010a3e880ad:14"]="战斗恢复"},Description={["79ec012ca5d52dab:57"]="你的宠物可于战斗结束后重获在战斗中所失去的部分生命值。"}}
-D.ClientTexts.BattlePetAbility[682]={Name={["d39c1a56584484b7:10"]="天启"},Description={["ad09d5a543e839da:141"]=S[21298]}}
+D.ClientTexts.BattlePetAbility[682]={Name={["d39c1a56584484b7:10"]="天启"},Description={["ad09d5a543e839da:141"]=S[21299]}}
 D.ClientTexts.BattlePetAbility[684]={Name={["152ea47fc3a3dca8:9"]="GM自杀"},Description={["ea89695e9764deb9:30"]="杀死使用者。这么快就放弃了？"}}
 D.ClientTexts.BattlePetAbility[706]={Name={["1062eeef540fb298:5"]="蜂拥"}}
 D.ClientTexts.BattlePetAbility[712]={Name={["351c1bd775ef706e:7"]="轨道炮"},Description={["acb0ef595c799d78:108"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n射出一发磁力弹，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
@@ -2908,26 +2908,26 @@ D.ClientTexts.BattlePetAbility[725]={Name={["0f40a53c8b135177:12"]="GM無敵"},D
 D.ClientTexts.BattlePetAbility[726]={Name={["fec7d614c7ca7f35:8"]="恢复"},Description={["57ca4bcdd390562a:85"]="人型生物如果在本轮造成伤害，则可回复最大生命值的[percentage(1,1,726)]%。"}}
 D.ClientTexts.BattlePetAbility[728]={Name={["0015e2d062b1e3f7:6"]="GM略過"},Description={["a8da5451df089100:24"]="你先。\r\n\r\n不，不，你先。"}}
 D.ClientTexts.BattlePetAbility[733]={Name={["f5d0ce396e28b56e:14"]="GM斬殺距離"},Description={["b60111a746fb588c:42"]="将目标的生命值设为[percentage(1,1)]%。"}}
-D.ClientTexts.BattlePetAbility[734]={Name={["991f2f8223a09001:13"]=S[15498]},Description={["e3cce75ac3618e5f:36"]="昏迷。\r\n\r\n无法对这只宠物下达命令。"}}
+D.ClientTexts.BattlePetAbility[734]={Name={["991f2f8223a09001:13"]=S[15499]},Description={["e3cce75ac3618e5f:36"]="昏迷。\r\n\r\n无法对这只宠物下达命令。"}}
 D.ClientTexts.BattlePetAbility[735]={Name={["82017c3de78a4f7c:10"]="加速"},Description={["dc63ea839fb67daa:48"]="速度提高[abs(abilityStateMod( 25, 735 ))]%。"}}
 D.ClientTexts.BattlePetAbility[737]={Name={["0d8654918468b36c:6"]="流星"},Description={["c367215ea9499071:26"]=S[5657]}}
 D.ClientTexts.BattlePetAbility[738]={Name={["a4cbb458c81b1741:9"]="到此为止"}}
 D.ClientTexts.BattlePetAbility[739]={Name={["fe1564c3a6c630d4:6"]="狂乱"},Description={["5236897187823580:80"]="造成的伤害提高[abs(abilityStateMod( STATE_Mod_DamageDealtPercent, 739 ))]%。"}}
 D.ClientTexts.BattlePetAbility[740]={Name={["a0213c2724b5a034:15"]="狂心美酒"}}
-D.ClientTexts.BattlePetAbility[741]={Name={["b727f51d940c3d9a:9"]=S[13441]},Description={["d90cb94761526ab8:126"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n疯狂地四处旋转，对敌人的队伍造成[StandardDamage(1,1)]点[School()]伤害，由敌人均摊。"}}
+D.ClientTexts.BattlePetAbility[741]={Name={["b727f51d940c3d9a:9"]=S[13442]},Description={["d90cb94761526ab8:126"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n疯狂地四处旋转，对敌人的队伍造成[StandardDamage(1,1)]点[School()]伤害，由敌人均摊。"}}
 D.ClientTexts.BattlePetAbility[742]={Name={["3b39150a7c89fbc7:14"]="蠕行真菌"},Description={["3ac9df8395b49cfc:85"]="每轮造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n在月光状态下可造成额外伤害。"}}
 D.ClientTexts.BattlePetAbility[743]={Name={["3b39150a7c89fbc7:14"]="蠕行真菌"}}
 D.ClientTexts.BattlePetAbility[744]={Name={["99d8a14727a89262:9"]="汲血之种"},Description={["df7e1d35d9a002d0:113"]="每轮造成[StandardDamage(1,1)]点[School()]伤害。为光环施放者回复相当于所造成伤害[points(1,2)]%的生命值。"}}
 D.ClientTexts.BattlePetAbility[745]={Name={["99d8a14727a89262:9"]="汲血之种"},Description={["902d739256e617fd:299"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n在目标体内种下种子，立即造成[StandardDamage(1,1)]点[School()]伤害并为使用者回复[StandardHealing(1,2)]点生命值。种子可存在[duration(1,3)]轮。\r\n\r\n种子每轮造成[StandardDamage(1,1,744)]点[School(744)]伤害，并为使用者恢复等量的生命值。"}}
 D.ClientTexts.BattlePetAbility[746]={Name={["13ccba59dc6a155e:12"]="孢子菇"}}
 D.ClientTexts.BattlePetAbility[747]={Name={["13ccba59dc6a155e:12"]="孢子菇"}}
-D.ClientTexts.BattlePetAbility[748]={Name={["a7a1627e5538d1bb:10"]="孢子爆裂"},Description={["6b8597ecef83755f:52"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[748]={Name={["a7a1627e5538d1bb:10"]="孢子爆裂"},Description={["6b8597ecef83755f:52"]=S[15465]}}
 D.ClientTexts.BattlePetAbility[750]={Name={["16971796b871ce0f:8"]="灵魂结界"},Description={["9b51770c908173e3:20"]="格挡一次攻击。"}}
 D.ClientTexts.BattlePetAbility[751]={Name={["16971796b871ce0f:8"]="灵魂结界"},Description={["289dec0b998ef938:55"]="一道强大的魔法结界将你包围，格挡下一次攻击。"}}
 D.ClientTexts.BattlePetAbility[752]={Name={["1694aeead9a9f0ab:8"]="灵魂奔袭"},Description={["470aa300e04a6c2b:106"]=S[205]}}
 D.ClientTexts.BattlePetAbility[753]={Name={["1aab033b8b255150:9"]="日光术"}}
 D.ClientTexts.BattlePetAbility[754]={Name={["f6ea14d257196609:15"]="尖啸齿轮"}}
-D.ClientTexts.BattlePetAbility[755]={Name={["f7117079bb1a48c2:9"]="酸蚀之触"},Description={["6b8597ecef83755f:52"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[755]={Name={["f7117079bb1a48c2:9"]="酸蚀之触"},Description={["6b8597ecef83755f:52"]=S[15465]}}
 D.ClientTexts.BattlePetAbility[756]={Name={["f7117079bb1a48c2:9"]="酸蚀之触"}}
 D.ClientTexts.BattlePetAbility[757]={Name={["d2984ea8ba19238b:10"]="幸运热舞"}}
 D.ClientTexts.BattlePetAbility[758]={Name={["49ad08b54206dd60:15"]="鱼人来袭"}}
@@ -2935,7 +2935,7 @@ D.ClientTexts.BattlePetAbility[759]={Name={["0f297fd0d86840ad:5"]="格挡"},Desc
 D.ClientTexts.BattlePetAbility[760]={Name={["df5d7fa9e9482504:11"]="护盾格挡"},Description={["4376168c1b560d8f:42"]="一道护盾将你包围，格挡下一次攻击。"}}
 D.ClientTexts.BattlePetAbility[761]={Name={["610ca561fe7f57fc:10"]="英勇飞跃"},Description={["00be0f71ebfeeb86:145"]=S[213]}}
 D.ClientTexts.BattlePetAbility[762]={Name={["c36e72f7a23dab44:8"]="强力一击"}}
-D.ClientTexts.BattlePetAbility[763]={Name={["b8a4cb71f06e0aaa:9"]="烧灼驱魔"},Description={["0c04c30914c3a592:37"]=S[17410]}}
+D.ClientTexts.BattlePetAbility[763]={Name={["b8a4cb71f06e0aaa:9"]="烧灼驱魔"},Description={["0c04c30914c3a592:37"]=S[17411]}}
 D.ClientTexts.BattlePetAbility[764]={Name={["5a2b1734b4f7f7a7:10"]="相位变换"}}
 D.ClientTexts.BattlePetAbility[765]={Name={["516bc070a72c6309:9"]="神圣之剑"},Description={["dfc9d07d88c0a29a:96"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n手持圣羽之辉猛力挥砍，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[766]={Name={["a230c5985156cd4b:11"]="神圣制裁"}}
@@ -2953,7 +2953,7 @@ D.ClientTexts.BattlePetAbility[777]={Name={["c79b041be65a59e6:7"]="飞弹"},Desc
 D.ClientTexts.BattlePetAbility[778]={Name={["f65ed2cf04cf4d54:6"]="冲锋"},Description={["c1057484fc5a9291:118"]=S[184]}}
 D.ClientTexts.BattlePetAbility[779]={Name={["c47f4cf0c314d259:11"]="雷霆之箭"},Description={["1a796b9d5779f08c:104"]=S[210]}}
 D.ClientTexts.BattlePetAbility[780]={Name={["e9ad7c3d873a5f26:9"]="死亡之握"},Description={["13f60801c6af23e4:128"]=S[207]}}
-D.ClientTexts.BattlePetAbility[781]={Name={["2eda946f7034cfac:12"]="蠕行软泥"},Description={["3474d73b2e3baf08:61"]=S[15465]}}
+D.ClientTexts.BattlePetAbility[781]={Name={["2eda946f7034cfac:12"]="蠕行软泥"},Description={["3474d73b2e3baf08:61"]=S[15466]}}
 D.ClientTexts.BattlePetAbility[782]={Name={["4cdb4dc9f5bc8fe4:11"]="冰霜吐息"},Description={["107482a03a1da44d:94"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n冻结目标，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[784]={Name={["1bba88cb7a18b1f2:6"]="尖鸣"}}
 D.ClientTexts.BattlePetAbility[785]={Name={["cd78559abfc5c0f9:14"]="严寒"}}
@@ -2974,25 +2974,25 @@ D.ClientTexts.BattlePetAbility[801]={Name={["bc54148c02bac15f:9"]="投石"},Desc
 D.ClientTexts.BattlePetAbility[802]={Name={["18e8c45b3ea27f18:6"]="毁灭"}}
 D.ClientTexts.BattlePetAbility[803]={Name={["0b88a5d0388c01b9:3"]="割裂"}}
 D.ClientTexts.BattlePetAbility[804]={Name={["ae8d1f949a107663:10"]="假死"},Description={["7889aaa37655e9dc:40"]=S[2232]}}
-D.ClientTexts.BattlePetAbility[807]={Name={["18ddee9ba008abc4:6"]="狂犬病"},Description={["33148b7b1acac2e4:106"]=S[20631]}}
+D.ClientTexts.BattlePetAbility[807]={Name={["18ddee9ba008abc4:6"]="狂犬病"},Description={["33148b7b1acac2e4:106"]=S[20632]}}
 D.ClientTexts.BattlePetAbility[809]={Name={["7c9d793eef1dc8fd:4"]="翻滚"}}
 D.ClientTexts.BattlePetAbility[810]={Name={["0e17e63f52003334:9"]="熔岩陷阱"}}
 D.ClientTexts.BattlePetAbility[811]={Name={["0e17e63f52003334:9"]="熔岩陷阱"}}
-D.ClientTexts.BattlePetAbility[812]={Name={["04d9bc36876cc751:13"]=S[18576]},Description={["a4b12ce699bbe591:116"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用萨弗拉斯的一记挥击摧毁敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[813]={Name={["649248391c5ed128:16"]=S[15854]}}
+D.ClientTexts.BattlePetAbility[812]={Name={["04d9bc36876cc751:13"]=S[18577]},Description={["a4b12ce699bbe591:116"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用萨弗拉斯的一记挥击摧毁敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
+D.ClientTexts.BattlePetAbility[813]={Name={["649248391c5ed128:16"]=S[15855]}}
 D.ClientTexts.BattlePetAbility[814]={Name={["6446921c87f600a1:7"]="地突刺"},Description={["0b63b68308035f34:138"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n石刺破地而出，造成[StandardDamage(1,1)]点[School()]伤害，并有25%的几率使目标昏迷。"}}
 D.ClientTexts.BattlePetAbility[819]={Name={["7c94b34506b1bd42:4"]="轰炸"}}
 D.ClientTexts.BattlePetAbility[820]={Name={["f266dddc29768a0f:12"]="自然守护"},Description={["f3b2bbfc8506091f:108"]="每轮回复[StandardHealing(1,1)]点生命值。\r\n\r\n周期性的转变这只宠物，使其在受到伤害时被视为元素宠物。"}}
 D.ClientTexts.BattlePetAbility[822]={Name={["a5f1e41885100c5b:11"]="被变形"},Description={["d391590e043e8037:35"]="被变成青蛙。\r\n无法攻击。"}}
 D.ClientTexts.BattlePetAbility[823]={Name={["b0ebe754d92a05df:15"]="翡翠灵气"},Description={["c8e170554ca62a10:93"]="使目标从每次攻击中受到的伤害最多降低[abs(abilityStateMod(71,823))*AttackBonus()]点。"}}
 D.ClientTexts.BattlePetAbility[826]={Name={["eed3cf7251132a33:13"]="弱化打击"},Description={["e0c6097d45be894c:152"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n发起克制的攻击，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n该攻击无法使对手的生命值降到1点以下。"}}
-D.ClientTexts.BattlePetAbility[827]={Name={["ec5719e299cf45bb:13"]=S[16829]},Description={["6a95ebcd4eff174e:102"]=S[15463]}}
-D.ClientTexts.BattlePetAbility[828]={Name={["ec5719e299cf45bb:13"]=S[16829]}}
+D.ClientTexts.BattlePetAbility[827]={Name={["ec5719e299cf45bb:13"]=S[16830]},Description={["6a95ebcd4eff174e:102"]=S[15464]}}
+D.ClientTexts.BattlePetAbility[828]={Name={["ec5719e299cf45bb:13"]=S[16830]}}
 D.ClientTexts.BattlePetAbility[829]={Name={["bd8b19038063128c:9"]="遁地"},Description={["6eee3991aaed90a2:10"]="遁地。"}}
 D.ClientTexts.BattlePetAbility[830]={Name={["d6f8892640cca25f:10"]="潜水"},Description={["b726af3f3949111e:28"]="潜入水底。\r\n不可攻击。"}}
 D.ClientTexts.BattlePetAbility[831]={Name={["82017c3de78a4f7c:10"]="加速"},Description={["e475abb2c86422f3:15"]="速度提高。"}}
 D.ClientTexts.BattlePetAbility[833]={Name={["9eeb30a6392951f5:9"]="修复"},Description={["3ea8d5e9ba234a60:91"]="进入修复模式，在2轮内不会做出任何动作，然后修复[StandardHealing(3,1,278)]点生命值。"}}
-D.ClientTexts.BattlePetAbility[835]={Name={["fafa45dc02745941:6"]="蛋奶酒"},Description={["0c04c30914c3a592:37"]=S[17410]}}
+D.ClientTexts.BattlePetAbility[835]={Name={["fafa45dc02745941:6"]="蛋奶酒"},Description={["0c04c30914c3a592:37"]=S[17411]}}
 D.ClientTexts.BattlePetAbility[836]={Name={["580d6c95b08c1a74:13"]="爆虫自爆"},Description={["49cd174e5aefc21d:187"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n立即杀死施法者，对当前敌人造成相当于使用者最大生命值[FormatDamage(points(1,1))]%的伤害。该伤害无法被躲闪、格挡或避开。"}}
 D.ClientTexts.BattlePetAbility[837]={Name={["e37f71bdad0fd20c:16"]="离心钩"},Description={["8b3c5fbc232a2cef:55"]="速度提高[abs(abilityStateMod( 25, 837 ))]%。"}}
 D.ClientTexts.BattlePetAbility[838]={Name={["e37f71bdad0fd20c:16"]="离心钩"}}
@@ -3004,13 +3004,13 @@ D.ClientTexts.BattlePetAbility[851]={Name={["76f3cf91fc735d32:13"]="恶毒之痕
 D.ClientTexts.BattlePetAbility[852]={Name={["fdb3b26eaf41f52f:6"]="飞行"},Description={["c367215ea9499071:26"]=S[5657]}}
 D.ClientTexts.BattlePetAbility[869]={Name={["7fe59b4266d9f69b:13"]="暗月诅咒"}}
 D.ClientTexts.BattlePetAbility[870]={Name={["0ea6be546598f007:6"]="杀戮"}}
-D.ClientTexts.BattlePetAbility[900]={Name={["7ee8ee14aefcc799:11"]="邪能献祭"},Description={["57a4dac146f11b6c:59"]=S[15469]}}
+D.ClientTexts.BattlePetAbility[900]={Name={["7ee8ee14aefcc799:11"]="邪能献祭"},Description={["57a4dac146f11b6c:59"]=S[15470]}}
 D.ClientTexts.BattlePetAbility[901]={Name={["7ee8ee14aefcc799:11"]="邪能献祭"}}
 D.ClientTexts.BattlePetAbility[903]={Name={["4d8d83622f5a70f9:10"]="偏斜"},Description={["332ce34cf7700505:67"]=S[2238]}}
 D.ClientTexts.BattlePetAbility[904]={Name={["1d7a0d8583b26e80:8"]="灵动"},Description={["dc03eb840175ec79:67"]="使你躲闪攻击的几率提高[abs(abilityStateMod( 73, 904 ))]%。"}}
 D.ClientTexts.BattlePetAbility[905]={Name={["1d7a0d8583b26e80:8"]="灵动"}}
-D.ClientTexts.BattlePetAbility[906]={Name={["1d1f2b0201207d13:15"]=S[21053]}}
-D.ClientTexts.BattlePetAbility[907]={Name={["1d1f2b0201207d13:15"]=S[21053]},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[906]={Name={["1d1f2b0201207d13:15"]=S[21054]}}
+D.ClientTexts.BattlePetAbility[907]={Name={["1d1f2b0201207d13:15"]=S[21054]},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[908]={Name={["7c99163e7ae7430d:4"]="震颤"},Description={["aff6f1acaa5dfba3:113"]=S[189]}}
 D.ClientTexts.BattlePetAbility[909]={Name={["02d2473ef04436ad:15"]="麻痹震击"}}
 D.ClientTexts.BattlePetAbility[910]={Name={["cff79b7c7d4eda39:8"]="沙尘箭"}}
@@ -3032,7 +3032,7 @@ D.ClientTexts.BattlePetAbility[929]={Name={["9bc37cc0b4a71e31:7"]="滑行"}}
 D.ClientTexts.BattlePetAbility[930]={Name={["9c70272a92d4f9bf:8"]="巨牙"},Description={["d719b2fd0ba35c76:226"]=S[203]}}
 D.ClientTexts.BattlePetAbility[931]={Name={["0f3ee255337b83aa:5"]="蛙鸣"},Description={["56e9a7794bbca7ac:72"]="你的爆击几率降低了[abs(abilityStateMod(40,520))]%。"}}
 D.ClientTexts.BattlePetAbility[932]={Name={["0f3ee255337b83aa:5"]="蛙鸣"}}
-D.ClientTexts.BattlePetAbility[933]={Name={["f4f531b1884e990c:6"]="气泡"},Description={["01ca43d608dc5ea9:17"]=S[14799]}}
+D.ClientTexts.BattlePetAbility[933]={Name={["f4f531b1884e990c:6"]="气泡"},Description={["01ca43d608dc5ea9:17"]=S[14800]}}
 D.ClientTexts.BattlePetAbility[934]={Name={["f4f531b1884e990c:6"]="气泡"},Description={["7b25bbac4dd9db35:46"]="一个气泡将你包围，格挡接下来的2次攻击。"}}
 D.ClientTexts.BattlePetAbility[936]={Name={["0b88650031211739:3"]="鸣叫"}}
 D.ClientTexts.BattlePetAbility[937]={Name={["d5c5dafcbffbae63:11"]="心能虹吸"},Description={["ddb9ef3b74aea954:124"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n为使用者恢复相当于所造成伤害[points(1,3)]%的生命值。"}}
@@ -3042,7 +3042,7 @@ D.ClientTexts.BattlePetAbility[940]={Name={["365ca44b61eb170a:16"]="意志之触
 D.ClientTexts.BattlePetAbility[941]={Name={["1e62bbed282510aa:9"]="高纤维"},Description={["49ece46afdb7b709:43"]="移除使用者队伍的所有增益和有害效果。"}}
 D.ClientTexts.BattlePetAbility[942]={Name={["f037aa532bf82948:9"]="煎锅"}}
 D.ClientTexts.BattlePetAbility[943]={Name={["7c95222f31c82206:4"]="砍劈"}}
-D.ClientTexts.BattlePetAbility[944]={Name={["01d25ecca8f2390b:6"]="升温"},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[944]={Name={["01d25ecca8f2390b:6"]="升温"},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[945]={Name={["01d25ecca8f2390b:6"]="升温"}}
 D.ClientTexts.BattlePetAbility[954]={Name={["7f22189762ac2514:7"]="致盲"},Description={["b067ccd75d71d598:63"]="你的精准降低[abs(abilityStateMod( 41 , 954 ))]%。\r\n\r\n被致盲。"}}
 D.ClientTexts.BattlePetAbility[955]={Name={["ad023d9d97b182fa:17"]="精准降低"}}
@@ -3071,7 +3071,7 @@ D.ClientTexts.BattlePetAbility[981]={Name={["640466b95a492232:9"]="月之舞"},D
 D.ClientTexts.BattlePetAbility[983]={Name={["9c97d9b4049106ed:12"]="打脸.EXE"},Description={["d47365aaf12184ed:187"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n开始执行打脸程序，造成[StandardDamage(1,1)]点[School()]伤害，如果使用者率先攻击，则额外造成[StandardDamage(1,3)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1027]={Name={["3d105fc57a762f84:10"]="烈焰之羽"},Description={["07a5686f48c6bd3e:156"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n朝敌人掷出1-2根烈焰之羽，每一击造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果使用者率先攻击，则可额外攻击1次。"}}
 D.ClientTexts.BattlePetAbility[985]={Name={["2cf3602aed8bf56d:10"]="金币雨"}}
-D.ClientTexts.BattlePetAbility[986]={Name={["2cf3602aed8bf56d:10"]="金币雨"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[986]={Name={["2cf3602aed8bf56d:10"]="金币雨"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[989]={Name={["43cb158a40cba381:20"]="布林顿礼盒"},Description={["420c05eefdb90d1d:159"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n掷出一个布林顿礼盒，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果该技能未能命中目标，则使用者将被恢复[StandardDamage(1,4)]点生命值。"}}
 D.ClientTexts.BattlePetAbility[996]={Name={["961c097af5232daf:7"]="催眠曲"}}
 D.ClientTexts.BattlePetAbility[997]={Name={["e495ce513a0aa68c:9"]="复仇"},Description={["55459add29b2afbc:125"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n发起一记复仇打击，造成[petTypeName(abilityPetType())]伤害，伤害量等同于使用者上一次被击中时所承受的伤害。"}}
@@ -3104,7 +3104,7 @@ D.ClientTexts.BattlePetAbility[1025]={Name={["579169d7de969402:10"]="末日决�
 D.ClientTexts.BattlePetAbility[1026]={Name={["4ea1c94727d32fee:11"]="琥珀监牢"}}
 D.ClientTexts.BattlePetAbility[1028]={Name={["a6bb1e137a6966f6:9"]="统御"},Description={["6c4d16efd98f4940:76"]="伤害提高[abs(abilityStateMod( STATE_Mod_DamageDealtPercent, 1028 ))]%。"}}
 D.ClientTexts.BattlePetAbility[1029]={Name={["a6bb1e137a6966f6:9"]="统御"}}
-D.ClientTexts.BattlePetAbility[1030]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13466]}}
+D.ClientTexts.BattlePetAbility[1030]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13467]}}
 D.ClientTexts.BattlePetAbility[1031]={Name={["bc2f2283d03e203c:17"]="碧火闪电"},Description={["9edf5d2cb9a96215:118"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n招引碧火闪电，对敌方队伍造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1032]={Name={["692d5e121072d13f:17"]="天神的祝福"}}
 D.ClientTexts.BattlePetAbility[1033]={Name={["c3ec362e5be341e1:16"]="神圣之地"},Description={["c34b25f5407efe3e:97"]="该队伍下一个切入战场的宠物将获得天神的祝福，受到的伤害降低50%，持续3轮。"}}
@@ -3113,8 +3113,8 @@ D.ClientTexts.BattlePetAbility[1035]={Name={["11cbbb5bde1d8b96:14"]="灵火光�
 D.ClientTexts.BattlePetAbility[1036]={Name={["14f760b412b2f97b:10"]="焰甲冲击"},Description={["9399788fef372cfc:129"]=S[204]}}
 D.ClientTexts.BattlePetAbility[1039]={Name={["101ffc936322ae6e:6"]="灵气"},Description={["e612eec58b8a65be:53"]="命中几率提高[abs(abilityStateMod(41,1039))]%。"}}
 D.ClientTexts.BattlePetAbility[1040]={Name={["101ffc936322ae6e:6"]="灵气"}}
-D.ClientTexts.BattlePetAbility[1041]={Name={["01b1c3ad35669ce6:8"]=S[16287]}}
-D.ClientTexts.BattlePetAbility[1042]={Name={["01b1c3ad35669ce6:8"]=S[16287]},Description={["8c78915975a8ee78:76"]=S[15462]}}
+D.ClientTexts.BattlePetAbility[1041]={Name={["01b1c3ad35669ce6:8"]=S[16288]}}
+D.ClientTexts.BattlePetAbility[1042]={Name={["01b1c3ad35669ce6:8"]=S[16288]},Description={["8c78915975a8ee78:76"]=S[15463]}}
 D.ClientTexts.BattlePetAbility[1043]={Name={["c88f6d634830b602:10"]="吸血"},Description={["c523b012531abddb:134"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n汲取敌人最大生命值的[points(1,1)]%。\r\n\r\n为使用者恢复相当于所汲取生命值的[points(1,3)]%。"}}
 D.ClientTexts.BattlePetAbility[1044]={Name={["2975079af242c875:8"]="树皮术"},Description={["51ed4b21af9e559c:94"]="使目标从每次攻击中受到的伤害降低，最多降低[abs(abilityStateMod(71,1044))*AttackBonus()]点伤害。"}}
 D.ClientTexts.BattlePetAbility[1045]={Name={["2975079af242c875:8"]="树皮术"}}
@@ -3145,13 +3145,13 @@ D.ClientTexts.BattlePetAbility[1070]={Name={["c669f21adaaddb21:10"]="腐臭之�
 D.ClientTexts.BattlePetAbility[1071]={Name={["0d59013437a65c67:13"]="酒精炸药"},Description={["3fa4fb052af60716:194"]="酒精炸药在3轮后剧烈爆炸，造成[StandardDamage(getProcIndex(PROC_ON_AURA_REMOVED),1)]点[School()]伤害。该伤害无法被躲闪、格挡或避开。\r\n\r\n[StandardAccuracy(2,1)] 命中几率"}}
 D.ClientTexts.BattlePetAbility[1072]={Name={["0d59013437a65c67:13"]="酒精炸药"},Description={["464712f59bf6f274:296"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用酒精炸药浸泡目标。\r\n\r\n酒精炸药在3轮后爆炸，造成[StandardDamage(getProcIndex(PROC_ON_AURA_REMOVED , 1071),1,1071)]点[School()]伤害。该伤害无法被躲闪、格挡或避开。\r\n\r\n每个敌方宠物同一时间内只能受到一个酒精炸药的影响。"}}
 D.ClientTexts.BattlePetAbility[1073]={Name={["96d45ec809e57fd7:13"]="多刺甲壳"}}
-D.ClientTexts.BattlePetAbility[1074]={Name={["96d45ec809e57fd7:13"]="多刺甲壳"},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[1074]={Name={["96d45ec809e57fd7:13"]="多刺甲壳"},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[1076]={Name={["72418b852930f144:13"]="格林奇的礼物"},Description={["7c058a6f678979ca:85"]=S[187]}}
 D.ClientTexts.BattlePetAbility[1077]={Name={["47b12961e1f09b08:8"]="旋风腿"},Description={["f7a62b56c7b09cb3:122"]=S[201]}}
 D.ClientTexts.BattlePetAbility[1078]={Name={["65ce4be7efa57cea:7"]="包扎"},Description={["00546ca394490c20:70"]=S[6284]}}
 D.ClientTexts.BattlePetAbility[1079]={Name={["7c9533eb33c66176:4"]="棍击"},Description={["6e0a59d905080820:92"]=S[190]}}
 D.ClientTexts.BattlePetAbility[1080]={Name={["32e999315fe09e86:21"]="诡雷陷阱"},Description={["a9e91cd546b0f39e:168"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n在对手身边布下一圈诡雷陷阱。下一只被切换进入战斗的宠物将受到[StandardDamage(1,1,635)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[1081]={Name={["32e999315fe09e86:21"]="诡雷陷阱"},Description={["70afc12798e7e892:87"]=S[20168]}}
+D.ClientTexts.BattlePetAbility[1081]={Name={["32e999315fe09e86:21"]="诡雷陷阱"},Description={["70afc12798e7e892:87"]=S[20169]}}
 D.ClientTexts.BattlePetAbility[1082]={Name={["9a876dafe42ed4b8:10"]="玉火吐息"},Description={["3ffbabcbfdb23ed4:106"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n朝敌人喷吐玉火，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1083]={Name={["7c96a815b9df24fc:4"]="消隐"},Description={["7889aaa37655e9dc:40"]=S[2232]}}
 D.ClientTexts.BattlePetAbility[1084]={Name={["7c96a815b9df24fc:4"]="消隐"},Description={["1d2077bd3042e3ea:76"]="使用者消隐，躲避对手的攻击。然后使用者会切换一只随机宠物。"}}
@@ -3162,7 +3162,7 @@ D.ClientTexts.BattlePetAbility[1088]={Name={["0f8d49de917e696f:6"]="奈恩！"},
 D.ClientTexts.BattlePetAbility[1089]={Name={["7c94b41c06b7becd:4"]="首领"},Description={["4e359504a346e689:91"]="使受到的所有伤害降低50%。首领宠物从单次攻击中不会受到超过其最大生命值35%的伤害。"}}
 D.ClientTexts.BattlePetAbility[1090]={Name={["3e0dd2c24c3b6b77:20"]="首领：伤害降低"},Description={["d9fa59db480cb38a:64"]="首领宠物从单次攻击中不会受到超过其最大生命值35%的伤害。"}}
 D.ClientTexts.BattlePetAbility[1091]={Name={["5f4c611dc0de0cdc:11"]="白骨弹幕"}}
-D.ClientTexts.BattlePetAbility[1092]={Name={["5f4c611dc0de0cdc:11"]="白骨弹幕"},Description={["19dce4b6617cda9d:68"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[1092]={Name={["5f4c611dc0de0cdc:11"]="白骨弹幕"},Description={["19dce4b6617cda9d:68"]=S[15462]}}
 D.ClientTexts.BattlePetAbility[1093]={Name={["54dae0192ebfdc44:14"]="亡者战队"}}
 D.ClientTexts.BattlePetAbility[1094]={Name={["108fa195eeaf57c4:13"]="恐怖沙瓶"},Description={["2f98fa0b0323721a:108"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用伦巴手摇沙瓶猛击敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1095]={Name={["e8df1e891a7a923e:8"]="角刺"},Description={["d44e07e3a1e05bee:91"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n猛刺敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
@@ -3175,7 +3175,7 @@ D.ClientTexts.BattlePetAbility[1105]={Name={["87ee4b0722d65884:16"]="反射护�
 D.ClientTexts.BattlePetAbility[1106]={Name={["db6b5234cac1809d:13"]="天降鱼人"}}
 D.ClientTexts.BattlePetAbility[1107]={Name={["12f24bf69e6fedb3:10"]="解离"},Description={["66f0142809289517:38"]="移除敌人的所有增益和有害效果。"}}
 D.ClientTexts.BattlePetAbility[1108]={Name={["7c947865ffd1e578:4"]="狂吠"}}
-D.ClientTexts.BattlePetAbility[1109]={Name={["ed819197920ffc06:12"]="好东西"},Description={["f8b5e63cb6b064cb:66"]=S[15755]}}
+D.ClientTexts.BattlePetAbility[1109]={Name={["ed819197920ffc06:12"]="好东西"},Description={["f8b5e63cb6b064cb:66"]=S[15756]}}
 D.ClientTexts.BattlePetAbility[1110]={Name={["2972f248938c1c33:9"]="雪崩"},Description={["6a8ede21bb69ea34:134"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n召唤一场雪崩冲击你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，由所有敌人均摊。"}}
 D.ClientTexts.BattlePetAbility[1111]={Name={["b19375060b7e7993:13"]="憨头憨脑"},Description={["d9788f1442792f3b:63"]=S[1560]}}
 D.ClientTexts.BattlePetAbility[1112]={Name={["b19375060b7e7993:13"]="憨头憨脑"}}
@@ -3183,24 +3183,24 @@ D.ClientTexts.BattlePetAbility[1116]={Name={["b1e920e11e29936c:11"]="召唤群�
 D.ClientTexts.BattlePetAbility[1119]={Name={["380eaa4f873b8f46:20"]="正义鼓舞"},Description={["0dfa8f952a8cde40:30"]="伤害和速度提高100%。"}}
 D.ClientTexts.BattlePetAbility[1120]={Name={["562ad60a9f54e20b:15"]="攻击降低"},Description={["dd1426411a2da690:76"]="在下一次攻击中造成的伤害降低 [abs(abilityStateMod( 23, 1120 ))]%。"}}
 D.ClientTexts.BattlePetAbility[1121]={Name={["369ea997806c484c:8"]="乾坤一掷"},Description={["82b9124c660e7a9b:198"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害，并使目标陷入贪婪，持续[duration(1,2)]轮。\r\n\r\n在贪婪状态下，目标可造成额外25%的伤害，并额外受到50%的伤害。"}}
-D.ClientTexts.BattlePetAbility[1122]={Name={["006a6445b86e0120:6"]="贪婪"},Description={["33148b7b1acac2e4:106"]=S[20631]}}
+D.ClientTexts.BattlePetAbility[1122]={Name={["006a6445b86e0120:6"]="贪婪"},Description={["33148b7b1acac2e4:106"]=S[20632]}}
 D.ClientTexts.BattlePetAbility[1123]={Name={["12f24bf69e6fedb3:10"]="扰魔"},Description={["66f0142809289517:38"]="移除敌人的所有增益和有害效果。"}}
 D.ClientTexts.BattlePetAbility[1124]={Name={["1539e8b71870d0cc:6"]="传送"},Description={["7889aaa37655e9dc:40"]=S[2232]}}
 D.ClientTexts.BattlePetAbility[1125]={Name={["1539e8b71870d0cc:6"]="传送"},Description={["26cd1921f78cd680:116"]="使用者穿过魔法传送门，躲避对手的攻击。然后使用者会自动切换至生命值最高的宠物。"}}
-D.ClientTexts.BattlePetAbility[1128]={Name={["c555aa37e8db9780:13"]=S[16409]},Description={["f67c3b63d41d9d22:68"]="爆击几率提高[abs(abilityStateMod(40, 1128))]%。"}}
+D.ClientTexts.BattlePetAbility[1128]={Name={["c555aa37e8db9780:13"]=S[16410]},Description={["f67c3b63d41d9d22:68"]="爆击几率提高[abs(abilityStateMod(40, 1128))]%。"}}
 D.ClientTexts.BattlePetAbility[1223]={Name={["a67ef8d72ddeef7e:12"]="恶意切割"},Description={["953e24c67e41dadf:92"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n切削敌人，造成[StandardDamage(1,1)] [School()]点伤害。"}}
 D.ClientTexts.BattlePetAbility[1231]={Name={["de8a2c20cc7db651:12"]="吞噬魔法"},Description={["30e2646d19e5fcc4:76"]="恢复[StandardHealing(1,5)]点生命值，并移除使用者身上所有的增益和减益效果。"}}
 D.ClientTexts.BattlePetAbility[1232]={Name={["b22e21746511905b:14"]="安苏的祝福"}}
 D.ClientTexts.BattlePetAbility[1233]={Name={["411b86e5813b3788:9"]="黑暗利爪"},Description={["db4d217e6e30a341:102"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n邪恶地撕扯敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1238]={Name={["63b882a99a9a10be:11"]="暗影之爪"},Description={["f321dc1c823d9397:111"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用利爪撕扯目标，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[1273]={Name={["f6a91ff5c64c0874:6"]=S[21482]},Description={["db90fcc4d2a6570f:128"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n鲁莽地攻击你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，伤害由所有敌人均摊。"}}
+D.ClientTexts.BattlePetAbility[1273]={Name={["f6a91ff5c64c0874:6"]=S[21483]},Description={["db90fcc4d2a6570f:128"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n鲁莽地攻击你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，伤害由所有敌人均摊。"}}
 D.ClientTexts.BattlePetAbility[1287]={Name={["160e6dedfb5ea53a:8"]="狂鱼来袭"},Description={["00bc4f455e459e02:141"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n召唤一条发怒的狂鱼攻击你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，伤害由敌人均摊。"}}
 D.ClientTexts.BattlePetAbility[1292]={Name={["1d8d1ec76d2a87f2:6"]="干掉它"},Description={["7832ae4560efe320:11"]="站那别动。"}}
 D.ClientTexts.BattlePetAbility[1301]={Name={["14c73add7eb95600:6"]="狼吞虎咽"},Description={["ddb9ef3b74aea954:124"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n为使用者恢复相当于造成伤害[points(1,3)]%的生命值。"}}
-D.ClientTexts.BattlePetAbility[1302]={Name={["c555aa37e8db9780:13"]=S[16409]},Description={["270c77dde8e0dc24:68"]="爆击几率提高[abs(abilityStateMod(40, 1302))]%。"}}
-D.ClientTexts.BattlePetAbility[1303]={Name={["c555aa37e8db9780:13"]=S[16409]},Description={["2961a07eff0d3d63:68"]="爆击几率提高[abs(abilityStateMod(40, 1303))]%。"}}
-D.ClientTexts.BattlePetAbility[1304]={Name={["c555aa37e8db9780:13"]=S[16409]},Description={["2bb6c91f15399ea2:68"]="爆击几率提高[abs(abilityStateMod(40, 1304))]%。"}}
-D.ClientTexts.BattlePetAbility[1305]={Name={["c555aa37e8db9780:13"]=S[16409]},Description={["2e0bf1c02b65ffe1:68"]="爆击几率提高[abs(abilityStateMod(40, 1305))]%。"}}
+D.ClientTexts.BattlePetAbility[1302]={Name={["c555aa37e8db9780:13"]=S[16410]},Description={["270c77dde8e0dc24:68"]="爆击几率提高[abs(abilityStateMod(40, 1302))]%。"}}
+D.ClientTexts.BattlePetAbility[1303]={Name={["c555aa37e8db9780:13"]=S[16410]},Description={["2961a07eff0d3d63:68"]="爆击几率提高[abs(abilityStateMod(40, 1303))]%。"}}
+D.ClientTexts.BattlePetAbility[1304]={Name={["c555aa37e8db9780:13"]=S[16410]},Description={["2bb6c91f15399ea2:68"]="爆击几率提高[abs(abilityStateMod(40, 1304))]%。"}}
+D.ClientTexts.BattlePetAbility[1305]={Name={["c555aa37e8db9780:13"]=S[16410]},Description={["2e0bf1c02b65ffe1:68"]="爆击几率提高[abs(abilityStateMod(40, 1305))]%。"}}
 D.ClientTexts.BattlePetAbility[1334]={Name={["98db1c414729f4a2:11"]="佯冲"},Description={["b9938165d815ac1a:41"]="假装极为凶猛地冲向敌人！"}}
 D.ClientTexts.BattlePetAbility[1335]={Name={["104523621b62b7f7:5"]="嗷！"},Description={["24fd996df30808c2:77"]="想象你是一头真正的雷象，如果这一切都是真的，你能造成多大的伤害呢。"}}
 D.ClientTexts.BattlePetAbility[1336]={Name={["5a39aa066845294b:33"]="谁是这世上最好的雷象？"},Description={["3fab517724761c00:52"]="尽情享受你作为最伟大毛绒玩具的优越感吧。"}}
@@ -3210,7 +3210,7 @@ D.ClientTexts.BattlePetAbility[1343]={Name={["523547c4b5c1bd73:15"]="森林之�
 D.ClientTexts.BattlePetAbility[1344]={Name={["1928b5636fc02540:6"]="庇护所"}}
 D.ClientTexts.BattlePetAbility[1345]={Name={["01b63ed36de4f26a:7"]="小憩"},Description={["5551fde84daffbb3:14"]="小睡一会儿。"}}
 D.ClientTexts.BattlePetAbility[1346]={Name={["e0cde327c5569e5e:13"]="可爱至极"},Description={["9b9acc55614e4292:68"]="使你的躲闪几率提高[abs(abilityStateMod(73, 1346))]%。"}}
-D.ClientTexts.BattlePetAbility[1348]={Name={["f2815fbfbd00ce16:6"]="沉睡"},Description={["c8c22b4d284de9c8:43"]=S[13467]}}
+D.ClientTexts.BattlePetAbility[1348]={Name={["f2815fbfbd00ce16:6"]="沉睡"},Description={["c8c22b4d284de9c8:43"]=S[13468]}}
 D.ClientTexts.BattlePetAbility[1353]={Name={["d8cd7c0a5f6bc597:11"]="奥术斩"},Description={["5ec6259e8c9e5ca1:153"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n冲击敌人，造成[StandardDamage(1,2)]点[School()]伤害，如果使用者率先攻击，则造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1354]={Name={["dd88bb268149c70b:17"]="烈焰之犬"}}
 D.ClientTexts.BattlePetAbility[1355]={Name={["dd88bb268149c70b:17"]="烈焰之犬"},Description={["bbbe974db38dc94e:102"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n每轮对敌方宠物造成2次[School()]伤害，每次[StandardDamage(1,1)]点。"}}
@@ -3218,7 +3218,7 @@ D.ClientTexts.BattlePetAbility[1356]={Name={["176028b74fb04044:14"]="炼狱畜�
 D.ClientTexts.BattlePetAbility[1357]={Name={["e17387340d0580f3:9"]="狂哮"},Description={["8f5c4398bd1a6ccd:150"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用难以置信的力量咆哮，造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n该攻击无法使对手的生命值降到1点以下。"}}
 D.ClientTexts.BattlePetAbility[1358]={Name={["7d71d4f4bfcd6dfb:12"]="无法攻击"},Description={["4a7b662de3ac84b8:17"]="无法被选作目标。"}}
 D.ClientTexts.BattlePetAbility[1360]={Name={["3d51790753dfef28:13"]="厚积薄发"},Description={["93ddd25f48862c6a:165"]=S[212]}}
-D.ClientTexts.BattlePetAbility[1365]={Description={["ad09d5a543e839da:141"]=S[21298]}}
+D.ClientTexts.BattlePetAbility[1365]={Description={["ad09d5a543e839da:141"]=S[21299]}}
 D.ClientTexts.BattlePetAbility[1366]={Name={["235f672015c0eb31:17"]="强效天启"},Description={["de371949335ec77a:101"]="陨星从扭曲虚空坠落。当它着陆时，你的队伍中的所有宠物都会死亡。\r\n\r\n该效果无法被移除。"}}
 D.ClientTexts.BattlePetAbility[1367]={Name={["235f672015c0eb31:17"]="强效天启"}}
 D.ClientTexts.BattlePetAbility[1368]={Name={["3929d0d20fb89723:11"]="德拉诺陷阱"},Description={["888a142e4509d83f:78"]="尝试抓住一只生命值低于35%的宠物。你每失败一次，抓捕几率即可提高45%。"}}
@@ -3242,7 +3242,7 @@ D.ClientTexts.BattlePetAbility[1398]={Name={["2c68e2ab18795676:15"]="冲冠一�
 D.ClientTexts.BattlePetAbility[1399]={Name={["2c68e2ab18795676:15"]="冲冠一怒"},Description={["bd87d71f79b2e418:55"]="造成的伤害提高[abs(abilityStateMod(23, 1399))]%。"}}
 D.ClientTexts.BattlePetAbility[1400]={Name={["cdaa51cd5eba18d0:16"]="大毁杀"},Description={["470aa300e04a6c2b:106"]=S[205]}}
 D.ClientTexts.BattlePetAbility[1401]={Name={["83a2024c1eb20fbd:15"]="牛肉在哪儿呢？"}}
-D.ClientTexts.BattlePetAbility[1402]={Name={["0b8b98dbcb55f74a:12"]="母乳"},Description={["f8b5e63cb6b064cb:66"]=S[15755]}}
+D.ClientTexts.BattlePetAbility[1402]={Name={["0b8b98dbcb55f74a:12"]="母乳"},Description={["f8b5e63cb6b064cb:66"]=S[15756]}}
 D.ClientTexts.BattlePetAbility[1407]={Name={["17dfe7fab270915b:8"]="深度烧伤"},Description={["16a2a6060f94737f:113"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n造成[StandardDamage(1,1)]点[School()]伤害。\r\n\r\n如果目标正在燃烧，则伤害加倍。"}}
 D.ClientTexts.BattlePetAbility[1408]={Name={["3e3c46ef93ccf1b4:7"]="重铸"}}
 D.ClientTexts.BattlePetAbility[1410]={Name={["d16ee91c524f4c07:14"]="纳鲁的赐福"},Description={["520d48eacc65252d:45"]=S[866]}}
@@ -3291,14 +3291,14 @@ D.ClientTexts.BattlePetAbility[1595]={Name={["84aa76f97edcca82:15"]="全能金�
 D.ClientTexts.BattlePetAbility[1596]={Name={["8f43950a63ba4599:13"]="启动魔像"},Description={["112e42c855f1da69:27"]="使用者切换一只随机宠物。"}}
 D.ClientTexts.BattlePetAbility[1597]={Name={["09d7d8e80be2eaf3:17"]=S[8468]}}
 D.ClientTexts.BattlePetAbility[1598]={Name={["e4e6053cb938271d:14"]=S[526]}}
-D.ClientTexts.BattlePetAbility[1599]={Name={["e4e6053cb938271d:14"]=S[526]},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[1599]={Name={["e4e6053cb938271d:14"]=S[526]},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[1625]={Name={["0a1cf65bbf048934:11"]="特斯拉炮"},Description={["9d8c9b2f9fa84bb0:89"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n震击敌人，造成[StandardDamage(1,1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1626]={Name={["716ac789a0b1e83e:10"]="原始暴怒"}}
 D.ClientTexts.BattlePetAbility[1627]={Name={["0c1b4224c19859c5:16"]="护盾发射器"}}
 D.ClientTexts.BattlePetAbility[1628]={Name={["0c1b4224c19859c5:16"]="护盾发射器"},Description={["a381d36920c6be10:94"]="使目标每次被击中时受到的伤害最多降低[abs(abilityStateMod(71,1628))*AttackBonus()]点。"}}
 D.ClientTexts.BattlePetAbility[1629]={Name={["716ac789a0b1e83e:10"]="原始暴怒"},Description={["09cf5cb563c4fea6:93"]="造成的伤害提高[abilityStateMod(23, 1629)]%，受到的伤害提高[abilityStateMod(24, 1629)]%。"}}
 D.ClientTexts.BattlePetAbility[1670]={Name={["c18c795ae9afad1d:18"]="闪电导体"}}
-D.ClientTexts.BattlePetAbility[1672]={Name={["dd7f97397de98b68:15"]="溃脓毒汁"},Description={["0e6c2116a3eb0c59:62"]=S[15460]}}
+D.ClientTexts.BattlePetAbility[1672]={Name={["dd7f97397de98b68:15"]="溃脓毒汁"},Description={["0e6c2116a3eb0c59:62"]=S[15461]}}
 D.ClientTexts.BattlePetAbility[1673]={Name={["7cd6759a8ea828c5:7"]="闪避"},Description={["404f87588a7eff95:68"]="使你躲闪攻击的几率提高[abs(abilityStateMod( 73, 1673))]%。"}}
 D.ClientTexts.BattlePetAbility[1674]={Name={["d932fc419627d836:11"]="魔法之鳞"},Description={["64e712a47dcb3ef5:77"]="克罗马顿无视高于[abs(abilityStateMod(200,1674))]点伤害的攻击。"}}
 D.ClientTexts.BattlePetAbility[1679]={Name={["3f7e9384373650b1:9"]="烟雾弹"},Description={["a8e842ed465ef7cc:87"]="在使用该技能时，可以让队伍避开敌人在本轮发起的攻击。\r\n\r\n该技能总能取得先手。"}}
@@ -3316,8 +3316,8 @@ D.ClientTexts.BattlePetAbility[1723]={Name={["9277844d9f9adac6:10"]="队列闪�
 D.ClientTexts.BattlePetAbility[1724]={Name={["ef3a58665b2d8e3f:23"]="转化：点燃敌人"},Description={["10ac92789a09e751:107"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n将敌人的面孔化为火焰，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1725]={Name={["7c97fedf1de4a43c:4"]="嚎叫"},Description={["df26e071c02bebe6:59"]="使你所受到的伤害提高[abs(abilityStateMod( 24, 1725 ))]%。"}}
 D.ClientTexts.BattlePetAbility[1726]={Name={["029724b5db32a688:10"]="易伤"},Description={["e17c0912d6584d25:59"]="使你所受到的伤害提高[abs(abilityStateMod( 24, 1726 ))]%。"}}
-D.ClientTexts.BattlePetAbility[1863]={Name={["d6f3b7fd4d4bb1f6:14"]="烈焰射击就绪"},Description={["750bb26a52cd8141:20"]=S[16156]}}
-D.ClientTexts.BattlePetAbility[1864]={Name={["bd47ccc69ba89925:14"]="冰霜射击就绪"},Description={["750bb26a52cd8141:20"]=S[16156]}}
+D.ClientTexts.BattlePetAbility[1863]={Name={["d6f3b7fd4d4bb1f6:14"]="烈焰射击就绪"},Description={["750bb26a52cd8141:20"]=S[16157]}}
+D.ClientTexts.BattlePetAbility[1864]={Name={["bd47ccc69ba89925:14"]="冰霜射击就绪"},Description={["750bb26a52cd8141:20"]=S[16157]}}
 D.ClientTexts.BattlePetAbility[1731]={Name={["da4ce7e48b56ed5f:9"]="梦魇"}}
 D.ClientTexts.BattlePetAbility[1732]={Name={["4f361a6a95917579:16"]="治疗减免"},Description={["d7479228a058ff7d:56"]=S[4979]}}
 D.ClientTexts.BattlePetAbility[1734]={Name={["15c5bb587d46a083:12"]=S[10568]},Description={["d9788f1442792f3b:63"]=S[1560]}}
@@ -3342,7 +3342,7 @@ D.ClientTexts.BattlePetAbility[1770]={Name={["0f901fed729dd000:5"]="孵化"}}
 D.ClientTexts.BattlePetAbility[1771]={Name={["56b45eb72598585a:13"]="警告啼鸣"},Description={["ab1d93c49aa75da9:75"]="你的爆击几率提高[abs(abilityStateMod(40,1771))]%。"}}
 D.ClientTexts.BattlePetAbility[1772]={Name={["56b45eb72598585a:13"]="警告啼鸣"}}
 D.ClientTexts.BattlePetAbility[1773]={Name={["a2a59d9058d6d371:15"]="隼龙围攻！"}}
-D.ClientTexts.BattlePetAbility[1786]={Name={["5b419c0d5497c146:10"]=S[21400]},Description={["1a796b9d5779f08c:104"]=S[210]}}
+D.ClientTexts.BattlePetAbility[1786]={Name={["5b419c0d5497c146:10"]=S[21401]},Description={["1a796b9d5779f08c:104"]=S[210]}}
 D.ClientTexts.BattlePetAbility[1787]={Name={["992789c1a6973ff0:11"]="野性打击"},Description={["f52d3f948fed4ff9:163"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n无情地冲向敌人，造成[StandardDamage(1,1)]点[School()]伤害并对其自身造成[SimpleDamage(1,3)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1796]={Name={["1506e5c75f45a8b8:13"]="大团圆"}}
 D.ClientTexts.BattlePetAbility[1797]={Name={["10da0e418bceaf56:12"]="垃圾倾倒"},Description={["00be0f71ebfeeb86:145"]=S[213]}}
@@ -3351,25 +3351,25 @@ D.ClientTexts.BattlePetAbility[1857]={Name={["3e3a6a0a01cdb4fd:7"]="反射"},Des
 D.ClientTexts.BattlePetAbility[1858]={Name={["05545e1d9ff67fba:9"]="法术吞噬"}}
 D.ClientTexts.BattlePetAbility[1859]={Name={["05545e1d9ff67fba:9"]="法术吞噬"}}
 D.ClientTexts.BattlePetAbility[1860]={Name={["8bae6200905f22f7:10"]="火炮射击"},Description={["08c21eec91a26c09:126"]=S[195]}}
-D.ClientTexts.BattlePetAbility[1861]={Name={["aa4397b59ab7d48c:15"]="火炮射击就绪"},Description={["750bb26a52cd8141:20"]=S[16156]}}
+D.ClientTexts.BattlePetAbility[1861]={Name={["aa4397b59ab7d48c:15"]="火炮射击就绪"},Description={["750bb26a52cd8141:20"]=S[16157]}}
 D.ClientTexts.BattlePetAbility[1862]={Name={["37ef35486559210d:9"]="烈焰射击"},Description={["08c21eec91a26c09:126"]=S[195]}}
 D.ClientTexts.BattlePetAbility[1865]={Name={["0637e8716e002f1e:9"]="冰霜射击"},Description={["08c21eec91a26c09:126"]=S[195]}}
-D.ClientTexts.BattlePetAbility[1866]={Name={["c3cb9a027cc57e43:15"]="奥术射击就绪"},Description={["750bb26a52cd8141:20"]=S[16156]}}
+D.ClientTexts.BattlePetAbility[1866]={Name={["c3cb9a027cc57e43:15"]="奥术射击就绪"},Description={["750bb26a52cd8141:20"]=S[16157]}}
 D.ClientTexts.BattlePetAbility[1867]={Name={["2d5b802dd6fac480:10"]="奥术射击"},Description={["08c21eec91a26c09:126"]=S[195]}}
-D.ClientTexts.BattlePetAbility[1874]={Name={["01b1d9c837e5ec4f:8"]=S[16150]},Description={["0e6c2116a3eb0c59:62"]=S[15460]}}
-D.ClientTexts.BattlePetAbility[1875]={Name={["01b1d9c837e5ec4f:8"]=S[16150]}}
+D.ClientTexts.BattlePetAbility[1874]={Name={["01b1d9c837e5ec4f:8"]=S[16151]},Description={["0e6c2116a3eb0c59:62"]=S[15461]}}
+D.ClientTexts.BattlePetAbility[1875]={Name={["01b1d9c837e5ec4f:8"]=S[16151]}}
 D.ClientTexts.BattlePetAbility[1880]={Name={["b1fc539973702832:12"]="疫病气息"},Description={["9196eb48b23ae8d3:109"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n向敌人喷吐腐朽的烟雾，造成[StandardDamage(1,1)]点[School()]伤害。"}}
-D.ClientTexts.BattlePetAbility[1889]={Name={["bde05bf6cb3de503:13"]="暮光烈焰"},Description={["57a4dac146f11b6c:59"]=S[15469]}}
+D.ClientTexts.BattlePetAbility[1889]={Name={["bde05bf6cb3de503:13"]="暮光烈焰"},Description={["57a4dac146f11b6c:59"]=S[15470]}}
 D.ClientTexts.BattlePetAbility[1890]={Name={["2c8aa2d7017fe986:12"]="暮光之火"}}
 D.ClientTexts.BattlePetAbility[1895]={Name={["ad2949d3309c13c0:8"]="嗅探"},Description={["d5f02bf1bc6ba08c:111"]=S[198]}}
 D.ClientTexts.BattlePetAbility[1904]={Name={["538b30ed44551726:8"]="时间停滞"},Description={["c7e1fb0d3f06b644:52"]="你切换入场的下一个宠物所有技能的冷却时间清零。"}}
 D.ClientTexts.BattlePetAbility[1905]={Name={["538b30ed44551726:8"]="时间停滞"},Description={["878ea7803788fce1:50"]="你切换入场的下一个宠物所有技能的冷却时间重置。"}}
 D.ClientTexts.BattlePetAbility[1906]={Name={["8efcf2f0f31b5321:10"]="假死"},Description={["2a1ac6d221137199:39"]="如果友方宠物死亡，则将其生命值恢复至50%。"}}
 D.ClientTexts.BattlePetAbility[1907]={Name={["8efcf2f0f31b5321:10"]="假死"}}
-D.ClientTexts.BattlePetAbility[1912]={Name={["9a9cb389e99ece00:10"]=S[18674]},Description={["167ffe2e549782e5:204"]="使用者跃过一道虚空传送门，躲避对手的攻击，但是会对自身造成[StandardDamage(getProcIndex(PROC_ON_ROUND_START),1)]点[School()]伤害。使用者随后会自动切换为你的生命值最高的宠物。"}}
+D.ClientTexts.BattlePetAbility[1912]={Name={["9a9cb389e99ece00:10"]=S[18675]},Description={["167ffe2e549782e5:204"]="使用者跃过一道虚空传送门，躲避对手的攻击，但是会对自身造成[StandardDamage(getProcIndex(PROC_ON_ROUND_START),1)]点[School()]伤害。使用者随后会自动切换为你的生命值最高的宠物。"}}
 D.ClientTexts.BattlePetAbility[1917]={Name={["0190717fc4101586:6"]="锤子"},Description={["e7fbae7ba2d118ac:115"]=S[206]}}
-D.ClientTexts.BattlePetAbility[1918]={Name={["41d86d2b835f2bb8:8"]=S[16177]},Description={["8c78915975a8ee78:76"]=S[15462]}}
-D.ClientTexts.BattlePetAbility[1919]={Name={["41d86d2b835f2bb8:8"]=S[16177]}}
+D.ClientTexts.BattlePetAbility[1918]={Name={["41d86d2b835f2bb8:8"]=S[16178]},Description={["8c78915975a8ee78:76"]=S[15463]}}
+D.ClientTexts.BattlePetAbility[1919]={Name={["41d86d2b835f2bb8:8"]=S[16178]}}
 D.ClientTexts.BattlePetAbility[1920]={Name={["0f3b5e121579c91b:5"]="夹钳"}}
 D.ClientTexts.BattlePetAbility[1921]={Name={["ab36cdc6cc449d2f:11"]="铁钻冲锋"},Description={["c1057484fc5a9291:118"]=S[184]}}
 D.ClientTexts.BattlePetAbility[1922]={Name={["c630d20195ce9d78:9"]="风暴线圈"},Description={["1a796b9d5779f08c:104"]=S[210]}}
@@ -3388,13 +3388,13 @@ D.ClientTexts.BattlePetAbility[1957]={Name={["3a91d25be059ba4e:9"]="复苏"}}
 D.ClientTexts.BattlePetAbility[1958]={Name={["c1fa664754d2635c:17"]="强化打击"},Description={["3cb9239e59e70fcb:227"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n使用暗影利刃挥砍敌人，造成[StandardDamage(1,1)]点[School()]伤害。 \r\n\r\n每使用一次，伤害就提高[FormatDamage(5*AttackBonus())]点，最多可造成[FormatDamage(25 *AttackBonus())]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1959]={Name={["aaa3370824b999a1:11"]="大力顺劈"},Description={["82bfad7bbe5cd57a:118"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n顺劈你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，由所有敌人均摊。"}}
 D.ClientTexts.BattlePetAbility[1960]={Name={["8c722f5fc270255e:17"]="暮光陨星"},Description={["e314dda34467017e:140"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n召唤一颗暮光陨星打击你的敌人，造成[StandardDamage(1,1)]点[School()]伤害，由所有敌人均摊。"}}
-D.ClientTexts.BattlePetAbility[1961]={Name={["f673285f29121db4:12"]="触手之刺"},Description={["11ab34552b552866:211"]=S[15467]}}
+D.ClientTexts.BattlePetAbility[1961]={Name={["f673285f29121db4:12"]="触手之刺"},Description={["11ab34552b552866:211"]=S[15468]}}
 D.ClientTexts.BattlePetAbility[1962]={Name={["f673285f29121db4:12"]="触手之刺"}}
 D.ClientTexts.BattlePetAbility[1963]={Name={["60c351b3039ddc8a:10"]="强风打击"},Description={["13f60801c6af23e4:128"]=S[207]}}
 D.ClientTexts.BattlePetAbility[1964]={Name={["fe0bba5259a6cbb3:12"]="黑曜石之咬"},Description={["b766a3d9c2ed4dbc:108"]="[StandardAccuracy(1,1)] 命中几率\r\n\r\n用黑曜石利齿猛咬敌人，造成[StandardDamage(1, 1)]点[School()]伤害。"}}
 D.ClientTexts.BattlePetAbility[1965]={Name={["fe1564c3a6c630d4:6"]="狂乱"}}
 D.ClientTexts.BattlePetAbility[1966]={Name={["2d1b6bfdb0220ef4:10"]="巨型钉刺"}}
-D.ClientTexts.BattlePetAbility[1967]={Name={["bec524d88fc450df:8"]=S[18672]},Description={["9399788fef372cfc:129"]=S[208]}}
+D.ClientTexts.BattlePetAbility[1967]={Name={["bec524d88fc450df:8"]=S[18673]},Description={["9399788fef372cfc:129"]=S[208]}}
 D.ClientTexts.BattlePetAbility[1968]={Name={["6226e7b945da9880:12"]="安塔恩火炮"}}
 D.ClientTexts.BattlePetAbility[2009]={Name={["bea87af3e2564684:15"]="特快专递"},Description={["bd1d26880a4d2f73:102"]=S[202]}}
 D.ClientTexts.BattlePetAbility[2010]={Name={["f1eb3c3fcbeeec20:9"]="蜗牛邮件"},Description={["93ddd25f48862c6a:165"]=S[212]}}
@@ -3404,19 +3404,19 @@ D.ClientTexts.BattlePetAbility[2013]={Name={["ba0e91a623afcff5:11"]="包裹投�
 D.ClientTexts.BattlePetAbility[2023]={Name={["85b856605163f3ff:8"]="垃圾邮件"}}
 D.ClientTexts.BattlePetAbility[1934]={Name={["f4c08a1b47a7e0c0:6"]="呼吸"},Description={["f846a5644bd26a1f:114"]=S[194]}}
 D.ClientTexts.BattlePetAbility[928]={Name={["24db8fc3874c842c:14"]="减速"},Description={["f8050c2c44c7402f:46"]="速度降低[abs(abilityStateMod(25,154))]%。"}}
-D.ClientTexts.BattlePetAbility[927]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13466]}}
-D.ClientTexts.BattlePetAbility[1671]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13466]}}
+D.ClientTexts.BattlePetAbility[927]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13467]}}
+D.ClientTexts.BattlePetAbility[1671]={Name={["af42b70680ea14b3:7"]="昏迷"},Description={["fb0b87eb65cf3324:28"]=S[13467]}}
 D.ClientTexts.BattlePetAbility[1733]={Name={["15c5bb587d46a083:12"]=S[10568]}}
 D.ClientTexts.BattlePetAbility[1518]={Name={["7c95316c33b25c9f:4"]="爪击"},Description={["0e2d5ae01c987ef1:114"]=S[192]}}
-D.ClientTexts.BattlePetAbility[926]={Name={["f2815fbfbd00ce16:6"]="昏睡"},Description={["c8c22b4d284de9c8:43"]=S[13467]}}
-D.ClientTexts.BattlePetAbility[860]={Name={["4ff660559f747ec0:12"]=S[16287]}}
+D.ClientTexts.BattlePetAbility[926]={Name={["f2815fbfbd00ce16:6"]="昏睡"},Description={["c8c22b4d284de9c8:43"]=S[13468]}}
+D.ClientTexts.BattlePetAbility[860]={Name={["4ff660559f747ec0:12"]=S[16288]}}
 D.ClientTexts.BattlePetAbility[848]={Name={["0635492788d78990:9"]=S[2874]},Description={["f6fd58d5416c1424:31"]="该宠物无法被切换。\r\n\r\n被冰冻。"}}
 D.ClientTexts.BattlePetAbility[1761]={Name={["01ccc23e19dbc0e5:9"]="骨头风暴"},Description={["f0f47667e5f84a40:128"]=S[188]}}
 D.ClientTexts.BattlePetAbility[1762]={Name={["01ccc23e19dbc0e5:9"]="骨头风暴"},Description={["f0f47667e5f84a40:128"]=S[188]}}
-D.ClientTexts.BattlePetAbility[661]={Name={["cd03c60194fe1664:18"]="散播感染"},Description={["0d9dbdc595e64662:79"]=S[15468]}}
-D.ClientTexts.BattlePetAbility[683]={Name={["d39c1a56584484b7:10"]="天启"},Description={["ad09d5a543e839da:141"]=S[21298]}}
+D.ClientTexts.BattlePetAbility[661]={Name={["cd03c60194fe1664:18"]="散播感染"},Description={["0d9dbdc595e64662:79"]=S[15469]}}
+D.ClientTexts.BattlePetAbility[683]={Name={["d39c1a56584484b7:10"]="天启"},Description={["ad09d5a543e839da:141"]=S[21299]}}
 D.ClientTexts.BattlePetAbility[1840]={Name={["0f29688ad584e7e5:5"]="迅猛突袭"},Description={["067989e31e428862:149"]=S[197]}}
-D.ClientTexts.BattlePetAbility[1075]={Name={["96d45ec809e57fd7:13"]="多刺甲壳"},Description={["71de524371bf4138:96"]=S[15344]}}
+D.ClientTexts.BattlePetAbility[1075]={Name={["96d45ec809e57fd7:13"]="多刺甲壳"},Description={["71de524371bf4138:96"]=S[15345]}}
 D.ClientTexts.BattlePetAbility[1378]={Name={["380eaa4f873b8f46:20"]="正义鼓舞"}}
 D.ClientTexts.BattlePetAbility[1359]={Name={["7c947865ffd1e578:4"]="狂吠"}}
 D.ClientTexts.BattlePetAbility[1443]={Name={["b1e920e11e29936c:11"]="召唤兽群"}}
@@ -4735,23 +4735,23 @@ D.ClientTextIndex.BattlePetAbility.Description["82bfad7bbe5cd57a:118"]=1959
 D.ClientTextIndex.BattlePetAbility.Description["e314dda34467017e:140"]=1960
 D.ClientTextIndex.BattlePetAbility.Description["b766a3d9c2ed4dbc:108"]=1964
 D.ClientTextIndex.BattlePetAbility.Description["2da37fccf9f81423:102"]=2013
-D.ClientTexts.Encounter[89]={Name={["00d81f3d9a30733e:7"]=S[14795]},Description={["675d40496c55bea4:201"]="只是一阵心血来潮，格拉布托克就释放出强大的魔法力量，把他的食人魔山给夷为了平地。听到这个消息，迪菲亚立刻雇佣了这只硕大的食人魔法师作为死亡矿井的工头，借助他毁灭性的天赋来监督那些劳工。"}}
-D.ClientTexts.Encounter[90]={Name={["bfba017a185bdc9f:16"]=S[19634]},Description={["cbb31c1ca8d0ce95:240"]="赫利克斯从前是锈水财阀的工匠，可之后他收到了迪菲亚兄弟会的一笔款项，足以让他那样的无名部落工程师所做的一切都一文不值。就像所有精明的地精会做的那样，他迅速接下了这份工作，声称不再对前任雇主效忠。"}}
+D.ClientTexts.Encounter[89]={Name={["00d81f3d9a30733e:7"]=S[14796]},Description={["675d40496c55bea4:201"]="只是一阵心血来潮，格拉布托克就释放出强大的魔法力量，把他的食人魔山给夷为了平地。听到这个消息，迪菲亚立刻雇佣了这只硕大的食人魔法师作为死亡矿井的工头，借助他毁灭性的天赋来监督那些劳工。"}}
+D.ClientTexts.Encounter[90]={Name={["bfba017a185bdc9f:16"]=S[19635]},Description={["cbb31c1ca8d0ce95:240"]="赫利克斯从前是锈水财阀的工匠，可之后他收到了迪菲亚兄弟会的一笔款项，足以让他那样的无名部落工程师所做的一切都一文不值。就像所有精明的地精会做的那样，他迅速接下了这份工作，声称不再对前任雇主效忠。"}}
 D.ClientTexts.Encounter[91]={Name={["cbf165a31e414366:13"]="死神5000"},Description={["910da3eed9a5cec9:226"]="迪菲亚的工程师们在死神4000的基础上，日以继夜地想要完善出一种新型号的收割机。兄弟会相信，只要完工，这台恐怖的机械就能像割麦子一样从暴风城的武装士兵中杀出一条路来。"}}
-D.ClientTexts.Encounter[92]={Name={["60f2822a96fad265:15"]=S[12582]},Description={["4ff2ec9808cba2a9:230"]="詹姆斯·哈林顿身中狼人的诅咒后，在一个刺骨的寒夜里毁掉了钟爱的家庭和他的远洋航海生涯。在那之后，他改名为撕心狼，逃到了西部荒野，之后更是接受了任命，指挥迪菲亚兄弟会可怖的无畏舰。"}}
+D.ClientTexts.Encounter[92]={Name={["60f2822a96fad265:15"]=S[12583]},Description={["4ff2ec9808cba2a9:230"]="詹姆斯·哈林顿身中狼人的诅咒后，在一个刺骨的寒夜里毁掉了钟爱的家庭和他的远洋航海生涯。在那之后，他改名为撕心狼，逃到了西部荒野，之后更是接受了任命，指挥迪菲亚兄弟会可怖的无畏舰。"}}
 D.ClientTexts.Encounter[93]={Name={["198c8fa36de45424:15"]=S[255]},Description={["e8203aa587ae5d1a:252"]="随着迪菲亚兄弟会前任无畏舰指挥官的死亡，曲奇自封为船长。尽管他在主厨的工作上仍然尽职尽责，但若是有谁质疑其船长的头衔来得是否光明磊落，那人就会因为严重的食物中毒而倒地不起。"}}
-D.ClientTexts.Encounter[95]={Name={["afca035a593ae6d9:15"]=S[14884]},Description={["2d4eb03965134520:236"]="当梵妮莎还是一个小女孩的时候，她亲眼目睹了父亲艾德温·范克里夫的悲惨下场。作为前任迪菲亚兄弟会领袖之女，她接过父亲领袖的衣钵，在迪菲亚兄弟会据点死亡矿井的黑暗回廊里厉兵秣马，谋划着对暴风城的复仇。"}}
-D.ClientTexts.Encounter[96]={Name={["af8441f534c00fbe:12"]=S[16206]},Description={["1227b072ab43451f:139"]="灰葬男爵被狼人所杀，随后被遗忘者将其复活成亡灵。这个叛徒擅长使用暗影的力量，将他的敌人玩弄于鼓掌之间。"}}
+D.ClientTexts.Encounter[95]={Name={["afca035a593ae6d9:15"]=S[14885]},Description={["2d4eb03965134520:236"]="当梵妮莎还是一个小女孩的时候，她亲眼目睹了父亲艾德温·范克里夫的悲惨下场。作为前任迪菲亚兄弟会领袖之女，她接过父亲领袖的衣钵，在迪菲亚兄弟会据点死亡矿井的黑暗回廊里厉兵秣马，谋划着对暴风城的复仇。"}}
+D.ClientTexts.Encounter[96]={Name={["af8441f534c00fbe:12"]=S[16207]},Description={["1227b072ab43451f:139"]="灰葬男爵被狼人所杀，随后被遗忘者将其复活成亡灵。这个叛徒擅长使用暗影的力量，将他的敌人玩弄于鼓掌之间。"}}
 D.ClientTexts.Encounter[97]={Name={["29e7a0b50a6b1dec:16"]=S[10355]},Description={["7c1336e033a29ab1:164"]="在这座城堡尚未落入阿鲁高狼人之手的时候，席瓦莱恩男爵是这里的主人。现在他被诅咒的灵魂召唤着将他杀害的狼人，惩处那些侵入其家园的来犯者。"}}
-D.ClientTexts.Encounter[98]={Name={["2c6237d640ba3029:19"]=S[12262]},Description={["da787f7d89223170:115"]="作为一名忠诚的士兵，指挥官斯普林瓦尔的鬼魂游荡在议会大厅里，用不洁之力为他的领主席瓦莱恩男爵复仇。"}}
-D.ClientTexts.Encounter[99]={Name={["cfd6bbb17d1e1260:10"]=S[15690]},Description={["ddd5f5163b6df535:180"]="高弗雷的左右手、傲慢的沃登勋爵曾发誓不惜一切代价，也要为其同胞鞠躬尽瘁。如今成了亡灵的一员，沃登依然信守诺言，用冰与毒对敌人发起猛攻。"}}
-D.ClientTexts.Encounter[100]={Name={["1b2329e6f48d6047:11"]=S[21825]},Description={["4c8a3e1a86efc817:142"]="身为吉尔尼斯贵族及被遗忘者的眼线，狡猾而又多智的高弗雷勋爵擅使双枪，麾下还有大批残忍嗜血的食尸鬼。"}}
-D.ClientTexts.Encounter[101]={Name={["e0c25f9c1ac77391:11"]=S[17822]},Description={["3a8254d69295f7e1:215"]="在从蛮勇的克瓦迪尔手中夺回瓦丝琪尔的过程中，纳兹夏尔女士扮演了至关重要角色。她因此赢得了艾萨拉女王的青睐。最近，纳兹夏尔身先士卒，率军对耐普图隆发动了进攻，并成功地将这位强大的元素领主困在了海潮王座中。"}}
+D.ClientTexts.Encounter[98]={Name={["2c6237d640ba3029:19"]=S[12263]},Description={["da787f7d89223170:115"]="作为一名忠诚的士兵，指挥官斯普林瓦尔的鬼魂游荡在议会大厅里，用不洁之力为他的领主席瓦莱恩男爵复仇。"}}
+D.ClientTexts.Encounter[99]={Name={["cfd6bbb17d1e1260:10"]=S[15691]},Description={["ddd5f5163b6df535:180"]="高弗雷的左右手、傲慢的沃登勋爵曾发誓不惜一切代价，也要为其同胞鞠躬尽瘁。如今成了亡灵的一员，沃登依然信守诺言，用冰与毒对敌人发起猛攻。"}}
+D.ClientTexts.Encounter[100]={Name={["1b2329e6f48d6047:11"]=S[21826]},Description={["4c8a3e1a86efc817:142"]="身为吉尔尼斯贵族及被遗忘者的眼线，狡猾而又多智的高弗雷勋爵擅使双枪，麾下还有大批残忍嗜血的食尸鬼。"}}
+D.ClientTexts.Encounter[101]={Name={["e0c25f9c1ac77391:11"]=S[17823]},Description={["3a8254d69295f7e1:215"]="在从蛮勇的克瓦迪尔手中夺回瓦丝琪尔的过程中，纳兹夏尔女士扮演了至关重要角色。她因此赢得了艾萨拉女王的青睐。最近，纳兹夏尔身先士卒，率军对耐普图隆发动了进攻，并成功地将这位强大的元素领主困在了海潮王座中。"}}
 D.ClientTexts.Encounter[102]={Name={["c95c7c47fcc6ddda:34"]="指挥官乌尔索克，腐烂王子"},Description={["1b01352d0a797416:211"]="乌尔索克是一名邪恶的上古生物，上古之神派他来帮助纳兹夏尔女士侵略潮汐王座。乌尔索克浑身迸发着罪恶的力量，在瓦丝琪尔最深邃的海沟里指挥着无面者军团。"}}
-D.ClientTexts.Encounter[103]={Name={["04d92f9625d3d37b:18"]=S[18709]},Description={["313c1ccebd9e2d9d:241"]="在深渊裂口的英勇一战后，大地之环的萨满石语者埃鲁纳克最终还是被纳迦军队所俘获，并沦为蛊心魔古厄夏的奴隶。恐怕这只寄生的畸兽已经彻底控制了埃鲁纳克的心智、肉体，以及他那毁灭性的萨满法术。"}}
+D.ClientTexts.Encounter[103]={Name={["04d92f9625d3d37b:18"]=S[18710]},Description={["313c1ccebd9e2d9d:241"]="在深渊裂口的英勇一战后，大地之环的萨满石语者埃鲁纳克最终还是被纳迦军队所俘获，并沦为蛊心魔古厄夏的奴隶。恐怕这只寄生的畸兽已经彻底控制了埃鲁纳克的心智、肉体，以及他那毁灭性的萨满法术。"}}
 D.ClientTexts.Encounter[104]={Name={["13ad5505758e8a56:6"]=S[4114]},Description={["f6cf306c959f1581:211"]="传说艾泽拉斯的大海出现过巨大的海怪，然而这个神话如今成了真。纳迦通过某种邪恶的手段，将海怪的宗主厄祖玛特控制在手下，用来对付耐普图隆及其追随者们。"}}
-D.ClientTexts.Encounter[105]={Name={["5e3a3c77d9ad016c:18"]=S[12571]},Description={["a2d6f68f77ab7550:216"]="作为外域食人魔中少见的“缺失的一环”，摧骨者罗姆欧格因其食人魔凶残的本性而被暮光之锤邪教所看重。他如今统领着焚烧之厅，靠折磨他人满足着自己的嗜虐欲。"}}
-D.ClientTexts.Encounter[106]={Name={["581f205331f9d5fc:22"]=S[14772]},Description={["047634dcb340f05b:200"]="柯尔拉曾是一位功成名就的肯瑞托法师，如今她对暮光之锤忠贞不渝。她会祝福那些狂热的追随者，将虚空巨龙的精华授予他们，把他们变成凶狠的暮光龙人。"}}
+D.ClientTexts.Encounter[105]={Name={["5e3a3c77d9ad016c:18"]=S[12572]},Description={["a2d6f68f77ab7550:216"]="作为外域食人魔中少见的“缺失的一环”，摧骨者罗姆欧格因其食人魔凶残的本性而被暮光之锤邪教所看重。他如今统领着焚烧之厅，靠折磨他人满足着自己的嗜虐欲。"}}
+D.ClientTexts.Encounter[106]={Name={["581f205331f9d5fc:22"]=S[14773]},Description={["047634dcb340f05b:200"]="柯尔拉曾是一位功成名就的肯瑞托法师，如今她对暮光之锤忠贞不渝。她会祝福那些狂热的追随者，将虚空巨龙的精华授予他们，把他们变成凶狠的暮光龙人。"}}
 D.ClientTexts.Encounter[107]={Name={["f1496c0be4d0aec0:16"]=S[4051]},Description={["8013957cf403202b:214"]="巨大的龙人卡尔什·断钢在暮光铸炉日夜工作，用稀有的水银制造着武器。尽管卡尔什的作品在通常情况下都坚不可摧，可在高温下，它们就如锈铁一般脆弱。"}}
 D.ClientTexts.Encounter[108]={Name={["f3d36f2f246500dc:6"]="如花"},Description={["023663b01488cd71:219"]="如花和比斯巨兽的传说犹如美女与野兽、海洋与星空一般悠久而浪漫。比斯巨兽在黑石塔上被英雄们宰杀之后，如花带着四条剩下的小犬加入了暮光之锤的部队，志在惩罚那些杀害她的伴侣的生物。"}}
 D.ClientTexts.Encounter[109]={Name={["0ab93ec9aad917fe:21"]=S[3998]},Description={["ad39abce963e0f5b:210"]="堕落者德希里克曾是一名强大的萨满，因为其狂热的虔诚和对暴行的嗜好，他被恩准升腾：通过一道黑暗仪式，他被注入了元素之力，变成了一头名为升腾者领主奥西迪斯的畸形生物。"}}
@@ -4759,15 +4759,15 @@ D.ClientTexts.Encounter[110]={Name={["4ac1405431c15abd:8"]="克伯鲁斯"},Descr
 D.ClientTexts.Encounter[1552]={Name={["229865397900f9c4:17"]="仆役宿舍"}}
 D.ClientTexts.Encounter[111]={Name={["004426411d39f0fc:8"]="岩皮"},Description={["9bca3a5e53c5d9c9:257"]="上古之神强化了死亡之翼身为大地守护者的力量，让他轻易地就使得深岩之洲的石龙为暮光之锤效忠。这些生物中最有抱负的一个就是岩皮。他会铲除任何胆敢进入巨石之核的入侵者，希望能够借此赢得死亡之翼的青睐。"}}
 D.ClientTexts.Encounter[112]={Name={["101c7ac0d854b11d:5"]="欧泽鲁克"},Description={["f49373cdd0aa9fdc:230"]="从深岩之洲的创造之初，欧泽鲁克就一直是巨石之核的守护者。没有人知道他为什么还留在那里，但是很明显，这名守护者认为任何对死亡之翼不利的人，都是深岩之洲的威胁，应该予以消灭。"}}
-D.ClientTexts.Encounter[113]={Name={["8b945c3737527a40:17"]=S[21870]},Description={["2c926af9386a2a7e:240"]="尽管心智尽毁，但高阶女祭司艾苏尔仍然是少数几个能在同暮光之锤教派恐怖的主子沟通后，还能活下来的人。她将恐怖植根在低级教徒心中，好让他们在主子下令的时候，毫不犹豫地牺牲自己。"}}
+D.ClientTexts.Encounter[113]={Name={["8b945c3737527a40:17"]=S[21871]},Description={["2c926af9386a2a7e:240"]="尽管心智尽毁，但高阶女祭司艾苏尔仍然是少数几个能在同暮光之锤教派恐怖的主子沟通后，还能活下来的人。她将恐怖植根在低级教徒心中，好让他们在主子下令的时候，毫不犹豫地牺牲自己。"}}
 D.ClientTexts.Encounter[114]={Name={["05a27764f9ed5679:16"]="大宰相埃尔坦"},Description={["2377abcceb628d47:207"]="奉主人阿萨德之命，埃尔坦守护着旋云之巅，对抗任何来自地面的、胆敢侵入这个领域的人们。为了履行其职责，这名元素贵族被授予了统御闪电和风暴大军的特权。"}}
 D.ClientTexts.Encounter[115]={Name={["8fe3ceca3a60aabf:8"]="阿尔泰鲁斯"},Description={["230f4c4dca10f88a:211"]="巨大的风暴之龙阿尔泰鲁斯不知疲倦地警戒着旋云之巅的浮空平台。风暴的能量在他体内脉动，传说他还驾驭着驱动着这座元素堡垒的气流。"}}
 D.ClientTexts.Encounter[116]={Name={["e64c59c6d4d7b413:21"]="西风君王阿萨德"},Description={["f142361b783dc0e8:207"]="奥拉基尔亲自指名阿萨德作为旋云之巅的守护者。自从南风之主希亚玛特遭到尼斐塞特托维尔人的囚禁之后，这名可怕的元素相信自己只要干好这份差事，没准就能升上风之议会。"}}
 D.ClientTexts.Encounter[117]={Name={["bd6ed2e1705527aa:12"]="胡辛姆将军"},Description={["3fcd60d4f18b7ab5:208"]="泰坦们曾亲自指派胡辛姆将军作为奥丹姆的守护者之一。在南风之主希亚玛特治愈了尼斐塞特托维尔人的血肉诅咒之后，胡辛姆将军发动了反叛，并最终将那名强大的空气元素囚禁了起来。"}}
 D.ClientTexts.Encounter[118]={Name={["8779dfb3e42a7838:7"]="锁喉"},Description={["6eb6b7c9d25d6336:209"]="在尼斐塞特发动起义，反抗希亚玛特的乱战中，俾格米人奥弗在托维尔古城中大偷特偷。在他们的族人中，奥弗因为两件事而备受尊重：一是他的狡诈；还有一个是他的宠物，那条叫做锁喉的凶狠鳄鱼。"}}
-D.ClientTexts.Encounter[119]={Name={["b51d437225e5a585:16"]=S[21892]},Description={["6d5a34355caaf2fc:220"]="高阶预言者巴林姆是尼斐塞特神圣的精神领袖。为了对抗希亚玛特，他与胡辛姆将军集结尼斐塞特人，将这名空气元素囚禁了起来。然而，某种黑暗力量依然驱使着巴林姆和他的追随者们，在奥丹姆散播着恐惧。"}}
+D.ClientTexts.Encounter[119]={Name={["b51d437225e5a585:16"]=S[21893]},Description={["6d5a34355caaf2fc:220"]="高阶预言者巴林姆是尼斐塞特神圣的精神领袖。为了对抗希亚玛特，他与胡辛姆将军集结尼斐塞特人，将这名空气元素囚禁了起来。然而，某种黑暗力量依然驱使着巴林姆和他的追随者们，在奥丹姆散播着恐惧。"}}
 D.ClientTexts.Encounter[122]={Name={["1bc35f64a9057155:6"]="希亚玛特"},Description={["e3be79b3328d673a:209"]="净化尼斐塞特托维尔人的血肉诅咒，让可怕的元素希亚玛特几乎耗尽了能量。正是在这个薄弱的关头，托维尔人发动了进攻，奇迹般地将希亚玛特囚禁在了他们的沙漠古城的中央。"}}
-D.ClientTexts.Encounter[124]={Name={["08c0e9aa91c2c0b5:20"]=S[17291]},Description={["527ad6fa711335b3:199"]="泰坦在控制起源大厅最后的日子里，将掌握圣光所需的意志力赐予了神殿守护者安努尔。他被授命裁判那些进入神殿的人们是否纯洁。"}}
+D.ClientTexts.Encounter[124]={Name={["08c0e9aa91c2c0b5:20"]=S[17292]},Description={["527ad6fa711335b3:199"]="泰坦在控制起源大厅最后的日子里，将掌握圣光所需的意志力赐予了神殿守护者安努尔。他被授命裁判那些进入神殿的人们是否纯洁。"}}
 D.ClientTexts.Encounter[125]={Name={["af5dbf57949550a6:14"]="地怒者塔赫"},Description={["b5da98d1e851d98c:201"]="地怒者塔赫墓穴外的沙地上铺满了累累白骨，他们都是被安努尔所净化的生物。据说塔赫能操纵这些遗骨，让它们去对付那些成功绕开第一道防线的入侵者。"}}
 D.ClientTexts.Encounter[126]={Name={["2531a118fb10db83:8"]="安拉斐特"},Description={["7f91c8c73c0e6a9c:216"]="安拉斐特维护单位的用途是维护起源大厅的内部运作。一旦设施遭到外来物的污染，安拉斐特将获得攻击程式的权限，不计一切代价歼灭入侵者。"}}
 D.ClientTexts.Encounter[127]={Name={["28c65add8bfb6b08:23"]="伊希斯特，魔法的造物"},Description={["b00782d4a5a6aec7:207"]="起源大厅所产生的奥术能量充盈在其内部，伊希斯特的职责就是对其进行调控。传说这个构造体对这一貌似是天赐的奥术掌控能力过于沉迷了。"}}
@@ -4775,8 +4775,8 @@ D.ClientTexts.Encounter[128]={Name={["9d2f3aafedabff5c:23"]="阿穆纳伊，生�
 D.ClientTexts.Encounter[129]={Name={["5b500eebca1da478:29"]="塞特斯，毁灭的造物"},Description={["999ca7e6fa6b8683:190"]="考虑到起源大厅的用途，泰坦认为创造一个掌握毁灭力量的结构体十分必要，那就是塞特斯。要是塞特斯被腐化了，那么后果将是灾难性的。"}}
 D.ClientTexts.Encounter[130]={Name={["ce47ec86e39d6ebd:19"]="拉夏，太阳的造物"},Description={["f2ada464cfccd84d:190"]="拉夏所监管着的能量，滋养也湮灭了他的无数同类。他是四个构造体中最强的一个，其能力可以将一千个太阳的怒火倾泻到艾泽拉斯之上。"}}
 D.ClientTexts.Encounter[131]={Name={["a9509008df6f7199:14"]="乌比斯将军"},Description={["625518bfc8927840:151"]="艾泽拉斯的勇者和他们的红龙盟军对格瑞姆巴托的大门发动了进攻，率领堡垒中教徒和暮光龙人展开防御的，正是凶神恶煞般的乌比斯将军。"}}
-D.ClientTexts.Encounter[132]={Name={["358c557e701e0951:19"]=S[21023]},Description={["8bcf4f7921939b20:111"]="这名巨大的双头魔是暮光之锤教派的匠人，他热衷于用自己所铸造的武器和铠甲，消灭那些入侵者。"}}
-D.ClientTexts.Encounter[133]={Name={["fceb6f4030ba842b:18"]=S[19842]},Description={["e48e8f5297baf053:152"]="这名暮光之锤的信使正在执行一个来自暮光之锤的任务。如果英雄们能够征服他那些烈焰的爪牙，达加就会让艾泽拉斯的保卫者们见证一个真实的末日预言。"}}
+D.ClientTexts.Encounter[132]={Name={["358c557e701e0951:19"]=S[21024]},Description={["8bcf4f7921939b20:111"]="这名巨大的双头魔是暮光之锤教派的匠人，他热衷于用自己所铸造的武器和铠甲，消灭那些入侵者。"}}
+D.ClientTexts.Encounter[133]={Name={["fceb6f4030ba842b:18"]=S[19843]},Description={["e48e8f5297baf053:152"]="这名暮光之锤的信使正在执行一个来自暮光之锤的任务。如果英雄们能够征服他那些烈焰的爪牙，达加就会让艾泽拉斯的保卫者们见证一个真实的末日预言。"}}
 D.ClientTexts.Encounter[134]={Name={["1999c7d22b833a57:21"]="地狱公爵埃鲁达克"},Description={["dad4012a3b03cbf7:256"]="死亡之翼派出了他最厉害的副手之一，旨在探寻强大的红龙牺牲性命也要保住的秘密。这名无面者将军来自深岩之洲的洞穴世界，任何敢于向他发起挑战的蠢货，都会被其体内融合的新生代龙族之力所消灭。"}}
 D.ClientTexts.Encounter[1554]={Name={["0e3a5a1ad379608d:6"]="莫罗斯"}}
 D.ClientTexts.Encounter[139]={Name={["3f6fc357a93a9502:8"]="阿尔加洛斯"},Description={["c9200788512bc779:162"]="由于深渊领主阿尔加洛斯过于巨大，达拉然宏伟的紫罗兰监狱都无法容下，肯瑞托的法师们别无选择，只好把这头强大的恶魔关在托尔巴拉德的地下。"}}
@@ -4794,14 +4794,14 @@ D.ClientTexts.Encounter[171]={Name={["54b8ccfb1f2c8db8:9"]="艾卓曼德斯"},De
 D.ClientTexts.Encounter[172]={Name={["90f48ffb7af848a4:9"]="奇美隆"},Description={["1481145ab367d9a3:28"]="恐怖、丑恶、邪恶。杀了它。"}}
 D.ClientTexts.Encounter[173]={Name={["429205954f21ae78:8"]="马洛拉克"},Description={["82104fd61408441f:191"]="马洛原是一名前途无量的人类炼金师，直到奈法利安将他绑架，并把他同一具龙人的尸体融合在一起。结果就造出了这名笨手笨脚、只有几分前世心智残存的仆从：马洛拉克。"}}
 D.ClientTexts.Encounter[174]={Name={["779c1bba23e9fb19:13"]="奈法利安的末日"},Description={["90d50dad7d5ed102:227"]="因为曾使用艾泽拉斯各大龙族军团的精华来创造多彩巨龙，死亡之翼之子奈法利安变得臭名昭著。在他死于黑翼之巢后，死亡之翼将他复活，并赐予其新的力量，让他继续那邪恶的计划。"}}
-D.ClientTexts.Encounter[175]={Name={["8737568870846fd1:17"]=S[21886]},Description={["67976d0fe6fa5a58:238"]="温诺希斯本来是被派去杀死哈卡的，可他却被那凶残的存在所奴役，直到艾泽拉斯的英雄们完成了他的使命。在夺灵者的使徒们的努力下，温诺希斯从灵魂世界转生，受命和他的毒蛇一起守卫祖尔格拉布。"}}
-D.ClientTexts.Encounter[176]={Name={["e4f04dbb1e427c3e:17"]=S[18896]},Description={["6d099f798efd8866:245"]="恶名昭著的血领主曼多基尔多年前备受折磨而死，之后其尸体更是被血顶巨魔所亵渎。风传曼多基尔将其恶毒的灵魂寄宿在强大的血顶酋长甘祖拉恩的尸体里，血领主再一次出现在了荆棘谷的丛林中。"}}
-D.ClientTexts.Encounter[177]={Name={["f83ad98bdd64f00a:22"]="疯狂之缘——格里雷克"},Description={["1e448613da25dd42:250"]=S[16973]}}
-D.ClientTexts.Encounter[178]={Name={["93c60906db08badb:24"]="疯狂之缘——哈扎拉尔"},Description={["1e448613da25dd42:250"]=S[16973]}}
-D.ClientTexts.Encounter[179]={Name={["4d7cc595d21f4df0:23"]="疯狂之缘——雷纳塔基"},Description={["1e448613da25dd42:250"]=S[16973]}}
-D.ClientTexts.Encounter[1553]={Name={["1475cf326a1d99a9:18"]=S[16610]}}
-D.ClientTexts.Encounter[180]={Name={["98857df15684eeb2:24"]="疯狂之缘——乌苏雷"},Description={["1e448613da25dd42:250"]=S[16973]}}
-D.ClientTexts.Encounter[181]={Name={["dffcbfa90520cc6c:20"]=S[21885]},Description={["fb11ac818e3cad44:235"]="高阶祭司娅尔罗被杀之后，豹神贝瑟克选择她的妹妹基尔娜拉作为其新的凡间代表。为了支持最近古拉巴什和赞达拉部落达成的协议，基尔娜拉放出了她凶残的猎豹，来对付这里不设防的住民。"}}
+D.ClientTexts.Encounter[175]={Name={["8737568870846fd1:17"]=S[21887]},Description={["67976d0fe6fa5a58:238"]="温诺希斯本来是被派去杀死哈卡的，可他却被那凶残的存在所奴役，直到艾泽拉斯的英雄们完成了他的使命。在夺灵者的使徒们的努力下，温诺希斯从灵魂世界转生，受命和他的毒蛇一起守卫祖尔格拉布。"}}
+D.ClientTexts.Encounter[176]={Name={["e4f04dbb1e427c3e:17"]=S[18897]},Description={["6d099f798efd8866:245"]="恶名昭著的血领主曼多基尔多年前备受折磨而死，之后其尸体更是被血顶巨魔所亵渎。风传曼多基尔将其恶毒的灵魂寄宿在强大的血顶酋长甘祖拉恩的尸体里，血领主再一次出现在了荆棘谷的丛林中。"}}
+D.ClientTexts.Encounter[177]={Name={["f83ad98bdd64f00a:22"]="疯狂之缘——格里雷克"},Description={["1e448613da25dd42:250"]=S[16974]}}
+D.ClientTexts.Encounter[178]={Name={["93c60906db08badb:24"]="疯狂之缘——哈扎拉尔"},Description={["1e448613da25dd42:250"]=S[16974]}}
+D.ClientTexts.Encounter[179]={Name={["4d7cc595d21f4df0:23"]="疯狂之缘——雷纳塔基"},Description={["1e448613da25dd42:250"]=S[16974]}}
+D.ClientTexts.Encounter[1553]={Name={["1475cf326a1d99a9:18"]=S[16611]}}
+D.ClientTexts.Encounter[180]={Name={["98857df15684eeb2:24"]="疯狂之缘——乌苏雷"},Description={["1e448613da25dd42:250"]=S[16974]}}
+D.ClientTexts.Encounter[181]={Name={["dffcbfa90520cc6c:20"]=S[21886]},Description={["fb11ac818e3cad44:235"]="高阶祭司娅尔罗被杀之后，豹神贝瑟克选择她的妹妹基尔娜拉作为其新的凡间代表。为了支持最近古拉巴什和赞达拉部落达成的协议，基尔娜拉放出了她凶残的猎豹，来对付这里不设防的住民。"}}
 D.ClientTexts.Encounter[184]={Name={["2b8e10fd88208736:6"]="赞吉尔"},Description={["60abee20eb51aa6b:252"]="因为把同胞变成了丧失心智的奴隶，赞吉尔一度被劈颅部落所放逐。为了壮大祖尔格拉布的军队，碎神者金度让他在古拉巴什中任职。众所周知，起死回生这种事，对他的药剂来说一点都不难。"}}
 D.ClientTexts.Encounter[185]={Name={["f00c47379955283e:19"]="碎神者金度"},Description={["48b1195edfc9c89d:246"]="在祖尔格拉布被打败之后，金度的灵魂因为没能满足哈卡的愿望而饱受折磨。但最近，他通过某种办法回到了现世，并奴役了夺灵者。带着恐怖神灵的可怕力量，金度誓要恢复古拉巴什帝国往日的辉煌。"}}
 D.ClientTexts.Encounter[186]={Name={["29e3d0e4609e4cdf:8"]="埃基尔松"},Description={["de9af46bf923588e:185"]="作为阿曼尼部落曾经的萨满，埃基尔松驾驭空气元素的本领令人赞赏。他的天赋被妖术领主玛拉卡斯所看中，这也让巨魔们的鹰神没费太大力气就找到了合适的宿主。"}}
@@ -4810,21 +4810,21 @@ D.ClientTexts.Encounter[188]={Name={["7d56ae3c6250f543:8"]="加亚莱"},Descript
 D.ClientTexts.Encounter[189]={Name={["33864f18ed9c6bfb:7"]="哈尔拉兹"},Description={["70af93608003f913:173"]="艾泽拉斯的山猫是凶猛的猎手，拥有能够撕碎猎物的利爪和利齿。受启发的妖术领主玛拉卡斯觉得，在部族最厉害的猎手里挑一名，把山猫之神的精华封在里面，应该很合适。"}}
 D.ClientTexts.Encounter[190]={Name={["12b690729d374179:16"]=S[8707]},Description={["f725672be63ccf24:205"]="数十年来，妖术领主玛拉卡斯都被说成是阿曼尼部族里最可怕的巫医。他的所作所为令人难以想象，还将数名强大的巨魔动物神灵的精华封存在部族最强壮的战士体内……而他也把最为黑暗的一只寄宿在了自己身上。"}}
 D.ClientTexts.Encounter[191]={Name={["fedb5eea6eb53ec9:7"]="达卡拉"},Description={["143f8285d9705cde:166"]="为了弥补督军祖尔金死后所形成的权力真空，阿曼尼部族余下的巨魔们推举他们最喜爱的常胜将军：战无不胜的达卡拉来恢复他们失落的荣光。"}}
-D.ClientTexts.Encounter[192]={Name={["6db6debc848cdf89:10"]=S[19542]},Description={["8b4cde18c85e5e7d:256"]="作为烬网蜘蛛的蛛母，贝丝缇拉克和她无情的后代们靠吮吸火元素残骸上的岩浆和火焰来满足他们的食欲。为了给她的子嗣们提供更多的养分，贝丝缇拉克在她的巢穴周围编织了一张巨大的火网，用来诱捕误入其中的猎物。"}}
-D.ClientTexts.Encounter[193]={Name={["bd20db49d5657912:12"]=S[21365]},Description={["67f511f43b44aa07:254"]="雷奥利斯是现存最古老的元素生物之一，他源自创造艾泽拉斯的洪荒烈焰。他负责在火焰之地创造新的元素，同时他认为那些将他迁移的泰坦们过于的傲慢，这股仇恨仍在他胸中燃烧。"}}
+D.ClientTexts.Encounter[192]={Name={["6db6debc848cdf89:10"]=S[19543]},Description={["8b4cde18c85e5e7d:256"]="作为烬网蜘蛛的蛛母，贝丝缇拉克和她无情的后代们靠吮吸火元素残骸上的岩浆和火焰来满足他们的食欲。为了给她的子嗣们提供更多的养分，贝丝缇拉克在她的巢穴周围编织了一张巨大的火网，用来诱捕误入其中的猎物。"}}
+D.ClientTexts.Encounter[193]={Name={["bd20db49d5657912:12"]=S[21366]},Description={["67f511f43b44aa07:254"]="雷奥利斯是现存最古老的元素生物之一，他源自创造艾泽拉斯的洪荒烈焰。他负责在火焰之地创造新的元素，同时他认为那些将他迁移的泰坦们过于的傲慢，这股仇恨仍在他胸中燃烧。"}}
 D.ClientTexts.Encounter[194]={Name={["37d7526c154c4b49:9"]=S[8429]},Description={["f89fdc940035bc1f:194"]="当拉格纳罗斯的军队涌入海加尔山时，绿龙奥利瑟拉背叛了盟军，帮忙把叛变的大德鲁伊范达尔·鹿盔放了出来。作为奖赏，她被烈焰所净化，重生成了一只可怕的火鹰。"}}
 D.ClientTexts.Encounter[195]={Name={["91dae6c428681c35:7"]="沙恩诺克斯"},Description={["ae33489ab7d8e737:230"]="在火焰之地的元素守护者中，火妖是最为恐怖的一类。沙恩诺克斯也不例外。身为拉格纳罗斯帐下的首席猎人兼熔火恶犬驯犬人，沙恩诺克斯巡视着这块元素的领域，陪伴着他的是两只最为凶猛的畜生：裂肢和狂脸。"}}
 D.ClientTexts.Encounter[196]={Name={["f8537da7540c23f0:21"]="护门人贝尔洛克"},Description={["ac8a1a4f22fdb94a:220"]="在上古时代艾泽拉斯的元素战争中，贝尔洛克作为一名无情的战士而声名鹊起。如今他被困在了火焰之地，变得愈发不理智起来。很少有元素敢来打扰他，生怕牺牲在他对战斗的渴望之下。"}}
-D.ClientTexts.Encounter[197]={Name={["5c57a6e25828d0cb:17"]=S[17705]},Description={["66fb418554053c5c:305"]="在流沙之战中痛失爱子瓦斯坦恩一事，彻底击垮了范达尔·鹿盔的精神。现在，他被拉格纳罗斯灌注力量，成了火焰之地新任的管理者（顶替死亡的管理者埃克索图斯），并兼任背叛塞纳里奥议会的烈焰德鲁伊首领。范达尔宁愿毁掉艾泽拉斯，也不要活在这个失去爱子的世界里。"}}
-D.ClientTexts.Encounter[198]={Name={["d4162002b938944b:8"]=S[12169]},Description={["74d4312056cd4481:254"]="火焰之地的领主拉格纳罗斯象征着愤怒与毁灭，一如铸就了艾泽拉斯的原初地狱之火。上古之神向拉格纳罗斯保证，他有机会把艾泽拉斯变成一片火海，而耐普图隆和塞拉赞恩将对此无能为力。为了取悦上古之神，拉格纳罗斯誓要点燃诺达希尔的世界之树。"}}
-D.ClientTexts.Encounter[283]={Name={["41ef495074994dff:13"]=S[15837]},Description={["6c92ae13a9ac62d6:223"]="作为前暗夜精灵领袖及艾露恩高阶祭司，这个位于错乱时空中的泰兰德·语风的残影在艾泽拉斯未来的废土上徘徊。她被永恒的黑夜包围，几乎看不清艾露恩那令人慰藉的光辉。"}}
+D.ClientTexts.Encounter[197]={Name={["5c57a6e25828d0cb:17"]=S[17706]},Description={["66fb418554053c5c:305"]="在流沙之战中痛失爱子瓦斯坦恩一事，彻底击垮了范达尔·鹿盔的精神。现在，他被拉格纳罗斯灌注力量，成了火焰之地新任的管理者（顶替死亡的管理者埃克索图斯），并兼任背叛塞纳里奥议会的烈焰德鲁伊首领。范达尔宁愿毁掉艾泽拉斯，也不要活在这个失去爱子的世界里。"}}
+D.ClientTexts.Encounter[198]={Name={["d4162002b938944b:8"]=S[12170]},Description={["74d4312056cd4481:254"]="火焰之地的领主拉格纳罗斯象征着愤怒与毁灭，一如铸就了艾泽拉斯的原初地狱之火。上古之神向拉格纳罗斯保证，他有机会把艾泽拉斯变成一片火海，而耐普图隆和塞拉赞恩将对此无能为力。为了取悦上古之神，拉格纳罗斯誓要点燃诺达希尔的世界之树。"}}
+D.ClientTexts.Encounter[283]={Name={["41ef495074994dff:13"]=S[15838]},Description={["6c92ae13a9ac62d6:223"]="作为前暗夜精灵领袖及艾露恩高阶祭司，这个位于错乱时空中的泰兰德·语风的残影在艾泽拉斯未来的废土上徘徊。她被永恒的黑夜包围，几乎看不清艾露恩那令人慰藉的光辉。"}}
 D.ClientTexts.Encounter[285]={Name={["32504b7c2d5a83a9:11"]=S[5547]},Description={["0035edf9fc5569da:309"]="吉安娜·普罗德摩尔饱受折磨的投影已经惨遭撕裂并被注入了她的法杖碎片中。为了恢复时间流的平衡，你必须击败这个残影。可是，这位骄傲的前塞拉摩统治者掌握着毁灭性的魔法力量，而她这个时空错乱的幽灵投影同样如此。在这个未来的艾泽拉斯，她只是被分裂了，并且等待着……"}}
 D.ClientTexts.Encounter[289]={Name={["542236a306be7e30:8"]="姆诺兹多"},Description={["7c2e81c2c0e24b33:299"]="游离于时间流之外，如今的姆诺兹多正是曾经崇高的时光之王，守护巨龙诺兹多姆。由于泰坦让诺兹多姆亲眼目睹了自己的死亡，饱受折磨的巨龙被上古之神所蒙骗。他企图扭转自己的宿命。于是，诺兹多姆破坏了时间的正常流转，并创造出了永恒之龙…艾泽拉斯的未来将被摧毁。"}}
 D.ClientTexts.Encounter[290]={Name={["9b3e82df447df55c:10"]="佩罗萨恩"},Description={["616c1d5377e994ee:306"]="与他的许多上层精灵同伴一样，佩罗萨恩立誓效忠于堕落的萨维斯以换取恶魔的力量。\r\n\r\n佩罗萨恩在受到了萨特诅咒的影响后，成了一名操控恶魔法术的大师。他驻守在艾萨拉的宫廷之外，为燃烧军团担当防御职责，时刻准备着消灭那些企图阻止堕落泰坦萨格拉斯入侵艾泽拉斯的冒险者们。"}}
-D.ClientTexts.Encounter[291]={Name={["48bd3a0d5092d9d8:12"]=S[18265]},Description={["2460d738a09aa51d:288"]="歌颂艾萨拉女王的美丽、威严与强大的歌谣数不胜数，可也正是她的虚荣导致上层精灵召来了燃烧军团。现在，她正坐视她最信赖的法师们为萨格拉斯降临艾泽拉斯的传送门输送能量，让她的众多子民在黑暗泰坦降临之前死去。"}}
+D.ClientTexts.Encounter[291]={Name={["48bd3a0d5092d9d8:12"]=S[18266]},Description={["2460d738a09aa51d:288"]="歌颂艾萨拉女王的美丽、威严与强大的歌谣数不胜数，可也正是她的虚荣导致上层精灵召来了燃烧军团。现在，她正坐视她最信赖的法师们为萨格拉斯降临艾泽拉斯的传送门输送能量，让她的众多子民在黑暗泰坦降临之前死去。"}}
 D.ClientTexts.Encounter[292]={Name={["79e26c1ccb668811:21"]="玛诺洛斯与瓦罗森"},Description={["014e9836bc365aef:294"]="瓦罗森是艾萨拉女王的亲卫队长，而玛诺洛斯则是在未来用自己的血液使所有兽人陷入堕落的深渊领主。现在他们组成了最后一道防线，抵御任何企图阻止萨格拉斯进入艾泽拉斯的势力。尽管泰兰德和伊利丹奋战至此，但永恒之井的动荡不安已经将艾泽拉斯的命运推向了危机的边缘。"}}
 D.ClientTexts.Encounter[311]={Name={["d57f15783e9027b1:7"]="莫卓克"},Description={["ed2217da68d425d9:233"]="作为死亡之翼麾下最强大的元素生物，莫卓克曾是一个温顺的守护者。可现在，他却坚信，只有毁灭艾泽拉斯，他才有可能获得救赎。作为艾泽拉斯对抗暮光审判的最后希望，龙眠神殿尤其受到莫卓克的痛恨。"}}
-D.ClientTexts.Encounter[317]={Name={["e4e92e33e94980a4:20"]=S[17960]},Description={["34bd2d0197d2d1c6:315"]="哈格拉曾是跟随被遗忘者学习奥术魔法的第一人。作为一个这么晚才开始学习魔法的学徒，她表现出了惊人的天赋。可她肆无忌惮地进行魔法实验，试图奴役元素，最终被风元素领主奥拉基尔诱惑并扭曲。现在，她狂热地效忠暮光之锤，为她的元素主子们束缚并折磨那些牺牲品。"}}
+D.ClientTexts.Encounter[317]={Name={["e4e92e33e94980a4:20"]=S[17961]},Description={["34bd2d0197d2d1c6:315"]="哈格拉曾是跟随被遗忘者学习奥术魔法的第一人。作为一个这么晚才开始学习魔法的学徒，她表现出了惊人的天赋。可她肆无忌惮地进行魔法实验，试图奴役元素，最终被风元素领主奥拉基尔诱惑并扭曲。现在，她狂热地效忠暮光之锤，为她的元素主子们束缚并折磨那些牺牲品。"}}
 D.ClientTexts.Encounter[318]={Name={["c81f13948d37a8a5:16"]="死亡之翼的背脊"},Description={["6aa2bfb6d8deaa55:332"]="当死亡之翼第一次引导巨龙之魂的力量对付其他巨龙军团时，爆发出来的巨大能量几乎毁掉他自己的躯体。可他并没有放弃这件武器，反而在自己的鳞片上嵌入了合金装甲以接合他的躯体。之后，他又用源质矿强化了这些装甲。可现在，这些装甲却成了他的弱点——这也是死亡之翼唯一的致命的弱点。"}}
 D.ClientTexts.Encounter[322]={Name={["37883b08b3300259:8"]="阿奎里恩"},Description={["9baca8c3d7752c14:300"]="部落与联盟对暮光之锤的进攻杀死了许多邪教徒的元素升腾者。但阿奎里恩是个例外。这个可怕的寒冰升腾者受命杀死萨尔并夺回巨龙之魂。如果让这个扭曲的元素生物获得成功，那就没有什么能阻止死亡之翼发动暮光审判了。"}}
 D.ClientTexts.Encounter[323]={Name={["870cb6ca1211046b:14"]=S[10316]},Description={["ba6999d7e597a39e:292"]="在破碎的时间流中，被遗忘者的领袖，希尔瓦娜斯·风行者疯狂的残影独自徘徊在红玉巨龙圣地的焦土上，不安地等待着。这个饱受折磨的残影失去了一切，在扭曲时空中无法安息，渴望向这片废墟上的一切活物发泄她黑暗的怒火。"}}
@@ -4842,25 +4842,25 @@ D.ClientTexts.Encounter[342]={Name={["a90d3e0f36419218:15"]=S[7768]},Description
 D.ClientTexts.Encounter[368]={Name={["fc161ba07c41f90f:9"]="加摩拉"},Description={["244cd9569b33e7cd:303"]="当邪教暮光之锤到来时，其信徒唤醒并囚禁了艾露恩神殿中的最后一只宁静生物。邪教徒们乐此不疲地将这只巨龟折磨了许多年，将它的灵魂与身体剥离，直到它终于陷入疯狂。邪教徒们把这只巨龟命名为加摩拉，试图控制它的野性，用它来保卫巢穴。"}}
 D.ClientTexts.Encounter[369]={Name={["03eace6163c54d78:24"]=S[8979]},Description={["d8dcb504d9a5f5a9:327"]="暮光之锤邪教徒格斯塔恩向来沉湎于对生活品质的不懈追求：异国料理，靓衣华服，就连刑具都是由宝石镶嵌而成。囚徒那令人毛骨悚然的哭号声日夜在黑铁部族声名狼藉的禁闭室中回响。格斯塔恩骄傲地宣称，这骇人的声音是她谱写的尖叫交响曲，而她则时刻渴望在这和声中加入新的音色。"}}
 D.ClientTexts.Encounter[370]={Name={["c525553e21fbfa75:10"]="洛考尔"},Description={["ad2ead545e661aa9:254"]="洛考尔对火元素诡计多端、尔虞我诈的本性感到深恶痛绝。为了能远离在熔火之心中效力的其它同类，这个强大的生物故意惹得火焰之王大发雷霆。洛考尔为自己的危险之举付出了代价——他被逐出了熔火之心，被迫孤绝地守卫黑石深渊。"}}
-D.ClientTexts.Encounter[371]={Name={["efabf82f9ce009d0:18"]=S[21639]},Description={["c14d4930b5e28c85:250"]="格雷布玛尔·蚤须的猎犬是他唯一的家人。早在许久以前，这个矮人孤儿就开始繁育幼犬，把它们当做同伴和看门狗。要是驯犬者没有带上他的忠实跟班在黑石深渊里巡逻，那他通常就是在黑铁酒吧里喂它们喝上好的黑铁啤酒。"}}
+D.ClientTexts.Encounter[371]={Name={["efabf82f9ce009d0:18"]=S[21640]},Description={["c14d4930b5e28c85:250"]="格雷布玛尔·蚤须的猎犬是他唯一的家人。早在许久以前，这个矮人孤儿就开始繁育幼犬，把它们当做同伴和看门狗。要是驯犬者没有带上他的忠实跟班在黑石深渊里巡逻，那他通常就是在黑铁酒吧里喂它们喝上好的黑铁啤酒。"}}
 D.ClientTexts.Encounter[372]={Name={["c463080e08ca1fdb:9"]="秩序竞技场"},Description={["4e48372dcb802ef6:253"]="对黑铁矮人犯下罪行的人只会受到一种惩罚，那就是死亡。根据古老的传统，有罪之人要在秩序竞技场中对抗来自艾泽拉斯的各种凶残生物，付出鲜血的代价。迄今为止，没人知道是否有在这残忍酷刑中侥幸生还的幸运儿。"}}
-D.ClientTexts.Encounter[373]={Name={["073ccb88181380a9:19"]=S[12458]},Description={["647e6c291f4f9074:335"]="罗格雷恩曾是大地之环中一位饱受尊敬的成员，后来却以不为人知的原因加入了暮光之锤。他最后来到了黑石深渊，突然对著名黑铁建筑师弗兰克罗恩·铸铁有了兴趣。他眼下究竟意欲何为，我们不得而知，但罗格雷恩始终忠于他的教派，任何反对教派的人都是他不共戴天的仇敌。"}}
+D.ClientTexts.Encounter[373]={Name={["073ccb88181380a9:19"]=S[12459]},Description={["647e6c291f4f9074:335"]="罗格雷恩曾是大地之环中一位饱受尊敬的成员，后来却以不为人知的原因加入了暮光之锤。他最后来到了黑石深渊，突然对著名黑铁建筑师弗兰克罗恩·铸铁有了兴趣。他眼下究竟意欲何为，我们不得而知，但罗格雷恩始终忠于他的教派，任何反对教派的人都是他不共戴天的仇敌。"}}
 D.ClientTexts.Encounter[374]={Name={["1db3c038b7f9ffb5:13"]="伊森迪奥斯"},Description={["044ed81fdbed9d82:249"]="迦顿男爵教伊森迪奥斯驾驭自己的破坏力，可男爵怎么也没有想到，这位仆从竟会带来如此大的威胁。对伊森迪奥斯篡权的担忧日滋夜长，迦顿终于决定将这炽热元素逐出熔火之心，命其守卫黑铁矮人传奇的黑铁砧。"}}
 D.ClientTexts.Encounter[375]={Name={["062fc67c9484966f:14"]=S[2786]},Description={["4c3d8ea48952db7d:320"]="在对索瑞森大帝尽忠多年后，这位名叫斯迪尔基斯的狡诈法师赢得了大帝的信任，奉命看守其部族在黑色宝库中的宝箱。挚友驯犬者格雷布玛尔将一条凶犬——维雷克送给了这位忠心耿耿的矮人，以表达祝贺之情。法师对其善加利用，随时将它带在身边，以吓退那些擅闯宝库的贼人。"}}
 D.ClientTexts.Encounter[376]={Name={["e60130d654fa498f:15"]=S[10549]},Description={["caddf7b0514f921f:304"]="首席建筑师弗诺斯·达克维尔将其它更具天赋泥瓦匠的创意据为己有，并因此声名鹊起。他的傲慢与心计使长眠地下的前辈——弗兰克罗恩·铸铁心生怨愤。这位已故首席建筑师的鬼魂想要从达克维尔手中夺回他那把威力无比的铁胆之锤，以防它被用来作恶。"}}
 D.ClientTexts.Encounter[377]={Name={["0b0a511a43e7fe97:8"]="贝尔加"},Description={["dd2a52c06acad6a9:327"]="可怕的熔岩巨人贝尔加在黑铁大道上隆隆缓行，黑铁大道是筑于黑石深渊内部的矮人工程学建筑奇迹。拉格纳罗斯将这巨人从火焰之地的中心地带引来这里，命他看守位于大道尽头的封印重门。相传，只有火焰领主和黑铁氏族最德高望重的成员才知道在那扇神秘的大门背后，究竟藏着什么。"}}
 D.ClientTexts.Encounter[378]={Name={["229b10434f0254c8:17"]="怒炉将军"},Description={["89b3743355613c66:323"]="经过毕生钻研，怒炉将军已成为矮人军事历史与用兵学的行家里手。他最近撰写了一篇抨击部族过往败绩的严苛文章，引得达格兰·索瑞森大帝大发雷霆。抛开这个政治错误不提，怒炉本质上还是个够格的黑铁矮人。为保护自己的人民与皇帝，他甘愿流血，乃至牺牲。"}}
 D.ClientTexts.Encounter[379]={Name={["93a0a32eae9387f5:18"]=S[2564]},Description={["640e44fbe4bbd726:249"]="阿格曼奇毕生对长生不死的追求，使他按自己的样貌造出了魔法替身。有传闻说，他甚至使用了某种形式的黑暗魔法，当这位傀儡统帅的血肉之躯遭到毁坏时，他的新造物便能成为他灵魂的容器。"}}
-D.ClientTexts.Encounter[380]={Name={["387e3db104b3ae44:17"]=S[21427]},Description={["17394a64ff9b68f5:299"]="如果仅把黑须说成是黑铁酒吧的常客，那也太轻描淡写了。在过去十年间，这个搞怪的酒鬼只离开过酒吧一次，还是去偷雷霆啤酒的绝密配方。黑须偶尔也会清醒一阵子，亲自动手调制这美酒，并宣称喝下此酒的人能获得难以想象的力量与勇气。"}}
+D.ClientTexts.Encounter[380]={Name={["387e3db104b3ae44:17"]=S[21428]},Description={["17394a64ff9b68f5:299"]="如果仅把黑须说成是黑铁酒吧的常客，那也太轻描淡写了。在过去十年间，这个搞怪的酒鬼只离开过酒吧一次，还是去偷雷霆啤酒的绝密配方。黑须偶尔也会清醒一阵子，亲自动手调制这美酒，并宣称喝下此酒的人能获得难以想象的力量与勇气。"}}
 D.ClientTexts.Encounter[381]={Name={["aaeae0514271e568:7"]="法拉克斯"},Description={["ce87926f89602810:243"]="在黑铁酒吧里几乎每天都上演着酒后滋事的戏码，直到最近才有所改观。酒吧老板普拉格派法拉克斯出马，大大降低了酒徒们闹事的频率，这是一个强大的魔像保镖，负责维持酒吧里的秩序，用极端暴力手段赶走那些无事生非的顾客。"}}
 D.ClientTexts.Encounter[591]={Name={["cc287906313655d7:19"]="先知萨隆亚"},Description={["5b02541a46d1df1d:182"]="天灾军团势如破竹地挺近达克萨隆要塞，就算是盗取神灵之力也无力回天。眼看巨魔军团成群结队地在巫妖王身前倒下，萨隆亚现在只为自己的新主人预言胜利的捷报。"}}
 D.ClientTexts.Encounter[383]={Name={["17f28363931057ce:16"]="普拉格"},Description={["7cc3d4e01a10579f:299"]="他们说，在黑铁酒吧里，人人都知道彼此的名字。这种亲密无间的友爱之情都是普拉格的功劳，他是一位在诺莫瑞根陷落后来黑石深渊开创新生活的麻风侏儒。虽然他过去是个与魔鬼打交道的术士，但现在却对自己酒吧老板的身份引以为傲，确保让顾客的酒杯里永远美酒满溢。"}}
 D.ClientTexts.Encounter[384]={Name={["7c04358f3992bcec:19"]=S[10548]},Description={["bea1e14093d19ab9:303"]="由于对拉格纳罗斯无比忠诚，弗莱拉斯以大使的尊贵身份被派往黑铁部族。这个卑鄙的家伙起初对他的矮人盟友们不屑一顾，但渐渐地对他们嗜好破坏的性格心生尊敬。为了展示团结，弗莱拉斯担负起守卫魔法之厅的重任，这是矮人们用来强化武器的圣所。"}}
 D.ClientTexts.Encounter[385]={Name={["c323dd87bdd7145c:8"]="黑铁七贤"},Description={["02a84a1d6379e4f6:302"]="几个世纪以前，巫王索瑞森和他麾下七位最强大的黑铁同伴误打误撞地将拉格纳罗斯召唤进了艾泽拉斯，并致使自己的整个部族都惨遭奴役。尽管七贤在仪式中死亡，但他们不得安息的灵魂却一直在黑石深渊徘徊，被迫为自己的元素主人和现在的黑铁统治者效命。"}}
 D.ClientTexts.Encounter[386]={Name={["0d36f46f1bd51b38:6"]="玛格姆斯"},Description={["b2e55d811e2af796:262"]="弗莱拉斯大使让熔火巨人玛格姆斯守卫达格兰·索瑞森大帝的王座厅，但这一做法也没能让这位黑铁统治者放下忧虑。由于惧怕暗杀，大帝甚至允许玛格姆斯控制位于他王室门外的众多喷火雕像。"}}
-D.ClientTexts.Encounter[387]={Name={["fd20628e7d32cd99:23"]=S[19862]},Description={["82c2c9c4ba578677:323"]="达格兰·索瑞森大帝与敌对铜须部族的茉艾拉公主共掌统治大权。没人知道新娘究竟是受到了大帝的迷惑，还是自愿与他作伴。但不论真相如何，索瑞森的继续存在，始终会对他部族的未来造成不良影响。只要他还活着，黑铁矮人就仍是拉格纳罗斯的马前卒，也是艾泽拉斯各个王国的致命威胁。"}}
+D.ClientTexts.Encounter[387]={Name={["fd20628e7d32cd99:23"]=S[19863]},Description={["82c2c9c4ba578677:323"]="达格兰·索瑞森大帝与敌对铜须部族的茉艾拉公主共掌统治大权。没人知道新娘究竟是受到了大帝的迷惑，还是自愿与他作伴。但不论真相如何，索瑞森的继续存在，始终会对他部族的未来造成不良影响。只要他还活着，黑铁矮人就仍是拉格纳罗斯的马前卒，也是艾泽拉斯各个王国的致命威胁。"}}
 D.ClientTexts.Encounter[388]={Name={["d9d493571048e3fa:13"]="欧莫克大王"},Description={["13e720d7420b05e6:240"]="欧莫克以铁腕手段统治着塔内的食人魔。许多下属都提出过跟他单挑，希望借此夺取大王的头衔，但全都无一例外地倒地落败，根本碰不到他。这个神秘的现象引发了传言，说有黑暗魔法在保护着欧莫克。"}}
-D.ClientTexts.Encounter[389]={Name={["8c8007117d4169dc:22"]=S[13754]},Description={["e7cd111c104df6a1:151"]="沃什加斯以她的美貌和神经病倾向在巨魔间享有盛名。作为深谙暗影猎手之道的大师，她精通妖术、诅咒与治疗魔法。"}}
+D.ClientTexts.Encounter[389]={Name={["8c8007117d4169dc:22"]=S[13755]},Description={["e7cd111c104df6a1:151"]="沃什加斯以她的美貌和神经病倾向在巨魔间享有盛名。作为深谙暗影猎手之道的大师，她精通妖术、诅咒与治疗魔法。"}}
 D.ClientTexts.Encounter[390]={Name={["9a1476623a214023:14"]="指挥官沃恩"},Description={["0d4266f3b0b6aa56:303"]="在第二次战争期间，沃恩率奇袭小队深入高等精灵的腹地深处，执行英勇的任务。这个狡诈的巨魔之所以选择加入落败的部落，是为了要成为首席战略家，而并非认同黑手的价值观。在沃恩眼中，这卑微阵营的成员无异于丧家之犬，他乐于逾越不可克服的障碍，并享受因此获得的满足感。"}}
 D.ClientTexts.Encounter[391]={Name={["cbe810e82e37d23d:16"]="烟网蛛后"},Description={["3113e3648355f62b:232"]="几个世纪前，黑铁矮人钻入了烟网蛛后的巢穴，将这只巨型蜘蛛放进了尖塔的殿堂。从那时起，蛛后就在塔内大量繁衍蛛群，甚至就连黑手军团都不敢在烟网蛛后的地盘上随意穿行。"}}
 D.ClientTexts.Encounter[392]={Name={["40d0cd2f045452fe:12"]="乌洛克"},Description={["5087e117ba3ef2e6:250"]="乌洛克是尖塔食人魔的真正领袖。这个阴险的家伙用邪恶魔法魅惑了他信赖的助手——欧莫克大王，让他代替自己控制麾下的爪牙。他不遗余力地保持着这份深居幕后的神秘感，残忍地将那些胆敢质疑欧莫克统治的食人魔尽数消灭。"}}
@@ -4872,56 +4872,56 @@ D.ClientTexts.Encounter[402]={Name={["ccc9eb3950004e4a:15"]="瑟雷姆·刺蹄"}
 D.ClientTexts.Encounter[403]={Name={["853d2a949014850b:10"]="海多斯博恩"},Description={["f66f2f63def57222:378"]="当名叫瑟雷姆·刺蹄的萨特想要控制厄运之槌的元素时，在他祭坛下方池塘中平静居住的海多斯博恩引起了他的注意力。在他进行邪恶的献祭仪式时，元素突然变得暴怒不安，出水攻击刺蹄的恶魔爪牙。一晃许多年过去了，刺蹄不断用牺牲者的能量激起海多斯博恩的狂怒，渐渐使他甘心接受自己的命令。"}}
 D.ClientTexts.Encounter[404]={Name={["5ecf106b86487268:11"]="蕾瑟塔蒂丝"},Description={["3fce8667942e003c:338"]="厄运之槌的扭曲能量将蕾瑟塔蒂丝从远方吸引而来，令对奥术魔法有着无尽渴求的她看到了希望。她用献祭牺牲者的肌肉和韧带制出了特殊的网，从东翼虹吸腐化之力。让她高兴的是，她发现这个装置能收集并贮存势不可当的强大力量，足以送所有敌人归西。"}}
 D.ClientTexts.Encounter[713]={Name={["e6f86869a80bdbc2:7"]="加拉隆"},Description={["7fa99fc621c85953:107"]="也许是时候重新考虑踩死虫子的问题了。别嘲笑这只巨兽的小翅膀，那会令他大发雷霆。"}}
-D.ClientTexts.Encounter[405]={Name={["d384f4714849465c:19"]=S[18371]},Description={["7f3cb08fb611390c:276"]="荒野变形者奥兹恩毕生最大的追求就是彻底腐化菲拉斯，但当他在厄运之槌中发现艾德雷斯神殿以前，他没有取得丝毫成功。现在，被奴役先祖的力量任他指挥，奥兹恩将附近森林的生命之力悉数汇聚到自己的巢穴中，随意支配。"}}
+D.ClientTexts.Encounter[405]={Name={["d384f4714849465c:19"]=S[18372]},Description={["7f3cb08fb611390c:276"]="荒野变形者奥兹恩毕生最大的追求就是彻底腐化菲拉斯，但当他在厄运之槌中发现艾德雷斯神殿以前，他没有取得丝毫成功。现在，被奴役先祖的力量任他指挥，奥兹恩将附近森林的生命之力悉数汇聚到自己的巢穴中，随意支配。"}}
 D.ClientTexts.Encounter[406]={Name={["9eca2c716be91faa:15"]="特迪斯·扭木"},Description={["78ff1dbe65cec935:243"]="特迪斯·扭木是埃雷萨拉斯的忠诚守护者，他的内心坚定地与这座城市的命运紧紧联系在一起。当大分裂使这片土地变得支离破碎时，他的决心也从未动摇过分毫，但当腐化之力在接下来的一万年间渗入废墟，这位先祖的灵魂也未能幸免于难。"}}
 D.ClientTexts.Encounter[407]={Name={["59400214620b88b9:16"]="伊琳娜·暗木"},Description={["78b1fe4708d6f226:303"]="伊琳娜·暗木与她忠实的伙伴费拉，曾经是托塞德林王子最得力的猎手，后来，她因拒绝执行领袖的命令，不肯处死自己的伙伴而遭到重罚。托塞德林王子杀死了伊琳娜和她的熊，而且还用恶魔之力将他们的灵魂束缚在躯体上，责罚他们以亡灵守护者的身份继续留在厄运之槌。"}}
 D.ClientTexts.Encounter[408]={Name={["7f97561ed53fbd53:17"]=S[4099]},Description={["b5db01deb490f58d:340"]="当托塞德林王子下令处死大部分臣民时，他最忠心的中尉们负责执行他的意志。卡雷迪斯镇长不假思索地杀死了许多毫无戒备的辛德拉精灵，但在这群厄难临头的精灵中，却有一位在混战中对他造成了致命伤。但凡躯虽死，卡雷迪斯的灵魂却仍在厄运之槌游荡，继续为托塞德林保驾护航。"}}
 D.ClientTexts.Encounter[409]={Name={["6e77c199e61b2586:10"]="伊莫塔尔"},Description={["ddca3f81ee71c196:364"]="当永恒之井被摧毁后，辛德拉精灵为重获往日的力量与不死之身，将魔鬼召进了厄运之槌的西翼，并将他禁锢在力场之内，用虚空恐魔的能量强化自己的法术。伊莫塔尔在将近一万年间无力回击，甚至动弹不得，只能眼巴巴地等待自己挣脱束缚的那一天，将囚禁者大卸八块。"}}
 D.ClientTexts.Encounter[410]={Name={["ead516156a322ffc:17"]=S[11939]},Description={["077146c3114415f6:370"]="在永恒之井遭到毁灭后，托塞德林王子将一只恶魔囚禁在埃雷萨拉斯的废墟间，继续统治幸存的辛德拉精灵，并让自己的臣民从中汲取力量。恶魔之力扭曲了托塞德林的心智，而当那恶魔力量衰退时，王子便下令处死了许多民众，只有他和那些最狂热的追随者们才能继续享用腐化能量。"}}
 D.ClientTexts.Encounter[411]={Name={["8040909ecd945b33:12"]="卫兵摩尔达"},Description={["8928fb62a72f8cf9:255"]="摩尔达是戈多克食人魔中的狂热忠诚守卫。他说服戈多克大王赏给他一副施了魔法的手套，使他在族人间连续六年荣膺掰腕子大赛的冠军。事实上，戈多克大王是把这强大的护甲丢弃了，摩尔达只不过是第一个捡到它的人而已。"}}
-D.ClientTexts.Encounter[412]={Name={["eacc91bd2b9b3622:12"]=S[19785]},Description={["d910dcdfd3dc5246:233"]="鬼祟的刺客们不止一次因打翻克雷格的酒杯而惨遭毒手。尽管他总是会在当值时喝得酩酊大醉，但是只要一听到杯中美酒洒在石头地面上的声音，这位食人魔就会立即醒来，勃然大怒。"}}
+D.ClientTexts.Encounter[412]={Name={["eacc91bd2b9b3622:12"]=S[19786]},Description={["d910dcdfd3dc5246:233"]="鬼祟的刺客们不止一次因打翻克雷格的酒杯而惨遭毒手。尽管他总是会在当值时喝得酩酊大醉，但是只要一听到杯中美酒洒在石头地面上的声音，这位食人魔就会立即醒来，勃然大怒。"}}
 D.ClientTexts.Encounter[413]={Name={["cc1254806a940c3b:11"]="卫兵芬古斯"},Description={["e19f5aca1f97ab55:134"]="自从观察者克鲁什告诉他，说他能在执勤时遇见命中注定的伴侣，芬古斯便时刻打起十二万分精神在戈多克领土上巡逻。"}}
 D.ClientTexts.Encounter[414]={Name={["28f724f64d449fcb:13"]=S[4100]},Description={["2df66d3717e22f92:217"]="有些人也许会认为斯里基克只是小心谨慎，可他其实也懒得很。他不愿与戈多克大王正面交锋，而是希望凭借陷阱和又老又破的魔法装置，不费吹灰之力地对其造成致命打击。"}}
 D.ClientTexts.Encounter[415]={Name={["7eb0ff83c50c5372:16"]="克罗卡斯"},Description={["a3f3f5764fc40215:229"]="即便是在食人魔当中，克罗卡斯的火爆脾气也是臭名昭著，谁要是胆敢冒犯他或戈多克大王，就绝对没有好果子吃。他凶残地镇压那些与他意见相左的人，不过，总有人乐此不疲地散播他早年与一只豺狼人的热恋绯闻，对于这类造谣生事者，他更没有耐心。"}}
-D.ClientTexts.Encounter[416]={Name={["31b121917ada6172:19"]=S[19218]},Description={["f7194ad2f32cd83b:227"]="克鲁什并没有既定立场，但当乌尔洛克掌权后，他的力量显然已经变得不可动摇。国王很快便任命克鲁什担任他的首席顾问，相信他的双头一定能带来令普通食人魔望尘莫及的双倍睿智。"}}
+D.ClientTexts.Encounter[416]={Name={["31b121917ada6172:19"]=S[19219]},Description={["f7194ad2f32cd83b:227"]="克鲁什并没有既定立场，但当乌尔洛克掌权后，他的力量显然已经变得不可动摇。国王很快便任命克鲁什担任他的首席顾问，相信他的双头一定能带来令普通食人魔望尘莫及的双倍睿智。"}}
 D.ClientTexts.Encounter[417]={Name={["2276ffd43ac0e5ad:10"]="戈多克大王"},Description={["b0858a0f00fdb51e:399"]="谁要是想统治戈多克食人魔，只须站出来自封为王……然后消灭所有心怀异议的人即可。戈多克大王——当时人称乌尔洛克——就是劝服了十二位族中最为强大的战士，同时挑战国王，以此巩固自己的力量。一场疯狂混战过后，比试者死的死伤的伤，乌尔洛克手起刀落，不费吹灰之力就结果了那些幸存者和被战斗搞得疲累交加的国王。时至今日，每当戈多克食人魔提及“血战之日”时，还是只敢低声窃语。"}}
-D.ClientTexts.Encounter[418]={Name={["5bc1ec17000c6994:17"]=S[17990]},Description={["554e2ec1b8bd5dfe:435"]="在诺莫瑞根的全盛时期，发明家们会相互比试自己的发明，以此提升自己的地位。工程师奥格索普·奥布诺提斯研制出了一个无敌机器人，这为他在大工匠协会中赢得了尊重。希科·瑟玛普拉格盗取了奥布诺提斯的蓝图，然后造出了一个巨版机器人。他任由自己的伪造品肆虐，引发了严重的后果，无辜的奥布诺提斯因此遭到了管理委员会的驱逐。群体打击者9-60至今仍是瑟玛普拉格最倾心的（剽窃）发明之一。"}}
+D.ClientTexts.Encounter[418]={Name={["5bc1ec17000c6994:17"]=S[17991]},Description={["554e2ec1b8bd5dfe:435"]="在诺莫瑞根的全盛时期，发明家们会相互比试自己的发明，以此提升自己的地位。工程师奥格索普·奥布诺提斯研制出了一个无敌机器人，这为他在大工匠协会中赢得了尊重。希科·瑟玛普拉格盗取了奥布诺提斯的蓝图，然后造出了一个巨版机器人。他任由自己的伪造品肆虐，引发了严重的后果，无辜的奥布诺提斯因此遭到了管理委员会的驱逐。群体打击者9-60至今仍是瑟玛普拉格最倾心的（剽窃）发明之一。"}}
 D.ClientTexts.Encounter[419]={Name={["0ed6c5b31657a234:7"]="格鲁比斯"},Description={["a599aa936500b18e:421"]="在城内弥漫的放射性气体本是为了激怒穴居人，杀死侏儒，而瑟玛普拉格的凶残计划也实施得天衣无缝。但有一只穴居人却对这种物质产生了奇怪的反应——格鲁比斯长啊，长啊，越长越大。这是令希科始料未及的副作用，可他从来都不是一个会浪费珍贵（且危险）资源的人。这只体型庞大的穴居人如今就在诺莫瑞根的隧道中巡视。他忠实的蜥蜴宠物咀嚼者则帮助格鲁比斯嗅探气体泄漏，寻找美味的真菌，甚至是可口的入侵者。"}}
 D.ClientTexts.Encounter[420]={Name={["2f07bf6817554d29:14"]="粘性辐射尘"},Description={["80e2110cea0bb343:327"]="诺莫瑞根那原本恢弘优雅的复杂水道，现在被辐射得乌烟瘴气，到处都是毒性泥浆怪。有个曾住在侏儒蓄水层中的孤单水元素被污染困住，污染物将它的纯净形态腐化得面目全非。它现在愤怒而痛苦地游荡在诺莫瑞根的殿堂间，成为了瑟玛普拉格背叛留下的邪毒液体化身。"}}
 D.ClientTexts.Encounter[1532]={Name={["aca9a4b03dcf464d:7"]="费尔默"}}
 D.ClientTexts.Encounter[1533]={Name={["4f2a086da5ea39aa:7"]="埃博诺克"}}
 D.ClientTexts.Encounter[421]={Name={["d1eac702fd11c879:19"]="电刑器6000型"},Description={["8a0826a0d7bcfc53:408"]="机械师瑟玛普拉格不是个有耐心的侏儒。他不喜欢通过一次次的实验去验证发明的安全性和有效性，而是急于将其投入使用，并将注意力转移到下一个项目上。电刑器6000型是他首次尝试通过超能机械坦克将电能作为武器的产物。“霹雳裤”汤姆·克兰科中尉是唯一一位驾驶过电刑器的幸存士兵，现在成了麻风侏儒里的大英雄。"}}
-D.ClientTexts.Encounter[422]={Name={["86f232dcd13ff10b:20"]=S[14421]},Description={["5ab0b53e43b4b1f3:431"]="杀人犯、叛徒、自我加冕的侏儒国王，机械师希科·瑟玛普拉格用破绽百出的铁腕手段统治着诺莫瑞根的放射性殿堂。他的臣民数量众多，邪恶疯狂，足以保护自己的疯王免受任何来自地上世界的侵袭。正是瑟玛普拉格的疯狂使他变得极其危险——他有着摧毁身边万物的狡诈，且丝毫不顾自身安危。难怪就连诺莫瑞根里的怪物都对他望而生畏。"}}
+D.ClientTexts.Encounter[422]={Name={["86f232dcd13ff10b:20"]=S[14422]},Description={["5ab0b53e43b4b1f3:431"]="杀人犯、叛徒、自我加冕的侏儒国王，机械师希科·瑟玛普拉格用破绽百出的铁腕手段统治着诺莫瑞根的放射性殿堂。他的臣民数量众多，邪恶疯狂，足以保护自己的疯王免受任何来自地上世界的侵袭。正是瑟玛普拉格的疯狂使他变得极其危险——他有着摧毁身边万物的狡诈，且丝毫不顾自身安危。难怪就连诺莫瑞根里的怪物都对他望而生畏。"}}
 D.ClientTexts.Encounter[423]={Name={["22f16d787dd27f67:7"]="诺克赛恩"},Description={["b394c999583e604c:267"]="诺克赛恩是腐化的活化身。瑟莱德丝命她的同伴维利塔恩造出这个腐烂的元素，充当强大的仆从和忠实的宠物，来化解公主心中的孤寂。诺克赛恩将自己的剧毒精华散播到玛拉顿尚未受到瑟莱德丝邪恶影响的其它区域。"}}
 D.ClientTexts.Encounter[424]={Name={["10f1e65b89382538:9"]="锐刺鞭笞者"},Description={["8da99423b80e0b10:226"]="创造锐刺鞭笞者的初衷是为了让它在玛拉顿里陪伴诺克赛恩。随着时间的推移，这一全新造物却成了公主最珍爱的仆从之一。锐刺鞭笞者与诺克赛恩并肩在洞穴里游荡，用长满尖刺的卷须将所能找到的任何未受污染的植物撕成碎片。"}}
 D.ClientTexts.Encounter[425]={Name={["fe931a3cc20b1e77:15"]=S[10169]},Description={["3a71c13334d9c726:269"]="工匠吉兹洛克与其它五位宝石猎人溜进了玛拉顿，前去采集异常珍贵的水晶。但当其它队友都被萨特屠戮殆尽，仅有吉兹洛克一人幸存时，他才明白他们的计划全盘落空了。这位地精被困在洞穴里，濒临疯狂的边缘，将自己视作这个地下王国的新统治者。"}}
 D.ClientTexts.Encounter[426]={Name={["76d5a71fc7b055c2:16"]=S[10716]},Description={["5c00c36f8bcd31cc:346"]="暮光之锤命令他们强大的执行者，征服者克鲁尔去清除洞穴中一切不受他们控制的生物。面对压倒性的力量，格里哈斯特成了克鲁尔的第一个受害者，洞穴里的鱼人也被克鲁尔所控制。克鲁尔还将格里哈斯特扭曲的尸体示众，作为他统治的证据，并利用鱼人掠夺那些死在洞穴里的生物们的财物。"}}
 D.ClientTexts.Encounter[427]={Name={["67270128674ecc95:14"]="维利塔恩"},Description={["2cc968600868fb07:225"]="萨特领主维利塔恩在闻听玛拉顿遭到腐化的消息后，便动身前往玛拉顿深处。瑟莱德丝起初对这位少言寡语的恶魔颇有戒心，但维利塔恩用行动证明了自己的价值，他为公主造出了许多邪恶的仆从，如诺克赛恩和锐刺鞭笞者。"}}
-D.ClientTexts.Encounter[428]={Name={["eddfe4cd666d53a6:17"]=S[19057]},Description={["5d06dc862fee0621:263"]="在闻听叔叔的悲惨命运后，高尚的塞雷布拉斯立誓解救扎尔塔的灵魂。可当这位林地守护者在玛拉顿的阴暗廊道间遭逢恐惧时，他全然没有做好准备。塞雷布拉斯很快就被四处弥漫的黑暗能量席卷，心中充满了不可控制的愤怒。"}}
+D.ClientTexts.Encounter[428]={Name={["eddfe4cd666d53a6:17"]=S[19058]},Description={["5d06dc862fee0621:263"]="在闻听叔叔的悲惨命运后，高尚的塞雷布拉斯立誓解救扎尔塔的灵魂。可当这位林地守护者在玛拉顿的阴暗廊道间遭逢恐惧时，他全然没有做好准备。塞雷布拉斯很快就被四处弥漫的黑暗能量席卷，心中充满了不可控制的愤怒。"}}
 D.ClientTexts.Encounter[429]={Name={["a0b5e0f5e0802cc6:9"]="兰斯利德"},Description={["076bd126dad0b459:214"]="多年以来，名叫兰斯利德的古老山巨人都在玛拉顿料理着璀璨的水晶花园，但自打瑟莱德丝来此定居的那天起，兰斯利德便深深地被她吸引住了。这位曾经清心寡欲的巨人现今生活的唯一目的就是为他残暴的新主人效力。"}}
 D.ClientTexts.Encounter[430]={Name={["5688d18cb4416ac9:7"]="洛特格里普"},Description={["6787eb7149dc3db8:255"]="有传闻说，洛特格里普已经在玛拉顿的地下水域中居住了上千年。大名鼎鼎的矮人猎手赫米特·奈辛瓦里有一次宣称无人能找到这野兽，于是就有许多业余追踪者接受挑战，立志寻找这只传说中的生物。结果全都有去无回。"}}
-D.ClientTexts.Encounter[431]={Name={["8222d82a7ce3a037:17"]=S[16782]},Description={["cccc1bac57e01ad1:328"]="土元素瑟莱德丝——石母塞拉赞恩的独生女，住在玛拉顿的内室深处。由于受到上古之神的影响，这位公主将她的家园变成了充满腐化与痛苦的窝巢。有人认为，她的邪恶力量是与她已故爱人扎尔塔的灵魂紧密联系在一起的。假如果真如此，那么解放这位陨殁的林地守护者，也许是净化玛拉顿的唯一希望所在。"}}
-D.ClientTexts.Encounter[433]={Name={["39cdbfd232f37ebf:15"]=S[16187]},Description={["be15dae91f8c61dc:243"]="亡语者布莱克松通过亡灵巫术重新点燃了火眼莫德雷斯的灵魂之焰，使他再度复活。\r\n\r\n生前作为萨满的莫德雷斯，复活后展现出了奴役元素的扭曲能力。他将毫不犹豫地烧死所有胆敢阻碍亡语者的人。"}}
+D.ClientTexts.Encounter[431]={Name={["8222d82a7ce3a037:17"]=S[16783]},Description={["cccc1bac57e01ad1:328"]="土元素瑟莱德丝——石母塞拉赞恩的独生女，住在玛拉顿的内室深处。由于受到上古之神的影响，这位公主将她的家园变成了充满腐化与痛苦的窝巢。有人认为，她的邪恶力量是与她已故爱人扎尔塔的灵魂紧密联系在一起的。假如果真如此，那么解放这位陨殁的林地守护者，也许是净化玛拉顿的唯一希望所在。"}}
+D.ClientTexts.Encounter[433]={Name={["39cdbfd232f37ebf:15"]=S[16188]},Description={["be15dae91f8c61dc:243"]="亡语者布莱克松通过亡灵巫术重新点燃了火眼莫德雷斯的灵魂之焰，使他再度复活。\r\n\r\n生前作为萨满的莫德雷斯，复活后展现出了奴役元素的扭曲能力。他将毫不犹豫地烧死所有胆敢阻碍亡语者的人。"}}
 D.ClientTexts.Encounter[436]={Name={["f939161d205c86ba:6"]="多米尼娜"},Description={["dcb3d2d7b64eaa0a:234"]="当萨利维丝不能再提供魔法庇护后，多米尼娜献祭了这头纳迦以强化自己的黑暗仪式。与她的前任不同，黑暗女士多米尼娜并不害怕阿库麦尔，并亲手喂给这头野兽不计其数的无辜者，以博取古神们的青睐。"}}
-D.ClientTexts.Encounter[437]={Name={["2ff1913b94900338:19"]=S[13832]},Description={["aa319c622d4a02b3:284"]="暮光之锤从不容忍失败，所以当暮光领主巴赛尔接管黑暗深渊后，他的第一个命令就是将领主克尔里斯扔进阿库麦尔饥饿的大嘴中。现在，这个元素升腾者正在努力运用他深不可测的力量唤起古神的巨兽，让世界陷入黑暗。"}}
+D.ClientTexts.Encounter[437]={Name={["2ff1913b94900338:19"]=S[13833]},Description={["aa319c622d4a02b3:284"]="暮光之锤从不容忍失败，所以当暮光领主巴赛尔接管黑暗深渊后，他的第一个命令就是将领主克尔里斯扔进阿库麦尔饥饿的大嘴中。现在，这个元素升腾者正在努力运用他深不可测的力量唤起古神的巨兽，让世界陷入黑暗。"}}
 D.ClientTexts.Encounter[443]={Name={["717c62819c9e1068:21"]="弗雷斯特恩"},Description={["b6a81de1eb9cba80:219"]="净化斯坦索姆的行动，夺去了无数无辜者的性命，他们唯一的罪行就是不该待在这座厄难临头的城市里。旅行歌手兼短笛演奏者弗雷斯特恩就是其中一位牺牲者。他在死后继续在城市中游荡，无法接受自己的悲剧命运。"}}
 D.ClientTexts.Encounter[444]={Name={["30851024c26feef9:7"]="阿库麦尔"},Description={["1c0b8d755d74fdea:237"]="阿库麦尔是个古老的邪魔，在他身上也有着上古之神的些许力量。这只颈上长有三颅的多头蛇因其盲目的凶蛮以及对活人血肉的极端渴望而令人畏惧不已，但暮光之锤却将他视作上古之神即将归来的神圣预兆而大加崇拜。"}}
 D.ClientTexts.Encounter[445]={Name={["4dfd79b1e1930680:13"]="悲惨的提米"},Description={["22c0d1a9f74e6774:247"]="提米森因在战场上的凶蛮而臭名远播。有人推测，他的病态性格是源自童年时期不断被欺负的经历。现在他已经以天灾怪物的身份重生，心智破碎，饱受过往记忆的煎熬，只要有人唤起那个曾令他深恶痛绝的名字——提米，他就会应声而来。"}}
 D.ClientTexts.Encounter[1534]={Name={["01b1b83233f670d7:8"]="弗莱格尔"}}
 D.ClientTexts.Encounter[1535]={Name={["b37ae175ea619df4:10"]="克洛玛古斯"}}
 D.ClientTexts.Encounter[446]={Name={["b4cb7e43f3d44a6a:17"]=S[10325]},Description={["fedaece6eb1ef9a1:259"]="巴纳扎尔愉快地发现，炮手威利在变成了亡灵之后仍能驾驭他那极具破坏性的力量，于是他给这位得力仆从起了个好名字——希望破坏者。恐惧魔王恣意扭曲威利和其他血色十字军成员的灵魂，把这些生时对亡灵恨之入骨的人，变成他的无脑爪牙。"}}
-D.ClientTexts.Encounter[447]={Name={["3afe00844699b915:17"]=S[16002]},Description={["438c78f69095ddf3:257"]="在被诅咒的月神圣地废墟下，远古生物们在为争夺领地乐此不疲。来自废墟的瑟拉吉斯受到深渊守护者的驱使，不断寻找着新的孵化场。现在，守护者看护着成千上万的蛋，直到它们孵化，并散播蔓延至艾泽拉斯的地下水域。"}}
-D.ClientTexts.Encounter[448]={Name={["dce455e1c177f650:17"]=S[14860]},Description={["0bdba306291e2a39:232"]="加尔福特曾经将看管十字军珍贵文献的工作视作莫大荣耀。但在临死前，他却惊恐地看着那些被他视如珍宝的书卷被付之一炬。巴纳扎尔用这痛苦的记忆为他的仆从注入了生时令他不得安宁的炽热力量。"}}
+D.ClientTexts.Encounter[447]={Name={["3afe00844699b915:17"]=S[16003]},Description={["438c78f69095ddf3:257"]="在被诅咒的月神圣地废墟下，远古生物们在为争夺领地乐此不疲。来自废墟的瑟拉吉斯受到深渊守护者的驱使，不断寻找着新的孵化场。现在，守护者看护着成千上万的蛋，直到它们孵化，并散播蔓延至艾泽拉斯的地下水域。"}}
+D.ClientTexts.Encounter[448]={Name={["dce455e1c177f650:17"]=S[14861]},Description={["0bdba306291e2a39:232"]="加尔福特曾经将看管十字军珍贵文献的工作视作莫大荣耀。但在临死前，他却惊恐地看着那些被他视如珍宝的书卷被付之一炬。巴纳扎尔用这痛苦的记忆为他的仆从注入了生时令他不得安宁的炽热力量。"}}
 D.ClientTexts.Encounter[449]={Name={["8ffacfeaa0017371:9"]=S[10257]},Description={["df95008e37a5cc75:251"]="巴纳扎尔从没体会过真正的死亡，但他却尝过失败的苦果。在世界被大灾变破坏之后，他杀死了斯坦索姆中的血色十字军成员，并将他们变成了自己曾经憎恨的亡灵生物。这位恐惧魔王如今正在酝酿着对艾泽拉斯复仇的诡计。"}}
 D.ClientTexts.Encounter[450]={Name={["5ef4ac499633e1be:13"]="不可宽恕者"},Description={["6fba344fad67a996:269"]="莉莉娅曾是他族人间的正义之刃。在阿尔萨斯率军净化城市后，莉莉娅亲眼目睹无数无辜者死在她的手上，这使她丧失了理智。她选择挥剑逃避身边的疯狂，而现在，她则以鬼魂的身份存在，所犯下的恶行永远都不会得到赦免。"}}
 D.ClientTexts.Encounter[451]={Name={["62ed68551acf9e36:16"]=S[8806]},Description={["0412be9935c00f68:221"]="安娜丝塔丽在世时，就会为了占有心仪之物不惜任何代价。死亡也没能让她转性。安娜丝塔丽的灵魂被剥离出身体，变成了女妖。她不再追求名贵的饰品，而是将热情倾注在更为邪恶的东西上面。"}}
 D.ClientTexts.Encounter[452]={Name={["8511cc35f1e2a7b0:11"]="奈鲁布恩坎"},Description={["b6f8ca658614967a:220"]="奈鲁布恩坎在蜘蛛大战中是一位可怕的战士。最后，她却因伤势过重而屈服，化身成为不死族，变成了天灾军团听话的爪牙。现在这位蛛魔正在斯坦索姆凶狠地守卫着一座通灵塔，如同用生命捍卫自己的家园。"}}
-D.ClientTexts.Encounter[453]={Name={["f24baf8f878f2772:15"]=S[18303]},Description={["a73204220f99e9e7:217"]="玛勒基是第一批加入诅咒神教的，在应对墓穴的阴寒方面表现出了过人的天资。对力量永无止境的渴求驱使这位法师热忱地磨练自己对黑暗魔法的驾驭能力，时刻准备迎接化身巫妖的那一天。"}}
+D.ClientTexts.Encounter[453]={Name={["f24baf8f878f2772:15"]=S[18304]},Description={["a73204220f99e9e7:217"]="玛勒基是第一批加入诅咒神教的，在应对墓穴的阴寒方面表现出了过人的天资。对力量永无止境的渴求驱使这位法师热忱地磨练自己对黑暗魔法的驾驭能力，时刻准备迎接化身巫妖的那一天。"}}
 D.ClientTexts.Encounter[454]={Name={["657efb308abbd165:19"]=S[10256]},Description={["b68e1cb0e52f1bff:204"]="巴瑟拉斯是在阿尔萨斯及其军团净化斯坦索姆的行动中惨遭洗劫的众多无辜者之一。巫妖王最终从墓里唤醒了这位昔日的镇长，并命令这只巨大的亡灵怪物守卫他被毁灭的家园。"}}
 D.ClientTexts.Encounter[455]={Name={["7085bdef98642ad0:17"]=S[5928]},Description={["f9c5f56472f57f6b:225"]="拉姆斯登是天灾军团最臭名昭著的憎恶之一，是由许多具尸体缝合而成的可怕怪物，还有着永不满足的食欲。当天灾军团侵入斯坦索姆时，这只怪物对无数无辜者的灵魂犯下了令人发指的暴行。"}}
 D.ClientTexts.Encounter[456]={Name={["8d1e6eaff5db8cfa:19"]=S[8518]},Description={["25fb267a8f8459a1:223"]="奥里克斯竟在陡然间一堕千丈。与他遭到腐化的父亲——瑞文戴尔男爵一样，生前是位圣骑士，死后却不得安宁。他悲惨地沦为了天灾军团的工具，为他誓死铲除的邪恶力量效命。"}}
 D.ClientTexts.Encounter[457]={Name={["8d1dd1cbc11a15ba:14"]="哈卡的化身"},Description={["be392f36390cc075:363"]="哈卡惯于把追随者当成祭品，因此声名狼藉。千万年前，他命阿塔莱建造祭坛，将从活人身上汲取的鲜血进献给它。阿塔莱祭司现在想对这一仪式略作修改，以献祭绿龙的方式供奉哈卡祭坛。一旦阿塔莱成功了，哈卡祭坛便会复现，艾泽拉斯将在劫难逃。"}}
-D.ClientTexts.Encounter[458]={Name={["49484070956d68f5:19"]=S[21491]},Description={["09a7ad7cc75a5c4b:406"]="迦玛兰是阿塔莱的现任领袖，这是一个由疯狂崇拜哈卡的祭司组成的极端教派。在深度冥想中，迦玛兰收到了指示，得知可用哈卡宿敌——绿龙的鲜血使其复活。迦玛兰和他的亡灵侍卫——可悲的奥戈姆，决心消灭任何胆敢阻止哈卡回归的叛逆之徒，但这位先知的行动很可能会让更为可怕的翡翠梦魇笼罩艾泽拉斯。"}}
+D.ClientTexts.Encounter[458]={Name={["49484070956d68f5:19"]=S[21492]},Description={["09a7ad7cc75a5c4b:406"]="迦玛兰是阿塔莱的现任领袖，这是一个由疯狂崇拜哈卡的祭司组成的极端教派。在深度冥想中，迦玛兰收到了指示，得知可用哈卡宿敌——绿龙的鲜血使其复活。迦玛兰和他的亡灵侍卫——可悲的奥戈姆，决心消灭任何胆敢阻止哈卡回归的叛逆之徒，但这位先知的行动很可能会让更为可怕的翡翠梦魇笼罩艾泽拉斯。"}}
 D.ClientTexts.Encounter[459]={Name={["e7d466b8b396e877:17"]="梦境守望者"},Description={["430a9c29294898d6:268"]="四条前途光明的幼龙随伊兰尼库斯一同进入了阿塔哈卡神庙，急于证明自己能为伟大强力的飞龙助上一臂之力。结果却一个接一个遭到了翡翠梦魇的囚禁和腐化，现在终日在沉没的神庙里游荡，朝那些胆敢打扰自己清梦的不速之客发泄怒气。"}}
 D.ClientTexts.Encounter[463]={Name={["65d1d5417d2e58be:15"]=S[1305]},Description={["64fbe66af1cade5f:368"]="伊兰尼库斯——梦境之神伊瑟拉从前的配偶，被派去守卫阿塔哈卡遗迹，阻止哈卡现身。进入神庙之后，他和随从便遭到了黑暗力量的腐化，伊兰尼库斯变成了阴影，在翡翠梦境与真实界域间饱受撕扯。但腐化并未抹除伊兰尼库斯的所有记忆，他还能凭借自己身为绿龙的力量，朝敌人喷吐腐蚀酸液，或使其陷入沉睡。"}}
 D.ClientTexts.Encounter[464]={Name={["028a64c160e00614:6"]="霍格"},Description={["52217d9ee0057253:223"]="罪犯：#SC55：霍格\r\n\r\n罪名：不计其数\r\n\r\n关押河爪首领的代价很是高昂，典狱官甚至落得个半盲的下场。因担心霍格越狱，塞尔沃特下令对这只豺狼人严加看管。"}}
@@ -4930,7 +4930,7 @@ D.ClientTexts.Encounter[466]={Name={["30ad9fbf3b238924:14"]=S[2766]},Description
 D.ClientTexts.Encounter[467]={Name={["2a5f93cdf983749a:8"]="鲁维罗什"},Description={["edd9a44340da48ca:402"]="在铁炉堡颇富威信的探险者协会里，有杰出人士提出，在其族人和穴居人之间存在着某种古老的联结，并指出，穴居人贮存的泰坦神器，正彰显着矮人自身对这种神奇装置的崇拜。假如果真如此，这位名叫鲁维罗什的穴居人就应该被看作是穴居人中的考古学家，尽管任何略有历史概念的冒险者在遇到他时，都会更愿意把他称作小偷。"}}
 D.ClientTexts.Encounter[468]={Name={["07fdd644b16608eb:14"]="失踪的矮人"},Description={["250bdd099d969a3e:403"]="为了名望，更为了财富，埃瑞克、奥拉夫和巴尔洛戈这三兄弟与探险者协会签订了合约，到奥达曼的殿堂中一探究竟，并为身后的研究人员扫清道路。但对这三位矮人来说，“扫清道路”却不幸地演变成了“在古老的迷宫中绝望地迷失方向”。可他们毕竟是骄傲的矮人，他们英勇战斗，决不让奥达曼与探险者协会的秘密落在部落的手里。"}}
 D.ClientTexts.Encounter[469]={Name={["a8653e7859070281:7"]="艾隆纳亚"},Description={["cb7f65959bac7ffe:424"]="泰坦并没有直接建造奥达曼，而是让诸多仆从共同缔造了这一巨石筑成的华丽殿堂。万神殿委托看守者艾隆纳亚监管奥达曼的建造和维护，可随着时间的流逝，曾经令人惊叹的宫殿变成了废墟。在地图厅里，艾隆纳亚静待了数千年，苦苦分析由卡兹格罗斯起草的原始蓝图，设法将这一恢弘建筑复原到最初的风貌。"}}
-D.ClientTexts.Encounter[470]={Name={["2c52bd0c19eb539f:18"]=S[20287]},Description={["354e9ea0cc8f38d3:355"]="远古巨石卫士是驻守和看管伟大泰坦殿堂的众多魔像之一，也是介于看守者与众多仆从之间的中间角色。在黑曜石哨兵的腐化发生后，远古巨石卫士成了它群体中的最后一位，尽自己最大努力守护泰坦的秘密，直到自己也倒下为止。"}}
+D.ClientTexts.Encounter[470]={Name={["2c52bd0c19eb539f:18"]=S[20288]},Description={["354e9ea0cc8f38d3:355"]="远古巨石卫士是驻守和看管伟大泰坦殿堂的众多魔像之一，也是介于看守者与众多仆从之间的中间角色。在黑曜石哨兵的腐化发生后，远古巨石卫士成了它群体中的最后一位，尽自己最大努力守护泰坦的秘密，直到自己也倒下为止。"}}
 D.ClientTexts.Encounter[471]={Name={["40691e9d0683b668:17"]="加加恩·火锤"},Description={["e5bb74d8758bbf65:338"]="在铜须矮人发现奥达曼后，黑铁部族迅速做出反应，对这座地下宝库发起入侵，以防那些强大的神器落入先祖敌人之手。加加恩·火锤——来自暗炉城的参议员，被派去监督奥达曼的挖掘工作，以确保皇帝能利用神器的毁灭性潜能消灭黑铁部族的敌人。"}}
 D.ClientTexts.Encounter[472]={Name={["0e03d31aec00c2d9:7"]="格瑞姆洛克"},Description={["a2e4f589bc87b6ec:350"]="在穴居人社会中，块头最大、最强壮且最为凶狠的穴居人，常常会通过展示实力成为酋长。格瑞姆洛克相对而言是个天才，他通过威慑和某种意义上的心理战术，维持着对石窟穴居人的统治。他训练了一只致命的蜥蜴，用这野兽的石化手段令任何妄图谋逆的宵小不敢造次。"}}
 D.ClientTexts.Encounter[473]={Name={["090689c1b8a3645c:9"]="阿扎达斯"},Description={["4a83cd1005541c5d:427"]="在奥达曼深处有间密室，里面藏有泰坦最伟大的财宝之一，由诺甘农亲自缔造。然而，至今为止还没有哪位冒险家拿到过这件圣物，因为任何动静都会激活强大的看守者阿扎达斯，这是一位体型庞大的护卫，凭借有力的攻击与名副其实的仆从大军，将对财宝怀有不轨企图的宵小之徒轻松消灭。由采自奥达曼深处的远古坚石塑造而成，阿扎达斯是位既古老又可怕的对手。"}}
@@ -4940,7 +4940,7 @@ D.ClientTexts.Encounter[476]={Name={["c1395eefb63b14c4:10"]="皮萨斯"},Descrip
 D.ClientTexts.Encounter[477]={Name={["0fcf7e224e03e513:5"]="克雷什"},Description={["d627e6a5e574a274:235"]="这只巨龟是哀嚎洞穴的古老住民，终日在地下洞穴间游荡，他顽强的心智丝毫没有受到纳拉雷克斯无情噩梦的影响。别被他乐天的性情给骗了，克雷什已经将许多妄图偷取他巨大龟壳的冒险者打得落荒而逃。"}}
 D.ClientTexts.Encounter[478]={Name={["7c9df5c51bb55df0:4"]="斯卡姆"},Description={["d70b589e292d014d:245"]="斯卡姆原本只是为了逃避贫瘠之地的恶劣环境才前往哀嚎洞穴的。与洞内的许多其它住民一样，他也很快就遭到腐化。如今在他周身流淌着黑暗能量，他已经无可挽回地变成了一只强大凶残的野兽。"}}
 D.ClientTexts.Encounter[479]={Name={["f7f4c9132f1bcb50:13"]="瑟芬迪斯"},Description={["8917559ef897b8ab:224"]="毒牙德鲁伊的领袖曾是纳拉雷克斯最出色的学生。他的悲剧源自于他想要成为大导师，也就是“荣誉导师”的热望，想要和纳拉雷克斯比肩。疯狂在他心中生根发芽，瑟芬迪斯将他的兄弟们召集在一起，成立了这个名叫毒牙德鲁伊的组织。"}}
-D.ClientTexts.Encounter[480]={Name={["66781601770e7bca:19"]=S[15654]},Description={["69ae3a3c96ec24af:264"]="在纳拉雷克斯来到哀嚎洞穴之前，人们对这只生物了解甚少。永生者沃尔丹被看作是洞穴的原始守护者，没能逃过降临在自己家园的腐化。沃尔丹与其他疯狂的德鲁伊结为盟友，对那些擅自闯入的不速之客保持着高度警惕。"}}
+D.ClientTexts.Encounter[480]={Name={["66781601770e7bca:19"]=S[15655]},Description={["69ae3a3c96ec24af:264"]="在纳拉雷克斯来到哀嚎洞穴之前，人们对这只生物了解甚少。永生者沃尔丹被看作是洞穴的原始守护者，没能逃过降临在自己家园的腐化。沃尔丹与其他疯狂的德鲁伊结为盟友，对那些擅自闯入的不速之客保持着高度警惕。"}}
 D.ClientTexts.Encounter[481]={Name={["c65b35bf74850f7e:18"]=S[5936]},Description={["73580b07842bb2da:245"]="从纳拉雷克斯扭曲心灵最为阴暗的角落里，席卷翡翠梦境的腐化之力已体现在德鲁伊的死敌——鱼人的身上。名叫穆坦努斯的怪物来到这个清醒的世界上，吞噬任何想要将纳拉雷克斯从梦魇中解救出来的人。"}}
 D.ClientTexts.Encounter[483]={Name={["06580bca913a678f:10"]="加兹瑞拉"},Description={["d94d9b5aa0ee47a7:295"]="相传，加兹瑞拉是上古之神心爱的宠物，甚至她自身就是一位半神。不论真相如何，沙怒巨魔都对这只多头蛇有着长达数千年的崇拜历史。由于对这野兽的寒冰怒火心怀惧意，巨魔们只会在祭品丰裕时才会唤醒加兹瑞拉，让它大快朵颐。"}}
 D.ClientTexts.Encounter[1536]={Name={["53c082a90ee7a0b6:8"]=S[8194]}}
@@ -4949,10 +4949,10 @@ D.ClientTexts.Encounter[485]={Name={["e11a4832bddb0cf9:14"]="殉教者塞卡"},D
 D.ClientTexts.Encounter[486]={Name={["26a20c4d21e4275e:18"]=S[10220]},Description={["5191a34b265a1ac4:250"]="强大的守护者邦桑迪照看着暗矛巨魔的灵魂，可许多沙怒部族亡故成员的灵魂却没能得到这样的庇佑。这些饱受折磨的灵魂服从于祖穆拉恩，这是一位残忍的巫医，用黑暗魔法迫使城中的亡者无止无休地为自己效命。"}}
 D.ClientTexts.Encounter[487]={Name={["b736290df3d32fc6:15"]="耐克鲁姆和塞瑟斯"},Description={["1af4ce8365234660:315"]="耐克鲁姆在寿命终结后，继续以不可思议的方式存活着，他日渐腐烂的身体仍能对塞瑟斯提供帮助。这两位巨魔共同为沉睡在城市中心的神秘巨兽加兹瑞拉搜罗祭品。许多巨魔追随者都迫不及待地等待着这只可怖怪物的苏醒，为了亲眼观看仪式不惜付出任何代价。"}}
 D.ClientTexts.Encounter[489]={Name={["14b6aeb816fe6e35:19"]=S[921]},Description={["facce2db448623c0:355"]="乌克兹·沙顶沉迷于为自己的部族寻获往日的荣光。在他的成长过程中，早已对那些辉煌时代的传奇故事耳熟能详。那时，巨魔们在其古老的土地上称王称霸，完全没有地精、侏儒、海盗、食人魔以及其它外来入侵者的滋扰。沙顶邀请他的挚友卢兹鲁帮他一同书写沙顶历史的新篇章，用自己部族仅有的方式——追风掣电且目空一切的暴力，重振雄风。"}}
-D.ClientTexts.Encounter[523]={Name={["c3abb3168627f825:21"]=S[15039]},Description={["3c3d49d1402f5faa:225"]="大主教玛拉达尔塑造了希尔拉克，让其负责看管在奥金尼地穴中游荡的德莱尼鬼魂。这只长有腐目利齿和触手的亡灵怪物饥肠辘辘地汲取着奥术能量，决不容忍活人从他身边经过。"}}
+D.ClientTexts.Encounter[523]={Name={["c3abb3168627f825:21"]=S[15040]},Description={["3c3d49d1402f5faa:225"]="大主教玛拉达尔塑造了希尔拉克，让其负责看管在奥金尼地穴中游荡的德莱尼鬼魂。这只长有腐目利齿和触手的亡灵怪物饥肠辘辘地汲取着奥术能量，决不容忍活人从他身边经过。"}}
 D.ClientTexts.Encounter[524]={Name={["3945e0d313c082e0:14"]=S[7977]},Description={["d51e9559a0d556d6:217"]="作为曾经雄霸奥金尼殿堂的唯一幸存遗老，当他所挚爱的一切人和物都在眼前消失殆尽时，玛拉达尔陷入了疯狂。他不遗余力的想要将过往的记忆留存住，这使他变成了精通黑暗艺术的大师。"}}
 D.ClientTexts.Encounter[527]={Name={["97e29eb4dc6d77b1:20"]=S[10165]},Description={["618cb6894a86c306:240"]="加戈玛是外域住民心中的毒瘤，众所周知，他总是把出现在地狱火堡垒附近的倒霉蛋抓起来，吃他们的心，不管他们是不是有进入堡垒的打算。巡视者加戈玛奉卡加斯·刃拳本人的命令守卫城墙，他总是坚定不移地忠于自己的职守。"}}
-D.ClientTexts.Encounter[528]={Name={["cf23f0ea213d5e47:16"]=S[13617]},Description={["12c570e2ccd37f61:269"]="无疤者奥摩尔是驯犬者哈卡的门徒，当他的主人在上古之战中落败后，他便接管了这位传奇战士剩余的地狱犬。从那时起，奥摩尔屡战屡胜，从没在哪一场对决中被打败过。这位古老的恶魔是伊利丹派往地狱火堡垒面对那些邪兽人的使者。"}}
+D.ClientTexts.Encounter[528]={Name={["cf23f0ea213d5e47:16"]=S[13618]},Description={["12c570e2ccd37f61:269"]="无疤者奥摩尔是驯犬者哈卡的门徒，当他的主人在上古之战中落败后，他便接管了这位传奇战士剩余的地狱犬。从那时起，奥摩尔屡战屡胜，从没在哪一场对决中被打败过。这位古老的恶魔是伊利丹派往地狱火堡垒面对那些邪兽人的使者。"}}
 D.ClientTexts.Encounter[529]={Name={["d5e691250df25e3a:17"]=S[1378]},Description={["b7743f737c84e7a2:212"]="瓦兹德守卫着连接地狱火堡垒和黑暗神殿之间的补给运输、信息传递以及军队通行要道。瓦兹德的坐骑名叫纳杉，是条威风的虚空龙，他总是骑在纳杉背上，从空中用烈火、利爪和令人胆寒的尖叫声，对敌人发起势不可挡的攻势。"}}
 D.ClientTexts.Encounter[530]={Name={["9c2b245a316a0f71:14"]="塞林·火心"},Description={["f658f301bde05516:362"]="塞林·火心曾经有着尊贵的身份，他是凯尔萨斯·逐日者私人卫队的队长，但由于对主人太过忠心，他变得理智全无。绕室的水晶里蕴藏着恶魔能量，塞林被这股能量蛊惑，沉湎在那邪恶力量之中不能自拔。他会杀死任何胆敢接近魔导师平台的人，并从他们的尸体里汲取法力、生命和鲜血。"}}
 D.ClientTexts.Encounter[531]={Name={["dfc8ca19a0f95416:8"]="维萨鲁斯"},Description={["b2c7669392df5b9c:248"]="维萨鲁斯是具有超强力量的奥术元素，被三个血精灵召唤到了魔导师平台，当他抵达时便杀死了他们。周围水晶中的魔法能量与维萨鲁斯体内的力量产生了共鸣，他的身体则时刻处在向外爆发混乱洪流的状态。"}}
@@ -4961,67 +4961,67 @@ D.ClientTexts.Encounter[533]={Name={["1545654ceda1e17d:19"]=S[3074]},Description
 D.ClientTexts.Encounter[534]={Name={["883ccca8121c72b9:11"]="潘德莫努斯"},Description={["06b1cd8e9db5f15f:282"]="这位臭名昭著的虚空领主又以混乱公爵、噬国者和灭世者的名号为人们所熟知。当虚灵的故乡卡雷什遭遇毁灭时，潘德莫努斯是迪门修斯麾下的一名指挥官。他后来受制于节点亲王沙法尔，为了继续满足他无休无止的欲望，不得不为虚灵效力。"}}
 D.ClientTexts.Encounter[535]={Name={["cff5f9bd9adfd156:7"]="塔瓦洛克"},Description={["eac8d224e1c64ecf:341"]="在凯尔萨斯·逐日者的命令下，计算者帕萨雷恩召唤出了一个强大的巨像，把流动在法力陵墓下方的奥术能量收集起来。特殊的放射物意外地将塔瓦洛克变了形，使他摆脱了帕萨雷恩的红色腐化影响。这个白色的奥术巨像获得了自由意志，并用这意志贪婪地吞噬着任何对他构成阻碍的人。"}}
 D.ClientTexts.Encounter[536]={Name={["0b88c45f3c046fbc:3"]="尤尔"},Description={["739fafe9c65aad26:294"]="这是伊利丹·怒风送出的“礼物”，以陪伴节点亲王沙法尔。尤尔是具有无限野性和力量的虚空猎犬。亲王的谏臣们提醒他，这份伊利丹送来的恶魔大礼很有可能暗藏着什么阴谋诡计，一旦达成目标就会背叛沙法尔。但亲王却把那些谏臣喂到了尤尔的肚子里……不过为了以防万一，他在那之后也把这只猎犬关进了一个静止的房间内。"}}
-D.ClientTexts.Encounter[537]={Name={["13a5d741a8a85106:19"]=S[18292]},Description={["564190d4da79ccfd:296"]="由于笃信在法力陵墓的地下深处埋藏着大量财富，节点亲王沙法尔花费了难以计数的个人钱财，将一支军队调遣到了这片破碎遗迹的暗影殿堂内，并将那些不安分的虚灵隔绝在外。亲王的贪欲无边无际，而且他发誓要揭开法力陵墓的秘密，不达目的誓不罢休。"}}
+D.ClientTexts.Encounter[537]={Name={["13a5d741a8a85106:19"]=S[18293]},Description={["564190d4da79ccfd:296"]="由于笃信在法力陵墓的地下深处埋藏着大量财富，节点亲王沙法尔花费了难以计数的个人钱财，将一支军队调遣到了这片破碎遗迹的暗影殿堂内，并将那些不安分的虚灵隔绝在外。亲王的贪欲无边无际，而且他发誓要揭开法力陵墓的秘密，不达目的誓不罢休。"}}
 D.ClientTexts.Encounter[538]={Name={["3a5d6f8530701516:15"]="德拉克中尉"},Description={["753af681afdfbf90:276"]="德拉克中尉是一位颇有野心的军人，在第二次战争期间专注于挥斥方遒的无上荣耀。他的野心之大，只有他对绿皮肤兽人的仇恨才能与之相较，这些兽人杀死了他麾下的众多勇士，他将这份深仇大恨化作了残酷的刑罚，狠狠地加诸在敦霍尔德城堡集中营囚犯的身上。"}}
-D.ClientTexts.Encounter[539]={Name={["4a2b9494fd833cf3:14"]=S[13182]},Description={["8da984e0e4cd632d:294"]="斯卡洛克上尉是埃德拉斯·布莱克摩尔的死忠，与至交好友奥里登·匹瑞诺德一同在敦霍尔德的军队中提升军衔。当奥里登决定对奥特兰克山脉采取行动时，斯卡洛克却选择留在他的领主兼良师身边。他后来成为了埃德拉斯最为信任的同伴和顾问，赢得了“布莱克摩尔之矛”的头衔。"}}
+D.ClientTexts.Encounter[539]={Name={["4a2b9494fd833cf3:14"]=S[13183]},Description={["8da984e0e4cd632d:294"]="斯卡洛克上尉是埃德拉斯·布莱克摩尔的死忠，与至交好友奥里登·匹瑞诺德一同在敦霍尔德的军队中提升军衔。当奥里登决定对奥特兰克山脉采取行动时，斯卡洛克却选择留在他的领主兼良师身边。他后来成为了埃德拉斯最为信任的同伴和顾问，赢得了“布莱克摩尔之矛”的头衔。"}}
 D.ClientTexts.Encounter[540]={Name={["6dcbcacaee30d209:11"]="时空猎手"},Description={["869069ec1ea90833:332"]="这位名字神秘的时空猎手是永恒之龙军团派出的刺客，要赶在萨尔逃离敦霍尔德之前将他杀死，进而改变历史的进程。这条暗影龙在完成使命的过程中杀死过无数生灵，但这次却是他最为重要的一次暗杀。他将使出全部力量、能力、阴谋与诡计，来为这条时间线画上句号。"}}
-D.ClientTexts.Encounter[541]={Name={["98d336794d1e6d80:14"]=S[22098]},Description={["2c04624c2fb8492f:201"]="黑暗编织者塞斯奉利爪之王艾吉斯之命，在那些鸦人叛徒们寻找他们神秘的神灵时守卫塞泰克大厅。这位身形消瘦的诡计大师精通暗影魔法，深知如何让元素对他唯命是从。"}}
+D.ClientTexts.Encounter[541]={Name={["98d336794d1e6d80:14"]=S[22099]},Description={["2c04624c2fb8492f:201"]="黑暗编织者塞斯奉利爪之王艾吉斯之命，在那些鸦人叛徒们寻找他们神秘的神灵时守卫塞泰克大厅。这位身形消瘦的诡计大师精通暗影魔法，深知如何让元素对他唯命是从。"}}
 D.ClientTexts.Encounter[542]={Name={["7c942463d7b9e048:4"]="安苏"},Description={["a9215538c78f6135:226"]="安苏是位神秘的鸟神，深受鸦人的崇拜，哪怕他们比他更加凶残。安苏的起源和力量与其它任何外域的陨落之神相比都大相径庭。纳鲁也对这一邪恶生物保持沉默，因为就算对于他们来说，安苏也可称得上是神秘莫测。"}}
 D.ClientTexts.Encounter[543]={Name={["d1608faf2b930df2:14"]=S[3603]},Description={["db5aad57e941a80a:329"]="利爪之王艾吉斯是一群勇敢鸦人极富魅力的精神领袖，他们离开了位于泰罗卡森林的家园，前去寻找某位“预示之神”。他在睡梦中见到了这位神灵，领悟了深藏在奥金顿破碎殿堂中的启示。梦中的景象使艾吉斯陷入了疯狂，他现在自称是泰罗克转世，一位鸦人神话中的神圣英雄。"}}
-D.ClientTexts.Encounter[544]={Name={["f4c5804cf1fdfdb5:17"]=S[19638]},Description={["ea426ad0b54e4eef:290"]="赫尔默大使是一位强大的恶魔仆从和苦痛侍僧，专注于研究死亡艺术。没有什么能比凡人那混杂着恐惧与绝望的鲜血更令他着迷了。暗影迷宫中的邪兽人束缚着赫尔默，源源不断地向他喂食囚犯，支撑着这位恶魔为其主人的黑暗意志效力。"}}
-D.ClientTexts.Encounter[545]={Name={["7e523c8583dc9a8c:20"]=S[16347]},Description={["94916dd07d503f73:263"]="当兽人部落第一次通过黑暗之门入侵艾泽拉斯时，两位暗影议会的成员却把他们的注意力投到了奥金顿这座古老的德莱尼坟场上。那些游荡在这片土地上的不安怨灵，恰好是术士布莱卡特用来完善他精神控制能力的绝佳试验品。"}}
+D.ClientTexts.Encounter[544]={Name={["f4c5804cf1fdfdb5:17"]=S[19639]},Description={["ea426ad0b54e4eef:290"]="赫尔默大使是一位强大的恶魔仆从和苦痛侍僧，专注于研究死亡艺术。没有什么能比凡人那混杂着恐惧与绝望的鲜血更令他着迷了。暗影迷宫中的邪兽人束缚着赫尔默，源源不断地向他喂食囚犯，支撑着这位恶魔为其主人的黑暗意志效力。"}}
+D.ClientTexts.Encounter[545]={Name={["7e523c8583dc9a8c:20"]=S[16348]},Description={["94916dd07d503f73:263"]="当兽人部落第一次通过黑暗之门入侵艾泽拉斯时，两位暗影议会的成员却把他们的注意力投到了奥金顿这座古老的德莱尼坟场上。那些游荡在这片土地上的不安怨灵，恰好是术士布莱卡特用来完善他精神控制能力的绝佳试验品。"}}
 D.ClientTexts.Encounter[546]={Name={["e2fce499bd5c2bc8:17"]="沃匹尔大师"},Description={["53938ccef6f05d65:214"]="在部落发展的早期，沃匹尔大师说服兽人术士古尔丹允许他调查奥金顿的秘密，然而他暗中却渴望驾驭遍布奥金顿各处强大到骇人的宇宙精华能量。"}}
 D.ClientTexts.Encounter[547]={Name={["0ea6e6ad6a177f80:6"]="摩摩尔"},Description={["77cf30cab6c06175:262"]="“混沌初开时”、“很久很久以前”……这些辞藻都不足以说明这一元素的起源有多么久远。它的存在预示着纯粹的毁灭。只要它动一动念头，世界便会分崩离析，支离破碎。只有真正的疯子才会想要召唤它。也许现在还来得及赶在摩摩尔彻底进入外域前将它放逐。"}}
-D.ClientTexts.Encounter[548]={Name={["a3bbd7831676e600:18"]=S[18165]},Description={["4b34a47527ae74e4:194"]="来自扭曲虚空的大部分生物都需要主人不断地给予指示，但少数杰出的虚空幽灵却不用主人下达这种命令。瑟雷凯斯屹立在禁魔监狱的入口处，时刻准备消灭那些胆敢挑战他的不速之客。"}}
-D.ClientTexts.Encounter[549]={Name={["90375428645c9051:19"]=S[14385]},Description={["bbbac13d0afc1d0a:195"]="在被纳鲁囚禁之前，达尔莉安是燃烧军团中最为邪恶好战的战士之一。和天怒预言者苏克拉底做了那么长时间的狱友，也没让她改掉自己的坏脾气。"}}
+D.ClientTexts.Encounter[548]={Name={["a3bbd7831676e600:18"]=S[18166]},Description={["4b34a47527ae74e4:194"]="来自扭曲虚空的大部分生物都需要主人不断地给予指示，但少数杰出的虚空幽灵却不用主人下达这种命令。瑟雷凯斯屹立在禁魔监狱的入口处，时刻准备消灭那些胆敢挑战他的不速之客。"}}
+D.ClientTexts.Encounter[549]={Name={["90375428645c9051:19"]=S[14386]},Description={["bbbac13d0afc1d0a:195"]="在被纳鲁囚禁之前，达尔莉安是燃烧军团中最为邪恶好战的战士之一。和天怒预言者苏克拉底做了那么长时间的狱友，也没让她改掉自己的坏脾气。"}}
 D.ClientTexts.Encounter[550]={Name={["b1fb7ce2a68084c3:24"]=S[8101]},Description={["fbbe4f9abd36ae2b:178"]="数千年前，苏克拉底在愤怒卫士当中享有尊贵的地位，站在燃烧军团的最高指挥官身边。监禁关不住他超强的自我意识。他的狱友也无能为力。"}}
-D.ClientTexts.Encounter[551]={Name={["198ee64fa74a0ff2:16"]=S[21490]},Description={["4a9ae8b117cccc8a:267"]="纳鲁相信，只要将预言者斯克瑞斯关起来，并迫使他进入漫长而无梦的睡眠状态，就能让他那极具说服力的声音安静下来。然而禁魔监狱中的不幸典狱官却发现纳鲁的想法是错的。斯克瑞斯的精力太过旺盛，可以用微弱的低语轻声与监护者梅里卡尔交谈。时间会解决剩下的一切问题。"}}
-D.ClientTexts.Encounter[552]={Name={["306609b3dbcf4b30:14"]=S[13671]},Description={["4d25bbf72e40dc2a:198"]="永恒之龙军团用力量做承诺，引诱了许多龙人，但大多数龙人却只得到了奴役和绝望。时空领主德亚是少数几个例外之一，他凭借自身的原始力量和狡诈，在军团中确立了属于自己的一席之地。"}}
+D.ClientTexts.Encounter[551]={Name={["198ee64fa74a0ff2:16"]=S[21491]},Description={["4a9ae8b117cccc8a:267"]="纳鲁相信，只要将预言者斯克瑞斯关起来，并迫使他进入漫长而无梦的睡眠状态，就能让他那极具说服力的声音安静下来。然而禁魔监狱中的不幸典狱官却发现纳鲁的想法是错的。斯克瑞斯的精力太过旺盛，可以用微弱的低语轻声与监护者梅里卡尔交谈。时间会解决剩下的一切问题。"}}
+D.ClientTexts.Encounter[552]={Name={["306609b3dbcf4b30:14"]=S[13672]},Description={["4d25bbf72e40dc2a:198"]="永恒之龙军团用力量做承诺，引诱了许多龙人，但大多数龙人却只得到了奴役和绝望。时空领主德亚是少数几个例外之一，他凭借自身的原始力量和狡诈，在军团中确立了属于自己的一席之地。"}}
 D.ClientTexts.Encounter[553]={Name={["eead8fa4f0502335:8"]="坦普卢斯"},Description={["2b960ec26ed85ff1:212"]="尽管相对年轻，坦普卢斯却在制定永恒之龙军团攻击计划的过程中发挥着重要作用。作为奖励，他被赋予了一项重要职责——将任何妄图干扰军团计划的宵小赶尽杀绝。"}}
 D.ClientTexts.Encounter[554]={Name={["f185d63096269dc1:6"]="埃欧努斯"},Description={["c56aa605276fb290:128"]="埃欧努斯强大凶蛮，永恒之龙军团领主命他亲自监督针对真实时间流关键时刻所采取的破坏行动。"}}
 D.ClientTexts.Encounter[555]={Name={["c2b4ea3666c6ecd3:8"]="制造者"},Description={["3914744163e1880c:177"]="所有利用邪恶魔法的生物，不论自愿与否，都会渐渐变成恶魔的样子。至于那些试图抵抗的人，制造者加速了他们腐化的进程，并在他们身上进行了残忍的实验。"}}
 D.ClientTexts.Encounter[1537]={Name={["e0974e8d97e54160:9"]="库林纳克斯"}}
 D.ClientTexts.Encounter[557]={Name={["b8ed35213ec47bbc:18"]=S[3323]},Description={["0477f1c82328321d:242"]="当伊利丹推翻深渊领主玛瑟里顿的统治并夺取外域时，他将那位恶魔领袖囚禁在了地狱火堡垒的下方。只有伊利丹麾下最坚定的勇士才会希望担当看守之职，唯一有可能的人选就是凶残的兽人克里丹了。"}}
-D.ClientTexts.Encounter[558]={Name={["5515cd1a983024ff:17"]=S[12278]},Description={["adb32ad5bf41d856:171"]="当堕落的血精灵领袖凯尔萨斯夺取风暴要塞的控制权后，他立刻命令指挥官萨拉妮丝部署防御力量，以抵御纳鲁有可能派来夺取要塞的任何兵力。"}}
-D.ClientTexts.Encounter[559]={Name={["a9f402fb3d29cc0a:20"]=S[21847]},Description={["919dba6b049504e0:140"]="进入生态船不过短短几分钟，弗雷温便不顾后果地开始了他的实验，以解开潜藏在外域原生植物生命当中的神秘力量。"}}
-D.ClientTexts.Encounter[560]={Name={["c2a68ba32fe6055e:18"]=S[17111]},Description={["2bbbd7856f738eba:207"]="资源对于实验来说是必不可少的。看管者索恩格林要确保凯尔萨斯的植物学家有他们所需要的力量和精华，来揭开纳鲁的秘密，哪怕这意味着必须牺牲无数活体生物来达到这一目的。"}}
+D.ClientTexts.Encounter[558]={Name={["5515cd1a983024ff:17"]=S[12279]},Description={["adb32ad5bf41d856:171"]="当堕落的血精灵领袖凯尔萨斯夺取风暴要塞的控制权后，他立刻命令指挥官萨拉妮丝部署防御力量，以抵御纳鲁有可能派来夺取要塞的任何兵力。"}}
+D.ClientTexts.Encounter[559]={Name={["a9f402fb3d29cc0a:20"]=S[21848]},Description={["919dba6b049504e0:140"]="进入生态船不过短短几分钟，弗雷温便不顾后果地开始了他的实验，以解开潜藏在外域原生植物生命当中的神秘力量。"}}
+D.ClientTexts.Encounter[560]={Name={["c2a68ba32fe6055e:18"]=S[17112]},Description={["2bbbd7856f738eba:207"]="资源对于实验来说是必不可少的。看管者索恩格林要确保凯尔萨斯的植物学家有他们所需要的力量和精华，来揭开纳鲁的秘密，哪怕这意味着必须牺牲无数活体生物来达到这一目的。"}}
 D.ClientTexts.Encounter[561]={Name={["0b888b3c358fa2b5:3"]="拉伊"},Description={["179e425d118ddf06:161"]="纳鲁从外域各地搜集不同寻常的野生生物样本。当生态船遭到入侵时，他们的防御瓦解了，一些危险系数最高的标本获得了自由，到处游荡。"}}
 D.ClientTexts.Encounter[562]={Name={["37ae9e50ad75b635:12"]="迁跃扭木"},Description={["8509ecd4d4a17c73:250"]="达纳苏斯的暗夜精灵们请求外界帮忙复原一棵奥术古树，它被困在了风暴要塞之中。凯尔萨斯·逐日者的军队近来发动的攻击令迁跃扭木恐惧不已，它已经失去了分辨敌友的能力，会攻击任何打扰它的人。"}}
-D.ClientTexts.Encounter[563]={Name={["79a5f0fb640ad780:21"]=S[14428]},Description={["48769e395d41639a:128"]="必须具备极为强大的技能和精准度，才能收集纳鲁魔法晶格的力量。这些天赋可以轻易被用来对付任何入侵者。"}}
-D.ClientTexts.Encounter[564]={Name={["91772c2243bf9525:21"]=S[16211]},Description={["ad9598076a7a6ba8:154"]="塞比瑟蕾擅长快速召唤生物来摧毁任何敌人，因此她被掌管能源舰的血精灵——计算者帕萨雷恩选作了学徒。"}}
-D.ClientTexts.Encounter[565]={Name={["7bbeb52c68a94d7f:22"]=S[19378]},Description={["6d3a3cd062771961:351"]="在太阳井沦陷后，自负的秘术师帕萨雷恩看到了一个可以令自己声名远播的好机会，他决定帮助凯尔萨斯寻找让他的族人摆脱魔法依赖的良方。这一单纯的任务使他加入了身在外域的血精灵王子，并负责监管他灾难性的实验。就在不久前，帕萨雷恩开始驾驭风暴要塞的异世技术，以期让自己名利双收。"}}
-D.ClientTexts.Encounter[566]={Name={["8a7168a2d1693c67:22"]=S[21875]},Description={["c022c3e770ff3d56:246"]="奈瑟库斯曾是影月氏族的萨满祭司，他放弃了对元素的崇敬，转而研习运用邪恶魔法的艺术。他所控制的恶魔能量使他仅剩下一副躯壳，唯有在折磨年轻的邪兽人时才能获得乐趣，以检验他们精神和肉体力量的极限。"}}
+D.ClientTexts.Encounter[563]={Name={["79a5f0fb640ad780:21"]=S[14429]},Description={["48769e395d41639a:128"]="必须具备极为强大的技能和精准度，才能收集纳鲁魔法晶格的力量。这些天赋可以轻易被用来对付任何入侵者。"}}
+D.ClientTexts.Encounter[564]={Name={["91772c2243bf9525:21"]=S[16212]},Description={["ad9598076a7a6ba8:154"]="塞比瑟蕾擅长快速召唤生物来摧毁任何敌人，因此她被掌管能源舰的血精灵——计算者帕萨雷恩选作了学徒。"}}
+D.ClientTexts.Encounter[565]={Name={["7bbeb52c68a94d7f:22"]=S[19379]},Description={["6d3a3cd062771961:351"]="在太阳井沦陷后，自负的秘术师帕萨雷恩看到了一个可以令自己声名远播的好机会，他决定帮助凯尔萨斯寻找让他的族人摆脱魔法依赖的良方。这一单纯的任务使他加入了身在外域的血精灵王子，并负责监管他灾难性的实验。就在不久前，帕萨雷恩开始驾驭风暴要塞的异世技术，以期让自己名利双收。"}}
+D.ClientTexts.Encounter[566]={Name={["8a7168a2d1693c67:22"]=S[21876]},Description={["c022c3e770ff3d56:246"]="奈瑟库斯曾是影月氏族的萨满祭司，他放弃了对元素的崇敬，转而研习运用邪恶魔法的艺术。他所控制的恶魔能量使他仅剩下一副躯壳，唯有在折磨年轻的邪兽人时才能获得乐趣，以检验他们精神和肉体力量的极限。"}}
 D.ClientTexts.Encounter[568]={Name={["071d482a2fb5f21b:17"]=S[11729]},Description={["3e8a33a976e35926:311"]="凶残而狡诈的食人魔沃姆罗格被视作是邪部落最致命的成员之一。但这一人人惧怕的暴徒却也有自己的麻烦。这位食人魔颈上的双颅总会在哪怕是最简单的事情上争论不休。两年前，沃姆罗格开始了一个由十二个步骤组成的计划，从而让他好战的双重性格取得同步。但他的双颅至今还没决定好先从哪一个步骤开始实行。"}}
-D.ClientTexts.Encounter[569]={Name={["016541fe7a714b0f:24"]=S[20773]},Description={["4b655e97b17e5cd0:422"]="身为碎手氏族的首领和邪部落的酋长，卡加斯是近代最伟大的兽人英雄之一。多年来，他已经割断了双手，用战争武器取而代之，这是他氏族中特有的血腥仪式。他通过对别人和自己施加痛苦而获得快感，成为了兽人中的传奇人物。作为邪部落的残暴统治者，他用自己的残暴和凶猛打造出了一支势不可挡的作战大军，就驻扎在地狱火堡垒的钢铁城墙之内。"}}
+D.ClientTexts.Encounter[569]={Name={["016541fe7a714b0f:24"]=S[20774]},Description={["4b655e97b17e5cd0:422"]="身为碎手氏族的首领和邪部落的酋长，卡加斯是近代最伟大的兽人英雄之一。多年来，他已经割断了双手，用战争武器取而代之，这是他氏族中特有的血腥仪式。他通过对别人和自己施加痛苦而获得快感，成为了兽人中的传奇人物。作为邪部落的残暴统治者，他用自己的残暴和凶猛打造出了一支势不可挡的作战大军，就驻扎在地狱火堡垒的钢铁城墙之内。"}}
 D.ClientTexts.Encounter[570]={Name={["397328c726ba0b1a:16"]="背叛者门努"},Description={["5a7f1ee614eb3e21:329"]="门努原本是一位破碎者，是被兽人释放出的能量扭曲变形的德莱尼。当纳迦入侵赞加沼泽时，这些不幸的生物有许多都试图逃离这一地区。门努却另辟了一条通往幸福的蹊径。为了活命，他背叛了自己的破碎者同伴，转而为这些蛇形入侵者效命，同意以奴隶监工的身份看管自己的族人。"}}
 D.ClientTexts.Encounter[571]={Name={["15ad7a791ea24500:17"]=S[10210]},Description={["c32f56f9510faf5a:342"]="在德拉诺覆灭后，鲁克玛尔逃进了赞加沼泽深处。撕裂世界的能量席卷了这只巨兽，它的力量和体型都变得更大，但却要付出忍受无尽痛苦的代价。当纳迦初次来到这片区域时，他们为鲁克玛尔的凶猛而感到震惊不已。纳迦没有杀死这只野兽，而是奴役了它，用这只生物来管制赞加沼泽众多的本土生物。"}}
 D.ClientTexts.Encounter[572]={Name={["bec67dbcf46f3793:10"]="夸格米拉"},Description={["ab470aa5e58c215c:248"]="夸格米拉曾是赞加沼泽众多真菌巨人的统治者。他在赞加沼泽蜿蜒洞穴中游荡时被纳迦擒获，并遭受了难以忍受的折磨。现在这一饱受摧残的生物心无旁骛地效忠于自己的领主，让所有胆敢违抗瓦丝琪女士意志的人收声。"}}
-D.ClientTexts.Encounter[573]={Name={["e76f2b6fcee8db60:18"]=S[15502]},Description={["92667de4bd946c4f:411"]="在暗夜精灵帝国的鼎盛时期，上层精灵瑟斯比娅热衷于艺术与音乐。然而她对这些事物的喜爱在大分裂期间全都消失了，她和众多族人一起被吸进了艾泽拉斯的深渊之中，变成了充满仇恨的纳迦。在那之后的数千年里，瑟斯比娅始终是她儿时玩伴瓦丝琪女士的知己密友。她毫不犹豫地与同伴前往赞加沼泽，立誓监督纳迦对该地水源补给的汲取任务。"}}
-D.ClientTexts.Encounter[574]={Name={["a8db35b6947e5fbb:20"]=S[14420]},Description={["eb2a02143cd159bd:418"]="诺莫瑞根的辐射物把这座城市中的许多幸存者变成了麻风侏儒。杰出的机械师斯蒂里格就是这些受害者当中的一员。尽管他逃出了诺莫瑞根，并保留住了自己的聪明才智，但他曾经拥有的伦理观和同情心却已尽皆泯灭。他在艾泽拉斯四处游荡，将自己的知识出卖给一些厚颜无耻的组织，如血帆海盗。最近，纳迦雇用了斯蒂里格，让他负责操作赞加沼泽蒸汽地窟里的复杂机械装置。"}}
+D.ClientTexts.Encounter[573]={Name={["e76f2b6fcee8db60:18"]=S[15503]},Description={["92667de4bd946c4f:411"]="在暗夜精灵帝国的鼎盛时期，上层精灵瑟斯比娅热衷于艺术与音乐。然而她对这些事物的喜爱在大分裂期间全都消失了，她和众多族人一起被吸进了艾泽拉斯的深渊之中，变成了充满仇恨的纳迦。在那之后的数千年里，瑟斯比娅始终是她儿时玩伴瓦丝琪女士的知己密友。她毫不犹豫地与同伴前往赞加沼泽，立誓监督纳迦对该地水源补给的汲取任务。"}}
+D.ClientTexts.Encounter[574]={Name={["a8db35b6947e5fbb:20"]=S[14421]},Description={["eb2a02143cd159bd:418"]="诺莫瑞根的辐射物把这座城市中的许多幸存者变成了麻风侏儒。杰出的机械师斯蒂里格就是这些受害者当中的一员。尽管他逃出了诺莫瑞根，并保留住了自己的聪明才智，但他曾经拥有的伦理观和同情心却已尽皆泯灭。他在艾泽拉斯四处游荡，将自己的知识出卖给一些厚颜无耻的组织，如血帆海盗。最近，纳迦雇用了斯蒂里格，让他负责操作赞加沼泽蒸汽地窟里的复杂机械装置。"}}
 D.ClientTexts.Encounter[592]={Name={["0044d891d9433954:8"]="斯拉德兰"},Description={["81cb38a2f316eccb:192"]="斯拉德兰毕生都在为神灵效忠，牺牲神灵让他感觉不到半点儿愉悦。当神灵的力量涌入他的身体时，这位高阶先知发誓，一定要让天灾军团也同样品尝到达卡莱巨魔被迫忍受的暴行。"}}
-D.ClientTexts.Encounter[575]={Name={["86844b6fab82398c:17"]=S[17146]},Description={["76841030b34f0b81:330"]="在蒸汽地窟深处，纳迦开始用一种神秘物质进行实验，以强化他们的战士，荡除他们心中的恐惧。卡利瑟里斯是瓦丝琪的仆从之一，自愿充当这一黑暗药剂的试验品。作为奖赏，他被赋予守卫广阔蒸汽地窟的使命，确保这片区域的奥术机械设备能不受干扰的正常运行。"}}
+D.ClientTexts.Encounter[575]={Name={["86844b6fab82398c:17"]=S[17147]},Description={["76841030b34f0b81:330"]="在蒸汽地窟深处，纳迦开始用一种神秘物质进行实验，以强化他们的战士，荡除他们心中的恐惧。卡利瑟里斯是瓦丝琪的仆从之一，自愿充当这一黑暗药剂的试验品。作为奖赏，他被赋予守卫广阔蒸汽地窟的使命，确保这片区域的奥术机械设备能不受干扰的正常运行。"}}
 D.ClientTexts.Encounter[576]={Name={["49a5bd03e3114398:9"]="霍加尔芬"},Description={["1f31e16068fa0805:329"]="霍加尔芬与同伴夸格米拉不同，这一伟大的真菌巨人目前还没有沦为纳迦的奴隶。然而他始终对所有闯入赞加沼泽至深洞穴的外来者保持着极强的攻击性。霍加尔芬对纳迦在赞加沼泽其它地区实行的阴谋诡计一无所知，花费大量时间照料幽暗孢子，那是一种古老的植物，据说是他最为珍视的宝物。"}}
 D.ClientTexts.Encounter[577]={Name={["f625726529b266da:7"]="加兹安"},Description={["26eb81cb2b5b94ea:353"]="历史学家长久以来都对艾泽拉斯与外域的巨型多头蛇是否同出一源争论不休。但有一点可以确定的是，这些凶残的生物从上古时期开始就在这两块区域存在了。加兹安是外域最为恶名昭彰、可怕骇人的多头蛇。在瓦丝琪的控制下，这只贪婪的恶魔对赞加沼泽的下层发起了猛攻，以威胁当地的住民。"}}
-D.ClientTexts.Encounter[578]={Name={["8f02ca7b7e88add0:17"]=S[15776]},Description={["0ca110b743324596:396"]="身为破碎者就要接受被放逐的命运。这一真理是沼地领主穆塞雷克的心头大石。虽然他是暗血破碎者的成员，他更愿意独自在赞加沼泽下方的洞穴中游荡。在他最近一次游荡的时候，他利用自己对野兽的驾驭力迷住了唤风者克劳恩，那是一位德鲁伊，当时正以凶猛的熊形态探索那片区域。穆塞雷克强迫克劳恩充当他的忠实同伴，不会因为他被扭曲成了怪物就对他心存偏见。"}}
-D.ClientTexts.Encounter[579]={Name={["f61c02b9ee6504be:15"]=S[22143]},Description={["10562d92c8fc0e73:339"]="外域的泥沼游荡者是徘徊在野外的高个子生物，以遇到的任何小型生物为食。在赞加沼泽的孢子人当中流传着与其中一位掠食者有关的传说，它的名字叫黑色阔步者，是个极为凶残的野兽。作为所有沼泽游荡者的巢母，据说她从幽暗沼泽深处的老巢中出来，就是为了满足自己想吃美味孢子人的口腹之欲。"}}
-D.ClientTexts.Encounter[580]={Name={["acb375cb1a06b5d0:10"]=S[17835]},Description={["4f74e5986a3d0c89:322"]="纳多克斯原本是一位倍受尊敬的蛛魔领袖，将他种族的古老传统转授给后世子嗣。当蜘蛛之战席卷艾卓-尼鲁布时，他被亡灵军团击败了。巫妖王复活了纳多克斯的尸体，将他体内一切睿智高尚的品质悉数荡除，迫使他杀死了自己的学生、好友和所有其它对抗天灾之力的蛛魔。"}}
+D.ClientTexts.Encounter[578]={Name={["8f02ca7b7e88add0:17"]=S[15777]},Description={["0ca110b743324596:396"]="身为破碎者就要接受被放逐的命运。这一真理是沼地领主穆塞雷克的心头大石。虽然他是暗血破碎者的成员，他更愿意独自在赞加沼泽下方的洞穴中游荡。在他最近一次游荡的时候，他利用自己对野兽的驾驭力迷住了唤风者克劳恩，那是一位德鲁伊，当时正以凶猛的熊形态探索那片区域。穆塞雷克强迫克劳恩充当他的忠实同伴，不会因为他被扭曲成了怪物就对他心存偏见。"}}
+D.ClientTexts.Encounter[579]={Name={["f61c02b9ee6504be:15"]=S[22144]},Description={["10562d92c8fc0e73:339"]="外域的泥沼游荡者是徘徊在野外的高个子生物，以遇到的任何小型生物为食。在赞加沼泽的孢子人当中流传着与其中一位掠食者有关的传说，它的名字叫黑色阔步者，是个极为凶残的野兽。作为所有沼泽游荡者的巢母，据说她从幽暗沼泽深处的老巢中出来，就是为了满足自己想吃美味孢子人的口腹之欲。"}}
+D.ClientTexts.Encounter[580]={Name={["acb375cb1a06b5d0:10"]=S[17836]},Description={["4f74e5986a3d0c89:322"]="纳多克斯原本是一位倍受尊敬的蛛魔领袖，将他种族的古老传统转授给后世子嗣。当蜘蛛之战席卷艾卓-尼鲁布时，他被亡灵军团击败了。巫妖王复活了纳多克斯的尸体，将他体内一切睿智高尚的品质悉数荡除，迫使他杀死了自己的学生、好友和所有其它对抗天灾之力的蛛魔。"}}
 D.ClientTexts.Encounter[581]={Name={["7382a38c47490d0b:14"]=S[7860]},Description={["6d3a2e22211410f3:335"]="在凯尔萨斯攻击巫妖王落败后，他麾下一些最为精锐的血精灵追随者惨遭杀戮，被复活成了名为黑暗堕落者的不死怪物。塔拉达姆王子就是这些狡诈嗜杀的吸血鬼生物中的一员。为了尽心竭力地取悦巫妖王，他进入了饱受战争摧残的安卡赫特深处寻找失落的蛛魔圣物，用以强化那些凶暴的亡灵蛛魔。"}}
-D.ClientTexts.Encounter[582]={Name={["de7230d4c5192145:18"]=S[18034]},Description={["bf29c03be66ba454:326"]="耶戈达梦到了天启。她相传是暮光之锤最为狂热的追随者之一。在凶残食人魔法师古加尔的指引下，她学会了扭曲自己的萨满之力以效忠上古之神。不久以前，耶戈达进入了安卡赫特深处，准备迎接光荣日的到来——届时尤格-萨隆将再次崛起，用暗影吞噬艾泽拉斯的所有土地。"}}
+D.ClientTexts.Encounter[582]={Name={["de7230d4c5192145:18"]=S[18035]},Description={["bf29c03be66ba454:326"]="耶戈达梦到了天启。她相传是暮光之锤最为狂热的追随者之一。在凶残食人魔法师古加尔的指引下，她学会了扭曲自己的萨满之力以效忠上古之神。不久以前，耶戈达进入了安卡赫特深处，准备迎接光荣日的到来——届时尤格-萨隆将再次崛起，用暗影吞噬艾泽拉斯的所有土地。"}}
 D.ClientTexts.Encounter[583]={Name={["b1774c12df294eb5:8"]="埃曼尼塔"},Description={["4130f0bd8299093e:335"]="长久以来，在安卡赫特潮湿而不见天日的洞穴中，繁密地生长着各类真菌和其它温和的生物形态。然而就在不久前，尤格-萨隆将它的压迫意志散播进了这个原本独立的生态系统。上古之神用它强大的腐化之力将安卡赫特一只土著野兽扭曲成了畸形的生物，它就是埃曼尼塔，这是个毫无思想的恐怖怪兽，周身充满了从其主人身上取得的破坏能量。"}}
 D.ClientTexts.Encounter[584]={Name={["a1cb72cbb42c6a42:12"]=S[1377]},Description={["2276ce8a3a5d0fa9:330"]="在天灾军团入侵艾卓-尼鲁布期间，这个王国内的许多住民都逃进了地下隧道以躲避巫妖王的爪牙。但有一些人却挖得太深，使尤格-萨隆的卷须暴露在外。尤格-萨隆被这一骚乱吵醒了，于是派出了一名最为古老的战士——传令官沃拉兹，前去屠杀陷入围困的蛛魔，并将任何威胁到上古之神的蠢货全部歼灭。"}}
-D.ClientTexts.Encounter[585]={Name={["fff77ec4eeaebc5b:23"]=S[17119]},Description={["67a8fc9290eda941:222"]="在巫妖王抵达前，艾卓-尼鲁布的大门牢不可破地矗立了好几个世纪。这位名叫克里克希尔的蛛魔被变成了亡灵，被迫守护着他在生前没能成功守住的这道大门，仿佛是在嘲笑他连自己的家园都保护不了。"}}
+D.ClientTexts.Encounter[585]={Name={["fff77ec4eeaebc5b:23"]=S[17120]},Description={["67a8fc9290eda941:222"]="在巫妖王抵达前，艾卓-尼鲁布的大门牢不可破地矗立了好几个世纪。这位名叫克里克希尔的蛛魔被变成了亡灵，被迫守护着他在生前没能成功守住的这道大门，仿佛是在嘲笑他连自己的家园都保护不了。"}}
 D.ClientTexts.Encounter[586]={Name={["92d453a8b11b278f:8"]="哈多诺克斯"},Description={["842617c315dad34a:217"]="在艾卓-尼鲁布即将陷落之际，蛛魔大臣们放出了一只蜘蛛，这只蜘蛛能在一天之内就成长到足以挑战巫妖王的不死军团。哈多诺克斯心中充满了为死去族人复仇的渴望，要从任何胆敢威胁其家园的人手中夺回失地。"}}
-D.ClientTexts.Encounter[587]={Name={["af7d04d19f932ac8:9"]=S[21157]},Description={["1e3c2b5b3ac44020:222"]="艾卓-尼鲁布和阿努巴拉克的命运从很久以前就交织在一起了。在世时，他是帝国的国王；往生后，他成了帝国的征服者。这位叛徒国王奉巫妖王之命再次保护他的古老帝国，警惕着任何威胁他王国的人。"}}
+D.ClientTexts.Encounter[587]={Name={["af7d04d19f932ac8:9"]=S[21158]},Description={["1e3c2b5b3ac44020:222"]="艾卓-尼鲁布和阿努巴拉克的命运从很久以前就交织在一起了。在世时，他是帝国的国王；往生后，他成了帝国的征服者。这位叛徒国王奉巫妖王之命再次保护他的古老帝国，警惕着任何威胁他王国的人。"}}
 D.ClientTexts.Encounter[588]={Name={["541abf9f13f296ac:9"]="托尔戈"},Description={["ffbf9dee37ea218f:240"]="达卡莱是最为凶残的巨魔部族之一，而托尔戈又是最能够代表该部族野蛮程度的典范。但这个大块头怪物却发现与巫妖王相比，自己大肆吹嘘的暴行根本算不了什么，他现在尽心维护阿尔萨斯的统治，向任何胆敢挑战其权威的人发出可怕警告。"}}
 D.ClientTexts.Encounter[589]={Name={["dd488a91f0793f46:16"]=S[5403]},Description={["6f797a4605431be5:227"]="诺沃斯向来都是投机主义者，想方设法超越他的平庸同伴。这位邪教徒将自己的心从身体里挖了出来，在死前几秒将这个仍在跳动的器官献给了自己的主人。他的进取心令主人大受感染，于是将他重塑成了巫妖。"}}
-D.ClientTexts.Encounter[590]={Name={["d5f2488d405eab84:8"]=S[14208]},Description={["73068a646f7e1d97:238"]="暴龙之王爵德是达卡莱巨魔中的传奇角色。相传，有个巨魔狩猎小队在天灾瘟疫肆虐的居住区里发现了一只强大的野兽。巨魔们驯服了这头魔暴龙，相信它自身就是一剂解毒药，能治愈在其族人中肆虐的可怕疫病。"}}
-D.ClientTexts.Encounter[1538]={Name={["812dedb1b930cfae:13"]=S[12178]}}
+D.ClientTexts.Encounter[590]={Name={["d5f2488d405eab84:8"]=S[14209]},Description={["73068a646f7e1d97:238"]="暴龙之王爵德是达卡莱巨魔中的传奇角色。相传，有个巨魔狩猎小队在天灾瘟疫肆虐的居住区里发现了一只强大的野兽。巨魔们驯服了这头魔暴龙，相信它自身就是一剂解毒药，能治愈在其族人中肆虐的可怕疫病。"}}
+D.ClientTexts.Encounter[1538]={Name={["812dedb1b930cfae:13"]=S[12179]}}
 D.ClientTexts.Encounter[1539]={Name={["7c9ab9ef0670b28e:4"]="莫阿姆"}}
 D.ClientTexts.Encounter[593]={Name={["2c001fe9ef885d52:16"]="达卡莱巨像"},Description={["bf048c249b114d17:227"]="巨魔们在施放巫毒法术时使用魔精的传统由来已久，但将那些法术融合在一起并注入魔像，却是极具革命性的突破。他们所取得的初步成功催生出了原始造物——巨像，并继而生成了无数哨兵。"}}
 D.ClientTexts.Encounter[594]={Name={["d550e62e2931d623:7"]="莫拉比"},Description={["e8cac602b4bb758d:228"]="达卡莱巨魔想要牺牲犸托斯来获得力量，结果这位神灵却选择了自我毁灭。尽管如此，人们却不能否定莫拉比身上堪比神灵的力量。这位高阶先知饮下了神灵的鲜血，现在会不惜一切代价确保祖达克牢牢掌握在巨魔手中。"}}
 D.ClientTexts.Encounter[595]={Name={["00229a683870d3e7:15"]="凶残的伊克"},Description={["840760186947b7e9:202"]="在对其进行多次武装未果后，达卡莱巨魔将他们失败的鳄鱼人实验封印了起来。当冰巨魔奋力抵抗入侵其挚爱家园的天灾军团时，伊克和他的仆从们则在等待着重获自由的时刻。"}}
 D.ClientTexts.Encounter[596]={Name={["30f33240d5dd6f47:9"]="迦尔达拉"},Description={["aef816b5f5d903f8:246"]="当天灾军团侵入祖达克时，达卡莱巨魔只得求助自己的神灵。冰巨魔并没有选择对神灵俯首乞怜，而是拿起了利刃。眼看遇害的神灵阿卡里血流成河，高阶先知迦尔达拉和他那些背弃信仰的追随者们将神灵的力量据为己有。"}}
-D.ClientTexts.Encounter[597]={Name={["890c833fc30c341c:16"]=S[15490]},Description={["4767654f4af78e04:207"]="洛肯的钢铁大军浩浩荡荡，而比亚格里将军则是他们当中最为骁勇善战的大将。作为洛肯闪电大厅的先锋尖兵，这位铁血指挥官要确保对任何擅闯主人领地的不速之客施以极端惩罚。"}}
+D.ClientTexts.Encounter[597]={Name={["890c833fc30c341c:16"]=S[15491]},Description={["4767654f4af78e04:207"]="洛肯的钢铁大军浩浩荡荡，而比亚格里将军则是他们当中最为骁勇善战的大将。作为洛肯闪电大厅的先锋尖兵，这位铁血指挥官要确保对任何擅闯主人领地的不速之客施以极端惩罚。"}}
 D.ClientTexts.Encounter[598]={Name={["89e30678a2b0d2bd:7"]="沃尔坎"},Description={["a252c1c1c20d425a:241"]="洛肯的强大军团是他的铁匠沃尔坎精湛技艺的绝佳证明。他的工作永无止息，不眠不休地塑造士兵为堕落的守护者作战。只有当铁匠的创造物踩在敌人破碎的尸体上时，他的工作才算告一段落。"}}
 D.ClientTexts.Encounter[599]={Name={["0fa9cbfe3ef33bf9:5"]="艾欧纳尔"},Description={["aa325fdbc7451f78:255"]="洛肯从不依赖他的钢铁仆从来充当他的个人卫兵。这位堕落的守护者靠的是闪电本身的力量。艾欧纳尔和它的同伴得以在闪电大厅中避难栖身，作为交换，它们必须献出绝对的忠诚和意愿，消灭任何妄图对抗自己新主人的闯入者。"}}
 D.ClientTexts.Encounter[600]={Name={["0fe0093e09422b71:5"]="洛肯"},Description={["4a8723445fcee35b:199"]="他是艾泽拉斯首席管理官，负责看管尤格-萨隆，确保将它安妥地关押在囚牢里。没人能预见到，从上古之神的手中救下这个世界的守护者，却是想要毁灭世界的罪魁祸首。"}}
@@ -5032,25 +5032,25 @@ D.ClientTexts.Encounter[604]={Name={["1ab88943088fbc2c:10"]=S[2666]},Description
 D.ClientTexts.Encounter[605]={Name={["db288c75b5424170:13"]="悲伤圣女"},Description={["6cba0f1ef64e9b59:242"]="洛肯统御着奥杜尔的军队，但这些士兵并非全都心甘情愿地为他效命。悲伤圣女奉命消灭任何妄图在岩石大厅起事的叛逆者。与昔日盟友为敌令她感到无比悲伤，但她履行使命的手段却异常残暴。她甚至将悲伤都化作了武器。"}}
 D.ClientTexts.Encounter[606]={Name={["4e4a849b04a09506:14"]="远古法庭"},Description={["a79aa20214748eb1:250"]="埃比德努、卡德拉克和玛尔纳克组成了远古法庭，它们是蕴藏着艾泽拉斯古老历史的泰坦圆盘的管理者。这些无法移动的构造体决不会轻易放弃泰坦的秘密，但像布莱恩·铜须这样勇敢的冒险者却坚信，只有高风险才能换来高回报。"}}
 D.ClientTexts.Encounter[607]={Name={["1beed4a4c5dd9149:20"]=S[7832]},Description={["efebfdad60ea4ea0:196"]="尽管有些人在抵抗洛肯的腐化，但塑铁者斯约尼尔却迫不及待地要将意志熔炉用于更加黑暗的用途。他认为自己全新的创造物要大大优于土灵，并用它们对付那些胆敢违抗洛肯意志的敌人。"}}
-D.ClientTexts.Encounter[608]={Name={["1abc538ca7c5e495:19"]=S[16381]},Description={["178bec90a1afe007:176"]="加弗斯特制造出了一些极具杀伤力的致命武器，天灾军团用它们来对付活人。他能以极快的速度将萨隆邪铁铸成带来痛苦与死亡的可怕器具，也能直接将萨隆邪铁掷向自己的敌人。"}}
+D.ClientTexts.Encounter[608]={Name={["1abc538ca7c5e495:19"]=S[16382]},Description={["178bec90a1afe007:176"]="加弗斯特制造出了一些极具杀伤力的致命武器，天灾军团用它们来对付活人。他能以极快的速度将萨隆邪铁铸成带来痛苦与死亡的可怕器具，也能直接将萨隆邪铁掷向自己的敌人。"}}
 D.ClientTexts.Encounter[609]={Name={["a3a83096c3dae9b5:9"]="伊克和科瑞克"},Description={["d5df19f10383c87e:235"]="身材矮小的亡灵法师科瑞克监管着萨隆矿坑中的工人。他待在可怕的伊克身上，能安全地朝敌人投掷毒药、炸弹或施放黑暗法术。他的工作还使他能够了解到冰冠堡垒中有助于推翻巫妖王统治的黑暗秘密。"}}
 D.ClientTexts.Encounter[610]={Name={["1e74a0d25dc6b2e1:19"]=S[8110]},Description={["c6651c923c67abeb:196"]="死亡骑士泰兰努斯在消灭巨人加弗斯特后，被提拔成了天灾领主。他凭借自身的力量、凶残和冰龙霜牙，成为了萨隆矿坑和映像大厅入口处最杰出的守护者。"}}
 D.ClientTexts.Encounter[611]={Name={["5d2753bd39414ece:8"]="肉钩"},Description={["7a5d0c6f3302cada:250"]="自从阿尔萨斯王子首次遭遇天灾憎恶以来，它们的邪恶程度与日俱增。肉钩比其它同类成长得更加强壮、更具毒性、更加敏捷。创造肉钩的亡灵法师们从没想过要把它塑造得多么聪明，但哪怕是最基本的狡诈就足以让它为所欲为了。"}}
-D.ClientTexts.Encounter[631]={Name={["10399e116b6f4dcc:21"]=S[16057]},Description={["758a51b3c5df2f96:244"]="达拉然派出了上百名精锐将士才制服了祖拉玛特，又出动了两倍兵力才把那杀戮场中成堆的尸体清理干净。湮灭者的狠毒甚至让疯狂的玛里苟斯都感到吃惊和犹豫，虚空领主对魔法的贪欲令他厌恶，但大屠杀却让两者臭味相投。"}}
+D.ClientTexts.Encounter[631]={Name={["10399e116b6f4dcc:21"]=S[16058]},Description={["758a51b3c5df2f96:244"]="达拉然派出了上百名精锐将士才制服了祖拉玛特，又出动了两倍兵力才把那杀戮场中成堆的尸体清理干净。湮灭者的狠毒甚至让疯狂的玛里苟斯都感到吃惊和犹豫，虚空领主对魔法的贪欲令他厌恶，但大屠杀却让两者臭味相投。"}}
 D.ClientTexts.Encounter[612]={Name={["39939e0cc340275d:22"]=S[7831]},Description={["20d3de34dce2c79f:289"]="塑血者沙尔拉姆是在通灵学院下方殿堂中受训的首批亡灵法师之一。在他眼里，那些试验品以及偶尔出现的小学徒都只不过是他工作中的有趣点滴而已。现在所有住在斯坦索姆里的人，以及那些妄图阻止他的闯入者，都成了他的实验对象……"}}
-D.ClientTexts.Encounter[613]={Name={["f6ed9f3bb86a77ca:16"]=S[13666]},Description={["8296e3cb1af5e83c:268"]="永恒之龙军团通常会尝试使用精妙的手法来操纵时间流，但若是失败，他们也会派出刺客去直接“处理”阿尔萨斯。尽管人们对永恒之龙军团的刺客知之甚少，但这位埃博克却有着可怕的时间驾驭能力，使他成为了横亘在阿尔萨斯未来道路上的致命障碍。"}}
-D.ClientTexts.Encounter[614]={Name={["ec1411d8924cc44f:9"]=S[16678]},Description={["8fcbda708016f01b:276"]="玛尔加尼斯在历史中的地位已经定格了。阿尔萨斯对这名恐惧魔王的仇恨将驱使他前往诺森德，拿起霜之哀伤。但这一切的前提是玛尔加尼斯在战斗中认同阿尔萨斯的价值。为了证明自己的价值，踏上成为巫妖王的征途，阿尔萨斯必须在玛尔加尼斯的攻势下存活下来。"}}
+D.ClientTexts.Encounter[613]={Name={["f6ed9f3bb86a77ca:16"]=S[13667]},Description={["8296e3cb1af5e83c:268"]="永恒之龙军团通常会尝试使用精妙的手法来操纵时间流，但若是失败，他们也会派出刺客去直接“处理”阿尔萨斯。尽管人们对永恒之龙军团的刺客知之甚少，但这位埃博克却有着可怕的时间驾驭能力，使他成为了横亘在阿尔萨斯未来道路上的致命障碍。"}}
+D.ClientTexts.Encounter[614]={Name={["ec1411d8924cc44f:9"]=S[16679]},Description={["8fcbda708016f01b:276"]="玛尔加尼斯在历史中的地位已经定格了。阿尔萨斯对这名恐惧魔王的仇恨将驱使他前往诺森德，拿起霜之哀伤。但这一切的前提是玛尔加尼斯在战斗中认同阿尔萨斯的价值。为了证明自己的价值，踏上成为巫妖王的征途，阿尔萨斯必须在玛尔加尼斯的攻势下存活下来。"}}
 D.ClientTexts.Encounter[615]={Name={["3f44c5f60cb1a64b:8"]="布隆亚姆"},Description={["2637f813c968ed80:258"]="布隆亚姆从早期开始就一直在为诅咒神教效力了。克尔苏加德亲自向布隆亚姆传授了灵魂的价值，以及如何让灵魂饱受折磨，为天灾军团的战争机器供给能量。他能腐化敌人的灵魂，并将其一块一块地撕扯出来，这使他成为了看守巫妖王灵魂洪炉的理想守护者。"}}
 D.ClientTexts.Encounter[616]={Name={["d201edbc0fb95d45:15"]="噬魂者"},Description={["37fd17c2ef4d26d5:354"]="布隆亚姆在灵魂洪炉中从事的黑暗产业可以生产出饱受折磨、支离破碎的灵魂。为了阻止这些灵魂逃走，并将这些亡魂的价值发挥到极致，巫妖王创造出了噬魂者。噬魂者会追击并吞噬那些游荡的灵魂，并将它们在自己可怕的身体里拆解。被吞噬的灵魂会因痛苦和煎熬而陷入疯狂，但噬魂者的欲望却永不满足。"}}
-D.ClientTexts.Encounter[617]={Name={["e2e47dd8c86dd23b:19"]=S[12261]},Description={["217174b526c48918:175"]="指挥官斯托比德领导自己的军队对抗联盟最为危险的敌人。停滞大厅或许使他放慢了脚步，但是只要一看见部落冒险者，他又会立刻打起精神来，急速狂奔。"}}
+D.ClientTexts.Encounter[617]={Name={["e2e47dd8c86dd23b:19"]=S[12262]},Description={["217174b526c48918:175"]="指挥官斯托比德领导自己的军队对抗联盟最为危险的敌人。停滞大厅或许使他放慢了脚步，但是只要一看见部落冒险者，他又会立刻打起精神来，急速狂奔。"}}
 D.ClientTexts.Encounter[618]={Name={["191675721bd4ff3f:18"]=S[8092]},Description={["b7597c8fc28f3676:239"]="相传大魔导师泰蕾丝塔是凯尔萨斯王子的导师。尽管她认为王子与纳迦结盟的做法愚不可及，她还是无法支持达拉然囚禁自己的人民。玛里苟斯只需要让她想起这一背叛，就会让她自愿给他的法师猎手充当导师。"}}
 D.ClientTexts.Encounter[619]={Name={["1f0326a52fc23294:8"]="阿诺玛鲁斯"},Description={["23106cad0c3527aa:230"]="让艾泽拉斯如此多的奥术能量流经魔枢，这在现实中造成了裂隙。当玛里苟斯的大军试图击退入侵生物时，混乱的奥术能量化成了阿诺玛鲁斯的形态。要是不及时制止这一生物，它就会毁灭自己所能触碰到的一切。"}}
 D.ClientTexts.Encounter[620]={Name={["4e64582f6d187bf8:21"]=S[7830]},Description={["0a36adea8dd90bd3:231"]="魔枢中难以置信的奥术能量改变了轻歌之林及其守卫者的形态。头脑简单的奥莫洛克被将他变形的强大能量牢牢控制住了。对于那些干扰他思考的入侵者，他很少废话，而是直接用暴力解决问题。"}}
 D.ClientTexts.Encounter[621]={Name={["b30535f817a8bc39:11"]=S[2665]},Description={["13a1bb91364ab4d6:230"]="克莉斯塔萨所遭受的折磨究竟是因为莎拉苟萨之死，还是因为玛利苟斯想要将其转变成自己的配偶，答案只有玛里苟斯自己才知道。不论他意图如何，她的同伴一直都听得见她痛苦的哭喊和她神智渐失所发出的不安低语声。"}}
 D.ClientTexts.Encounter[622]={Name={["b2041d4ac8df8fd9:21"]=S[8981]},Description={["b28b34194ff74b70:291"]="那些违犯玛里苟斯律法的人，都会发现自己置身于达库斯的利爪下。在把克莉斯塔萨关进魔枢后，达库斯便返回魔环接管新的囚犯——那些违抗玛里苟斯命令的其它龙族。他不在乎所谓的名誉，也无需虚伪的遮掩。他的囚犯就是要在这里受刑的，谁也别想逃脱。"}}
-D.ClientTexts.Encounter[623]={Name={["f9d53e64e2845eaf:17"]=S[16793]},Description={["edd676968a38b40b:249"]="自从魔枢战争开始后，瓦尔洛斯·云击便负责协调针对龙眠联军的残忍进攻。他被召回以守卫魔环，而他手下的上尉和飞龙也已准备就绪。瓦尔洛斯还利用在魔环中涌动的力量来加强自己的防御。"}}
-D.ClientTexts.Encounter[624]={Name={["9c86bbe0f3fee72b:13"]=S[15795]},Description={["2cfc8402606bc265:243"]="伊洛姆背弃了肯瑞托，发誓效忠玛里苟斯，玛里苟斯自然求之不得地接受了他。这位变节的法师对蓝龙军团来说堪称无价之宝。他对肯瑞托的优势和弱点知道得一清二楚。他了解他们的思维方式。而他也会利用这知识毁灭他们。"}}
-D.ClientTexts.Encounter[625]={Name={["2cea9dec91c750b1:18"]=S[21967]},Description={["71293a66e68a1c35:223"]="就连英雄也会在埃雷苟斯面前战栗，他是魔环的保护者，能量线导管的守卫者，也是不速之客的处决者。他将凭借对预言的笃信完成这些任务，守护着织法者帝国的完整和这里神秘的一切。"}}
+D.ClientTexts.Encounter[623]={Name={["f9d53e64e2845eaf:17"]=S[16794]},Description={["edd676968a38b40b:249"]="自从魔枢战争开始后，瓦尔洛斯·云击便负责协调针对龙眠联军的残忍进攻。他被召回以守卫魔环，而他手下的上尉和飞龙也已准备就绪。瓦尔洛斯还利用在魔环中涌动的力量来加强自己的防御。"}}
+D.ClientTexts.Encounter[624]={Name={["9c86bbe0f3fee72b:13"]=S[15796]},Description={["2cfc8402606bc265:243"]="伊洛姆背弃了肯瑞托，发誓效忠玛里苟斯，玛里苟斯自然求之不得地接受了他。这位变节的法师对蓝龙军团来说堪称无价之宝。他对肯瑞托的优势和弱点知道得一清二楚。他了解他们的思维方式。而他也会利用这知识毁灭他们。"}}
+D.ClientTexts.Encounter[625]={Name={["2cea9dec91c750b1:18"]=S[21968]},Description={["71293a66e68a1c35:223"]="就连英雄也会在埃雷苟斯面前战栗，他是魔环的保护者，能量线导管的守卫者，也是不速之客的处决者。他将凭借对预言的笃信完成这些任务，守护着织法者帝国的完整和这里神秘的一切。"}}
 D.ClientTexts.Encounter[626]={Name={["fbc02c9e8f0a9bdb:6"]="埃雷克姆"},Description={["6c2dd279274cf2fe:253"]="紫罗兰监狱中的住民都是外域最为臭名昭彰的罪犯，埃雷克姆也不例外。虽然他刺杀六人议会的阴谋被肯瑞托识破了，但现在蓝龙军团却征召了这位阴险的鸦人去实现更有野心的目标——荡除达拉然的所有法师。"}}
 D.ClientTexts.Encounter[627]={Name={["0e3a1ec2cc9687f1:6"]="摩拉格"},Description={["29411dd227ff4291:248"]="塞安妮苟萨招募了摩拉格来帮她消灭达拉然那些胆敢忤逆蓝龙军团的法师。这个可怕的恶魔曾经效命于燃烧军团，用他七只眼睛的邪恶凝视重挫萨格拉斯的敌人。现在他将让艾泽拉斯的英雄们明白，不是谁都能随意进出紫罗兰监狱……"}}
 D.ClientTexts.Encounter[628]={Name={["84ea04f767d28cb0:7"]="艾库隆"},Description={["b797533e65ea1c13:221"]="一位愚蠢的学徒从元素位面召唤了这个幽魂，却没料到那些愤怒的上古之神卫兵压根当不了宠物。艾库隆杀死了她的“准主人”，并从那天开始就赖在了紫罗兰监狱，急切地向她的狱卒复仇。"}}
@@ -5058,77 +5058,77 @@ D.ClientTexts.Encounter[629]={Name={["2730583bda562066:6"]="谢沃兹"},Descript
 D.ClientTexts.Encounter[630]={Name={["013232d46f781b45:9"]="拉文索尔"},Description={["88b9a21aafbf196d:182"]="冷酷狡诈的塞安妮苟萨释放出了熔火恶犬。达拉然的法师们将这只双头怪物囚禁在监狱里，原本是希望能平复它对鲜血的渴望，但多年的隔离生活丝毫没能改变它的本性。"}}
 D.ClientTexts.Encounter[632]={Name={["dc68c6032ef46f7c:9"]="塞安妮苟萨"},Description={["b335d5f39301e304:220"]="玛里苟斯选择塞安妮苟萨来执行他的阴谋诡计，因为她有着毋庸置疑的忠诚。当她的主人陷入疯狂时，她没有退缩半分；当他霸占艾泽拉斯的魔网时，她也没有丝毫动摇；而且她一定会消灭所有胆敢违抗他的人。"}}
 D.ClientTexts.Encounter[634]={Name={["e1d40d13f6445b1e:14"]="总冠军"},Description={["b0da4e9ba37562e0:259"]=S[10233]}}
-D.ClientTexts.Encounter[635]={Name={["2e7ab04ac9a712e5:13"]=S[17818]},Description={["0dde6c7fd93ca57c:255"]="在英雄们得以挑战黑暗大军之前，他们必须击败圣光的代言人。大领主提里奥·弗丁从银色北伐军中挑选出了一位令人敬畏的圣骑士来测试挑战者的勇气。耶德瑞克会不遗余力地剔除那些缺乏道德信念的人，将他们隔绝在冰冠堡垒之外。"}}
-D.ClientTexts.Encounter[636]={Name={["7d740beb08d297ae:24"]=S[21013]},Description={["c67597393aefbe0a:263"]="在英雄们得以挑战黑暗大军之前，他们必须击败圣光的代言人。大领主提里奥·弗丁从银色北伐军中挑选出了一位令人敬畏的牧师来测试挑战者的勇气。帕尔崔丝会竭尽所能地确保只有那些拥有坚定信念的人才有资格面对天灾军团。"}}
+D.ClientTexts.Encounter[635]={Name={["2e7ab04ac9a712e5:13"]=S[17819]},Description={["0dde6c7fd93ca57c:255"]="在英雄们得以挑战黑暗大军之前，他们必须击败圣光的代言人。大领主提里奥·弗丁从银色北伐军中挑选出了一位令人敬畏的圣骑士来测试挑战者的勇气。耶德瑞克会不遗余力地剔除那些缺乏道德信念的人，将他们隔绝在冰冠堡垒之外。"}}
+D.ClientTexts.Encounter[636]={Name={["7d740beb08d297ae:24"]=S[21014]},Description={["c67597393aefbe0a:263"]="在英雄们得以挑战黑暗大军之前，他们必须击败圣光的代言人。大领主提里奥·弗丁从银色北伐军中挑选出了一位令人敬畏的牧师来测试挑战者的勇气。帕尔崔丝会竭尽所能地确保只有那些拥有坚定信念的人才有资格面对天灾军团。"}}
 D.ClientTexts.Encounter[637]={Name={["e4dfcac889691c7b:14"]="黑骑士"},Description={["31ea4ccdcb70af90:265"]="巫妖王万分狡猾，并且善于利用策反来削弱自己的敌人。为了达到这个目的，他已经派出黑骑士去扫除大领主提里奥·弗丁军中的后起之秀。亡灵的出现亵渎了十字军演武场，那些击败他的勇士将得以证明自己的价值。"}}
 D.ClientTexts.Encounter[638]={Name={["5936dd1b6768cee2:14"]=S[3084]},Description={["70285e79e620d8cc:301"]="巫妖王将凯雷塞斯派往乌特加德城堡，希望能够抑制维库人身上的潜在毁灭力。抵达之后，这位大使发现了一群更加渴望帮助天灾军团的人。乌特加德城堡是威胁嚎风峡湾的绝佳位置，凯雷塞斯丝毫没有将它拱手让给粗鲁入侵者的打算。"}}
 D.ClientTexts.Encounter[639]={Name={["9f3a0511e7d14e72:16"]="斯卡瓦尔德和达尔隆"},Description={["8e292768eb97a3db:305"]="依照维库人的传统，要让不太可能合作的伙伴相处共事。有人说这是为了让具备不同能力的人彼此之间实现互补，也有人说这是为了给伊米隆国王找乐子而已。不管怎样，斯卡瓦尔德和达尔隆都是这一风俗的完美榜样。一个是肌肉发达的维库人，一个是精通黑暗艺术的人类亡灵法师，他们会对任何妨碍天灾军团的人施以严惩。"}}
-D.ClientTexts.Encounter[640]={Name={["e3e3ea5eca98de3d:18"]=S[12340]},Description={["f302d3dbdf6a2dda:269"]="即便是在维库人当中，因格瓦尔的残忍力量也充满了传奇色彩。相传他曾经在一场打斗中击败了伊米隆国王。真相无人知晓，但散播这个传说的人通常都无法活着将这个故事再讲一遍。因格瓦尔向巫妖王保证，自己会竭尽所能守住城堡，这是一个他不敢打破的承诺。"}}
+D.ClientTexts.Encounter[640]={Name={["e3e3ea5eca98de3d:18"]=S[12341]},Description={["f302d3dbdf6a2dda:269"]="即便是在维库人当中，因格瓦尔的残忍力量也充满了传奇色彩。相传他曾经在一场打斗中击败了伊米隆国王。真相无人知晓，但散播这个传说的人通常都无法活着将这个故事再讲一遍。因格瓦尔向巫妖王保证，自己会竭尽所能守住城堡，这是一个他不敢打破的承诺。"}}
 D.ClientTexts.Encounter[641]={Name={["33d0123d828bcbae:16"]=S[10354]},Description={["0b3c40790fde8cac:278"]="席瓦拉作为掠夺者因格瓦尔的副官而扬名于世，在部落和联盟的前哨站领导危险的侦察任务。正是她发现了敌人入侵乌特加德的计划，给了巫妖王准备的时间。为了表彰她所作出的贡献，巫妖王将她变成了维库人，成为了天灾军团倍受尊敬的女战士。"}}
 D.ClientTexts.Encounter[642]={Name={["83560c89f75123ae:14"]="戈托克·苍蹄"},Description={["32666ac49209eb37:279"]="维库人在乌特加德城堡里保存着许多战利品，戈托克是当中最令人印象深刻的一个。伊米隆国王用这一寒冰猛犸人的冷酷面容提醒人们，哪怕是最为凶残的野兽也只不过是维库人殿堂中的装饰物而已。这个活雕像一旦重获自由便会散播毁灭，不加选择地释放他心中的怒火。"}}
-D.ClientTexts.Encounter[643]={Name={["820ecbccd4b312f3:16"]=S[15069]},Description={["790c159446f6e7f5:312"]="维库人往往根据个人所取得的成就来赋予绰号。肃清一条达卡莱血脉或是消灭一只牦牛人，可以获得“忠实”的称谓，但必须要足够邪恶才能被称作“残忍”。很久以前，有维库人出手保护被伊米隆定罪的畸变婴儿即人类始祖，斯卡迪残酷无情地对其展开了追杀，因此获得了“残忍”的称号。"}}
+D.ClientTexts.Encounter[643]={Name={["820ecbccd4b312f3:16"]=S[15070]},Description={["790c159446f6e7f5:312"]="维库人往往根据个人所取得的成就来赋予绰号。肃清一条达卡莱血脉或是消灭一只牦牛人，可以获得“忠实”的称谓，但必须要足够邪恶才能被称作“残忍”。很久以前，有维库人出手保护被伊米隆定罪的畸变婴儿即人类始祖，斯卡迪残酷无情地对其展开了追杀，因此获得了“残忍”的称号。"}}
 D.ClientTexts.Encounter[644]={Name={["4c4af64ca62e8073:10"]=S[1359]},Description={["21265432f7834f61:262"]="骄傲的伊米隆统治着北部荒野，直到维库人的长眠令他的伟业不再具有举足轻重的意义。等他苏醒过来，却发现他的妻子惨遭杀害，自己的土地已被敌人重重包围。他放弃了自己凡人的身份，一心渴望复仇，迫不及待地想要向敌人展示一位苏醒巨人的可怕决心。"}}
 D.ClientTexts.Encounter[649]={Name={["35197f139136d702:7"]="莱公"},Description={["54ad4ba6822e838f:207"]="这个体型庞大的螳螂妖是攻击城门的开路先锋。莱公扮演着活体攻城槌的角色，无情地冲击着熊猫人的防线，妄图消灭阻挡螳螂妖凶残入侵潘达利亚的任何障碍。"}}
-D.ClientTexts.Encounter[654]={Name={["65c58e7a6d7ed899:16"]=S[15004]},Description={["6a07c03056a28b81:293"]="血色十字军的武器多种多样，而新兵必须学会使用剑刃、战锤、弓箭和盾牌等一系列对抗亡灵的有效工具。武器大师哈兰毕生都在钻研这些利器的挥持之道，他很愿意用十字军的宿敌来加以示范。"}}
-D.ClientTexts.Encounter[655]={Name={["f07db56accc81fa3:17"]=S[17188]},Description={["4815b52ccf1f8459:230"]="螳螂妖并不是战场上的门外汉，他们善于用科技扭转战局。熊猫人在吉普提拉克这样的军需专家面前几乎毫无胜算，他能从敌人阵线的大后方发起攻击，并威胁从内部瓦解本已衰弱不堪的防御工事。"}}
-D.ClientTexts.Encounter[656]={Name={["b0c44fbd26c51310:18"]=S[17868]},Description={["fb8d8e682ca7b93f:314"]="织焰者孔格勒对那些颇具魔法天赋的血色十字军成员进行了高深的秘法训练。火焰是他的专长，他还借此烧毁了教团的历史书典，抹除了十字军过往的败绩。除了书典之外，孔格勒还用烈焰将众多宵小之辈——亡灵、差生和闯入者烧得灰飞烟灭。"}}
-D.ClientTexts.Encounter[657]={Name={["27bcd4519202c764:15"]=S[21356]},Description={["23abe2f10891135e:293"]="雪流大师认识到，部落和联盟之间的战争与禅院今时今日的没落脱不了干系。英雄们如果想要让这位谨慎的大师以诚相待，就必须先击败他的得意门生。只有胜者才能得见大师本尊——穷其毕生精力以达到形神绝伦境界的武术泰斗。"}}
+D.ClientTexts.Encounter[654]={Name={["65c58e7a6d7ed899:16"]=S[15005]},Description={["6a07c03056a28b81:293"]="血色十字军的武器多种多样，而新兵必须学会使用剑刃、战锤、弓箭和盾牌等一系列对抗亡灵的有效工具。武器大师哈兰毕生都在钻研这些利器的挥持之道，他很愿意用十字军的宿敌来加以示范。"}}
+D.ClientTexts.Encounter[655]={Name={["f07db56accc81fa3:17"]=S[17189]},Description={["4815b52ccf1f8459:230"]="螳螂妖并不是战场上的门外汉，他们善于用科技扭转战局。熊猫人在吉普提拉克这样的军需专家面前几乎毫无胜算，他能从敌人阵线的大后方发起攻击，并威胁从内部瓦解本已衰弱不堪的防御工事。"}}
+D.ClientTexts.Encounter[656]={Name={["b0c44fbd26c51310:18"]=S[17869]},Description={["fb8d8e682ca7b93f:314"]="织焰者孔格勒对那些颇具魔法天赋的血色十字军成员进行了高深的秘法训练。火焰是他的专长，他还借此烧毁了教团的历史书典，抹除了十字军过往的败绩。除了书典之外，孔格勒还用烈焰将众多宵小之辈——亡灵、差生和闯入者烧得灰飞烟灭。"}}
+D.ClientTexts.Encounter[657]={Name={["27bcd4519202c764:15"]=S[21357]},Description={["23abe2f10891135e:293"]="雪流大师认识到，部落和联盟之间的战争与禅院今时今日的没落脱不了干系。英雄们如果想要让这位谨慎的大师以诚相待，就必须先击败他的得意门生。只有胜者才能得见大师本尊——穷其毕生精力以达到形神绝伦境界的武术泰斗。"}}
 D.ClientTexts.Encounter[709]={Name={["75eed914a34555f3:9"]="惧之煞"},Description={["1766585fd4fbf1cc:176"]="惧之煞是潘达利亚恐惧的实体形态。很久以前被传说中的熊猫人皇帝少昊囚禁，近来却因岛上纷争四起而再次变得强大。"}}
 D.ClientTexts.Encounter[658]={Name={["efa28c0821ea1a8b:13"]="刘·焰心"},Description={["0f7e15a63e846245:272"]="从幼时起，女祭司刘·焰心就开始研究青龙玉珑的重生循环。当疑之煞发起攻击时，刘是第一个奋起反抗的，也是第一个屈从于堕落的。现在她的心中充满了疑虑，怕自己再也没有力量确保玉珑的重生。"}}
 D.ClientTexts.Encounter[659]={Name={["b21e1fe2afa363df:20"]="指导者寒心"},Description={["3fca992e24ab81d7:237"]="课程：黑暗艺术入门\r\n\r\n指导者寒心从诺森德远道而来，对发愤图强的亡灵法师们进行训练，严惩那些令她失望的不肖徒弟。她善于驾驭北地的冰冷严寒之力，并能将通灵学院图书馆的致命威力发挥到极致。"}}
-D.ClientTexts.Encounter[660]={Name={["efa56327c82a6ca4:16"]=S[21636]},Description={["088ea1c7f1c37fd2:242"]="最快速且万无一失的探测亡灵的方法，就是分辨他们身上的腐烂气味，而即便是身经百战的老兵，其嗅觉也不能跟犬类相提并论。驯犬者布兰恩驯养出了一群凶残的战犬，能帮助十字军战士追猎他们的敌人——不论是活人还是亡灵。"}}
-D.ClientTexts.Encounter[663]={Name={["0131f92d45284b7c:12"]=S[19350]},Description={["d2ea86b34eaf64e4:256"]="课程：高级幻象\r\n\r\n巴罗夫的灵魂已在通灵学院中游荡多年，现在她正发挥出更为积极的作用——训练新生代法师。她掌握着有关幻象的广博知识，对学生而言，她是一位杰出的导师；对那些激怒她的蠢货而言，则是一位可怕的对手。"}}
-D.ClientTexts.Encounter[664]={Name={["c1262682d7ed3e85:19"]=S[16051]},Description={["2270f505e6926de0:264"]="疑之煞的爪牙们兴致勃勃地冲进青龙寺的藏书阁，用扭曲和极富毁灭性的手段，颠覆了熊猫人英雄和其他大人物的光辉形象。尽管游学者石步已经竭尽全力，但他还是无力将这些往昔记载复原到未被玷污时的本来面目。"}}
+D.ClientTexts.Encounter[660]={Name={["efa56327c82a6ca4:16"]=S[21637]},Description={["088ea1c7f1c37fd2:242"]="最快速且万无一失的探测亡灵的方法，就是分辨他们身上的腐烂气味，而即便是身经百战的老兵，其嗅觉也不能跟犬类相提并论。驯犬者布兰恩驯养出了一群凶残的战犬，能帮助十字军战士追猎他们的敌人——不论是活人还是亡灵。"}}
+D.ClientTexts.Encounter[663]={Name={["0131f92d45284b7c:12"]=S[19351]},Description={["d2ea86b34eaf64e4:256"]="课程：高级幻象\r\n\r\n巴罗夫的灵魂已在通灵学院中游荡多年，现在她正发挥出更为积极的作用——训练新生代法师。她掌握着有关幻象的广博知识，对学生而言，她是一位杰出的导师；对那些激怒她的蠢货而言，则是一位可怕的对手。"}}
+D.ClientTexts.Encounter[664]={Name={["c1262682d7ed3e85:19"]=S[16052]},Description={["2270f505e6926de0:264"]="疑之煞的爪牙们兴致勃勃地冲进青龙寺的藏书阁，用扭曲和极富毁灭性的手段，颠覆了熊猫人英雄和其他大人物的光辉形象。尽管游学者石步已经竭尽全力，但他还是无力将这些往昔记载复原到未被玷污时的本来面目。"}}
 D.ClientTexts.Encounter[665]={Name={["180c7fdefb2f6fa3:10"]="血骨傀儡"},Description={["8999e2fddad89654:296"]="课程：复生导论第一章\r\n\r\n人们都以为血骨傀儡在安多哈尔被消灭了，但加丁很快就将这个狂躁的畸形巨怪复生了，并让他来阻挡入侵者。黑暗院长还设法将血骨傀儡变得更为凶残，使其贪得无厌地尽享敌人的血肉。"}}
-D.ClientTexts.Encounter[666]={Name={["d9e3b54948dd6980:10"]=S[18407]},Description={["b669601d9f0f8aca:365"]="课程：再教育\r\n\r\n亡灵莉莉安·沃斯因背叛而亲手扼死了她的父亲——血色十字军的高阶祭司，然后大举出击，最终进入了通灵学院的阴暗走廊。可黑暗院长加丁不但没有下令消灭这位入侵者，反而仁慈地指引沃斯，教她如何拥抱无情的命运。她那曾经指向学院的怒意和利刃，现在对准了加丁的敌人。"}}
+D.ClientTexts.Encounter[666]={Name={["d9e3b54948dd6980:10"]=S[18408]},Description={["b669601d9f0f8aca:365"]="课程：再教育\r\n\r\n亡灵莉莉安·沃斯因背叛而亲手扼死了她的父亲——血色十字军的高阶祭司，然后大举出击，最终进入了通灵学院的阴暗走廊。可黑暗院长加丁不但没有下令消灭这位入侵者，反而仁慈地指引沃斯，教她如何拥抱无情的命运。她那曾经指向学院的怒意和利刃，现在对准了加丁的敌人。"}}
 D.ClientTexts.Encounter[668]={Name={["6ed764c44271cfe9:7"]="乌克乌克"},Description={["4be5de8dd932c276:210"]="即使对猢狲而言，乌克乌克也是出了名的那粗野呱噪。这个大块头近日带着他的跟班们闯进了风暴烈酒酿造厂，将珍贵的酒桶统统打破，在那里搞起了史上规模最大的派对——乌克大狂欢。"}}
 D.ClientTexts.Encounter[669]={Name={["785f1ac1c91962d4:9"]="跳跳大王"},Description={["19ea0e947567a527:243"]="跳跳大王是四风谷农夫的天敌——他是一只庞大无比的兔妖，一晚上就能吃掉整片农田的庄稼。有传言称，这只大害虫和他的儿孙们已经侵入酿酒厂，开始吞吃存放在那里的精米和大麦。"}}
-D.ClientTexts.Encounter[670]={Name={["5b8e9fa0fdf1dd7f:18"]=S[17202]},Description={["6b0171b8d00f1e51:240"]="为拯救家族酿酒厂，高老伯决定破釜沉舟，研制一种他心目中的终极麦酒——一种口感醇厚的浓烈饮品。他这大胆的实验却催生了一个可怕又极为暴躁的酒灵生物，被称作破桶而出的炎诛。"}}
+D.ClientTexts.Encounter[670]={Name={["5b8e9fa0fdf1dd7f:18"]=S[17203]},Description={["6b0171b8d00f1e51:240"]="为拯救家族酿酒厂，高老伯决定破釜沉舟，研制一种他心目中的终极麦酒——一种口感醇厚的浓烈饮品。他这大胆的实验却催生了一个可怕又极为暴躁的酒灵生物，被称作破桶而出的炎诛。"}}
 D.ClientTexts.Encounter[671]={Name={["c15a44ee40853a91:14"]="科洛夫修士"},Description={["c47c74549fadd5e3:242"]="科洛夫修士最初是从游历艾泽拉斯的熊猫人大使身上学到的武僧神功。当这位十字军战士向他的长官展示身手时，他们一致决定命科洛夫以武僧之道训练出一代新兵。"}}
 D.ClientTexts.Encounter[672]={Name={["f492860666a37b0f:8"]="贤者马里"},Description={["728d964bea580a0c:208"]="德高望重的锦鱼人水语者贤者马里，已经无数次在永视泉里寻获了知识和远见。可当疑之煞将他所熟悉的现状腐化得面目全非时，马里心中充满了无限的怀疑与猜忌。"}}
 D.ClientTexts.Encounter[673]={Name={["a540d7ea274718b9:13"]="古·穿云"},Description={["7682e7f9bfd8758e:308"]="在煞魔逃脱前，古·穿云受托对影踪派的精英施法者进行训练。而现在，这位曾经文雅恬淡的熊猫人却醉心于放纵他那令人震惊的力量，造成了毁灭性的后果。他宣称自己已经控制了神秘的碧空翔龙，穿云的弟子们在他的致命攻击面前显得渺小无助。"}}
 D.ClientTexts.Encounter[674]={Name={["14f3f7de2678dcb1:23"]=S[8044]},Description={["3573fc04b6b7ceb3:342"]="萨莉·怀特迈恩在童年时期就目睹了可怕的一幕，她的家人在途经北洛丹伦时，感染了可怕的亡灵瘟疫。当他们变成了无脑天灾爪牙时，她被迫亲手杀死了双亲和弟妹，心中充满了内疚与愤怒。从那天起，只有一件事能令这位可怕的祭司感到快乐和满足——那就是消灭亡灵。"}}
-D.ClientTexts.Encounter[675]={Name={["73322a361fc28c73:13"]=S[17500]},Description={["576ab122cf4ff78f:224"]="突袭者是螳螂妖帝国庞大军队的空中力量。在他们当中不乏老练的作战高手，如加杜卡。他能凭借一己之力用烈焰席卷地面上的敌人大军，正率领爪牙妄图从天上送城门守卫者们去见死神。"}}
-D.ClientTexts.Encounter[676]={Name={["65d20dc4d4297e51:15"]=S[12272]},Description={["e0a5082f79e1fd74:190"]="指挥官瑞魔克从高处俯视着那些竭力攻门的螳螂妖地面大军。丝毫未将防御者放在眼里的瑞魔克召集了无数援军，以粉碎那些不自量力胆敢阻挡他的蠢货。"}}
+D.ClientTexts.Encounter[675]={Name={["73322a361fc28c73:13"]=S[17501]},Description={["576ab122cf4ff78f:224"]="突袭者是螳螂妖帝国庞大军队的空中力量。在他们当中不乏老练的作战高手，如加杜卡。他能凭借一己之力用烈焰席卷地面上的敌人大军，正率领爪牙妄图从天上送城门守卫者们去见死神。"}}
+D.ClientTexts.Encounter[676]={Name={["65d20dc4d4297e51:15"]=S[12273]},Description={["e0a5082f79e1fd74:190"]="指挥官瑞魔克从高处俯视着那些竭力攻门的螳螂妖地面大军。丝毫未将防御者放在眼里的瑞魔克召集了无数援军，以粉碎那些不自量力胆敢阻挡他的蠢货。"}}
 D.ClientTexts.Encounter[677]={Name={["fce3214dcf6af0f0:16"]="皇帝的意志"},Description={["d8ac2710ade344f1:241"]="宝库的中央内室里有一群静静矗立了数个世纪的石头战士。这些战士雕像列队整齐，时刻准备迎接一场从未打响的战斗。它们守护着怎样的财宝？它们与埋藏在这暗影中的泰坦之力又有什么关联？"}}
 D.ClientTexts.Encounter[679]={Name={["f4d39be20f5bb8d1:13"]="石头守卫"},Description={["f5697325a66234ee:208"]="宝库的第一道防线是由一排被施了魔法的凶残雕像组成的。这些充当哨兵的石头守卫坚硬如花岗岩，不眠不休地警戒着，形成了由烈焰、毒牙和利爪筑起的难以逾越的围墙。"}}
 D.ClientTexts.Encounter[1540]={Name={["84eb986ab6b079e5:13"]="吞咽者布鲁"}}
-D.ClientTexts.Encounter[682]={Name={["e772d8ae2bb43c55:23"]=S[17958]},Description={["7698c0abebdda9c0:290"]="赞达拉巨魔的领袖对宝库发起了攻击，戈拉亚决意要掘开这蕴满古老奥秘的宝藏，将他所能找到的一切奥术能量和知识带回来。戈拉亚拥有过人的黑暗天赋，身边又有一群对他忠心耿耿的赞达拉密士，他已冲破外墙，在彻底夺取宝库之前，决不会停手。"}}
+D.ClientTexts.Encounter[682]={Name={["e772d8ae2bb43c55:23"]=S[17959]},Description={["7698c0abebdda9c0:290"]="赞达拉巨魔的领袖对宝库发起了攻击，戈拉亚决意要掘开这蕴满古老奥秘的宝藏，将他所能找到的一切奥术能量和知识带回来。戈拉亚拥有过人的黑暗天赋，身边又有一群对他忠心耿耿的赞达拉密士，他已冲破外墙，在彻底夺取宝库之前，决不会停手。"}}
 D.ClientTexts.Encounter[683]={Name={["71ea737ec4d3019b:22"]="无尽守护者"},Description={["e82c66c5fe3dba24:261"]="当惧之煞入侵永春台时，三位德高望重的锦鱼人守护者遭到了腐化，他们背叛了其他的凡人看守，将他们悉数杀死。这几位扭曲的守护者现在已将注意力转移，意图消灭任何胆敢妨碍煞魔粉碎当地最后一道防线的好事者。"}}
-D.ClientTexts.Encounter[684]={Name={["23da8eb704c9e2de:18"]=S[22105]},Description={["7b758369f058adb2:251"]="课程：高阶进修\r\n\r\n近来在安多哈尔的战败，令黑暗院长加丁的心情糟糕透顶。通灵学院的全体学生最好都时刻打起十二分的精神来。要是谁敢让他们的校长不高兴，他就会被罚出教室，去实验室里干活……或是被当成实验品。"}}
+D.ClientTexts.Encounter[684]={Name={["23da8eb704c9e2de:18"]=S[22106]},Description={["7b758369f058adb2:251"]="课程：高阶进修\r\n\r\n近来在安多哈尔的战败，令黑暗院长加丁的心情糟糕透顶。通灵学院的全体学生最好都时刻打起十二分的精神来。要是谁敢让他们的校长不高兴，他就会被罚出教室，去实验室里干活……或是被当成实验品。"}}
 D.ClientTexts.Encounter[685]={Name={["2d986d4bed968dde:13"]="狂之煞"},Description={["9d319349ccc76a58:202"]="嗜血、凶残、野蛮的狂之煞在影踪禅院里恣意肆虐。一边汲取部落和联盟的暴虐情绪，一边兴致勃勃地腐化那些奋力抵挡攻势的武僧。"}}
-D.ClientTexts.Encounter[686]={Name={["c55e8c32e1056675:8"]=S[17273]},Description={["b051b0cc470d9915:208"]="恨之煞腐化了影踪派强大而务实的首领——祝踏岚。曾致力于保护自己挚爱家园的祝踏岚，如今对世间万物憎恨不已，恨之煞扭曲了他对身边所有事物——以及所有人的看法。"}}
+D.ClientTexts.Encounter[686]={Name={["c55e8c32e1056675:8"]=S[17274]},Description={["b051b0cc470d9915:208"]="恨之煞腐化了影踪派强大而务实的首领——祝踏岚。曾致力于保护自己挚爱家园的祝踏岚，如今对世间万物憎恨不已，恨之煞扭曲了他对身边所有事物——以及所有人的看法。"}}
 D.ClientTexts.Encounter[687]={Name={["c6c4e21d98a702ba:14"]="先王之魂"},Description={["793ce04b18fc98d8:282"]="在古老的档案中记述着这些传奇统治者，他们是强大的魔古族，在潘达利亚一砖一石地建起了雄伟帝国。他们的名字至今仍能令这片土地战栗——永影之提安、暴虐之蒙恩、无情之齐昂和迅弓之速不台。有人说，他们的鬼魂还在宝库中游荡，迷失在往昔战斗与荣耀的晦暗记忆中。"}}
-D.ClientTexts.Encounter[688]={Name={["226ab8a2b6cbd527:20"]=S[19136]},Description={["2eeb5802ea6c2dab:317"]="萨尔诺斯因“净化”新兵的凶残折磨手段而在血色十字军中赢得了声望。最终，这位施虐成性的法师却染上了亡灵瘟疫，变成了恐怖的骷髅怪物。复仇心切的萨尔诺斯现在终日在修道院的墓地中徘徊，命令幽魂和僵尸攻击任何闯入他邪恶领地的不速之客。"}}
+D.ClientTexts.Encounter[688]={Name={["226ab8a2b6cbd527:20"]=S[19137]},Description={["2eeb5802ea6c2dab:317"]="萨尔诺斯因“净化”新兵的凶残折磨手段而在血色十字军中赢得了声望。最终，这位施虐成性的法师却染上了亡灵瘟疫，变成了恐怖的骷髅怪物。复仇心切的萨尔诺斯现在终日在修道院的墓地中徘徊，命令幽魂和僵尸攻击任何闯入他邪恶领地的不速之客。"}}
 D.ClientTexts.Encounter[689]={Name={["1543887081e3c44d:15"]=S[5053]},Description={["ff401d1ffd351daa:363"]="很久以前，魔封是魔古山宝库的看守者，负责守护存放在这些暗影殿堂里的宝藏。在忠心效力多年之后，他因偷窃被抓（尽管有人说他是被心存嫉妒的下属陷害了），而魔古统治者对他施加了致命诅咒。从那以后，魔封受诅咒的灵魂就一直游荡在宝库里，与已故魔古英雄和战争领主们的鬼影谈心。"}}
 D.ClientTexts.Encounter[690]={Name={["ff8289165f876ecb:6"]="杰翰"},Description={["50a60d3e0a6bed61:250"]="当魔古部族正忙着争权夺利时，狡诈的杰翰带领他那令人闻风丧胆的蜥蜴人奇袭小队，进入了宫殿传说中的藏宝室。这些凶残的爬虫类生物很少会把“忠诚”二字当回事，可杰翰的胆魄和雄才伟略还是在他的部下心中激起了某种荣誉感。"}}
 D.ClientTexts.Encounter[691]={Name={["337488c3d609fcc4:10"]="怒之煞"},Description={["0ed67887c92d6684:275"]="怒气的实体形态——怒之煞，从昆莱山的影踪禅院中逃了出来。在席卷潘达利亚的激烈战争中，这个邪恶实体变得越发强大。最近，煞魔一直在昆莱地区徘徊，用负面能量腐化与其相遇的一切。"}}
 D.ClientTexts.Encounter[692]={Name={["110211cab06669dd:15"]=S[9839]},Description={["fcaa08155404f340:253"]="将军帕瓦拉克追求实效，他对熊猫人或他们的盟友毫无畏惧，也不介意究竟是凭借自己的力量还是利用螳螂妖大军来击溃敌人。胜利是他追寻的唯一荣耀，帕瓦拉克对那些有辱使命的部下也毫不手软。"}}
 D.ClientTexts.Encounter[693]={Name={["53f0b6746c359305:13"]="宰相金巴卡"},Description={["2ee9f29377be5b14:231"]="宰相金巴卡就在螳螂妖的天然桥梁附近游荡，收集树根分泌出的宝贵汁液。利用自己掌握的广博炼金学识，这个强大的家伙会将这种物质转变为武器和其它工具，帮助推进对砮皂寺的围攻。"}}
 D.ClientTexts.Encounter[694]={Name={["1ef0335a7b43229b:7"]="阿达罗格"},Description={["e9e39d2c78e8f39f:254"]="怒焰裂谷穴居人的人数近几个月急剧下跌，原因只有一个：阿达罗格。这只贪吃的怪物是最早被黑暗萨满从火焰之地赶离的烈焰猎犬之一。阿达罗格的驯养员每天喂这只狂怒难驯的巨兽吃超出他体重两倍的穴居人肉块，以使他心平气和。"}}
-D.ClientTexts.Encounter[695]={Name={["eb463a03cbd928f6:19"]=S[22102]},Description={["3eaca9350a5b2356:259"]="柯兰萨始终认为凶蛮之力是控制艾泽拉斯元素的唯一方法。正是这一极端观点使他加入了邪恶的暮光之锤。当教派衰落后，这位兽人和其它志同道合的萨满一同潜入了怒焰裂谷，继续从事他们的邪恶勾当。"}}
+D.ClientTexts.Encounter[695]={Name={["eb463a03cbd928f6:19"]=S[22103]},Description={["3eaca9350a5b2356:259"]="柯兰萨始终认为凶蛮之力是控制艾泽拉斯元素的唯一方法。正是这一极端观点使他加入了邪恶的暮光之锤。当教派衰落后，这位兽人和其它志同道合的萨满一同潜入了怒焰裂谷，继续从事他们的邪恶勾当。"}}
 D.ClientTexts.Encounter[696]={Name={["9b2bac913addd904:7"]="焰喉"},Description={["c08020c4a4e69a41:228"]="事实证明，与其它被黑暗萨满奴役的熔岩虫不同，焰喉几乎不受任何控制。这只猛兽在地下深处恣意钻掘，对其行动引发的后果毫不在意，谁要是挡了它的路也只能自认倒霉。"}}
-D.ClientTexts.Encounter[697]={Name={["7f33d1131f66d8c4:16"]=S[16371]},Description={["aad21165e094d4d8:263"]="在狂妄的驱使下，才华横溢的萨满戈多斯变成了汲取火焰之地力量的活体导管。他和同伴想要效仿暮光之锤创造的元素升腾者。结果，能量汇聚而引发的爆炸使戈多斯陷入疯狂，还把他的身体扭曲成了令人惨不忍睹的形态。"}}
-D.ClientTexts.Encounter[698]={Name={["38c592abd18a6272:18"]=S[15005]},Description={["89e52754a8ae3c95:211"]="在艾泽拉斯，武器大师的头衔有许多种定义。对于席恩来说，这意味着魔古族所有的兵器都对他唯命是从。这位国王不吝于向任何胆敢质疑他对潘达利亚统治权的人展示他那勾魂夺命的技能。"}}
+D.ClientTexts.Encounter[697]={Name={["7f33d1131f66d8c4:16"]=S[16372]},Description={["aad21165e094d4d8:263"]="在狂妄的驱使下，才华横溢的萨满戈多斯变成了汲取火焰之地力量的活体导管。他和同伴想要效仿暮光之锤创造的元素升腾者。结果，能量汇聚而引发的爆炸使戈多斯陷入疯狂，还把他的身体扭曲成了令人惨不忍睹的形态。"}}
+D.ClientTexts.Encounter[698]={Name={["38c592abd18a6272:18"]=S[15006]},Description={["89e52754a8ae3c95:211"]="在艾泽拉斯，武器大师的头衔有许多种定义。对于席恩来说，这意味着魔古族所有的兵器都对他唯命是从。这位国王不吝于向任何胆敢质疑他对潘达利亚统治权的人展示他那勾魂夺命的技能。"}}
 D.ClientTexts.Encounter[708]={Name={["0dc5852008eadefb:14"]="君王的试炼"},Description={["f055d400895a18b9:304"]="鬼谋神算冥谷子、力冠三军库乌艾和势不可挡哈伊岩携各自的部族来到了宫殿，争相向他们的君王证明自己的价值。可这些魔古族派系却遭遇了可怕的对手。暴力威胁要席卷这座宏伟的殿堂，除非这几个水火不容的部族能找到无需大动干戈即可证明其力量的方法。"}}
 D.ClientTexts.Encounter[725]={Name={["1bdad193840eb26c:15"]="萨莱斯的兵团"},Description={["103f165c272ecfad:320"]="残忍的蜥蜴人游荡在潘达利亚大陆上，盗取能够找到的一切，使其他住民不得安宁。在这些爬虫掠夺者当中，最为臭名昭著的便是头领萨莱斯和他麾下的兵团。多年以来，这位蜥蜴人指挥官在炮舰上率领骑兵们在四风谷中大肆横行，炮舰是一头体型庞大、装备精良的穆山兽，与其说是坐骑，它更像是一座移动堡垒。"}}
 D.ClientTexts.Encounter[726]={Name={["fb5389dff5922648:6"]="伊拉贡"},Description={["d306737482f3d37b:243"]="致力于发展帝国的魔古族，大肆挽救泰坦科技并使其为己所用，在这古老的复合体内生成了难以言喻的力量。至于为什么要把这些能量汇聚在一条神龙的冰冷意志之中，则是深埋在宝库深处的神秘谜团。"}}
-D.ClientTexts.Encounter[727]={Name={["926c2baa8f0c71db:18"]=S[18011]},Description={["3f49098fa6fe5616:306"]="翼虫首领尼诺洛克凭借他那迅猛有力的攻击赢得了上百场战斗。在尼诺洛克看来，如果换成他领军，那么将军帕瓦拉克的小小成就跟他的大捷比起来简直不值一提。虽然他的空中攻势已经消灭了寺院的守卫，但这只长翅膀的怪物还在寻找机会，以证明自己的能力远在将军之上。"}}
-D.ClientTexts.Encounter[728]={Name={["7f186643710eece6:16"]=S[18859]},Description={["164b1781d2ab74a0:417"]="在血腥围攻沙塔斯期间，伯鲁恩对一块德莱尼圣骑士领地发起了猛攻，这些圣骑士当时将自己封锁在城市的角落里。他单枪匹马地消灭了防御者，但却身负重伤，无法跟随部落加入此后突袭艾泽拉斯的行动。现在，伯鲁恩的伤势已经痊愈，他在地狱火堡垒中为卡加斯酋长效力，希望能弥补自己错过那些辉煌战役的遗憾，并用敌人的鲜血在兽人历史上写下自己的名字。"}}
+D.ClientTexts.Encounter[727]={Name={["926c2baa8f0c71db:18"]=S[18012]},Description={["3f49098fa6fe5616:306"]="翼虫首领尼诺洛克凭借他那迅猛有力的攻击赢得了上百场战斗。在尼诺洛克看来，如果换成他领军，那么将军帕瓦拉克的小小成就跟他的大捷比起来简直不值一提。虽然他的空中攻势已经消灭了寺院的守卫，但这只长翅膀的怪物还在寻找机会，以证明自己的能力远在将军之上。"}}
+D.ClientTexts.Encounter[728]={Name={["7f186643710eece6:16"]=S[18860]},Description={["164b1781d2ab74a0:417"]="在血腥围攻沙塔斯期间，伯鲁恩对一块德莱尼圣骑士领地发起了猛攻，这些圣骑士当时将自己封锁在城市的角落里。他单枪匹马地消灭了防御者，但却身负重伤，无法跟随部落加入此后突袭艾泽拉斯的行动。现在，伯鲁恩的伤势已经痊愈，他在地狱火堡垒中为卡加斯酋长效力，希望能弥补自己错过那些辉煌战役的遗憾，并用敌人的鲜血在兽人历史上写下自己的名字。"}}
 D.ClientTexts.Encounter[729]={Name={["0b2b5e63754f3144:6"]="雷施"},Description={["baccfacbeb463d98:228"]="在无数岁月里，这位友好的水灵都带着孩童般的天真与欢欣，在永春泉里嬉戏玩耍。当这片平静之地被战乱席卷时，雷施看见原本澄净如晶的水面突然变得混浊晦暗，于是她陷入了恐惧。"}}
-D.ClientTexts.Encounter[737]={Name={["c94521333257addc:18"]=S[16761]},Description={["e70c8d975b949318:263"]="急于取悦女皇的昂舒克创造出了几种新配方。可这位才华横溢的年轻炼金师却因与螳螂妖女皇过于亲近而被煞的负面能量攫住了心智。现在，对失败的过度恐惧迫使昂舒克不断研制越发致命的武器。"}}
-D.ClientTexts.Encounter[738]={Name={["6f9334bdc2dd0b5e:15"]=S[12265]},Description={["967d3784a8a367b7:254"]="指挥官沃加克以凶猛的战斗力弥补了自己战略部署方面的不足。他的毁灭性打击在螳螂妖顺利渡桥的过程中发挥了至关重要的作用，使其得以渗入岛屿。筹谋作战计划是螳螂妖将军的事，在沃加克心中只有对鲜血的渴望。"}}
-D.ClientTexts.Encounter[741]={Name={["6253beb635b12775:17"]=S[21540]},Description={["858ea7b9116e7e1e:254"]="风领主梅尔加拉克统领着螳螂妖不计其数的空中大军。尽管傲慢，这只狡诈的虫子却疯狂地保护着他的士兵，乐于与他们并肩作战。梅尔加拉克相信，螳螂妖是凌驾于所有其它种族之上的优等生物，坚信他的族群绝不会落败。"}}
+D.ClientTexts.Encounter[737]={Name={["c94521333257addc:18"]=S[16762]},Description={["e70c8d975b949318:263"]="急于取悦女皇的昂舒克创造出了几种新配方。可这位才华横溢的年轻炼金师却因与螳螂妖女皇过于亲近而被煞的负面能量攫住了心智。现在，对失败的过度恐惧迫使昂舒克不断研制越发致命的武器。"}}
+D.ClientTexts.Encounter[738]={Name={["6f9334bdc2dd0b5e:15"]=S[12266]},Description={["967d3784a8a367b7:254"]="指挥官沃加克以凶猛的战斗力弥补了自己战略部署方面的不足。他的毁灭性打击在螳螂妖顺利渡桥的过程中发挥了至关重要的作用，使其得以渗入岛屿。筹谋作战计划是螳螂妖将军的事，在沃加克心中只有对鲜血的渴望。"}}
+D.ClientTexts.Encounter[741]={Name={["6253beb635b12775:17"]=S[21541]},Description={["858ea7b9116e7e1e:254"]="风领主梅尔加拉克统领着螳螂妖不计其数的空中大军。尽管傲慢，这只狡诈的虫子却疯狂地保护着他的士兵，乐于与他们并肩作战。梅尔加拉克相信，螳螂妖是凌驾于所有其它种族之上的优等生物，坚信他的族群绝不会落败。"}}
 D.ClientTexts.Encounter[742]={Name={["f9e6b7d1e4621232:7"]="烛龙"},Description={["3cdafccdc9f3f5a2:195"]="传说有一条盘旋的金色翔龙，有时会出现在高空的云层之上，沐浴在阳光下。据个别声称亲眼看见过它的人说，这条翔龙会疯狂地保护平台。"}}
 D.ClientTexts.Encounter[743]={Name={["e0baefd85a195f55:21"]=S[8020]},Description={["6b9d5700d66a53b1:387"]="古老的卡拉克西组织刚刚作出了一个令人遗憾的决定——必须废黜堕落的大女皇夏柯希尔。依照传统，当螳螂妖统治者年老体衰之时，会由慎重选出的继任者继承王位。但由于夏柯希尔正当壮年，远未到退位的年纪，卡拉克西别无选择，惟有处死当今女皇。如果再不尽快对她采取行动，整个潘达利亚都将在螳螂妖贪婪虫群的席卷下粉碎殆尽。"}}
 D.ClientTexts.Encounter[744]={Name={["7c4001cf0db63b96:15"]=S[3560]},Description={["d7bc7a333f521794:239"]="塔亚克以耐心和智慧著称。在战斗中，他善于识破对手的弱点，静待良机、一招致命。塔亚克的剑法无人能及，而他也十分乐意将自己的战斗技巧传授给年轻的螳螂妖战士。"}}
-D.ClientTexts.Encounter[745]={Name={["e1a31f19fafce854:21"]=S[17036]},Description={["a6bac06467219549:290"]="佐尔洛克尖声宣布旨意，以确保让庞大螳螂妖宫殿中的各个角落都能听得见。他代表女皇的意志，而且他的言辞本身也足以激起这些螳螂妖战士的斗志，让他们心甘情愿为女皇献出生命。佐尔洛克忠心不二，任何事情都动摇不了他守护挚爱女皇的信念，即便她身陷堕落，也矢志不渝。"}}
+D.ClientTexts.Encounter[745]={Name={["e1a31f19fafce854:21"]=S[17037]},Description={["a6bac06467219549:290"]="佐尔洛克尖声宣布旨意，以确保让庞大螳螂妖宫殿中的各个角落都能听得见。他代表女皇的意志，而且他的言辞本身也足以激起这些螳螂妖战士的斗志，让他们心甘情愿为女皇献出生命。佐尔洛克忠心不二，任何事情都动摇不了他守护挚爱女皇的信念，即便她身陷堕落，也矢志不渝。"}}
 D.ClientTexts.Encounter[748]={Name={["a6e6b4301e6df6ff:16"]="黑曜石哨兵"},Description={["79504ca62780b45f:377"]="黑曜石哨兵负责守护奥达曼的秘密，直到它遭到了未知力量的腐化。这一守护者原本是由筑造奥达曼殿堂的石料制成，现在全身上下大部分都被换成了可以反射法术的黑色玻璃。不论是什么力量导致黑曜石哨兵产生了这种变化，这力量无疑都强大到了令人难以置信的地步，因为要想改变泰坦造物的魔法石料可不是件容易的事。"}}
-D.ClientTexts.Encounter[749]={Name={["504b8e76f54275e3:14"]=S[12271]},Description={["a14cbdd51f126cc0:244"]="玛洛尔与其他几位勇敢的战士们甘愿冒一切风险守护血色十字军堡垒，使其免受亡灵的亵渎。但可悲的是，他们失败了。巴纳扎尔将这名无惧的指挥官腐化成了他的仆从，使这名狂热者不得不与自己生前最憎恨的仇敌同流合污。"}}
-D.ClientTexts.Encounter[814]={Name={["8597569fe6cd4c96:18"]=S[14206]},Description={["3c862e06c2f1661b:413"]="当雷神发现了这群稀有的雷霆云端翔龙后，他颇为震惊，并试图驯服它们。其中最大的一条雏龙反抗很激烈。当雷神去兽栏查看时，墙边那一排被烤焦的魔古族引得他狂笑不止。他将那条雏龙收为己用，并为了表彰它的忠诚，雷神赐予其驾驭风暴和天空的能力。雷电之王死后的数千年以来，纳拉克一直守卫着他秘密堡垒的城墙，等待雷神的回归。"}}
+D.ClientTexts.Encounter[749]={Name={["504b8e76f54275e3:14"]=S[12272]},Description={["a14cbdd51f126cc0:244"]="玛洛尔与其他几位勇敢的战士们甘愿冒一切风险守护血色十字军堡垒，使其免受亡灵的亵渎。但可悲的是，他们失败了。巴纳扎尔将这名无惧的指挥官腐化成了他的仆从，使这名狂热者不得不与自己生前最憎恨的仇敌同流合污。"}}
+D.ClientTexts.Encounter[814]={Name={["8597569fe6cd4c96:18"]=S[14207]},Description={["3c862e06c2f1661b:413"]="当雷神发现了这群稀有的雷霆云端翔龙后，他颇为震惊，并试图驯服它们。其中最大的一条雏龙反抗很激烈。当雷神去兽栏查看时，墙边那一排被烤焦的魔古族引得他狂笑不止。他将那条雏龙收为己用，并为了表彰它的忠诚，雷神赐予其驾驭风暴和天空的能力。雷电之王死后的数千年以来，纳拉克一直守卫着他秘密堡垒的城墙，等待雷神的回归。"}}
 D.ClientTexts.Encounter[816]={Name={["2d01d6a64737eb61:15"]="长者议会"},Description={["019f20c624babe2d:210"]="达卡莱、法拉基、阿曼尼和古拉巴什——这些巨魔部族千万年的历史中充斥着背叛和冲突，但开创一个崭新而无可阻挡的赞达拉帝国的承诺终于将这些充满分歧的巨魔首领联合了起来。"}}
 D.ClientTexts.Encounter[817]={Name={["a865814b60ddf828:7"]="铁穹"},Description={["0cdb784b42941414:193"]="有关铁穹和他魁麟勇士的传说流传甚广。这位无所畏惧的魔古族将领不顾代价、铁血无情地为帝国夺取了一场又一场胜利，雷电之王因此赐予他“铁穹”的称号。"}}
-D.ClientTexts.Encounter[818]={Name={["1b010260cb3c9be5:18"]=S[20641]},Description={["c632e5c5cad039ac:333"]="雷神命他麾下的巫师塑造出了一个畸变体，可以窥入追随者的内心，令背叛无处遁形。杜鲁姆因此获得了生命。这个聪明的家伙偏执地遵从主人的命令，直到雷电之王陨殁后，它才消失在了要塞迷宫般的走廊里。直至不久前，几乎被魔古族遗忘的杜鲁姆终于重新走进了人们的视线。"}}
+D.ClientTexts.Encounter[818]={Name={["1b010260cb3c9be5:18"]=S[20642]},Description={["c632e5c5cad039ac:333"]="雷神命他麾下的巫师塑造出了一个畸变体，可以窥入追随者的内心，令背叛无处遁形。杜鲁姆因此获得了生命。这个聪明的家伙偏执地遵从主人的命令，直到雷电之王陨殁后，它才消失在了要塞迷宫般的走廊里。直至不久前，几乎被魔古族遗忘的杜鲁姆终于重新走进了人们的视线。"}}
 D.ClientTexts.Encounter[819]={Name={["e9286a2a81cc0481:8"]="赫利东"},Description={["3f76ded2c3cac4cd:314"]="赞达拉将强大的生物带到了雷神岛，把它们当做战争机器。在战神贾拉克的率领下，赞达拉驭兽者当中的恐龙统领用古老的部族法术强化这些巨兽，并使它们对自己唯命是从。赫利东是贾拉克的传说坐骑，它的锐角不费吹灰之力就能将要塞的石头城墙扯成碎片。"}}
 D.ClientTexts.Encounter[820]={Name={["927809f3e74888cc:10"]="普利莫修斯"},Description={["394dfd1f9c3ad820:197"]="在雷神岛的要塞深处，魔古族的血肉塑造者们用一种来源不明的神秘物质造出了蜥蜴人。当要塞被废弃后，某些实验品就一直在幽暗的池水中饱受折磨……"}}
 D.ClientTexts.Encounter[821]={Name={["bd634c77172776e2:7"]="墨格瑞拉"},Description={["b5b9fac8187b296f:314"]="即使是最为无情麻木的魔古族人，想到那些雷电之王指使的黑暗实验的时候都会不寒而栗。很久之前，一条年幼的云端翔龙被扭曲成了多头蛇，并被遗弃在了雷神的王座下。而今这个扭曲的生物潜伏在被遗忘的深渊中，等待着释放它那无尽的愤恨。"}}
@@ -5140,13 +5140,13 @@ D.ClientTexts.Encounter[828]={Name={["06a868136d2b8536:6"]="季鹍"},Description
 D.ClientTexts.Encounter[829]={Name={["01bc5ee26eec7a5b:12"]="魔古双后"},Description={["52921f7bc7f6b606:183"]="据传，魔古双后是雷电之王最重要的宝藏。传闻她们是仅有的魔古族女性，雷神牢牢地控制着他的战利品，并利用她们一起提供火力阻挡入侵者。"}}
 D.ClientTexts.Encounter[831]={Name={["18c0c93cfba926af:6"]="莱登"},Description={["7201ffccb36acff1:354"]="当雷神误打误撞闯入了位于现今魔古山宝库下方的大厅时，他的人生彻底发生了改变。传说他发现了远古泰坦守护者看守着一个称为纳拉克煞引擎的不可思议装置。没人知道这两者之间到底发生了什么，但雷神离开该地的时候，已经拥有了建立帝国的力量。而守护者的命运，以及他如今的下落，仍然是一个谜。"}}
 D.ClientTexts.Encounter[832]={Name={["70972aad0fbd1f2e:7"]="雷神"},Description={["9af619ca599f0455:233"]="暴君、独裁者、征服者以及皇帝。雷电之王的这些称号之下映照出了潘达利亚其他种族的种种不幸。如今复活于一个魔古族不再拥有统治权的世界里，雷神已经下定决心要结束这出闹剧，并把世界再次踩于他的脚下。"}}
-D.ClientTexts.Encounter[833]={Name={["56107cef5ec6cfda:15"]=S[12257]},Description={["c655dd7a94433af5:173"]="指挥官库鲁尔格四处搜寻危险的宝物来充实部落的军械库。他在停滞大厅中遭遇的不幸令他愤怒不已，当他发现有联盟冒险者想要偷走他的战利品时，就会变得越发怒不可遏。"}}
+D.ClientTexts.Encounter[833]={Name={["56107cef5ec6cfda:15"]=S[12258]},Description={["c655dd7a94433af5:173"]="指挥官库鲁尔格四处搜寻危险的宝物来充实部落的军械库。他在停滞大厅中遭遇的不幸令他愤怒不已，当他发现有联盟冒险者想要偷走他的战利品时，就会变得越发怒不可遏。"}}
 D.ClientTexts.Encounter[834]={Name={["e1d40d13f6445b1e:14"]="总冠军"},Description={["b0da4e9ba37562e0:259"]=S[10233]}}
-D.ClientTexts.Encounter[846]={Name={["42482685b8584f32:8"]=S[21607]},Description={["4518286e47a94e77:201"]="马尔考罗克在潘达利亚的整场战役中都是加尔鲁什最为忠诚和可靠的副官。当酋长需要有人自告奋勇接受亚煞极之力的灌注时，马尔考罗克顺理成章地站了出来，没有半点犹豫。"}}
+D.ClientTexts.Encounter[846]={Name={["42482685b8584f32:8"]=S[21608]},Description={["4518286e47a94e77:201"]="马尔考罗克在潘达利亚的整场战役中都是加尔鲁什最为忠诚和可靠的副官。当酋长需要有人自告奋勇接受亚煞极之力的灌注时，马尔考罗克顺理成章地站了出来，没有半点犹豫。"}}
 D.ClientTexts.Encounter[849]={Name={["bc969e0d105fe8b6:19"]=S[7819]},Description={["9c7a005a09cf0275:236"]="那场毁灭性的爆炸把锦绣谷变得面目全非，身处这场灾难正中心的金莲教和影踪派的守卫者们也被黑暗能量撕得粉碎。他们的灵魂仍然徘徊在自己生前守护着的地方，为自己的无能而感到困惑和痛心。"}}
-D.ClientTexts.Encounter[850]={Name={["7427681b5cf0d60e:14"]=S[17829]},Description={["1152a7d8bfa6eb37:270"]="纳兹戈林将军曾经是前任酋长萨尔麾下的一名步兵，在灰熊丘陵和沉没之城瓦丝琪尔取得大捷后，他便迅速得到了晋升。纳兹戈林对部落无比忠诚，严格遵循荣誉与责任的教条，他义无反顾地为酋长戍守着阵线，至死方休。"}}
-D.ClientTexts.Encounter[1541]={Name={["b3ac2f331d6a020c:16"]=S[16592]}}
-D.ClientTexts.Encounter[1542]={Name={["fa106bb59a8b5484:20"]=S[13618]}}
+D.ClientTexts.Encounter[850]={Name={["7427681b5cf0d60e:14"]=S[17830]},Description={["1152a7d8bfa6eb37:270"]="纳兹戈林将军曾经是前任酋长萨尔麾下的一名步兵，在灰熊丘陵和沉没之城瓦丝琪尔取得大捷后，他便迅速得到了晋升。纳兹戈林对部落无比忠诚，严格遵循荣誉与责任的教条，他义无反顾地为酋长戍守着阵线，至死方休。"}}
+D.ClientTexts.Encounter[1541]={Name={["b3ac2f331d6a020c:16"]=S[16593]}}
+D.ClientTexts.Encounter[1542]={Name={["fa106bb59a8b5484:20"]=S[13619]}}
 D.ClientTexts.Encounter[851]={Name={["9d59a4c3e7ea8122:19"]="嗜血的索克"},Description={["fa192c87d258efee:303"]="当巨兽岛在潘达利亚沿海被发现时，岛上住满了原始恐龙，加尔鲁什派部队抓了一些最为可怕的恐龙回来做样本，希望能够驾驭它们，把它们变为战争巨兽。无数想要驯服索克的兽人驯兽师都倒在了它的巨颚之下，但这头巨兽对鲜血的渴望却始终得不到满足。"}}
 D.ClientTexts.Encounter[852]={Name={["0ba323bf4be4d6e6:9"]="伊墨苏斯"},Description={["1094f9778bab52fa:298"]="潘达利亚的古老住民意识到了能量池的重要作用，它具有赋予生命的力量，于是他们修建了地下水利系统来守护水源，并滋养着锦绣谷中的万众生灵。腐化之触驱动并扭曲了这些水源，伊墨苏斯则成为了山谷悲伤的邪恶化身。"}}
 D.ClientTexts.Encounter[853]={Name={["dc205727cb776616:19"]=S[4069]},Description={["3171d269eaea1a4a:298"]="这九位依然健在的卡拉克西瓦英杰是螳螂妖族群中的古老斗士，曾与唤醒者并肩作战，对抗女皇夏柯希尔的疯狂暴政。但这些英杰与其他所有螳螂妖一样，有着赤诚的拳拳之心。当加尔鲁什找到亚煞极之心时，英杰们追随着自己远古主人的低声呼唤，来到了奥格瑞玛下方的钢铁大厅。"}}
@@ -5157,38 +5157,38 @@ D.ClientTexts.Encounter[859]={Name={["7f7b59ac2a234e55:17"]="玄牛砮皂"},Desc
 D.ClientTexts.Encounter[860]={Name={["a6b310ee62bd2ce1:18"]="白虎雪怒"},Description={["fa34dde8d41b0379:304"]="雪怒同时发起了力量与抑制力的试炼。当雪怒给了皇帝少昊一根十尺长杆，命他攻击雪怒的一位战士时，皇帝根本无法击中目标。若是没有抑制力，愤怒和仇恨就会变得失去控制。要想通过白虎的试炼，战士们必须学会驾驭他们的力量，并压下自己暴力的念头。"}}
 D.ClientTexts.Encounter[861]={Name={["de1d54ba87b220f5:26"]="野牛人火神斡耳朵斯"},Description={["163126fdc7e74ec4:306"]="斡耳朵斯曾经是一名野牛人萨满祭司，但在火焰之王许下承诺之后，他便将自己献给了烈焰，以期成为一个半神。他的肉身永远被火焰烧灼，这使他陷入了无尽的痛苦之中。野牛人控火者们仪式性地将自己点燃，以效仿斡耳朵斯的成神过程，并通过施法和祈祷的方式来减轻他的痛苦。"}}
 D.ClientTexts.Encounter[864]={Name={["1dbbfb59acc86752:14"]="钢铁战蝎"},Description={["e7c6cf7790ff4fd0:257"]="这只机械怪物是加尔鲁什攻城武器中的擎天柱石，威慑与毁灭是它几乎同等重要的两大用途。钢铁战蝎的原型是强大的库卡隆战蝎，它戍守着奥格瑞玛的大门，将任何胆敢挑战加尔鲁什正统部落权威的人撕成碎片。"}}
-D.ClientTexts.Encounter[865]={Name={["7c7d080975baa6e0:21"]=S[12911]},Description={["cbbd65e14fdc40ca:279"]="赫利克斯·黑索是在加尔鲁什为正统部落寻找工程师的过程中脱颖而出的，他是唯一一位集高超的工程技术、专业性和残忍品质于一身的地精。黑索有着一颗雇佣兵的心，他对自己的创造物（以及高昂报酬）的热爱使他的命运永远地和自己的酋长兼雇主紧紧连在了一起。"}}
+D.ClientTexts.Encounter[865]={Name={["7c7d080975baa6e0:21"]=S[12912]},Description={["cbbd65e14fdc40ca:279"]="赫利克斯·黑索是在加尔鲁什为正统部落寻找工程师的过程中脱颖而出的，他是唯一一位集高超的工程技术、专业性和残忍品质于一身的地精。黑索有着一颗雇佣兵的心，他对自己的创造物（以及高昂报酬）的热爱使他的命运永远地和自己的酋长兼雇主紧紧连在了一起。"}}
 D.ClientTexts.Encounter[866]={Name={["72ef3c77f32daf02:8"]="诺鲁什"},Description={["e1b55d1cd3b8c64f:151"]="有人说魔古族就是依照这个巨型魔像被创造出来的，他在潘达利亚地下深处看守并保卫着这片大陆上最为黑暗和危险的秘密。"}}
 D.ClientTexts.Encounter[867]={Name={["3486322a8bf9ef85:10"]="傲之煞"},Description={["651770ff7852167c:251"]="第七煞叫做傲之煞，是皇帝少昊难以摆脱的最后一项罪责，在它的影响下，皇帝用迷雾遮蔽了这片土地。一万年来，傲之煞一直在等待时机。当加尔鲁什唤醒亚煞极之心时，他心中的傲慢之力使得这股黑暗能量在亚煞极之心出现的房间内聚集了起来。"}}
-D.ClientTexts.Encounter[868]={Name={["b80600eb84892848:8"]="迦拉卡斯"},Description={["53db5816c7a45207:263"]=S[17149]}}
+D.ClientTexts.Encounter[868]={Name={["b80600eb84892848:8"]="迦拉卡斯"},Description={["53db5816c7a45207:263"]=S[17150]}}
 D.ClientTexts.Encounter[869]={Name={["acded8fb5f9151d6:17"]=S[3876]},Description={["20955526cf6baa7b:393"]="当萨尔在外域遇见这位年轻的兽人时，格罗玛什·地狱咆哮之子——加尔鲁什第一次听说了他父亲的英雄事迹。骄傲的种子在他心中生根发芽。加尔鲁什作为酋长，率领部落大军在诺森德频频告捷，在大灾变的混乱中巩固了部落的力量。但他不择手段打造兽人霸权的理想，已经引得世界各路大军一路杀向奥格瑞玛……要向加尔鲁什发起最终清算，而他本人也已经做好了血战到底的准备。"}}
-D.ClientTexts.Encounter[870]={Name={["30b881d487ceee25:16"]=S[16096]},Description={["da80fde67b0aad4b:279"]="当加尔鲁什凝视潘达利亚时，他看到了未经发掘的力量。在他领军作战的过程中，加尔鲁什掠夺了熊猫人、魔古和螳螂妖的各种武器、财宝和遗物。他将它们存放在地下基地深处的仓库里，由起源自泰坦的神秘安全系统看守。"}}
-D.ClientTexts.Encounter[1543]={Name={["96f70e2ba18eb1d4:16"]=S[21489]}}
+D.ClientTexts.Encounter[870]={Name={["30b881d487ceee25:16"]=S[16097]},Description={["da80fde67b0aad4b:279"]="当加尔鲁什凝视潘达利亚时，他看到了未经发掘的力量。在他领军作战的过程中，加尔鲁什掠夺了熊猫人、魔古和螳螂妖的各种武器、财宝和遗物。他将它们存放在地下基地深处的仓库里，由起源自泰坦的神秘安全系统看守。"}}
+D.ClientTexts.Encounter[1543]={Name={["96f70e2ba18eb1d4:16"]=S[21490]}}
 D.ClientTexts.Encounter[1544]={Name={["d12312f6fbf93967:18"]="沙尔图拉"}}
-D.ClientTexts.Encounter[1545]={Name={["735fcc5f17c52730:21"]=S[21484]}}
-D.ClientTexts.Encounter[881]={Name={["b80600eb84892848:8"]="迦拉卡斯"},Description={["53db5816c7a45207:263"]=S[17149]}}
+D.ClientTexts.Encounter[1545]={Name={["735fcc5f17c52730:21"]=S[21485]}}
+D.ClientTexts.Encounter[881]={Name={["b80600eb84892848:8"]="迦拉卡斯"},Description={["53db5816c7a45207:263"]=S[17150]}}
 D.ClientTexts.Encounter[887]={Name={["55fee67fe95b059c:7"]="罗托尔"},Description={["f593f0b0ea560b2d:234"]="罗托尔是由戈洛克亲手制造出来的一个可怕的元素生物，它镇守在戈洛克房间的入口处，以防奴隶造反掀起暴动。这个冷酷无情的生物不眠不休地坚守在自己的岗位上，并随时准备召唤熔岩来击退入侵者。"}}
 D.ClientTexts.Encounter[888]={Name={["cc2a5cb647c65d91:19"]=S[8767]},Description={["85aa904af2e0e117:244"]="这个残忍的食人魔工头负责监管运作这座位于霜火岭地底深处，闷热又潮湿的矿场。来自德拉诺各处的奴隶们都会被送往守奴人库鲁斯托处，在他眼里奴隶只是消耗品，一旦有越界之嫌便会毫不犹豫地毒打他们（甚至更糟），迫使其屈服。"}}
 D.ClientTexts.Encounter[889]={Name={["abd332c6b1b7e70b:8"]="戈洛克"},Description={["56de0002515a7567:251"]="戈洛克出生于悬槌堡的城中心，后来被委任为霜火岭地底深处血槌矿井的总督。刚开始他对这项任命感到很不满，但后来随着时间的流逝，他又喜欢上了这份差事。因为这里山高皇帝远，戈洛克在这拥有绝对的权力，还没什么人在自己头上指手画脚。"}}
-D.ClientTexts.Encounter[893]={Name={["f123225f6ab73ec8:10"]=S[16685]},Description={["233bb85e2bbd1dd9:252"]="霜火岭的食人魔地卜师以其能够自由驾驭元素的能力傲视群雄，但他们也有玩过火的时候。戈杜哈试图将其锻炉内的烈焰提升到一个新高度，并驱使玛格莫拉图斯陷入狂怒。这需要戈杜哈集中全部的注意力来控制这个狂暴的熔渣元素。"}}
+D.ClientTexts.Encounter[893]={Name={["f123225f6ab73ec8:10"]=S[16686]},Description={["233bb85e2bbd1dd9:252"]="霜火岭的食人魔地卜师以其能够自由驾驭元素的能力傲视群雄，但他们也有玩过火的时候。戈杜哈试图将其锻炉内的烈焰提升到一个新高度，并驱使玛格莫拉图斯陷入狂怒。这需要戈杜哈集中全部的注意力来控制这个狂暴的熔渣元素。"}}
 D.ClientTexts.Encounter[895]={Name={["19e26018b2e25c67:6"]="鲁古格"},Description={["3f9ec36db8b48870:335"]="野猪人部族一直以来将地卜术——一种对巨石和水晶的解读——视为萨满教的最高形式。鲁古格已经为野猪人部族服务多年，默默提高自己的占卜技艺。如今，作为全体野猪人地卜师的首领，鲁古格召唤出了一大片水晶晶簇来对付卑微的对手，他和他手下的地卜师攻占南贫瘠之地只是时间问题了。"}}
-D.ClientTexts.Encounter[896]={Name={["2cc7238601e8819d:14"]=S[16607]},Description={["4516fe9584e66b34:251"]="如果用猎物的多少来评判一位猎手实力的话，那么布塔斯克无疑是其中的佼佼者。他的狡诈和野兽般的本能使他的狩猎与追踪技巧达到了前所未有的新高度，只有强者才能有机会和这位老练的猎手一较高下。"}}
-D.ClientTexts.Encounter[899]={Name={["d51f50877199fa7a:14"]=S[17152]},Description={["0bee9ce2140eccd3:295"]="作为剃刀大军的指挥官，督军拉姆塔斯是一头魁梧的老野猪人。在与半人马、鹰身人、兽人甚至牛头人的多年战斗中，他厚实的外皮上留下了数不清的伤疤。在他的迟暮之年，拉姆塔斯又感受到了野猪人精神领袖，阿格姆和亡语者贾格巴来自灵魂国度的指引。"}}
-D.ClientTexts.Encounter[900]={Name={["db173867f8a36a48:21"]=S[17078]},Description={["85cd29ac4aa5222f:205"]="在沉寂多年后，一只巨大的怪物从黑暗的洞穴深处现出了真身。这头巨大的蝙蝠一直靠一头曾经被称为暴怒的阿迦赛罗斯的野猪提供食物，而他的粪便则为这头野猪提供了强大的黑暗力量。"}}
+D.ClientTexts.Encounter[896]={Name={["2cc7238601e8819d:14"]=S[16608]},Description={["4516fe9584e66b34:251"]="如果用猎物的多少来评判一位猎手实力的话，那么布塔斯克无疑是其中的佼佼者。他的狡诈和野兽般的本能使他的狩猎与追踪技巧达到了前所未有的新高度，只有强者才能有机会和这位老练的猎手一较高下。"}}
+D.ClientTexts.Encounter[899]={Name={["d51f50877199fa7a:14"]=S[17153]},Description={["0bee9ce2140eccd3:295"]="作为剃刀大军的指挥官，督军拉姆塔斯是一头魁梧的老野猪人。在与半人马、鹰身人、兽人甚至牛头人的多年战斗中，他厚实的外皮上留下了数不清的伤疤。在他的迟暮之年，拉姆塔斯又感受到了野猪人精神领袖，阿格姆和亡语者贾格巴来自灵魂国度的指引。"}}
+D.ClientTexts.Encounter[900]={Name={["db173867f8a36a48:21"]=S[17079]},Description={["85cd29ac4aa5222f:205"]="在沉寂多年后，一只巨大的怪物从黑暗的洞穴深处现出了真身。这头巨大的蝙蝠一直靠一头曾经被称为暴怒的阿迦赛罗斯的野猪提供食物，而他的粪便则为这头野猪提供了强大的黑暗力量。"}}
 D.ClientTexts.Encounter[901]={Name={["26fca7917ed8ffda:17"]=S[4052]},Description={["04f36b035f22444e:232"]="卡尔加·刺肋是剃刀部族的“领袖”（或者说“主母”），她在地卜术方面的造诣无人能及。她的迅速崛起和野猪人部族之间无休止的暴力冲突最终只会导致一个结局：战争。"}}
 D.ClientTexts.Encounter[959]={Name={["4f1047ddcf82318e:9"]="黑手"},Description={["0d0af3d30da6bc80:298"]="作为黑石氏族的督军，黑手是个好勇斗狠的战士，也是个残酷无情的暴君。他在钢铁部落是仅次于格罗玛什的存在。经受着常人难以忍受的酷热高温，黑手坐镇在他的熔炉顶上统管整座铸造厂，挥舞他那覆满炽热炉渣的战锤打造出一把把神兵利器。"}}
 D.ClientTexts.Encounter[965]={Name={["18e487edcedc8536:6"]="兰吉特"},Description={["4485120c0456fba9:270"]="兰吉特花费了毕生心血来提高他的飞轮技巧。当他对这项传统鸦人武器的运用达到炉火纯青的地步时，他甚至能将风塑形，并用来对付敌人。他现在正把守着通往通天峰内部圣殿的入口处，并愿誓死捍卫鸦人在通天峰至高无上的权威。"}}
-D.ClientTexts.Encounter[966]={Name={["3226a1cf2194cc02:8"]=S[21200]},Description={["d94abbe3e6c17a14:250"]="通天峰上的高等鸦人曾仔细观察过德莱尼文明，他们对那些用来保护城市和圣殿的强大构造体产生了浓厚兴趣。鸦人开始筹划并建造类似的版本，一台由阳光驱动的，拥有毁灭力量且绝对服从的——强能构装体。"}}
+D.ClientTexts.Encounter[966]={Name={["3226a1cf2194cc02:8"]=S[21201]},Description={["d94abbe3e6c17a14:250"]="通天峰上的高等鸦人曾仔细观察过德莱尼文明，他们对那些用来保护城市和圣殿的强大构造体产生了浓厚兴趣。鸦人开始筹划并建造类似的版本，一台由阳光驱动的，拥有毁灭力量且绝对服从的——强能构装体。"}}
 D.ClientTexts.Encounter[967]={Name={["63e57420047b29ff:7"]="鲁克兰"},Description={["75c39ebe1cba0727:198"]="这只看上去雄壮威严的火鹰，谣传曾是鸦人敬奉的太阳神——鲁克玛的子嗣，太阳的光芒照射在阿兰卡峰林的大地上。鲁克兰对日光能量有着与生俱来的自然亲和，它能吸收并利用太阳的能量，将所有猎物烧成灰烬。"}}
-D.ClientTexts.Encounter[968]={Name={["d1b31b07f03d0750:13"]=S[21891]},Description={["93110ee37a3aaa30:259"]="为了执行鲁克玛的意志，高阶贤者维里克斯甘愿放弃一切来试图驾驭埃匹希斯神器的力量。最终，成型的大规模水晶超级武器聚集了太阳能量消灭了敌人，现在是时候重申鸦人在德拉诺应有的统治地位了。"}}
+D.ClientTexts.Encounter[968]={Name={["d1b31b07f03d0750:13"]=S[21892]},Description={["93110ee37a3aaa30:259"]="为了执行鲁克玛的意志，高阶贤者维里克斯甘愿放弃一切来试图驾驭埃匹希斯神器的力量。最终，成型的大规模水晶超级武器聚集了太阳能量消灭了敌人，现在是时候重申鸦人在德拉诺应有的统治地位了。"}}
 D.ClientTexts.Encounter[971]={Name={["242086b38b514082:10"]="屠夫"},Description={["9a12983e690490fb:285"]="这个食人魔出生于悬槌堡下恶臭的屠宰场，他或许曾有过自己的名字，但早已被人淡忘。早年的酷虐与折磨已让他失去了心智，但却使其体格得到了高度强化。现在悬槌堡没有一个食人魔敢靠得他太近，因为他的骨锯所到之处可谓血肉横飞，尸横遍野。"}}
 D.ClientTexts.Encounter[1122]={Name={["6705e92dec97428e:15"]=S[2794]},Description={["b3bae37484d74d15:310"]="作为一名年轻的兽人，达玛克以天才驯兽师的身份在雷神氏族中迅速蹿升。当其他人只着眼于野兽的本能时，他还看到了它们的智慧，并引导它们发挥出大脑、肌肉和骨骼中从未被开发的潜力。当钢铁部落要求他效劳时，达玛克将提供和训练全德拉诺最凶猛的野兽视为莫大的荣誉。"}}
-D.ClientTexts.Encounter[1123]={Name={["85e579217687817c:18"]=S[17956]},Description={["564adc79418eeafa:259"]="在钢铁部落的大旗之下，黑手征召了火刃氏族的缚火者卡格拉兹来为黑石铸造的武器灌注火焰之力。卡格拉兹与她的助手艾克诺·钢铁使者正在一座永不熄灭的熔炉前孜孜不倦地工作着，为钢铁部落征服德拉诺提供支援。"}}
+D.ClientTexts.Encounter[1123]={Name={["85e579217687817c:18"]=S[17957]},Description={["564adc79418eeafa:259"]="在钢铁部落的大旗之下，黑手征召了火刃氏族的缚火者卡格拉兹来为黑石铸造的武器灌注火焰之力。卡格拉兹与她的助手艾克诺·钢铁使者正在一座永不熄灭的熔炉前孜孜不倦地工作着，为钢铁部落征服德拉诺提供支援。"}}
 D.ClientTexts.Encounter[1546]={Name={["003af367cbcec29c:15"]="哈霍兰公主"}}
 D.ClientTexts.Encounter[1128]={Name={["05483c358c32f232:16"]=S[4048]},Description={["60061ab3618777b8:359"]="卡加斯·刃拳是碎手氏族的督军，他曾作为奴隶，在食人魔的角斗比赛中磨练出了凶猛的战斗技巧。他为了一个虚无缥缈的自由承诺杀死了无数对手，却在获胜后和其他退役的“勇士”一起被关了起来。在怒火的推动下，卡加斯斩断了自己的手逃出生天，并领导了一场让德拉诺的食人魔血流成河的大战。现在，他已经迫不及待地返回竞技场，让你见识下野蛮的真谛。"}}
 D.ClientTexts.Encounter[1133]={Name={["cae3f639915bddf4:12"]=S[6184]},Description={["7f0cc6908b222b45:259"]="在钢铁部落崛起之前，托瓦拉还未从未涉足过霜火岭那个冰冻苔原以外的地方。她在霜火岭带领着大批雷神氏族追踪者去诱捕并俘获德拉诺最为凶猛的双头飞龙。托瓦拉对双头飞龙的驾驭能力无人能出其右，而现在的她也被钢铁部落任命为空军指挥官。"}}
 D.ClientTexts.Encounter[1138]={Name={["f9185670de518b8d:19"]="箭火和波尔卡"},Description={["de7af5fc5668ef03:243"]="铁路主管保利·箭火是恐轨车站的首席监工。他受加尔鲁什·地狱咆哮的雇佣，来为钢铁部落的基础建设建立必要的技术体系。在负责搬搬抬抬的笨蛋助手波尔卡的帮助下，箭火已经开始建设恐轨车站。"}}
-D.ClientTexts.Encounter[1139]={Name={["76dfd66331ae7712:15"]=S[18417]},Description={["ca905b7a82749a81:277"]="莎达娜·血怒是影月氏族中一名非常强大的侍僧，与月运周期有着非常紧密的联系。当黑暗之星的低语飘荡在影月谷的中心地带时，莎达娜便追随她的酋长耐奥祖深入氏族的墓地，运用她的力量将灵魂从尸体中剥离出来，用来实现某种扭曲的意图。"}}
+D.ClientTexts.Encounter[1139]={Name={["76dfd66331ae7712:15"]=S[18418]},Description={["ca905b7a82749a81:277"]="莎达娜·血怒是影月氏族中一名非常强大的侍僧，与月运周期有着非常紧密的联系。当黑暗之星的低语飘荡在影月谷的中心地带时，莎达娜便追随她的酋长耐奥祖深入氏族的墓地，运用她的力量将灵魂从尸体中剥离出来，用来实现某种扭曲的意图。"}}
 D.ClientTexts.Encounter[1140]={Name={["8677436e5a7c57bf:7"]="骨喉"},Description={["0a1af8120c17d9c1:263"]="食腐蛆虫骨喉蛰伏在影月谷地底深处的洞穴里，它和耐奥祖的追随者们保持着一种微妙的共生关系：骨喉以影月教派黑暗仪式上那些被牺牲的祭品，作为回报它会效忠于耐奥祖，替他把守通往内部神殿的道路。"}}
 D.ClientTexts.Encounter[1141]={Name={["33b64b011797e33e:22"]=S[9019]},Description={["b9df68883c1c0f61:410"]="巫妖亚门纳尔曾是天灾军团的一员，在第三次大战中参与了对海加尔山的突袭。之后，巫妖王命令他的仆从留在卡利姆多，负责扩大天灾军团的影响力。但这次行动被部落和联盟的英雄挫败了。现在，剃刀高地的相对和平又受到了威胁。亡语者布莱克松想要复活这个强大的巫妖并重新发起对贫瘠之地的进攻。"}}
 D.ClientTexts.Encounter[1142]={Name={["0f116e46963d1c75:5"]="阿鲁克斯"},Description={["b0f89d72d3afa159:315"]="亡首教派的魔灵师对自己的成果非常骄傲。经过无数次失败的尝试后，他们终于为亡语者布莱克松创造出了合适的护卫。阿鲁克斯是一只巨型蜘蛛，它的身躯长满剧毒的脓疱，爆裂后能溅出可怕的毒液。现在，魔灵师们正在等待机会展示他们的造物。"}}
@@ -5200,67 +5200,67 @@ D.ClientTexts.Encounter[1147]={Name={["48ad3936ee0cdc21:14"]=S[911]},Description
 D.ClientTexts.Encounter[1148]={Name={["286722ac37de85b1:9"]="独眼魔双子"},Description={["eb920391ae1dd224:212"]="普尔和费莫斯是元首马尔高克的贴身侍卫，他们俩把守着悬槌堡之巅通往迦台农神殿的大门。这对食人魔兄弟虽然在智力上有所欠缺，但他们的力量和意志绝对是出类拔萃的，他们的块头和凶残程度也是无与伦比的。"}}
 D.ClientTexts.Encounter[1153]={Name={["3645890862664213:7"]="克拉戈"},Description={["a60f51ad49d6f9e6:283"]="在纳格兰悬槌堡的一次挖掘行动中，克拉戈是唯一一个直接暴露在神秘遗物下还能生还的幸存者，而这次经历使得他近乎免疫一切魔法。谣传他和悬槌堡的统治者有着说不清道不明的关系，但令人不解的是，拥有如此天赋的他为何还要在那位并不待见的巫师面前卑躬屈膝。"}}
 D.ClientTexts.Encounter[1154]={Name={["a7083000ec6fbe31:15"]="爆裂熔炉"},Description={["856fbf77627dd2e8:287"]="黑石氏族的传世技艺便是熔炼黑石矿石，这是一种高密度的矿石，一般的烈焰甚至不能将其软化。黑石氏族世世代代守护着他们的独门秘籍。在铸造厂深处，他们的熔炉所蕴含的原始力量甚至和德拉诺的历史一样久远，被禁锢在其中的狂暴之力散发出令人难以置信的极热。"}}
-D.ClientTexts.Encounter[1155]={Name={["d58fcc3e28564ad5:18"]=S[15658]},Description={["e375c77fdf85521a:367"]="汉斯加尔与弗兰佐克这对双胞胎兄弟从小就被培养成氏族的格斗大师。两人都踏上了追求氏族勇士的光荣道路，但命运却跟他们开了个玩笑。由于兄弟二人都不愿意在决斗中杀死对方，结果被双双逐出氏族，任其自生自灭。但他们在德拉诺的野蛮荒原上活了下来。当钢铁部落发出召唤时，这两位强大的战士又在这架庞大的战争机器里找到了新的位置。"}}
+D.ClientTexts.Encounter[1155]={Name={["d58fcc3e28564ad5:18"]=S[15659]},Description={["e375c77fdf85521a:367"]="汉斯加尔与弗兰佐克这对双胞胎兄弟从小就被培养成氏族的格斗大师。两人都踏上了追求氏族勇士的光荣道路，但命运却跟他们开了个玩笑。由于兄弟二人都不愿意在决斗中杀死对方，结果被双双逐出氏族，任其自生自灭。但他们在德拉诺的野蛮荒原上活了下来。当钢铁部落发出召唤时，这两位强大的战士又在这架庞大的战争机器里找到了新的位置。"}}
 D.ClientTexts.Encounter[1160]={Name={["6ba93e54293b24d1:8"]="耐奥祖"},Description={["b6e4eb81c079f3c6:251"]="耐奥祖是影月氏族的酋长和萨满长者，他将整个部族的灵与肉都奉献出来，只为能加入钢铁部落。他现在隐退至氏族的远古墓地，并企图在黑暗的道路上越走越远，全身心地投入到无尽虚空和通灵邪术的怀抱中去。"}}
 D.ClientTexts.Encounter[1161]={Name={["0f876074463561a1:5"]="格鲁尔"},Description={["f3bfa00a94b600e1:305"]="加尔鲁什知道驯服戈隆的关键就在于降服他们的族长，格鲁尔。在另一个时空中大名鼎鼎的屠龙者如今已被贬为卑贱的工人。更加讽刺的是，他们还按照碎手氏族战士的传统，砍掉了他的一只手并装上铁钩，以便他能更轻松地将一盘盘燃料倒入熔炉。"}}
 D.ClientTexts.Encounter[1162]={Name={["09c4a5f4e65f2c3d:6"]="克罗莫格"},Description={["da6db36a5b59aa3b:369"]="玛戈隆是种迷一样的生物，古老而又神秘。为了满足钢铁部落大型造物的生产需要，矿工们夜以继日地在铸造厂进行挖掘开采工作。他们后来被一头蛰伏在密室里的玛戈隆给吓呆了，竟然还是活着的。但令他们感到惊讶的是，克罗莫格开始帮他们出力，用他那硕大的石拳锤炼出巨型铁板，为钢铁部落巨兽般的攻城机械提供原材料。"}}
 D.ClientTexts.Encounter[1163]={Name={["61fbb92a03b4a9bb:19"]=S[10107]},Description={["49463c7b7aff3186:286"]="对于加尔鲁什引入德拉诺的全机械化重装部队而言，对火焰和爆炸有着极度狂热的尼托格可谓是指挥这支部队的不二人选。因此，他在钢铁部落内部蹿升得非常快。他负责管理整列恐轨号的火控系统，一心想要击溃沙塔斯的外围防御圈，并将那些试图对抗钢铁部落的敌人一网打尽。"}}
 D.ClientTexts.Encounter[1168]={Name={["2fc93358f69bbaf7:8"]="纳利什"},Description={["10d89bd269110873:236"]="耐奥祖在影月氏族的古老墓地进行着某种黑暗仪式，将现实世界撕开一个裂口，并任由虚空能量的溢出。食魂者纳利什正是通过这条裂隙进入到现实世界，并寻找可以吞噬的灵魂。纳利什由纯粹的黑暗能量所构成，渴望搜集并吞噬一切活物。"}}
-D.ClientTexts.Encounter[1185]={Name={["28da7b3fe115d2c0:15"]=S[19375]},Description={["3bc3f1f09813cf7d:318"]="那些最最伟大的德莱尼勇士在其生命临近结束时，往往会响应最终的召唤：将自己封印在那些重装构造体中，作为奥金顿永恒的守护者来捍卫德拉诺的德莱尼文明。这些特殊的警戒者被委以守护剩余水晶的职责，而正是这些水晶在为奥金顿提供坚不可摧的能量护盾。"}}
-D.ClientTexts.Encounter[1186]={Name={["0de275ba18543955:15"]=S[17963]},Description={["becd5b0626671f43:210"]="尼娅米是一名德莱尼女祭司，表面上她是深受信任的慰魂者，可以自由进出奥金顿内最为神圣的区域。但实际上她是暗影议会的人，此刻的她正密谋策划关掉保护陵墓免遭侵犯的神圣护盾。"}}
+D.ClientTexts.Encounter[1185]={Name={["28da7b3fe115d2c0:15"]=S[19376]},Description={["3bc3f1f09813cf7d:318"]="那些最最伟大的德莱尼勇士在其生命临近结束时，往往会响应最终的召唤：将自己封印在那些重装构造体中，作为奥金顿永恒的守护者来捍卫德拉诺的德莱尼文明。这些特殊的警戒者被委以守护剩余水晶的职责，而正是这些水晶在为奥金顿提供坚不可摧的能量护盾。"}}
+D.ClientTexts.Encounter[1186]={Name={["0de275ba18543955:15"]=S[17964]},Description={["becd5b0626671f43:210"]="尼娅米是一名德莱尼女祭司，表面上她是深受信任的慰魂者，可以自由进出奥金顿内最为神圣的区域。但实际上她是暗影议会的人，此刻的她正密谋策划关掉保护陵墓免遭侵犯的神圣护盾。"}}
 D.ClientTexts.Encounter[1195]={Name={["1dd15f1d10146980:6"]="泰克图斯"},Description={["6058287a5e087fa1:184"]="作为形成德拉诺大地的混乱之力的远古化身，泰克图斯被疯狂的白鬼兽人扭曲并奴役了——但就算是他们，也只能勉强驾驭这股自然的伟力。"}}
 D.ClientTexts.Encounter[1196]={Name={["346ba684cd19c803:12"]=S[10271]},Description={["7047e0ea7ff9e50d:229"]="布兰肯斯波是远古时代的深渊行者，钢铁部落停泊在悬槌堡附近水域的钢铁战蝎引起了他的注意。这位水栖巨人会在所到之处留下蔓延的真菌和苔藓，而原始本能则驱使他泯灭出现在德拉诺的任何文明的痕迹。"}}
 D.ClientTexts.Encounter[1197]={Name={["131fdf809ece682b:16"]=S[2602]},Description={["46f2d1c04e983319:316"]="作为悬槌堡至高无上的统治者，元首马尔高克出身于一个世代统治高里亚帝国的巫师家族。生性残忍且狡猾奸诈的马尔高克意识到钢铁部落的崛起，以及与之对抗的下场。所以他默允了与格罗玛什的同盟关系，即便如此他仍在寻找一个平衡点，从而使胜利的天平倾向于他这方。"}}
 D.ClientTexts.Encounter[1202]={Name={["00788df1ef793f6c:9"]="奥尔高格"},Description={["6d5f1bd1bd2fb66e:287"]="黑石铸造厂的仓库囤积了大量未经加工处理的黑石矿石，这对那些从地下钻进来的贪婪的鬣蜥人来说，可谓是一场饕餮盛宴了。奥尔高格是迄今为止块头最大的入侵者，贪婪且嗜石成性的他俨然已成为德拉诺有史以来体型最为庞大的鬣蜥人了。"}}
-D.ClientTexts.Encounter[1203]={Name={["aa8e1d1f9e2e5402:14"]=S[20913]},Description={["58011aa6879bf6f5:368"]="在兽人的古老社会结构下，加安几乎没有机会发挥她的战术天赋。因此，作为第一批战士志愿加入钢铁部落海军时，她的心情异常激动。她在战斗中迅速大放异彩，被任命为钢铁部落舰队的海军上将，并选择了玛拉卡和苏卡作为她的副官。她们三人被称为钢铁女武神——并横扫了所有敢于在战斗中直面她们的人。"}}
-D.ClientTexts.Encounter[1207]={Name={["7c7d08fc8ce7c499:17"]=S[20291]},Description={["247ad4a138ffde76:270"]="高拉和特鲁是一对护林木精，他们以极快的速度在林地里生长蔓延，试图夺回他俩之间那座命运多舛的岗哨。负责保护他们完成此项任务的人便是恐怖屠夫杜尔胡，许久以前他曾是个黑石兽人，独自在原始林地的深处游荡，而现在的他更像是植物多一点了。"}}
+D.ClientTexts.Encounter[1203]={Name={["aa8e1d1f9e2e5402:14"]=S[20914]},Description={["58011aa6879bf6f5:368"]="在兽人的古老社会结构下，加安几乎没有机会发挥她的战术天赋。因此，作为第一批战士志愿加入钢铁部落海军时，她的心情异常激动。她在战斗中迅速大放异彩，被任命为钢铁部落舰队的海军上将，并选择了玛拉卡和苏卡作为她的副官。她们三人被称为钢铁女武神——并横扫了所有敢于在战斗中直面她们的人。"}}
+D.ClientTexts.Encounter[1207]={Name={["7c7d08fc8ce7c499:17"]=S[20292]},Description={["247ad4a138ffde76:270"]="高拉和特鲁是一对护林木精，他们以极快的速度在林地里生长蔓延，试图夺回他俩之间那座命运多舛的岗哨。负责保护他们完成此项任务的人便是恐怖屠夫杜尔胡，许久以前他曾是个黑石兽人，独自在原始林地的深处游荡，而现在的他更像是植物多一点了。"}}
 D.ClientTexts.Encounter[1208]={Name={["f76ebe4b3a201b28:11"]=S[8071]},Description={["d2b2c89c5b4614ef:214"]="大法师索尔原本是坚守在紫罗兰断崖处的肯瑞托远征军中的一员，但最终还是被孢子侵占了她的大脑。或许在她内心深处仍然残留着部分人性，但现在的她只是一个被禁锢在自身躯壳里的囚徒。"}}
 D.ClientTexts.Encounter[1209]={Name={["aab88d5cfafb9bb3:8"]="艾里塔克"},Description={["85774ea728f93174:126"]="这只恶毒的蛛后守护着自己的蛛卵，她的巢穴位于戈尔隆德的地底深处。她正等待那些愚蠢的猎物送上门来，被其诱捕并吞噬。"}}
 D.ClientTexts.Encounter[1210]={Name={["10c39feef16aa5cb:5"]="雅努"},Description={["b3f7f6c45bd8bb95:320"]="原祖荆兽雅努古老而又神秘，它被紫罗兰断崖散发出来的奇异能量所吸引，该处是肯瑞托位于戈尔隆德的一个前哨站。长久以来，原祖荆兽和它们永恒的对手——玛戈隆（戈隆的一种，岩石之子）在德拉诺的对抗正陷入胶着。但雅努仿佛看到了一个全新的世界，通过这些奇异能量可以让它的族群繁荣兴旺、生生不息。"}}
-D.ClientTexts.Encounter[1211]={Name={["131b5f4cb7984501:16"]=S[15649]},Description={["761c9b134f02374c:286"]="据说在塔尔纳抵达戈尔隆德之前，这里曾是贫瘠的不毛之地；据说原祖荆兽所到之处遍地花开，绿意盎然；据说这个家伙是不朽的，就像遭遇过山火的森林一样会重新恢复原貌。有关塔尔纳的传言有很多，但很少是被证实或亲眼目睹过的。"}}
+D.ClientTexts.Encounter[1211]={Name={["131b5f4cb7984501:16"]=S[15650]},Description={["761c9b134f02374c:286"]="据说在塔尔纳抵达戈尔隆德之前，这里曾是贫瘠的不毛之地；据说原祖荆兽所到之处遍地花开，绿意盎然；据说这个家伙是不朽的，就像遭遇过山火的森林一样会重新恢复原貌。有关塔尔纳的传言有很多，但很少是被证实或亲眼目睹过的。"}}
 D.ClientTexts.Encounter[1214]={Name={["24fe2d38e8ef3a6b:10"]="枯木"},Description={["e4735b5d35f13cd2:241"]="在戈尔隆德繁茂的密林深处，枯木已经经历了不计其数的花开花落，生死轮回。这些个自命不凡的“钢铁部落”和奇怪物种以为是他们的天下了。可对枯木来说，他们只不过是昙花一现，早晚会成为过眼云烟，唯有枯木才会永恒。"}}
 D.ClientTexts.Encounter[1547]={Name={["45ab56d3a8bdcbaa:15"]="安其拉三宝"}}
 D.ClientTexts.Encounter[1548]={Name={["082a5bcf831af79c:8"]="维希度斯"}}
-D.ClientTexts.Encounter[1216]={Name={["53fcb217ec3aa9f2:7"]=S[21196]},Description={["5aad432286181089:250"]="在德莱尼曾经的故乡、燃烧军团如今的堡垒阿古斯，阿扎凯尔在等待着，随时准备作为燃烧军团的仆人，为它们打开一扇扇通往要想征服的异世界的传送门。当缚魂者尼娅米削弱奥金顿的防御时，阿扎凯尔感到时机来临了。"}}
+D.ClientTexts.Encounter[1216]={Name={["53fcb217ec3aa9f2:7"]=S[21197]},Description={["5aad432286181089:250"]="在德莱尼曾经的故乡、燃烧军团如今的堡垒阿古斯，阿扎凯尔在等待着，随时准备作为燃烧军团的仆人，为它们打开一扇扇通往要想征服的异世界的传送门。当缚魂者尼娅米削弱奥金顿的防御时，阿扎凯尔感到时机来临了。"}}
 D.ClientTexts.Encounter[1225]={Name={["42b216bc734390c3:9"]=S[7862]},Description={["45bff3b2e84926e1:140"]="古尔丹的密探塔隆戈尔与萨格雷合谋，妄图吞噬在奥金顿神圣陵墓中安息的万千亡魂。"}}
-D.ClientTexts.Encounter[1226]={Name={["4e3d4d159f733c7e:18"]=S[12105]},Description={["35580e0449cc73f9:273"]="作为一个强大的元素师，高尔山天生就有通过金属来塑造并引导能量的能力。他也因此充当了钢铁部落首次入侵艾泽拉斯的急先锋。他试图通过揭示藏在黑石塔中的，由黑铁矮人制造的上古符文中的秘密来强化自身，并静待下一步的指令。"}}
+D.ClientTexts.Encounter[1226]={Name={["4e3d4d159f733c7e:18"]=S[12106]},Description={["35580e0449cc73f9:273"]="作为一个强大的元素师，高尔山天生就有通过金属来塑造并引导能量的能力。他也因此充当了钢铁部落首次入侵艾泽拉斯的急先锋。他试图通过揭示藏在黑石塔中的，由黑铁矮人制造的上古符文中的秘密来强化自身，并静待下一步的指令。"}}
 D.ClientTexts.Encounter[1227]={Name={["0fd389c79a085f6e:5"]="奇拉克"},Description={["2745b62338077292:245"]="作为幸存的奈法利安余孽，奇拉克为免于一死，向钢铁部落提出会想尽一切办法保存并巩固黑石塔孵化间内所剩无几的黑龙军团龙蛋。钢铁部落的使者当即与这头狡诈的黑龙达成协议。"}}
-D.ClientTexts.Encounter[1228]={Name={["bbcf2a9c9073610b:16"]=S[12280]},Description={["85d0c017dcaaf522:246"]="作为一名诡计多端的战歌氏族勇士，萨贝克被委以率领铁军远征队穿越黑暗之门发动突袭的重任。在加尔鲁什的授意下，他一路打到了黑石兽人在艾泽拉斯的老巢，并在那里集结兵力准备下一阶段的部署。"}}
-D.ClientTexts.Encounter[1229]={Name={["bc067a68006d7d2d:18"]=S[16508]},Description={["2dc2cef036115171:253"]="怒翼是由暮光高地的龙喉氏族驯养的巨型始祖龙。虽然她与督军扎伊拉建立了亲密的伙伴关系并跟随其来到了黑石塔，盘踞在洞穴大厅里，但她坚强不屈的意志使其心智得以保全，没有沦为失去自我意识的坐骑。"}}
-D.ClientTexts.Encounter[1234]={Name={["3d2cfbedee3898b6:12"]=S[17148]},Description={["aca03236d45ba639:279"]="当加尔鲁什命令铁军先锋部队赶赴艾泽拉斯执行任务时，他就曾告诫他们与那边的“昔日盟友”会合。这位盟友就是渴望复仇、凶狠残暴却又忠心耿耿的扎伊拉，龙喉氏族的督军。现如今，她已在黑石山的中心地带组装好灭世武器，复仇的时刻即将到来。"}}
-D.ClientTexts.Encounter[1235]={Name={["3e5a1260ce621431:18"]=S[18879]},Description={["12572af78de9186e:225"]="这位好勇斗狠的战歌领军在钢铁部落蹿升得很快，平步青云的他现在甚至统领了一整编的兽人部队。他骑在令人恐惧的座狼——惧牙身上厉兵秣马，似乎已经准备好对沙塔斯发动海面进攻。"}}
+D.ClientTexts.Encounter[1228]={Name={["bbcf2a9c9073610b:16"]=S[12281]},Description={["85d0c017dcaaf522:246"]="作为一名诡计多端的战歌氏族勇士，萨贝克被委以率领铁军远征队穿越黑暗之门发动突袭的重任。在加尔鲁什的授意下，他一路打到了黑石兽人在艾泽拉斯的老巢，并在那里集结兵力准备下一阶段的部署。"}}
+D.ClientTexts.Encounter[1229]={Name={["bc067a68006d7d2d:18"]=S[16509]},Description={["2dc2cef036115171:253"]="怒翼是由暮光高地的龙喉氏族驯养的巨型始祖龙。虽然她与督军扎伊拉建立了亲密的伙伴关系并跟随其来到了黑石塔，盘踞在洞穴大厅里，但她坚强不屈的意志使其心智得以保全，没有沦为失去自我意识的坐骑。"}}
+D.ClientTexts.Encounter[1234]={Name={["3d2cfbedee3898b6:12"]=S[17149]},Description={["aca03236d45ba639:279"]="当加尔鲁什命令铁军先锋部队赶赴艾泽拉斯执行任务时，他就曾告诫他们与那边的“昔日盟友”会合。这位盟友就是渴望复仇、凶狠残暴却又忠心耿耿的扎伊拉，龙喉氏族的督军。现如今，她已在黑石山的中心地带组装好灭世武器，复仇的时刻即将到来。"}}
+D.ClientTexts.Encounter[1235]={Name={["3e5a1260ce621431:18"]=S[18880]},Description={["12572af78de9186e:225"]="这位好勇斗狠的战歌领军在钢铁部落蹿升得很快，平步青云的他现在甚至统领了一整编的兽人部队。他骑在令人恐惧的座狼——惧牙身上厉兵秣马，似乎已经准备好对沙塔斯发动海面进攻。"}}
 D.ClientTexts.Encounter[1236]={Name={["ab82b9438307be62:17"]="恐轨押运员"},Description={["0e8247535da8dd2c:264"]="恐轨押运员是一群精英佣兵，他们受雇于黑索公司，负责保护穿行在戈尔隆德的火车。这个三人小组包括一名火刃剑圣，一名地精工程师和一个使用黑血魔法的萨满。这些利欲熏心的家伙眼里只有一个信条，那就是对金钱的贪婪和杀戮的狂热。"}}
 D.ClientTexts.Encounter[1237]={Name={["1018780a8dac5ded:5"]="奥舍尔"},Description={["df3ce68c81be6577:244"]="刃牙虎人奥舍尔本是徘徊在阿兰卡峰林的一个凶狠残暴的捕食者，狂妄自大终于使他栽了跟头，被雷神氏族诱捕并押至戈尔隆德接受驯化，最终沦为了钢铁部落的马前卒。奥舍尔已不止一天设想过要痛饮将其捕获者的鲜血。"}}
 D.ClientTexts.Encounter[1238]={Name={["9a4329625b5aeb71:7"]="斯古洛克"},Description={["d547b373cb58fcbe:264"]="钢铁部落在戈尔隆德降服巨人的计划执行得非常成功，强大的戈隆斯古洛克就是最好的证明。他在格罗姆卡军中鹤立鸡群，双肩还扛着一对巨炮，形容他是走在陆地上的铁甲舰一点都不为过。斯古洛克已准备好执行新主人的命令，将目标夷为平地。"}}
 D.ClientTexts.Encounter[1262]={Name={["63e55edf0204dc7e:7"]="鲁克玛"},Description={["f42b317996b4542c:204"]="鲁克玛偶尔会以一只炽燃火鹰的形象出现在阿兰卡峰林的上空。尽管鲁克玛被鸦人们看作是太阳的化身而被奉若神明，但没有人知道这只大鸟究竟从何而来。"}}
-D.ClientTexts.Encounter[1291]={Name={["1ed484f69221d2f1:13"]=S[15318]},Description={["cd8bcba0a7774c8d:195"]="多弗在过去的黑石氏族被称为毁灭者，一听到这名号，人们就会不由自主地与这个可怕的玛戈隆保持安全距离。多弗走到哪儿都是地动山摇，仿佛大地看到他也为之颤抖，并为其开路。"}}
+D.ClientTexts.Encounter[1291]={Name={["1ed484f69221d2f1:13"]=S[15319]},Description={["cd8bcba0a7774c8d:195"]="多弗在过去的黑石氏族被称为毁灭者，一听到这名号，人们就会不由自主地与这个可怕的玛戈隆保持安全距离。多弗走到哪儿都是地动山摇，仿佛大地看到他也为之颤抖，并为其开路。"}}
 D.ClientTexts.Encounter[1372]={Name={["7b3278781a4bc99d:9"]="血魔"},Description={["6e9b981de82335bc:227"]="落入神圣陵墓奥金顿核心的暗影议会副官塔隆戈尔吞噬了上百个德莱尼的灵魂，变成了一头臃肿的畸形怪物。如今塔隆戈尔的外表早已无法再被称为兽人，他已抛弃旧名，给自己起了一个新名字：血魔。"}}
-D.ClientTexts.Encounter[1391]={Name={["4121818b8c1e970c:13"]=S[20730]},Description={["a7eb78588718c299:310"]="邪能领主被燃烧军团中的部分学者视为普通恶魔卫士的进化版，直接听命于阿克蒙德。他们的残酷天性与野蛮力量交相辉印。而扎昆的任务正需要他同时发挥这两项才能：击溃战歌氏族顽固而傲慢的兽人酋长的钢铁意志……"}}
+D.ClientTexts.Encounter[1391]={Name={["4121818b8c1e970c:13"]=S[20731]},Description={["a7eb78588718c299:310"]="邪能领主被燃烧军团中的部分学者视为普通恶魔卫士的进化版，直接听命于阿克蒙德。他们的残酷天性与野蛮力量交相辉印。而扎昆的任务正需要他同时发挥这两项才能：击溃战歌氏族顽固而傲慢的兽人酋长的钢铁意志……"}}
 D.ClientTexts.Encounter[1392]={Name={["3b90424a686b0d2f:7"]="考莫克"},Description={["05e2faccdb1d58a5:292"]="与德拉诺一样古老的考莫克曾是戈尔隆德的统治者，这只巨型玛戈隆毁灭性的怒火足以令这片土地上的生物退避三舍。但在钢铁部落到来之后，就捉住了这只巨兽并试图打垮他的意志。他们完全失败了……直到古尔丹执掌大权时——考莫克完全无法抵抗邪能的力量。"}}
-D.ClientTexts.Encounter[1394]={Name={["fc77915290b3f8b3:13"]=S[13852]},Description={["475e9faae7f0858d:310"]="在古尔丹带来送给萨格雷的“礼物”后，维哈里就表现出了极大的野心，并在组织中迅速蹿升。被敌人称为“暴君”的她是最先接受邪能之触的萨格雷之一，这进一步强化了她的战斗力。如今，维哈里身负着嘲弄纳鲁的圣徽，以表达她对新教派的坚定信仰。"}}
-D.ClientTexts.Encounter[1395]={Name={["2c40ec1b9bd180ac:9"]=S[16697]},Description={["71dc7d75dd71c4c6:302"]="嗜血而野蛮的玛诺洛斯一直是阿克蒙德最恐怖的手下。即使在被格罗玛什奋力斩杀之后，他的鲜血还被古尔丹当成了收买钢铁部落及其盟友的筹码。现在，古尔丹和他的爪牙正想方设法复活玛诺洛斯支离破碎的尸骨，好让他继续为燃烧军团效力。"}}
+D.ClientTexts.Encounter[1394]={Name={["fc77915290b3f8b3:13"]=S[13853]},Description={["475e9faae7f0858d:310"]="在古尔丹带来送给萨格雷的“礼物”后，维哈里就表现出了极大的野心，并在组织中迅速蹿升。被敌人称为“暴君”的她是最先接受邪能之触的萨格雷之一，这进一步强化了她的战斗力。如今，维哈里身负着嘲弄纳鲁的圣徽，以表达她对新教派的坚定信仰。"}}
+D.ClientTexts.Encounter[1395]={Name={["2c40ec1b9bd180ac:9"]=S[16698]},Description={["71dc7d75dd71c4c6:302"]="嗜血而野蛮的玛诺洛斯一直是阿克蒙德最恐怖的手下。即使在被格罗玛什奋力斩杀之后，他的鲜血还被古尔丹当成了收买钢铁部落及其盟友的筹码。现在，古尔丹和他的爪牙正想方设法复活玛诺洛斯支离破碎的尸骨，好让他继续为燃烧军团效力。"}}
 D.ClientTexts.Encounter[1549]={Name={["e3707415d879c1f4:15"]="双子皇帝"}}
 D.ClientTexts.Encounter[1550]={Name={["7c9bee6a6683b543:4"]="奥罗"}}
 D.ClientTexts.Encounter[1396]={Name={["19bcbc65eade8aa2:14"]=S[7799]},Description={["60051c7b55db17ee:315"]="血环氏族督军基尔罗格·死眼在经历过预见自身死亡的仪式后就掌握了自己的氏族。在认清自己的命运后，他无所畏惧地带领着氏族历经无数战役，向着他所渴望的荣耀之死进发。现在，血管中流淌着恶魔之血的基尔罗格正在地狱火堡垒中等着你，准备迎接自己——或者你的末日。"}}
-D.ClientTexts.Encounter[1425]={Name={["52c6178200c4f61d:10"]=S[20924]},Description={["5b986f0e552d60c7:281"]="在奥格瑞玛陷落之后，人们在黑索本人的工作室里发现了钢铁掠夺者的图纸。它的灵感来自燃烧军团强大的构造体，是这个邪恶地精的杰作。在他死后，这个项目才真正完工，并成为钢铁部落军事力量的巅峰之作。"}}
+D.ClientTexts.Encounter[1425]={Name={["52c6178200c4f61d:10"]=S[20925]},Description={["5b986f0e552d60c7:281"]="在奥格瑞玛陷落之后，人们在黑索本人的工作室里发现了钢铁掠夺者的图纸。它的灵感来自燃烧军团强大的构造体，是这个邪恶地精的杰作。在他死后，这个项目才真正完工，并成为钢铁部落军事力量的巅峰之作。"}}
 D.ClientTexts.Encounter[1426]={Name={["9157728d3e24704a:15"]=S[8190]},Description={["c70d595ecf4aa667:267"]="在黑索公司的佣兵帮助下，钢铁部落在地狱火堡垒的脚下建造了毁灭性的攻城器械，并计划在总攻艾泽拉斯的主城时使用它们。在将坦克改装为使用邪能之后，攻城大师玛塔克只等古尔丹一声令下，就能发动攻击。"}}
 D.ClientTexts.Encounter[1427]={Name={["5f9c545cd979204b:19"]="永恒者索克雷萨"},Description={["2fc240862bc4d331:298"]="德莱尼最伟大的战士会将自己的灵魂灌入闪闪发光的构装体，成为永远保护人民的警戒者。索克雷萨在堕入黑暗之前曾是主教议会的一员，他改造了这个神圣的仪式，试图在塔拉多的惨败之后，用一具扭曲的邪能构装体保存自己的灵魂。"}}
 D.ClientTexts.Encounter[1432]={Name={["9886123dbd9c6b6c:19"]="高阶地狱火议会"},Description={["8ebc0d5a19357d4b:410"]="数千名钢铁部落的兽人喝下了玛诺洛斯的鲜血，但只有很少数能像这三位勇士一样变得如此强大。作为虚空魔法的大师，暗月氏族的流亡者，迪亚·暗语迅速展露头角，成为古尔丹的左膀右臂。古尔图格是一个永不满足的嗜血屠夫，身经百战未尝一败，只有剑圣朱倍尔索斯曾与他战成过平手。在被邪能腐蚀后，他们成为了古尔丹的亲卫和战争议会成员。"}}
-D.ClientTexts.Encounter[1433]={Name={["be09be630983cc10:16"]=S[13775]},Description={["6ec56071ee5485f8:257"]="在复活泰罗克并重获力量的努力失败后，陷入沮丧的艾斯卡接受了古尔丹的招揽，以换取解除塞泰的古老诅咒的机会。如今，他已飞出暗影，重返天空。作为幻象与谎言的大师，艾斯卡的复仇之日已近在咫尺。"}}
-D.ClientTexts.Encounter[1438]={Name={["3d1808dfab7a731a:10"]=S[21139]},Description={["410e4f262166dd03:305"]="污染者阿克蒙德是最早背叛阿古斯德莱尼的艾瑞达之一，如今他已经成为黑暗泰坦萨格拉斯的左膀右臂，指挥着燃烧军团的大军。他跨越了时间与空间降临德拉诺，以确保入侵艾泽拉斯的计划如期展开，同时防止古尔丹令他的军团主子们失望。"}}
+D.ClientTexts.Encounter[1433]={Name={["be09be630983cc10:16"]=S[13776]},Description={["6ec56071ee5485f8:257"]="在复活泰罗克并重获力量的努力失败后，陷入沮丧的艾斯卡接受了古尔丹的招揽，以换取解除塞泰的古老诅咒的机会。如今，他已飞出暗影，重返天空。作为幻象与谎言的大师，艾斯卡的复仇之日已近在咫尺。"}}
+D.ClientTexts.Encounter[1438]={Name={["3d1808dfab7a731a:10"]=S[21140]},Description={["410e4f262166dd03:305"]="污染者阿克蒙德是最早背叛阿古斯德莱尼的艾瑞达之一，如今他已经成为黑暗泰坦萨格拉斯的左膀右臂，指挥着燃烧军团的大军。他跨越了时间与空间降临德拉诺，以确保入侵艾泽拉斯的计划如期展开，同时防止古尔丹令他的军团主子们失望。"}}
 D.ClientTexts.Encounter[1447]={Name={["4369b03a2215042d:10"]="祖霍拉克"},Description={["2453b3e9b9ceac00:363"]="被古尔丹从扭曲虚空深处召唤出来的祖霍拉克是最强大的虚空亡魂之一——这种寄生性的虚空生物以撕裂空间，吞噬现实位面的能量和生物为生。古尔丹扭曲了祖霍拉克，对他灌输了庞大的恶魔能量，并利用他的力量开启传送门，以召集燃烧军团的大军。"}}
-D.ClientTexts.Encounter[1452]={Name={["1923e823707507ce:17"]=S[21448]},Description={["63c06da55f4ed1ba:198"]="霸主卡扎克再次从扭曲虚空现身，代表燃烧军团监督古尔丹的行动。他就站在塔纳安丛林的腐化中心——基尔加丹王座附近。"}}
-D.ClientTexts.Encounter[1467]={Name={["ff25f93639b9826b:17"]=S[12474]},Description={["659763cf012a7c9e:235"]="提拉宋曾是主人的盟友，后来为了得到更强大的力量而和燃烧军团狼狈为奸。被囚禁多年的他心中充满恨意，妨碍他的人都会惨遭折磨。如果碍事的碰巧是之前囚禁他的人，那就更痛快了。"}}
+D.ClientTexts.Encounter[1452]={Name={["1923e823707507ce:17"]=S[21449]},Description={["63c06da55f4ed1ba:198"]="霸主卡扎克再次从扭曲虚空现身，代表燃烧军团监督古尔丹的行动。他就站在塔纳安丛林的腐化中心——基尔加丹王座附近。"}}
+D.ClientTexts.Encounter[1467]={Name={["ff25f93639b9826b:17"]=S[12475]},Description={["659763cf012a7c9e:235"]="提拉宋曾是主人的盟友，后来为了得到更强大的力量而和燃烧军团狼狈为奸。被囚禁多年的他心中充满恨意，妨碍他的人都会惨遭折磨。如果碍事的碰巧是之前囚禁他的人，那就更痛快了。"}}
 D.ClientTexts.Encounter[1468]={Name={["8aa2dc97495a48da:8"]="阿什高姆"},Description={["8a465c67a64a8b64:297"]="阿什高姆是拉格纳罗斯手下的一名副官，曾在卡利姆多的森林里肆意纵火，后来守望者们终于设法将他禁锢。守望者们无法彻底消灭阿什高姆，于是把他关在冰牢里。不幸的是，最近燃烧军团的入侵削弱了冰封阿什高姆多年的反制机关……"}}
 D.ClientTexts.Encounter[1469]={Name={["fffbf92a7120c9eb:6"]="格雷泽"},Description={["4d126cb951bf96d0:288"]="格雷泽和很多同类恶魔一样，能将凝望的目光汇聚成强有力的武器对付敌人。守望者发现把这种生物发射出的魔法反射回它本身就能使它陷入虚弱状态。他们利用这一点诱捕这种恶魔，并将其关在由镜子制成的监狱里。现在关不住了。"}}
-D.ClientTexts.Encounter[1470]={Name={["fea382eb6b297fcc:14"]=S[17331]},Description={["2573c5c9c2d30bc6:325"]="奸细。叛徒。放逐者。科达娜曾追随卡德加的先锋部队，将加尔鲁什赶进黑暗之门，并为阻止暗影议会的阴谋而奋斗。但古尔丹的黑暗魔法腐蚀了她的心灵，把她变成了自己的终极武器。她曾是恪尽职守的楷模，而现在却成为了瓦解守望者的工具。"}}
+D.ClientTexts.Encounter[1470]={Name={["fea382eb6b297fcc:14"]=S[17332]},Description={["2573c5c9c2d30bc6:325"]="奸细。叛徒。放逐者。科达娜曾追随卡德加的先锋部队，将加尔鲁什赶进黑暗之门，并为阻止暗影议会的阴谋而奋斗。但古尔丹的黑暗魔法腐蚀了她的心灵，把她变成了自己的终极武器。她曾是恪尽职守的楷模，而现在却成为了瓦解守望者的工具。"}}
 D.ClientTexts.Encounter[1479]={Name={["d1f224f9808080c6:10"]="瑟芬崔斯克"},Description={["9e2919be0d180e3d:199"]="驻扎在艾萨拉之眼的纳迦对北部边界敬而远之。因为那里的浅滩上住着一只古老的有鳞怪兽，它偶尔会伸出脖子吞掉附近的猎物。"}}
-D.ClientTexts.Encounter[1480]={Name={["3b7f91ad3fbcd8f4:14"]=S[17147]},Description={["036feabed08cedfd:203"]="这名凶残的指挥官负责监督占领阿苏纳的纳迦军事力量，试图搜寻高戈奈斯潮汐之石。在积怨纳迦中，他的地位仅次于阿茜萨，而他的威信并不比阿茜萨低，下属对他无不敬畏。"}}
-D.ClientTexts.Encounter[1485]={Name={["6b956fb0c4e8d419:7"]=S[15920]},Description={["7f7bfb62b073c6d3:280"]="金盔金甲、高大魁梧的海姆达尔机警的守护着英灵殿的大门，一刻也不懈怠。他奉奥丁之命，防止没有资格的宵小之辈擅入英灵殿。他吹响号角还能招来附近盘旋的凶猛的风暴幼龙供他差遣。英灵殿由他当关，万夫莫开。"}}
+D.ClientTexts.Encounter[1480]={Name={["3b7f91ad3fbcd8f4:14"]=S[17148]},Description={["036feabed08cedfd:203"]="这名凶残的指挥官负责监督占领阿苏纳的纳迦军事力量，试图搜寻高戈奈斯潮汐之石。在积怨纳迦中，他的地位仅次于阿茜萨，而他的威信并不比阿茜萨低，下属对他无不敬畏。"}}
+D.ClientTexts.Encounter[1485]={Name={["6b956fb0c4e8d419:7"]=S[15921]},Description={["7f7bfb62b073c6d3:280"]="金盔金甲、高大魁梧的海姆达尔机警的守护着英灵殿的大门，一刻也不懈怠。他奉奥丁之命，防止没有资格的宵小之辈擅入英灵殿。他吹响号角还能招来附近盘旋的凶猛的风暴幼龙供他差遣。英灵殿由他当关，万夫莫开。"}}
 D.ClientTexts.Encounter[1486]={Name={["0f9d4163ce4c4498:5"]="赫娅"},Description={["7f6a503a0ac15b19:232"]="赫娅生前是一位天下无敌的战士，她保卫瓦尔基拉免受一切威胁。她的勇气和事迹获得了泰坦监护者艾尔的注意。在赫娅去世后，她升入了英灵殿，艾尔赐予了她最崇高的奖赏：将她转化为一名瓦格里。"}}
 D.ClientTexts.Encounter[1551]={Name={["f1d0dc8e34ee14b1:6"]="克苏恩"}}
 D.ClientTexts.Encounter[1487]={Name={["fd2f267bd879f23c:6"]="芬雷尔"},Description={["6c09b34acc7dc61d:243"]="在永恒猎场之中，强大的维库勇士们磨炼着他们的战斗技艺，竞相猎杀最巨大的猛兽。但不论是人还是猛兽，若是遇上了可怕的芬雷尔也只能慌忙逃窜。它是猎场的真正主宰，总是悄悄接近猎物，然后以惊人的速度一击致命。"}}
-D.ClientTexts.Encounter[1488]={Name={["afc93b89d832b6d2:15"]=S[17292]},Description={["b1e83d6bf930e65e:338"]="古尔丹向维库国王斯科瓦尔德做了一个简单的提议：加入燃烧军团并获得最强的力量，不然等着他的是灭族的命运。渴望征战沙场、建功立业的斯科瓦尔德接受了军团的提议，并奉命执行一项至关重要的任务。他必须前往英灵殿取得奥丁的阿格拉玛之盾，并将其交给古尔丹。之后他才能踏上无尽的征服之路。"}}
+D.ClientTexts.Encounter[1488]={Name={["afc93b89d832b6d2:15"]=S[17293]},Description={["b1e83d6bf930e65e:338"]="古尔丹向维库国王斯科瓦尔德做了一个简单的提议：加入燃烧军团并获得最强的力量，不然等着他的是灭族的命运。渴望征战沙场、建功立业的斯科瓦尔德接受了军团的提议，并奉命执行一项至关重要的任务。他必须前往英灵殿取得奥丁的阿格拉玛之盾，并将其交给古尔丹。之后他才能踏上无尽的征服之路。"}}
 D.ClientTexts.Encounter[1489]={Name={["7c9ba6ff5e2baf6a:4"]="奥丁"},Description={["e9c48b2dcc9d3268:324"]="泰坦守护者奥丁接受了泰坦万神殿的力量，奉命率领泰坦铸造的大军对抗上古之神。之后，他将英灵殿升入天空，召集最强大的维库勇士组建起一支大军保卫艾泽拉斯。但奥杜尔落入尤格萨隆的魔爪后，他遭到了洛肯的背叛，并被海拉诅咒，现在永远困在了英灵殿内。"}}
 D.ClientTexts.Encounter[1490]={Name={["65e2b578e79d2303:12"]="积怨夫人"},Description={["fe2657d6a11c673b:173"]="这个纳迦海巫出身积怨贵族，并受到艾萨拉女王本人的青睐。她驾驭着波涛和天空的力量，能粉碎妨碍积怨纳迦的一切敌人。"}}
 D.ClientTexts.Encounter[1491]={Name={["bd53302ad70a77cd:13"]="深须国王"},Description={["fd836936122a09d3:229"]="水手之中流传着海底巨人的传说，这个巨人会从深海中突然出现，并徒手把船只扯碎。据说他留下完好无损的船头当做肩甲和战利品穿在身上。大多数听众都不把这个传说当回事，认为这只是酒后的胡言罢了。"}}
@@ -5279,29 +5279,29 @@ D.ClientTexts.Encounter[1521]={Name={["e2e4478e1dd10d8d:8"]="基赫纳斯"}}
 D.ClientTexts.Encounter[1522]={Name={["7c973651e873f93a:4"]="加尔"}}
 D.ClientTexts.Encounter[1523]={Name={["ce1784106c9d574d:8"]="沙斯拉尔"}}
 D.ClientTexts.Encounter[1524]={Name={["dc0374e84b66bf6f:11"]="迦顿男爵"}}
-D.ClientTexts.Encounter[1525]={Name={["2edda9757aa891ce:17"]=S[18579]}}
-D.ClientTexts.Encounter[1526]={Name={["eea0cda74a936c8a:22"]=S[16341]}}
-D.ClientTexts.Encounter[1527]={Name={["adba980373215fd4:17"]=S[17704]}}
-D.ClientTexts.Encounter[1528]={Name={["d4162002b938944b:8"]=S[12169]}}
-D.ClientTexts.Encounter[1529]={Name={["6795c5afb1167b1e:19"]=S[16510]}}
+D.ClientTexts.Encounter[1525]={Name={["2edda9757aa891ce:17"]=S[18580]}}
+D.ClientTexts.Encounter[1526]={Name={["eea0cda74a936c8a:22"]=S[16342]}}
+D.ClientTexts.Encounter[1527]={Name={["adba980373215fd4:17"]=S[17705]}}
+D.ClientTexts.Encounter[1528]={Name={["d4162002b938944b:8"]=S[12170]}}
+D.ClientTexts.Encounter[1529]={Name={["6795c5afb1167b1e:19"]=S[16511]}}
 D.ClientTexts.Encounter[1530]={Name={["990d9cc57455c4a2:21"]=S[7821]}}
 D.ClientTexts.Encounter[1531]={Name={["09952ff1e9209b9e:18"]="勒什雷尔"}}
 D.ClientTexts.Encounter[1555]={Name={["6299d1877037b994:14"]="贞节圣女"}}
 D.ClientTexts.Encounter[1556]={Name={["409ab79d121f54cc:9"]="歌剧院"}}
 D.ClientTexts.Encounter[1557]={Name={["70f5ae0682888c05:10"]="馆长"}}
 D.ClientTexts.Encounter[1559]={Name={["4e4b9ec1d782dd42:11"]="埃兰之影"}}
-D.ClientTexts.Encounter[1560]={Name={["b5af9821df894996:16"]=S[16477]}}
+D.ClientTexts.Encounter[1560]={Name={["b5af9821df894996:16"]=S[16478]}}
 D.ClientTexts.Encounter[1561]={Name={["0592e5f064c31f25:11"]="虚空幽龙"}}
 D.ClientTexts.Encounter[1562]={Name={["f65b8b1d48c62f3a:10"]="国际象棋"}}
-D.ClientTexts.Encounter[1563]={Name={["04ebef1e9d4b8fe9:16"]=S[16670]}}
+D.ClientTexts.Encounter[1563]={Name={["04ebef1e9d4b8fe9:16"]=S[16671]}}
 D.ClientTexts.Encounter[1564]={Name={["40f91df7cb5ec254:15"]="莫加尔大王"}}
 D.ClientTexts.Encounter[1565]={Name={["6ba296f3072cd82e:20"]=S[10128]}}
 D.ClientTexts.Encounter[1566]={Name={["6155cab7fb7d6fee:11"]="玛瑟里顿"}}
 D.ClientTexts.Encounter[1567]={Name={["7abd3110eae92e55:18"]=S[530]}}
 D.ClientTexts.Encounter[1568]={Name={["9ecb90149433cdb1:14"]="鱼斯拉"}}
-D.ClientTexts.Encounter[1569]={Name={["f5421c76aa0c97ed:17"]=S[17079]}}
-D.ClientTexts.Encounter[1570]={Name={["0be563ba868b4d01:21"]=S[15997]}}
-D.ClientTexts.Encounter[1571]={Name={["1297a9fd6607863a:18"]=S[18432]}}
+D.ClientTexts.Encounter[1569]={Name={["f5421c76aa0c97ed:17"]=S[17080]}}
+D.ClientTexts.Encounter[1570]={Name={["0be563ba868b4d01:21"]=S[15998]}}
+D.ClientTexts.Encounter[1571]={Name={["1297a9fd6607863a:18"]=S[18433]}}
 D.ClientTexts.Encounter[1572]={Name={["d01c430b256196c0:9"]="瓦丝琪"}}
 D.ClientTexts.Encounter[1573]={Name={["0f1634cc710584ed:5"]="奥"}}
 D.ClientTexts.Encounter[1574]={Name={["9e88c65c58c81dc9:10"]="空灵机甲"}}
@@ -5310,15 +5310,15 @@ D.ClientTexts.Encounter[1576]={Name={["1545654ceda1e17d:19"]=S[3074]}}
 D.ClientTexts.Encounter[1577]={Name={["3325bcc996cf87b2:15"]="雷基·冬寒"}}
 D.ClientTexts.Encounter[1578]={Name={["0e708029c5307ed8:9"]="安纳塞隆"}}
 D.ClientTexts.Encounter[1579]={Name={["39991e67157f6452:9"]="卡兹洛加"}}
-D.ClientTexts.Encounter[1580]={Name={["52a4e615e237aedc:7"]=S[21150]}}
-D.ClientTexts.Encounter[1581]={Name={["3d1808dfab7a731a:10"]=S[21139]}}
-D.ClientTexts.Encounter[1582]={Name={["018019af7c2d3a3e:20"]=S[21883]}}
+D.ClientTexts.Encounter[1580]={Name={["52a4e615e237aedc:7"]=S[21151]}}
+D.ClientTexts.Encounter[1581]={Name={["3d1808dfab7a731a:10"]=S[21140]}}
+D.ClientTexts.Encounter[1582]={Name={["018019af7c2d3a3e:20"]=S[21884]}}
 D.ClientTexts.Encounter[1583]={Name={["d92da0a9a690c64a:8"]="苏普雷姆斯"}}
-D.ClientTexts.Encounter[1584]={Name={["17bba07aa0c5be27:12"]=S[21164]}}
+D.ClientTexts.Encounter[1584]={Name={["17bba07aa0c5be27:12"]=S[21165]}}
 D.ClientTexts.Encounter[1585]={Name={["1b314d0033df1e9d:14"]=S[7861]}}
 D.ClientTexts.Encounter[1586]={Name={["d0aee8da87b0dc4b:16"]=S[5105]}}
 D.ClientTexts.Encounter[1587]={Name={["1dda44eeb392d415:16"]="灵魂之匣"}}
-D.ClientTexts.Encounter[1588]={Name={["3cc664e54797920c:13"]=S[18416]}}
+D.ClientTexts.Encounter[1588]={Name={["3cc664e54797920c:13"]=S[18417]}}
 D.ClientTexts.Encounter[1589]={Name={["784ff27d91b7047c:18"]=S[1332]}}
 D.ClientTexts.Encounter[1590]={Name={["66a55476d953aa65:16"]=S[1308]}}
 D.ClientTexts.Encounter[1591]={Name={["6951266ea6ee3e37:8"]=S[4096]}}
@@ -5328,17 +5328,17 @@ D.ClientTexts.Encounter[1594]={Name={["5a6af0ae3629d8dd:14"]="艾瑞达双子"}}
 D.ClientTexts.Encounter[1595]={Name={["0fcad2b53c3d72fe:5"]="穆鲁"}}
 D.ClientTexts.Encounter[1596]={Name={["115f267398973778:10"]=S[7797]}}
 D.ClientTexts.Encounter[1597]={Name={["93dee04f97a5b9fe:23"]=S[10156]}}
-D.ClientTexts.Encounter[1598]={Name={["5b0252e5dc8e0252:21"]=S[21524]}}
-D.ClientTexts.Encounter[1599]={Name={["d78e45ef59654642:22"]=S[16179]}}
+D.ClientTexts.Encounter[1598]={Name={["5b0252e5dc8e0252:21"]=S[21525]}}
+D.ClientTexts.Encounter[1599]={Name={["d78e45ef59654642:22"]=S[16180]}}
 D.ClientTexts.Encounter[1600]={Name={["77ad3e0e437b0e57:20"]=S[9020]}}
 D.ClientTexts.Encounter[1601]={Name={["a9936d2bed36fa2a:11"]="阿努布雷坎"}}
-D.ClientTexts.Encounter[1602]={Name={["b51481ddbb9f1066:18"]=S[22040]}}
+D.ClientTexts.Encounter[1602]={Name={["b51481ddbb9f1066:18"]=S[22041]}}
 D.ClientTexts.Encounter[1603]={Name={["b3f765f76e111aa4:7"]="迈克斯纳"}}
-D.ClientTexts.Encounter[1604]={Name={["5a2c3ee642a4d2f1:20"]=S[18397]}}
-D.ClientTexts.Encounter[1605]={Name={["c8b43818abda4007:16"]=S[18067]}}
+D.ClientTexts.Encounter[1604]={Name={["5a2c3ee642a4d2f1:20"]=S[18398]}}
+D.ClientTexts.Encounter[1605]={Name={["c8b43818abda4007:16"]=S[18068]}}
 D.ClientTexts.Encounter[1606]={Name={["875a8944fc9cc44f:7"]="洛欧塞布"}}
-D.ClientTexts.Encounter[1607]={Name={["01d0db9a13e8c033:19"]=S[13154]}}
-D.ClientTexts.Encounter[1608]={Name={["5ae1ade04bcfa603:18"]=S[12605]}}
+D.ClientTexts.Encounter[1607]={Name={["01d0db9a13e8c033:19"]=S[13155]}}
+D.ClientTexts.Encounter[1608]={Name={["5ae1ade04bcfa603:18"]=S[12606]}}
 D.ClientTexts.Encounter[1609]={Name={["7206b5a3a3988d50:15"]="天启四骑士"}}
 D.ClientTexts.Encounter[1610]={Name={["3d6ed44e2e75032f:9"]="帕奇维克"},Description={["3e06cda2cb475973:20"]="帕奇维克要跟你玩！"}}
 D.ClientTexts.Encounter[1611]={Name={["51c8183a6094aad9:9"]="格罗布鲁斯"}}
@@ -5353,22 +5353,22 @@ D.ClientTexts.Encounter[1619]={Name={["2eefec0cc53d3c99:12"]=S[3896]}}
 D.ClientTexts.Encounter[1620]={Name={["a81752b67cf3d8e7:22"]="联盟的冠军"}}
 D.ClientTexts.Encounter[1621]={Name={["b1123f2f7fc1a71c:19"]="部落的冠军"}}
 D.ClientTexts.Encounter[1622]={Name={["eaff2827a5c0fb36:11"]="瓦格里双子"}}
-D.ClientTexts.Encounter[1623]={Name={["af7d04d19f932ac8:9"]=S[21157]}}
-D.ClientTexts.Encounter[1624]={Name={["9166cce8201d9407:13"]=S[16689]}}
+D.ClientTexts.Encounter[1623]={Name={["af7d04d19f932ac8:9"]=S[21158]}}
+D.ClientTexts.Encounter[1624]={Name={["9166cce8201d9407:13"]=S[16690]}}
 D.ClientTexts.Encounter[1625]={Name={["35a88057ff3ff878:16"]="亡语者女士"}}
 D.ClientTexts.Encounter[1626]={Name={["b5598b39bb2432e8:21"]=S[2852]}}
 D.ClientTexts.Encounter[1627]={Name={["b5598b39bb2432e8:21"]=S[2852]}}
-D.ClientTexts.Encounter[1628]={Name={["e1f3994b3a8c32ea:20"]=S[15027]}}
+D.ClientTexts.Encounter[1628]={Name={["e1f3994b3a8c32ea:20"]=S[15028]}}
 D.ClientTexts.Encounter[1629]={Name={["3c0e353e6b19d3d9:9"]="烂肠"}}
 D.ClientTexts.Encounter[1630]={Name={["5687fc097d5590f4:7"]="腐面"}}
-D.ClientTexts.Encounter[1631]={Name={["cf9bb751cc0458be:18"]=S[13707]}}
+D.ClientTexts.Encounter[1631]={Name={["cf9bb751cc0458be:18"]=S[13708]}}
 D.ClientTexts.Encounter[1632]={Name={["baf8b943c788b2fe:18"]="鲜血王子议会"}}
-D.ClientTexts.Encounter[1633]={Name={["837cb2d0d29c7ca3:20"]=S[21996]}}
-D.ClientTexts.Encounter[1634]={Name={["0b662718fb6ac74b:20"]=S[19786]}}
+D.ClientTexts.Encounter[1633]={Name={["837cb2d0d29c7ca3:20"]=S[21997]}}
+D.ClientTexts.Encounter[1634]={Name={["0b662718fb6ac74b:20"]=S[19787]}}
 D.ClientTexts.Encounter[1635]={Name={["748261908594db11:10"]="辛达苟萨"}}
 D.ClientTexts.Encounter[1636]={Name={["1fbd52af4662b8ea:11"]=S[10230]}}
 D.ClientTexts.Encounter[1637]={Name={["e2cac326c04a1a63:14"]="烈焰巨兽"},Description={["588f7a46a284a983:139"]="这辆巨型重甲坦克守卫着奥杜尔的庭院入口。守护者米米尔隆建造的烈焰巨兽其实是他的V0-L7R-0N武器平台的一部分。"}}
-D.ClientTexts.Encounter[1638]={Name={["9f6f4b302502f9e3:21"]=S[12330]},Description={["8118f77d05b071c6:201"]="跟奥杜尔的其他泰坦造物一样，伊格尼斯如今也遵从上古之神尤格-萨隆的扭曲意志。这个硕大的火焰巨人一直在巨人熔炉劳作，创造着钢铁部队，势必要以尤格-萨隆之名征服艾泽拉斯。"}}
+D.ClientTexts.Encounter[1638]={Name={["9f6f4b302502f9e3:21"]=S[12331]},Description={["8118f77d05b071c6:201"]="跟奥杜尔的其他泰坦造物一样，伊格尼斯如今也遵从上古之神尤格-萨隆的扭曲意志。这个硕大的火焰巨人一直在巨人熔炉劳作，创造着钢铁部队，势必要以尤格-萨隆之名征服艾泽拉斯。"}}
 D.ClientTexts.Encounter[1639]={Name={["2fae2a5b19b44d9c:10"]="锋鳞"},Description={["9ee33e4a0030b745:233"]="维拉努斯，风暴峭壁的始祖龙族母，一直侍奉着守护者托里姆。后来他被洛肯捉住并被扭曲成了可怕的武器。掌炉者伊格尼斯遵从其主人的命令，把铁板焊接在锋鳞的外皮上，使它的攻击变得更为致命。"}}
 D.ClientTexts.Encounter[1640]={Name={["0d97c6bf97271cb8:19"]="XT-002拆解者"},Description={["fc2aed392e611116:205"]="米米尔隆设计这个发条造物时只给了它执行使命所需的基本智力，而他的使命就是在奥杜尔的废料场巡逻。XT-002渐渐把自己看成是守护者的儿子，而且经常像熊孩子一样乱发脾气。"}}
 D.ClientTexts.Encounter[1641]={Name={["8136851342ef75f6:17"]="钢铁议会"},Description={["1d798d2c6686a451:222"]="号令洛肯的钢铁军团的是三名令人望而生畏的将军，各自代表着一支独特的泰坦造物种族。唤雷者布隆迪尔、符文大师莫尔基姆，还有巨大的断钢者都以守护者的真正主人，邪恶的尤格-萨隆的名义而战。"}}
@@ -5377,17 +5377,17 @@ D.ClientTexts.Encounter[1643]={Name={["47c65df1cd57bb7e:7"]="欧尔莉亚"},Desc
 D.ClientTexts.Encounter[1644]={Name={["0f9789fbf62243e6:5"]="霍迪尔"},Description={["73bc01d514a04152:179"]="巨人霍迪尔以前住在寒冬神殿，帮助风暴峭壁的冰巨人。如今这名守护者住在寒冬大厅的冰冷洞穴里，被迫为尤格-萨隆效力。"}}
 D.ClientTexts.Encounter[1645]={Name={["1e0e331809232d7b:6"]=S[11959]},Description={["c927e152be439b83:253"]="多年来，托里姆相信是冰巨人谋杀了他挚爱的妻子西芙，将怒火对准了他的盟友，随后陷入了绝望。他后来得知，谋杀西芙的是他的哥哥洛肯。而此时洛肯则把托里姆捉住并带到了奥杜尔，让上古之神蒙蔽了这名守护者的心灵。"}}
 D.ClientTexts.Encounter[1646]={Name={["0f75045cfa6c0b81:5"]="弗蕾亚"},Description={["a400c094f5d32285:169"]="守护者弗蕾亚一直是所有生命的守护者，而帮助她的则是三名坚韧的长老。虽然她的温室依然生机勃勃，但其实她也已经屈从于上古之神的疯狂低语。"}}
-D.ClientTexts.Encounter[1647]={Name={["c7291c0081fd84b9:7"]=S[17721]},Description={["441193afaeb80332:225"]="米米尔隆是个才华横溢的发明家，在艾泽拉斯历史上创造了无数令人赞叹的机械。但在洛肯的影响下，这名奥杜尔的守护者如今只想创造战争与毁灭的机械。"}}
-D.ClientTexts.Encounter[1648]={Name={["be6381b14247ba5a:12"]=S[17930]},Description={["95e318dd0b59e8f4:157"]="名为无面者的奇怪生物潜伏在奥杜尔的深处。他们中最强大的指挥官之一就是维扎克斯将军。他守护着通向尤格-萨隆监狱的扭曲通道。"}}
+D.ClientTexts.Encounter[1647]={Name={["c7291c0081fd84b9:7"]=S[17722]},Description={["441193afaeb80332:225"]="米米尔隆是个才华横溢的发明家，在艾泽拉斯历史上创造了无数令人赞叹的机械。但在洛肯的影响下，这名奥杜尔的守护者如今只想创造战争与毁灭的机械。"}}
+D.ClientTexts.Encounter[1648]={Name={["be6381b14247ba5a:12"]=S[17931]},Description={["95e318dd0b59e8f4:157"]="名为无面者的奇怪生物潜伏在奥杜尔的深处。他们中最强大的指挥官之一就是维扎克斯将军。他守护着通向尤格-萨隆监狱的扭曲通道。"}}
 D.ClientTexts.Encounter[1649]={Name={["191cda2b64328d0c:10"]=S[10093]},Description={["c0d3308fff79046c:132"]="清醒的梦境，梦中的怪物，千面的恶魔。\r\n\r\n一切都必须屈服于主人的意志。你们的小小纷争只会让他变得更强。"}}
-D.ClientTexts.Encounter[1650]={Name={["c5a9aaecd47b9741:18"]=S[19220]},Description={["2ec4d808b6154e41:264"]="洛肯之死触发了对泰坦万神殿的警告：艾泽拉斯已经失去了首席管理员。观察者奥尔加隆被派遣前来评估是否有系统腐蚀的存在。如果有必要，这名星圣会触发整个世界的结构重组，消灭这个世界当前的一切居民。"}}
+D.ClientTexts.Encounter[1650]={Name={["c5a9aaecd47b9741:18"]=S[19221]},Description={["2ec4d808b6154e41:264"]="洛肯之死触发了对泰坦万神殿的警告：艾泽拉斯已经失去了首席管理员。观察者奥尔加隆被派遣前来评估是否有系统腐蚀的存在。如果有必要，这名星圣会触发整个世界的结构重组，消灭这个世界当前的一切居民。"}}
 D.ClientTexts.Encounter[1651]={Name={["12d6903d060805b6:6"]=S[8440]}}
 D.ClientTexts.Encounter[1652]={Name={["018fd560939b0935:6"]="海里昂"}}
 D.ClientTexts.Encounter[1653]={Name={["9c4032cdb82c7eea:19"]=S[1362]},Description={["b45fd3f0d9b887f5:291"]="拉文凯斯的女儿，上古之战后在守望者地窟中被囚禁了一万年。在玛维释放了被囚禁的恶魔猎手后，她也重获自由。回到故土后，为了保卫没能在上古之战时守护的家园，她献出了一切，包括自己的灵魂。"}}
 D.ClientTexts.Encounter[1654]={Name={["dc4b29e55767a0a0:18"]=S[8037]},Description={["c1fbe265c79b7532:271"]="格兰达里斯曾是艾泽拉斯最有才华的变形者之一，月光林地会定期将最有前途的学徒送到他那里接受熏陶。但很不幸，越是亲近自然的人就越容易被梦魇腐化，他也不例外。"}}
 D.ClientTexts.Encounter[1655]={Name={["183a9a7442ea062d:8"]="橡树之心"},Description={["23263f35e6c7e61e:244"]="橡树之心是莎拉达希尔上分出的树枝长成的古树，他经历过大分裂、大灾变和无数疫病，并顽强地存活了下来。这颗古树从梦境的精华中吸取力量，挺过了这些灾难。但现在，他力量的源泉变成了他堕落的本源。"}}
 D.ClientTexts.Encounter[1656]={Name={["00caadc32e5fcaec:8"]="德萨隆"},Description={["7ed60a127de471b1:222"]="德萨隆曾是一条年轻的绿龙，在世界之树的树荫之下照料幼崽。但现在却被梦魇吞噬，在仇恨和恐惧的迷雾中迷失了自我。他用强有力的双翼和令生命凋零的吐息向一切落入他手中的猎物倾泻怒火。"}}
-D.ClientTexts.Encounter[1657]={Name={["442cd71f74bcb93e:13"]=S[18604]},Description={["b6cb97cfdc5977da:275"]="萨维斯曾是一名强大的法师，也是艾萨拉女王的谋臣，他后来与萨格拉斯达成协议，将燃烧军团第一次引入了艾泽拉斯。入侵失败后，萨维斯饱受诅咒与折磨，他现在从梦魇之中将自己真正的力量投射到我们的世界，为了摧垮老对手玛法里奥的意志而倾注自己所有的黑暗力量。"}}
+D.ClientTexts.Encounter[1657]={Name={["442cd71f74bcb93e:13"]=S[18605]},Description={["b6cb97cfdc5977da:275"]="萨维斯曾是一名强大的法师，也是艾萨拉女王的谋臣，他后来与萨格拉斯达成协议，将燃烧军团第一次引入了艾泽拉斯。入侵失败后，萨维斯饱受诅咒与折磨，他现在从梦魇之中将自己真正的力量投射到我们的世界，为了摧垮老对手玛法里奥的意志而倾注自己所有的黑暗力量。"}}
 D.ClientTexts.Encounter[1662]={Name={["55e933a066a9cbdf:7"]="洛克莫拉"},Description={["7353f4fdee786710:259"]="洛克莫拉是乌拉罗格·塑山的作品，它至今尚未完成。乌拉罗格希望这个水晶怒灵能歼灭一切反抗地底之王的敌人。创造这个怪兽的狂野魔法尚未完全生效，但已赋予洛克莫拉的所有碎片足够的恶意去摧毁它的敌人。"}}
 D.ClientTexts.Encounter[1663]={Name={["0f92323828de9c57:5"]="海拉"},Description={["f16c114f51ae3aa6:288"]="堕落的瓦格里女王海拉曾是奥丁的左膀右臂，负责将维库勇士的灵魂引入英灵殿，时刻准备着参加决定艾泽拉斯命运的最后一战。但洛肯背叛后，也说服了她与自己联手，背叛奥丁。她现在潜伏在地下的暗影国度，策划着复仇。"}}
 D.ClientTexts.Encounter[1664]={Name={["f8ede7704d807403:20"]=S[5473]},Description={["a4cf35d572f6ce38:150"]="可恨的斯麦斯帕是一名凶残而庞大的莫尔葛中尉。他领导军团部队入侵了黑鸦堡垒，并指挥旗下的邪蝠部队从空中保卫这座要塞。"}}
@@ -5397,35 +5397,35 @@ D.ClientTexts.Encounter[1672]={Name={["7ef9be2f68fb7f16:23"]=S[10451]},Descripti
 D.ClientTexts.Encounter[1673]={Name={["01d042f3891317e8:7"]="纳拉萨斯"},Description={["5bd461638380fbfc:296"]="怪物之母纳拉萨斯自从奈萨里奥时代起就一直被卓格巴尔供奉为神明。他们不断向她献祭贡品，这样她就能孕育出一代代可怕的子孙供卓格巴尔用来对付敌人。无论如何，你必须赶在这头野兽被释放到至高岭肆虐之前将她除去，然后再直击地底之王。"}}
 D.ClientTexts.Encounter[1686]={Name={["386979c18e969152:16"]=S[8173]},Description={["63a544303ca071b1:247"]="这只可怕的生物被捕获于奥杜尔的深处，尤格萨隆被击败后，它一度处于无意识的状态。自从达拉然到达破碎群岛后，这头怪物神秘地苏醒了。只有紫罗兰监狱的强力结界才能困住它。"}}
 D.ClientTexts.Encounter[1687]={Name={["ced7505e7883f075:19"]=S[7708]},Description={["86ac6a101ca13c6d:256"]="达古尔是奈萨里奥时代以来最强大的地底之王。他确信只有自己才有权利运用卡兹格罗斯的力量，于是杀害了大酋长乌兰并夺走了至高岭牛头人的神器。现在，他使用锤子的力量在至高岭大肆破坏，粉碎一切与他为敌者。"}}
-D.ClientTexts.Encounter[1688]={Name={["1f6ac3e7e7832e0a:20"]=S[17713]},Description={["1fcff1449cd2de77:157"]="米尔菲丝是技艺高超的工程学天才，她的性格似乎与其夫米尔豪斯截然相反。米尔菲丝聪明而又诡计多端，是个不可小觑的对手。"}}
+D.ClientTexts.Encounter[1688]={Name={["1f6ac3e7e7832e0a:20"]=S[17714]},Description={["1fcff1449cd2de77:157"]="米尔菲丝是技艺高超的工程学天才，她的性格似乎与其夫米尔豪斯截然相反。米尔菲丝聪明而又诡计多端，是个不可小觑的对手。"}}
 D.ClientTexts.Encounter[1693]={Name={["bdd3f9bdf6c317ca:10"]="溃面"},Description={["c1101326c3f1a1d1:204"]="在冰冠堡垒陷落时，普崔塞德教授抓了很多实验对象。溃面很可能是更早时候制作的原型生物，但似乎是个失败的作品。它的后续作品就是大家耳熟能详的腐面和烂肠。"}}
 D.ClientTexts.Encounter[1694]={Name={["ee09799bde2958b4:9"]="颤栗之喉"},Description={["1bc08b9c55d20417:174"]="这头可怕的冰霜巨龙据说是辛达苟萨的后代，巫妖王的部队在冰冠堡垒卖力的创造这种怪兽，这一头就捕获于堡垒里的霜翼大厅。"}}
 D.ClientTexts.Encounter[1695]={Name={["042efd881955dbcf:21"]=S[8974]},Description={["f1a11a1ed8a70c3b:288"]="在为燃烧军团效力的邪恶生物之中，最神秘恐怖的或许就是戴兜帽的审判官了。蒙托鲁姆在对守望者地窟的第一波攻击发动后到达。他在地窟的大厅中飘游，锐利的目光在阴影中搜寻至关重要的秘密。就连其他恶魔都对他退避三舍。"}}
-D.ClientTexts.Encounter[1696]={Name={["9f66d996b70eea07:10"]=S[21160]},Description={["4f2970d7b5cf3940:219"]="阿努贝斯特是如今所剩无几的蛛魔地穴领主之一。在进攻冰冠堡期间被肯瑞托所俘获并囚禁在紫罗兰监狱。军团入侵期间他得以逃脱，意图向生者释放他的复仇怒火。"}}
+D.ClientTexts.Encounter[1696]={Name={["9f66d996b70eea07:10"]=S[21161]},Description={["4f2970d7b5cf3940:219"]="阿努贝斯特是如今所剩无几的蛛魔地穴领主之一。在进攻冰冠堡期间被肯瑞托所俘获并囚禁在紫罗兰监狱。军团入侵期间他得以逃脱，意图向生者释放他的复仇怒火。"}}
 D.ClientTexts.Encounter[1697]={Name={["bb6998401c164c79:8"]="赛尔奥隆"},Description={["ba0fd6ede4477d74:270"]="这些蜘蛛形恶魔的起源尚不完全明了。研究燃烧军团的学者们推测它们是萨格拉斯的大军在很久以前征服的一个异星种族的后裔。它们中有个名为赛尔奥隆的恶魔尤为凶恶，负责指挥达拉然潜入作战。"}}
-D.ClientTexts.Encounter[1702]={Name={["ce306e2df6600a8c:22"]=S[21993]},Description={["f5b5df8c2bb4201f:222"]="鲜血公主萨安娜是强大的萨莱茵女王兰娜瑟尔的女儿。诺森德战役后，她就一直被囚禁在紫罗兰监狱里，承受着无止尽饥渴的折磨。现在牢房已经打开，她打算把整个世界变成自己的盘中餐。"}}
+D.ClientTexts.Encounter[1702]={Name={["ce306e2df6600a8c:22"]=S[21994]},Description={["f5b5df8c2bb4201f:222"]="鲜血公主萨安娜是强大的萨莱茵女王兰娜瑟尔的女儿。诺森德战役后，她就一直被囚禁在紫罗兰监狱里，承受着无止尽饥渴的折磨。现在牢房已经打开，她打算把整个世界变成自己的盘中餐。"}}
 D.ClientTexts.Encounter[1703]={Name={["86107552d1c7940b:9"]="尼珊德拉"},Description={["937abcf9d401e186:315"]="尼珊德拉曾是守护世界之树莎拉达希尔的绿龙军团中的一员。当萨维斯的腐化梦魇吞噬了莎拉达希尔后，这位沉睡的守护者也被他的腐蚀吞噬了。如今的尼珊德拉只是过去的残影，深陷于瘟疫之中，时刻准备着吞噬任何胆敢深入她巢穴的愚者。"}}
 D.ClientTexts.Encounter[1704]={Name={["36ce9ce777c73c48:18"]="梦魇之龙"},Description={["5afd5131471b3b38:280"]="伊瑟拉负责守护翡翠梦境，她派最强大的绿龙子嗣镇守直接连通艾泽拉斯的四座传送门。但在灾变之前，这些巨龙就有了腐化堕落的迹象。现在，通往梦魇核心的途中就要经过这些巨龙的巢穴。"}}
 D.ClientTexts.Encounter[1706]={Name={["7822bd7ca70a9b2d:9"]="斯考匹隆"},Description={["5e90c6e01036f07b:318"]="在暗夜要塞深处的海底，有若干被遗忘已久的密室，这些密室直接通向暗夜井。这头甲壳厚重的巨蝎在其中一间密室里安了家。斯考匹隆体内注入了暗夜井的力量，还有无数同类的保护，看来这条进入暗夜要塞的后门小道一点也不好走啊。"}}
-D.ClientTexts.Encounter[1711]={Name={["0972f71628ea1d55:13"]=S[20733]},Description={["18efd62cb007f8a1:82"]="无情的军团指挥官时刻准备带领入侵部队从达拉然内部发动攻击。"}}
+D.ClientTexts.Encounter[1711]={Name={["0972f71628ea1d55:13"]=S[20734]},Description={["18efd62cb007f8a1:82"]="无情的军团指挥官时刻准备带领入侵部队从达拉然内部发动攻击。"}}
 D.ClientTexts.Encounter[1713]={Name={["09c4c04ce9598ac9:6"]="克洛苏斯"},Description={["d692efb5d46d7aa6:299"]="这名巨大的末日领主的体型和力量在燃烧军团中数一数二，但是在联盟和部落最强大英雄合力奋战之下，他在破碎海滩被击败了。伤势恢复后，克洛苏斯在暗夜要塞和萨格拉斯之墓之间的海湾里再次现身，一切与军团为敌者都会被他无情地碾碎。"}}
 D.ClientTexts.Encounter[1718]={Name={["baa7a548038cdd07:18"]=S[10166]},Description={["912e8cf2091581eb:397"]="暮色卫队的队长加多一生都致力于捍卫苏拉玛城内的和平。尽管燃烧军团到来后，他的不安情绪与日俱增，但他依然相信并忠于苏拉玛的领导层。艾利桑德已经守护了这座城市无数年，她很清楚怎么做才会为人民带来最大的利益。今晚，加多的任务是确保没有闲杂人等混入在庄园里举行的重要集会。"}}
 D.ClientTexts.Encounter[1719]={Name={["3c429afd882e5b2c:18"]=S[7834]},Description={["af65f35f1a119976:258"]="塔丽克萨是一名残暴的艾瑞达巫师。尽管她明白夜之子对她主人十分重要，但一想到自己在看守着住满精灵的建筑，她就气不打一处来。尽管如此，她还是和手下的副官们履行着职责。只要有他们在，就不会有闯入者打扰集会。"}}
-D.ClientTexts.Encounter[1720]={Name={["d36fcba8ca2ac8cd:16"]=S[21486]},Description={["fb90025b163f230a:185"]="大魔导师的首席剑士麦兰杜斯与艾利桑德形影不离。他刻意不研习魔法，而是用暗夜井的力量将他的反应和移动速度提升到了超越凡人极限的水准。"}}
-D.ClientTexts.Encounter[1725]={Name={["c1b3184daf5cd2ec:18"]=S[13670]},Description={["6e34b0a6492eac0f:271"]="暗夜井底下的洞穴就是原始能量的大漩涡，维持整个文明的能量就源自于此。从这个混乱的能量涡流中诞生的时空畸体是阿曼苏尔之眼力量的化身。它发动攻击的同时，爆发出的能量能扭曲时间的流动。"}}
+D.ClientTexts.Encounter[1720]={Name={["d36fcba8ca2ac8cd:16"]=S[21487]},Description={["fb90025b163f230a:185"]="大魔导师的首席剑士麦兰杜斯与艾利桑德形影不离。他刻意不研习魔法，而是用暗夜井的力量将他的反应和移动速度提升到了超越凡人极限的水准。"}}
+D.ClientTexts.Encounter[1725]={Name={["c1b3184daf5cd2ec:18"]=S[13671]},Description={["6e34b0a6492eac0f:271"]="暗夜井底下的洞穴就是原始能量的大漩涡，维持整个文明的能量就源自于此。从这个混乱的能量涡流中诞生的时空畸体是阿曼苏尔之眼力量的化身。它发动攻击的同时，爆发出的能量能扭曲时间的流动。"}}
 D.ClientTexts.Encounter[1726]={Name={["26e7dc05c7ab461a:6"]="萨维斯"},Description={["ad0e3174e03584b7:327"]="萨维斯曾是一名强大的法师，也是艾萨拉女王的谋臣，他后来与萨格拉斯达成协议，将燃烧军团第一次引入了艾泽拉斯。萨维斯失败之后饱受诅咒与折磨，他在艾林裂隙之中策划着向世界发起复仇。闯入梦魇者将与力量全盛状态下的他对决。他的真身是一头令人作呕的肿胀怪物。"}}
 D.ClientTexts.Encounter[1731]={Name={["cdc3d2eed8043c15:8"]=S[10161]},Description={["1003e2e952ed7a44:387"]="曾经光荣地侍奉夜之子权贵的崔利艾克斯后来和其他多余的构造体一样遭到弃置，并慢慢损耗。尽管它完成任务的意愿坚定不移，但由于年久失修，它的性格矩阵产生了故障。它现在会毫无征兆地切换模式，前一刻还是慈爱的护理人员，可能突然就变成无情的杀戮机器，渴望得到早已不存在的主人的赞赏与认可。"}}
 D.ClientTexts.Encounter[1732]={Name={["094d96dc9deee527:16"]=S[4033]},Description={["d60ab11545125b62:264"]="夜之子星术师艾塔乌斯花费多年研究艾泽拉斯的天空，探索宇宙的奥秘。他靠占卜发现了很多我们看不到的星球，并用暗夜井的力量吸取那些星球的精华，以强化他自身的力量。"}}
 D.ClientTexts.Encounter[1737]={Name={["151310273d6f6fe8:7"]=S[5101]},Description={["c4257cf14167e090:333"]="加尔鲁什逃往德拉诺后引发的一系列事件仍在继续，虽然经历了很多曲折，但还是发展到了现在这一步。在德拉诺遭受挫败的古尔丹，代表着他的燃烧军团主人，现在距离最终的胜利仅一步之遥。恶魔能量的漩涡在暗夜要塞上空旋动，站在要塞之巅的这位被放逐的兽人术士静候着他的命运。"}}
 D.ClientTexts.Encounter[1738]={Name={["b7c85da4c57e87d7:27"]="伊格诺斯，腐蚀之心"},Description={["47e57f1895616a33:235"]="住在现已枯朽的世界之树中的伊格诺斯是梦魇之心的恐怖化身。它是腐化的聚合物，他就不该存在于世。它的卷须渗入地面，无数可怕的眼柄和肢体在另一头破土而出。"}}
-D.ClientTexts.Encounter[1743]={Name={["3239e1ee9aaaed5d:22"]=S[8094]},Description={["0d5c84cfc0c8ca32:419"]=S[18202]}}
-D.ClientTexts.Encounter[1744]={Name={["1d098ac27c936563:16"]=S[18199]},Description={["09d6adbb5f92a252:204"]="艾乐瑞瑟曾是一名精通变形术的强大德鲁伊，但她后来因相信自己遭到最亲近的盟友背叛而走上了黑暗之路。她的意识现被困在梦魇之中，终日饱受恐惧、迷惑和仇恨的折磨。"}}
+D.ClientTexts.Encounter[1743]={Name={["3239e1ee9aaaed5d:22"]=S[8094]},Description={["0d5c84cfc0c8ca32:419"]=S[18203]}}
+D.ClientTexts.Encounter[1744]={Name={["1d098ac27c936563:16"]=S[18200]},Description={["09d6adbb5f92a252:204"]="艾乐瑞瑟曾是一名精通变形术的强大德鲁伊，但她后来因相信自己遭到最亲近的盟友背叛而走上了黑暗之路。她的意识现被困在梦魇之中，终日饱受恐惧、迷惑和仇恨的折磨。"}}
 D.ClientTexts.Encounter[1749]={Name={["14a16a1503960b00:7"]="尼索格"},Description={["091872dea0b3204b:317"]="巨龙尼索格曾是托林尼尔巨龙的一员，这些巨龙宣誓效忠泰坦守护者后很快就离开了龙巢。尼索格相信他总有一天能变得比守护者更强大，因此拒绝听命于他们。之后他便栖息在纳斯托迪尔山中自己繁衍后代，有兴致的时候就去附近的地区作恶。"}}
 D.ClientTexts.Encounter[1750]={Name={["3f95a49fbe9c0c6a:8"]=S[7878]},Description={["2c196d96d0b46773:284"]="半神塞纳留斯是艾泽拉斯德鲁伊教之父，也是艾泽拉斯最古老强大的保护者之一。他沉睡在了瓦尔莎拉林中的事实令人不安，说明来自梦魇的威胁已经相当严重。现在，那股黑暗的力量已经完全将他占据，也许他已经彻底堕落了。"}}
-D.ClientTexts.Encounter[1751]={Name={["1adb188bc7368f38:17"]=S[21909]},Description={["e763b8ea2fae60e7:415"]="奥鲁瑞尔一向有着过人的魔法天赋。她在暗夜卫队中也轻而易举地一路晋升，因为她也是天生的使剑高手。但不管她变得多强，她依然渴望更强的力量。她进入苏拉玛大学和法师们一起学习，白天练习武艺，晚上练习锻造技能。她在暗夜井中施展魔法制造出贵重金属，并用这些金属打造了自己的武器和护甲。精通火焰、冰霜和奥术魔法的她成了第一位魔剑士。"}}
+D.ClientTexts.Encounter[1751]={Name={["1adb188bc7368f38:17"]=S[21910]},Description={["e763b8ea2fae60e7:415"]="奥鲁瑞尔一向有着过人的魔法天赋。她在暗夜卫队中也轻而易举地一路晋升，因为她也是天生的使剑高手。但不管她变得多强，她依然渴望更强的力量。她进入苏拉玛大学和法师们一起学习，白天练习武艺，晚上练习锻造技能。她在暗夜井中施展魔法制造出贵重金属，并用这些金属打造了自己的武器和护甲。精通火焰、冰霜和奥术魔法的她成了第一位魔剑士。"}}
 D.ClientTexts.Encounter[1756]={Name={["c0874e53fbb2df8c:13"]="夺魂者"},Description={["39c136982394a9e9:150"]="这三名掠夺者奉海拉之名，率领手下洗劫维库人国王的陵墓。他们设法进入了列王陵墓，企图夺取安息在那里的灵魂。"}}
-D.ClientTexts.Encounter[1761]={Name={["a0b4ff56b7311139:19"]=S[21848]},Description={["05a93812cd8709b9:357"]="夜之子特尔安自幼就对植物着迷。不管是野火烧不尽春风吹又生的野草，还是看似平淡无奇却能从阳光中吸收能量的小草，或是会生出树枝，同时树枝还能嫁接到别的树上的树木，都让他觉得无比神奇。他用暗夜井的能量把自己变得面目全非，原本夜之子精灵的特征几不可见。他认为现在的自己已经变成了更伟大的存在。"}}
-D.ClientTexts.Encounter[1762]={Name={["71094f51f42e37e0:11"]=S[12468]},Description={["e30e27fa8aca9b45:262"]="纳斯雷兹姆以前的首领恐惧魔王提克迪奥斯曾被获得全新力量的伊利丹·怒风击杀。他在扭曲虚空中重塑形体后，代表燃烧军团监督古尔丹的行动，确保这个兽人术士不会再次让主人失望。"}}
+D.ClientTexts.Encounter[1761]={Name={["a0b4ff56b7311139:19"]=S[21849]},Description={["05a93812cd8709b9:357"]="夜之子特尔安自幼就对植物着迷。不管是野火烧不尽春风吹又生的野草，还是看似平淡无奇却能从阳光中吸收能量的小草，或是会生出树枝，同时树枝还能嫁接到别的树上的树木，都让他觉得无比神奇。他用暗夜井的能量把自己变得面目全非，原本夜之子精灵的特征几不可见。他认为现在的自己已经变成了更伟大的存在。"}}
+D.ClientTexts.Encounter[1762]={Name={["71094f51f42e37e0:11"]=S[12469]},Description={["e30e27fa8aca9b45:262"]="纳斯雷兹姆以前的首领恐惧魔王提克迪奥斯曾被获得全新力量的伊利丹·怒风击杀。他在扭曲虚空中重塑形体后，代表燃烧军团监督古尔丹的行动，确保这个兽人术士不会再次让主人失望。"}}
 D.ClientTexts.Encounter[1763]={Name={["78820718bb86b4d9:9"]="沙索斯"},Description={["b4085cdf50d18c40:146"]="这位林地的守卫遭到了梦魇的腐化。从前他为丛林带来生机，现在他走过之处只有凋零和毁灭。"}}
 D.ClientTexts.Encounter[1764]={Name={["f65b8b1d48c62f3a:10"]="国际象棋"}}
 D.ClientTexts.Encounter[1769]={Name={["a08d62d776edbda8:8"]="勒凡图斯"},Description={["46aab89413766989:159"]="在深渊中沉睡的勒凡图斯受到了惊扰，浮上水面后发现群岛上恶魔横行。邪能魔法渗入了周围的水里，导致她脾气极度暴躁。"}}
@@ -5438,7 +5438,7 @@ D.ClientTexts.Encounter[1795]={Name={["b37b283b7169e534:7"]="浮骸"},Descriptio
 D.ClientTexts.Encounter[1796]={Name={["646ea8489ea36bb3:12"]="凋零者吉姆"},Description={["aa4d910140810284:416"]="这个堕夜精灵被驱逐出苏拉玛后，沿着海岸线游荡，同时身心慢慢衰弱。就在他即将丧失最后一点人性之际，突然感觉到附近的洞穴里散发出来的能量。在洞里，他发现了暗夜井的能量碎片。这块碎片维持了他的生命，强化了他的力量，还扭曲着周围的时间和空间，并让他的心智彻底崩溃。现在没人敢进入凋零者吉姆的洞穴。傻子都知道不能进去。"}}
 D.ClientTexts.Encounter[1883]={Name={["031d2323ee8aac90:9"]=S[10292]},Description={["703efb1a93bbeb35:162"]="深渊领主布鲁塔鲁斯身经百战。他最近一次参加的战斗就是太阳之井战役。他的战术通常都不复杂，基本都是依赖纯粹的力量击退敌人的军队。"}}
 D.ClientTexts.Encounter[1817]={Name={["2ac29b7c4b0c5a53:13"]="麦迪文之影"},Description={["66051eec2fa7205f:249"]="末代守护者麦迪文的力量如此强大，他的魔法至今仍在卡拉赞的殿堂中回荡。这些回响有的形成了画面，展示着访客们的往事。其他的则变成了更为邪恶的形态，让人回想起守护者面目全非时的所作所为。"}}
-D.ClientTexts.Encounter[1818]={Name={["5bdff6eefe9cc2ab:12"]=S[21910]},Description={["e8eebf2f78740f30:236"]="法力浮龙基本不会对老练的冒险者构成威胁。这些形体娇小、头脑简单的生物四处飘荡，吞食散逸的奥术能量。但在卡拉赞，一切往往都不按常理出牌，看似无害的东西可能会造成巨大的威胁。"}}
+D.ClientTexts.Encounter[1818]={Name={["5bdff6eefe9cc2ab:12"]=S[21911]},Description={["e8eebf2f78740f30:236"]="法力浮龙基本不会对老练的冒险者构成威胁。这些形体娇小、头脑简单的生物四处飘荡，吞食散逸的奥术能量。但在卡拉赞，一切往往都不按常理出牌，看似无害的东西可能会造成巨大的威胁。"}}
 D.ClientTexts.Encounter[1819]={Name={["7c9ba6ff5e2baf6a:4"]="奥丁"},Description={["aca2b1b5d95a38e8:228"]="许多世代以前，奥丁曾带领泰坦铸造的大军对抗黑暗帝国的上古之神。但数千年来，他被宿敌海拉的诅咒禁锢在了英灵殿里。如今，奥丁正在征召凡人勇士，以期推翻冥狱深渊的统治者并重获自由。"}}
 D.ClientTexts.Encounter[1820]={Name={["d0d699a60c4a592f:16"]="歌剧院：魔法坏女巫"},Description={["0e52b9c52eec133e:150"]="恶棍究竟是天生的，还是在别人的影响下堕落的？从猢狲的视角考虑这个难题或许会有所启发……"}}
 D.ClientTexts.Encounter[1825]={Name={["6299d1877037b994:14"]="贞节圣女"},Description={["4733e67d5fc8cc88:244"]="这位泰坦守护者来到卡拉赞，本是要净化这座邪恶与堕落之塔，但麦迪文声名狼藉的宴会和放纵的生活彻底激怒了她。她一边寻找皈依者加入她的美德之战，一边努力运用一切力量净化这里伤风败俗的生活。"}}
@@ -5446,47 +5446,47 @@ D.ClientTexts.Encounter[1826]={Name={["43f2c07ae5a5499d:23"]="歌剧院：西部
 D.ClientTexts.Encounter[1827]={Name={["f05f3d67a895f63c:24"]="歌剧院：美女与野兽"},Description={["9396da498967b66e:174"]="受到诅咒变成野蛮怪物的布鲁特必须找到真爱才能避免被这黑暗的变形魔法夺去性命。他能及时学会正确的餐桌礼仪，赢得美丽的贝拉的心吗？"}}
 D.ClientTexts.Encounter[1829]={Name={["0f92323828de9c57:5"]="海拉"},Description={["f16ec1d21a51bfd3:235"]="虽然曾经是奥丁的左膀右臂，但在满腔仇恨的驱使下，海拉会不惜一切巩固她的古老诅咒，将那位泰坦守护者继续囚禁在英灵殿中。如今，她已不再满足于统治她的暗影王国，即将指挥她的克瓦迪尔大军掠夺生者的土地。"}}
 D.ClientTexts.Encounter[1830]={Name={["0f88b021c7ed9d0e:5"]="高姆"},Description={["5e39e9b25eaf9db5:182"]="海拉所圈养的这只凶猛的三头猎犬忠心耿耿地守护着冥狱深渊的入口。经过精心的育种，高姆不追求享受也不需要睡觉，它永远警惕着一切前来挑战他残酷女主人的入侵者。"}}
-D.ClientTexts.Encounter[1835]={Name={["1475cf326a1d99a9:18"]=S[16610]},Description={["511011d7363a8418:214"]="原本负责在主人的宴会上进行狩猎游戏的阿图门如今又盯上了一种完全不同的猎物。阿图门那著名的战马“午夜”一直是小偷觊觎的对象，所以他会时刻保持警惕，用精湛的战斗技艺对付一切入侵者。"}}
+D.ClientTexts.Encounter[1835]={Name={["1475cf326a1d99a9:18"]=S[16611]},Description={["511011d7363a8418:214"]="原本负责在主人的宴会上进行狩猎游戏的阿图门如今又盯上了一种完全不同的猎物。阿图门那著名的战马“午夜”一直是小偷觊觎的对象，所以他会时刻保持警惕，用精湛的战斗技艺对付一切入侵者。"}}
 D.ClientTexts.Encounter[1836]={Name={["70f5ae0682888c05:10"]="馆长"},Description={["6538344eb29c60bb:235"]="馆长保护着展览馆，使其免受不速之客的侵扰，并处决想要窃取卡拉赞秘密的入侵者。虽然是由麦迪文本人组装的，但这个构造体卫兵已经变质，很容易发生能量过载并作出疯狂的举动。"}}
 D.ClientTexts.Encounter[1837]={Name={["0e3a5a1ad379608d:6"]="莫罗斯"},Description={["40998fa1ac3436ec:175"]="卡拉赞的管家莫罗斯在大宴会厅里招待着主人的晚宴客人。他不知疲倦，全心全意地照料着这座塔楼，以高超的效率对付着不速之客。"}}
-D.ClientTexts.Encounter[1838]={Name={["b8db39d0d82b7235:19"]=S[17049]},Description={["19aa237455006b47:263"]="全知全能的维兹艾德姆受基尔加丹的指使，前来占领卡拉赞，并篡改塔内的魔网支流。一旦他成功将这座建筑与被燃烧军团占领的无数世界连接起来，黑暗泰坦的大军就会淹没艾泽拉斯，将其化为焦土。"}}
+D.ClientTexts.Encounter[1838]={Name={["b8db39d0d82b7235:19"]=S[17050]},Description={["19aa237455006b47:263"]="全知全能的维兹艾德姆受基尔加丹的指使，前来占领卡拉赞，并篡改塔内的魔网支流。一旦他成功将这座建筑与被燃烧军团占领的无数世界连接起来，黑暗泰坦的大军就会淹没艾泽拉斯，将其化为焦土。"}}
 D.ClientTexts.Encounter[1856]={Name={["b2e432ce3fac7011:8"]="哈亚坦"},Description={["b5d7af4c7cb7fe77:221"]="哈亚坦从出生起就接受杀敌训练。经过野蛮的征伐，他聚集了一群视他为神的穴居鱼人。现在，只要这个纳迦暴徒一声令下，就会有大群虔诚的追随者前赴后继地为他效劳。"}}
 D.ClientTexts.Encounter[1861]={Name={["15f213f672c03155:17"]=S[910]},Description={["b55537ea661321db:161"]="主母萨丝琳毕生都致力于用她的黑暗意志束缚海洋生物。依靠这种力量，她从大海深处召唤出了可怕的梦魇，能淹没一切敢于挑战她的敌人。"}}
 D.ClientTexts.Encounter[1862]={Name={["003b68384e7e1cb9:6"]="格罗斯"},Description={["0116ccd499b51f89:195"]="作为对过去失败的惩罚，格罗斯浑身遍布烧伤。这头巨兽的每一个动作都会令他的血肉开裂并嗞嗞作响，同时还伴随着无尽的痛苦。他很乐意将这种痛苦强加给所有挑战他的人。"}}
 D.ClientTexts.Encounter[1867]={Name={["bab3d28098fcd725:18"]="恶魔审判庭"},Description={["d0a9664c3ecfedcd:201"]="由于早就预料到凡人部队会入侵萨格拉斯之墓，基尔加丹召来了他最好的捕手，阿提甘和贝拉克，来围剿入侵者，防止他们使用创世之柱继续深入地下城。"}}
-D.ClientTexts.Encounter[1872]={Name={["3239e1ee9aaaed5d:22"]=S[8094]},Description={["0d5c84cfc0c8ca32:419"]=S[18202]}}
+D.ClientTexts.Encounter[1872]={Name={["3239e1ee9aaaed5d:22"]=S[8094]},Description={["0d5c84cfc0c8ca32:419"]=S[18203]}}
 D.ClientTexts.Encounter[1873]={Name={["6f018076e51fe73d:12"]=S[7817]},Description={["0478eac53078e3a0:293"]="艾格文击败了萨格拉斯的化身，却无法将其摧毁。在将其封印的过程中，这套铠甲被埋在了月神殿下方，并在那里沉睡了数百年。现在，随着燃烧军团撕裂了萨格拉斯之墓的屏障，基尔加丹终于有机会复活它，并将它的力量释放到艾泽拉斯了。"}}
 D.ClientTexts.Encounter[1878]={Name={["e495d31cc489d26b:11"]=S[8723]},Description={["e5d1865351b50996:244"]="孟菲斯托斯一手策划了军团从破碎海滩开始的入侵行动。眼看艾泽拉斯抵抗力量越过了他的部队前线，孟菲斯托斯撤回了永夜大教堂。他要在那里运用最狡诈的计谋，让英雄们无法取回阿格拉玛之盾。"}}
-D.ClientTexts.Encounter[1884]={Name={["85faa8a274a955ed:9"]=S[21603]},Description={["564eadeac403a01b:174"]="作为一个至恶至邪的生物，马利费库斯能唤起对手内心的恐惧。在他降临前通常都会出现一些征兆，包括在平民中间爆发的大规模恐慌，以及出现庆祝末日来临的死亡邪教。"}}
+D.ClientTexts.Encounter[1884]={Name={["85faa8a274a955ed:9"]=S[21604]},Description={["564eadeac403a01b:174"]="作为一个至恶至邪的生物，马利费库斯能唤起对手内心的恐惧。在他降临前通常都会出现一些征兆，包括在平民中间爆发的大规模恐慌，以及出现庆祝末日来临的死亡邪教。"}}
 D.ClientTexts.Encounter[1885]={Name={["901aae5a48dab491:7"]="丝瓦什"},Description={["b341686da27273ec:173"]="丝瓦什所掌控着海洋的愤怒，并用它来攻击过于靠近海岸的敌人。她麾下勇猛的丝瓦什荣誉卫士追随她横行于艾泽拉斯诸海，渴望着摧毁毫无防备的港口。"}}
-D.ClientTexts.Encounter[1896]={Name={["f3fd1bb58366835c:15"]=S[17911]},Description={["3d2fb273e9f8c518:286"]="这里曾是暗夜精灵神圣的墓园，但燃烧军团已经用灵魂引擎扭曲了它。这台邪恶的机器抽取着亡者的能量，将他们扭曲成怪物。在这种腐蚀侵袭之下，这些饱受折磨的幽灵已经变成了怪物，会吞噬所有深入墓穴的人。"}}
+D.ClientTexts.Encounter[1896]={Name={["f3fd1bb58366835c:15"]=S[17912]},Description={["3d2fb273e9f8c518:286"]="这里曾是暗夜精灵神圣的墓园，但燃烧军团已经用灵魂引擎扭曲了它。这台邪恶的机器抽取着亡者的能量，将他们扭曲成怪物。在这种腐蚀侵袭之下，这些饱受折磨的幽灵已经变成了怪物，会吞噬所有深入墓穴的人。"}}
 D.ClientTexts.Encounter[1897]={Name={["11d1affaad367057:17"]="戒卫侍女"},Description={["84fcdb630424d280:257"]="戒卫侍女受命于艾格文，在此保卫萨格拉斯之墓。她已经守卫了数百年。但守护者没有预料到，化身渗漏出的邪能会对这个泰坦构造体造成怎样的影响。被这股邪恶力量慢慢扭曲的侍女现在将摧毁一切阻拦她的人。"}}
 D.ClientTexts.Encounter[1898]={Name={["115f267398973778:10"]=S[7797]},Description={["9307a1b4e7efb7ef:318"]="自从与燃烧军团达成交易，将德莱尼人逐入群星之中后，基尔加丹就深信，没有人可以阻挡军团的力量。然而，他的所有欺诈手段都无法阻止你来到这最紧要的关头。萨格拉斯曾经做出了胜利的许诺，但却迟迟不曾兑现，这使得恶魔领主变得怒火中烧，他决定亲自来面对你。你们之间的这场最终之战将决定艾泽拉斯未来的命运。"}}
 D.ClientTexts.Encounter[1903]={Name={["ca7aaa21c75a5e8c:16"]="月之姐妹"},Description={["eaa3bc7a4c5caf1f:292"]="在萨格拉斯的化身被埋入月神殿的地下前，月之姐妹早已成为了神殿的守卫。即使在死后，她们依然尽忠职守。但在这数千年中，有什么东西扭曲了她们分辨敌友的能力。疯狂慢慢吞噬了她们。现在，任何进入这座圣殿的人都会被她们处死。"}}
 D.ClientTexts.Encounter[1904]={Name={["2b49ece50a96d614:8"]=S[7959]},Description={["c1033eb9796b937c:98"]="阿格拉玛之盾再次回到了它原本的位置，多玛塔克斯带领恶魔军团发动袭击，想要摧毁这圣物。"}}
-D.ClientTexts.Encounter[1905]={Name={["2721a583b47015b4:7"]=S[21235]},Description={["8068ef2b4a7d9e32:310"]="空中花园的这棵古树守卫着艾露恩神殿的暗夜精灵女祭司们。但随着军团的恶毒力量逐渐渗透进大教堂，这位守护者的根系吸收到了越来越多的邪能能量。现在的阿格洛诺克斯正在向他曾经保卫过的这片圣所散发腐蚀，却认为自己终于达到了理想的状态。"}}
-D.ClientTexts.Encounter[1906]={Name={["fd209840793eb003:21"]=S[19816]},Description={["832f9fc36f5a8478:252"]="萨什比特是斯麦斯帕令人生厌的兄弟，他的任务是肃清任何进入大教堂图书馆的生物。这头智力低下的莫尔葛对知识与学习不存在任何的尊重，摧毁古老的文物、践踏宝贵的典籍会让它感到无比满足。"}}
+D.ClientTexts.Encounter[1905]={Name={["2721a583b47015b4:7"]=S[21236]},Description={["8068ef2b4a7d9e32:310"]="空中花园的这棵古树守卫着艾露恩神殿的暗夜精灵女祭司们。但随着军团的恶毒力量逐渐渗透进大教堂，这位守护者的根系吸收到了越来越多的邪能能量。现在的阿格洛诺克斯正在向他曾经保卫过的这片圣所散发腐蚀，却认为自己终于达到了理想的状态。"}}
+D.ClientTexts.Encounter[1906]={Name={["fd209840793eb003:21"]=S[19817]},Description={["832f9fc36f5a8478:252"]="萨什比特是斯麦斯帕令人生厌的兄弟，他的任务是肃清任何进入大教堂图书馆的生物。这头智力低下的莫尔葛对知识与学习不存在任何的尊重，摧毁古老的文物、践踏宝贵的典籍会让它感到无比满足。"}}
 D.ClientTexts.Encounter[1956]={Name={["3be3461783e0d8ee:7"]="阿波克隆"},Description={["f1da554fc9495d02:180"]="作为燃烧军团在数千年前建造的杀戮机器，阿波克隆已经导致了无数文明的毁灭。每征服一个世界，这个魔能机甲的力量都会变得更强，以确保将它的下一个目标化为火海。"}}
-D.ClientTexts.Encounter[1979]={Name={["f93f228c3ee47d45:17"]=S[13703]},Description={["04cc789fee3da7d4:207"]="祖拉尔的出现代表影卫终于成功制造出了头脑清醒的虚空破碎者。作为一名曾经声名远播的斗士，祖拉尔使用自己新获得的黑暗力量强化攻击，消灭敌人。"}}
+D.ClientTexts.Encounter[1979]={Name={["f93f228c3ee47d45:17"]=S[13704]},Description={["04cc789fee3da7d4:207"]="祖拉尔的出现代表影卫终于成功制造出了头脑清醒的虚空破碎者。作为一名曾经声名远播的斗士，祖拉尔使用自己新获得的黑暗力量强化攻击，消灭敌人。"}}
 D.ClientTexts.Encounter[1980]={Name={["8298569f3fb3faee:7"]="萨普瑞什"},Description={["5027e52644f1c7a3:254"]="始终坚信战术至上的萨普瑞什依靠精密的计算部署着影卫的兵力。虽然已经是成熟的指挥官和战术家，萨普瑞什仍然很享受亲自上阵的感受。他会利用敌人的弱点对付他们，并放出贪吃的宠物对付脆弱的敌人。"}}
 D.ClientTexts.Encounter[1981]={Name={["fbdc826eeef637fd:13"]=S[10858]},Description={["eadbaf4facf5425e:337"]="总督奈扎尔和他的同胞一样，沉迷于驱使虚空的力量来满足自己的野心。他受到执政团之座深处散发出的庞大黑暗力量的吸引，想要不惜一切将它据为己有。\r\n\r\n从这位督军给容器灌注暗影力量的实验来看，倘若不加以阻止，他在阿古斯所获得的战果将会非常可怕。"}}
 D.ClientTexts.Encounter[1982]={Name={["0fb8ba20f85113e9:5"]="鲁拉"},Description={["7e35bec4ea458141:348"]="维伦和他的追随者登上吉尼达尔逃离阿古斯时，纳鲁鲁拉留了下来，为这些德莱尼争取逃跑的时间。基尔加丹被这次叛逃激怒，下令将受伤的纳鲁封印在执政团之座中。\r\n\r\n经过了漫长的岁月，鲁拉从圣光生物堕落为虚空怪物。她优美的勇气与希望之歌变成了绝望的黑暗挽歌，引诱着那些想要夺取她力量的人。"}}
-D.ClientTexts.Encounter[1983]={Name={["63cf4b07dd8316ba:11"]=S[16824]},Description={["b348a6205512868f:421"]="瓦里玛萨斯虽是在第三次大战中统帅过军团部队的恐惧魔王之一，但却没能阻止巫妖王的反叛。之后，他又不幸与希尔瓦娜斯·风行者结盟，并在可耻地失败之前最后祈求了一次力量。\r\n\r\n为了惩罚他犯下的错误，瓦里玛萨斯受到了破坏魔女巫会的折磨。这些心怀恶意的主母剥离了他的血肉和理智，只剩下了向害他失去一切的凡人复仇的欲望。"}}
+D.ClientTexts.Encounter[1983]={Name={["63cf4b07dd8316ba:11"]=S[16825]},Description={["b348a6205512868f:421"]="瓦里玛萨斯虽是在第三次大战中统帅过军团部队的恐惧魔王之一，但却没能阻止巫妖王的反叛。之后，他又不幸与希尔瓦娜斯·风行者结盟，并在可耻地失败之前最后祈求了一次力量。\r\n\r\n为了惩罚他犯下的错误，瓦里玛萨斯受到了破坏魔女巫会的折磨。这些心怀恶意的主母剥离了他的血肉和理智，只剩下了向害他失去一切的凡人复仇的欲望。"}}
 D.ClientTexts.Encounter[1984]={Name={["f1dcb487f73a88ae:8"]="阿格拉玛"},Description={["547f732fa53d417c:309"]="阿格拉玛曾经是高贵的万神殿复仇者，被萨格拉斯击败后，又被重生为毁灭泰坦。他现在就盘踞在阿古斯的核心内，守护着足以毁灭宇宙的力量。\r\n\r\n就连恶魔也不能进入这个泰坦的殿堂，任何敢于闯入的凡人都将在阿格拉玛燃烧的长剑——泰沙拉克之下化为灰烬。"}}
 D.ClientTexts.Encounter[1985]={Name={["d29a41630b8803a4:19"]=S[1400]},Description={["ab5f754662872c33:264"]="传送门守护者哈萨贝尔维护着传送枢纽，这里是燃烧军团将它的邪恶大军送往无数世界的关键。利用通向黑暗虚空各大战略要地的传送门，哈萨贝尔能够将军团的火力倾泻到一切敢于跟她作对的人头上。"}}
-D.ClientTexts.Encounter[1986]={Name={["522c73f693eafb3b:18"]=S[17191]},Description={["c6b9e546bd4819db:392"]="作为萨格拉斯最堕落、最狂热的追随者，女巫会承担着一个邪恶的使命——扭曲陨落泰坦的意志，并让他们组成不可阻挡的黑暗万神殿。\r\n\r\n每一位主母都有自己招牌式的折磨手法，能让受害者的尖叫声响彻安托鲁斯的殿堂。据说，无论是凡人还是恶魔都无法抗拒她们的低语。所以，泰坦们的意志崩溃只是时间问题。"}}
+D.ClientTexts.Encounter[1986]={Name={["522c73f693eafb3b:18"]=S[17192]},Description={["c6b9e546bd4819db:392"]="作为萨格拉斯最堕落、最狂热的追随者，女巫会承担着一个邪恶的使命——扭曲陨落泰坦的意志，并让他们组成不可阻挡的黑暗万神殿。\r\n\r\n每一位主母都有自己招牌式的折磨手法，能让受害者的尖叫声响彻安托鲁斯的殿堂。据说，无论是凡人还是恶魔都无法抗拒她们的低语。所以，泰坦们的意志崩溃只是时间问题。"}}
 D.ClientTexts.Encounter[1987]={Name={["0dae981a188821f5:19"]="萨格拉斯的恶犬"},Description={["4afa49676d606796:289"]="灌注了烈焰和暗影的法尔格和沙图格是萨格拉斯的宝贝宠物。这些为杀戮而生的恶犬以消灭主人的敌人为乐。\r\n\r\n随着圣光军团及其盟友进抵安托鲁斯，燃烧军团已经准备好将这两头邪恶的怪物放入战场，阻止这场进攻了。"}}
 D.ClientTexts.Encounter[1992]={Name={["36a68977492c32b8:19"]=S[3910]},Description={["f9d1513970239d36:170"]="这台战争机器建造于阿古斯的核心内，配备了足以毁灭诸界的武器。它存在的目的只有一个，就是击溃凡人的进攻。"}}
 D.ClientTexts.Encounter[1997]={Name={["ff589ab74b8fe6d2:18"]=S[8817]},Description={["e4ce21d86a960059:376"]="早在艾瑞达文明的黄金年代，这个议会曾负责管理阿古斯的防务并维护和平。但在与萨格拉斯达成黑暗的交易后，这些战术大师用他们的军事才能组织起了燃烧的远征，并毁灭了无数世界。\r\n\r\n现在，他们掌握着燃烧军团的全部力量，并准备用这股可怕的力量消灭一切违抗黑暗泰坦意志的人。"}}
 D.ClientTexts.Encounter[2002]={Name={["02f4f64722192c18:11"]="守护者艾迪斯"}}
 D.ClientTexts.Encounter[2004]={Name={["e2eaa7f3fe87bf22:10"]="金加洛斯"},Description={["3e1d244edc24fded:361"]="所有军团战争机器的设计思路都来自金加洛斯的邪恶头脑。沉迷于制造屠杀工具的金加洛斯将自己的身体与生产设备融合，以便更加高效地生产出毁灭机器。\r\n\r\n按照军团的黑暗主人的命令，金加洛斯那发热的天才大脑想出了一种新的超级武器。而他正准备用它来对付圣光军团。"}}
-D.ClientTexts.Encounter[2009]={Name={["8185b98591792a70:19"]=S[16613]},Description={["b705e950a2ad29e1:242"]="作为燃烧军团臭名昭著的走狗，伊墨纳尔能够跨越宇宙追杀猎物。在各种装置和陷阱的帮助下，伊墨纳尔从未错失一笔赏金……而他当然也不打算因为最近接下的这笔生意而毁掉自己的完美纪录。"}}
+D.ClientTexts.Encounter[2009]={Name={["8185b98591792a70:19"]=S[16614]},Description={["b705e950a2ad29e1:242"]="作为燃烧军团臭名昭著的走狗，伊墨纳尔能够跨越宇宙追杀猎物。在各种装置和陷阱的帮助下，伊墨纳尔从未错失一笔赏金……而他当然也不打算因为最近接下的这笔生意而毁掉自己的完美纪录。"}}
 D.ClientTexts.Encounter[2010]={Name={["bc1f7829ef147e6c:13"]="主母芙努娜"},Description={["225de0846988b9bf:149"]="主母芙努娜带领自己的子嗣毁灭了许多世界。这些邪恶的怪物像瘟疫一样在大地上横行，腐化和吞噬着眼前的一切。"}}
 D.ClientTexts.Encounter[2011]={Name={["f567e3155688b8f8:17"]=S[8706]},Description={["fd1246b8db580d27:250"]="只要有人看了妖女奥露拉黛儿一眼，就会被她的邪恶之力控制。她会命令受害者对其自身造成可怕的伤害。死亡将是这些奴隶逃脱的唯一希望，但在厌倦他们痛苦的哀嚎之前，奥露拉黛儿是不会给他们这个机会的。"}}
 D.ClientTexts.Encounter[2012]={Name={["d337ec11e3003294:14"]="审判官梅托"},Description={["0d600566dfead21f:157"]="审判官梅托精通邪能魔法，在军团中几乎无人能及。梅托会使用这种力量给宇宙带去混乱和毁灭。他所到之处，只会留下无数燃烧的世界。"}}
 D.ClientTexts.Encounter[2013]={Name={["af1168f60e48fe75:9"]="奥库拉鲁斯"},Description={["0ea7af4c93e3218d:147"]="奥库拉鲁斯以敌人的心智为食。在烧灼他们血肉的同时，他还会品味他们的绝望。这个邪恶的怪物已经吞噬了许多世界，但他的饥渴依然没有尽头。"}}
 D.ClientTexts.Encounter[2014]={Name={["c8bbaec8c8c95553:10"]="索塔纳索尔"},Description={["e2f30cff4975b2ec:154"]="索塔纳索尔辗转宇宙，经历过无数场白热化的战役，铸就了传奇般的力量。作为一名野蛮的将军，这个恶魔指挥着一支百战百胜的大军。"}}
-D.ClientTexts.Encounter[2015]={Name={["59b48808d6debf8f:14"]=S[16007]},Description={["5d31632be3214de0:149"]="即使在燃烧军团中，深渊领主维尔姆斯也以野蛮著称。他喜欢用邪能烈焰点燃敌人，然后嘲笑那些绝望地祈求一死的受害者。"}}
+D.ClientTexts.Encounter[2015]={Name={["59b48808d6debf8f:14"]=S[16008]},Description={["5d31632be3214de0:149"]="即使在燃烧军团中，深渊领主维尔姆斯也以野蛮著称。他喜欢用邪能烈焰点燃敌人，然后嘲笑那些绝望地祈求一死的受害者。"}}
 D.ClientTexts.Encounter[2025]={Name={["0be07a3c8f2027bf:19"]="生命的缚誓者艾欧娜尔"},Description={["d1679d664b7b357f:291"]="虽然生命的缚誓者艾欧娜尔倒在了萨格拉斯的剑下，但她的精华还是逃出了黑暗泰坦的掌心。在独自躲藏了数千年后，艾欧娜尔的圣殿终于被军团发现了。\r\n\r\n如果她的灵魂落入敌人之手，艾欧娜尔的自然与生长之力就将成为燃烧的远征源源不绝的动力。"}}
 D.ClientTexts.Encounter[2031]={Name={["a51cb47b95fa5bee:15"]=S[9000]},Description={["1f8b53b61277c775:132"]="禁锢、折磨。\r\n无数纪元被痛苦充斥。\r\n支离破碎的灵魂为无尽的邪恶输送着给养。\r\n主人在召唤。来吧……站起来吧！\r\n开启万物的寂灭。"}}
 D.ClientTexts.Encounter[2051]={Name={["daa3a479c5b0524a:16"]="PvP战场"}}

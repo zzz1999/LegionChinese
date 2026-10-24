@@ -177,6 +177,22 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 
 合并审计见 `docs/quest-supplement-audit.json`。英文原文、来源 JSON 和 SQL 不随 AddOns 安装包分发；运行资源仅包含中文和匹配指纹。
 
+### 1.3.4 网页任务字段交叉核对
+
+在上述补充快照中增加来源 `cnwow-wowhead-crosschecked-20261024`，只采用 [军团再临中文资料站](https://110.cnwow.cn/) 的 5 个字段：37841《最后突击》的目标与正文、12774《暴风城》的目标、26398《与大地母亲同行》的目标与正文。固定其公开 SQLite 快照 `becf48caf402` 的下载 URL、解压后长度及 SHA-256，不导入整个网站数据库；中文逐字段与 [37841](https://www.wowhead.com/cn/quest=37841/最后突击)、[12774](https://www.wowhead.com/cn/quest=12774/暴风城)、[26398](https://www.wowhead.com/cn/quest=26398/与大地母亲同行) 的同 ID 中文页面交叉核对。
+
+英文身份、原文列和完整文字来自固定 `TDB_world_735.00_2018_02_19.sql`：37841／12774 原文 build 为 25549，26398 为 23360。逐项核对人物、阵营、地点、物品、行动要求以及角色名／种族和换段标记。网页没有提供这些中文字段的历史 build 或官方客户端采集证明，中文 `build` 为 0，来源为 `community-web-crosschecked`，`officialChineseVerified=false`；不能把英文原文的 build 当成中文采集版本，也不声称这些字段是独立验证的官中。
+
+新增字段仍由 `compatibleSupplement` 与已有任务原文指纹检查，不放宽匹配条件。未找到可靠中文的 14135／27921 交付对白继续缺省；7491 正文人物存在来源差异、39692 正文与原文阵营不一致，均不采用。逐项核验见 `docs/reviewed-web-quest-fields-audit.json`，安装包仍只包含中文、ID 与指纹。
+
+### 1.3.4 繁体任务字段兼容核验
+
+另从 [TrinityCore Issue 27869](https://github.com/TrinityCore/TrinityCore/issues/27869)（作者 leelf00、3.3.5 分支、最后更新 2022-03-22）采用 7 个繁体字段：14167 正文／目标、13381 标题／正文／目标、14350 正文／目标。原始 issue 正文和 SQL 代码块的 SHA-256、作者、更新时间及 URL 固定在补充快照来源 `trinity-27869-zhtw-reviewed` 中。研究时只将 MySQL 双引号字符串等价改写为单引号以供只读解析，没有执行 SQL，也没有改变译文。
+
+候选逐字段核对铁炉堡墓地与矮人灵魂、轰炸任务的地区／敌人／护盾／弹药，以及血色十字军、斯坦索姆、提尔之手和纳萨诺斯；保留角色名、种族和换段标记。对应英文来自固定 `TDB_world_735.00_2018_02_19.sql`，原文 build 分别为 25549、20182、15595。它们属于 7.3.5 世界库中保存的原文记录，不保证每个服务器都提供这些历史任务。
+
+中文记录保持原补丁 `build=0`，来源为 `community-legacy-field-reviewed`，`officialChineseVerified=false`；不把 3.3.5 来源伪装为 7.3.5 客户端采集，也不将原文 build 当成中文采集证明。只填缺项、保留已有简体及繁体，继续要求任务 ID、字段、完整原文一致。逐字段原文、译文和核验说明见 `docs/reviewed-traditional-quest-fields-audit.json`。本次没有新增《树上的敌人》或《消灭爪牙》的交付对白。
+
 2026-10-18 的反馈指出“学海无涯”的任务日志描述或目标未汉化。核对八条同名任务记录后，确认 30040、30042、30045 缺少标题、目标和描述。`sources.json.questSupplement.fieldAliases` 显式列出这三个目标 ID，复用同一快照中 30043 的三个 zhCN 字段（来源 `legion-proyect-735`，build 26972）。构建时要求来源和目标在固定的 TDB735.00 库中都有相同的非空英文标题、目标、描述，并再次校验来源字段原文与版本；不按标题自动推广到其他任务，不覆盖已有中文，不复用各职业不同的进行中或交任务对白。审计逐字段记录 `sourceQuestID`，不将复用记录冒充目标 ID 自身的官服采集。这三个现有中文字段来自社区保存的 Legion 数据，尚未独立逐字确认其官服采集来源。
 
 ## 1.2.9 聊天链接与怪物动作

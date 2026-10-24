@@ -1,29 +1,31 @@
 {
   "source": "data/quest-supplement-735.json",
-  "sha256": "44c7d440daead120a002a239721c3b2a0624bf2f0bd17a745b2a5f67b716eb22",
+  "sha256": "1684dcee6560faa47f2c5cb28f035bb0062164378c5f86840ddc31298ccc8cd6",
   "archive": {
     "repo": "zzz1999/wow-quest-archive",
     "commit": "bca7fa8d35b3697417027f74eaea2ddcf0727b97",
     "baselineAddonCommit": "e22f0dd",
     "selection": "Missing Chinese fields in LegionChinese 1.2.8, matching same 7.3.5 quest ID, English title, context and existing field; custom/test and post-26972 records excluded."
   },
-  "fields": 13729,
-  "quests": 4431,
+  "fields": 13741,
+  "quests": 4434,
   "byField": {
-    "Title": 4016,
-    "Objectives": 3970,
-    "Description": 3987,
+    "Title": 4017,
+    "Objectives": 3976,
+    "Description": 3992,
     "CompletionLog": 1311,
     "Progress": 128,
     "Completion": 317
   },
   "byLocale": {
-    "zhCN": 12773,
-    "zhTW": 956
+    "zhCN": 12778,
+    "zhTW": 963
   },
   "bySource": {
     "legion-proyect-735": 13710,
-    "legion-preservation-735": 19
+    "legion-preservation-735": 19,
+    "cnwow-wowhead-crosschecked-20261024": 5,
+    "trinity-27869-zhtw-reviewed": 7
   },
   "rejected": 7,
   "preserved": 0,
@@ -70893,6 +70895,14 @@
       "build": 26972
     },
     {
+      "id": 12774,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0
+    },
+    {
       "id": 12776,
       "field": "Title",
       "locale": "zhCN",
@@ -72547,6 +72557,30 @@
       "source": "legion-proyect-735",
       "column": "quest_template_locale.questcompletionlog",
       "build": 26972
+    },
+    {
+      "id": 13381,
+      "field": "Title",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Title",
+      "build": 0
+    },
+    {
+      "id": 13381,
+      "field": "Description",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0
+    },
+    {
+      "id": 13381,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0
     },
     {
       "id": 13382,
@@ -74421,6 +74455,22 @@
       "build": 26972
     },
     {
+      "id": 14167,
+      "field": "Description",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0
+    },
+    {
+      "id": 14167,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0
+    },
+    {
       "id": 14169,
       "field": "Title",
       "locale": "zhCN",
@@ -74963,6 +75013,22 @@
       "source": "legion-proyect-735",
       "column": "quest_template_locale.questcompletionlog",
       "build": 26972
+    },
+    {
+      "id": 14350,
+      "field": "Description",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Details",
+      "build": 0
+    },
+    {
+      "id": 14350,
+      "field": "Objectives",
+      "locale": "zhTW",
+      "source": "trinity-27869-zhtw-reviewed",
+      "column": "quest_template_locale.Objectives",
+      "build": 0
     },
     {
       "id": 14355,
@@ -79275,6 +79341,22 @@
       "source": "legion-proyect-735",
       "column": "quest_template_locale.logtitle",
       "build": 26972
+    },
+    {
+      "id": 26398,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0
+    },
+    {
+      "id": 26398,
+      "field": "Description",
+      "locale": "zhCN",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.details",
+      "build": 0
     },
     {
       "id": 26412,
@@ -101875,6 +101957,22 @@
       "source": "legion-proyect-735",
       "column": "quest_template_locale.logtitle",
       "build": 26972
+    },
+    {
+      "id": 37841,
+      "field": "Objectives",
+      "locale": "zhCN",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.objectives",
+      "build": 0
+    },
+    {
+      "id": 37841,
+      "field": "Description",
+      "locale": "zhCN",
+      "source": "cnwow-wowhead-crosschecked-20261024",
+      "column": "quests.details",
+      "build": 0
     },
     {
       "id": 37882,

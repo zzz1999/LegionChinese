@@ -703,7 +703,7 @@
   },
   "questSupplement": {
     "file": "data/quest-supplement-735.json",
-    "sha256": "44c7d440daead120a002a239721c3b2a0624bf2f0bd17a745b2a5f67b716eb22",
+    "sha256": "1684dcee6560faa47f2c5cb28f035bb0062164378c5f86840ddc31298ccc8cd6",
     "fieldAliases": [
       {
         "id": 30040,
