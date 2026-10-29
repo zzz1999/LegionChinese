@@ -115,6 +115,36 @@ test('NPC titles and static spell/aura text follow tooltip identity across refre
   assert(GameTooltipTextLeft2.text=="Different server effect: 123 damage.")
 `));
 
+test('NPC tooltip lookups initialize creature data without loading unrelated spells',()=>run(`
+  local creatureLoads,spellLoads=0,0
+  A.Data.Configure({
+    Creatures={count=1,families={"NPCTitles","NPCLabelNames"},scopes={}},
+    Spells={count=1,families={"SpellTexts","Spells","DynamicSpellTexts"},scopes={}}
+  })
+  A.Data.Register("Creatures",function()
+    creatureLoads=creatureLoads+1
+    D.NPCTitles[19]={[A.NameFingerprint("Weaponsmith")]="武器锻造师"}
+    D.NPCLabelNames[19]={[A.NameFingerprint("Smith")]="铁匠"}
+  end)
+  A.Data.Register("Spells",function()
+    spellLoads=spellLoads+1
+    D.SpellTexts[42]={Description={[A.NameFingerprint("A static effect.")]="静态法术说明。"}}
+  end)
+  local tip=GameTooltip
+  function UnitGUID() return "Creature-0-1-2-3-19-0001" end
+  function UnitIsPlayer() return false end
+  tip.lineCount=2;tip.shown=false;tip.unit="mouseover";tip.unitName="Smith"
+  GameTooltipTextLeft1=Widget("Smith");GameTooltipTextLeft2=Widget("Weaponsmith")
+  tip:Fire("OnTooltipSetUnit");tip:Show();A.RefreshExtraTooltips()
+  assert(GameTooltipTextLeft1.text=="铁匠" and GameTooltipTextLeft2.text=="武器锻造师")
+  assert(creatureLoads==1 and spellLoads==0 and rawget(D,"SpellTexts")==nil,
+    "NPC tooltip must not initialize the spell category")
+  tip:Fire("OnTooltipCleared");tip.unit=nil;tip.unitName=nil;tip.spell="Test";tip.spellID=42
+  GameTooltipTextLeft1:SetText("Test");GameTooltipTextLeft2:SetText("A static effect.")
+  tip:Fire("OnTooltipSetSpell");A.RefreshExtraTooltips()
+  assert(GameTooltipTextLeft2.text=="静态法术说明。" and spellLoads==1)
+`));
+
 test('NPC say/yell filters never translate ordinary player chat',()=>run(`
   local key=A.Fingerprint(A.Normalize("Welcome, traveler."));D.Gossip[key]=1;D.Strings[1]="欢迎，旅行者。"
   for _,event in ipairs({"CHAT_MSG_MONSTER_SAY","CHAT_MSG_MONSTER_YELL","CHAT_MSG_MONSTER_WHISPER","CHAT_MSG_RAID_BOSS_WHISPER"}) do

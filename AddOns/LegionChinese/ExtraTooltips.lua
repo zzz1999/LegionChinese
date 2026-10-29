@@ -115,7 +115,9 @@ function A.UpdateExtraTooltip(self, kind, id)
         return
     end
     kind, id = state.kind, state.id
-    local spell = D.SpellTexts[id]
+    -- NPC IDs and spell IDs belong to different databases. Looking up a unit
+    -- must not initialize spell data merely to test for an unrelated record.
+    local spell = kind ~= "unit" and D.SpellTexts[id]
     local titles = kind == "unit" and D.NPCTitles[id]
     local names = kind == "unit" and D.NPCLabelNames[id]
     if
