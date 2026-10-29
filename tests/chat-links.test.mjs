@@ -38,6 +38,46 @@ function run(code,{native=false,beforeUI=''}={}){
   }finally{lua.lua_close(L);}
 }
 
+test('pending cache arrivals use verified positions without scanning unrelated history',()=>run(`
+  local buffer=ChatFrame1.historyBuffer;buffer.max=1000
+  ChatFrame1:AddMessage("|Hitem:700001|h[Pending]|h")
+  local pendingLine=buffer:GetEntryAtIndex(1)
+  for i=1,800 do ChatFrame1:AddMessage("ordinary text "..i) end
+  local scans=0;local enumerate=buffer.EnumerateIndexedEntries
+  function buffer:EnumerateIndexedEntries() scans=scans+1;return enumerate(self) end
+  itemNames["item:700001"]="中文物品"
+  ItemDataReceived(700001,true);FlushChatTimers()
+  assert(scans==0 and pendingLine.message=="|Hitem:700001|h[中文物品]|h")
+  assert(buffer:GetEntryAtIndex(801)==pendingLine and #buffer.entries==801)
+`,{native:true}));
+
+test('pending position indexes fall back for reordered, replaced and trimmed chat entries',()=>run(`
+  local buffer=ChatFrame1.historyBuffer
+  ChatFrame1:AddMessage("|Hitem:700001|h[First]|h")
+  local first=buffer:GetEntryAtIndex(1)
+  ChatFrame1:AddMessage("|Hitem:700002|h[Second]|h")
+  local second=buffer:GetEntryAtIndex(1)
+  ChatFrame1:AddMessage("ordinary text")
+  table.remove(buffer.entries,2) -- a foreign addon removed the middle entry
+  local scans=0;local enumerate=buffer.EnumerateIndexedEntries
+  function buffer:EnumerateIndexedEntries() scans=scans+1;return enumerate(self) end
+  itemNames["item:700001"]="第一件";itemNames["item:700002"]="第二件"
+  ItemDataReceived(700001,true);ItemDataReceived(700002,true);FlushChatTimers()
+  assert(scans==1 and first.message=="|Hitem:700001|h[第一件]|h")
+  assert(second.message=="|Hitem:700002|h[Second]|h","removed entry remains untouched")
+  ChatFrame1:AddMessage("|Hitem:700003|h[Trimmed]|h")
+  local trimmed=buffer:GetEntryAtIndex(1);buffer.max=3
+  for i=1,3 do ChatFrame1:AddMessage("new "..i) end
+  itemNames["item:700003"]="第三件";ItemDataReceived(700003,true);FlushChatTimers()
+  assert(trimmed.message=="|Hitem:700003|h[Trimmed]|h" and #buffer.entries==3)
+  ChatFrame1:AddMessage("|Hitem:700004|h[Replaced]|h")
+  local replaced=buffer:GetEntryAtIndex(1)
+  buffer.entries[1]=ChatFrame1:PackageEntry("replacement text")
+  itemNames["item:700004"]="第四件";ItemDataReceived(700004,true);FlushChatTimers()
+  assert(replaced.message=="|Hitem:700004|h[Replaced]|h")
+  assert(buffer.entries[1].message=="replacement text")
+`,{native:true}));
+
 test('replaced chat insertion methods and history buffers retain deferred translation and native metadata',()=>run(`
   local function replace()
     function ChatFrame1:AddMessage(message,r,g,b,...)

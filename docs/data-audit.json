@@ -1,5 +1,5 @@
 {
-  "version": "1.3.4",
+  "version": "1.3.5",
   "counts": {
     "quests": 22703,
     "questFields": {
@@ -693,6 +693,17 @@
           "zhTW": 336
         }
       }
+    },
+    "questVariables": {
+      "quests": 33,
+      "fields": 33,
+      "byLocale": {
+        "zhCN": 25,
+        "zhTW": 8
+      },
+      "objectiveAmount": 23,
+      "playerName": 10,
+      "deferred": 3
     },
     "artifacts": {
       "artifacts": {
@@ -1501,6 +1512,7 @@
     "Data\\System\\SystemTexts_01.lua",
     "Data\\Quests\\CatalogTitles_01.lua",
     "Data\\Maps\\WorldTexts_01.lua",
+    "Data\\Quests\\QuestTemplates_01.lua",
     "Data\\Artifacts\\Artifacts.lua",
     "Data\\Quests\\QuestBoards.lua"
   ]

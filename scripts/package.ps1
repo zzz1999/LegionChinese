@@ -23,7 +23,19 @@ if ($LASTEXITCODE -ne 0) { throw "Could not generate release notes for $Version.
 $taskNotes = ($taskNotes -join "`n") + "`n"
 New-Item -ItemType Directory -Path $taskDist -Force | Out-Null
 $taskZip = Join-Path $taskDist $ArchiveName
-Compress-Archive -LiteralPath $taskAddon -DestinationPath $taskZip -Force
+$taskStage = Join-Path $taskDist ('.package-' + [guid]::NewGuid().ToString('N'))
+try {
+    & node (Join-Path $PSScriptRoot 'package-layout.mjs') $taskRoot $taskStage $Version
+    if ($LASTEXITCODE -ne 0) { throw 'Could not prepare the single-addon data initializers.' }
+    $taskFolders = @(Get-ChildItem -LiteralPath $taskStage -Directory | ForEach-Object FullName)
+    Compress-Archive -LiteralPath $taskFolders -DestinationPath $taskZip -Force
+} finally {
+    $taskResolvedStage = [System.IO.Path]::GetFullPath($taskStage)
+    if ([System.IO.Path]::GetDirectoryName($taskResolvedStage) -ne [System.IO.Path]::GetFullPath($taskDist)) {
+        throw 'Unsafe package staging cleanup path.'
+    }
+    if (Test-Path -LiteralPath $taskResolvedStage) { Remove-Item -LiteralPath $taskResolvedStage -Recurse -Force }
+}
 
 # Stamp both packaged files; the tracked addon stays unchanged.
 Add-Type -AssemblyName System.IO.Compression.FileSystem

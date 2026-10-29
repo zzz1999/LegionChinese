@@ -31,6 +31,8 @@ export function readFixtureFile(file,options){
     });
     // The unpooled row is self-contained in a small test database.
     text=text.replace(/^local S=D\.SharedStrings\r?\n/gm,'');
+  }else if(relative==='Core.lua'){
+    text=['DataAccess.lua','Text.lua','Core.lua','WidgetText.lua','Hyperlinks.lua'].map(f=>fs.readFileSync(path.join(addon,f),'utf8')).join('\n');
   }else if(relative==='UI.lua'){
     const prerequisites=['Hooks.lua','Bindings.lua',...fs.readdirSync(path.join(addon,'Modules')).sort().map(f=>'Modules/'+f)];
     text=[...prerequisites,'UI.lua'].map(f=>fs.readFileSync(path.join(addon,f),'utf8')).join('\n');

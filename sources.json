@@ -1094,5 +1094,9 @@
     "build": "7.3.5.26972",
     "buildKey": "3b0517b51edbe0b96f6ac5ea7eaaed38",
     "rootCKey": "7f4cefa93ecc032a4d33d422764a8cf5"
+  },
+  "questVariables": {
+    "file": "data/quest-variables-735.json",
+    "sha256": "2bee87ba81bfd367cacc764c0ff2f0eb7d7e5793df01d6954a59212764d9fe18"
   }
 }

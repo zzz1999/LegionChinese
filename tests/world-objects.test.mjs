@@ -89,13 +89,27 @@ test('world tooltip translates Death Gate without altering native fonts, other l
   for i=1,10 do GameTooltip:Fire("OnUpdate",0.016) end
   assert(GameTooltipTextLeft1.writes==writes and GameTooltip.nativeUpdates==11)
   -- Engine text may update while the same tooltip remains visible.
-  GameTooltipTextLeft1:SetText("Death Gate");GameTooltip:Fire("OnUpdate",0.016)
+  GameTooltipTextLeft1:SetText("Death Gate")
+  for i=1,7 do GameTooltip:Fire("OnUpdate",0.016) end
   assert(GameTooltipTextLeft1.text=="死亡之门")
   WorldHover("Unknown custom portal");assert(GameTooltipTextLeft1.text=="Unknown custom portal")
   WorldHover("Portal to Ashran");assert(GameTooltipTextLeft1.text=="到阿什兰的传送门")
   WorldHover("HERETICS WILL BURN");assert(GameTooltipTextLeft1.text=="HERETICS WILL BURN")
   WorldHover("死亡之門");assert(GameTooltipTextLeft1.text=="死亡之門")
   WorldHover("|cffffffffDeath Gate|r");assert(GameTooltipTextLeft1.text=="|cffffffffDeath Gate|r")
+`));
+
+test('world polling is bounded while show events and new tooltips remain immediate',()=>run(`
+  WorldHover("Death Gate")
+  local original=A.UpdateWorldObjectTooltip;local polls=0
+  A.UpdateWorldObjectTooltip=function(...) polls=polls+1;return original(...) end
+  for i=1,120 do GameTooltip:Fire("OnUpdate",1/120) end
+  assert(polls==10 and GameTooltip.nativeUpdates==121)
+  GameTooltip:Hide();GameTooltipTextLeft1:SetText("Death Gate");GameTooltip:Show()
+  assert(GameTooltipTextLeft1.text=="死亡之门")
+  GameTooltipTextLeft1:SetText("Portal to Ashran")
+  for i=1,12 do GameTooltip:Fire("OnUpdate",1/120) end
+  assert(GameTooltipTextLeft1.text=="到阿什兰的传送门")
 `));
 
 test('world tooltips exclude units, pets, item and spell tips, UI owners, hidden and forbidden frames',()=>run(`

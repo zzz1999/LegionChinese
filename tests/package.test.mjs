@@ -13,9 +13,16 @@ test('real ZIP packaging stamps actual version and notes together, verifies inpu
   try{
     const scripts=path.join(root,'scripts'),addon=path.join(root,'AddOns/LegionChinese');
     fs.mkdirSync(scripts,{recursive:true});fs.mkdirSync(addon,{recursive:true});
-    for(const file of ['package.ps1','changelog.mjs','text.mjs','release.mjs'])
+    for(const file of ['package.ps1','package-layout.mjs','changelog.mjs','text.mjs','release.mjs'])
       fs.copyFileSync(new URL('../scripts/'+file,import.meta.url),path.join(scripts,file));
-    const oldToc='## Interface: 70300\n## Version: 1.2.14\nChangelog.lua\n',oldNotes='-- Old tracked notes\n';
+    const resourcePath='Data/Collections/CollectionTexts_01.lua',resource='local D=LegionChineseDB\nD.CatalogTexts.Collection={}\n';
+    fs.mkdirSync(path.dirname(path.join(addon,resourcePath)),{recursive:true});fs.writeFileSync(path.join(addon,resourcePath),resource);
+    const oldToc='## Interface: 70300\n## Version: 1.2.14\nBootstrap.lua\n'+resourcePath+'\nDataAccess.lua\nChangelog.lua\n',oldNotes='-- Old tracked notes\n';
+    fs.mkdirSync(path.join(root,'docs'));fs.writeFileSync(path.join(root,'docs/resource-manifest.json'),JSON.stringify({resources:[{
+      path:resourcePath,group:'Collections',family:'CollectionTexts',bytes:Buffer.byteLength(resource),sha256:crypto.createHash('sha256').update(resource).digest('hex')
+    }]}));
+    fs.writeFileSync(path.join(addon,'Bootstrap.lua'),'LegionChinese={}');
+    fs.writeFileSync(path.join(addon,'DataAccess.lua'),'-- loader fixture');
     fs.writeFileSync(path.join(addon,'LegionChinese.toc'),oldToc);
     fs.writeFileSync(path.join(addon,'Changelog.lua'),oldNotes);
     fs.writeFileSync(path.join(root,'CHANGELOG.md'),'# 更新记录\n\n## v1.2.14\n\n- 上一版记录。\n');
@@ -33,10 +40,13 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $taskZip = [System.IO.Compression.ZipFile]::OpenRead($args[0])
 try {
     $taskContents = @{}
-    foreach ($taskName in @('LegionChinese/LegionChinese.toc', 'LegionChinese/Changelog.lua')) {
+    foreach ($taskName in @('LegionChinese/LegionChinese.toc', 'LegionChinese/Changelog.lua',
+        'LegionChinese/DataManifest.lua',
+        'LegionChinese/Data/Collections/CollectionTexts_01.lua')) {
         $taskReader = [System.IO.StreamReader]::new($taskZip.GetEntry($taskName).Open())
         try { $taskContents[$taskName] = $taskReader.ReadToEnd() } finally { $taskReader.Dispose() }
     }
+    $taskContents['Roots'] = @($taskZip.Entries | ForEach-Object { $_.FullName.Split('/')[0] } | Sort-Object -Unique)
     $taskContents | ConvertTo-Json -Compress
 } finally { $taskZip.Dispose() }
 `);
@@ -45,6 +55,11 @@ try {
     const content=JSON.parse(read.stdout);
     assert.match(content['LegionChinese/LegionChinese.toc'],/## Version: 1\.2\.15/);
     assert.equal(content['LegionChinese/Changelog.lua'],renderReleaseChangelog(metadata.notes,metadata.version));
+    assert.match(content['LegionChinese/LegionChinese.toc'],/CollectionTexts/);
+    assert.deepEqual(content.Roots,['LegionChinese']);
+    assert.match(content['LegionChinese/DataManifest.lua'],/LegionChinese\.Data\.Configure/);
+    assert.equal(content['LegionChinese/Data/Collections/CollectionTexts_01.lua'],
+      'LegionChinese.Data.Register("Collections",function()\n'+resource+'\nend)\n');
     assert.equal(readFixtureFile(path.join(addon,'LegionChinese.toc'),'utf8'),oldToc);
     assert.equal(readFixtureFile(path.join(addon,'Changelog.lua'),'utf8'),oldNotes);
     const digest=()=>crypto.createHash('sha256').update(readFixtureFile(archive)).digest('hex');

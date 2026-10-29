@@ -192,7 +192,7 @@ export async function publishRelease({github, context, version, assets, changelo
       body: [
         '## 本次更新', '', notes, '',
         '## 安装与更新', '',
-        `下载 **LegionChinese-${version}.zip**，将其中的 LegionChinese 文件夹解压到游戏的 Interface/AddOns/。`,
+        `下载 **LegionChinese-${version}.zip**，将其中 LegionChinese 文件夹解压到游戏的 Interface/AddOns/，并在插件列表中启用 LegionChinese。`,
         '更新时覆盖原文件；同名 .sha256 文件可用于校验下载完整性。', '',
         '## 版本信息', '',
         `- 插件版本：\`${version}\``,

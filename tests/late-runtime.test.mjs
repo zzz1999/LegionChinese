@@ -14,7 +14,7 @@ function run(setup,body,{hooksOnly=false}={}){
     assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));
   };
   try{
-    exec(read('Bootstrap.lua'));exec(read('Core.lua'));
+    for(const f of ['Bootstrap.lua','DataAccess.lua','Text.lua','Core.lua'])exec(read(f));
     exec(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
     exec(`function Row(scope,source,text)
       local A,D=LegionChinese,LegionChineseDB
@@ -23,7 +23,7 @@ function run(setup,body,{hooksOnly=false}={}){
       D.CatalogTexts[scope][A.Fingerprint(A.Normalize(source))]=id
     end`);
     exec(setup);
-    for(const file of hooksOnly?['Hooks.lua']:runtimeFiles.filter(f=>f!=='Core.lua'))exec(read(file));
+    for(const file of hooksOnly?['Hooks.lua']:runtimeFiles.filter(f=>!['DataAccess.lua','Text.lua','Core.lua'].includes(f)))exec(read(file));
     exec('local A,D=LegionChinese,LegionChineseDB\n'+body);
   }finally{lua.lua_close(L)}
 }

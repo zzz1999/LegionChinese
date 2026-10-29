@@ -1,0 +1,879 @@
+{
+  "schema": 1,
+  "targetPatch": "7.3.5",
+  "sources": [
+    {
+      "id": "361885732c2a57ddd3ee159a16cabf59",
+      "url": "https://gist.github.com/funjoker/361885732c2a57ddd3ee159a16cabf59",
+      "revision": "bdefe68d2300f2dbed33ab530778386d2d67d368",
+      "file": "quest_template_enUS.sql",
+      "sha256": "47025c0fa1fbe48952c336cebb88b748f5fba3dbdcdab8de0083d723a7a37eee",
+      "build": 26365,
+      "provenance": "community-client-capture",
+      "officialChineseVerified": false
+    },
+    {
+      "id": "7851ac0bd60b855dc3e3cd6d35f8f3ec",
+      "url": "https://gist.github.com/funjoker/7851ac0bd60b855dc3e3cd6d35f8f3ec",
+      "revision": "5f9ec81c855798c690b8b94b736be5f35d91e1d1",
+      "file": "quest_template_locale_zhTW.sql",
+      "sha256": "30792c39b148ff106b6625cd85ef4c7af88d4d415f169f80aeda8f086762ef8e",
+      "build": 26365,
+      "provenance": "community-client-capture",
+      "officialChineseVerified": false
+    },
+    {
+      "id": "fe353d92e66305bbdae332851a1d5e3b",
+      "url": "https://gist.github.com/funjoker/fe353d92e66305bbdae332851a1d5e3b",
+      "revision": "072c6426856bc25979a9ab70ea9710c51ba641a0",
+      "file": "quest_template_locale_zhCN.sql",
+      "sha256": "806c6f86704e9a007bb829c82ed376fb40c17b2b8ddf5bd9b525f2da3280f9b7",
+      "build": 26365,
+      "provenance": "community-client-capture",
+      "officialChineseVerified": false
+    },
+    {
+      "member": "TDB_full_735.00_2018_02_19/TDB_world_735.00_2018_02_19.sql",
+      "kind": "world",
+      "url": "https://github.com/TrinityCore/TrinityCore/releases/download/TDB735.00/TDB_full_735.00_2018_02_19.7z",
+      "file": "TDB_world_735.00_2018_02_19.sql",
+      "sha256": "786d8b7f84fe1daf765b770483721ae529f3d758da2271f812c261d914f1e99e",
+      "id": "TDB_world_735.00_2018_02_19.sql",
+      "note": "English identity/check only; later TDB shares lineage with the capture, not independent corroboration."
+    },
+    {
+      "file": "TDB_world_735.26972_2025_05_11.sql",
+      "url": "https://github.com/The-Legion-Preservation-Project/TrinityCore/releases/download/TDB735.25051/TDB_full_735.26972_2025_05_11.7z",
+      "member": "TDB_world_735.26972_2025_05_11.sql",
+      "archive": "tdb735_2025",
+      "kind": "dialogue-world",
+      "provenance": "community-mixed",
+      "priority": 2,
+      "sha256": "9ddbe8f048c8f40fc886e243f474ba35cdd080d503600fdf4385459523360df5",
+      "id": "TDB_world_735.26972_2025_05_11.sql",
+      "note": "English identity/check only; later TDB shares lineage with the capture, not independent corroboration."
+    }
+  ],
+  "review": {
+    "date": "2026-10-29",
+    "issue": "https://github.com/TrinityCore/TrinityCore/issues/21889",
+    "rule": "Quest ID, field and complete English source; Chinese fields match fixed 26365 capture and later pinned TDB. Quantity tokens keep server values. No machine or manual translations.",
+    "candidateLocaleRows": 58,
+    "candidateFields": 36
+  },
+  "quests": [
+    {
+      "id": 30376,
+      "field": "Description",
+      "original": "The Shado-Pan are likely dealing with similar outbreaks elsewhere in Pandaria.$B$BSeek out Loon Mai, the Shado-Pan Watch Commander in Stoneplow on the western end of the Valley of the Four Winds. Let him know that we have the situation here under control; the Shado-Pan need not send any aid.$B$BQuite the opposite, in fact - I will be sending many of my followers on pilgrimage, to bring a message of hope to those in need.$B$BThank you again, $p. Farewell.",
+      "originalTitle": "Hope Springs Eternal",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "影踪派可能正在潘达利亚的其他地方处理着类似的冲突。$B$B快去四风谷西部边陲的石犁村找影踪派指挥官麦龙吧。告诉他，我们已经控制了这里的局势；不需要影踪派再派援兵来了。$B$B事实上，正相反——我会派出许多前来朝拜的追随者，给有需要的人们带去希望的消息。$B$B再次感谢你，$p。再见。",
+          "title": "希望永存",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "影潘很可能正在潘達利亞的其他地方處理類似的突發事件。$B$B前往四風峽西端的石犁村，找到影潘的警備指揮官輪眉。讓他知道我們已經控制住這裡的情況，影潘不需要再派來援手。$B$B實際上，正好相反。我會派出我許多前來朝聖的追隨者，為需要援助的人送出希望的訊息。$B$B再次感謝你，$p。再會。",
+          "title": "但願長春",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 31127,
+      "field": "Description",
+      "original": "It looks like you're quite the fighter, $p.\n\nChao heard about it, and she's been talking about how she'd kick your...\n\nWell, let's just say I think you should challenge her and try to get her respect.",
+      "originalTitle": "The Challenger's Ring: Chao the Voice",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "看來你是個了不得的戰士，$p。\n\n小趙聽說了你的事，而且她說她要狠狠踢你的...\n\n嗯，這樣說吧，我覺得你應該去挑戰她，試著讓她尊敬你。",
+          "title": "挑戰者競技場:『大聲公』小趙",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32143,
+      "field": "Description",
+      "original": "Greetings $p! I have heard a lot about your success in the field. I would like to use your services to test my latest \"Siege-o-Matic\", a device of terrible and varied abilities.$b$bI promise it is mostly harmless to its users.$b$bWhen you are around Domination Point be on the look out for my Scout-o-Meters. They have been dispatched to get info on good siege targets. When you find one, activate it and I will pilot a Siege-o-Matic to your location.$b$bSee you in the field... as it were.",
+      "originalTitle": "A Kind of Magic",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "欢迎你，$p！我听说过不少有关你的英勇事迹。我想请你帮忙测试一下我最新的“自动攻城器”，这可是一件具有可怕力量的多功能装置。$b$b我保证，它对使用者是绝对无害的。$b$b当你去统御岗哨时，请注意搜寻我的探查器。我先前已经派它们出去搜集攻击目标的情报。当你找到探查器时，就激活它，而我会把自动攻城器投放到你的位置。$b$b老规矩，我们战场见。",
+          "title": "神奇魔法",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        }
+      ]
+    },
+    {
+      "id": 32227,
+      "field": "Objectives",
+      "original": "Frighten $1oa Hatchling Skyscreamers by running near them.",
+      "originalTitle": "Preventing a Future Threat",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在$1oa只啸天雏龙身边奔跑以惊吓它们。",
+          "title": "防患未然",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        }
+      ]
+    },
+    {
+      "id": 32268,
+      "field": "Description",
+      "original": "Ah, $p, just the $r I was looking for. I have received another batch of tactical mana bombs that I need planted in key positions across Violet Rise to the southeast.$b$bHere, take these. I do not trust our standard soldiers with such firepower. Oh... and don't shake them, whatever you do.$b$bPlant one of the Kirin Tor ships, another one near their supplies, and the last on the construct they are building. ",
+      "originalTitle": "Tactical Mana Bombs",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "啊，$p，你正是我要找的$r。我又得到了一批战术魔法炸弹，需要将它们安放在位于东南边紫罗兰高地对面的关键位置。$b$b这些就交给你了。我不放心让我们的常规步兵接触如此强力的军火。噢……切勿在任何时候摇晃它们。$b$b在其中一艘肯瑞托舰船上安放一枚，在他们的补给品附近安放一枚，最后再在他们正在建造的构造体上安放一枚。",
+          "title": "战术魔法炸弹",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "啊，$p，正是我在尋找的$r。我收到另一批戰術法力炸彈，需要將它們放置在東南方紫羅蘭高崗上的關鍵位置。$b$b拿去。我不敢將這種火藥交給一般的士兵。喔…還有不管怎樣，都別搖晃它們。$b$b將一個炸彈放置在祈倫托的船艦上，另一個放置在他們的補給品上，最後一個放在他們建造的傀儡身上。",
+          "title": "戰術法力炸彈",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32320,
+      "field": "Description",
+      "original": "This hearthstone was part of a conversation Vol'jin and I shared a long time ago.$b$bHe believes his people are in danger. I don't know what all has transpired in my absence, but I can at least do this for my friend.$b$bCome, $p, travel with me to the Echo Isles. We must make sure that the Darkspear are safe.",
+      "originalTitle": "The Horde Is Family",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "这块炉石是我和沃金在很久以前一次谈话中的一部分。$b$b他认为他的人民正处于危险之中。虽然我不知道在我离开的这段时间究竟出了什么事情，但至少这件事我是能为朋友做的。$b$b来吧，$p，跟我去回音群岛。我们必须确保暗矛部族的安全。",
+          "title": "部落即家庭",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "很久以前，沃金和我曾經談到這顆爐石。$b$b他認為他的族人有危險。雖然我不清楚在我離開的這段期間到底發生了什麼事情，但至少，我該為朋友盡這份力。$b$b來吧，$p，陪我去回音群島。我們得確保暗矛食人妖沒有受到任何的危險。",
+          "title": "部落大家庭",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32541,
+      "field": "Objectives",
+      "original": "Frighten $1oa Hatchling Skyscreamers by running near them.",
+      "originalTitle": "Preventing a Future Threat",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在$1oa只啸天雏龙身边奔跑以惊吓它们。",
+          "title": "防患未然",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "跑到$1oa隻嘯天龍寶寶身邊驚嚇牠們。",
+          "title": "防範未然",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32601,
+      "field": "Description",
+      "original": "Dear $p,$b$bThe foreboding sound of thunder has haunted my people for generations. And as you have discovered in your own research, Lei Shen is at the heart of that fear.$b$bIf you visit us at the Seat of Knowledge in Vale of Eternal Blossoms we can add this contribution to your personal collection.$b$bThank you for your diligence!$b$bSincerely,$b$bLorewalker Cho",
+      "originalTitle": "Rumbles of Thunder",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "親愛的$p，$b$b不祥的雷霆之聲讓我們世代的子民惶惶不安。就如你在研究中所發現，雷神是這股恐懼的源頭。$b$b如果你到恆春谷的知識之座來找我們，我們會把這項成果加到你的個人收藏中。$b$b感謝你的努力！$b$b誠摯的，$b$b博學行者阿洲",
+          "title": "雷聲迴盪",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32718,
+      "field": "Objectives",
+      "original": "Collect $1oa Lesser Charms of Good Fortune.",
+      "originalTitle": "Mogu Runes of Fate",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa枚次級好運符咒。",
+          "title": "魔古的命運符文",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 32862,
+      "field": "Objectives",
+      "original": "[Weekly Quest] Collect $1oa Kor'kron Lumber, $2oa Kor'kron Oil, $3oa Kor'kron Meat, and $4oa Kor'kron Stone.",
+      "originalTitle": "Battlefield: Barrens",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "[每周任務]收集$1oa份柯爾克隆木材、$2oa份柯爾克隆之油、$3oa份柯爾克隆肉塊與$4oa份柯爾克隆石材。",
+          "title": "戰場:貧瘠之地",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 34953,
+      "field": "Objectives",
+      "original": "Kill $1oa Burning Blade forces at Hallvalor.",
+      "originalTitle": "Blood of the Burning Blade",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在哈瓦洛消灭$1oa名火刃兽人。",
+          "title": "火刃之血",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "殺死$1oa名哈瓦洛的燃刃成員。",
+          "title": "燃刃之血",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41157,
+      "field": "Objectives",
+      "original": "Survey digsites in Stormheim and bring Brann back $1oa War of the Ancients Fragments.",
+      "originalTitle": "Corrupted Studies",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "勘察斯鐸海姆的挖掘場，將$1oa個先祖之戰碎片帶回去給布萊恩。",
+          "title": "腐化研究",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41162,
+      "field": "Objectives",
+      "original": "Survey digsites in Azsuna and find $1oa missing Parts of the Infernal Device and bring them back to Brann.",
+      "originalTitle": "And Into the Fel Fire",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "勘察艾蘇納的挖掘場，找到$1oa個缺失的煉獄裝置零件，交給布萊恩。",
+          "title": "與魔化火焰共舞",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41178,
+      "field": "Objectives",
+      "original": "Use the goblin explosives to free $1oa Artifact Fragments from their geological prisons.",
+      "originalTitle": "Explosive Results",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "使用哥布林炸藥將$1oa個文物碎片從埋藏地點炸出。",
+          "title": "炸藥效果",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41193,
+      "field": "Objectives",
+      "original": "Find $1oa Bone Fragments of Eche'ro and return them to Lessah in Highmountain. Then observe the burial ceremony Lessah performs.",
+      "originalTitle": "Laying to Rest",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "找到$1oa塊艾切羅的骸骨碎片，交給高嶺的蕾莎。然後觀察蕾莎所做的葬禮。",
+          "title": "安葬",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41802,
+      "field": "Objectives",
+      "original": "Obtain $1oa Chipped Titan Disc Fragments by surveying near the Gates of Valor in Stormheim.",
+      "originalTitle": "The Gates of Valor",
+      "originalBuild": 24330,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在风暴峡湾的勇者之门附近进行勘测，取得$1oa块破损的泰坦圆盘碎片。",
+          "title": "勇者之门",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        }
+      ]
+    },
+    {
+      "id": 41840,
+      "field": "Objectives",
+      "original": "Collect $1oa Shadowice Shards.",
+      "originalTitle": "Ice and Shadow",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa块暗浊碎冰。",
+          "title": "冰与影",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa塊影冰裂片。",
+          "title": "冰與影",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 41882,
+      "field": "Objectives",
+      "original": "Free $1oa Highmountain Protectors.",
+      "originalTitle": "Whispers of the Darkness",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "解救$1oa个至高岭保卫者。",
+          "title": "黑暗低语",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "解救$1oa名高嶺保衛者。",
+          "title": "黑暗的耳語",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 46278,
+      "field": "Objectives",
+      "original": "Return $1oa Rejected Letters.",
+      "originalTitle": "Return to Sender",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "退回$1oa封被拒收的信件。",
+          "title": "送还给寄件人",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "退還$1oa個遭退回的信件。",
+          "title": "退還給寄件人",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 48067,
+      "field": "Objectives",
+      "original": "Slay $1oa Dark Tendrils and $2oa Shadows of Uul in Thunder Bluff.",
+      "originalTitle": "Shadow Over Thunder Bluff",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在雷霆崖消灭$1oa条黑暗触须和$2oa个乌尔之影。",
+          "title": "雷霆崖的阴影",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "在雷霆崖殺死$1oa個黑暗觸鬚和$2oa個烏蓋涅斯之影。",
+          "title": "籠罩雷霆崖的暗影",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 49782,
+      "field": "Description",
+      "original": "Your service to the Alliance has been most impressive, $p. I could not have done better myself. Well, I could... but not by much.\n\nCome, meet with me at the Vindicaar. It is time that we reward your diligence.",
+      "originalTitle": "Heritage of the Lightforged",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "你对联盟的帮助令人印象深刻，$p。换了我也不可能做得更好。呃，或许可以……但也好不了太多。\n\n来吧，到维迪卡尔来见我。我们该嘉奖你的勤勉了。",
+          "title": "光铸者的传承",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "你對聯盟的貢獻可說是有目共睹，$p。我自己都未必能做得這麼好。好吧，應該可以…但應該無法再超越了。\n\n來吧，到梵迪卡爾上跟我碰面。我們該好好獎勵你一直以來的努力。",
+          "title": "光鑄德萊尼的傳承",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 49783,
+      "field": "Description",
+      "original": "Your sojourn through Azeroth has been long, $p. And through it all, you have brought honor to Highmountain.\n\nNow Thunder Totem calls you home. It is time we thank you for all that you have done for us.",
+      "originalTitle": "Heritage of Highmountain",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "你在艾泽拉斯旅行了很久，$p。在这段时间里，你为至高岭带来了荣耀。\n\n现在，至高岭正在召唤你回家。我们觉得是时候了，应该感谢你为我们所做的一切。",
+          "title": "至高岭的传承",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "$p，你在艾澤拉斯經歷了漫長的旅程。在這段日子裡，你為高嶺帶來了榮耀。\n\n現在雷霆圖騰要召喚你回到家鄉，我們要感謝你為高嶺所做的一切。",
+          "title": "高嶺牛頭人的傳承",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 49788,
+      "field": "Description",
+      "original": "Mastering the whispers requires constant focus and discipline. Your dedication inspires all who bear the name ren'dorei--for we have become children of the Void.\n\nYou have learned many lessons here, but the time has come to venture beyond Telogrus Rift.\n\nGo to Stormwind, the heart of the Alliance. There, the king's ambassador will greet you and guide you along your journey.\n\nAzeroth must be defended. I can think of no one better suited to answer that call than you, $p.",
+      "originalTitle": "For the Alliance",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "要掌控虚空低语，需要无时无刻的专注和自律。你的奉献鼓舞了所有朗多雷——因为我们已是虚空之子。\n\n你在我这里学了很多，是时候去泰洛古斯裂隙之外冒险了。\n\n去联盟的心脏暴风城。国王的使者会在那里迎接你，并指引你的旅程。\n\n我们必须守护艾泽拉斯。你是我能想到回应这一号召的最佳人选，$p。",
+          "title": "为了联盟",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "專心和自制才能克服低語。你所付出的努力，啟迪了所有刃多雷。那是我們的新名字，現在我們是虛無之子。\n\n你在這裡學到了不少，但是離開特洛古斯裂隙的時候到了。\n\n到暴風城去吧，前往聯盟的核心。國王的大使會在那裡迎接你，為你即將踏上的旅程指引方向。\n\n一定要保護艾澤拉斯。$p，除了你，我想不到更適合擔負這項使命的人了。",
+          "title": "為了聯盟",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 49928,
+      "field": "Description",
+      "original": "Throughout your journeys across Azeroth, you have achieved mastery over the forces that constantly seek to control you.\n\nYou have become a formidable weapon of the Alliance, $p. Return to the void rift so that we may honor your accomplishment.",
+      "originalTitle": "Heritage of the Void",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "经过在艾泽拉斯的冒险之旅， 这股力量虽然总想控制你，但终于为你所用。\n\n你已经成为了联盟的强大武器，$p。回到虚空裂隙，让我们来嘉奖你的成就吧。",
+          "title": "虚空的传承",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "你在艾澤拉斯的這段旅程中，完全學會駕馭一直想控制你的這股力量。\n\n你已經成為聯盟不可或缺的一大助力，$p。回到虛無裂隙吧，我們想表揚你的成就。",
+          "title": "虛無精靈的傳承",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50046,
+      "field": "Objectives",
+      "original": "Plant $1oa dynamite bundles.",
+      "originalTitle": "It's a Sabotage",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "放置$1oa捆炸药。",
+          "title": "有人搞破坏",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "設置$1oa捆炸藥。",
+          "title": "大搞破壞",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50047,
+      "field": "Objectives",
+      "original": "Collect $1oa Mysterious Ore samples.",
+      "originalTitle": "Free Samples",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa个神秘矿石样本。",
+          "title": "免费样品",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa個神秘的礦石樣本。",
+          "title": "免費樣本",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50052,
+      "field": "Objectives",
+      "original": "Kill $1oa SI:7 Operatives in Silithus.",
+      "originalTitle": "No Spies Allowed",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "在希利苏斯消灭$1oa个军情七处特工。",
+          "title": "反谍报",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "在希利蘇斯殺死$1oa名軍情七處探員。",
+          "title": "間諜殺無赦",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50053,
+      "field": "Objectives",
+      "original": "Motivate $1oa Lazy Prospectors.",
+      "originalTitle": "Lazy Prospectors!",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "动员$1oa名懒惰的勘探者。",
+          "title": "懒惰的勘探者！",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "激勵$1oa名怠惰的勘查員。",
+          "title": "怠惰的勘查員！",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50226,
+      "field": "Objectives",
+      "original": "Collect $1oa Silithid Brains.",
+      "originalTitle": "The Source of Power",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa个异种蝎大脑。",
+          "title": "力量之源",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa個異種蟲腦。",
+          "title": "力量之源",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50227,
+      "field": "Objectives",
+      "original": "Collect $1oa Silithid Broodlings.",
+      "originalTitle": "Larvae By The Dozen",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa个异种幼蝎。",
+          "title": "成打的幼虫",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa個小異種蟲。",
+          "title": "幼蟲一籮筐",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50229,
+      "field": "Objectives",
+      "original": "Collect $1oa scraps of Twilight Silk.",
+      "originalTitle": "A Wee Bit O' Cloth",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa块暮光丝绸。",
+          "title": "一小块布",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa塊暮光絲綢。",
+          "title": "一小塊布片",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50230,
+      "field": "Objectives",
+      "original": "Collect $1oa Silithid Brains.",
+      "originalTitle": "The Source of Power",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa个异种蝎大脑。",
+          "title": "力量之源",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa個異種蟲腦。",
+          "title": "力量之源",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    },
+    {
+      "id": 50231,
+      "field": "Objectives",
+      "original": "Collect $1oa Silithid Broodlings.",
+      "originalTitle": "Larvae By The Dozen",
+      "originalBuild": 26365,
+      "originalSource": "361885732c2a57ddd3ee159a16cabf59",
+      "translations": [
+        {
+          "locale": "zhCN",
+          "text": "收集$1oa个异种幼蝎。",
+          "title": "成打的幼虫",
+          "build": 26365,
+          "source": "fe353d92e66305bbdae332851a1d5e3b"
+        },
+        {
+          "locale": "zhTW",
+          "text": "收集$1oa個小異種蟲。",
+          "title": "幼蟲一籮筐",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "id": 46147,
+      "field": "Description",
+      "original": "Throughout our campaign on the Broken Isles, you have infused your ancient artifact with power. But as the Legion invasion intensifies, it becomes crucial to unlock more of your weapon's potential.\n\nThere is a time for slow, steady progress. But today, we must move with the wind at our backs.\n\nBy devoting our order's resources to studying the weapon's history, I believe we can rapidly enhance the value of the power you apply to the artifact.\n\nShall we begin, $ct?",
+      "originalTitle": "Knowledge is Power",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "經過破碎群島這一戰，你已經為這把上古神兵灌注了力量。但燃燒軍團的侵略日益加劇，了解神兵武器隱藏的力量是目前的當務之急。\n\n以前還可以穩紮穩打地慢慢來，但我們現在是分秒必爭。\n\n貢獻大廳資源對研究神兵武器的歷史很有幫助，我相信這樣一來就可以迅速提升你運用神兵武器的能力。\n\n那我們就開始吧，$ct？",
+          "title": "知識就是力量",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ],
+      "reason": "ChrClassTitle zhCN 26972 extracted, but local enUS and zhTW blocks missing; no verified English class-title mapping for full-source matching."
+    },
+    {
+      "id": 46143,
+      "field": "Description",
+      "original": "Throughout our campaign on the Broken Isles, you have infused your ancient artifact with power. But as the Legion invasion intensifies, it becomes crucial to unlock more of your weapon's potential.\n\nThere is a time for slow, steady progress. But today, we must hasten our efforts.\n\nBy devoting our order's resources to studying the weapon's history, I believe we can rapidly enhance the value of the power you apply to the artifact.\n\nShall we begin, $ct?",
+      "originalTitle": "Knowledge is Power",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "經過破碎群島這一戰，你已經為這把上古神兵灌注了力量。但燃燒軍團的侵略日益加劇，了解神兵武器隱藏的力量是目前的當務之急。\n\n以前還可以穩紮穩打地慢慢來，但我們現在是分秒必爭。\n\n貢獻大廳資源對研究神兵武器的歷史很有幫助，我相信這樣一來就可以迅速提升你運用神兵武器的能力。\n\n那我們就開始吧，$ct？",
+          "title": "知識就是力量",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ],
+      "reason": "ChrClassTitle zhCN 26972 extracted, but local enUS and zhTW blocks missing; no verified English class-title mapping for full-source matching."
+    },
+    {
+      "id": 46141,
+      "field": "Description",
+      "original": "Throughout our campaign on the Broken Isles, you have infused your ancient artifact with power. But as the Legion invasion intensifies, it becomes crucial to unlock more of your weapon's potential.\n\nThere is a time for slow, steady progress. But today, we must hasten our efforts.\n\nBy devoting our order's resources to studying the weapon's history, I believe we can rapidly enhance the value of the power you apply to the artifact.\n\nShall we begin, $ct?",
+      "originalTitle": "Knowledge is Power",
+      "originalBuild": 25549,
+      "originalSource": "TDB_world_735.00_2018_02_19.sql",
+      "translations": [
+        {
+          "locale": "zhTW",
+          "text": "經過破碎群島這一戰，你已經為這把上古神兵灌注了力量。但燃燒軍團的侵略日益加劇，了解神兵武器隱藏的力量是目前的當務之急。\n\n以前還可以穩紮穩打地慢慢來，但我們現在是分秒必爭。\n\n貢獻大廳資源對研究神兵武器的歷史很有幫助，我相信這樣一來就可以迅速提升你運用神兵武器的能力。\n\n那我們就開始吧，$ct？",
+          "title": "知識就是力量",
+          "build": 26365,
+          "source": "7851ac0bd60b855dc3e3cd6d35f8f3ec"
+        }
+      ],
+      "reason": "ChrClassTitle zhCN 26972 extracted, but local enUS and zhTW blocks missing; no verified English class-title mapping for full-source matching."
+    }
+  ],
+  "classTitleProbe": {
+    "build": "7.3.5.26972",
+    "buildKey": "3b0517b51edbe0b96f6ac5ea7eaaed38",
+    "cdnKey": "64807bbe25e10b94729dd8d709a56d4e",
+    "rootCKey": "7f4cefa93ecc032a4d33d422764a8cf5",
+    "readOnly": true,
+    "networkFallback": false,
+    "tables": [
+      {
+        "table": "ChrClassTitle",
+        "locale": "enUS",
+        "archivePath": "DBFilesClient\\ChrClassTitle.db2",
+        "cKey": "5e24d0ca3393b85d4411fc0c8df0f4aa",
+        "sha256": null,
+        "length": 0,
+        "status": "failed",
+        "error": "Local index missing: 061B829A55124A161AC02272B4095419"
+      },
+      {
+        "table": "ChrClassTitle",
+        "locale": "zhCN",
+        "archivePath": "DBFilesClient\\ChrClassTitle.db2",
+        "cKey": "c6006151e934aad5dadf576100c37371",
+        "sha256": "3a8d7d9085ce7470a439f60f4fccf77c093e3821519645c18aec12cc7a2fdafd",
+        "length": 497,
+        "rows": 12,
+        "strings": 24,
+        "chineseFields": 24,
+        "status": "exported"
+      },
+      {
+        "table": "ChrClassTitle",
+        "locale": "zhTW",
+        "archivePath": "DBFilesClient\\ChrClassTitle.db2",
+        "cKey": "86af01f10b045ef7025fb2f1f59d0124",
+        "sha256": null,
+        "length": 0,
+        "status": "failed",
+        "error": "Local index missing: A63D0926854CC8EE691F34B01356F042"
+      }
+    ]
+  }
+}

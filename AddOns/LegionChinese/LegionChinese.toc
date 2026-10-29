@@ -2,7 +2,7 @@
 ## Title: LegionChinese 中文
 ## Notes: 离线汉化：简体优先，繁体补充，缺失保留原文。
 ## Author: zzz1999
-## Version: 1.3.4
+## Version: 1.3.5
 ## X-Curse-Project-ID: 1750538
 ## SavedVariables: LegionChineseSettings
 
@@ -68,6 +68,7 @@ Data\Quests\QuestSources_16.lua
 Data\Quests\QuestSources_17.lua
 Data\Quests\QuestSources_18.lua
 Data\Quests\QuestSources_19.lua
+Data\Quests\QuestTemplates_01.lua
 Data\Quests\Titles_01.lua
 Data\Quests\Titles_02.lua
 Data\Quests\Titles_03.lua
@@ -191,7 +192,12 @@ Data\System\ClientTexts_04.lua
 Data\System\ClientTexts_05.lua
 Data\System\SystemTexts_01.lua
 Data\Artifacts\Artifacts.lua
+DataAccess.lua
+Text.lua
 Core.lua
+WidgetText.lua
+Hyperlinks.lua
+QuestTemplates.lua
 Hooks.lua
 Bindings.lua
 ClientNames.lua
@@ -199,6 +205,10 @@ WorldObjects.lua
 ItemTooltips.lua
 ExtraTooltips.lua
 ClientDescriptions.lua
+Modules\Quests.lua
+Modules\QuestTracker.lua
+Modules\CastBars.lua
+Modules\Books.lua
 Modules\Maps.lua
 Modules\Collections.lua
 Modules\Toys.lua

@@ -6,7 +6,7 @@ import {luaFiles} from './resource-equivalence.mjs';
 // One registry controls generated directories, ordering and validation.
 const definitions=[
   ['Shared','SharedStrings Strings NameStrings CatalogStrings'],
-  ['Quests','Quests QuestSources Titles Objectives Completions QuestDialogue QuestExtras CatalogTitles CatalogObjectives QuestBoards'],
+  ['Quests','Quests QuestSources QuestTemplates Titles Objectives Completions QuestDialogue QuestExtras CatalogTitles CatalogObjectives QuestBoards'],
   ['Dialogue','Gossip NPCNames CatalogDialogue'],
   ['Books','Books BookContexts'],
   ['Items','ItemNames ItemDescriptions ItemTexts'],
@@ -19,20 +19,24 @@ const definitions=[
 export const families=new Map(definitions.flatMap(([group,names])=>names.split(' ').map(name=>[name,{group}])));
 const familyOrder=[...families.keys()];
 export const runtimeFiles=[
-  'Core.lua','Hooks.lua','Bindings.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua',
-  'ClientDescriptions.lua','Modules/Maps.lua','Modules/Collections.lua','Modules/Toys.lua','Modules/Wardrobe.lua',
+  'DataAccess.lua','Text.lua','Core.lua','WidgetText.lua','Hyperlinks.lua','QuestTemplates.lua','Hooks.lua','Bindings.lua','ClientNames.lua','WorldObjects.lua','ItemTooltips.lua','ExtraTooltips.lua',
+  'ClientDescriptions.lua','Modules/Quests.lua','Modules/QuestTracker.lua','Modules/CastBars.lua','Modules/Books.lua','Modules/Maps.lua','Modules/Collections.lua','Modules/Toys.lua','Modules/Wardrobe.lua',
   'Modules/Professions.lua','Modules/Archaeology.lua','Modules/Reputation.lua',
   'Modules/Garrison.lua','Modules/Followers.lua','Modules/Buildings.lua','Modules/Research.lua','Modules/GroupFinder.lua','Modules/Scenario.lua','Modules/Achievements.lua',
   'QuestBoards.lua','Artifacts.lua','MapTooltips.lua','ChatLinks.lua','DialogueSurfaces.lua','Changelog.lua','Welcome.lua','UI.lua',
 ];
 const runtimeDependencies={
-  'Core.lua':['Bootstrap.lua'],
+  'DataAccess.lua':['Bootstrap.lua'],
+  'Text.lua':['Bootstrap.lua'],
+  'Core.lua':['DataAccess.lua','Text.lua'],
+  'WidgetText.lua':['Core.lua'],
+  'Hyperlinks.lua':['Core.lua'],
   'WorldObjects.lua':['Core.lua','ClientNames.lua'],
   'ItemTooltips.lua':['Core.lua','ClientNames.lua'],
   'ExtraTooltips.lua':['Core.lua','ClientNames.lua'],
   'ClientDescriptions.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'Artifacts.lua':['Core.lua','Bindings.lua','QuestBoards.lua'],
-  'ChatLinks.lua':['Core.lua','Hooks.lua','ClientNames.lua'],
+  'ChatLinks.lua':['Core.lua','Hooks.lua','ClientNames.lua','Hyperlinks.lua'],
   'Modules/Toys.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'Modules/Wardrobe.lua':['Core.lua','Bindings.lua','ClientNames.lua'],
   'DialogueSurfaces.lua':['Core.lua','Bindings.lua','ClientNames.lua'],

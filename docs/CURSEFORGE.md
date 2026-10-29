@@ -4,6 +4,8 @@
 
 本仓库使用 GitHub Actions 打包，再调用 [CurseForge 官方上传 API](https://support.curseforge.com/support/solutions/articles/9000197321-curseforge-api)。GitHub 和 CurseForge 使用同一份 `LegionChinese-版本号.zip`，更新说明取自对应的 GitHub Release。
 
+1.3.5 的发布 ZIP 仍只有一个 `LegionChinese` 文件夹和 TOC。打包时为资料添加单插件内部的按需初始化入口，检查任务核对转换前后所有资源赋值等价及 Lua 5.1 语法；源码目录保留一份完整资料。
+
 [原生 Automatic Packaging](https://support.curseforge.com/support/solutions/articles/9000197281-automatic-packaging) 是另一种方式：通过 webhook 让 CurseForge 从源码重新打包。本仓库的插件位于 `AddOns/LegionChinese/`，还有数据生成、测试和发布版本分配步骤，因此沿用现有经过验证的安装包。**不需要配置打包 webhook 或 `.pkgmeta`**；不要同时启用另一条自动打包流程，以免重复发布。
 
 ## 一次性设置

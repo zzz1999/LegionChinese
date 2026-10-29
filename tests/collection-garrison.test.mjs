@@ -66,13 +66,14 @@ function run(body,setup=''){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const exec=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)))};
   try{
-    exec(read('Bootstrap.lua'));exec(read('Core.lua'));
+    const initial=process.env.LCN_UI_FEATURE_BASELINE?['Core.lua']:['DataAccess.lua','Text.lua','Core.lua'];
+    exec(read('Bootstrap.lua'));for(const file of initial)exec(read(file));
     exec(fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'));
     exec(resources);exec(fs.readFileSync(new URL('collection-garrison-fixture.lua',import.meta.url),'utf8'));
     exec(fs.readFileSync(new URL('collection-garrison-regression-fixture.lua',import.meta.url),'utf8'));
     exec(fs.readFileSync(new URL('ui-fixes-fixture.lua',import.meta.url),'utf8'));
     exec(setup);
-    for(const file of runtimeFiles.filter(f=>f!=='Core.lua'))exec(read(file));
+    for(const file of runtimeFiles.filter(f=>!initial.includes(f)))exec(read(file));
     exec('local A,D,E=LegionChinese,LegionChineseDB,Examples\n'+body);
   }finally{lua.lua_close(L)}
 }

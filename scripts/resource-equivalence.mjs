@@ -12,7 +12,7 @@ export function luaFiles(directory){
 // lookup keys retain their original meaning; file names and shard boundaries
 // are intentionally irrelevant. Load dependencies are checked separately.
 export function resourceSemantics(directory){
-  const files=luaFiles(directory),shared=new Map(),groups={};
+  const files=(Array.isArray(directory)?directory:[directory]).flatMap(luaFiles).sort(),shared=new Map(),groups={};
   for(const file of files)for(const line of fs.readFileSync(file,'utf8').split('\n')){
     const row=/^(?:S|D\.SharedStrings)\[(\d+)\]=("(?:\\.|[^"\\])*")$/.exec(line.trim());
     if(row&&file.includes('SharedStrings_'))shared.set(row[1],row[2]);

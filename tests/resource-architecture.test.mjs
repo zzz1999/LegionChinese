@@ -108,10 +108,12 @@ function runChunks(chunks){
   const exec=source=>{if(lauxlib.luaL_dostring(L,to_luastring(source))!==lua.LUA_OK)throw Error(to_jsstring(lua.lua_tostring(L,-1)))};
   try{for(const source of chunks)exec(source);}finally{lua.lua_close(L)}
 }
+const baseRuntime=['DataAccess.lua','Text.lua','Core.lua','WidgetText.lua','Hyperlinks.lua'];
+const baseFeatures=['Modules/Quests.lua','Modules/QuestTracker.lua','Modules/CastBars.lua','Modules/Books.lua'];
 function runLua(body,files=[],setup=''){
   const read=file=>fs.readFileSync(new URL('../AddOns/LegionChinese/'+file,import.meta.url),'utf8');
-  runChunks([read('Bootstrap.lua'),read('Core.lua'),fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'),setup,
-    ...['Hooks.lua','Bindings.lua',...files].map(read),...(Array.isArray(body)?body:[body])]);
+  runChunks([read('Bootstrap.lua'),...baseRuntime.map(read),fs.readFileSync(new URL('ui-fixture.lua',import.meta.url),'utf8'),setup,
+    ...['Hooks.lua','Bindings.lua',...baseFeatures,...files].map(read),...(Array.isArray(body)?body:[body])]);
 }
 
 test('feature hooks coexist, refresh without duplicates, preserve native returns and skip forbidden widgets',()=>runLua(`
@@ -133,7 +135,7 @@ test('feature hooks coexist, refresh without duplicates, preserve native returns
 test('real runtime modules compose in their declared production order',()=>runLua(`
   assert(LegionChinese.FindCatalog and LegionChinese.InstallCollections and LegionChinese.InstallGarrison)
   assert(SlashCmdList.LEGIONCHINESE)
-`,runtimeFiles.filter(f=>!['Core.lua','Hooks.lua','Bindings.lua'].includes(f))));
+`,runtimeFiles.filter(f=>![...baseRuntime,...baseFeatures,'Hooks.lua','Bindings.lua'].includes(f))));
 
 test('unrelated addon events skip installers while new widgets and global setters remain supported',()=>runLua(`
   for i=1,20 do frames[1]:Fire("OnEvent","ADDON_LOADED","UnrelatedAddon") end
@@ -195,7 +197,7 @@ test('actual pooled resources execute after all shared shards with unchanged Chi
     const check='same('+lhs+','+expected+')';checks.push(check);
     chunks.push('local D=LegionChineseDB;local S=D.SharedStrings\n'+assignment+'\n'+check);
   }
-  chunks.push(fs.readFileSync(new URL('Core.lua',addon),'utf8'));
+  for(const file of ['DataAccess.lua','Text.lua','Core.lua'])chunks.push(fs.readFileSync(new URL(file,addon),'utf8'));
   chunks.push('local D=LegionChineseDB;assert(D.SharedStrings==nil)\n'+checks.join('\n'));
   runChunks(chunks);
 });

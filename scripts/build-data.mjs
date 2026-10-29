@@ -23,6 +23,7 @@ import {buildDynamicSpellText} from './dynamic-spell-text.mjs';
 import {buildLocalClientData} from './local-client-data.mjs';
 import {writeChangelog} from './changelog.mjs';
 import {QuestSourceIndex,questSourceTables,addValidatedQuestTitles} from './quest-sources.mjs';
+import {buildQuestVariables} from './quest-variables.mjs';
 
 const sourceRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const root=process.env.LCN_BUILD_OUTPUT_ROOT;
@@ -380,6 +381,8 @@ const dynamicSpells=buildDynamicSpellText({root,input,manifest,version});
 generated.push(...dynamicSpells.generated);counts.dynamicSpells=dynamicSpells.audit.counts;
 const localClient=buildLocalClientData({root,manifest,version,baseIndexes:{Title:titles,Objective:objectives,Dialogue:gossip}});
 generated.push(...localClient.generated);counts.localClient=localClient.audit.counts;
+const questVariables=buildQuestVariables({root,manifest,version});
+generated.push(...questVariables.generated);counts.questVariables=questVariables.audit.counts;
 const artifacts=buildArtifacts({root,input,manifest,version});
 generated.push(...artifacts.generated);counts.artifacts={...artifacts.audit.counts,choices:artifacts.audit.choices.fields};
 const questBoards=buildQuestBoards({root,input,manifest,version});
