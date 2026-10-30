@@ -40,6 +40,25 @@ function shippedObjectives(){
     return row+'\n'+value;
   }).join('\n');
 }
+const reportedRecipients=[
+  [27682,'Aoren Sunglow','奥伦·日冕'],
+  [27681,'Lidia Sunglow','莉迪亚·日冕'],
+  [27223,'Commander Eligor Dawnbringer','指挥官埃里戈尔·黎明使者'],
+  [27104,'Furgus Warpwood','费尔古斯·扭木'],
+  [27105,'Furgus Warpwood','费尔古斯·扭木'],
+];
+function shippedRecipients(){
+  const names=lines('NPCNames'),strings=new Map(lines('Strings').map(line=>{
+    const match=/^D.Strings\[(\d+)\]=/.exec(line);return [match?.[1],line];
+  }));
+  return reportedRecipients.map(([,source,text])=>{
+    const row=names.find(line=>line.startsWith(`D.NPCNames["${fingerprint(normalize(source))}"]=`));
+    assert.ok(row,'the recipient must already exist in the shipped name index: '+source);
+    const id=row.match(/=(\d+)$/)?.[1],value=strings.get(id);
+    assert.ok(value?.includes(text),'use the actual shipped Chinese name');
+    return row+'\n'+value;
+  }).join('\n');
+}
 function run(code,{tracker=false,welcome=false,rows=''}={}){
   const L=lauxlib.luaL_newstate();lualib.luaL_openlibs(L);
   const execute=source=>{const status=lauxlib.luaL_dostring(L,to_luastring(source));assert.equal(status,lua.LUA_OK,status===lua.LUA_OK?'':to_jsstring(lua.lua_tostring(L,-1)));};
@@ -82,6 +101,87 @@ test('the screenshot return instruction translates in the sidebar with shipped d
     assert(text=="已有军团再临交付译文。","current data takes precedence")
   `,{tracker:true,rows:quest+'\n'+shippedCompletion()});
 });
+
+test('short quest return instructions use shipped NPC names in the sidebar and preserve layout',()=>run(`
+  local entries={${reportedRecipients.map(([id,source,text])=>`{${id},${luaString(source)},${luaString(text)}}`).join(',')}}
+  for _,entry in ipairs(entries) do
+    trackerQuestID=entry[1];trackerCompletion="Return to "..entry[2].."."
+    local expected="返回"..entry[3].."处。"
+    local block=NewQuestBlock(trackerQuestID)
+    local line=QUEST_TRACKER_MODULE:AddObjective(block,"QuestComplete",trackerCompletion,nil,true,2,OBJECTIVE_TRACKER_COLOR.Complete)
+    assert(line.Text:GetText()==expected,line.Text:GetText())
+    assert(line.Text.fontChanges==0 and line.Text.color==OBJECTIVE_TRACKER_COLOR.Complete)
+    assert(line.height==42 and block.height==44 and line.dash==2 and line.check=="retained")
+    block.height=0;block.currentLine=nil
+    QUEST_TRACKER_MODULE:AddObjective(block,"QuestComplete",trackerCompletion,nil,true)
+    assert(block.height==44,"refresh must not accumulate translated height")
+    local text,changed=A.Translate("Quests",trackerCompletion,trackerQuestID,"CompletionLog")
+    assert(changed and text==expected)
+    local decorated=Widget("|cffffff00-"..trackerCompletion.."|r")
+    assert(A.Apply(decorated,"Quests",trackerQuestID,"CompletionLog",trackerCompletion))
+    assert(decorated.text=="|cffffff00-"..expected.."|r" and decorated.fontChanges==0)
+    local unrelated=NewQuestBlock(999999)
+    local untouched=QUEST_TRACKER_MODULE:AddObjective(unrelated,"QuestComplete",trackerCompletion,nil,true)
+    assert(untouched.Text:GetText()==trackerCompletion,"retain the API quest-identity guard")
+  end
+`,{tracker:true,rows:shippedRecipients()}));
+
+test('quest return rule excludes unknown names, extra instructions, markup and other text fields',()=>run(`
+  local source="Return to Aoren Sunglow."
+  for _,text in ipairs({
+    "Return to Unknown Recipient.","Return to Aoren Sunglow at the camp.",
+    "Return to Aoren Sunglow. Speak to him.","Return to Aoren Sunglow!",
+    "Return to Aoren Sunglow", "Return to Aoren Sunglow.\\n",
+    "Return to Aoren\\nSunglow.", "Return to  Aoren Sunglow.",
+    "Return to <b>Aoren Sunglow</b>.", "Return to |cffffffffAoren Sunglow|r.",
+    "Return to $N.", "返回奥伦·日冕处。",
+  }) do
+    local result,changed=A.Translate("Quests",text,27682,"CompletionLog")
+    assert(result==text and not changed,"must retain: "..text)
+  end
+  for _,field in ipairs({"Description","Objectives","Title","Progress","Completion"}) do
+    local result,changed=A.Translate("Quests",source,27682,field)
+    assert(result==source and not changed,"rule is confined to CompletionLog: "..field)
+  end
+  local result,changed=A.Translate("Gossip",source)
+  assert(result==source and not changed,"do not rewrite unrelated dialogue")
+  local key=A.Fingerprint(A.Normalize(source))
+  D.Strings[1]="已有整句译文。";D.Completions[key]=1
+  assert(A.Translate("Quests",source,27682,"CompletionLog")==D.Strings[1])
+  D.Quests[27682]={CompletionLog="已有任务字段译文。"}
+  AllowQuestSource(27682,"CompletionLog",source)
+  assert(A.Translate("Quests",source,27682,"CompletionLog")==D.Quests[27682].CompletionLog)
+  D.Quests[27682]=nil;D.Completions[key]=nil
+  D.QuestExtras[27682]={CompletionLog={[key]=1}}
+  assert(A.Translate("Quests",source,27682,"CompletionLog")==D.Strings[1])
+  D.QuestExtras[27682]=nil
+  A.TranslateQuestTemplate=function() return "已有核验模板译文。" end
+  assert(A.Translate("Quests",source,27682,"CompletionLog")=="已有核验模板译文。")
+`,{rows:shippedRecipients()}));
+
+test('quest return fallback initializes NPC data on demand and never renders unresolved name tokens',()=>run(`
+  local loads=0
+  local source="Return to Aoren Sunglow."
+  local nameKey=A.Fingerprint(A.Normalize("Aoren Sunglow"))
+  A.Data.Configure({NPCNames={count=1,families={"NPCNames"},scopes={}}})
+  A.Data.Register("NPCNames",function()
+    loads=loads+1;D.NPCNames[nameKey]=1;D.Strings[1]="奧倫·日冕"
+  end)
+  assert(loads==0)
+  A.Translate("Quests","Quest Complete!",27682,"CompletionLog")
+  A.Translate("Quests","已有中文",27682,"CompletionLog")
+  A.Translate("Quests",source,27682,"Description")
+  D.Strings[2]="已有整句译文。";D.Completions[A.Fingerprint(A.Normalize(source))]=2
+  assert(A.Translate("Quests",source,27682,"CompletionLog")==D.Strings[2] and loads==0)
+  D.Completions[A.Fingerprint(A.Normalize(source))]=nil
+  assert(A.Translate("Quests",source,27682,"CompletionLog")=="返回奧倫·日冕处。" and loads==1)
+  assert(A.Translate("Quests",source,27682,"CompletionLog")=="返回奧倫·日冕处。" and loads==1)
+  for _,name in ipairs({"Unknown", "名字$N", "名字|r", "名字\\n"}) do
+    D.Strings[1]=name
+    local result,changed=A.Translate("Quests",source,27682,"CompletionLog")
+    assert(result==source and not changed,"invalid name must not enter the generated sentence")
+  end
+`));
 
 test('tracker title and objective layout respects counters, colors, line limits and reuse',()=>run(`
   D.Quests[42]={Title="很长的中文任务标题"}

@@ -31,14 +31,14 @@ test('single-addon resources initialize only the requested feature and string sh
     for(const file of core)write(path.join(source,file),read(file));
     const rows={
       'Shared/SharedStrings_01.lua':'D.SharedStrings[1]="可靠的中文神器说明"\nD.SharedStrings[2]="保留的任务名称"',
-      'Shared/Strings_01.lua':'D.Strings[1]="你好，冒险者。"',
+      'Shared/Strings_01.lua':'D.Strings[1]="你好，冒险者。"\nD.Strings[2]="友人"',
       'Shared/CatalogStrings_01.lua':'D.CatalogStrings[1]="已有對白"\nD.CatalogStrings[2]="收藏来源"',
       'Shared/CatalogStrings_02.lua':'D.CatalogStrings[3]="专业配方"',
       'Quests/QuestSources_01.lua':`D.QuestSources[42]={Title={[${key('Quest title')}]=true}}`,
       'Professions/ProfessionTexts_01.lua':`D.CatalogTexts.Profession={}\nD.CatalogTexts.Profession[${key('Recipe source')}]=3`,
       'Quests/Quests_01.lua':'local S=D.SharedStrings\nD.Quests[42]={Title=S[2]}',
       'Dialogue/Gossip_01.lua':`D.Gossip[${key('Hello, adventurer.')}]=1`,
-      'Dialogue/NPCNames_01.lua':`D.NPCNames[${key('A friend')}]=1`,
+      'Dialogue/NPCNames_01.lua':`D.NPCNames[${key('A friend')}]=2`,
       'Dialogue/CatalogDialogue_01.lua':`D.CatalogTexts.Dialogue={}\nD.CatalogTexts.Dialogue[${key('A trusted line')}]=1`,
       'Collections/CollectionTexts_01.lua':`D.CatalogTexts.Collection={}\nD.CatalogTexts.Collection[${key('Source of a mount')}]=2`,
       'Artifacts/Artifacts.lua':`local S=D.SharedStrings\nD.ArtifactChoices[7]={Question={[${key('Choose wisely')}]=S[1]},Options={}}`,
@@ -52,7 +52,7 @@ test('single-addon resources initialize only the requested feature and string sh
     write(path.join(root,'docs/resource-manifest.json'),JSON.stringify({resources}));
     write(path.join(source,'LegionChinese.toc'),['## Interface: 70300','## Version: 1.3.5','Bootstrap.lua',...resources.map(r=>r.path),...core].join('\n'));
     const before=resourceSemantics(path.join(source,'Data'));
-    const result=preparePackage(root,out,'1.3.5');assert.equal(result.categories,5);
+    const result=preparePackage(root,out,'1.3.5');assert.equal(result.categories,6);
     const folders=fs.readdirSync(out);
     const after=resourceSemantics(folders.map(f=>path.join(out,f,'Data')));
     assert.equal(compareResources(before,after).equivalent,true);
@@ -76,10 +76,14 @@ test('single-addon resources initialize only the requested feature and string sh
         'assert(A.FindCatalog("Profession","Recipe source")=="专业配方")\n'+
         'assert(loads.Professions==1 and not loads.Dialogue and not loads.Collections)\n'+
         'assert(rawget(D.CatalogStrings,3)=="专业配方" and rawget(D.CatalogStrings,1)==nil)\n'+
+        'assert(A.Translate("Quests","Quest Complete!",42,"CompletionLog")=="Quest Complete!")\n'+
+        'assert(not loads.NPCNames and not loads.Dialogue)\n'+
+        'for i=1,3 do assert(A.Translate("Quests","Return to A friend.",42,"CompletionLog")=="返回友人处。") end\n'+
+        'assert(loads.NPCNames==1 and not loads.Dialogue and rawget(D,"Gossip")==nil)\n'+
         'assert(A.Find("Gossip","已经中文")==nil and not loads.Dialogue)\n'+
         'assert(A.Translate("Gossip","Hello, adventurer.")=="你好，冒险者。")\n'+
         'assert(A.FindCatalog("Dialogue","A trusted line",true)=="已有對白")\n'+
-        'assert(loads.Dialogue==3)\n'+
+        'assert(loads.Dialogue==2 and loads.NPCNames==1)\n'+
         'assert(A.FindCatalog("Collection","Source of a mount")=="收藏来源")\n'+
         'assert(loads.Collections==1 and not loads.Artifacts)\n'+
         'assert(A.Data.Get("ArtifactChoices")[7].Question['+key('Choose wisely')+'] == "可靠的中文神器说明")\n'+

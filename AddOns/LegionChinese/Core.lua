@@ -186,6 +186,22 @@ local function findObjective(original, questID)
     return replacement, suffix
 end
 
+local function findQuestReturn(original)
+    local name = original:match("^Return to (.+)%.$")
+    if not name or name:find("[<>|$%c]") or name:match("^%s") or name:match("%s$") then
+        return nil
+    end
+    -- This sentence is an addon-authored rule, not an official full-text
+    -- translation. Only use the existing conflict-checked NPC name index;
+    -- never infer a recipient from quest ID or expand player-name tokens.
+    local id = D.NPCNames[A.Fingerprint(A.Normalize(name, false))]
+    local translated = id and D.Strings[id]
+    if type(translated) ~= "string" or not A.IsChinese(translated) or translated:find("[<>|$%c]") then
+        return nil
+    end
+    return "返回" .. translated .. "处。"
+end
+
 function A.Translate(category, original, questID, field)
     if type(original) ~= "string" or original == "" then
         return original, false
@@ -218,6 +234,9 @@ function A.Translate(category, original, questID, field)
             if rendered then
                 return rendered, true
             end
+        end
+        if not replacement and field == "CompletionLog" then
+            replacement = findQuestReturn(original)
         end
     else
         replacement = A.Find(category, original)

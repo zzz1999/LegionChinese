@@ -45,16 +45,19 @@ export function preparePackage(root,destination,version){
       ranges.set(resource.family,last);resource.range=[first,last];
       continue;
     }
-    const group=groups.get(resource.group)??{families:new Set(),scopes:new Set(),count:0};
-    groups.set(resource.group,group);group.count++;
+    // Names are also used by quest-return hints. Keep their small index
+    // independent of dialogue text, while retaining the source directory.
+    resource.category=resource.family==='NPCNames'?'NPCNames':resource.group;
+    const group=groups.get(resource.category)??{families:new Set(),scopes:new Set(),count:0};
+    groups.set(resource.category,group);group.count++;
     let targets=0;
     for(const match of body.matchAll(/^D\.(\w+)(?:\.(\w+))?/gm)){
       const [,family,scope]=match;
       if(family==='CatalogTexts'&&!scope)throw Error('Missing catalog scope: '+resource.path);
       const ownerKey=family==='CatalogTexts'?family+'.'+scope:family;
-      if(owners.has(ownerKey)&&owners.get(ownerKey)!==resource.group)throw Error('Data target has multiple categories: '+ownerKey);
+      if(owners.has(ownerKey)&&owners.get(ownerKey)!==resource.category)throw Error('Data target has multiple categories: '+ownerKey);
       if(family==='SharedStrings'||stringPools.has(family))throw Error('Unexpected shared target: '+resource.path);
-      owners.set(ownerKey,resource.group);
+      owners.set(ownerKey,resource.category);
       (family==='CatalogTexts'?group.scopes:group.families).add(family==='CatalogTexts'?scope:family);targets++;
     }
     if(!targets)throw Error('Resource has no target: '+resource.path);
@@ -76,7 +79,7 @@ export function preparePackage(root,destination,version){
     }).replace(/^local S=D\.SharedStrings\r?\n/gm,'');
     const registration=resource.range
       ?'LegionChinese.Data.RegisterPool('+JSON.stringify(resource.family)+','+resource.range.join(',')+',function()'
-      :'LegionChinese.Data.Register('+JSON.stringify(resource.group)+',function()';
+      :'LegionChinese.Data.Register('+JSON.stringify(resource.category)+',function()';
     const file=path.join(main,resource.path);
     fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,registration+'\n'+body+'\nend)\n');
     dataFiles.push(resource.path);
