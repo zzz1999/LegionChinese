@@ -24,6 +24,8 @@ import {buildLocalClientData} from './local-client-data.mjs';
 import {writeChangelog} from './changelog.mjs';
 import {QuestSourceIndex,questSourceTables,addValidatedQuestTitles} from './quest-sources.mjs';
 import {buildQuestVariables} from './quest-variables.mjs';
+import {loadNpcNameCandidates} from './npc-name-sources.mjs';
+import {mergeNpcNames} from './npc-name-index.mjs';
 
 const sourceRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const root=process.env.LCN_BUILD_OUTPUT_ROOT;
@@ -156,11 +158,12 @@ for(const source of broadcastSources){
 }
 const questData=new Map(),questVariants=new Map(),questTitleOrigins=new Map();
 const gossip=new ChineseTextIndex(),books=new ChineseTextIndex(),titles=new ChineseTextIndex(),objectives=new ChineseTextIndex();
-const npcNames=new ChineseTextIndex();
-for(const row of npcNameRows.values())for(const locale of CHINESE_LOCALES){
-  if(!/[$|\r\n%]/.test(row[locale]??''))npcNames.add(locale,row.enUS,row[locale]);
-}
-npcNames.finish();npcNameRows.clear();
+const npcNameSources=await loadNpcNameCandidates({input,manifest});
+const npcNameData=mergeNpcNames({baseRows:npcRows,baseNameRows:npcNameRows,records:npcNameSources.records});
+const npcNames=npcNameData.index;
+npcNameRows.clear();
+fs.writeFileSync(path.join(root,'docs/npc-name-audit.json'),JSON.stringify({version,
+  sources:npcNameSources.audit,...npcNameData.audit},null,2)+'\n');
 const completions=new ChineseTextIndex(),completionAudit=[];
 const counts={quests:0,questFields:{},npcBroadcastRecords:0,broadcastChineseRecords:0,broadcastConflictingRecords:0,
   bookPages:0,bookPageCandidates:0,bookPagesWithoutSource:0,
@@ -373,7 +376,7 @@ const itemDescriptions=buildItemDescriptions({root,input,manifest,version});
 generated.push(...itemDescriptions.generated);counts.itemDescriptions=itemDescriptions.audit.counts;
 const dungeonNames=buildDungeonNames({root,input,manifest});
 generated.push(...dungeonNames.generated);counts.dungeonNames=dungeonNames.audit.counts;
-const extraClient=buildExtraClientData({root,input,manifest,npcRows,version});
+const extraClient=buildExtraClientData({root,input,manifest,npcRows,version,npcNameLabels:npcNameData.labels});
 generated.push(...extraClient.generated);counts.extraClient=extraClient.audit.counts;
 const clientDescriptions=buildClientDescriptions({root,input,manifest,version});
 generated.push(...clientDescriptions.generated);counts.clientDescriptions=clientDescriptions.audit.counts;

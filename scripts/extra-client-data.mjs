@@ -21,7 +21,7 @@ export function chooseStatic(original,cn,tw){
   for(const [locale,text] of [['zhCN',cn],['zhTW',tw]])if(hasChinese(text)&&staticText(text))return {key:nameKey(original),text,locale};
 }
 
-export function buildExtraClientData({root,input,manifest,npcRows,version}){
+export function buildExtraClientData({root,input,manifest,npcRows,version,npcNameLabels}){
   const generated=[],audit={version,sources:[],counts:{},deferred:{}};
   const out=path.join(root,'AddOns/LegionChinese/Data');
   const write=(name,lines)=>generated.push(...writeResourceChunks({root,name,lines}));
@@ -56,8 +56,10 @@ export function buildExtraClientData({root,input,manifest,npcRows,version}){
   }
   {
     const titles=[],names=[],counts={titles:0,names:0,zhCN:0,zhTW:0};
+    const fieldsByTarget=[[['Title','TitleAlt'],'NPCTitles',titles]];
+    if(!npcNameLabels)fieldsByTarget.push([['Name','NameAlt'],'NPCLabelNames',names]);
     for(const [id,rows] of [...npcRows].sort((a,b)=>a[0]-b[0])){
-      for(const [fields,target,outLines] of [[['Title','TitleAlt'],'NPCTitles',titles],[['Name','NameAlt'],'NPCLabelNames',names]]){
+      for(const [fields,target,outLines] of fieldsByTarget){
         const entries=new Map(),ambiguous=new Set();
         for(const field of fields){const selected=chooseStatic(rows.enUS?.[field],rows.zhCN?.[field],rows.zhTW?.[field]);
           if(!selected)continue;if(entries.has(selected.key)&&entries.get(selected.key)!==selected.text)ambiguous.add(selected.key);
@@ -65,7 +67,14 @@ export function buildExtraClientData({root,input,manifest,npcRows,version}){
         }for(const key of ambiguous)entries.delete(key);
         if(entries.size){counts[target==='NPCTitles'?'titles':'names']++;outLines.push('D.'+target+'['+id+']={'+[...entries].map(([k,v])=>'['+luaString(k)+']='+luaString(v)).join(',')+'}');}
       }
-    }write('NPCTitles',titles);write('NPCLabelNames',names);audit.counts.npcs=counts;
+    }
+    if(npcNameLabels)for(const [id,entries]of [...npcNameLabels].sort((a,b)=>a[0]-b[0])){
+      if(!entries.size)continue;
+      counts.names++;
+      for(const row of entries.values())counts[row.locale]++;
+      names.push('D.NPCLabelNames['+id+']={'+[...entries].map(([key,row])=>'['+luaString(key)+']='+luaString(row.text)).join(',')+'}');
+    }
+    write('NPCTitles',titles);write('NPCLabelNames',names);audit.counts.npcs=counts;
   }
   if(manifest.extraLinkTables){
     const lines=[],counts={};

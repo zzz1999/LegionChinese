@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import readline from 'node:readline';
+import {Readable} from 'node:stream';
 
 // Parse data only. SQL is never sent to a database or evaluated as code.
 export function parseValues(text, emit) {
@@ -31,13 +32,16 @@ export function parseValues(text, emit) {
   if (quoted || row !== null) throw Error('Unterminated SQL value');
 }
 
-export async function readSQL(file, selected, emit, schemas = new Map()) {
+export async function readSQL(file, selected, emit, schemas = new Map(), verifiedBytes) {
   let schema=null, active=null, buffer='';
   const consume=(name,columns,values)=>parseValues(values, row=>{
     if(row.length!==columns.length) throw Error(`${file}: ${name}: ${row.length} values for ${columns.length} columns`);
     emit(name,Object.fromEntries(columns.map((col,i)=>[col,row[i]])),false);
   });
-  for await(const line of readline.createInterface({input:fs.createReadStream(file),crlfDelay:Infinity})) {
+  // Small hash-checked captures can supply the exact bytes already verified.
+  // Existing callers continue streaming SQL files without buffering the dump.
+  const input=verifiedBytes===undefined?fs.createReadStream(file):Readable.from([verifiedBytes]);
+  for await(const line of readline.createInterface({input,crlfDelay:Infinity})) {
     if(active) {
       buffer+='\n'+line;
       if(/;\s*(?:--.*)?$/.test(line)) {consume(active.name,active.columns,buffer);active=null;buffer='';}
@@ -59,7 +63,8 @@ export async function readSQL(file, selected, emit, schemas = new Map()) {
       for(const match of (update[2]+', '+update[3]).matchAll(/`([^`]+)`\s*=\s*('(?:\\.|''|[^'])*'|[+-]?\d+(?:\.\d+)?)/g)) {
         parseValues('('+match[2]+')',values=>record[match[1]]=values[0]);
       }
-      if(record.ID===undefined || (update[1].endsWith('_locale') && !(record.locale??record.Locale)))throw Error(`Unsupported selected UPDATE in ${file}`);
+      const hasKey=record.ID!==undefined||(['creature_template','creature_template_locale'].includes(update[1])&&record.entry!==undefined);
+      if(!hasKey || (update[1].endsWith('_locale') && !(record.locale??record.Locale)))throw Error(`Unsupported selected UPDATE in ${file}`);
       emit(update[1],record,true);
     }
   }

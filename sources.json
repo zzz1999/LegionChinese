@@ -1098,5 +1098,75 @@
   "questVariables": {
     "file": "data/quest-variables-735.json",
     "sha256": "2bee87ba81bfd367cacc764c0ff2f0eb7d7e5793df01d6954a59212764d9fe18"
-  }
+  },
+  "npcNameCaptures": [
+    {
+      "file": "2018_05_26_22_world.sql",
+      "locale": "enUS",
+      "table": "creature_template",
+      "fields": [
+        "entry",
+        "name",
+        "femaleName",
+        "subname",
+        "TitleAlt",
+        "VerifiedBuild"
+      ],
+      "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_22_world.sql",
+      "pinnedCommit": "49bd093968e6ed7a662d44c7c10653800bfc23e6",
+      "introducedCommit": "084da48ba15aab21916abd88dbe6a03aad0a0edf",
+      "sourceIssue": "https://github.com/TrinityCore/TrinityCore/issues/21891",
+      "captureBuild": 26365,
+      "provenance": "community-client-query-capture",
+      "officialChineseVerified": false,
+      "bytes": 246001,
+      "sha256": "5d3d2daea78551e043d9d751e7ec4efc3467784ba0db5220b7d6235667e3a586"
+    },
+    {
+      "file": "2018_05_26_31_world.sql",
+      "locale": "zhCN",
+      "table": "creature_template_locale",
+      "fields": [
+        "entry",
+        "locale",
+        "Name",
+        "NameAlt",
+        "Title",
+        "TitleAlt",
+        "VerifiedBuild"
+      ],
+      "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_31_world.sql",
+      "pinnedCommit": "49bd093968e6ed7a662d44c7c10653800bfc23e6",
+      "introducedCommit": "084da48ba15aab21916abd88dbe6a03aad0a0edf",
+      "sourceIssue": "https://github.com/TrinityCore/TrinityCore/issues/21891",
+      "captureBuild": 26365,
+      "provenance": "community-client-query-capture",
+      "officialChineseVerified": false,
+      "bytes": 59285,
+      "sha256": "c28b56faec4b51c6b1371330ff55d9dd02a97f118a67dc9d5a0c5c477f74b40e"
+    },
+    {
+      "file": "2018_05_26_32_world.sql",
+      "locale": "zhTW",
+      "table": "creature_template_locale",
+      "fields": [
+        "entry",
+        "locale",
+        "Name",
+        "NameAlt",
+        "Title",
+        "TitleAlt",
+        "VerifiedBuild"
+      ],
+      "url": "https://raw.githubusercontent.com/TrinityCore/TrinityCore/49bd093968e6ed7a662d44c7c10653800bfc23e6/sql/old/7/world/19061_2019_07_15/2018_05_26_32_world.sql",
+      "pinnedCommit": "49bd093968e6ed7a662d44c7c10653800bfc23e6",
+      "introducedCommit": "084da48ba15aab21916abd88dbe6a03aad0a0edf",
+      "sourceIssue": "https://github.com/TrinityCore/TrinityCore/issues/21891",
+      "captureBuild": 26365,
+      "provenance": "community-client-query-capture",
+      "officialChineseVerified": false,
+      "bytes": 54299,
+      "sha256": "064f342456ee5f70741c658f0fb0fabe757235d5bdf3870879eb07de222346a0"
+    }
+  ]
 }

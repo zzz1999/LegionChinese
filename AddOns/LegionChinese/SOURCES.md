@@ -261,7 +261,11 @@ README 中的 `textLocale`（文字）和 `audioLocale`（语音）对应客户�
 
 新增数量与简繁构成见 `docs/extra-client-data-audit.json`：物品名称 103,910；静态法术说明 32,592、光环说明 18,609、技能副标题 3,037；成就 5,655、货币 98、战斗宠物 1,422、战斗宠物技能 1,013、冒险指南首领 755、章节／技能 9,783。战斗宠物名称通过三语一致的 CreatureID 关联同版本 Creature 表。新增链接资料用于显示名称，不代表完整成就或冒险指南界面描述已汉化。
 
-NPC 名称和头衔来自原有固定 TDB 2018 基础行及其简繁 locale 行，通过 Creature ID 与对应英文名称／头衔配对，收录名称 95,761 个 ID、头衔 16,947 个 ID。它们属于社区保存的世界数据库资料，不以 build 字段作为逐字官服采集证明。仅作用于可识别 Creature GUID 的原版提示框，不改玩家名称、公会名、自定义宠物名或引擎绘制的头顶浮动文字。
+NPC 名称和头衔的基础资料来自原有固定 TDB 2018 基础行及其简繁 locale 行，通过 Creature ID 与对应英文名称／头衔配对，原有名称 95,761 个 ID、头衔 16,947 个 ID。它们属于社区保存的世界数据库资料，不以 build 字段作为逐字官服采集证明。不改玩家名称、公会名、自定义宠物名或引擎绘制的头顶浮动文字。
+
+1.3.8 将同版 Creature DB2 的可核验名称及 [TrinityCore #21891](https://github.com/TrinityCore/TrinityCore/issues/21891) 的 build 26365 中英繁 NPC 采集接入现有姓名索引。社区采集固定于提交 `49bd093968e6ed7a662d44c7c10653800bfc23e6` 下 `2018_05_26_22_world.sql`、`2018_05_26_31_world.sql` 和 `2018_05_26_32_world.sql`，保留原始引入提交 `084da48ba15aab21916abd88dbe6a03aad0a0edf`、文件 SHA-256、语言和来源声明。它们标记为 `community-client-query-capture`、`officialChineseVerified=false`，不称为暴雪官方发布的数据库；DB2 仍保留 `client-db2-via-wago` 标记。本地简体客户端 Creature 导出与已有简体 CSV 内容一致，没有额外姓名缓存可补。
+
+仅使用同 ID、同一名称字段的中英文配对；新增记录简体优先，繁体补缺，同语言冲突时优先同版客户端 DB2。保留既有译文，旧歧义不复活；按原名查询还检查跨 ID 同名异译和既有别名冲突。未配对的 NameAlt 不借用主名称；SQL 中原有可疑别名不自动推广至全局姓名。新增 611 个标签 ID、625 组 ID+原名对应；按原名索引新增 259 个键。最终分别为 96,372 个 ID、96,392 组对应、65,060 个全局键，统计相互重叠。逐项来源、冲突保留和已知缺口见 `docs/npc-name-audit.json`，范围说明见 `docs/NPC-NAMES.md`。原始外文、SQL 和 CSV 不随插件分发。
 
 ### 书籍上下文与 NPC 消息
 
